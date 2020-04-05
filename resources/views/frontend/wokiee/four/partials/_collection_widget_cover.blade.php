@@ -9,7 +9,7 @@
         {{--<a href="#" class="tt-btn-compare" data-tooltip="Add to Compare"--}}
         {{--data-tposition="{{ app()->isLocale('ar') ? 'right' : 'left' }}"--}}
         {{--></a>--}}
-        <a href="{{ route('frontend.collection.show', $element) }}">
+        <a href="{{ route('frontend.collection.show', $element->id) }}">
             <span class="tt-img">
                 <img class="img-responsive" src="{{ $element->imageThumbLink }}" alt="{{ $element->description }}">
             </span>
