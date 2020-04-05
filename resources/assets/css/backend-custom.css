@@ -1,0 +1,85 @@
+/*@import url('https://fonts.googleapis.com/css?family=ABeeZee');*/
+
+@font-face {
+    font-family: "SawarabiGothic";
+    src: url('fonts/SawarabiGothic-Regular.ttf') format('embedded-opentype'),
+    url('fonts/SawarabiGothic-Regular.ttf')  format('truetype')
+}
+
+body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+    font-family: 'SawarabiGothic', 'sans-serif' !important;
+}
+
+/*.page-top , .page-header.navbar .page-logo {*/
+    /*background-color: dimgrey !important;*/
+/*}*/
+
+.page-header.navbar {
+    background-color: whitesmoke !important;
+}
+
+.page-header.navbar .page-top {
+    height : 130% !important;
+}
+
+.img-xs {
+   width: 50px;
+}
+
+.img-sm {
+    width : 100px;
+}
+
+.btn-del {
+    color : #6f6f6f;
+    padding-left: 15px;
+}
+
+.img-logo {
+    max-height : 40px;
+}
+
+.page-header.navbar .page-logo .logo-default {
+    margin : 15px;
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+}
+
+.page-breadcrumb {
+    padding: 2px !important;
+}
+
+.table-scrollable .dataTable td .btn-group {
+    position: relative;
+}
+
+.form-logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height : 90px;
+}
+
+.form-logos {
+    max-width : 90px;
+    max-height: 90px;
+}
+
+.btn-colors {
+    color: black; width: 100px; margin-left: 10px; margin-right: 10px;
+    font-size: smaller;
+}
+
+
+#dataTable {
+    padding-bottom:3em !important;
+}
+
+.sub-menu {
+    min-width : 200px;
+}
+
+.page-sidebar .page-sidebar-menu>li>a {
+    border-color: #252525;
+}

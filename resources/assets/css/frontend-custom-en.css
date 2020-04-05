@@ -1,0 +1,10 @@
+
+
+.date-picker-element {
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+}
+
+footer .tt-mobile-collapse .tt-collapse-title {
+    text-align : left;
+}

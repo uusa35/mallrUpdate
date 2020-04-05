@@ -1,0 +1,101 @@
+/* wokiee theme*/
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('fonts/Tajawal-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'fl';
+    src: url('fonts/FrutigerLTArabic-45Light.eot');
+    src: url('fonts/FrutigerLTArabic-45Light.ttf') format('truetype'),
+    url('fonts/FrutigerLTArabic-45Light.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family:'fb';
+    src: url('fonts/FrutigerLTArabic-55Roman.eot');
+    src: url('fonts/FrutigerLTArabic-55Roman.eot?#iefix') format('embedded-opentype'),
+    url('fonts/FrutigerLTArabic-55Roman.woff') format('woff'),
+    url('fonts/FrutigerLTArabic-55Roman.ttf') format('truetype'),
+    url('fonts/FrutigerLTArabic-55Roman.otf') format('opentype');
+}
+
+@font-face {
+    font-family:'skynews';
+    src: url('fonts/HelveticaNeueW23forSKY-Bd_T02.eot');
+    src: url('fonts/HelveticaNeueW23forSKY-Bd_T02.eot') format('embedded-opentype'),
+    url('fonts/HelveticaNeueMEforSKYW21-Rg_web.woff2') format('woff'),
+    url('fonts/HelveticaNeueMEforSKYW21-Bd_web.ttf') format('truetype')
+}
+
+
+body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
+.container , .tt-title-small, .tt-description, header , footer
+.tt-collapse-title, .tt-collapse-content, .tt-collapse-block .tt-item .tt-collapse-title,
+.tt-label, .tt-label-sale, tt-label-new, tt-label tt-label-our-fatured,
+.tt-product-single-info .tt-label [class^=tt-label], .tt-collapse-title,
+.tt-collapse-content, .tt-title-options, .form-group , .form, .tt-table-03, select , option, .form-default select.form-control:not([size]):not([multiple])
+.form-default .form-group, label, label:not(.error), .tt-cart-total-title, .tt-cart-total-price, .tt-title-large, .tt-title
+{
+    /*font-family: 'Tajawal', 'sans-serif' !important;*/
+    /*font-family: 'fb', 'sans-serif' !important;*/
+    font-family: 'skynews', 'sans-serif' !important;
+    direction: rtl;
+}
+
+/*body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {*/
+    /*font-family: 'Cairo', sans-serif !important;*/
+    /*direction: rtl;*/
+/*}*/
+
+.tt-header-holder .tt-desctop-menu:not(.tt-hover-02) nav > ul li.dropdown:first-child > a, .tt-stuck-nav .tt-desctop-menu:not(.tt-hover-02) nav > ul li.dropdown:first-child > a {
+    padding: 10px !important;
+}
+
+.tt-menu-categories .tt-dropdown-menu nav > ul .dropdown-menu, .tt-menu-categories .tt-dropdown-menu nav > ul .tt-megamenu-submenu > li ul {
+    right: 100%;
+}
+
+
+
+.tt-search-type2-rtl, .tt-btn-search-rtl {
+    position: relative;
+    padding: 5px 20px 3px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: #4611a7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    left: 6px;
+    cursor: pointer;
+    border-bottom-right-radius : 0px;
+    border-top-right-radius : 0px;
+    border-bottom-left-radius : 6px;
+    border-top-left-radius : 6px;
+}
+
+
+.tt-header-holder .obj-move-right {
+    min-width: 220px;
+}
+
+#loader {
+    right : 55% !important;
+    left: 0;
+}
+
+.date-picker-element {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+
+
+footer .tt-mobile-collapse .tt-collapse-title {
+    text-align : right;
+}

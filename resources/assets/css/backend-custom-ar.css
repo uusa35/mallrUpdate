@@ -1,0 +1,29 @@
+/*@font-face {*/
+    /*font-family: "Cairo";*/
+    /*src: url('../fonts/Cairo-Bold.ttf') format('embedded-opentype'),*/
+    /*url('../fonts/Cairo-Bold.ttf')  format('truetype')*/
+/*}*/
+
+/*body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {*/
+    /*font-family: 'Cairo', sans-serif !important;*/
+/*}*/
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('fonts/Tajawal-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+    font-family: 'Tajawal', 'sans-serif' !important;
+}
+
+.img-xs {
+    width: 50px !important;
+}
+
+.img-sm {
+    width : 100px !important;
+}
