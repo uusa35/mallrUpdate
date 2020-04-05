@@ -10,9 +10,11 @@
              data-item="{{ isset($items) ? $items : 4  }}"
         >
             @foreach($elements as $element)
-                <div class="col-lg-3 col-sm-12">
-                    @include('frontend.wokiee.four.partials._collection_widget_cover',['element' => $element,'title' => trans('general.personal_shopper')])
-                </div>
+                @if($element)
+                    <div class="col-lg-3 col-sm-12">
+                        @include('frontend.wokiee.four.partials._collection_widget_cover',['element' => $element,'title' => trans('general.personal_shopper')])
+                    </div>
+                @endif
             @endforeach
         </div>
     </div>
