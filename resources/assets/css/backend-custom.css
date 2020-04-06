@@ -92,3 +92,7 @@ body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tf
 .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
     color : black !important;
 }
+
+.ms-container {
+    width : 400px !important;
+}
