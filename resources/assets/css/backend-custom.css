@@ -7,16 +7,15 @@
     /*url('fonts/HelveticaNeueMEforSKYW21-Rg_web.woff2')  format('truetype'),*/
     /*url('fonts/HelveticaNeueW23forSKY-Bd_T02.eot')*/
 
-    font-family: "YanoneKaffeesatz";
-    src: url('fonts/YanoneKaffeesatz-Medium.ttf') format('embedded-opentype'),
-    url('fonts/YanoneKaffeesatz-Medium.ttf')  format('truetype')
+    font-family: "Baloo Bhaina 2";
+    src: url('fonts/BalooBhaina2-Bold.ttf') format('truetype')
 }
 
 body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
     /*font-family: 'Helv', 'YanoneKaffeesatz', 'sans-serif' !important;*/
-    font-family: 'YanoneKaffeesatz', 'sans-serif' !important;
-    letter-spacing: 1px;
-    font-size : medium;
+    font-family: 'Baloo Bhaina 2', cursive !important;
+    /*letter-spacing: 1px;*/
+    /*font-size : medium;*/
 }
 
 /*.page-top , .page-header.navbar .page-logo {*/
