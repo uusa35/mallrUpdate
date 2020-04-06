@@ -1,13 +1,20 @@
 /*@import url('https://fonts.googleapis.com/css?family=ABeeZee');*/
 
 @font-face {
-    font-family: "SawarabiGothic";
-    src: url('fonts/SawarabiGothic-Regular.ttf') format('embedded-opentype'),
-    url('fonts/SawarabiGothic-Regular.ttf')  format('truetype')
+    font-family: "Helv";
+    src: url('fonts/HelveticaNeueMEforSKYW21-Bd_web.ttf') format('embedded-opentype'),
+    url('fonts/HelveticaNeueMEforSKYW21-Bd_web.woff2')  format('truetype'),
+    url('fonts/HelveticaNeueMEforSKYW21-Rg_web.woff2')  format('truetype')
+
+    /*font-family: "YanoneKaffeesatz";*/
+    /*src: url('fonts/YanoneKaffeesatz-Medium.ttf') format('embedded-opentype'),*/
+    /*url('fonts/YanoneKaffeesatz-Medium.ttf')  format('truetype')*/
 }
 
 body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-    font-family: 'SawarabiGothic', 'sans-serif' !important;
+    font-family: 'Helv', 'YanoneKaffeesatz', 'sans-serif' !important;
+    /*letter-spacing: 1px;*/
+    /*font-size : medium;*/
 }
 
 /*.page-top , .page-header.navbar .page-logo {*/
@@ -15,7 +22,7 @@ body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tf
 /*}*/
 
 .page-header.navbar {
-    background-color: whitesmoke !important;
+    /*background-color: whitesmoke !important;*/
 }
 
 .page-header.navbar .page-top {
@@ -80,6 +87,6 @@ body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tf
     min-width : 200px;
 }
 
-.page-sidebar .page-sidebar-menu>li>a {
-    border-color: #252525;
+.table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    color : black !important;
 }

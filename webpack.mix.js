@@ -27,7 +27,6 @@ mix.styles([
 ], 'public/css/plugins.css');
 // frontend js
 // wokiee
-
 mix.scripts([
     // loading jquery from the app.js
     '../wokiee-ecommerce-html/html/external/jquery/jquery.min.js',
@@ -52,7 +51,6 @@ mix.scripts([
     '../wokiee-ecommerce-html/html/external/form/jquery.validate.min.js',
     '../wokiee-ecommerce-html/html/external/form/jquery.form-init.js',
     './node_modules/select2/dist/js/select2.js'
-
 ], 'public/js/wokiee.demo.js').version();
 
 mix.js('resources/assets/js/frontend-custom.js', 'public/js/frontend-custom.js').version();
@@ -92,12 +90,12 @@ mix.styles([
     '../metronic_v4.5.6/theme/assets/pages/css/pricing.min.css',
     '../metronic_v4.5.6/theme/assets/pages/css/blog.min.css',
 
-    '../metronic_v4.5.6/theme/assets/layouts/layout2/css/layout.min.css',
-    '../metronic_v4.5.6/theme/assets/layouts/layout/css/themes/darkblue.min.css',
-    '../metronic_v4.5.6/theme/assets/layouts/layout2/css/themes/blue.min.css',
-    '../metronic_v4.5.6/theme/assets/layouts/layout2/css/themes/light.min.css',
-    // '../metronic_v4.5.6/theme/assets/layouts/layout2/css/themes/grey.min.css',
-    '../metronic_v4.5.6/theme/assets/layouts/layout2/css/custom.min.css',
+    '../metronic_v4.5.6/theme/assets/layouts/layout4/css/layout.min.css',
+    // '../metronic_v4.5.6/theme/assets/layouts/layout/css/themes/darkblue.min.css',
+    // '../metronic_v4.5.6/theme/assets/layouts/layout4/css/themes/blue.min.css',
+    '../metronic_v4.5.6/theme/assets/layouts/layout4/css/themes/light.min.css',
+    // '../metronic_v4.5.6/theme/assets/layouts/layout4/css/themes/grey.min.css',
+    '../metronic_v4.5.6/theme/assets/layouts/layout4/css/custom.min.css',
     './resources/assets/css/bootstrap-datetimepicker.min.css',
     './resources/assets/css/backend-custom.css'
 
@@ -137,12 +135,13 @@ mix.styles([
     '../metronic_v4.5.6/theme_rtl/assets/pages/css/pricing-rtl.min.css',
     '../metronic_v4.5.6/theme_rtl/assets/pages/css/blog-rtl.min.css',
 
-    '../metronic_v4.5.6/theme_rtl/assets/layouts/layout2/css/layout-rtl.min.css',
+    // '../metronic_v4.5.6/theme/assets/layouts/layout4/css/layout.min.css',
+    '../metronic_v4.5.6/theme_rtl/assets/layouts/layout4/css/layout-rtl.min.css',
     // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout/css/themes/darkblue-rtl.min.css',
-    '../metronic_v4.5.6/theme_rtl/assets/layouts/layout2/css/themes/blue-rtl.min.css',
-    // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout2/css/themes/light-rtl.min.css',
-    // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout2/css/themes/grey.min.css',
-    '../metronic_v4.5.6/theme_rtl/assets/layouts/layout2/css/custom-rtl.min.css',
+    // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout4/css/themes/blue-rtl.min.css',
+    '../metronic_v4.5.6/theme_rtl/assets/layouts/layout4/css/themes/light-rtl.min.css',
+    // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout4/css/themes/grey.min.css',
+    // '../metronic_v4.5.6/theme_rtl/assets/layouts/layout4/css/custom-rtl.min.css',
     './resources/assets/css/bootstrap-datetimepicker.min.css',
     './resources/assets/css/backend-custom.css',
     'resources/assets/css/backend-custom-ar.css',
@@ -185,8 +184,8 @@ mix.scripts([
 
         '../metronic_v4.5.6/theme/assets/pages/scripts/components-multi-select.min.js',
         '../metronic_v4.5.6/theme/assets/pages/scripts/components-color-pickers.min.js',
-        '../metronic_v4.5.6/theme/assets/layouts/layout2/scripts/layout.min.js',
-        '../metronic_v4.5.6/theme/assets/layouts/layout2/scripts/demo.min.js',
+        '../metronic_v4.5.6/theme/assets/layouts/layout4/scripts/layout.min.js',
+        '../metronic_v4.5.6/theme/assets/layouts/layout4/scripts/demo.min.js',
         '../metronic_v4.5.6/theme/assets/layouts/global/scripts/quick-sidebar.min.js',
 
     ],
