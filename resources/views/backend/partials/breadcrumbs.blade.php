@@ -1,24 +1,6 @@
 <div class="page-bar">
-    <ul class="page-breadcrumb">
-        @section('breadcrumbs')
-            @if(isset($breadcrumbs) && $breadcrumbs->isNotEmpty())
-                <ol class="breadcrumb">
-                    @foreach ($breadcrumbs as $breadcrumb)
-                        @if ($breadcrumb->url && !$loop->last)
-                            <li class="breadcrumb-item">
-                                <a href="{{ $breadcrumb->url }}"> {{ $breadcrumb->title }} / </a>
-                            </li>
-                        @else
-                            <li class="breadcrumb-item active">
-                                {{ $breadcrumb->title }}</li>
-                        @endif
-                    @endforeach
-                </ol>
-            @endif
-        @show
-    </ul>
-    <div class="page-toolbar">
-        <div class="btn-group pull-right">
+
+        <div class="btn-group pull-right" style="padding : 4px;">
             <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown"
                     data-hover="dropdown" data-delay="1000" data-close-others="true"> {{ trans('general.actions') }}
                 <i class="fa fa-angle-down"></i>
@@ -45,6 +27,23 @@
                 @endcan
             </ul>
         </div>
-    </div>
+    <ul class="page-breadcrumb">
+        @section('breadcrumbs')
+            @if(isset($breadcrumbs) && $breadcrumbs->isNotEmpty())
+                <ol class="breadcrumb">
+                    @foreach ($breadcrumbs as $breadcrumb)
+                        @if ($breadcrumb->url && !$loop->last)
+                            <li class="breadcrumb-item">
+                                <a href="{{ $breadcrumb->url }}"> {{ $breadcrumb->title }} / </a>
+                            </li>
+                        @else
+                            <li class="breadcrumb-item active">
+                                {{ $breadcrumb->title }}</li>
+                        @endif
+                    @endforeach
+                </ol>
+            @endif
+        @show
+    </ul>
 </div>
 <!-- END PAGE HEADER-->
