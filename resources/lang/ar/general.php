@@ -1035,5 +1035,10 @@ return array(
     "addon" => "ملحق خدمة",
     "list" => 'قائمة',
     "create" => "إنشاء",
-    "list" => "قائمة"
+    "list" => "قائمة",
+    "force_original_price" => "حساب السعر الاصلي فقط",
+    "is_package" => "اعتبار الخدمة كباكدج؟",
+    "attach_videos" => "إلحاق فيدوهات",
+    "has_only_items" => "الخدمة تمتلك ملحقات فقط",
+    "has_addons" => "Has Addons?"
 );

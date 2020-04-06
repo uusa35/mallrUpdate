@@ -3,7 +3,7 @@
 return array(
     'mail_sent' => 'Check your email address',
     'size' => 'Size',
-    'price' => 'price',
+    'price' => 'Price',
     'range' => 'Range',
     'filter' => 'Search',
     'sort_by' => 'Sort by',
@@ -11,9 +11,9 @@ return array(
     'lowest' => 'Least',
     'tags' => 'Keywords',
     'shopping_options' => 'Shopping Options',
-    'color' => 'color',
+    'color' => 'Color',
     'home' => 'Home',
-    'index' => 'index',
+    'index' => 'Index',
     'position' => 'Location',
     'name' => 'Name',
     'subcategories' => 'Subcategory',
@@ -378,7 +378,7 @@ return array(
     'owner' => 'owner',
     'brand' => 'brand',
     'image_chart' => 'image_chart',
-    'sale_price' => 'sale_price',
+    'sale_price' => 'Sale Price',
     'description_arabic' => 'Description in Arabic',
     'description_english' => 'Description in English',
     'notes_arabic' => 'Notes in Arabic',
@@ -1070,5 +1070,10 @@ return array(
     "wrap_as_gift" => 'Wrap as Gift feature',
     "addons" => "Addons",
     'is_paid' => 'Paid Status',
-    "list" => "List"
+    "list" => "List",
+    "force_original_price" => "Force Original Price",
+    "is_package" => "is Package?",
+    "attach_videos_to_product" => "Attach Videos to Product",
+    "has_only_items" => "Has Only Items?",
+    "has_addons" => "Has Addons?"
 );

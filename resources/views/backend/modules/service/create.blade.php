@@ -424,7 +424,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="col-md-2">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label class="control-label sbold tooltips"
                                                                    data-container="body"
@@ -442,7 +442,7 @@
                                                         </div>
                                                     </div>
                                                     @if($items->isNotEmpty())
-                                                        <div class="col-md-10 hidden" id="items">
+                                                        <div class="col-md-9 hidden" id="items">
                                                             <div class="form-group">
                                                                 <label class="control-label">{{ trans('general.items') }}</label>
                                                                 <select multiple="multiple" class="multi-select"
