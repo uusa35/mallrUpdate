@@ -150,7 +150,7 @@
 @can('index','classified')
     <li class="nav-item {{ activeItem('classified') }}">
         <a href="{{ route('backend.classified.index')}}" class="nav-link nav-toggle">
-            <i class="fa fa-fw fa-service-hunt"></i>
+            <i class="fa fa-fw fa-gift"></i>
             <span class="title">{{ trans('general.classifieds') }}</span>
             <span class="selected"></span>
             <span class="arrow open"></span>

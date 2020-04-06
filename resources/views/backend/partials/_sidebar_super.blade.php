@@ -52,9 +52,8 @@
 </li>
 <li class="nav-item {{ activeItem('service',['service','addon','item']) }}">
     <a href="{{ route('backend.service.index')}}" class="nav-link nav-toggle">
-        <i class="fa fa-fw fa-service-hunt"></i>
+        <i class="fa fa-fw fa-table"></i>
         <span class="title">{{ trans('general.services') }}</span>
-        <span class="selected"></span>
         <span class="arrow open"></span>
     </a>
     <ul class="sub-menu">
@@ -127,9 +126,8 @@
 
 <li class="nav-item {{ activeItem('classified') }}">
     <a href="{{ route('backend.classified.index')}}" class="nav-link nav-toggle">
-        <i class="fa fa-fw fa-service-hunt"></i>
+        <i class="fa fa-fw fa-gift"></i>
         <span class="title">{{ trans('general.classifieds') }}</span>
-        <span class="selected"></span>
         <span class="arrow open"></span>
     </a>
     <ul class="sub-menu">
