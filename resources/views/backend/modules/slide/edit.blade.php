@@ -139,7 +139,7 @@
                                                     <div class="md-radio tooltips" data-container="body" data-placement="top"
                                                          data-original-title="{{ trans('message.active') }}">
                                                         <input type="radio" id="radio51" name="active" value="1"
-                                                               class="md-radiobtn  {{ $element->active ? 'checked' : null }}>
+                                                               class="md-radiobtn  {{ $element->active ? 'checked' : null }}">
                                                         <label for="radio51">
                                                             <span></span>
                                                             <span class="check"></span>
