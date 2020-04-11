@@ -13,7 +13,7 @@ class AddQrToProductsTableTable extends Migration
      */
     public function up()
     {
-        Schema::table('products_table', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->string('qr')->nullable();
         });
     }
@@ -25,7 +25,7 @@ class AddQrToProductsTableTable extends Migration
      */
     public function down()
     {
-        Schema::table('products_table', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('qr');
         });
     }
