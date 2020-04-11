@@ -5277,6 +5277,19 @@
                 "ssl",
                 "tls"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+>>>>>>> f1b94d4292ef8d8c0d3a4b74306ac300968187fa
             "time": "2020-04-08T08:27:21+00:00"
         },
         {
