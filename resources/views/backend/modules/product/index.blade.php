@@ -85,7 +85,7 @@
                                         @foreach($element->product_attributes as $attribute)
                                             <div class="btn-group">
                                                 <button type="button"
-                                                        style="background-color: white; color : {{ $attribute->color->name_en }}; font-weight: bolder"
+                                                        style="background-color: white; font-weight: bolder"
                                                         class="btn green btn-sm btn-outline"
                                                         data-toggle="dropdown"> {{ $attribute->color->name_en }}
                                                     - {{ $attribute->size->name_en }} - {{ $attribute->qty }}
