@@ -1077,5 +1077,6 @@ return array(
     "has_only_items" => "Has Only Items?",
     "has_addons" => "Has Addons?",
     "images" => "images",
-    "is_intro" => "Attach to Intro Slider"
+    "is_intro" => "Attach to Intro Slider",
+    "qr_link" => "َQR Link"
 );
