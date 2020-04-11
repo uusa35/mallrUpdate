@@ -17,7 +17,7 @@ class SlideController extends Controller
     public function index()
     {
         $this->authorize('index', 'slide');
-        if (request()->has('slidable_id') && request()->has('slidable_type')) {
+        if (request()->has('slidable_id') && request()->has('slidable_type') && !auth()->user()->isAdminOrAbove) {
             $validate = validator(request()->all(), [
                 'slidable_id' => 'required|numeric',
                 'slidable_type' => 'required|alpha'

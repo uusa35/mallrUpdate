@@ -1040,5 +1040,7 @@ return array(
     "is_package" => "اعتبار الخدمة كباكدج؟",
     "attach_videos" => "إلحاق فيدوهات",
     "has_only_items" => "الخدمة تمتلك ملحقات فقط",
-    "has_addons" => "Has Addons?"
+    "has_addons" => "تحتوي على مرفقات / ملحقات؟",
+    "images" => "الصور",
+    "is_intro" => "سلايدر المقدمة"
 );

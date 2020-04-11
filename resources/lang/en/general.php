@@ -1075,5 +1075,7 @@ return array(
     "is_package" => "is Package?",
     "attach_videos_to_product" => "Attach Videos to Product",
     "has_only_items" => "Has Only Items?",
-    "has_addons" => "Has Addons?"
+    "has_addons" => "Has Addons?",
+    "images" => "images",
+    "is_intro" => "Attach to Intro Slider"
 );
