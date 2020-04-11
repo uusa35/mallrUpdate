@@ -324,6 +324,22 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="file"
+                                                                       class="control-label">{{ trans('general.qr') }}
+                                                                    *</label>
+
+                                                                <input class="form-control tooltips" data-container="body"
+                                                                       data-placement="top"
+                                                                       data-original-title="{{ trans('message.qr') }}"
+                                                                       name="qr" placeholder="qr" type="file"
+                                                                />
+                                                                <div class="help-block text-left">
+                                                                    {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
