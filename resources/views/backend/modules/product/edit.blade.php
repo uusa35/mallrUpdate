@@ -333,6 +333,8 @@
                                                                 <img class="img-responsive img-sm"
                                                                      src="{{ asset(env('THUMBNAIL').$element->qr) }}"
                                                                      alt="">
+                                                                <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'qr']) }}"><i
+                                                                            class="fa fa-fw fa-times"></i></a>
                                                             </div>
                                                         @endif
                                                     <div class="col-md-4">
