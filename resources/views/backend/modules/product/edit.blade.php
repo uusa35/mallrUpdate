@@ -311,7 +311,7 @@
                                                                         class="fa fa-fw fa-times"></i></a>
                                                         </div>
                                                     @endif
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="file"
                                                                        class="control-label">{{ trans('general.qr') }}
@@ -322,6 +322,9 @@
                                                                        name="qr" placeholder="qr" type="file"/>
                                                                 <div class="help-block text-left">
                                                                     {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
+                                                                </div>
+                                                                <div class="help-block text-left">
+                                                                    {{ trans('general.qr_link') . '  : ' . route('frontend.deep.linking',['id' => $element->id , 'model' => 'product']) }}
                                                                 </div>
                                                             </div>
                                                         </div>

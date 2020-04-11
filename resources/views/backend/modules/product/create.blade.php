@@ -338,6 +338,9 @@
                                                                 <div class="help-block text-left">
                                                                     {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
                                                                 </div>
+                                                                <div class="help-block text-left">
+                                                                    {{ trans('general.qr_link') . '  : ' . url('/').'/element/linking?id=00&model=product'}}
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     <div class="col-md-4">
