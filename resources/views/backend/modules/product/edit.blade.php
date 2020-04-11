@@ -326,7 +326,7 @@
                                                             </div>
                                                         </div>
                                                         @if($element->qr)
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-1">
                                                                 <img class="img-responsive img-sm"
                                                                      src="{{ asset(env('THUMBNAIL').$element->qr) }}"
                                                                      alt="">
