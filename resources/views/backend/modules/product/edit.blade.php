@@ -311,6 +311,27 @@
                                                                         class="fa fa-fw fa-times"></i></a>
                                                         </div>
                                                     @endif
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="file"
+                                                                       class="control-label">{{ trans('general.qr') }}
+                                                                    *</label>
+                                                                <input class="form-control tooltips" data-container="body"
+                                                                       data-placement="top"
+                                                                       data-original-title="{{ trans('message.qr') }}"
+                                                                       name="qr" placeholder="qr" type="file"/>
+                                                                <div class="help-block text-left">
+                                                                    {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        @if($element->qr)
+                                                            <div class="col-md-2">
+                                                                <img class="img-responsive img-sm"
+                                                                     src="{{ asset(env('THUMBNAIL').$element->qr) }}"
+                                                                     alt="">
+                                                            </div>
+                                                        @endif
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"

@@ -25,6 +25,7 @@ class ProductStore extends FormRequest
     {
         return [
             'image.dimensions' => trans('message.best_fit', ['width' => '1080 px', 'height' => '1440 px']),
+            'qr.dimensions' => trans('message.best_fit', ['width' => '300 px', 'height' => '300px']),
             'size_chart.dimensions' => trans('message.best_fit', ['width' => '1080 px', 'height' => '1440 px']),
         ];
     }
@@ -45,6 +46,7 @@ class ProductStore extends FormRequest
             'shipment_package_id' => 'nullable|exists:shipment_packages,id',
             'brand_id' => 'nullable|exists:brands,id',
             'image' => "image|nullable|dimensions:width=1080,height=1440|max:".env('MAX_IMAGE_SIZE').'"',
+            'qr' => "image|nullable|dimensions:width=300,height=300|max:".env('MAX_IMAGE_SIZE').'"',
             'images' => 'array|required',
             'categories' => 'required|array',
             'price' => 'required|numeric|min:0.5|max:999',
