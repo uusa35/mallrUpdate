@@ -837,7 +837,7 @@
                                                             {{ trans('general.yes') }}</label>
                                                         <label class="radio-inline">
                                                             <input type="radio" name="exclusive" id="optionsRadios4"
-                                                                   {{ $element->exclusive ? 'checked' : null  }}
+                                                                   {{ !$element->exclusive ? 'checked' : null  }}
                                                                    value="0">
                                                             {{ trans('general.no') }}</label>
                                                     </div>
