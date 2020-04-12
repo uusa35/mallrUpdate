@@ -71,6 +71,7 @@ class OrderMeta extends PrimaryModel
     {
         return $q->with(['collection.user' => function ($q) {
             $q->onHome()->active()->with(['products' => function ($q) {
+                return $q->active();
             }]);
         }])
             ->select(DB::raw('COUNT(*) as occurrences, collection_id'))
