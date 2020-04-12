@@ -125,8 +125,8 @@
                                         <td class="center"><img class="img-xs"
                                                                 src="{{ $item->product->imageThumbLink }}"
                                                                 alt=""></td>
-                                        <td class="left strong">{{ $item->color ? $item->color->name  : 'N/A'}}</td>
-                                        <td class="left strong">{{ $item->size ? $item->size->name  : 'N/A'}}</td>
+                                        <td class="left strong">{{ $item->product->color->name }}</td>
+                                        <td class="left strong">{{ $item->product->size->name }}</td>
                                         <td class="left"><a
                                                     href="{{ route('frontend.product.show',$item->product_id) }}">{{ $item->product->name }}</a>
                                         </td>
