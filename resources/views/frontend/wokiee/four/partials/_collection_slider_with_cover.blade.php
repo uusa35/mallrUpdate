@@ -10,7 +10,7 @@
              data-item="{{ isset($items) ? $items : 4  }}"
         >
             @foreach($elements as $element)
-                @if($element && $element->active && $element->user->active)
+                @if($element && $element->active && $element->user)
                     <div class="col-lg-3 col-sm-12">
                         @include('frontend.wokiee.four.partials._collection_widget_cover',['element' => $element,'title' => trans('general.personal_shopper')])
                     </div>
