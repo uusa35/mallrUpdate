@@ -147,8 +147,7 @@
                                                             alt=""></td>
                                     <td class="left strong">{{ $item->service_date }}</td>
                                     <td class="left strong">{{ $item->service_time }}</td>
-                                    <td class="left"><a
-                                                class={{ env('ABATI') ? 'disabled' : null  }} href="{{ route('frontend.service.show',$item->service_id) }}">{{ $item->service->name }}</a>
+                                    <td class="left"><a href="{{ !env('ABATI') ? route('frontend.service.show',$item->service_id)  : '#'}}">{{ $item->service->name }}</a>
                                     </td>
                                     <td class="right">{{ $item->price }} {{ trans('general.kd') }}</td>
                                     <td class="right">{{ $item->notes}}</td>
