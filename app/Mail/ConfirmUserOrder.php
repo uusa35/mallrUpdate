@@ -32,6 +32,6 @@ class ConfirmUserOrder extends Mailable
      */
     public function build()
     {
-        return $this->from('order@meemonoon.com')->view('emails.order');
+//        return $this->from('info@abatiap.com')->view('emails.order');
     }
 }
