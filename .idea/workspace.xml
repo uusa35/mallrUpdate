@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="151" column="41" lean-forward="true" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+            <state relative-caret-position="391">
+              <caret line="152" column="93" lean-forward="true" selection-start-line="152" selection-start-column="93" selection-end-line="152" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -464,12 +463,12 @@
       <workItem from="1586643356858" duration="1117000" />
       <workItem from="1586651624114" duration="443000" />
       <workItem from="1586704947537" duration="815000" />
-      <workItem from="1586929146218" duration="79000" />
+      <workItem from="1586929146218" duration="161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33808000" />
+    <option name="totallyTimeSpent" value="33890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -856,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="151" column="41" lean-forward="true" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+        <state relative-caret-position="391">
+          <caret line="152" column="93" lean-forward="true" selection-start-line="152" selection-start-column="93" selection-end-line="152" selection-end-column="93" />
         </state>
       </provider>
     </entry>
