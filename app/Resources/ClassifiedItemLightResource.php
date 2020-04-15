@@ -20,7 +20,7 @@ class ClassifiedItemLightResource extends JsonResource
         return [
 //            'on_home' => $this->property->on_home,
             'on_home' => true,
-            'properties' => PropertyExtraLightResource::make($this->whenLoaded('properties')),
+            'properties' => PropertyExtraLightResource::collection($this->whenLoaded('properties')),
             'categoryGroup' => CategoryGroupExtraLightResource::make($this->whenLoaded('categoryGroup'))
         ];
     }
