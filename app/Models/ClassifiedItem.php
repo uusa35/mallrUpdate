@@ -16,7 +16,7 @@ class ClassifiedItem extends Pivot
         return $this->belongsTo(CategoryGroup::class);
     }
 
-    public function properties()
+    public function property()
     {
         return $this->belongsTo(Property::class);
     }
