@@ -28,4 +28,8 @@ class Property extends PrimaryModel
     {
         return $this->belongsToMany(Classified::class,'classified_property');
     }
+
+    public function ClassifiedItems() {
+        return $this->belongsToMany(ClassifiedItem::class,'classified_property');
+    }
 }
