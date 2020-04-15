@@ -43,7 +43,7 @@ class ClassifiedStore extends FormRequest
             'category_id' => 'required|exists:categories,id',
             'image' => 'image|required|dimensions:width=1080,height=1440',
             'images' => 'array|required',
-            'price' => 'required|min:0.5|max:999999',
+            'price' => 'required|numeric|min:0.5|max:999999',
             'on_home' => 'boolean',
             'description_en' => 'min:5|required|string|max:500',
             'description_ar' => 'min:5|required|string|max:500',
