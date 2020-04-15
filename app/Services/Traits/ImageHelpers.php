@@ -171,7 +171,7 @@ trait ImageHelpers
                         ]);
                     }
                 } else {
-                    $imagePath = $this->saveImageForGallery($request->images[0], $dimensions, $ratio, $sizes, $model);
+                    $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     return $model->images()->create([
                         'image' => $imagePath,
                     ]);
