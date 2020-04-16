@@ -6,8 +6,8 @@
                     <h2 class="tt-title text-center border-bottom">{{ trans('general.personal_information_confirmation') }}</h2>
                     <div class="form-default">
                         <form method="post"
-                              action="{{ route('tap.web.payment.create') }}"
-{{--                                action="{{ route('myfatoorah.web.payment.create') }}"--}}
+{{--                              action="{{ route('tap.web.payment.create') }}"--}}
+                                action="{{ route('myfatoorah.web.payment.create') }}"
                         >
                             <input type="hidden" name="order_id" value="{{ $order->id }}">
                             @csrf

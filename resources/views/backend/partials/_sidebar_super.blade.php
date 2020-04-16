@@ -270,14 +270,14 @@
         </li>
         <li class="nav-item {{ activeItem('color') }}">
             <a href="{{ route('backend.admin.color.index') }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-list-alt"></i>
+                <i class="fa fa-fw fa-paint-brush"></i>
                 <span class="title">{{ trans('general.colors_or_heights') }}</span>
                 <span class="arrow"></span>
             </a>
         </li>
         <li class="nav-item {{ activeItem('size') }}">
             <a href="{{ route('backend.admin.size.index') }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-list-ul"></i>
+                <i class="fa fa-fw fa-shirtsinbulk"></i>
                 <span class="title">{{ trans('general.sizes') }}</span>
                 <span class="arrow"></span>
             </a>
