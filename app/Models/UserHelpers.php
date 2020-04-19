@@ -96,6 +96,13 @@ trait UserHelpers
         });
     }
 
+    public function scopeNotClients($q)
+    {
+        return $q->whereHas('role', function ($q) {
+            return $q->where('is_client', false);
+        });
+    }
+
     public function scopeHasProducts($q)
     {
         return $q->whereHas('products', function ($q) {
