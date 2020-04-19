@@ -23,18 +23,18 @@ class ProductController extends Controller
     public function index()
     {
         if (request()->has('on_home') && request()->on_home) {
-            $elements = Product::active()->hasStock()->hasImage()->onHome()->available()->hasAtLeastOneCategory()->with('product_attributes.size', 'product_attributes.color')->paginate(self::TAKE_MIN);
+            $elements = Product::active()->hasStock()->hasImage()->onHome()->available()->hasAtLeastOneCategory()->with('product_attributes.size', 'product_attributes.color')->orderby('id', 'desc')->paginate(self::TAKE_MIN);
         } elseif (request()->has('on_sale') && request()->on_sale) {
             $elements = Product::active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
 //            $elements = Product::active()->hasStock()->hasImage()->onHome()->available()->hasAtLeastOneCategory()->with('product_attributes.size', 'product_attributes.color')->paginate(self::self::TAKE_MIN);
         } elseif (request()->has('latest') && request()->latest) {
-            $elements = Product::active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
+            $elements = Product::active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'user.country', 'favorites')->limit(self::TAKE_LESS)->orderBy('id', 'desc')->get();
         } elseif (request()->has('best_sale') && request()->best_sale) {
-            $elements = Product::whereIn('id', Product::active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
+            $elements = Product::whereIn('id', Product::active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->orderBy('id', 'desc')->get();
         } elseif (request()->has('hot_deals') && request()->hot_deals) {
-            $elements = Product::active()->available()->onSale()->hotDeals()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'user.country', 'favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
+            $elements = Product::active()->available()->onSale()->hotDeals()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'user.country', 'favorites')->limit(self::TAKE_LESS)->orderby('end_sale', 'desc')->get();
         } else {
-            $elements = Product::active()->hasStock()->hasImage()->hasAtLeastOneCategory()->paginate(self::TAKE_MIN);
+            $elements = Product::active()->hasStock()->hasImage()->hasAtLeastOneCategory()->orderby('id', 'desc')->paginate(self::TAKE_MIN);
         }
         return response()->json(ProductExtraLightResource::collection($elements), 200);
     }
