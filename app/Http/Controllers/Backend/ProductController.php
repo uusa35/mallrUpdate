@@ -55,7 +55,7 @@ class ProductController extends Controller
         $tags = Tag::active()->get();
         $videos = Video::active()->get();
         $brands = Brand::active()->get();
-        $users = User::active()->notAdmins()->get();
+        $users = User::active()->notAdmins()->notClients()->get();
         $colors = Color::active()->get();
         $sizes = Size::active()->get();
         $shipment_packages = ShipmentPackage::active()->get();
@@ -117,7 +117,7 @@ class ProductController extends Controller
         $tags = Tag::active()->get();
         $videos = Video::active()->get();
         $brands = Brand::active()->get();
-        $users = User::active()->notAdmins()->get();
+        $users = User::active()->notAdmins()->notClients()->get();
         $colors = Color::active()->get();
         $sizes = Size::active()->get();
         $shipment_packages = ShipmentPackage::active()->get();
