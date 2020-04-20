@@ -10,10 +10,10 @@
             <div class="portlet box text-center">
                 <div class="tiles padding-tb-20">
                     @can('index','product')
-                        <a href="{{ route('backend.service.index') }}">
+                        <a href="{{ route('backend.product.index') }}">
                             <div class="tile bg-blue-steel bg-font-blue-steel tooltips"
                                  data-container="body" data-placement="bottom"
-                                 data-original-title="{{ trans('message.service') }}"
+                                 data-original-title="{{ trans('message.index_product') }}"
                             >
                                 <div class="tile-body">
                                     <i class="fa fa-product-hunt"></i>
