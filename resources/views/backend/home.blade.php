@@ -8,10 +8,13 @@
     <div class="row">
         <div class="col-lg-12 text-center">
             <div class="portlet box text-center">
-                <div class="tiles">
+                <div class="tiles padding-tb-20">
                     @can('index','product')
                         <a href="{{ route('backend.service.index') }}">
-                            <div class="tile bg-yellow-saffron">
+                            <div class="tile bg-blue-steel bg-font-blue-steel tooltips"
+                                 data-container="body" data-placement="bottom"
+                                 data-original-title="{{ trans('message.service') }}"
+                            >
                                 <div class="tile-body">
                                     <i class="fa fa-product-hunt"></i>
                                 </div>
@@ -23,7 +26,10 @@
                         @can('isAdminOrAbove')
                             @can('index','color')
                                 <a href="{{ route('backend.admin.color.index') }}">
-                                    <div class="tile bg-green-meadow">
+                                    <div class="tile bg-green-meadow tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_color') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-paint-brush"></i>
                                         </div>
@@ -35,7 +41,10 @@
                             @endcan
                             @can('index','size')
                                 <a href="{{ route('backend.admin.size.index') }}">
-                                    <div class="tile bg-grey-cascade">
+                                    <div class="tile bg-grey-cascade tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_size') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-shirtsinbulk"></i>
                                         </div>
@@ -47,7 +56,10 @@
                             @endcan
                             @can('index','collection')
                                 <a href="{{ route('backend.collection.index') }}">
-                                    <div class="tile bg-blue-steel">
+                                    <div class="tile bg-blue-hoki bg-font-blue-hoki tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_collection') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-product-hunt"></i>
                                         </div>
@@ -61,7 +73,10 @@
                     @endcan
                     @can('index','service')
                         <a href="{{ route('backend.service.index') }}">
-                            <div class="tile bg-yellow-lemon">
+                            <div class="tile bg-yellow-lemon tooltips"
+                                 data-container="body" data-placement="bottom"
+                                 data-original-title="{{ trans('message.index_service') }}"
+                            >
                                 <div class="tile-body">
                                     <i class="fa fa-table"></i>
                                 </div>
@@ -73,7 +88,10 @@
                         @can('isAdminOrAbove')
                             @can('index','addon')
                                 <a href="{{ route('backend.admin.addon.index') }}">
-                                    <div class="tile bg-yellow-lemon">
+                                    <div class="tile bg-purple-soft bg-font-purple-soft tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_addon') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-table"></i>
                                         </div>
@@ -85,7 +103,10 @@
                             @endcan
                             @can('index','item')
                                 <a href="{{ route('backend.admin.item.index') }}">
-                                    <div class="tile bg-yellow-lemon">
+                                    <div class="tile bg-yellow bg-font-yellow tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_item') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-table"></i>
                                         </div>
@@ -99,7 +120,10 @@
                     @endcan
                     @can('index','classified')
                         <a href="{{ route('backend.classified.index') }}">
-                            <div class="tile bg-purple-studio">
+                            <div class="tile bg-purple-studio tooltips"
+                                 data-container="body" data-placement="bottom"
+                                 data-original-title="{{ trans('message.index_classified') }}"
+                            >
                                 <div class="tile-body">
                                     <i class="fa fa-gift"></i>
                                 </div>
@@ -112,7 +136,10 @@
                     @can('isAdminOrAbove')
                         @can('index', 'user')
                             <a href="{{ route('backend.user.index') }}">
-                                <div class="tile bg-red-sunglo">
+                                <div class="tile bg-red-sunglo tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_user') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-users"></i>
                                     </div>
@@ -124,7 +151,10 @@
                         @endcan
                         @can('index', 'category')
                             <a href="{{ route('backend.admin.category.index') }}">
-                                <div class="tile bg-blue-madison">
+                                <div class="tile bg-blue-madison tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_category') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-list-ol"></i>
                                     </div>
@@ -135,7 +165,10 @@
                             </a>
                             @can('index','classified')
                                 <a href="{{ route('backend.admin.group.index') }}">
-                                    <div class="tile bg-green-turquoise">
+                                    <div class="tile bg-grey-silver bg-font-grey-silver tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_group') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-list-ol"></i>
                                         </div>
@@ -145,7 +178,10 @@
                                     </div>
                                 </a>
                                 <a href="{{ route('backend.admin.property.index') }}">
-                                    <div class="tile bg-green-turquoise">
+                                    <div class="tile bg-grey-gallery bg-font-grey-gallery tooltips"
+                                         data-container="body" data-placement="bottom"
+                                         data-original-title="{{ trans('message.index_property') }}"
+                                    >
                                         <div class="tile-body">
                                             <i class="fa fa-list-ol"></i>
                                         </div>
@@ -158,7 +194,10 @@
                         @endcan
                         @can('index','setting')
                             <a href="{{ route('backend.admin.setting.index') }}">
-                                <div class="tile bg-red-sunglo-opacity">
+                                <div class="tile bg-green-seagreen bg-font-green-seagreen tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_setting') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-cogs"></i>
                                     </div>
@@ -170,7 +209,10 @@
                         @endcan
                         @can('index','brand')
                             <a href="{{ route('backend.admin.brand.index') }}">
-                                <div class="tile bg-blue-hoki">
+                                <div class="tile btn-primary tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_brand') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-shopping-bag"></i>
                                     </div>
@@ -182,7 +224,10 @@
                         @endcan
                         @can('index','video')
                             <a href="{{ route('backend.video.index') }}">
-                                <div class="tile bg-red-sunglo-opacity">
+                                <div class="tile bg-red-sunglo-opacity tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_video') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-video-camera"></i>
                                     </div>
@@ -194,7 +239,10 @@
                         @endcan
                         @can('index','tag')
                             <a href="{{ route('backend.admin.tag.index') }}">
-                                <div class="tile bg-blue-hoki">
+                                <div class="tile bg-blue-hoki tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_tag') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-tag"></i>
                                     </div>
@@ -206,7 +254,10 @@
                         @endcan
                         @can('index','slide')
                             <a href="{{ route('backend.slide.index') }}">
-                                <div class="tile bg-red-sunglo-opacity">
+                                <div class="tile bg-red-sunglo-opacity tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_slide_for_home_page') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-file-image-o"></i>
                                     </div>
@@ -218,7 +269,10 @@
                         @endcan
                         @can('index','page')
                             <a href="{{ route('backend.admin.page.index') }}">
-                                <div class="tile bg-purple-studio">
+                                <div class="tile bg-purple-studio tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_page') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-book"></i>
                                     </div>
@@ -230,7 +284,10 @@
                         @endcan
                         @can('index','commercial')
                             <a href="{{ route('backend.admin.commercial.index') }}">
-                                <div class="tile  bg-green-meadow">
+                                <div class="tile  bg-grey-salt bg-font-grey-salt tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_commercial') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-gift"></i>
                                     </div>
@@ -242,12 +299,45 @@
                         @endcan
                         @can('index','country')
                             <a href="{{ route('backend.admin.country.index') }}">
-                                <div class="tile bg-green-turquoise">
+                                <div class="tile bg-green-turquoise tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_country') }}"
+                                >
                                     <div class="tile-body">
                                         <i class="fa fa-globe"></i>
                                     </div>
                                     <div class="tile-object text-center">
                                         {{ trans('general.countries') }}
+                                    </div>
+                                </div>
+                            </a>
+                        @endcan
+                        @can('index','currency')
+                            <a href="{{ route('backend.admin.currency.index') }}">
+                                <div class="tile bg-purple-studio tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.index_currency') }}"
+                                >
+                                    <div class="tile-body">
+                                        <i class="fa fa-money"></i>
+                                    </div>
+                                    <div class="tile-object text-center">
+                                        {{ trans('general.currencies') }}
+                                    </div>
+                                </div>
+                            </a>
+                        @endcan
+                        @can('index','order')
+                            <a href="{{ route('backend.admin.order.index') }}">
+                                <div class="tile bg-blue-hoki tooltips"
+                                     data-container="body" data-placement="bottom"
+                                     data-original-title="{{ trans('message.order') }}"
+                                >
+                                    <div class="tile-body">
+                                        <i class="fa fa-motorcycle"></i>
+                                    </div>
+                                    <div class="tile-object text-center">
+                                        {{ trans('general.orders') }}
                                     </div>
                                 </div>
                             </a>
