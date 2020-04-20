@@ -1,6 +1,6 @@
 <?php
 
-<<<<<<< HEAD
+
 return array (
   'questionnaire_order_message' => 'تم استلام طلب الكولكشن والملاحظات الخاصة به وسيتم التأكيد مع المصمم لتنفيذة بالجودة والدقة المطلوبة .. شكرا لاستخدام خدمتنا',
   'we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service' => 'تم استلام الطلب وجاري العمل على تنفيذه. سيتم التواصل معكم في اقرب وقت.',
@@ -205,8 +205,7 @@ return array (
   'this_user_does_not_exist' => 'لا يوجد بيانات لهذا المستخدم',
   'favorite_success' => 'تم أضافه / حذف من المفضلة بنجاح',
   'order_is_complete_we_will_contact_u_soon' => 'تم استلام طلبك .. سيتم التواصل معك في اقرب وقت.',
-=======
-return array(
+
     'copy_right' => 'جميع الحقوق محفوظة ـ  الشركة',
     'admin_product_message' => 'admin_product_message_ar',
     'create_product' => 'create_product',
@@ -446,5 +445,4 @@ return array(
     "order_cash_on_delivery"  => "يرجى العلم بأن الدفع عند الاستلام ليس له أي تأثير إلا داخل دولة الكويت فقط ",
     "user_is_not_deleted" => "!!! تم تسجيل العملية .. لا يمكنك حذف هذا المستخدم !!!"
 
->>>>>>> 3ac3f85753467e21f067d41471aa77c2b70318ad
 );
