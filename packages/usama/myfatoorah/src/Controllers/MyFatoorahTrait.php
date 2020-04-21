@@ -22,7 +22,6 @@ trait MyFatoorahTrait
             $info = curl_getinfo($curl);
             curl_close($curl);
             $json = json_decode($result, true);
-            dd($json);
             if (isset($json['access_token']) && !empty($json['access_token'])) {
                 $access_token = $json['access_token'];
             } else {
@@ -35,6 +34,7 @@ trait MyFatoorahTrait
             }
             if (isset($json['access_token']) && !empty($json['access_token'])) {
                 $elements = $this->createPaymentUrl($order, $user, $access_token);
+                dd($elements);
                 $referenceId = $elements[0];
                 $paymentUrl = $elements[1];
                 if (!empty($referenceId)) {
