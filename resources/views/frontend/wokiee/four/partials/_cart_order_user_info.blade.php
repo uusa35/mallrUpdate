@@ -8,12 +8,12 @@
                         <form method="post"
                               action="{{ route('frontend.order.store') }}">
                             @csrf
-{{--                            @if(Cart::content()->where('options.type', 'country')->first())--}}
-{{--                                <input type="hidden" name="shipment_fees"--}}
-{{--                                       value="{{ Cart::content()->where('options.type', 'country')->first()->price }}">--}}
-{{--                            @else--}}
-{{--                                <input type="hidden" name="shipment_fees" value="0">--}}
-{{--                            @endif--}}
+                            {{--                            @if(Cart::content()->where('options.type', 'country')->first())--}}
+                            {{--                                <input type="hidden" name="shipment_fees"--}}
+                            {{--                                       value="{{ Cart::content()->where('options.type', 'country')->first()->price }}">--}}
+                            {{--                            @else--}}
+                            {{--                                <input type="hidden" name="shipment_fees" value="0">--}}
+                            {{--                            @endif--}}
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
@@ -87,16 +87,24 @@
                                 @endif
                                 @if(session()->get('country')->is_local)
                                     <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="cash_on_delivery">{{ trans('general.cash_on_delivery') }}
-                                                <sup>*</sup></label>
-                                            <div class="form-check">
-                                                <input type="checkbox"
-                                                       value="1"
-                                                       class="form-check-input form-check-input form-control-lg"
-                                                       id="exampleCheck1" name="cash_on_delivery">
-                                            </div></br>
-                                            <div class="alert-danger">{{ trans('message.order_cash_on_delivery') }}</div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="cash_on_delivery">{{ trans('general.cash_on_delivery') }}
+                                                    <sup>*</sup></label>
+                                                <div class="form-check">
+                                                    <input type="checkbox"
+                                                           value="1"
+                                                           class="form-check-input form-check-input form-control-lg"
+                                                           id="exampleCheck1" name="cash_on_delivery">
+                                                </div>
+                                            </div>
+                                            </br>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-danger">
+                                                <i class="fa fa-fw fa-info-circle fa-lg"></i>
+                                                {{ trans('message.order_cash_on_delivery') }}
+                                            </div>
                                         </div>
                                     </div>
                                 @endif

@@ -96,7 +96,7 @@
                                     </span>
                                 </div>
                                 <div class="tt-wrapper">
-                                    <h2 class="tt-title border-bottom" style="margin-bottom: 10px;">
+                                    <h2 class="tt-title" style="margin-bottom: 10px;">
                                         {{ trans('general.description') }}
                                     </h2>
                                     <div id="element-description"></div>
