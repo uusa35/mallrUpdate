@@ -105,12 +105,12 @@
     @endif
     <div class="tt-shopcart-btn">
         <div class="col-left">
-            <a class="btn-link" href="{{ route('frontend.home') }}"><i
+            <a class="btn btn-link" href="{{ route('frontend.home') }}"><i
                         class="icon-e-19"></i>{{ trans('general.continue_shopping') }}</a>
         </div>
         <div class="col-right">
             @if($elements->isNotEmpty())
-                <a class="btn-link" href="{{ route('frontend.cart.clear') }}">
+                <a class="btn btn-link" href="{{ route('frontend.cart.clear') }}">
                     <i class="icon-h-02"></i>
                     {{ trans('general.clear_cart') }}
                 </a>
