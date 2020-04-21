@@ -55,7 +55,7 @@ trait MyFatoorahTrait
             } else {
                 //print_r($json);
                 print_r("Error: " . $json['error'] . "<br>Description: " . $json['error_description']);
-                dd('stop here');
+                dd($json);
             }
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,21 +32,39 @@
     <favorites_list name="mallr" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="394" column="72" lean-forward="true" selection-start-line="394" selection-start-column="72" selection-end-line="394" selection-end-column="72" />
+            <state relative-caret-position="7092">
+              <caret line="394" column="72" selection-start-line="394" selection-start-column="72" selection-end-line="394" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahPaymentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="96" column="27" lean-forward="true" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php">
+        <entry file="file://$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+            <state relative-caret-position="346">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -56,8 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>color.</find>
-      <find>size</find>
       <find>service</find>
       <find>setting.</find>
       <find>google</find>
@@ -86,6 +101,8 @@
       <find>product</find>
       <find>category_</find>
       <find>timing</find>
+      <find>dd</find>
+      <find>stop here</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/partials/styles.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/breadcrumbs.blade.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
@@ -145,6 +161,7 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/message.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php" />
+        <option value="$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php" />
       </list>
     </option>
   </component>
@@ -401,12 +418,13 @@
       <workItem from="1587305707945" duration="793000" />
       <workItem from="1587351979850" duration="2276000" />
       <workItem from="1587450837822" duration="456000" />
-      <workItem from="1587451950966" duration="91000" />
+      <workItem from="1587451950966" duration="462000" />
+      <workItem from="1587480779499" duration="122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53639000" />
+    <option name="totallyTimeSpent" value="54132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -438,20 +456,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_01_145136_create_classifieds_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="63" column="98" lean-forward="true" selection-start-line="63" selection-start-column="98" selection-end-line="63" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Search/Filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="67" column="11" lean-forward="true" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/CategoryExtraLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -775,15 +779,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="394" column="72" lean-forward="true" selection-start-line="394" selection-start-column="72" selection-end-line="394" selection-end-column="72" />
+        <state relative-caret-position="7092">
+          <caret line="394" column="72" selection-start-line="394" selection-start-column="72" selection-end-line="394" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_videos_for_company.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="394">
+          <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="96" column="27" lean-forward="true" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
         </state>
       </provider>
     </entry>
