@@ -64,7 +64,8 @@ trait MyFatoorahTrait
 
     public function createPaymentUrl($order, $user, $access_token)
     {
-        $post_string = '{
+        try {
+            $post_string = '{
             "InvoiceValue": "' . $order->net_price . '",
             "CustomerName": "' . $user->name . '",
             "CustomerBlock": "' . Str::limit($user->address, 10, '') . '",
@@ -86,25 +87,29 @@ trait MyFatoorahTrait
               "ApiCustomFileds": "weight=10,size=L,lenght=170",
               "ErrorUrl": "' . env('MYFATOORAH_ERROR_URL') . '"
           }';
-        $soap_do = curl_init();
+            $soap_do = curl_init();
 
-        curl_setopt($soap_do, CURLOPT_URL, env('MYFATOORAH_API_CREATE_INVOICE'));
-        curl_setopt($soap_do, CURLOPT_CONNECTTIMEOUT, 10);
-        curl_setopt($soap_do, CURLOPT_TIMEOUT, 10);
-        curl_setopt($soap_do, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($soap_do, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($soap_do, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($soap_do, CURLOPT_POST, true);
-        curl_setopt($soap_do, CURLOPT_POSTFIELDS, $post_string);
-        curl_setopt($soap_do, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8', 'Content-Length: ' . strlen($post_string), 'Accept: application/json', 'Authorization: Bearer ' . $access_token));
-        $result1 = curl_exec($soap_do);
-        $err = curl_error($soap_do);
-        $json1 = json_decode($result1, true);
-        $RedirectUrl = $json1['RedirectUrl'];
-        $ref_Ex = explode('/', $RedirectUrl);
-        $referenceId = $ref_Ex[4];
-        curl_close($soap_do);
-        return [$referenceId, $RedirectUrl];
+            curl_setopt($soap_do, CURLOPT_URL, env('MYFATOORAH_API_CREATE_INVOICE'));
+            curl_setopt($soap_do, CURLOPT_CONNECTTIMEOUT, 10);
+            curl_setopt($soap_do, CURLOPT_TIMEOUT, 10);
+            curl_setopt($soap_do, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($soap_do, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($soap_do, CURLOPT_SSL_VERIFYHOST, false);
+            curl_setopt($soap_do, CURLOPT_POST, true);
+            curl_setopt($soap_do, CURLOPT_POSTFIELDS, $post_string);
+            curl_setopt($soap_do, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8', 'Content-Length: ' . strlen($post_string), 'Accept: application/json', 'Authorization: Bearer ' . $access_token));
+            $result1 = curl_exec($soap_do);
+            dd($result1);
+            $err = curl_error($soap_do);
+            $json1 = json_decode($result1, true);
+            $RedirectUrl = $json1['RedirectUrl'];
+            $ref_Ex = explode('/', $RedirectUrl);
+            $referenceId = $ref_Ex[4];
+            curl_close($soap_do);
+            return [$referenceId, $RedirectUrl];
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
     }
 
     public function getProducts($order)
