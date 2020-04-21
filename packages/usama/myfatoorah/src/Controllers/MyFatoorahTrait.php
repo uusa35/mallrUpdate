@@ -20,9 +20,9 @@ trait MyFatoorahTrait
             curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query(array('grant_type' => 'password', 'username' => ENV('MYFATOORAH_USERNAME'), 'password' => ENV('MYFATOORAH_PASSWORD'))));
             $result = curl_exec($curl);
             $info = curl_getinfo($curl);
-            dd($info);
             curl_close($curl);
             $json = json_decode($result, true);
+            dd($json);
             if (isset($json['access_token']) && !empty($json['access_token'])) {
                 $access_token = $json['access_token'];
             } else {
