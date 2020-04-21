@@ -163,7 +163,7 @@
                                     </div>
                                 </div>
                             </a>
-                            @can('index','classified')
+                            @can('index','group')
                                 <a href="{{ route('backend.admin.group.index') }}">
                                     <div class="tile bg-grey-silver bg-font-grey-silver tooltips"
                                          data-container="body" data-placement="bottom"
@@ -177,19 +177,21 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="{{ route('backend.admin.property.index') }}">
-                                    <div class="tile bg-grey-gallery bg-font-grey-gallery tooltips"
-                                         data-container="body" data-placement="bottom"
-                                         data-original-title="{{ trans('message.index_property') }}"
-                                    >
-                                        <div class="tile-body">
-                                            <i class="fa fa-list-ol"></i>
+                                @can('index','property')
+                                    <a href="{{ route('backend.admin.property.index') }}">
+                                        <div class="tile bg-grey-gallery bg-font-grey-gallery tooltips"
+                                             data-container="body" data-placement="bottom"
+                                             data-original-title="{{ trans('message.index_property') }}"
+                                        >
+                                            <div class="tile-body">
+                                                <i class="fa fa-list-ol"></i>
+                                            </div>
+                                            <div class="tile-object text-center">
+                                                {{ trans('general.category_property') }}
+                                            </div>
                                         </div>
-                                        <div class="tile-object text-center">
-                                            {{ trans('general.category_property') }}
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                @endcan
                             @endcan
                         @endcan
                         @can('index','setting')
