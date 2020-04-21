@@ -25,20 +25,6 @@
             </div>
         </div>
     @endcan
-    @can('timing.create')
-        <div class="col-lg-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('general.new_timing') }}</div>
-                <div class="panel-body text-center">
-                    <iframe width="450" height="300"
-                            src="https://www.youtube.com/embed/KTkClkW0MZw"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    @endcan
     @can('user.create')
         <div class="col-lg-4">
             <div class="panel panel-default">
