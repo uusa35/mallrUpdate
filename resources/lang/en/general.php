@@ -1078,5 +1078,6 @@ return array(
     "has_addons" => "Has Addons?",
     "images" => "images",
     "is_intro" => "Attach to Intro Slider",
-    "qr_link" => "َQR Link"
+    "qr_link" => "َQR Link",
+    "reference" => "Reference"
 );
