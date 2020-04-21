@@ -34,7 +34,6 @@ trait MyFatoorahTrait
             }
             if (isset($json['access_token']) && !empty($json['access_token'])) {
                 $elements = $this->createPaymentUrl($order, $user, $access_token);
-                dd($elements);
                 $referenceId = $elements[0];
                 $paymentUrl = $elements[1];
                 if (!empty($referenceId)) {
@@ -99,7 +98,6 @@ trait MyFatoorahTrait
             curl_setopt($soap_do, CURLOPT_POSTFIELDS, $post_string);
             curl_setopt($soap_do, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8', 'Content-Length: ' . strlen($post_string), 'Accept: application/json', 'Authorization: Bearer ' . $access_token));
             $result1 = curl_exec($soap_do);
-            dd($result1);
             $err = curl_error($soap_do);
             $json1 = json_decode($result1, true);
             $RedirectUrl = $json1['RedirectUrl'];
