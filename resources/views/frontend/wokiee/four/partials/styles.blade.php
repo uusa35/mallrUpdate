@@ -60,7 +60,7 @@
         color: {{ $settings->footer_theme_color }}      !important;
     }
 
-    .btn, .tt-btn-search-rtl,
+    .btn, .tt-btn-search-rtl, .tt-btn-search,
     .tt-menu-toggle.stylization-02,
     .tt-product:not(.tt-view) .tt-image-box,
     .btn-link, .btn-link:focus,
@@ -159,9 +159,9 @@
         text-underline: none !important;
     }
 
-    .tt-product:not(.tt-view) .tt-description {
-        background: transparent !important;
-    }
+    /*.tt-product:not(.tt-view) .tt-description {*/
+    /*    background: transparent !important;*/
+    /*}*/
 
     /*     mobile menu */
     .panel-menu {

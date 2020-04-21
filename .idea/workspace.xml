@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_items_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_items_table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="102" column="63" lean-forward="true" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
+            <state relative-caret-position="864">
+              <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -61,12 +59,28 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/scripts.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>trans('mes</find>
-      <find>proper</find>
       <find>message.</find>
       <find>currency</find>
       <find>catego</find>
@@ -95,6 +109,8 @@
       <find>shipment_fees</find>
       <find>clear</find>
       <find>alert</find>
+      <find>tt-btn-search</find>
+      <find>.tt-product:not(.tt-view) .tt-description</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ProductStore.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ProductUpdate.php" />
@@ -154,6 +169,7 @@
         <option value="$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_items_table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" />
       </list>
     </option>
   </component>
@@ -402,12 +418,12 @@
       <workItem from="1587450837822" duration="456000" />
       <workItem from="1587451950966" duration="462000" />
       <workItem from="1587480779499" duration="1376000" />
-      <workItem from="1587484334276" duration="732000" />
+      <workItem from="1587484334276" duration="1035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56118000" />
+    <option name="totallyTimeSpent" value="56421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -439,13 +455,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_15_074059_remove_category_id_from_category_groups_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -617,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -783,8 +785,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="102" column="63" lean-forward="true" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="63" />
+        <state relative-caret-position="864">
+          <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
         </state>
       </provider>
     </entry>
