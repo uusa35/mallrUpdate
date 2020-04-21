@@ -68,7 +68,7 @@
     .tt-back-to-top,
     .btn.btn-border,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
-    .tt-image-box .tt-btn-wishlist, .tt-btn-quickview {
+    .tt-image-box .tt-btn-wishlist {
         color: {{ $settings->btn_text_theme_color }}      !important;
         background-color: {{ $settings->btn_bg_theme_color }}      !important;
         border-color: {{ $settings->btn_text_theme_color }}  !important;
@@ -77,7 +77,7 @@
     .tt-shopcart-table-02 .tt-title a, .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
-    .tt-desctop-menu:not(.tt-hover-02) {
+    .tt-desctop-menu:not(.tt-hover-02), .tt-btn-quickview {
         color: {{ $settings->main_theme_color }}      !important;
     }
 
