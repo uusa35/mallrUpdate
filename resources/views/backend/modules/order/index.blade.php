@@ -12,7 +12,7 @@
                 <th>{{ trans('general.price') }}</th>
                 <th>{{ trans('general.net_price') }}</th>
                 <th>{{ trans('general.discount') }}</th>
-                <th>{{ trans('general.shipment_reference') }}</th>
+                <th>{{ trans('general.shipment') }}</th>
                 <th>{{ trans('general.reference_id') }}</th>
                 <th>{{ trans('general.payment_status') }}</th>
                 <th>{{ trans('general.address') }}</th>
@@ -28,7 +28,7 @@
                 <th>{{ trans('general.price') }}</th>
                 <th>{{ trans('general.net_price') }}</th>
                 <th>{{ trans('general.discount') }}</th>
-                <th>{{ trans('general.shipment_reference') }}</th>
+                <th>{{ trans('general.shipment') }}</th>
                 <th>{{ trans('general.reference_id') }}</th>
                 <th>{{ trans('general.payment_status') }}</th>
                 <th>{{ trans('general.address') }}</th>
@@ -87,14 +87,29 @@
                     <td>
                         <span class="label label-{{ $element->discount ?  'warning' : null }}">{{ $element->discount }}</span>
                     </td>
-                    <td>{{ $element->shipment_reference}}</td>
+                    <td>
+                        {{ $element->shipment_reference}}
+                        <div class="btn-group-vertical btn-group-solid">
+                            <button type="button"
+                                    class="btn blue">{{ trans('general.reference') }}
+                                : {{ $element->shipment_reference ? $element->shipment_reference : 'N/A' }}</button>
+                            <button type="button"
+                                    class="btn grey">{{ trans('general.shipment') }}
+                                : {{ $element->shipment_fees ? $element->shipment_fees : '0' }} {{ trans('general.kd') }}</button>
+                        </div>
+                    </td>
                     <td>{{ $element->reference_id}}</td>
                     <td>
-                        <span class="label label-{{ $element->status === 'success' ? 'success' : 'info' }}"> {{ $element->status }}</span></br>
-                        <span class="label label-{{ $element->paid ? 'success' : 'danger' }}">{{ trans('general.is_paid') }} : {{ $element->paid ? 'Paid' : 'Not Paid'}}</span></br>
-                        @if($element->cash_on_delivery)
-                            <button disabled class="btn btn-danger">{{ trans('general.cash_on_delivery') }}</button>
-                        @endif
+                        <div class="btn-group-vertical btn-group-solid">
+                            <button type="button"
+                                    class="btn {{ $element->status === 'success' ? 'green' : 'default' }}">{{ $element->status }}</button>
+                            <button type="button"
+                                    class="btn {{ $element->paid ? 'green' : 'red' }}">{{ trans('general.is_paid') }}
+                                : {{ $element->paid ? 'Paid' : 'Not Paid'}}</button>
+                            @if($element->cash_on_delivery)
+                                <button type="button" class="btn yellow">cash_on_delivery</button>
+                            @endif
+                        </div>
                     </td>
                     <td>{{ $element->address }}</td>
                     <td><span class="label label-info">{{ $element->mobile }}</span></td>
