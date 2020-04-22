@@ -1,10 +1,9 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-
-use App\User;
+use App\Models\Country;
+use App\Models\Role;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
+use \Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +15,64 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
-
-$factory->define(User::class, function (Faker $faker) {
+$fakerAr = \Faker\Factory::create('ar_JO');
+$factory->define(App\Models\User::class, function (Faker $faker)  {
     return [
         'name' => $faker->name,
+        'slug_ar' => $faker->realText(20),
+        'slug_en' => $faker->name,
+        'description_ar' => $faker->realText(120),
+        'description_en' => $faker->name,
+        'service_ar' => $faker->realText(120),
+        'service_en' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => Str::random(10),
+        'mobile' => $faker->bankAccountNumber,
+        'phone' => $faker->bankAccountNumber,
+        'fax' => $faker->name,
+        'image' => 'user-' . $faker->numberBetween(1, 5) . '.jpg',
+        'qr' => 'user-' . $faker->numberBetween(1, 5) . '.jpg',
+        'banner' => env('APP_MODE') . '-' . $faker->numberBetween(1, 10) . '.jpeg',
+        'bg' => env('APP_MODE') . '-' . $faker->numberBetween(1, 10) . '.jpeg',
+        'phone' => $faker->bankAccountNumber,
+        'address' => $faker->address,
+        'area' => $faker->streetName,
+        'block' => $faker->randomDigit,
+        'street' => $faker->streetName,
+        'building' => $faker->randomDigit,
+        'floor' => $faker->randomDigit,
+        'apartment' => $faker->name,
+        'country_name' => $faker->country,
+        'country_id' => Country::where('is_local', true)->first()->id,
+        'role_id' => Role::all()->random()->id,
+        'api_token' => $faker->bankAccountNumber,
+        'merchant_id' => $faker->bankAccountNumber,
+        'path' => '1.pdf',
+        'website' => $faker->url,
+        'facebook' => $faker->url,
+        'instagram' => $faker->url,
+        'youtube' => $faker->url,
+        'twitter' => $faker->url,
+        'whatsapp' => $faker->bankAccountNumber,
+        'iphone' => $faker->url,
+        'android' => $faker->url,
+        'longitude' => $faker->longitude,
+        'latitude' => $faker->latitude,
+        'policy_ar' => $faker->name,
+        'policy_en' => $faker->name,
+        'cancellation_ar' => $faker->name,
+        'cancellation_en' => $faker->name,
+        'keywords' => $faker->sentence,
+        'balance' => $faker->numberBetween(5, 99),
+        'on_home' => $faker->boolean(true),
+        'video_url_one' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
+        'video_url_two' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
+        'video_url_three' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
+        'video_url_four' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
+        'video_url_five' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
+        'player_id' => $faker->bankAccountNumber,
+        'views' => $faker->numberBetween(10,999)
     ];
 });
