@@ -500,6 +500,7 @@
                                                   data-original-title="{{ trans('message.description_ar') }}"
                                                   id="description_ar" name="description_ar"
                                                   aria-multiline="true"
+                                                  rows="5"
                                                   maxlength="1000">{{ $element->description_ar }}</textarea>
                                     </div>
                                 </div>
@@ -512,6 +513,7 @@
                                                   data-original-title="{{ trans('message.description_en') }}"
                                                   id="description_en" name="description_en"
                                                   aria-multiline="true"
+                                                  rows="5"
                                                   maxlength="1000">{{ $element->description_en }}</textarea>
                                     </div>
                                 </div>
