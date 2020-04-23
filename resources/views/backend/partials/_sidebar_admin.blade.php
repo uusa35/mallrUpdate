@@ -508,7 +508,8 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a href="{{ route('backend.admin.order.index',['status' => 'completed']) }}" class="nav-link nav-toggle">
+                <a href="{{ route('backend.admin.order.index',['status' => 'completed']) }}"
+                   class="nav-link nav-toggle">
                     <i class="fa fa-fw fa-pie-chart"></i>
                     <span class="title">{{ trans('general.completed_orders') }}</span>
                     <span class="arrow"></span>
@@ -589,6 +590,25 @@
             </li>
 
         </ul>
+    </li>
+@endcan
+
+@can('index','slide')
+    <li class="nav-item {{ activeItem('slide') }}">
+        <a href="{{ route('backend.slide.index',['slidable_id' => auth()->id(), 'slidable_type' => 'user']) }}">
+            <i class="fa fa-fw fa-file-image-o"></i>
+            <span class="title">{{ trans('general.slides') }}</span>
+            <span class="arrow"></span>
+        </a>
+    </li>
+@endcan
+@can('index','video')
+    <li class="nav-item {{ activeItem('video') }}">
+        <a href="{{ route('backend.video.index') }}" class="nav-link ">
+            <i class="fa fa-fw fa-file-image-o"></i>
+            <span class="title">{{ trans('general.videos') }}</span>
+            <span class="arrow"></span>
+        </a>
     </li>
 @endcan
 
