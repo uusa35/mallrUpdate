@@ -22,7 +22,7 @@ class VideoController extends Controller
         $this->authorize('index', 'video');
         $elements = Video::all();
         if (isset($elements) && $elements->isNotEmpty()) {
-            return view('backend.modules.video.index', compact('elements','products'));
+            return view('backend.modules.video.index', compact('elements'));
         }
         return redirect()->back()->with('error', trans('message.no_videos'));
     }
