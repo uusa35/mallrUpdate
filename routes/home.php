@@ -1,5 +1,5 @@
 <?php
-if(env('ABATI')) {
+if (env('ABATI')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('MALLR')) {
@@ -27,6 +27,9 @@ if(env('ABATI')) {
     Route::get('/', 'HomeController@getDailyHome')->name('index');
     Route::get('/home', 'HomeController@getDailyHome')->name('home');
 } elseif (env('ATSPOT')) {
+    Route::get('/', 'HomeController@getMobileLayout')->name('index');
+    Route::get('/home', 'HomeController@getMobileLayout')->name('home');
+} elseif (env('EXPO')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 }
