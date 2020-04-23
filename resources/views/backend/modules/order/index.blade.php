@@ -94,7 +94,6 @@
                                     <span class="label label-{{ $element->discount ?  'warning' : null }}">{{ $element->discount }}</span>
                                 </td>
                                 <td>
-                                    {{ $element->shipment_reference}}
                                     <div class="btn-group-vertical btn-group-solid">
                                         <button type="button"
                                                 class="btn blue">{{ trans('general.reference') }}
