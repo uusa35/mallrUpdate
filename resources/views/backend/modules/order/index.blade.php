@@ -46,7 +46,7 @@
                         <tbody>
                         @foreach($elements as $element)
                             <tr>
-                                <td>#{{ $element->id }}</td>
+                                <td>{{ '#'.$element->id }}</td>
                                 <td>
                                     @if($element->order_metas->isNotEmpty())
                                         @foreach($element->order_metas as $meta)
