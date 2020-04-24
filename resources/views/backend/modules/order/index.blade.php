@@ -17,7 +17,7 @@
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
-                            <th>{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -38,7 +38,7 @@
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
-                            <th>{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -113,7 +113,7 @@
                                 <td>{{ $element->price}}</td>
                                 <td>{{ $element->net_price}}</td>
                                 <td>
-                                    <span class="label label-{{ $element->discount ?  'warning' : null }}">{{ $element->discount }}</span>
+                                    <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount  : 'N/A'}}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">
