@@ -377,7 +377,7 @@ return array(
     'owner' => 'owner',
     'brand' => 'brand',
     'image_chart' => 'image_chart',
-    'sale_price' => 'sale_price',
+    'sale_price' => 'السعر بعد الخصم',
     'description_arabic' => 'الوصف باللغة العربية',
     'description_english' => 'الوصف باللغة الانجليزية',
     'notes_arabic' => 'الملاحظات بالعربية',

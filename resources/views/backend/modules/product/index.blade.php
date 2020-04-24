@@ -8,21 +8,23 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <div class="portlet light ">
+            <div class="portlet light bordered">
                 @include('backend.partials.forms.form_title',['title' => trans('general.index_product')])
                 <div class="portlet-body">
                     @include('backend.partials._admin_instructions',['title' => trans('general.products') ,'message' => trans('message.index_product')])
-                    <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0">
+                    {{--                    <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0">--}}
+                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%"
+                           id="sample_1">
                         <thead>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
+                            <th class="all">{{ trans('general.id') }}</th>
                             <th>{{ trans('general.sku') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th>{{ trans('general.price') }}</th>
-                            <th>{{ trans('general.sale_price') }}</th>
-                            <th>{{ trans('general.weight') }}</th>
+                            <th class="none">{{ trans('general.sale_price') }}</th>
+                            <th class="none">{{ trans('general.weight') }}</th>
                             <th>{{ trans('general.image') }}</th>
-                            <th>{{ trans('general.end_sale') }}</th>
+                            <th class="none">{{ trans('general.end_sale') }}</th>
                             <th>{{ trans('general.active') }}</th>
                             <th>{{ trans('general.company') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
@@ -31,14 +33,14 @@
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
+                            <th class="all">{{ trans('general.id') }}</th>
                             <th>{{ trans('general.sku') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th>{{ trans('general.price') }}</th>
-                            <th>{{ trans('general.sale_price') }}</th>
-                            <th>{{ trans('general.weight') }}</th>
+                            <th class="none">{{ trans('general.sale_price') }}</th>
+                            <th class="none">{{ trans('general.weight') }}</th>
                             <th>{{ trans('general.image') }}</th>
-                            <th>{{ trans('general.end_sale') }}</th>
+                            <th class="none">{{ trans('general.end_sale') }}</th>
                             <th>{{ trans('general.active') }}</th>
                             <th>{{ trans('general.company') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
@@ -70,7 +72,7 @@
                                     {{ $element->sale_price }}
                                 </td>
                                 <td>
-                                    {{ $element->weight }}
+                                    {{ $element->weight }} {{ trans('general.kg') }}
                                 </td>
                                 <td>
                                     <img class="img-xs" src="{{ $element->imageThumbLink }}" alt="">
@@ -129,86 +131,87 @@
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         @if(!$element->trashed())
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li>
-                                                <a href="{{ route('backend.product.edit',$element->id) }}">
-                                                    <i class="fa fa-fw fa-edit"></i> {{ trans('general.edit') }}</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('backend.activate',['model' => 'product','id' => $element->id]) }}">
-                                                    <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
-                                                </a>
-                                            </li>
-                                            @if($element->has_attributes)
+                                            <ul class="dropdown-menu pull-right" role="menu">
                                                 <li>
-                                                    <a href="{{ route('backend.attribute.create',['product_id' => $element->id]) }}">
-                                                        <i class="fa fa-fw fa-plus-square"></i> {{ trans('general.assign_new_attribute') }}
+                                                    <a href="{{ route('backend.product.edit',$element->id) }}">
+                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.edit') }}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('backend.activate',['model' => 'product','id' => $element->id]) }}">
+                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
                                                     </a>
                                                 </li>
-                                            @endif
-                                            @can('isAdminOrAbove')
-                                                @can('index','slide')
+                                                @if($element->has_attributes)
                                                     <li>
-                                                        <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
-                                                            <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
+                                                        <a href="{{ route('backend.attribute.create',['product_id' => $element->id]) }}">
+                                                            <i class="fa fa-fw fa-plus-square"></i> {{ trans('general.assign_new_attribute') }}
                                                         </a>
                                                     </li>
-                                                    @if($element->slides->isNotEmpty())
-                                                        <li>
-                                                            <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
-                                                                <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
-                                                            </a>
-                                                        </li>
-                                                    @endif
-                                                @endcan
-                                            @else
-                                                @can('slide.create')
-                                                    <li>
-                                                        <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
-                                                            <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
-                                                        </a>
-                                                    </li>
-                                                @endcan
-                                                @if($element->slides->isNotEmpty())
+                                                @endif
+                                                @can('isAdminOrAbove')
                                                     @can('index','slide')
                                                         <li>
-                                                            <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
-                                                                <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
+                                                            <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
+                                                                <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
+                                                            </a>
+                                                        </li>
+                                                        @if($element->slides->isNotEmpty())
+                                                            <li>
+                                                                <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
+                                                                    <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
+                                                                </a>
+                                                            </li>
+                                                        @endif
+                                                    @endcan
+                                                @else
+                                                    @can('slide.create')
+                                                        <li>
+                                                            <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
+                                                                <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
                                                             </a>
                                                         </li>
                                                     @endcan
+                                                    @if($element->slides->isNotEmpty())
+                                                        @can('index','slide')
+                                                            <li>
+                                                                <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'product']) }}">
+                                                                    <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
+                                                                </a>
+                                                            </li>
+                                                        @endcan
+                                                    @endif
+                                                @endcan
+                                                @if(!$element->trashed())
+                                                    <li>
+                                                        <a data-toggle="modal" href="#" data-target="#basic"
+                                                           data-title="Delete"
+                                                           data-content="Are you sure you want to delete {{ $element->name  }}? "
+                                                           data-form_id="delete-{{ $element->id }}">
+                                                            <i class="fa fa-fw fa-recycle"></i> {{ trans('general.delete') }}
+                                                        </a>
+                                                        <form method="post" id="delete-{{ $element->id }}"
+                                                              action="{{ route('backend.product.destroy',$element->id) }}">
+                                                            @csrf
+                                                            <input type="hidden" name="_method" value="delete"/>
+                                                            <button type="submit" class="btn btn-del hidden">
+                                                                <i class="fa fa-fw fa-times-circle"></i> {{ trans('general.delete') }}
+                                                            </button>
+                                                        </form>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ route('backend.product.restore',$element->id) }}">
+                                                            <i class="fa fa-fw fa-window-restore"></i> {{ trans('general.restore') }}
+                                                        </a>
+                                                    </li>
                                                 @endif
-                                            @endcan
-                                            @if(!$element->trashed())
-                                                <li>
-                                                    <a data-toggle="modal" href="#" data-target="#basic"
-                                                       data-title="Delete"
-                                                       data-content="Are you sure you want to delete {{ $element->name  }}? "
-                                                       data-form_id="delete-{{ $element->id }}">
-                                                        <i class="fa fa-fw fa-recycle"></i> {{ trans('general.delete') }}
-                                                    </a>
-                                                    <form method="post" id="delete-{{ $element->id }}"
-                                                          action="{{ route('backend.product.destroy',$element->id) }}">
-                                                        @csrf
-                                                        <input type="hidden" name="_method" value="delete"/>
-                                                        <button type="submit" class="btn btn-del hidden">
-                                                            <i class="fa fa-fw fa-times-circle"></i> {{ trans('general.delete') }}
-                                                        </button>
-                                                    </form>
-                                                </li>
-                                            @else
-                                                <li>
-                                                    <a href="{{ route('backend.product.restore',$element->id) }}">
-                                                        <i class="fa fa-fw fa-window-restore"></i> {{ trans('general.restore') }}
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        </ul>
-                                            @else
+                                            </ul>
+                                        @else
                                             <ul class="dropdown-menu pull-right" role="menu">
                                                 <li>
                                                     <a href="{{ route('backend.product.restore',$element->id) }}">
-                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.restore') }}</a>
+                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.restore') }}
+                                                    </a>
                                                 </li>
                                             </ul>
                                         @endif

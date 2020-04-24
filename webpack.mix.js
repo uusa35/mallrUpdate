@@ -174,6 +174,7 @@ mix.scripts([
 
 
         '../metronic_v4.5.6/theme/assets/global/scripts/app.min.js',
+        '../metronic_v4.5.6/theme/assets/pages/scripts/table-datatables-responsive.min.js',
 
 
         '../metronic_v4.5.6/theme/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',

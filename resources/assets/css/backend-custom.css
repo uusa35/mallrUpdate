@@ -97,3 +97,11 @@ body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tf
 .ms-container {
     min-width : 450px !important;
 }
+
+.btn.btn-outline.purple {
+    display : none !important;
+}
+
+.table.dataTable>tbody>tr.child span.dtr-title {
+    min-width: 200px;
+}
