@@ -17,16 +17,17 @@ class OrderController extends Controller
      */
     public function index()
     {
+        $elements = Order::query();
         if (request()->has('status')) {
-            $elements = Order::where('status', request()->status)
+            $elements = $elements->where('status', request()->status)
                 ->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else if (request()->has('paid')) {
-            $elements = Order::where('paid', true)
+            $elements = $elements->where('paid', true)
                 ->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else {
-            $elements = Order::with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+            $elements = $elements->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')
                 ->paginate(50);
         }
