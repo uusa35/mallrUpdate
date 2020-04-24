@@ -13,32 +13,42 @@
                            width="100%">
                         <thead>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.product_size_quantity') }}</th>
+                            <th class="all">{{ trans('general.order_id') }}</th>
+                            <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
                             <th>{{ trans('general.discount') }}</th>
-                            <th>{{ trans('general.shipment') }}</th>
-                            <th>{{ trans('general.reference_id') }}</th>
+                            <th class="none">{{ trans('general.shipment') }}</th>
+                            <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
                             <th>{{ trans('general.address') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
+                            <th class="none">{{ trans('general.country') }}</th>
+                            <th class="none">{{ trans('general.email') }}</th>
+{{--                            <th class="none">{{ trans('general.day') }}</th>--}}
+{{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
+{{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
                             <th>{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.product_size_quantity') }}</th>
+                            <th class="all">{{ trans('general.id') }}</th>
+                            <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
                             <th>{{ trans('general.discount') }}</th>
-                            <th>{{ trans('general.shipment') }}</th>
-                            <th>{{ trans('general.reference_id') }}</th>
+                            <th class="none">{{ trans('general.shipment') }}</th>
+                            <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
                             <th>{{ trans('general.address') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
+                            <th class="none">{{ trans('general.country') }}</th>
+                            <th class="none">{{ trans('general.email') }}</th>
+{{--                            <th class="none">{{ trans('general.day') }}</th>--}}
+{{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
+{{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
                             <th>{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -118,6 +128,11 @@
                                 </td>
                                 <td>{{ $element->address }}</td>
                                 <td><span class="label label-info">{{ $element->mobile }}</span></td>
+                                <td>{{ $element->country }}</td>
+                                <td>{{ $element->email }}</td>
+{{--                                <td>{{ $element->day }}</td>--}}
+{{--                                <td>{{ $element->time }}</td>--}}
+{{--                                <td>{{ $element->booked_at }}</td>--}}
                                 <td><span class="label label-info">{{ $element->created_at->diffForHumans()}}</span>
                                 </td>
                                 <td>
