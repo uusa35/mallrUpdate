@@ -17,7 +17,7 @@
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
-                            <th>{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -38,7 +38,7 @@
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.price') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
-                            <th>{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -63,44 +63,49 @@
                                             @foreach($element->order_metas as $meta)
                                                 @if($meta->product && $meta->product_id)
                                                     @if(!is_null($meta->product->product_attributes) && $meta->product->has_attributes)
-
                                                         <button type="button"
                                                                 class="btn blue">
-                                                            {{ trans('general.id') }} : {{ $meta->product->id }}
+                                                            {{ trans('general.name') }} : {{ $meta->product->id }}
                                                             - {{ $meta->product->name}}
-                                                            <br>
-                                                            @if($meta->product_attribute && $meta->product_attribute->size)
+                                                        </button>
+                                                        @if($meta->product_attribute && $meta->product_attribute->size)
+                                                            <button class="btn yellow">
                                                                 {{ trans('general.size') }}
                                                                 : {{ $meta->product_attribute->size->name_ar }}
-                                                                <br>
-                                                            @endif
+                                                            </button>
+                                                        @endif
+                                                        <button class="btn blue-steel">
                                                             {{ trans('general.quantity') }} : {{ $meta->qty }}
                                                         </button>
                                                     @else
                                                         <button type="button"
-                                                                class="btn green">
+                                                                class="btn blue-steel">
                                                             {{ trans('general.id') }} : {{ $meta->product->id }}
                                                             - {{ $meta->product->name}}
-                                                            <br>
-                                                            @if($meta->product->size && $meta->product->show_attribute)
-                                                                {{ trans('general.size') }}
-                                                                : {{ $meta->product->size->name_ar }} <br>
-                                                            @endif
-                                                            {{ trans('general.quantity') }} : {{ $meta->qty }}
                                                         </button>
+                                                        @if($meta->product->size && $meta->product->show_attribute)
+                                                            <button class="btn gold">
+                                                                {{ trans('general.size') }}
+                                                                : {{ $meta->product->size->name_ar }}
+                                                            </button>
+                                                            <button class="btn green">
+                                                                {{ trans('general.quantity') }} : {{ $meta->qty }}
+                                                            </button>
+                                                        @endif
                                                     @endif
                                                 @elseif($meta->service && $meta->service_id)
                                                     <button type="button"
                                                             class="btn yellow">
-                                                        {{ $meta->service->name }} - {{ $meta->timing->day }}
-                                                        - {{ $meta->timing->start }} - {{ $meta->timing->end }}
+                                                        {{ $meta->service->name }} <br> {{ $meta->timing->day }}
+                                                        <br> {{ $meta->timing->start }} <br> {{ $meta->timing->end }}
                                                     </button>
                                                 @else
                                                     <button type="button"
-                                                            class="btn">
+                                                            class="btn blue-steel">
                                                         No Preview Product / Service Maybe Deleted
                                                     </button>
                                                 @endif
+                                                <hr>
                                             @endforeach
                                         </div>
                                     @endif
@@ -108,7 +113,7 @@
                                 <td>{{ $element->price}}</td>
                                 <td>{{ $element->net_price}}</td>
                                 <td>
-                                    <span class="label label-{{ $element->discount ?  'warning' : null }}">{{ $element->discount }}</span>
+                                    <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount  : 'N/A'}}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">
