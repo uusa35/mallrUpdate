@@ -1079,5 +1079,6 @@ return array(
     "images" => "images",
     "is_intro" => "Attach to Intro Slider",
     "qr_link" => "َQR Link",
-    "reference" => "Reference"
+    "reference" => "Reference",
+    "order_id" => "Order Id"
 );

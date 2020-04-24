@@ -1044,5 +1044,6 @@ return array(
     "images" => "الصور",
     "is_intro" => "سلايدر المقدمة",
     "qr_link" => "رابط الكيو ار",
-    "reference" => "المرجع"
+    "reference" => "المرجع",
+    "order_id" => "رقم الطلب"
 );

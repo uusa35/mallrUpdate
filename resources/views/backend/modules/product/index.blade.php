@@ -12,9 +12,8 @@
                 @include('backend.partials.forms.form_title',['title' => trans('general.index_product')])
                 <div class="portlet-body">
                     @include('backend.partials._admin_instructions',['title' => trans('general.products') ,'message' => trans('message.index_product')])
-                    {{--                    <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0">--}}
-                    <table class="table table-striped table-bordered table-hover dt-responsive" width="100%"
-                           id="sample_1">
+                    <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0"
+                           width="100%">
                         <thead>
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
