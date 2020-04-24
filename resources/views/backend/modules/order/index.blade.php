@@ -25,9 +25,9 @@
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.country') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
-{{--                            <th class="none">{{ trans('general.day') }}</th>--}}
-{{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
-{{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.day') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
                             <th>{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -46,9 +46,9 @@
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.country') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
-{{--                            <th class="none">{{ trans('general.day') }}</th>--}}
-{{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
-{{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.day') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.timing') }}</th>--}}
+                            {{--                            <th class="none">{{ trans('general.booked_at') }}</th>--}}
                             <th>{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -59,43 +59,50 @@
                                 <td>{{ '#'.$element->id }}</td>
                                 <td>
                                     @if($element->order_metas->isNotEmpty())
-                                        @foreach($element->order_metas as $meta)
-                                            @if($meta->product && $meta->product_id)
-                                                @if(!is_null($meta->product->product_attributes) && $meta->product->has_attributes)
-                                                    <div class="alert alert-success">
-                                                        {{ trans('general.id') }} : {{ $meta->product->id }}
-                                                        - {{ $meta->product->name}}
-                                                        <br>
-                                                        @if($meta->product_attribute && $meta->product_attribute->size)
-                                                            {{ trans('general.size') }}
-                                                            : {{ $meta->product_attribute->size->name_ar }}
+                                        <div class="btn-group-vertical btn-group-solid">
+                                            @foreach($element->order_metas as $meta)
+                                                @if($meta->product && $meta->product_id)
+                                                    @if(!is_null($meta->product->product_attributes) && $meta->product->has_attributes)
+
+                                                        <button type="button"
+                                                                class="btn blue">
+                                                            {{ trans('general.id') }} : {{ $meta->product->id }}
+                                                            - {{ $meta->product->name}}
                                                             <br>
-                                                        @endif
-                                                        {{ trans('general.quantity') }} : {{ $meta->qty }}
-                                                    </div>
+                                                            @if($meta->product_attribute && $meta->product_attribute->size)
+                                                                {{ trans('general.size') }}
+                                                                : {{ $meta->product_attribute->size->name_ar }}
+                                                                <br>
+                                                            @endif
+                                                            {{ trans('general.quantity') }} : {{ $meta->qty }}
+                                                        </button>
+                                                    @else
+                                                        <button type="button"
+                                                                class="btn green">
+                                                            {{ trans('general.id') }} : {{ $meta->product->id }}
+                                                            - {{ $meta->product->name}}
+                                                            <br>
+                                                            @if($meta->product->size && $meta->product->show_attribute)
+                                                                {{ trans('general.size') }}
+                                                                : {{ $meta->product->size->name_ar }} <br>
+                                                            @endif
+                                                            {{ trans('general.quantity') }} : {{ $meta->qty }}
+                                                        </button>
+                                                    @endif
+                                                @elseif($meta->service && $meta->service_id)
+                                                    <button type="button"
+                                                            class="btn yellow">
+                                                        {{ $meta->service->name }} - {{ $meta->timing->day }}
+                                                        - {{ $meta->timing->start }} - {{ $meta->timing->end }}
+                                                    </button>
                                                 @else
-                                                    <div class="alert alert-success">
-                                                        {{ trans('general.id') }} : {{ $meta->product->id }}
-                                                        - {{ $meta->product->name}}
-                                                        <br>
-                                                        @if($meta->product->size && $meta->product->show_attribute)
-                                                            {{ trans('general.size') }}
-                                                            : {{ $meta->product->size->name_ar }} <br>
-                                                        @endif
-                                                        {{ trans('general.quantity') }} : {{ $meta->qty }}
-                                                    </div>
+                                                    <button type="button"
+                                                            class="btn">
+                                                        No Preview Product / Service Maybe Deleted
+                                                    </button>
                                                 @endif
-                                            @elseif($meta->service && $meta->service_id)
-                                                <div class="alert alert-warning">
-                                                    {{ $meta->service->name }} - {{ $meta->timing->day }}
-                                                    - {{ $meta->timing->start }} - {{ $meta->timing->end }}
-                                                </div>
-                                            @else
-                                                <div class="alert alert-warning">
-                                                    No Preview Product / Service Maybe Deleted
-                                                </div>
-                                            @endif
-                                        @endforeach
+                                            @endforeach
+                                        </div>
                                     @endif
                                 </td>
                                 <td>{{ $element->price}}</td>
@@ -130,9 +137,9 @@
                                 <td><span class="label label-info">{{ $element->mobile }}</span></td>
                                 <td>{{ $element->country }}</td>
                                 <td>{{ $element->email }}</td>
-{{--                                <td>{{ $element->day }}</td>--}}
-{{--                                <td>{{ $element->time }}</td>--}}
-{{--                                <td>{{ $element->booked_at }}</td>--}}
+                                {{--                                <td>{{ $element->day }}</td>--}}
+                                {{--                                <td>{{ $element->time }}</td>--}}
+                                {{--                                <td>{{ $element->booked_at }}</td>--}}
                                 <td><span class="label label-info">{{ $element->created_at->diffForHumans()}}</span>
                                 </td>
                                 <td>
