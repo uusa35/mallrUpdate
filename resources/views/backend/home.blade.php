@@ -366,6 +366,108 @@
                 </div>
             </div>
         </div>
+
+            @can('isAdminOrAbove')
+            <div class="col-lg-12">
+                <div class="portlet box">
+                <div class="portlet-body">
+                    <div class="mt-element-list">
+                        <div class="mt-list-head list-simple ext-1 font-white bg-blue-chambray">
+                            <div class="list-head-title-container">
+                                <div class="list-date">{{ Carbon\Carbon::now()->format('d/m/Y') }}</div>
+                                <h3 class="list-title">{{ trans('general.reports') }}</h3>
+                            </div>
+                        </div>
+                        <div class="mt-list-container list-simple ext-1 group">
+                            <a class="list-toggle-container" data-toggle="collapse"
+                               href="#completed-simple" aria-expanded="false">
+                                <div class="list-toggle done uppercase"> {{ trans('general.sales') }}
+                                    <span class="badge badge-default pull-right bg-white font-green bold">{{ $monthlyReports->count() }}</span>
+                                </div>
+                            </a>
+                            <div class="panel-collapse collapse in" id="completed-simple">
+                                <ul>
+                                    <li class="mt-list-item done">
+                                        <div class="list-icon-container">
+                                            <i class="icon-check"></i>
+                                        </div>
+                                        <div class="list-datetime"><h4>
+                                                {{ $monthlyReports->sum('net_price') }} {{ trans('general.kd') }}
+
+                                            </h4></div>
+                                        <div class="list-item-content">
+                                            <h3 class="uppercase">
+                                                <a href="javascript:;">{{ trans('general.total_paid_orders') }} 1 {{ Carbon\Carbon::today()->format('F') }} {{ trans('general.till') }} {{ Carbon\Carbon::today()->format('d/m/Y') }}</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <li class="mt-list-item done">
+                                        <div class="list-icon-container">
+                                            <i class="icon-check"></i>
+                                        </div>
+                                        <div class="list-datetime">
+                                            <h4>
+                                                {{ $monthlyReports->pluck('order_metas')->count() }} {{ trans('general.product') }}
+                                            </h4>
+                                        </div>
+                                        <div class="list-item-content">
+                                            <h3 class="uppercase">
+                                                <a href="javascript:;">{{ trans('general.total_products_sold_during_month') }}</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="list-toggle-container" data-toggle="collapse"
+                               href="#pending-simple" aria-expanded="false">
+                                <div class="list-toggle uppercase"> Pending
+                                    <span class="badge badge-default pull-right bg-white font-dark bold">3</span>
+                                </div>
+                            </a>
+                            <div class="panel-collapse collapse" id="pending-simple">
+                                <ul>
+                                    <li class="mt-list-item">
+                                        <div class="list-icon-container">
+                                            <i class="icon-close"></i>
+                                        </div>
+                                        <div class="list-datetime"> 8 Nov</div>
+                                        <div class="list-item-content">
+                                            <h3 class="uppercase">
+                                                <a href="javascript:;">Listings Feature</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <li class="mt-list-item">
+                                        <div class="list-icon-container">
+                                            <i class="icon-close"></i>
+                                        </div>
+                                        <div class="list-datetime"> 8 Nov</div>
+                                        <div class="list-item-content">
+                                            <h3 class="uppercase">
+                                                <a href="javascript:;">Listings Feature</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <li class="mt-list-item">
+                                        <div class="list-icon-container">
+                                            <i class="icon-close"></i>
+                                        </div>
+                                        <div class="list-datetime"> 8 Nov</div>
+                                        <div class="list-item-content">
+                                            <h3 class="uppercase">
+                                                <a href="javascript:;">Listings Feature</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            @endcan
+
         <div class="col-lg-12">
             <div class="portlet box yellow-crusta">
                 <div class="portlet-title">
@@ -373,32 +475,31 @@
                         <i class="fa fa-gift"></i>{{ trans('general.important_information') }}
                     </div>
                     <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a href="#portlet_tab_3" data-toggle="tab">{{ trans('general.videos_for_new_items') }} </a>
-                        </li>
                         @can('isAdminOrAbove')
+                            <li class="">
+                                <a href="#portlet_tab_1" data-toggle="tab"> {{ trans('general.reports') }} </a>
+                            </li>
                             <li>
                                 <a href="#portlet_tab_2"
                                    data-toggle="tab"> {{ trans('general.videos_for_new_items_for_super') }}</a>
                             </li>
                         @endcan
-                        <li class="">
-                            <a href="#portlet_tab_1" data-toggle="tab"> Tab 1 </a>
+                        <li class="active">
+                            <a href="#portlet_tab_3" data-toggle="tab">{{ trans('general.videos_for_new_items') }} </a>
                         </li>
                     </ul>
                 </div>
                 <div class="portlet-body">
                     <div class="tab-content">
-                        <div class="tab-pane" id="portlet_tab_1">
-                            <div class="portlet-body">
-                                <div class="scroller" style="height: 100%" data-rail-visible="1"
-                                     data-rail-color="yellow" data-handle-color="#a1b2bd">
-                                    tap 1
-
+                        @can('isAdminOrAbove')
+                            <div class="tab-pane" id="portlet_tab_1">
+                                <div class="portlet-body">
+                                    <div class="scroller" style="height: 100%" data-rail-visible="1"
+                                         data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                        {{ trans('general.info') }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        @can('isAdminOrAbove')
                             <div class="tab-pane" id="portlet_tab_2">
                                 <div class="scroller" style="height:100%" data-rail-visible="1"
                                      data-rail-color="yellow"
