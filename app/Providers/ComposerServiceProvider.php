@@ -119,6 +119,7 @@ class ComposerServiceProvider extends ServiceProvider
         ], 'App\Services\ViewComposers@getActiveColors');
 
         view()->composer([
+            'backend.home',
             'backend.partials._sidebar_super',
             'backend.partials._sidebar_admin',
         ], 'App\Services\ViewComposers@getRoles');

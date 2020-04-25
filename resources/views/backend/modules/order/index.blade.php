@@ -8,7 +8,59 @@
             <div class="portlet light ">
                 @include('backend.partials.forms.form_title',['title' => trans('general.index_order')])
                 <div class="portlet-body">
-                    @include('backend.partials._admin_instructions',['title' => trans('general.orders') ,'message' => trans('message.index_order')])
+                    <div class="row">
+                        <div class="col-lg-12">
+                            @include('backend.partials._admin_instructions',['title' => trans('general.orders') ,'message' => trans('message.index_order')])
+                        </div>
+                        <div class="col-lg-8 hidden">
+                            <form action="">
+                                <div class="col-lg-3">
+                                    <div class="form-group{{ $errors->has('from') ? ' has-error' : '' }}">
+                                        <label for="start_sale"
+                                               class="control-label">{{ trans('general.from') }}</label>
+                                        <div class="input-group date date-picker">
+                                            <input type="text" readonly
+                                                   {{--                                               style="direction: rtl !important;"--}}
+                                                   class="form-control tooltips" data-container="body"
+                                                   data-placement="bottom right"
+                                                   data-original-title="{{ trans('message.from') }}"
+                                                   name="from"
+                                                   value="{{ old('from', \Carbon\Carbon::now()->format('m/d/Y')) }}"
+                                            >
+                                            <span class="input-group-btn"><button
+                                                        class="btn default date-set" type="button"><i
+                                                            class="fa fa-calendar"></i></button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group{{ $errors->has('to') ? ' has-error' : '' }}">
+                                        <label for="start_sale"
+                                               class="control-label">{{ trans('general.to') }}</label>
+                                        <div class="input-group date date-picker">
+                                            <input type="text" readonly
+                                                   {{--                                               style="direction: rtl !important;"--}}
+                                                   class="form-control tooltips" data-container="body"
+                                                   data-placement="bottom right"
+                                                   data-original-title="{{ trans('message.to') }}"
+                                                   name="to"
+                                                   value="{{ old('to', \Carbon\Carbon::now()->format('m/d/Y')) }}"
+                                            >
+                                            <span class="input-group-btn"><button
+                                                        class="btn default date-set" type="button"><i
+                                                            class="fa fa-calendar"></i></button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button
+                                            type="submit"
+                                            class="btn default date-set" type="button"><i
+                                                class="fa fa-send"></i>  {{ trans('general.apply') }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0"
                            width="100%">
                         <thead>
@@ -113,7 +165,7 @@
                                 <td>{{ $element->price}}</td>
                                 <td>{{ $element->net_price}}</td>
                                 <td>
-                                    <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount  : 'N/A'}}</span>
+                                    <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount .' '. trans('general.kd') : 'N/A'}}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">
