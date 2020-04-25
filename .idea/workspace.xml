@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,24 +70,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="491" column="42" selection-start-line="491" selection-start-column="42" selection-end-line="491" selection-end-column="42" />
+                <state relative-caret-position="234">
+                  <caret line="470" column="19" selection-start-line="470" selection-start-column="19" selection-end-line="470" selection-end-column="19" />
                   <folding>
                     <element signature="e#166#20406#0#HTML" />
                     <element signature="e#8843#8899#0#HTML" expanded="true" />
+                    <element signature="e#21659#27579#0#HTML" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="694">
-                  <caret line="72" column="55" lean-forward="true" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
+                <state relative-caret-position="255">
+                  <caret line="40" column="74" lean-forward="true" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -108,20 +108,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1901">
-                      <caret line="171" column="61" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="197">
-                      <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+                    <state relative-caret-position="209">
+                      <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
                     </state>
                   </provider>
                 </entry>
@@ -191,6 +182,15 @@
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="582">
                       <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="27" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="-832">
+                      <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
                     </state>
                   </provider>
                 </entry>
@@ -389,9 +389,9 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/assets/css/backend-custom.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
       </list>
     </option>
   </component>
@@ -687,12 +687,12 @@
       <workItem from="1587612969081" duration="3471000" />
       <workItem from="1587625424424" duration="2435000" />
       <workItem from="1587709196261" duration="7607000" />
-      <workItem from="1587777504127" duration="8585000" />
+      <workItem from="1587777504127" duration="8846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85026000" />
+    <option name="totallyTimeSpent" value="85287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -892,13 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/app_calendar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -950,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.mix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+        <state relative-caret-position="378">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
@@ -1035,28 +1028,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="491" column="42" selection-start-line="491" selection-start-column="42" selection-end-line="491" selection-end-column="42" />
-          <folding>
-            <element signature="e#166#20406#0#HTML" />
-            <element signature="e#8843#8899#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="171" column="61" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1083,8 +1058,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="72" column="55" lean-forward="true" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
+        <state relative-caret-position="255">
+          <caret line="40" column="74" lean-forward="true" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="171" column="61" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="470" column="19" selection-start-line="470" selection-start-column="19" selection-end-line="470" selection-end-column="19" />
+          <folding>
+            <element signature="e#166#20406#0#HTML" />
+            <element signature="e#8843#8899#0#HTML" expanded="true" />
+            <element signature="e#21659#27579#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
