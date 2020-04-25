@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/backend-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/datepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/tinymce.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/tinymce.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="252">
-                  <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+                  <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -103,8 +91,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="414">
-                      <caret line="685" column="70" selection-start-line="685" selection-start-column="70" selection-end-line="685" selection-end-column="70" />
+                    <state relative-caret-position="342">
+                      <caret line="681" column="84" lean-forward="true" selection-start-line="681" selection-start-column="84" selection-end-line="681" selection-end-column="84" />
                     </state>
                   </provider>
                 </entry>
@@ -230,11 +218,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="449">
-                      <caret line="1051" column="18" selection-start-line="1051" selection-start-column="18" selection-end-line="1051" selection-end-column="18" />
+                    <state relative-caret-position="269">
+                      <caret line="1041" column="50" lean-forward="true" selection-start-line="1041" selection-start-column="50" selection-end-line="1041" selection-end-column="50" />
                     </state>
                   </provider>
                 </entry>
@@ -249,19 +237,10 @@
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="215">
-                      <caret line="1032" column="31" selection-start-line="1032" selection-start-column="31" selection-end-line="1032" selection-end-column="31" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/js/datepicker.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="18">
-                      <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+                      <caret line="1" selection-start-line="1" selection-end-line="1" />
                     </state>
                   </provider>
                 </entry>
@@ -284,6 +263,15 @@
                   </provider>
                 </entry>
               </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="378">
+                      <caret line="162" column="62" lean-forward="true" selection-start-line="162" selection-start-column="62" selection-end-line="162" selection-end-column="62" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
             </leaf>
           </split-second>
         </splitter>
@@ -292,7 +280,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>roles</find>
       <find>Date Range</find>
       <find>picker</find>
       <find>clock</find>
@@ -322,6 +309,7 @@
       <find>frontend-ar</find>
       <find>start_st</find>
       <find>discou</find>
+      <find>roles</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -376,7 +364,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" />
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" />
@@ -384,6 +371,7 @@
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
       </list>
     </option>
   </component>
@@ -679,12 +667,12 @@
       <workItem from="1587612969081" duration="3471000" />
       <workItem from="1587625424424" duration="2435000" />
       <workItem from="1587709196261" duration="7607000" />
-      <workItem from="1587777504127" duration="3820000" />
+      <workItem from="1587777504127" duration="4165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80261000" />
+    <option name="totallyTimeSpent" value="80606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -979,16 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
-          <folding>
-            <element signature="e#8843#8899#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -1013,14 +991,14 @@
     <entry file="file://$PROJECT_DIR$/public/js/datepicker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="54">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1040,8 +1018,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.mix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+        <state relative-caret-position="378">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
@@ -1059,24 +1037,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="1051" column="18" selection-start-line="1051" selection-start-column="18" selection-end-line="1051" selection-end-column="18" />
+        <state relative-caret-position="252">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+        <state relative-caret-position="219">
+          <caret line="682" column="77" selection-start-line="682" selection-start-column="77" selection-end-line="682" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="269">
+          <caret line="1041" column="50" lean-forward="true" selection-start-line="1041" selection-start-column="50" selection-end-line="1041" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="162" column="62" lean-forward="true" selection-start-line="162" selection-start-column="62" selection-end-line="162" selection-end-column="62" />
         </state>
       </provider>
     </entry>
