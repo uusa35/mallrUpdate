@@ -144,10 +144,28 @@
                                         <i class="fa fa-users"></i>
                                     </div>
                                     <div class="tile-object text-center">
-                                        {{ trans('general.users') }}
+                                        {{ trans('general.all_users') }}
                                     </div>
                                 </div>
                             </a>
+                            @if($roles->isNotEmpty())
+                                @foreach($roles->where('active', true) as $r)
+                                    <a href="{{ route('backend.admin.user.index',['role_id' => $r->id]) }}">
+                                        <div class="tile  tooltips"
+                                             style="background-color: {{ $r->color }} !important;"
+                                             data-container="body" data-placement="bottom"
+                                             data-original-title="{{ trans('message.index_user') }}"
+                                        >
+                                            <div class="tile-body">
+                                                <i class="fa fa-users"></i>
+                                            </div>
+                                            <div class="tile-object text-center">
+                                                {{ $r->name }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                @endforeach
+                            @endif
                         @endcan
                         @can('index', 'category')
                             <a href="{{ route('backend.admin.category.index') }}">

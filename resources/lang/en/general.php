@@ -1080,5 +1080,6 @@ return array(
     "is_intro" => "Attach to Intro Slider",
     "qr_link" => "َQR Link",
     "reference" => "Reference",
-    "order_id" => "Order Id"
+    "order_id" => "Order Id",
+    "all_users" => "All Users"
 );
