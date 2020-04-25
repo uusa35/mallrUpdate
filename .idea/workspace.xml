@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +73,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="673">
-                  <caret line="405" column="70" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
+                <state relative-caret-position="154">
+                  <caret line="480" column="37" selection-start-line="480" selection-start-column="37" selection-end-line="480" selection-end-column="37" />
                   <folding>
                     <element signature="e#166#20406#0#HTML" />
                     <element signature="e#8843#8899#0#HTML" expanded="true" />
@@ -380,8 +380,8 @@
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/assets/css/backend-custom.css" />
-        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
       </list>
     </option>
   </component>
@@ -677,12 +677,12 @@
       <workItem from="1587612969081" duration="3471000" />
       <workItem from="1587625424424" duration="2435000" />
       <workItem from="1587709196261" duration="7607000" />
-      <workItem from="1587777504127" duration="7888000" />
+      <workItem from="1587777504127" duration="8056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84329000" />
+    <option name="totallyTimeSpent" value="84497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -985,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="686" column="74" selection-start-line="686" selection-start-column="74" selection-end-line="686" selection-end-column="74" />
+        <state relative-caret-position="414">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1063,21 +1063,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="405" column="70" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
-          <folding>
-            <element signature="e#166#20406#0#HTML" />
-            <element signature="e#8843#8899#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="480" column="37" selection-start-line="480" selection-start-column="37" selection-end-line="480" selection-end-column="37" />
+          <folding>
+            <element signature="e#166#20406#0#HTML" />
+            <element signature="e#8843#8899#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
