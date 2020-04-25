@@ -1050,4 +1050,9 @@ return array(
     "apply" => "تطبيق",
     "from" => "من",
     "to" => "إلى",
+    "reports" => "التقارير",
+    "till" => "حتى",
+    "total_paid_orders" => "إجمالي الطلبات المدفوعة",
+    "total_products_sold_during_month" => "عدد المنتجات المباعة خلال الشهر الحالي",
+    "sales" => "المبيعات"
 );

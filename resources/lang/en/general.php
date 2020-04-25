@@ -1085,4 +1085,9 @@ return array(
     "apply" => "Apply",
     "from" => "From",
     "to" => "To",
+    "reports" => "Reports",
+    "till" => "Till",
+    "sales" => "Sales",
+    "total_paid_orders" => "Total Successful Paid Orders",
+    "total_products_sold_during_month" => "Total Products sold during this month",
 );

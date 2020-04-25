@@ -56,7 +56,7 @@
                                     <button
                                             type="submit"
                                             class="btn default date-set" type="button"><i
-                                                class="fa fa-send"></i>  {{ trans('general.apply') }}</button>
+                                                class="fa fa-send"></i> {{ trans('general.apply') }}</button>
                                 </div>
                             </form>
                         </div>
