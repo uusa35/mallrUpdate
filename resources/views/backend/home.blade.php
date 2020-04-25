@@ -476,9 +476,9 @@
                     </div>
                     <ul class="nav nav-tabs">
                         @can('isAdminOrAbove')
-                            <li class="">
-                                <a href="#portlet_tab_1" data-toggle="tab"> {{ trans('general.reports') }} </a>
-                            </li>
+{{--                            <li class="">--}}
+{{--                                <a href="#portlet_tab_1" data-toggle="tab"> {{ trans('general.reports') }} </a>--}}
+{{--                            </li>--}}
                             <li>
                                 <a href="#portlet_tab_2"
                                    data-toggle="tab"> {{ trans('general.videos_for_new_items_for_super') }}</a>
@@ -492,14 +492,14 @@
                 <div class="portlet-body">
                     <div class="tab-content">
                         @can('isAdminOrAbove')
-                            <div class="tab-pane" id="portlet_tab_1">
-                                <div class="portlet-body">
-                                    <div class="scroller" style="height: 100%" data-rail-visible="1"
-                                         data-rail-color="yellow" data-handle-color="#a1b2bd">
-                                        {{ trans('general.info') }}
-                                    </div>
-                                </div>
-                            </div>
+{{--                            <div class="tab-pane" id="portlet_tab_1">--}}
+{{--                                <div class="portlet-body">--}}
+{{--                                    <div class="scroller" style="height: 100%" data-rail-visible="1"--}}
+{{--                                         data-rail-color="yellow" data-handle-color="#a1b2bd">--}}
+{{--                                        {{ trans('general.info') }}--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="tab-pane" id="portlet_tab_2">
                                 <div class="scroller" style="height:100%" data-rail-visible="1"
                                      data-rail-color="yellow"
