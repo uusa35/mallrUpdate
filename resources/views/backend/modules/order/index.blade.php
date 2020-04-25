@@ -181,7 +181,7 @@
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">
                                         <button type="button"
-                                                class="btn {{ $element->status === 'success' ? 'green' : 'default' }}">{{ $element->status }}</button>
+                                                class="btn {{ $element->status === 'success' ? 'yellow' : 'red' }}">{{ $element->status }}</button>
                                         <button type="button"
                                                 class="btn {{ $element->paid ? 'green' : 'red' }}">{{ trans('general.is_paid') }}
                                             : {{ $element->paid ? 'Paid' : 'Not Paid'}}</button>

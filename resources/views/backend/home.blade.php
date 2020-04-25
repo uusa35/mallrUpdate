@@ -160,7 +160,7 @@
                                                 <i class="fa fa-users"></i>
                                             </div>
                                             <div class="tile-object text-center">
-                                                {{ $r->name }}
+                                                {{ $r->slug }}
                                             </div>
                                         </div>
                                     </a>
