@@ -1039,9 +1039,3 @@
         </div>
     </div>
 @endsection
-
-
-@section('scripts')
-    @parent
-    <script src="{{ mix('js/datepicker.js') }}"></script>
-@endsection

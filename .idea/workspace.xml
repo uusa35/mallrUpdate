@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/backend-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/tinymce.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/tinymce.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,17 +49,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2448">
-                  <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2952">
-                  <caret line="164" column="40" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
+                <state relative-caret-position="414">
+                  <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
                 </state>
               </provider>
             </entry>
@@ -66,11 +64,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+                <state relative-caret-position="252">
+                  <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -84,11 +82,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="152" column="52" selection-start-line="152" selection-start-column="52" selection-end-line="152" selection-end-column="52" />
+                <state relative-caret-position="504">
+                  <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
                   <folding>
                     <element signature="e#8843#8899#0#HTML" expanded="true" />
                   </folding>
@@ -102,29 +100,29 @@
         <splitter split-orientation="vertical" split-proportion="0.5">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state>
-                      <caret column="39" selection-start-column="39" selection-end-column="39" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/partials/styles.blade.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="288">
-                      <caret line="16" selection-start-line="16" selection-end-line="16" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
               <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="414">
+                      <caret line="685" column="70" selection-start-line="685" selection-start-column="70" selection-end-line="685" selection-end-column="70" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webpack.mix.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="197">
+                      <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/app_calendar.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="378">
-                      <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+                    <state relative-caret-position="269">
+                      <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
                     </state>
                   </provider>
                 </entry>
@@ -160,7 +158,34 @@
                 <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="322">
-                      <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
+                      <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/components_date_time_pickers.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="230">
+                      <caret line="2981" column="90" selection-start-line="2981" selection-start-column="90" selection-end-line="2981" selection-end-column="90" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="162">
+                      <caret line="9" selection-start-line="9" selection-end-line="9" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="234">
+                      <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
                     </state>
                   </provider>
                 </entry>
@@ -170,19 +195,37 @@
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="413">
-                      <caret line="1085" lean-forward="true" selection-start-line="1085" selection-end-line="1085" />
+                    <state relative-caret-position="219">
+                      <caret line="682" column="77" selection-start-line="682" selection-start-column="77" selection-end-line="682" selection-end-column="77" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php">
+                <entry file="file://$PROJECT_DIR$/webpack.mix.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="270">
-                      <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+                    <state relative-caret-position="378">
+                      <caret line="85" selection-start-line="85" selection-end-line="85" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="431">
+                      <caret line="1086" column="17" selection-start-line="1085" selection-end-line="1086" selection-end-column="17" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/assets/js/backend-custom.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="306">
+                      <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
                     </state>
                   </provider>
                 </entry>
@@ -190,8 +233,53 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="405">
-                      <caret line="1048" column="36" lean-forward="true" selection-start-line="1048" selection-start-column="36" selection-end-line="1048" selection-end-column="36" />
+                    <state relative-caret-position="449">
+                      <caret line="1051" column="18" selection-start-line="1051" selection-start-column="18" selection-end-line="1051" selection-end-column="18" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="54">
+                      <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="215">
+                      <caret line="1032" column="31" selection-start-line="1032" selection-start-column="31" selection-end-line="1032" selection-end-column="31" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/public/js/datepicker.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="18">
+                      <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/scripts.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="90">
+                      <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/partials/scripts.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="216">
+                      <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
                     </state>
                   </provider>
                 </entry>
@@ -204,36 +292,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Airi</find>
-      <find>les that resolves that</find>
-      <find>dt-button buttons-print btn dark btn-outline</find>
-      <find>datatables.bootstrap</find>
-      <find>app.min</find>
-      <find>dt-buttons</find>
-      <find>excanvas.min</find>
-      <find>js.cookie.min</find>
-      <find>datatables.bootstrap.js</find>
-      <find>pdf</find>
-      <find>sample_</find>
-      <find>sample_1</find>
-      <find>&lt;Table</find>
-      <find>sale_price</find>
-      <find>deliv</find>
-      <find>shipment_</find>
-      <find>required</find>
-      <find>*</find>
-      <find>description</find>
-      <find>user</find>
-      <find>deliver</find>
-      <find>weight</find>
-      <find>shipment</find>
-      <find>bLengthChange</find>
-      <find>timing_id</find>
-      <find>mobile</find>
-      <find>order_id</find>
-      <find>discout</find>
-      <find>users</find>
       <find>roles</find>
+      <find>Date Range</find>
+      <find>picker</find>
+      <find>clock</find>
+      <find>datetimepicker</find>
+      <find>daterangepicker</find>
+      <find>bootstrap-datepicker3</find>
+      <find>Range</find>
+      <find>sale_</find>
+      <find>Disable Past Dates</find>
+      <find>datepicker(</find>
+      <find>.datepicker</find>
+      <find>form_datetime</find>
+      <find>.form</find>
+      <find>.form_</find>
+      <find>.picker</find>
+      <find>date-picker</find>
+      <find>.date-picker</find>
+      <find>daterangepicker/daterangepicker.min.css</find>
+      <find>bootstrap-datepicker3.min.css</find>
+      <find>bootstrap-timepicker.min.css</find>
+      <find>css/bootstrap-datetimepicker.min.css</find>
+      <find>global/plugins/clockface/css/clockface.css</find>
+      <find>bootstrap-datepicker.min.js</find>
+      <find>daterangepicker.min.js</find>
+      <find>moment.m</find>
+      <find>date</find>
+      <find>frontend-ar</find>
+      <find>start_st</find>
+      <find>discou</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -245,7 +333,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/ClassifiedItem.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedItemLightResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ClassifiedController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info_confirmation.blade.php" />
@@ -280,22 +367,23 @@
         <option value="$PROJECT_DIR$/resources/views/backend/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/assets/css/backend-custom.css" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/tables/table_print_template.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" />
         <option value="$PROJECT_DIR$/../metronic_v4.5.6/theme/assets/pages/scripts/table-datatables-buttons.min.js" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/backend-custom.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php" />
+        <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" />
       </list>
     </option>
   </component>
@@ -591,18 +679,18 @@
       <workItem from="1587612969081" duration="3471000" />
       <workItem from="1587625424424" duration="2435000" />
       <workItem from="1587709196261" duration="7607000" />
-      <workItem from="1587777504127" duration="808000" />
+      <workItem from="1587777504127" duration="3820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77249000" />
+    <option name="totallyTimeSpent" value="80261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.1996805" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" weight="0.1996805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5032189" side_tool="true" weight="0.48202765" />
@@ -628,40 +716,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/governates.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/AboutusTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/AboutusFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/countries.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="119" column="41" lean-forward="true" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Localization.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -799,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/table_datatables_buttons.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -817,20 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="21" column="67" lean-forward="true" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2952">
-          <caret line="164" column="40" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -904,24 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/backend-custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -941,46 +960,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="1085" lean-forward="true" selection-start-line="1085" selection-end-line="1085" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="1048" column="36" lean-forward="true" selection-start-line="1048" selection-start-column="36" selection-end-line="1048" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="152" column="52" selection-start-line="152" selection-start-column="52" selection-end-line="152" selection-end-column="52" />
-          <folding>
-            <element signature="e#8843#8899#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
+          <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/app_calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="269">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
+          <folding>
+            <element signature="e#8843#8899#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1032" column="31" selection-start-line="1032" selection-start-column="31" selection-end-line="1032" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/backend-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/datepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/partials/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/components_date_time_pickers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="2981" column="90" selection-start-line="2981" selection-start-column="90" selection-end-line="2981" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="1086" column="17" selection-start-line="1085" selection-end-line="1086" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="1051" column="18" selection-start-line="1051" selection-start-column="18" selection-end-line="1051" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
