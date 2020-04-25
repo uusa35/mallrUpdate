@@ -59,6 +59,7 @@
                         <div>{{ trans('general.country') }}: {{ $element->country }}<br/></div>
                         <div>{{ trans('general.email') }}: {{ $element->user->email }}</div>
                         <div>{{ trans('general.phone') }}: {{ $element->mobile }}</div>
+                        <div>{{ trans('general.calling_code') }}: {{ $element->user->country->calling_code }}</div>
                     </div>
 
                 </div>
