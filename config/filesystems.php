@@ -70,6 +70,7 @@ return [
             'region' => env('DO_DEFAULT_REGION'),
             'bucket' => env('DO_BUCKET'),
             'endpoint' => env('DO_ENDPOINT'),
+            'root' => storage_path('app'),
         ],
 
     ],

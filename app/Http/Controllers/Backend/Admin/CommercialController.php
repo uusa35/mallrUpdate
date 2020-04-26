@@ -54,7 +54,17 @@ class CommercialController extends Controller
      */
     public function store(Request $request)
     {
-        $element = Commercial::create($request->except(['image', 'path','categories']));
+        $validate = validator($request->all(), [
+            'name_ar' => 'required|min:3',
+            'name_en' => 'required|min:3',
+            'on_home' => 'required|boolean',
+            'order' => 'numeric|min:1',
+            'image' => 'required|image|dimensions:width=930,height=365',
+        ]);
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate);
+        }
+        $element = Commercial::create($request->except(['image', 'path', 'categories']));
         if ($element) {
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['930', '365'], true) : null;
             $request->hasFile('path') ? $this->savePath($request, $element) : null;
@@ -100,8 +110,18 @@ class CommercialController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validate = validator($request->all(), [
+            'name_ar' => 'required|min:3',
+            'name_en' => 'required|min:3',
+            'on_home' => 'required|boolean',
+            'order' => 'numeric|min:1',
+            'image' => 'image|dimensions:width=930,height=365',
+        ]);
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate);
+        }
         $element = Commercial::whereId($id)->first();
-        $updated = $element->update($request->except(['image', 'path','categories']));
+        $updated = $element->update($request->except(['image', 'path', 'categories']));
         if ($updated) {
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['930', '365'], true) : null;
             $request->hasFile('path') ? $this->savePath($request, $element) : null;

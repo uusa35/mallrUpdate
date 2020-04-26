@@ -51,7 +51,7 @@
                             <tr>
                                 <td>{{ $element->id }}</td>
                                 <td>{{ $element->sku }}</td>
-                                <td>{{ \Illuminate\Support\Str::limit($element->name,25) }}</td>
+                                <td>{{ str_limit($element->name,25) }}</td>
                                 {{--<td>--}}
                                 {{--<span class="label {{ activeLabel($element->home_delivery_availability) }}">{{ activeText($element->home_delivery_availability,'Yes') }}</span>--}}
                                 {{--</td>--}}
@@ -80,7 +80,7 @@
                                 <td>
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>
-                                <td>{{ $element->user ?  \Illuminate\Support\Str::limit($element->user->slug,20) : 'N/A' }}</td>
+                                <td>{{ $element->user ?  str_limit($element->user->slug,20) : 'N/A' }}</td>
                                 <td>
                                     @if($element->product_attributes->isNotEmpty())
                                         @foreach($element->product_attributes as $attribute)
