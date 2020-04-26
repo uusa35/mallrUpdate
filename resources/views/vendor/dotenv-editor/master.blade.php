@@ -21,12 +21,6 @@
 </head>
 <body>
 
-<div class="row" style="padding: 50px;">
-    <div class="col-12 text-center">
-        <a href="{{ route('backend.home') }}" class="btn btn-large btn-success">Back To Home</a>
-    </div>
-</div>
-
 @yield('content')
 
 
