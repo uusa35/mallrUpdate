@@ -43,10 +43,11 @@ class BrandController extends Controller
             'slug_ar' => 'required|min:3',
             'slug_en' => 'required|min:3',
             'on_home' => 'required|boolean',
+            'order' => 'numeric|min:1',
             'image' => 'required|image|dimensions:width=500,height=500',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Brand::create($request->all());
         if ($element) {
@@ -94,10 +95,11 @@ class BrandController extends Controller
             'slug_ar' => 'required|min:3',
             'slug_en' => 'required|min:3',
             'on_home' => 'required|boolean',
-            'image' => 'required|image|dimensions:width=500,height=500',
+            'order' => 'numeric|min:1',
+            'image' => 'image|dimensions:width=500,height=500',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Brand::whereId($id)->first();
         if ($element->update($request->all())) {
