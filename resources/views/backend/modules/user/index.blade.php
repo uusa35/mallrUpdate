@@ -48,7 +48,7 @@
                                 <td>{{ $element->name }}</td>
                                 <td>{{ $element->slug }}</td>
                                 <td>{{ $element->email  }}</td>
-                                <td>{{ $element->mobile }}</td>
+                                <td>{{ $element->fullMobile }}</td>
                                 <td>{{ $element->phone }}</td>
                                 <td>{{ $element->address }}</td>
                                 {{--                                <td>{{ $element->area }}</td>--}}
