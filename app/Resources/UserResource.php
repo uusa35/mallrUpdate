@@ -25,6 +25,7 @@ class UserResource extends JsonResource
             'service' => $this->service,
             'email' => $this->email,
             'mobile' => $this->mobile,
+            'fullMobile' => $this->fullMobile,
             'phone' => $this->phone,
             'fax' => $this->fax,
             'thumb' => $this->image ? $this->imageThumbLink : null,

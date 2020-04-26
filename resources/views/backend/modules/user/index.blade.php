@@ -13,13 +13,13 @@
                     <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0">
                         <thead>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.name') }}</th>
+                            <th class="all">{{ trans('general.id') }}</th>
+                            <th class="none">{{ trans('general.name') }}</th>
                             <th>{{ trans('general.slug') }}</th>
-                            <th>{{ trans('general.email') }}</th>
+                            <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
-                            <th>{{ trans('general.phone') }}</th>
-                            <th>{{ trans('general.address') }}</th>
+                            <th class="none">{{ trans('general.phone') }}</th>
+                            <th class="none">{{ trans('general.address') }}</th>
                             <th>{{ trans('general.country') }}</th>
                             <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
@@ -28,17 +28,15 @@
                         </thead>
                         <tfoot>
                         <tr>
-                            <th>{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.name') }}</th>
+                            <th class="all">{{ trans('general.id') }}</th>
+                            <th class="none">{{ trans('general.name') }}</th>
                             <th>{{ trans('general.slug') }}</th>
-                            <th>{{ trans('general.email') }}</th>
+                            <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
-                            <th>{{ trans('general.phone') }}</th>
-                            <th>{{ trans('general.address') }}</th>
+                            <th class="none">{{ trans('general.phone') }}</th>
+                            <th class="none">{{ trans('general.address') }}</th>
                             <th>{{ trans('general.country') }}</th>
-                            @can('isAdminOrAbove')
-                                <th>{{ trans('general.role') }}</th>
-                            @endcan
+                            <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -50,18 +48,18 @@
                                 <td>{{ $element->name }}</td>
                                 <td>{{ $element->slug }}</td>
                                 <td>{{ $element->email  }}</td>
-                                <td>{{ $element->mobile }}</td>
+                                <td>{{ $element->fullMobile }}</td>
                                 <td>{{ $element->phone }}</td>
                                 <td>{{ $element->address }}</td>
                                 {{--                                <td>{{ $element->area }}</td>--}}
                                 <td>{{ $element->country ? $element->country->slug : 'N/A'}}</td>
                                 <td>
                                     @if($element->role)
-                                        <span class="label {{ activeLabel(!$element->active) }}">{{ activeText($element->active, $element->role->name) }}</span>
+                                        <button class="btn red {{ activeLabel(!$element->active) }}">{{ activeText($element->active, $element->role->name) }}</button>
                                     @endif
                                 </td>
                                 <td>
-                                    <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
+                                    <button class="btn {{ activeBtn($element->active) }}">{{ activeText($element->active) }}</button>
                                 </td>
                                 <td>
                                     <div class="btn-group">

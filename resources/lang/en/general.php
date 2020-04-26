@@ -1945,4 +1945,5 @@ return array (
     "sales" => "Sales",
     "total_paid_orders" => "Total Successful Paid Orders",
     "total_products_sold_during_month" => "Total Products sold during this month",
+    "slug" => "الاسم / التجاري"
 );

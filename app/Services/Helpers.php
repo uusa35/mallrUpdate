@@ -51,6 +51,11 @@ function activeLabel($element)
     return $element ? 'label-success' : 'label-danger';
 }
 
+function activeBtn($element)
+{
+    return $element ? 'green' : 'red';
+}
+
 function activeText($element, $text = 'Active')
 {
     $element ? $text = $text : $text = 'N/A';
