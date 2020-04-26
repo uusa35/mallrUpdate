@@ -14,8 +14,8 @@
                         <thead>
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
-                            <th class="none">{{ trans('general.name') }}</th>
-                            <th>{{ trans('general.slug') }}</th>
+                            <th>{{ trans('general.name') }}</th>
+                            <th class="none">{{ trans('general.slug') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
