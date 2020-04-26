@@ -194,9 +194,9 @@ return [
         // geoLocation
         Spatie\Geocoder\GeocoderServiceProvider::class,
 
-        DotenvEditorServiceProvider::class,
         //NotificationChannels\OneSignal\OneSignalServiceProvider::class,
-        Berkayk\OneSignal\OneSignalServiceProvider::class
+        Berkayk\OneSignal\OneSignalServiceProvider::class,
+        Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
         // TelescopeServiceProvider::class
 
     ],
@@ -250,6 +250,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
 
     ],
 

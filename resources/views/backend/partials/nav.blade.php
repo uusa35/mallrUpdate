@@ -330,7 +330,7 @@
                                 </li>
                                 @can('isSuper')
                                     <li>
-                                        <a href="{{ url('admin/env') }}">
+                                        <a href="{{ url('backend/admin/env') }}">
                                             <i class="fa fa-fw fa-bug"></i> {{ trans('general.edit_env_file') }}
                                         </a>
                                     </li>
