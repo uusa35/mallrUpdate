@@ -84,8 +84,7 @@ trait ImageHelpers
                                 foreach($sizes as $k => $value) {
                                     $fullPath = 'public/uploads/images/'.$value.'/'.$imagePath;
                                     $contents = Storage::disk('local')->get($fullPath);
-                                    Storage::disk('do')->put($imagePath, $contents,'public');
-                                    dd('stop');
+                                    Storage::disk('do')->put($fullPath, $contents,'public');
                                 }
                             } catch(Exception $e) {
                                 dd('error'.$e);
