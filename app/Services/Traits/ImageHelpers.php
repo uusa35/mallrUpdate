@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use mysql_xdevapi\Exception;
 
 trait ImageHelpers
 {
@@ -58,10 +59,6 @@ trait ImageHelpers
                                     $img->resize($dimensions[0], $dimensions[1]);
                                 }
                                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                                if(env('FILESYSTEM_DRIVER') === 'do') {
-                                    $contents = Storage::disk('local')->get(asset(env(strtoupper($value)).$imagePath));
-                                    dd($contents);
-                                }
                             } elseif ($value === 'medium') {
                                 if ($ratio) {
                                     $img->resize($dimensions[0] / 2, null, function ($constraint) {
@@ -80,6 +77,18 @@ trait ImageHelpers
                                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                                 }
                                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                            }
+                        }
+                        if(env('FILESYSTEM_CLOUD') === 'do') {
+                            try {
+                                foreach($sizes as $k => $value) {
+                                    $fullPath = 'public/uploads/images/'.$value.'/'.$imagePath;
+                                    $contents = Storage::disk('local')->get($fullPath);
+                                    Storage::disk('do')->put($imagePath, $contents,'public');
+                                    dd('stop');
+                                }
+                            } catch(Exception $e) {
+                                dd('error'.$e);
                             }
                         }
                         $model->update([
