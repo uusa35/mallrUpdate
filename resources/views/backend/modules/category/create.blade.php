@@ -97,39 +97,39 @@
                                             </div>
                                         </div>
                                         @can('index','classified')
-                                        <div class="col-md-2">
-                                            <div class="form-group {{ $errors->has('min') ? ' has-error' : '' }}">
-                                                <label for="min"
-                                                       class="control-label">{{ trans('general.min') }}</label>
-                                                <input id="min" type="number" class="form-control" name="min"
-                                                       value="{{ old('min') }}"
-                                                       placeholder="{{ trans('general.min') }}" autofocus>
-                                                @if ($errors->has('min'))
-                                                    <span class="help-block">
+                                            <div class="col-md-2">
+                                                <div class="form-group {{ $errors->has('min') ? ' has-error' : '' }}">
+                                                    <label for="min"
+                                                           class="control-label">{{ trans('general.min') }}</label>
+                                                    <input id="min" type="number" class="form-control" name="min"
+                                                           value="{{ old('min') }}"
+                                                           placeholder="{{ trans('general.min') }}" autofocus>
+                                                    @if ($errors->has('min'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('min') }}
                                                 </strong>
                                             </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group {{ $errors->has('max') ? ' has-error' : '' }}">
-                                                <label for="max"
-                                                       class="control-label">{{ trans('general.max') }}</label>
-                                                <input id="max" type="number" class="form-control" name="max"
-                                                       value="{{ old('max') }}"
-                                                       placeholder="{{ trans('general.max') }}" autofocus>
-                                                @if ($errors->has('max'))
-                                                    <span class="help-block">
+                                            <div class="col-md-2">
+                                                <div class="form-group {{ $errors->has('max') ? ' has-error' : '' }}">
+                                                    <label for="max"
+                                                           class="control-label">{{ trans('general.max') }}</label>
+                                                    <input id="max" type="number" class="form-control" name="max"
+                                                           value="{{ old('max') }}"
+                                                           placeholder="{{ trans('general.max') }}" autofocus>
+                                                    @if ($errors->has('max'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('max') }}
                                                 </strong>
                                             </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-                                            @endcan
+                                        @endcan
                                     </div>
 
                                     <div class="row">
@@ -193,19 +193,21 @@
                             <div class="portlet-body form">
                                 <div class="form-body">
                                     <div class="row">
-                                        @if(!$categoryGroups->isEmpty())
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.categoryGroups') }}</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select1" name="categoryGroups[]">
-                                                        @foreach($categoryGroups as $categoryGroup)
-                                                            <option value="{{ $categoryGroup->id }}">{{ $categoryGroup->name }}</option>
-                                                        @endforeach
-                                                    </select>
+                                        @can('index','group')
+                                            @if(!$categoryGroups->isEmpty())
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.categoryGroups') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select1" name="categoryGroups[]">
+                                                            @foreach($categoryGroups as $categoryGroup)
+                                                                <option value="{{ $categoryGroup->id }}">{{ $categoryGroup->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        @endif
+                                            @endif
+                                        @endcan
                                         @if(!$tags->isEmpty() && !request()->has('parent_id'))
                                             <div class="col-md-6">
                                                 <div class="form-group">

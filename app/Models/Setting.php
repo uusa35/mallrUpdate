@@ -15,12 +15,17 @@ class Setting extends PrimaryModel
 
     public function getLogoLargeAttribute()
     {
-        return asset(env('LARGE') . $this->logo);
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('large') . $this->logo : asset(env('LARGE') . $this->logo);
     }
 
     public function getLogoThumbAttribute()
     {
-        return asset(env('THUMBNAIL') . $this->logo);
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->logo : asset(env('THUMBNAIL') . $this->logo);
+    }
+
+    public function getSizeChartImageAttribute()
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('large') . $this->size_chart : asset(env('LARGE') . $this->size_chart);
     }
 
     public function images()

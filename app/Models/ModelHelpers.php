@@ -42,26 +42,6 @@ trait ModelHelpers
         return $q->has('images', '>', 0);
     }
 
-    public function getImageLargeLinkAttribute()
-    {
-        return asset(env('LARGE') . $this->image);
-    }
-
-    public function getImageMediumLinkAttribute()
-    {
-        return asset(env('MEDIUM') . $this->image);
-    }
-
-    public function getImageThumbLinkAttribute()
-    {
-        return asset(env('THUMBNAIL') . $this->image);
-    }
-
-    public function getPathLinkAttribute()
-    {
-        return asset(env('FILES') . $this->path);
-    }
-
     /**
      * @param $q
      * @param QueryFilters $filters
@@ -71,6 +51,36 @@ trait ModelHelpers
     public function scopeFilters($q, QueryFilters $filters)
     {
         return $filters->apply($q);
+    }
+
+    public function getImageLargeLinkAttribute()
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('large') . $this->image : asset(env('LARGE') . $this->image);
+    }
+
+    public function getImageMediumLinkAttribute()
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('medium') . $this->image : asset(env('MEDIUM') . $this->image);
+    }
+
+    public function getImageThumbLinkAttribute()
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->image : asset(env('THUMBNAIL') . $this->image);
+    }
+
+    public function checkStorageSpaces()
+    {
+        return env('FILESYSTEM_CLOUD') === 'do';
+    }
+
+    public function getStorageSpacesUrl($sizeType = 'large')
+    {
+        return env('DO_ROOT_URL') . env(strtoupper('DO_'.$sizeType));
+    }
+
+    public function getPathLinkAttribute()
+    {
+        return asset(env('FILES') . $this->path);
     }
 
 }
