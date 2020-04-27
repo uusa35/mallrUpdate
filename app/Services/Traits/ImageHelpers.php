@@ -58,6 +58,7 @@ trait ImageHelpers
                                     $img->resize($dimensions[0], $dimensions[1]);
                                 }
                                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                dd(env('FILESYSTEM_DRIVER'));
                                 if(env('FILESYSTEM_DRIVER') === 'do') {
                                     $contents = Storage::disk('local')->get(asset(env(strtoupper($value)).$imagePath));
                                     dd($contents);
