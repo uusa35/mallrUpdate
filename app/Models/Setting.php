@@ -23,6 +23,11 @@ class Setting extends PrimaryModel
         return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->logo : asset(env('THUMBNAIL') . $this->logo);
     }
 
+    public function getLogoAttribute()
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->logo : asset(env('THUMBNAIL') . $this->logo);
+    }
+
     public function getSizeChartImageAttribute()
     {
         return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('large') . $this->size_chart : asset(env('LARGE') . $this->size_chart);

@@ -4,7 +4,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo" style="display: flex; justify-content: center; align-items: center;">
             <a href="{{ route('backend.home') }}">
-                <img src="{{ asset(env('THUMBNAIL').$settings->logo) }}" alt="logo" class="img-logo logo-default"/> </a>
+                <img src="{{ $settings->logo }}" alt="logo" class="img-logo logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>
