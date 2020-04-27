@@ -82,13 +82,13 @@
                         </div>
                         <div class="col-lg-3">
                             <h5>logo</h5>
-                            <img src="{{ asset('storage/uploads/images/large/'.$element->logo) }}"
+                            <img src="{{ $element->logoThumb }}"
                                  alt="" class="img-responsive img-thumbnail">
                         </div>
                         @can('index','product')
                             <div class="col-lg-3 img-responsive">
                                 <h5>size chart</h5>
-                                <img src="{{ asset('storage/uploads/images/large/'.$element->size_chart) }}"
+                                <img src="{{ $element->sizeChartImage }}"
                                      alt="" class="img-responsive img-thumbnail">
                             </div>
                         @endcan
