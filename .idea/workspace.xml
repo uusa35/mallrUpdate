@@ -68,8 +68,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="648">
-                  <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
+                <state relative-caret-position="465">
+                  <caret line="61" column="119" lean-forward="true" selection-start-line="61" selection-start-column="119" selection-end-line="61" selection-end-column="119" />
+                  <folding>
+                    <marker date="1587963601540" expanded="true" signature="2356:2600" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -476,12 +479,12 @@
       <workItem from="1587874598256" duration="1167000" />
       <workItem from="1587897777319" duration="5980000" />
       <workItem from="1587943161119" duration="1254000" />
-      <workItem from="1587962442037" duration="351000" />
+      <workItem from="1587962442037" duration="1004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94915000" />
+    <option name="totallyTimeSpent" value="95568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -513,13 +516,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../metronic_v4.5.6/theme/admin_1/components_date_time_pickers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="2981" column="90" selection-start-line="2981" selection-start-column="90" selection-end-line="2981" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -856,10 +852,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/intervention/image/src/Intervention/Image/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="139" column="9" lean-forward="true" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
+        <state relative-caret-position="465">
+          <caret line="61" column="119" lean-forward="true" selection-start-line="61" selection-start-column="119" selection-end-line="61" selection-end-column="119" />
+          <folding>
+            <marker date="1587963601540" expanded="true" signature="2356:2600" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
