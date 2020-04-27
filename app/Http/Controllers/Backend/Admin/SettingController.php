@@ -76,7 +76,7 @@ class SettingController extends Controller
     public function update(SettingUpdate $request, $id)
     {
         $setting = Setting::first();
-
+        dd('here');
         if ($setting->update($request->request->all())) {
             $request->hasFile('logo') ? $this->saveMimes($setting, $request, ['logo'], ['1024', '1024'], true) : null;
             $request->hasFile('app_logo') ? $this->saveMimes($setting, $request, ['app_logo'], ['600', '221'], true) : null;
