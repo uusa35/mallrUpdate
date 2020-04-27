@@ -57,7 +57,11 @@ trait ImageHelpers
                                 } else {
                                     $img->resize($dimensions[0], $dimensions[1]);
                                 }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                if(env('FILESYSTEM_DRIVER') !== 'local') {
+                                    $img->save('public/uploads/images/' . $value . '/' . $imagePath);
+                                } else {
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                }
                             } elseif ($value === 'medium') {
                                 if ($ratio) {
                                     $img->resize($dimensions[0] / 2, null, function ($constraint) {
@@ -66,7 +70,11 @@ trait ImageHelpers
                                 } else {
                                     $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
                                 }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                if(env('FILESYSTEM_DRIVER') !== 'local') {
+                                    $img->save('public/uploads/images/' . $value . '/' . $imagePath);
+                                } else {
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                }
                             } elseif ($value === 'thumbnail') {
                                 if ($ratio) {
                                     $img->resize($dimensions[0] / 3, null, function ($constraint) {
@@ -75,7 +83,11 @@ trait ImageHelpers
                                 } else {
                                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                                 }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                if(env('FILESYSTEM_DRIVER') !== 'local') {
+                                    $img->save('public/uploads/images/' . $value . '/' . $imagePath);
+                                } else {
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                }
                             }
                         }
                         $model->update([
