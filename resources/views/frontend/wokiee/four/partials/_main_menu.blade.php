@@ -5,11 +5,11 @@
             <div class="tt-obj-logo obj-aligment-center">
                 <!-- logo -->
                 <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
-                    <img class="text-center" src="{{ asset(env('LARGE').$settings->logo) }}"
+                    <img class="text-center" src="{{ $settings->logoThumb }}"
                          alt="{{ $settings->company }}"></a>
                 <!-- /logo -->
             </div>
-            <div class="col-12 text-right">
+            <div class="col-12 text-left">
                 <div class="tt-col-obj tt-obj-search-type2">
                     <div class="tt-search-type2" style="margin-top: 12px;">
                         @include('frontend.wokiee.four.partials._search_form')
