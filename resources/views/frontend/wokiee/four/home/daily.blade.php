@@ -2,7 +2,9 @@
 
 @section('body')
 
-    @include('frontend.wokiee.four.partials.slider')
+    @if($sliders->isNotEmpty())
+        @include('frontend.wokiee.four.partials.slider')
+    @endif
     @if(isset($newProducts))
         @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
     @endif
