@@ -65,7 +65,6 @@ class OrderController extends Controller
                 return view('frontend.wokiee.four.modules.cart.show', compact('elements', 'order'))->with('success', trans('message.register_account_password_is_your_mobile'));
             }
         } else {
-            return 'here error case';
             return redirect()->route('frontend.cart.index')->with('error', trans('please_check_your_information_again'));
         }
         return redirect()->route('frontend.cart.index')->with('error', trans('please_check_your_information_again'));

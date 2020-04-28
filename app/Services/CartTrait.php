@@ -53,7 +53,7 @@ trait CartTrait
         if($element) {
             $cart->remove($element->rowId);
         }
-        $cart->add($country->calling_code, trans('shipment_package_fee'), 1, (double) $country->fixed_shipment_charge,1, ['type' => 'country', 'country_id' => $country->id]);
+        $cart->add($country->calling_code, trans('shipment_package_fee'), $cart->count() < 1 ? 1 : $cart->count(), (double) $country->fixed_shipment_charge,1, ['type' => 'country', 'country_id' => $country->id]);
     }
     public function addProductToCart(Request $request, Product $product, $cart)
     {
