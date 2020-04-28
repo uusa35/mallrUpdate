@@ -34,12 +34,13 @@
                                 </li>
                                 @include('frontend.wokiee.four.partials._categories_main_menu_element_with_images')
                                 @include('frontend.wokiee.four.partials._pages_main_menu')
-                                @if($categories->where('is_parent', true)->where('on_home', true)->count() <= 5)
-                                    <li class="dropdown">
-                                        <a href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
+                                <li class="dropdown">
+                                    @if(app()->getLocale() === 'ar')
                                         <a href="{{ route('frontend.language.change',['locale' => 'en']) }}">{{ trans('general.english') }}</a>
-                                    </li>
-                                @endif
+                                    @else
+                                        <a href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
+                                    @endif
+                                </li>
                             </ul>
                         </nav>
                     </div>
