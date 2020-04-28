@@ -1,20 +1,26 @@
 <div class="tt-desktop-header headerunderline">
     <div class="container">
-        <div class="tt-header-holder">
-            <div class="tt-col-obj tt-obj-logo">
+        <div class="tt-header-holder text-center">
+            {{--            <div class="tt-col-obj tt-obj-logo">--}}
+            <div class="tt-obj-logo obj-aligment-center">
                 <!-- logo -->
                 <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
                     <img class="text-center" src="{{ asset(env('LARGE').$settings->logo) }}"
                          alt="{{ $settings->company }}"></a>
                 <!-- /logo -->
             </div>
-            <div class="tt-col-obj tt-obj-search-type2">
-                <div class="tt-search-type2" style="margin-top: 12px;">
-                    @include('frontend.wokiee.four.partials._search_form')
+            <div class="col-12 text-right">
+                <div class="tt-col-obj tt-obj-search-type2">
+                    <div class="tt-search-type2" style="margin-top: 12px;">
+                        @include('frontend.wokiee.four.partials._search_form')
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+
+
     <div class="container small-header">
         <div class="tt-header-holder">
             {{--            @include('frontend.wokiee.four.partials._main_menu_categories')--}}
