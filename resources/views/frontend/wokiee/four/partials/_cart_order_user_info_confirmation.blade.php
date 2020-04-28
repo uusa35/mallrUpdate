@@ -83,7 +83,7 @@
                                     @if(Cart::content()->where('options.type', 'country')->first())
                                         <tr>
                                             <th>{{ trans('general.shipment_fees') }} {{ $currency->name }}</th>
-                                            <td>{{ getConvertedPrice(Cart::content()->where('options.type', 'country')->first()->price) }} {{ $currency->symbol }}</td>
+                                            <td>{{ getConvertedPrice(Cart::content()->where('options.type', 'country')->first()->total) }} {{ $currency->symbol }}</td>
                                         </tr>
                                     @endif
                                     @if(session()->get('coupon'))

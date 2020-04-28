@@ -1,20 +1,25 @@
 <div class="tt-desktop-header headerunderline">
     <div class="container">
         <div class="tt-header-holder">
-            <div class="tt-col-obj tt-obj-logo">
+            {{--            <div class="tt-col-obj tt-obj-logo">--}}
+            <div class="tt-obj-logo obj-aligment-center">
                 <!-- logo -->
                 <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
-                    <img class="text-center" src="{{ asset(env('LARGE').$settings->logo) }}"
+                    <img class="text-center" src="{{ $settings->logoThumb }}"
                          alt="{{ $settings->company }}"></a>
                 <!-- /logo -->
-            </div>
-            <div class="tt-col-obj tt-obj-search-type2">
-                <div class="tt-search-type2" style="margin-top: 12px;">
-                    @include('frontend.wokiee.four.partials._search_form')
+                <div class="tt-col-obj tt-obj-search-type2">
+                    <div class="tt-search-type2">
+                        @include('frontend.wokiee.four.partials._search_form')
+                    </div>
                 </div>
             </div>
+
         </div>
+
     </div>
+
+
     <div class="container small-header">
         <div class="tt-header-holder">
             {{--            @include('frontend.wokiee.four.partials._main_menu_categories')--}}
@@ -29,12 +34,13 @@
                                 </li>
                                 @include('frontend.wokiee.four.partials._categories_main_menu_element_with_images')
                                 @include('frontend.wokiee.four.partials._pages_main_menu')
-                                @if($categories->where('is_parent', true)->where('on_home', true)->count() <= 5)
-                                    <li class="dropdown">
-                                        <a href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
+                                <li class="dropdown">
+                                    @if(app()->getLocale() === 'ar')
                                         <a href="{{ route('frontend.language.change',['locale' => 'en']) }}">{{ trans('general.english') }}</a>
-                                    </li>
-                                @endif
+                                    @else
+                                        <a href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
+                                    @endif
+                                </li>
                             </ul>
                         </nav>
                     </div>
