@@ -9,14 +9,14 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>product_id</th>
-                            <th>product name</th>
+                            <th>{{ trans('general.id') }}</th>
+                            <th>{{ trans('general.product_name') }}</th>
                             <th>size_id</th>
                             <th>color_id</th>
                             <th>qty</th>
                             <th>notes_ar</th>
                             <th>notes_en</th>
-{{--                            <th>actions</th>--}}
+                            <th>actions</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -29,7 +29,7 @@
                             <th>qty</th>
                             <th>notes_ar</th>
                             <th>notes_en</th>
-{{--                            <th>actions</th>--}}
+                            <th>actions</th>
                         </tr>
                         </tfoot>
                         <tbody>
