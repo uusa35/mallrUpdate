@@ -29,7 +29,7 @@
 }
 
 .tt-logo img {
-    max-height: 50px !important;
+    max-height: 100px !important;
 }
 
 .img-event-btn {
@@ -108,9 +108,17 @@ span > .countdown-section {
     margin-top : 40px;
 }
 
+/* logo */
 .tt-obj-search-type2 {
     width : auto !important;
     margin-bottom: 10px;
+}
+header .tt-desktop-header .tt-logo {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+header .tt-header-holder .obj-aligment-center > *, header .tt-header-holder .obj-aligment-right > * {
+    text-align: left !important;
 }
 /*someboostrap not included*/
 /*Bootstrap v4.0.0 (https://getbootstrap.com)*/
