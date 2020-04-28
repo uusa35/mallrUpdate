@@ -54,7 +54,7 @@ class ProductAttributeController extends Controller
                 'color_id' => 'required|integer|exists:colors,id',
             ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = ProductAttribute::create($request->all());
         return redirect()->route('backend.attribute.create', ['product_id' => $element->product_id,'type' => $request->type])->with('success', 'saved successfully');
