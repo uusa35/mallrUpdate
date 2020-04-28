@@ -472,7 +472,7 @@
                                                                   data-original-title="{{ trans('message.description_ar') }}"
                                                                   id="description_ar" name="description_ar"
                                                                   aria-multiline="true"
-                                                                  maxlength="500" {{ $element->description_ar }}></textarea>
+                                                                  maxlength="500">{{ $element->description_ar }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
