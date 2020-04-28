@@ -44,7 +44,7 @@ class HomeController extends Controller
     }
     public function toggleActivate(Request $request)
     {
-        $className = 'App\Models\\' . ($request->has('strictMode') && $request->strictMode ? $request->model : Str::title($request->model));
+        $className = 'App\Models\\' . ($request->has('strictMode') && $request->strictMode ? $request->model : title_case($request->model));
         $element = new $className();
         $element = $element->withoutGlobalScopes()->whereId($request->id)->first();
         $element->update([

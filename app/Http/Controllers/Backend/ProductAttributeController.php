@@ -54,7 +54,7 @@ class ProductAttributeController extends Controller
                 'color_id' => 'required|integer|exists:colors,id',
             ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = ProductAttribute::create($request->all());
         return redirect()->route('backend.attribute.create', ['product_id' => $element->product_id,'type' => $request->type])->with('success', 'saved successfully');
@@ -122,7 +122,7 @@ class ProductAttributeController extends Controller
     {
         $element = ProductAttribute::where('id', $id)->first();
 //        $orderMeta = OrderMeta::where('product_attribute_id', $id)->first();
-        if ($element->delete()) {
+        if ($element->forceDelete()) {
             return redirect()->back()->with('success', 'element deleted');
         }
         return redirect()->back()->with('error', 'not deleted - some orders are relying on such attributes - cant be deleted');

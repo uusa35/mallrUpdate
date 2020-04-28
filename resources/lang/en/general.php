@@ -894,7 +894,7 @@ return array (
     'floor' => 'Role',
     'apartment' => 'apartment',
     'product_name' => 'Product Name',
-    'qty' => 'Quantity','is_paid' => 'حالة عملية الدفع',
+    'qty' => 'Quantity', 'is_paid' => 'حالة عملية الدفع',
     'subtotal' => 'Grand total',
     'grand_total' => 'Grand total',
     'recommendations' => 'Suggestions',

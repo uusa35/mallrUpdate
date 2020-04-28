@@ -59,7 +59,7 @@
                                         </button>
                                         <ul class="dropdown-menu pull-right" role="menu">
                                             <li>
-                                                <a href="{{ route('backend.activate',['model' => 'shipmentPackage','id' => $element->id]) }}">
+                                                <a href="{{ route('backend.activate',['model' => 'shipmentPackage','id' => $element->id, 'strictMode' => true]) }}">
                                                     <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
                                                 </a>
                                             </li>

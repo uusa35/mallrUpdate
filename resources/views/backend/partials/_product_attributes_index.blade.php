@@ -9,14 +9,14 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>product_id</th>
-                            <th>product name</th>
+                            <th>{{ trans('general.id') }}</th>
+                            <th>{{ trans('general.product_name') }}</th>
                             <th>size_id</th>
                             <th>color_id</th>
                             <th>qty</th>
                             <th>notes_ar</th>
                             <th>notes_en</th>
-{{--                            <th>actions</th>--}}
+                            <th>actions</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -29,7 +29,7 @@
                             <th>qty</th>
                             <th>notes_ar</th>
                             <th>notes_en</th>
-{{--                            <th>actions</th>--}}
+                            <th>actions</th>
                         </tr>
                         </tfoot>
                         <tbody>
@@ -40,8 +40,7 @@
                                 <td>{{ $element->product->name }}</td>
                                 <td>{{ $element->size->name }}</td>
                                 <td>
-                                <span class="label"
-                                      style="background-color: {{ $element->color->name }}">{{ $element->color->name }}</span>
+                                <span class="btn btn-info">{{ $element->color->name }}</span>
                                 </td>
                                 <td>
                                     {{ $element->qty }}
