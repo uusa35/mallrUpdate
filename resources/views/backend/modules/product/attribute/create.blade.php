@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group{{ $errors->has('qty') ? ' has-error' : '' }}">
-                                <label for="qty" class="control-label">qty</label>
+                                <label for="qty" class="control-label">{{ trans('general.qty') }}</label>
                                 <input id="qty"
                                        type="number"
                                        minlength="1"

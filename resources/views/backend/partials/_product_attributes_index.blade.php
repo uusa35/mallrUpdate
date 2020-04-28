@@ -40,8 +40,7 @@
                                 <td>{{ $element->product->name }}</td>
                                 <td>{{ $element->size->name }}</td>
                                 <td>
-                                <span class="label"
-                                      style="background-color: {{ $element->color->name }}">{{ $element->color->name }}</span>
+                                <span class="btn btn-info">{{ $element->color->name }}</span>
                                 </td>
                                 <td>
                                     {{ $element->qty }}
