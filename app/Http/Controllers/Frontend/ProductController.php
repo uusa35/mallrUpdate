@@ -61,7 +61,6 @@ class ProductController extends Controller
             'product_attributes.color', 'product_attributes.size',
             'images', 'tags', 'categories', 'favorites', 'brand'
         ])->first();
-        dd($element->product_attributes);
         IncreaseElementViews::dispatch($element);
         // return array of ['size_id', 'color', 'att_id','qty' ] for one product
         $data = $element->product_attributes->toArray();
