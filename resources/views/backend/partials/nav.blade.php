@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo" style="display: flex; justify-content: center; align-items: center;">
-            <a href="{{ route('backend.home') }}">
+            <a href="{{ route('frontend.home') }}">
                 <img src="{{ $settings->logoThumb }}" alt="logo" class="img-logo logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
