@@ -14,7 +14,7 @@
         {{--@endforeach--}}
         {{--</ul>--}}
         <ul class="tt-options-swatch">
-            @foreach($element->product_attributes as $attribute)
+            @foreach($element->product_attributes->unique('color_id') as $attribute)
                 <li><a class="options-color" style="background-color: {{ $attribute->color->code }};"
                        href="#"></a></li>
             @endforeach
