@@ -148,7 +148,7 @@ class ProductAttributeController extends Controller
     }
 
     public function trashed() {
-        $elements = ProductAttribute::withTrashed()->get();
+        $elements = ProductAttribute::onlyTrashed()->get();
         return view('backend.modules.product_attributes.trashed', compact('elements'));
     }
 }

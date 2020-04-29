@@ -40,8 +40,8 @@
                                     </a>
                                 </div>
                                 @if($element->has_attributes && $element->product_attributes->isNotEmpty())
-                                    @include('frontend.wokiee.four.partials._page_show_sizes',['sizes' => $element->sizes->unique(),'id' => $element->id])
-                                    @include('frontend.wokiee.four.partials._page_show_colors',['colors' => $element->colors->unique(),'hidden' => true,'id' => $element->id])
+                                    @include('frontend.wokiee.four.partials._page_show_sizes',['sizes' => $element->product_attributes->pluck('size')->unique(),'id' => $element->id])
+                                    @include('frontend.wokiee.four.partials._page_show_colors',['colors' => $element->product_attributes->pluck('color')->unique(),'hidden' => true,'id' => $element->id])
                                 @endif
                             </div>
                             @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')

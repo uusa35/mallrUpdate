@@ -12,11 +12,11 @@
    data-price="{{ $element->convertedFinalPrice }}"
    data-currency-name="{{ $currency->symbol }}"
    @if($element->has_attributes)
-   @if($element->colors->isNotEmpty())
-   data-colors="@foreach($element->colors->unique() as $col) {!! $col->name !!}, @endforeach"
+   @if($element->product_attributes->pluck('color')->isNotEmpty())
+   data-colors="@foreach($element->product_attributes->pluck('color')->unique() as $col) {!! $col->name !!}, @endforeach"
    @endif
-   @if($element->sizes->isNotEmpty())
-   data-sizes="@foreach($element->sizes->unique() as $size) {!! $size->name !!}, @endforeach"
+   @if($element->product_attributes->pluck('size')->isNotEmpty())
+   data-sizes="@foreach($element->product_attributes->pluck('size')->unique() as $size) {!! $size->name !!}, @endforeach"
    @endif
    @else
    @if($element->color)

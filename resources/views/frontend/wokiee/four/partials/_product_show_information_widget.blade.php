@@ -162,25 +162,25 @@
                 </tr>
             @endif
             @if($element->has_attributes)
-                @if($element->colors->isNotEmpty())
+                @if($element->product_attributes->pluck('color')->isNotEmpty())
                     <tr>
                         <td class="td-fixed-element"><i
                                     class="icon-e-87 fa fa-fw fa-lg"></i>{{ trans('general.colors') }} :
                         </td>
                         <td>
-                            @foreach($element->colors->unique() as $col)
+                            @foreach($element->product_attributes->pluck('color')->unique() as $col)
                                 <span style="color: {{ $col->code }}">{!! $col->name !!}</span>,
                             @endforeach
                         </td>
                     </tr>
                 @endif
-                @if($element->sizes->isNotEmpty())
+                @if($element->product_attributes->pluck('size')->isNotEmpty())
                     <tr>
                         <td class="td-fixed-element"><i
                                     class="icon-e-69 fa fa-fw fa-lg"></i>{{ trans('general.sizes') }} :
                         </td>
                         <td>
-                            @foreach($element->sizes->unique() as $size)
+                            @foreach($element->product_attributes->pluck('size')->unique() as $size)
                                 {!! $size->name !!},
                             @endforeach
                         </td>
