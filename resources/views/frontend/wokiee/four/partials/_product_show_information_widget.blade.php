@@ -168,7 +168,7 @@
                                     class="icon-e-87 fa fa-fw fa-lg"></i>{{ trans('general.colors') }} :
                         </td>
                         <td>
-                            @foreach($element->colors as $col)
+                            @foreach($element->colors->unique() as $col)
                                 <span style="color: {{ $col->code }}">{!! $col->name !!}</span>,
                             @endforeach
                         </td>
@@ -180,7 +180,7 @@
                                     class="icon-e-69 fa fa-fw fa-lg"></i>{{ trans('general.sizes') }} :
                         </td>
                         <td>
-                            @foreach($element->sizes as $size)
+                            @foreach($element->sizes->unique() as $size)
                                 {!! $size->name !!},
                             @endforeach
                         </td>
