@@ -269,6 +269,8 @@ return array(
     "index_color_or_height" => "Colors / heights this feature can be treated as a product height or color either of both. ",
     "order_is_complete_we_will_contact_u_soon" => "Order is complete. we will contact you asap.",
     "order_cash_on_delivery"  => "Please Kindly Note that Cash On Delivery shall not take any effect outside Kuwait",
-    "user_is_not_deleted" => "!!! Dont do this !!!"
+    "user_is_not_deleted" => "!!! Dont do this !!!",
+    "shipment_one" => "Shipment Policy depends on destination. shall update this later.",
+    "return_policy" => "Return Policy depends on destination. shall update this later."
 
 );
