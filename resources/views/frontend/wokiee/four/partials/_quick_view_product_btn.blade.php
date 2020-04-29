@@ -13,10 +13,10 @@
    data-currency-name="{{ $currency->symbol }}"
    @if($element->has_attributes)
    @if($element->colors->isNotEmpty())
-   data-colors="@foreach($element->colors as $col) {!! $col->name !!}, @endforeach"
+   data-colors="@foreach($element->colors->unique() as $col) {!! $col->name !!}, @endforeach"
    @endif
    @if($element->sizes->isNotEmpty())
-   data-sizes="@foreach($element->sizes as $size) {!! $size->name !!}, @endforeach"
+   data-sizes="@foreach($element->sizes->unique() as $size) {!! $size->name !!}, @endforeach"
    @endif
    @else
    @if($element->color)
