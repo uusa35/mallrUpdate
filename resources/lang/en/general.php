@@ -1092,5 +1092,6 @@ return array(
     "total_products_sold_during_month" => "Total Products sold during this month",
     "slug" => "الاسم / التجاري",
     "cancelled" => "Cancelled",
-    "views_no" => "Views No"
+    "views_no" => "Views No",
+    "viewers" => "Viewers"
 );
