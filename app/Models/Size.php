@@ -13,7 +13,7 @@ class Size extends PrimaryModel
     }
 
     public function products() {
-        return $this->belongsToMany(Product::class, 'product_attributes', 'product_id', 'size_id');
+        return $this->belongsToMany(Product::class, 'product_attributes', 'product_id', 'size_id','color_id');
     }
 
     // only the case which product has color_id / size_id (One Attribute Only included in table)

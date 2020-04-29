@@ -15,7 +15,7 @@ class Color extends PrimaryModel
     }
 
     public function products() {
-        return $this->belongsToMany(Product::class, 'product_attributes', 'product_id', 'color_id');
+        return $this->belongsToMany(Product::class, 'product_attributes', 'product_id', 'color_id','size_id');
     }
 
 
