@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="127" column="106" lean-forward="true" selection-start-line="127" selection-start-column="106" selection-end-line="127" selection-end-column="106" />
+              <caret line="127" column="106" selection-start-line="127" selection-start-column="106" selection-end-line="127" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -107,16 +102,25 @@
         <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="94" column="93" lean-forward="true" selection-start-line="94" selection-start-column="93" selection-end-line="94" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="85" column="100" lean-forward="true" selection-start-line="85" selection-start-column="100" selection-end-line="85" selection-end-column="100" />
+            <state relative-caret-position="668">
+              <caret line="46" column="98" lean-forward="true" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -173,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/SettingController.php" />
         <option value="$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelHelpers.php" />
@@ -224,6 +227,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php" />
       </list>
     </option>
   </component>
@@ -541,12 +545,12 @@
       <workItem from="1588064952647" duration="871000" />
       <workItem from="1588078831108" duration="2791000" />
       <workItem from="1588093533120" duration="3734000" />
-      <workItem from="1588156125224" duration="400000" />
+      <workItem from="1588156125224" duration="517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112988000" />
+    <option name="totallyTimeSpent" value="113105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -909,31 +913,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="127" column="106" lean-forward="true" selection-start-line="127" selection-start-column="106" selection-end-line="127" selection-end-column="106" />
+          <caret line="127" column="106" selection-start-line="127" selection-start-column="106" selection-end-line="127" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="85" column="100" lean-forward="true" selection-start-line="85" selection-start-column="100" selection-end-line="85" selection-end-column="100" />
+        <state relative-caret-position="538">
+          <caret line="94" column="93" lean-forward="true" selection-start-line="94" selection-start-column="93" selection-end-line="94" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product_attributes/trashed.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="46" column="98" lean-forward="true" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
         </state>
       </provider>
     </entry>

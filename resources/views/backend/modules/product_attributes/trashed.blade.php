@@ -44,7 +44,7 @@
                             <tr>
                                 <td>{{ $element->id }}</td>
                                 <td>{{ $element->product_id }}</td>
-                                <td>{{ $element->product->name }}</td>
+                                <td>{{ $element->product ? $element->product->name : 'N/A' }}</td>
                                 <td>{{ $element->size->name }}</td>
                                 <td>
                                     <span class="btn btn-info">{{ $element->color->name }}</span>
