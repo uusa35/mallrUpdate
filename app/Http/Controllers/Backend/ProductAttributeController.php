@@ -46,12 +46,16 @@ class ProductAttributeController extends Controller
      */
     public function store(Request $request)
     {
+        $element = ProductAttribute::withTrashed()->where(['product_id' => $request->product_id, 'size_id' => $request->size_id, 'color_id' => $request->color_id])->first();
+        if($element) {
+            $element->forceDelete();
+        }
         $validate = validator($request->all(),
             [
                 'qty' => 'required|numeric|min:1|max:999',
                 'product_id' => 'required|exists:products,id',
                 'size_id' => 'required|integer|exists:sizes,id',
-                'color_id' => 'required|integer|exists:colors,id',
+                'color_id' => 'required|integer|exists:colors,id|',
             ]);
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
@@ -104,7 +108,21 @@ class ProductAttributeController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
         }
-        $updated = ProductAttribute::whereId($id)->update($request->except(['_token', '_method']));
+        $updated = ProductAttribute:: updateOrCreate(
+            [
+                'product_id' => $request->product_id,
+                'size_id' => $request->size_id,
+                'color_id' => $request->color_id,
+            ],
+            [
+                'product_id' => $request->product_id,
+                'size_id' => $request->size_id,
+                'color_id' => $request->color_id,
+                'qty' => $request->qty,
+                'notes_ar' => $request->notes_ar,
+                'notes_en' => $request->notes_en,
+            ]
+        );
         if ($updated) {
             return redirect()->route('backend.product.index')->with('success', 'product attribute saved');
         }
