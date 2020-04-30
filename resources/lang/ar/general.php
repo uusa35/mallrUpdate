@@ -2117,5 +2117,5 @@ return array (
     "total_products_sold_during_month" => "عدد المنتجات المباعة خلال الشهر الحالي",
     "sales" => "المبيعات",
     "slug" => "Name / Slug",
-    "cancelled" => "ألغاء"
+    "cancelled" => "ألغاء",
 );

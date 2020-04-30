@@ -1946,5 +1946,7 @@ return array (
     "total_paid_orders" => "Total Successful Paid Orders",
     "total_products_sold_during_month" => "Total Products sold during this month",
     "slug" => "الاسم / التجاري",
-    "cancelled" => "Cancelled"
+    "cancelled" => "Cancelled",
+    "views_no" => "Views No",
+    "viewers" => "Viewers"
 );

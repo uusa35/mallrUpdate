@@ -83,6 +83,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
     Route::get('product/trashed','ProductController@trashed')->name('product.trashed');
     Route::get('product/restore/{id}','ProductController@restore')->name('product.restore');
     Route::resource('attribute', 'ProductAttributeController');
+    Route::get('trashed/attribute','ProductAttributeController@trashed')->name('attribute.trashed');
     Route::resource('service', 'ServiceController');
     Route::get('trashed/service','ServiceController@trashed')->name('service.trashed');
     Route::get('restore/service/{id}','ServiceController@restore')->name('service.restore');

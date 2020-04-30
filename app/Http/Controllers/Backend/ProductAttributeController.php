@@ -20,7 +20,8 @@ class ProductAttributeController extends Controller
      */
     public function index()
     {
-        //
+        $elements = ProductAttribute::all();
+        return view('backend.modules.product_attributes.index', compact('elements'));
     }
 
     /**
@@ -144,5 +145,10 @@ class ProductAttributeController extends Controller
             return redirect()->back()->with('success', 'element deleted');
         }
         return redirect()->back()->with('error', 'not deleted - some orders are relying on such attributes - cant be deleted');
+    }
+
+    public function trashed() {
+        $elements = ProductAttribute::onlyTrashed()->get();
+        return view('backend.modules.product_attributes.trashed', compact('elements'));
     }
 }

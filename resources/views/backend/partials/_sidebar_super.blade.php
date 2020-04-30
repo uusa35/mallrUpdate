@@ -41,6 +41,13 @@
                 <span class="arrow"></span>
             </a>
         </li>
+        <li class="nav-item ">
+            <a href="{{ route('backend.attribute.trashed') }}" class="nav-link ">
+                <i class="fa fa-fw fa-plus-square"></i>
+                <span class="title">{{ trans('general.trashed') }} {{ trans('general.attributes') }} {{ trans('general.product') }}</span>
+                <span class="arrow"></span>
+            </a>
+        </li>
         {{--<li class="nav-item ">--}}
         {{--<a href="{{ route('backend.admin.product.trashed') }}" class="nav-link ">--}}
         {{--<i class="fa fa-fw fa-recycle"></i>--}}
