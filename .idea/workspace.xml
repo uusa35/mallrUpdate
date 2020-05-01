@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/OrderMeta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/OrderMeta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mallr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mallr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_collection_slider_with_cover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_collection_slider_with_cover.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +86,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="736">
-                  <caret line="128" selection-start-line="128" selection-end-line="128" />
+                <state relative-caret-position="304">
+                  <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -163,7 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>المقاس</find>
       <find>$slide</find>
       <find>slid</find>
       <find>daily</find>
@@ -193,6 +188,7 @@
       <find>Mallr</find>
       <find>tt-description</find>
       <find>normal_t</find>
+      <find>normal_</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -527,12 +523,12 @@
       <workItem from="1588156125224" duration="2085000" />
       <workItem from="1588167498323" duration="55000" />
       <workItem from="1588168892486" duration="50000" />
-      <workItem from="1588338875657" duration="758000" />
+      <workItem from="1588338875657" duration="888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115536000" />
+    <option name="totallyTimeSpent" value="115666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -919,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="304">
+          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
         </state>
       </provider>
     </entry>

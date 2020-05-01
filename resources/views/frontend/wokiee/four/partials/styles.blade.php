@@ -102,6 +102,7 @@
     .tt-product-single-info > a,
     .tt-price, .old-price, p,
     .tt-login-form .tt-item .additional-links a,
+    .tt-block-title .tt-description,
     .money, .tt-description-wrapper, .tt-description-wrapper:hover, .tt-description,
     .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block {
 
@@ -180,7 +181,7 @@
         height: 100% !important;
     }
 
-    .tt-col-icon {
+    .tt-col-icon, .tt-services-block .tt-col-icon {
         color: {{ $settings->icon_theme_color }}  !important;
     }
 </style>
