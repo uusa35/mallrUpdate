@@ -86,8 +86,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
-                  <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+                <state relative-caret-position="250">
+                  <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
@@ -159,9 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>daily</find>
-      <find>input</find>
-      <find>withIn</find>
       <find>Shipmentpackage</find>
       <find>Str:</find>
       <find>edit</find>
@@ -189,6 +186,9 @@
       <find>normal_</find>
       <find>.tt-block-title .tt-description</find>
       <find>normal_text_theme_color</find>
+      <find>.tt-collapse-content a,</find>
+      <find>normal</find>
+      <find>.tt-product:not(.tt-view) .tt-description .tt-title a</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -523,12 +523,12 @@
       <workItem from="1588156125224" duration="2085000" />
       <workItem from="1588167498323" duration="55000" />
       <workItem from="1588168892486" duration="50000" />
-      <workItem from="1588338875657" duration="1002000" />
+      <workItem from="1588338875657" duration="1134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115780000" />
+    <option name="totallyTimeSpent" value="115912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -915,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+        <state relative-caret-position="250">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
         </state>
       </provider>
     </entry>

@@ -107,15 +107,16 @@
     header .tt-multi-obj ul li a:hover, header .tt-multi-obj ul li a:hover, .tt-btn-quickview:hover,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-quickview:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a:hover, .tt-block-title .tt-description,
-    .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover {
+    .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover, .tt-collapse-content a,
+    .tt-product:not(.tt-view) .tt-description .tt-title a
+    {
 
         color: {{ $settings->normal_text_theme_color }}        !important;
     }
 
     h1, h2, h3, .tt-dropdown-toggle, .countdown-selection .theme-color, .tt-countdown, .tt-countdown_box, .tt-product-single-info > a, .tt-price, .old-price,
     .form-check-label, .card-header, label, label:not(.error), .card-text,
-    .tt-product:not(.tt-view) .tt-description .tt-title a,
-    .money, .tt-collapse-content a, header .tt-multi-obj ul li.active a, .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block .tt-col-icon {
+    .money, header .tt-multi-obj ul li.active a, .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block .tt-col-icon {
         color: {{ $settings->header_one_theme_color }}  !important;
     }
 
