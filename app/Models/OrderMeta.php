@@ -41,7 +41,7 @@ class OrderMeta extends PrimaryModel
 
     public function country()
     {
-        return $this->belongsTo(Country::class,'destination_id');
+        return $this->belongsTo(Country::class, 'destination_id');
     }
 
     public function collection()
@@ -49,9 +49,11 @@ class OrderMeta extends PrimaryModel
         return $this->belongsTo(Collection::class);
     }
 
-    public function merchant() {
-        return $this->belongsTo(User::class,'merchant_id');
+    public function merchant()
+    {
+        return $this->belongsTo(User::class, 'merchant_id');
     }
+
     public function getIsProductTypeAttribute()
     {
         return strtolower($this->item_type) === 'product';
@@ -79,6 +81,6 @@ class OrderMeta extends PrimaryModel
             ->orderBy('occurrences', 'DESC')
             ->take(10)
             ->get()
-            ->pluck('collection');
+            ->pluck('collection')->unique()->filter();
     }
 }
