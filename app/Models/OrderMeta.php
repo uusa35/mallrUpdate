@@ -79,7 +79,7 @@ class OrderMeta extends PrimaryModel
             ->select(DB::raw('COUNT(*) as occurrences, collection_id'))
             ->groupBy('collection_id')
             ->orderBy('occurrences', 'DESC')
-            ->take(10)
+            ->take(15)
             ->get()
             ->pluck('collection')->unique()->filter();
     }
