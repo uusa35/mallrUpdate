@@ -1,4 +1,5 @@
 @if(isset($elements) && $elements->isNotEmpty())
+    {{ dd($elements) }}
     <div class="container-indent">
         <div class="container container-fluid-custom-mobile-padding">
             @if($title)
