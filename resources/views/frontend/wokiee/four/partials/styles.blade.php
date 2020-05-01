@@ -39,25 +39,25 @@
     }
 
     p, .tt-collapse-content p, .tt-shopcart-table01 td, .tt-shopcart-table01 th {
-        color: {{ $settings->main_theme_color ? $settings->main_theme_color : 'white' }}   !important;
+        color: {{ $settings->main_theme_color ? $settings->main_theme_color : 'white' }}    !important;
     }
 
     header, .tt-color-scheme-01, .tt-footer-center, footer .tt-footer-custom:last-child
     .tt-color-scheme-02,
     .tt-badge-cart,
-    .tt-search-type2-rtl, tt-description-wrapper, tt-description-wrapper:hover, .tt-background, .dot,
+    .tt-search-type2-rtl, .tt-background, .dot,
     .headerunderline, .stuck.tt-stuck-nav {
-        background-color: {{ $settings->header_theme_bg }}      !important;
+        background-color: {{ $settings->header_theme_bg }}       !important;
     }
 
     footer .tt-color-scheme-02, footer, .tt-footer-center, .tt-footer-col, footer .tt-footer-custom:last-child {
-        color: {{ $settings->footer_theme_color }}      !important;
-        background-color: {{ $settings->footer_bg_theme_color }}      !important;
+        color: {{ $settings->footer_theme_color }}       !important;
+        background-color: {{ $settings->footer_bg_theme_color }}       !important;
     }
 
 
     footer .tt-color-scheme-01 .tt-collapse-content a, footer .tt-color-scheme-01 {
-        color: {{ $settings->footer_theme_color }}      !important;
+        color: {{ $settings->footer_theme_color }}       !important;
     }
 
     .btn, .tt-btn-search-rtl, .tt-btn-search,
@@ -69,20 +69,20 @@
     .btn.btn-border,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
     .tt-image-box .tt-btn-wishlist {
-        color: {{ $settings->btn_text_theme_color }}      !important;
-        background-color: {{ $settings->btn_bg_theme_color }}      !important;
-        border-color: {{ $settings->btn_text_theme_color }}  !important;
+        color: {{ $settings->btn_text_theme_color }}       !important;
+        background-color: {{ $settings->btn_bg_theme_color }}       !important;
+        border-color: {{ $settings->btn_text_theme_color }}   !important;
     }
 
     .tt-shopcart-table-02 .tt-title a, .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
     .tt-desctop-menu:not(.tt-hover-02), .tt-btn-quickview {
-        color: {{ $settings->main_theme_color }}      !important;
+        color: {{ $settings->main_theme_color }}       !important;
     }
 
     .tt-mobile-header .tt-top-line {
-        border-top: 1px solid {{ $settings->btn_bg_theme_color }}    !important;
+        border-top: 1px solid {{ $settings->btn_bg_theme_color }}     !important;
     }
 
     li.dropdown.selected > a,
@@ -93,7 +93,7 @@
     .datepicker-panel > ul > li,
     .tt-social-icon li a, .tt-social-icon li a:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a, header .tt-dropdown-obj .tt-dropdown-toggle, .tt-dropdown-toggle {
-        color: {{ $settings->menu_theme_color }}    !important;
+        color: {{ $settings->menu_theme_color }}     !important;
     }
 
     .countdown-selection
@@ -102,34 +102,34 @@
     .tt-product-single-info > a,
     .tt-price, .old-price, p,
     .tt-login-form .tt-item .additional-links a,
-    .money,
-    .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block .tt-col-icon {
+    .money, .tt-description-wrapper, .tt-description-wrapper:hover, .tt-description,
+    .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block {
 
-        color: {{ $settings->normal_text_theme_color }}      !important;
+        color: {{ $settings->normal_text_theme_color }}       !important;
     }
 
     h1, h2, h3, .tt-dropdown-toggle, .countdown-selection .theme-color, .tt-countdown, .tt-countdown_box, .tt-product-single-info > a, .tt-price, .old-price,
     .form-check-label, .card-header, label, label:not(.error), .card-text, .tt-block-title .tt-description,
     .tt-product:not(.tt-view) .tt-description .tt-title a,
     .money, .tt-collapse-content a, header .tt-multi-obj ul li.active a, .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block .tt-col-icon {
-        color: {{ $settings->header_one_theme_color }}      !important;
+        color: {{ $settings->header_one_theme_color }}       !important;
     }
 
     header .tt-multi-obj ul li a:hover, header .tt-multi-obj ul li a:hover, .tt-btn-quickview:hover,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-quickview:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a:hover,
     .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover {
-        color: {{ $settings->normal_text_theme_color }}      !important;
+        color: {{ $settings->normal_text_theme_color }}       !important;
     }
 
     .tt-title, .tt-collapse-title, .tt-block-title {
-        color: {{ $settings->header_one_theme_color }}      !important;
-        border-color: {{ $settings->header_one_theme_color }}      !important;
+        color: {{ $settings->header_one_theme_color }}       !important;
+        border-color: {{ $settings->header_one_theme_color }}       !important;
     }
 
     @media (max-width: 1024px) {
         .tt-mobile-header {
-            background-color: {{ $settings->header_theme_bg }}      !important;
+            background-color: {{ $settings->header_theme_bg }}       !important;
             padding-bottom: 10px;
         }
     }
@@ -155,7 +155,7 @@
 
     a .url-normal {
         text-decoration: none !important;
-        color: {{ $settings->main_text_theme_color }}      !important;
+        color: {{ $settings->main_text_theme_color }}       !important;
         text-underline: none !important;
     }
 
@@ -178,5 +178,9 @@
 
     .tt-coming-soon {
         height: 100% !important;
+    }
+
+    .tt-col-icon {
+        color: {{ $settings->icon_theme_color }}  !important;
     }
 </style>
