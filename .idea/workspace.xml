@@ -2,69 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ModelHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModelHelpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/SettingResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/SettingResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toy-8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-10.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-11.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-12.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-13.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-14.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-15.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-16.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-17.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-18.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-19.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-20.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-21.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-22.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-23.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-24.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-25.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-26.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-28.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-29.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-30.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-31.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-32.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-33.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-34.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-35.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-36.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-37.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-38.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-39.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-40.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-41.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-42.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-43.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-44.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-45.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-46.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-47.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-49.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-43.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-44.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-45.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-46.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-47.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-48.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-49.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uploads/images/large/toys-slides-50.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/CategoryLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/CategoryLightResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ProductLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ProductLightResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ServiceResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ServiceResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/UserLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/UserLightResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/UserResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,11 +40,74 @@
     <splitter split-orientation="horizontal" split-proportion="0.41480297">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Resources/SettingResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="50" column="83" selection-start-line="50" selection-start-column="83" selection-end-line="50" selection-end-column="83" />
+                <state relative-caret-position="446">
+                  <caret line="37" column="49" lean-forward="true" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/UserLightResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="414">
+                  <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/ProductResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="648">
+                  <caret line="39" column="67" lean-forward="true" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/ProductLightResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="468">
+                  <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/ServiceResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="489">
+                  <caret line="44" column="50" lean-forward="true" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/CategoryResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="414">
+                  <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Resources/CategoryLightResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="576">
+                  <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -114,8 +121,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/Models/Setting.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-145">
-                      <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+                    <state relative-caret-position="269">
+                      <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
                     </state>
                   </provider>
                 </entry>
@@ -148,8 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit</find>
-      <find>footer .tt-logo img</find>
       <find>hidden</find>
       <find>brands</find>
       <find>views_no</find>
@@ -178,6 +183,8 @@
       <find>.tt-product:not(.tt-view) .tt-description .tt-title a</find>
       <find>icon_</find>
       <find>bg</find>
+      <find>image</find>
+      <find>thumb</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -189,13 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/assets/css/frontend-custom-ar.css" />
-        <option value="$PROJECT_DIR$/app/Services/CartTrait.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_prices.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/order/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/OrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_cart_order_user_info_confirmation.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu_cart_items.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/nav.blade.php" />
@@ -240,6 +240,13 @@
         <option value="$PROJECT_DIR$/app/Models/Setting.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelHelpers.php" />
         <option value="$PROJECT_DIR$/app/Resources/SettingResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ProductResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ProductLightResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/UserLightResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ServiceResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/CategoryResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/CategoryLightResource.php" />
       </list>
     </option>
   </component>
@@ -568,12 +575,12 @@
       <workItem from="1588168892486" duration="50000" />
       <workItem from="1588338875657" duration="2200000" />
       <workItem from="1588398028115" duration="2268000" />
-      <workItem from="1588406048214" duration="644000" />
+      <workItem from="1588406048214" duration="1508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119890000" />
+    <option name="totallyTimeSpent" value="120754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -605,62 +612,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_30_104319_create_brands_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_products_slider.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Size.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_page_show_colors.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/modals.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="105" column="66" lean-forward="true" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_modal_page_show_shipment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_nav_currencies_section.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -944,10 +895,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/SettingResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="37" column="49" lean-forward="true" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ProductResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="39" column="67" lean-forward="true" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ProductLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Setting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="269">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ServiceResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="44" column="50" lean-forward="true" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/UserLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/CategoryResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -958,10 +965,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/SettingResource.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/CategoryLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="50" column="83" selection-start-line="50" selection-start-column="83" selection-end-line="50" selection-end-column="83" />
+        <state relative-caret-position="576">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
         </state>
       </provider>
     </entry>
