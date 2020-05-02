@@ -68,6 +68,11 @@ trait ModelHelpers
         return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->image : asset(env('THUMBNAIL') . $this->image);
     }
 
+    public function getCurrentImageAttribute($colName = 'image', $sizeType = 'thumbnail')
+    {
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl($sizeType, $colName) . $this->{$colName} : asset(env(strtoupper($sizeType)) . $this->{$colName});
+    }
+
     public function checkStorageSpaces()
     {
         return env('FILESYSTEM_CLOUD') === 'do';
@@ -75,7 +80,7 @@ trait ModelHelpers
 
     public function getStorageSpacesUrl($sizeType = 'large')
     {
-        return env('DO_ROOT_URL') . env(strtoupper('DO_'.$sizeType));
+        return env('DO_ROOT_URL') . env(strtoupper('DO_' . $sizeType));
     }
 
     public function getPathLinkAttribute()
