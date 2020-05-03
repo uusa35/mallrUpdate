@@ -1093,5 +1093,7 @@ return array(
     "slug" => "الاسم / التجاري",
     "cancelled" => "Cancelled",
     "views_no" => "Views No",
-    "viewers" => "Viewers"
+    "viewers" => "Viewers",
+    "shipment_fixed_rate" => "Shipment Fixed Rate",
+    "shipment_fuel_percentage" => "Shipment Fuel Percentage (applied only when shipment fixed rate is false)"
 );

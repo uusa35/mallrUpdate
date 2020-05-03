@@ -1057,4 +1057,6 @@ return array(
     "sales" => "المبيعات",
     "slug" => "Name / Slug",
     "cancelled" => "ألغاء",
+    "shipment_fixed_rate" => " نظام تكلفة الشحن الثبات",
+    "shipment_fuel_percentage" => "نسبة الوقود (تطبق فقط في حالة تطبيق تكلفة الشحن المتغيرة)"
 );

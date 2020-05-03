@@ -271,6 +271,7 @@ return array(
     "order_cash_on_delivery"  => "Please Kindly Note that Cash On Delivery shall not take any effect outside Kuwait",
     "user_is_not_deleted" => "!!! Dont do this !!!",
     "shipment_one" => "Shipment Policy depends on destination. shall update this later.",
-    "return_policy" => "Return Policy depends on destination. shall update this later."
+    "return_policy" => "Return Policy depends on destination. shall update this later.",
+    "shipment_fixed_rate" => "When Shipment Fixed rate is true, then shipment charge shall be fixed on each item ordered. rate can be modified from country Module."
 
 );

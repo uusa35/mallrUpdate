@@ -190,40 +190,47 @@
                                                 @endif
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group {{ $errors->has('notes_ar') ? ' has-error' : '' }}">
-                                            <label for="notes_ar"
-                                                   class="control-label">{{ trans('general.notes_ar') }}*</label>
-                                            <input id="notes_ar" type="text" class="form-control" name="notes_ar"
-                                                   value="{{ $element->notes_ar }}"
-                                                   placeholder="{{ trans('general.notes_ar') }}" required autofocus>
-                                            @if ($errors->has('notes_ar'))
-                                                <span class="help-block">
+                                        <div class="col-lg-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group {{ $errors->has('notes_ar') ? ' has-error' : '' }}">
+                                                    <label for="notes_ar"
+                                                           class="control-label">{{ trans('general.notes_ar') }}
+                                                        *</label>
+                                                    <input id="notes_ar" type="text" class="form-control"
+                                                           name="notes_ar"
+                                                           value="{{ $element->notes_ar }}"
+                                                           placeholder="{{ trans('general.notes_ar') }}" required
+                                                           autofocus>
+                                                    @if ($errors->has('notes_ar'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('notes_ar') }}
                                                 </strong>
                                             </span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group {{ $errors->has('notes_en') ? ' has-error' : '' }}">
-                                            <label for="notes_en"
-                                                   class="control-label">{{ trans('general.notes_en') }}*</label>
-                                            <input id="notes_en" type="text" class="form-control" name="notes_en"
-                                                   value="{{ $element->notes_en }}"
-                                                   placeholder="{{ trans('general.notes_en') }}" required autofocus>
-                                            @if ($errors->has('notes_en'))
-                                                <span class="help-block">
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group {{ $errors->has('notes_en') ? ' has-error' : '' }}">
+                                                    <label for="notes_en"
+                                                           class="control-label">{{ trans('general.notes_en') }}
+                                                        *</label>
+                                                    <input id="notes_en" type="text" class="form-control"
+                                                           name="notes_en"
+                                                           value="{{ $element->notes_en }}"
+                                                           placeholder="{{ trans('general.notes_en') }}" required
+                                                           autofocus>
+                                                    @if ($errors->has('notes_en'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('notes_en') }}
                                                 </strong>
                                             </span>
-                                            @endif
+                                                    @endif
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -257,11 +264,11 @@
                                             <label class="control-label sbold">{{ trans('general.is_available') }}</label></br>
                                             <label class="radio-inline">
                                                 <input type="radio" name="is_available" id="optionsRadios3"
-                                                       {{ $element->is_availble ? 'checked' : null }}
+                                                       {{ $element->is_available ? 'checked' : null }}
                                                        value="1"> {{ trans('general.yes') }}</label>
                                             <label class="radio-inline">
                                                 <input type="radio" name="is_available" id="optionsRadios4"
-                                                       {{ !$element->is_availble ? 'checked' : null }}
+                                                       {{ !$element->is_available ? 'checked' : null }}
                                                        value="0"> {{ trans('general.no') }}</label>
                                         </div>
                                     </div>
@@ -269,9 +276,9 @@
                             </div>
                         </div>
                     </div>
-                @include('backend.partials.forms._btn-group')
+                    @include('backend.partials.forms._btn-group')
+                </form>
             </div>
-            </form>
         </div>
     </div>
 @endsection

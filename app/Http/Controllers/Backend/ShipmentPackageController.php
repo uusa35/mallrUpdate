@@ -32,7 +32,7 @@ class ShipmentPackageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -41,7 +41,12 @@ class ShipmentPackageController extends Controller
             'name' => 'required|unique:shipment_packages,name',
             'slug_ar' => 'required',
             'slug_en' => 'required',
-            'charge' => 'required|between:1,20',
+            'charge' => 'required|numeric|min:1|max:99',
+            'charge_one' => 'required|numeric|min:1|max:99',
+            'charge_two' => 'required|numeric|min:1|max:99',
+            'charge_three' => 'required|numeric|min:1|max:99',
+            'charge_four' => 'required|numeric|min:1|max:99',
+            'charge_five' => 'nullable|numeric|min:1|max:99',
         ]);
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
@@ -58,7 +63,7 @@ class ShipmentPackageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -69,7 +74,7 @@ class ShipmentPackageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -81,22 +86,27 @@ class ShipmentPackageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         $validate = validator($request->all(), [
-            'name' => 'required|unique:shipment_packages,name,'.$id,
+            'name' => 'required|unique:shipment_packages,name,' . $id,
             'slug_ar' => 'required',
             'slug_en' => 'required',
-            'charge' => 'required|between:1,20',
+            'charge' => 'required|numeric|min:1|max:99',
+            'charge_one' => 'required|numeric|min:1|max:99',
+            'charge_two' => 'required|numeric|min:1|max:99',
+            'charge_three' => 'required|numeric|min:1|max:99',
+            'charge_four' => 'required|numeric|min:1|max:99',
+            'charge_five' => 'nullable|numeric|min:1|max:99',
         ]);
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
         }
-        $element = ShipmentPackage::whereId($id)->update($request->except('_token','_method'));
+        $element = ShipmentPackage::whereId($id)->update($request->except('_token', '_method'));
         if ($element) {
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], false) : null;
             return redirect()->route('backend.package.index')->with('success', 'package updated');
@@ -107,7 +117,7 @@ class ShipmentPackageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

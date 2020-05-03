@@ -56,7 +56,8 @@
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.calling_code') }}
                                                     *</label>
-                                                <input type="number" id="calling_code" name="calling_code" maxlength="3" max="999"
+                                                <input type="number" id="calling_code" name="calling_code" maxlength="3"
+                                                       max="999"
                                                        class="form-control" value="{{ $element->calling_code }}"
                                                        placeholder="{{ trans('general.calling_code') }}" required>
                                                 <span class="help-block"> ex. 00965 </span>
@@ -74,16 +75,32 @@
                                             </div>
 
                                         </div>
+                                        {{--                                        <div class="col-md-4">--}}
+                                        {{--                                            <div class="form-group">--}}
+                                        {{--                                                <label class="control-label">{{ trans('general.shipment_packages') }}--}}
+                                        {{--                                                    *</label>--}}
+                                        {{--                                                <select name="packages[]" multiple="multiple" class="multi-select tooltips" data-container="body" data-placement="top" data-original-title="{{ trans('message.shipment_package') }}" id="my_multi_select1" required>--}}
+                                        {{--                                                    <option>{{ trans('general.choose_shipment_package') }}</option>--}}
+                                        {{--                                                    @foreach($shipmentPackages as $package)--}}
+                                        {{--                                                        <option value="{{ $package->id }}"--}}
+                                        {{--                                                                {{ in_array($package->id,$element->shipment_packages->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}--}}
+                                        {{--                                                        >{{ $package->slug }}</option>--}}
+                                        {{--                                                    @endforeach--}}
+                                        {{--                                                </select>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div>--}}
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.shipment_packages') }}
                                                     *</label>
-                                                <select name="packages[]" multiple="multiple" class="multi-select tooltips" data-container="body" data-placement="top" data-original-title="{{ trans('message.shipment_package') }}" id="my_multi_select1" required>
+                                                <select name="packages[]" class="form-control  tooltips"
+                                                        data-container="body"
+                                                        data-placement="top"
+                                                        data-original-title="{{ trans('message.shipment_package') }}"
+                                                        required>
                                                     <option>{{ trans('general.choose_shipment_package') }}</option>
                                                     @foreach($shipmentPackages as $package)
-                                                        <option value="{{ $package->id }}"
-                                                                {{ in_array($package->id,$element->shipment_packages->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                        >{{ $package->slug }}</option>
+                                                        <option value="{{ $package->id }}" {{ $element->shipment_packages->first()->id === $package->id ? 'selected' : null }}>{{ $package->slug }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -159,7 +176,8 @@
                                                     *</label>
                                                 <input type="number" id="minimum_shipment_charge"
                                                        name="minimum_shipment_charge"
-                                                       class="form-control" value="{{ $element->minimum_shipment_charge }}"
+                                                       class="form-control"
+                                                       value="{{ $element->minimum_shipment_charge }}"
                                                        placeholder="{{ trans('general.minimum_shipment_charge') }}"
                                                        required>
 
@@ -171,7 +189,8 @@
                                                     *</label>
                                                 <input type="number" id="fixed_shipment_charge"
                                                        name="fixed_shipment_charge"
-                                                       class="form-control" value="{{ $element->fixed_shipment_charge }}"
+                                                       class="form-control"
+                                                       value="{{ $element->fixed_shipment_charge }}"
                                                        placeholder="{{ trans('general.fixed_shipment_charge') }}"
                                                        required>
 
@@ -223,7 +242,7 @@
                                                     </label>
                                                     <label class="radio-inline">
                                                         <input type="radio" name="active" id="optionsRadios2" value="0"
-                                                               {{ !$element->active  ? 'checked' : null  }}>
+                                                                {{ !$element->active  ? 'checked' : null  }}>
                                                         {{ trans('general.not_active') }}</label>
                                                 </div>
                                             </div>
@@ -239,7 +258,7 @@
                                                     <label class="radio-inline">
                                                         <input type="radio" name="has_currency" id="optionsRadios2"
                                                                value="0"
-                                                               {{ !$element->has_currency  ? 'checked' : null  }}>
+                                                                {{ !$element->has_currency  ? 'checked' : null  }}>
                                                         {{ trans('general.not_has_currency') }}</label>
                                                 </div>
                                             </div>
@@ -255,7 +274,7 @@
                                                     <label class="radio-inline">
                                                         <input type="radio" name="is_local" id="optionsRadios2"
                                                                value="0"
-                                                               {{ !$element->is_local  ? 'checked' : null  }}>
+                                                                {{ !$element->is_local  ? 'checked' : null  }}>
                                                         {{ trans('general.not_is_local') }}</label>
                                                 </div>
                                             </div>
