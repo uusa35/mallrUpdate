@@ -285,7 +285,7 @@
                            data-close-others="true">
                             <img alt="" class="img-xs" src="{{ auth()->user()->imageThumbLink }}"/>
                             <i class="fa fa-angle-down"></i>
-                            <span class="username username-hide-on-mobile"> {{ \Illuminate\Support\Str::limit(auth()->user()->name,30) }}</span><br>
+                            <span class="username username-hide-on-mobile"> {{ str_limit(auth()->user()->name,30) }}</span><br>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
@@ -293,7 +293,7 @@
                                     <span class="username username-hide-on-mobile"><i
                                                 class="fa fa-fw fa-university"></i>{{ trans('general.role') }}
                                         : {{ auth()->user()->role->name }} : </span>
-                                    <span class="username username-hide-on-mobile"> {{ \Illuminate\Support\Str::limit(auth()->user()->name,5) }}</span><br>
+                                    <span class="username username-hide-on-mobile"> {{ str_limit(auth()->user()->name,5) }}</span><br>
                                 </a>
                             </li>
                             <li>

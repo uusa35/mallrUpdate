@@ -21,10 +21,10 @@
                 <li>
                     <a href="{{ route('frontend.user.show.name',['id' => $element->user->id, 'name' => $element->user->name]) }}">
 {{--                        {{ isset($title) ? $title  : null }} :--}}
-                        {{ \Illuminate\Support\Str::limit($element->user->slug,20) }}</a>
+                        {{ str_limit($element->user->slug,20) }}</a>
                 </li>
                 <li>
-                    <a href="{{ route('frontend.collection.show',$element->id) }}">{{ \Illuminate\Support\Str::limit($element->name,25,'..') }}</a>
+                    <a href="{{ route('frontend.collection.show',$element->id) }}">{{ str_limit($element->name,25,'..') }}</a>
                 </li>
             </ul>
             {{--@include('frontend.wokiee.four.partials._rating')--}}

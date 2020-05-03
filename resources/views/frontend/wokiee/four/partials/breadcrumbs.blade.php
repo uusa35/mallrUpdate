@@ -1,4 +1,4 @@
-@if(\Illuminate\Support\Str::contains(request()->route()->getPrefix(),'backend'))
+@if(str_contains(request()->route()->getPrefix(),'backend'))
     @include('backend.partials.breadcrumbs')
 @else
     @if (count($breadcrumbs) > 0)

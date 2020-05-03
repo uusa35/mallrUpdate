@@ -29,7 +29,7 @@
             <div class="tt-row">
                 <ul class="tt-add-info">
                     <li>
-                        <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ \Illuminate\Support\Str::limit($element->slug,25) }}</a>
+                        <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ str_limit($element->slug,25) }}</a>
                         {{--                        @if($element->isDesigner)--}}
                         {{--                            <a href="{{ route('frontend.product.search', ['designer_id' => $element->id]) }}">{{ $element->slug }}</a>--}}
                         {{--                        @else--}}
@@ -40,11 +40,11 @@
                 {{--@include('frontend.wokiee.four.partials._rating')--}}
             </div>
             <h2 class="tt-title">
-                <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ \Illuminate\Support\Str::limit($element->description,40,'...') }}</a>
+                <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ str_limit($element->description,40,'...') }}</a>
                 {{--                @if($element->isDesigner)--}}
-                {{--                    <a href="{{ route('frontend.product.search', ['designer_id' => $element->id]) }}">{{ \Illuminate\Support\Str::limit($element->description,100,'...') }}</a>--}}
+                {{--                    <a href="{{ route('frontend.product.search', ['designer_id' => $element->id]) }}">{{ str_limit($element->description,100,'...') }}</a>--}}
                 {{--                @else--}}
-                {{--                    <a href="{{ route('frontend.product.search', ['user_id' => $element->id]) }}">{{ \Illuminate\Support\Str::limit($element->description,100,'...') }}</a>--}}
+                {{--                    <a href="{{ route('frontend.product.search', ['user_id' => $element->id]) }}">{{ str_limit($element->description,100,'...') }}</a>--}}
                 {{--                @endif--}}
             </h2>
             {{--@include('frontend.wokiee.four.partials._widget_price_and_color')--}}

@@ -136,7 +136,7 @@
                                             @endif
                                             @if($a->name)
                                                 <label class="label "
-                                                       for="question_id[{{ $q->id }}]">&nbsp;&nbsp;{{ \Illuminate\Support\Str::limit($a->name,20,'') }}</label>
+                                                       for="question_id[{{ $q->id }}]">&nbsp;&nbsp;{{ str_limit($a->name,20,'') }}</label>
                                             @endif
                                         </div>
                                     </div>

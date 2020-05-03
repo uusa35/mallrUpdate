@@ -23,14 +23,14 @@
 @foreach($order->order_metas as $orderMeta)
 @if($orderMeta->isProductType)
 @if($orderMeta->product->has_attributes)
-| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ \Illuminate\Support\Str::limit($orderMeta->product->sku,3,'') }}| {{ \Illuminate\Support\Str::limit($orderMeta->product->name,10,'') }}|
+| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }}|
 @else
-| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product->size->name }} | {{ $orderMeta->product->color->name }} | {{ \Illuminate\Support\Str::limit($orderMeta->product->sku,3,'') }}| {{ \Illuminate\Support\Str::limit($orderMeta->product->name,10,'') }} |
+| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product->size->name }} | {{ $orderMeta->product->color->name }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
 @endif
 @elseif($orderMeta->isServiceType)
-| {{ $orderMeta->price }}| {{ \Illuminate\Support\Str::limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ \Illuminate\Support\Str::limit($orderMeta->service->name,10,'') }}|
+| {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ str_limit($orderMeta->service->name,10,'') }}|
 @elseif($orderMeta->isQuestionnaireType)
-| {{ $orderMeta->price }}| {{ \Illuminate\Support\Str::limit($orderMeta->notes,20) }}| {{ $orderMeta->created_at->format('d/m/Y') }} | {{ $orderMeta->questionnaire->user->slug }} | {{ $orderMeta->questionnaire->id }}|{{ \Illuminate\Support\Str::limit($orderMeta->questionnaire->name,10,'') }}|
+| {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->created_at->format('d/m/Y') }} | {{ $orderMeta->questionnaire->user->slug }} | {{ $orderMeta->questionnaire->id }}|{{ str_limit($orderMeta->questionnaire->name,10,'') }}|
 @component('mail::panel')
     <div style="font-size: large; font-weight: bold; direction: rtl !important;">
         {{ trans('message.questionnaire_order_message') }}

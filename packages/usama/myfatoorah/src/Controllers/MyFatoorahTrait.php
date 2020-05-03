@@ -2,10 +2,6 @@
 
 namespace Usama\MyFatoorah;
 
-use App\Models\Coupon;
-use App\Models\Order;
-use \Illuminate\Support\Str;
-
 trait MyFatoorahTrait
 {
     public function processPayment($order, $user)
@@ -67,15 +63,15 @@ trait MyFatoorahTrait
             $post_string = '{
             "InvoiceValue": "' . $order->net_price . '",
             "CustomerName": "' . $user->name . '",
-            "CustomerBlock": "' . Str::limit($user->address, 10, '') . '",
-            "CustomerStreet": "' . Str::limit($user->address,45) . '",
-            "CustomerHouseBuildingNo": "' . Str::limit($user->address,45) . '",
+            "CustomerBlock": "' . str_limit($user->address, 10, '') . '",
+            "CustomerStreet": "' . str_limit($user->address,45) . '",
+            "CustomerHouseBuildingNo": "' . str_limit($user->address,45) . '",
             "CustomerCivilId": "",
             "CustomerAddress": "' . $user->address . '",
             "CustomerReference": "' . $user->id . '",
             "DisplayCurrencyIsoAlpha": "' . ENV('MYFATOORAH_CURRENCY_CODE') . '",
             "CountryCodeId": "+965",
-            "CustomerMobile": "' . Str::limit($user->mobile, 10, '') . '",
+            "CustomerMobile": "' . str_limit($user->mobile, 10, '') . '",
             "CustomerEmail": "' . $user->email . '",
             "DisplayCurrencyId": 3,
             "SendInvoiceOption": 1,

@@ -5,7 +5,6 @@ namespace App\Http\Resources;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
-use \Illuminate\Support\Str;
 
 class ProductResource extends JsonResource
 {
@@ -20,9 +19,7 @@ class ProductResource extends JsonResource
         return [
             'id' => $this->id,
             'sku' => $this->sku,
-            'name' => ucfirst(Str::limit($this->name, 30,'')),
-//            'name_ar' => Str::limit($this->name_ar, 30,''),
-//            'name_en' => Str::limit($this->name_en, 30,''),
+            'name' => ucfirst(str_limit($this->name, 30,'')),
             'on_new' => $this->on_new,
             'home_delivery_availability' => $this->home_delivery_availability,
             'shipment_availability' => $this->shipment_availability,

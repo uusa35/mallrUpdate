@@ -75,7 +75,7 @@
                                                                class="orm-check-input"/>
                                                         &nbsp;&nbsp;
                                                         <label class="form-check-label"
-                                                               for="categories">{{ \Illuminate\Support\Str::limit($category->name,60) }}</label>
+                                                               for="categories">{{ str_limit($category->name,60) }}</label>
                                                     </div>
                                                 </div>
                                             @endforeach
@@ -99,7 +99,7 @@
                                                                class="orm-check-input"/>
                                                         &nbsp;&nbsp;
                                                         <label class="form-check-label"
-                                                               for="categories">{{ \Illuminate\Support\Str::limit($vendor->slug,60) }}</label>
+                                                               for="categories">{{ str_limit($vendor->slug,60) }}</label>
                                                     </div>
                                                 </div>
                                             @endforeach
@@ -132,7 +132,7 @@
                         {{--alt="{{ $category->name }}">--}}
                         {{--</div>--}}
                         {{--<div class="tt-col-description">--}}
-                        {{--<div class="tt-title {{ request('service_category_id') == $category->id ? 'text-warning' : null }}">{{ \Illuminate\Support\Str::limit($category->name,'40') }}</div>--}}
+                        {{--<div class="tt-title {{ request('service_category_id') == $category->id ? 'text-warning' : null }}">{{ str_limit($category->name,'40') }}</div>--}}
                         {{--<div>{{ trans('general.services_count') }}--}}
                         {{--: {{ $category->services->count() }} </div>--}}
                         {{--</div>--}}

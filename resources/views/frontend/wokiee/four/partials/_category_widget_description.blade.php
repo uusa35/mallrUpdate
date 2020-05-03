@@ -2,14 +2,14 @@
     <div class="tt-row">
         <ul class="tt-add-info">
             <li>
-                <a href="{{ route('frontend.category.show',$element->id) }}">{{ \Illuminate\Support\Str::limit($element->name,60,'..') }}</a>
+                <a href="{{ route('frontend.category.show',$element->id) }}">{{ str_limit($element->name,60,'..') }}</a>
             </li>
         </ul>
         {{--@include('frontend.wokiee.four.partials._rating')--}}
     </div>
     @if($element->caption && !env('EVENTKM'))
         <h2 class="tt-title">
-            <a href="{{ route('frontend.category.show',$element->id) }}">{{ \Illuminate\Support\Str::limit($element->caption,35,'..') }}</a>
+            <a href="{{ route('frontend.category.show',$element->id) }}">{{ str_limit($element->caption,35,'..') }}</a>
         </h2>
     @endif
     {{--    @include('frontend.wokiee.four.partials._widget_price_and_color')--}}
