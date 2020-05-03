@@ -426,7 +426,7 @@
                                                         </span> --}}
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label for="form_control_1">{{ trans('general.image_chart') }}</label>
                                                         <input type="file" class="form-control tooltips"
@@ -434,11 +434,20 @@
                                                                data-original-title="{{ trans('message.image_chart') }}"
                                                                name="size_chart_image"
                                                                placeholder="{{ trans('general.image_chart') }}">
-                                                        {{-- <div class="help-block text-left">
-                                                                                                            W * H - Best fit 500 x 500 pixels
-                                                                                                        </div>   --}}
+                                                        <div class="help-block text-left">
+                                                            {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440']) }}
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                @if($element->image)
+                                                    <div class="col-md-3">
+                                                        <img class="img-responsive img-sm"
+                                                             src="{{ $element->imageThumbLink }}"
+                                                             alt="">
+                                                        <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'size_chart']) }}"><i
+                                                                    class="fa fa-fw fa-times"></i></a>
+                                                    </div>
+                                                @endif
 
                                                 <div class="col-md-6">
                                                     <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
