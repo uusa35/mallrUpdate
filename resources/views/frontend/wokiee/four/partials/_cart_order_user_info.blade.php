@@ -85,7 +85,7 @@
                                         @endif
                                     @endif
                                 @endif
-                                @if(session()->get('country')->is_local)
+                                @if(session()->get('country')->is_local && $settings->cash_on_delivery)
                                     <div class="col-6">
                                         <div class="col-lg-4">
                                             <div class="form-group">

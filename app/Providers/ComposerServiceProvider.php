@@ -95,6 +95,7 @@ class ComposerServiceProvider extends ServiceProvider
             'frontend.*.*.partials._search_side_bar',
             'frontend.*.*.partials._btns_home',
             'frontend.*.*.partials._modal_size_chart',
+            'frontend.*.*.partials._cart_order_user_info',
             'emails.order-complete',
             'backend.modules.order.show',
             'backend.layouts.app',
