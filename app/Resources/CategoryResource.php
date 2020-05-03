@@ -19,8 +19,8 @@ class CategoryResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => ucfirst(Str::limit($this->name,20,'..')),
-            'thumb' =>$this->imageThumbLink,
-            'large' =>$this->imageLargeLink,
+            'thumb' =>$this->getCurrentImageAttribute('image'),
+            'large' =>$this->getCurrentImageAttribute('image'),
             'has_children' => $this->children->count() > 0,
             'children' => CategoryLightResource::collection($this->whenLoaded('children')),
         ];

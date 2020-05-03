@@ -158,7 +158,21 @@
                                                         class="fa fa-fw fa-times"></i></a>
                                         </div>
                                     @endif
-                                    <div class="col-lg-5">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label sbold tooltips"
+                                                   data-container="body" data-placement="top"
+                                                   data-original-title="{{ trans('message.shipment_fuel_percentage') }}">{{ trans('general.shipment_fuel_percentage') }}</label></br>
+                                            <input id="shipment_fuel_percentage" type="text" class="form-control tooltips"
+                                                   data-container="body" data-placement="top"
+                                                   data-original-title="{{ trans('message.shipment_fuel_percentage') }}"
+                                                   name="shipment_fuel_percentage"
+                                                   value="{{ $element->shipment_fuel_percentage }}"
+                                                   placeholder="{{ trans('general.shipment_fuel_percentage') }}"
+                                                   maxlength="5" autofocus/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
                                         <div class="form-group form-md-line-input">
                                             <label for="form_control_1">{{ trans('general.gift_image') }}
                                                 <br>{{ trans('message.best_fit',['width' => '750 px', 'height' => ' 750 px']) }}
@@ -926,24 +940,25 @@
                                         @endif
                                     </div>
                                 </div>
+                                <div class="col-lg-12">
                                 @can('index', 'commercial')
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label class="control-label sbold tooltips"
-                                               data-container="body" data-placement="top"
-                                               data-original-title="{{ trans('message.show_commercials') }}">{{ trans('general.show_commercials') }}</label></br>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="show_commercials" id="optionsRadios3"
-                                                   {{ $element->show_commercials ? 'checked' : null  }}
-                                                   value="1">
-                                            {{ trans('general.yes') }}</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="show_commercials" id="optionsRadios4"
-                                                   {{ !$element->show_commercials ? 'checked' : null  }}
-                                                   value="0">
-                                            {{ trans('general.no') }}</label>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label sbold tooltips"
+                                                   data-container="body" data-placement="top"
+                                                   data-original-title="{{ trans('message.show_commercials') }}">{{ trans('general.show_commercials') }}</label></br>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="show_commercials" id="optionsRadios3"
+                                                       {{ $element->show_commercials ? 'checked' : null  }}
+                                                       value="1">
+                                                {{ trans('general.yes') }}</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="show_commercials" id="optionsRadios4"
+                                                       {{ !$element->show_commercials ? 'checked' : null  }}
+                                                       value="0">
+                                                {{ trans('general.no') }}</label>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="control-label sbold tooltips"
@@ -980,6 +995,25 @@
                                             {{ trans('general.no') }}</label>
                                     </div>
 
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label sbold tooltips"
+                                               data-container="body" data-placement="top"
+                                               data-original-title="{{ trans('message.shipment_fixed_rate') }}">{{ trans('general.shipment_fixed_rate') }}</label></br>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="shipment_fixed_rate" id="optionsRadios3"
+                                                   {{ $element->shipment_fixed_rate ? 'checked' : null  }}
+                                                   value="1">
+                                            {{ trans('general.yes') }}</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="shipment_fixed_rate" id="optionsRadios4"
+                                                   {{ !$element->shipment_fixed_rate ? 'checked' : null  }}
+                                                   value="0">
+                                            {{ trans('general.no') }}</label>
+                                    </div>
+
+                                </div>
                                 </div>
                             </div>
                         </div>

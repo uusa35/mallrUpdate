@@ -69,7 +69,7 @@
                                     <img class="img-xs" src="{{ $element->imageThumbLink }}" alt="">
                                 </td>
                                 <td> {{$element->price }} </td>
-                                <td> {{ $element->user ? \Illuminate\Support\Str::limit($element->user->slug,20) : 'N/A'}} </td>
+                                <td> {{ $element->user ? str_limit($element->user->slug,20) : 'N/A'}} </td>
                                 <td>
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>

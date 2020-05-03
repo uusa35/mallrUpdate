@@ -55,7 +55,8 @@
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.calling_code') }}
                                                     *</label>
-                                                <input type="number" id="calling_code" name="calling_code" maxlength="3" max="999"
+                                                <input type="number" id="calling_code" name="calling_code" maxlength="3"
+                                                       max="999"
                                                        class="form-control" value="{{ old('calling_code') }}"
                                                        placeholder="{{ trans('general.calling_code') }}" required>
                                                 <span class="help-block"> ex. 00965 </span>
@@ -73,15 +74,30 @@
                                             </div>
 
                                         </div>
+                                        {{--                                        <div class="col-md-4">--}}
+                                        {{--                                            <div class="form-group">--}}
+                                        {{--                                                <label class="control-label">{{ trans('general.shipment_packages') }}--}}
+                                        {{--                                                    *</label>--}}
+                                        {{--                                                <select name="packages[]" multiple="multiple" class="multi-select tooltips" data-container="body" data-placement="top" data-original-title="{{ trans('message.shipment_package') }}" id="my_multi_select1" required>--}}
+                                        {{--                                                    <option>{{ trans('general.choose_shipment_package') }}</option>--}}
+                                        {{--                                                    @foreach($shipmentPackages as $package)--}}
+                                        {{--                                                        <option value="{{ $package->id }}">{{ $package->slug }}</option>--}}
+                                        {{--                                                        @endforeach--}}
+                                        {{--                                                </select>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div>--}}
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.shipment_packages') }}
                                                     *</label>
-                                                <select name="packages[]" multiple="multiple" class="multi-select tooltips" data-container="body" data-placement="top" data-original-title="{{ trans('message.shipment_package') }}" id="my_multi_select1" required>
+                                                <select name="packages[]" class="form-control  tooltips" data-container="body"
+                                                        data-placement="top"
+                                                        data-original-title="{{ trans('message.shipment_package') }}"
+                                                        required>
                                                     <option>{{ trans('general.choose_shipment_package') }}</option>
                                                     @foreach($shipmentPackages as $package)
                                                         <option value="{{ $package->id }}">{{ $package->slug }}</option>
-                                                        @endforeach
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>

@@ -90,6 +90,18 @@ function getDeliveryServiceCost()
     return $settings->delivery_service_cost;
 }
 
+function getCurrentCountry()
+{
+    if (!session()->has('country')) {
+        $country = auth()->guest() ? Country::where(['is_local' => true])->first() : Country::whereId(auth()->user()->country_id)->first();
+        session()->put('country', $country);
+        return $country;
+
+    }
+    if (request()->header('country')) {
+        return Country::where('country_code', request()->header('country'))->first();
+    }
+}
 
 function getCurrentCurrency()
 {
@@ -105,6 +117,7 @@ function getCurrentCurrency()
     session()->put('currency', $currentCurrency);
     return $currentCurrency;
 }
+
 
 function getConvertedPrice($price)
 {
@@ -190,6 +203,9 @@ function getClientCountry()
     if (!session()->has('country')) {
         $country = auth()->guest() ? Country::where(['is_local' => true])->first() : Country::whereId(auth()->user()->country_id)->first();
         session()->put('country', $country);
+    }
+    if (request()->header('country')) {
+        return Currency::where('country_code', request()->header('country'))->first();
     }
     // i want it to assign the country as null in case it's not included in the DB
     return session()->get('country');

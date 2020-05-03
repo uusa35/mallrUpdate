@@ -18,7 +18,7 @@ class UserLightResource extends JsonResource
         return [
             'id' => $this->id,
             'slug' => ucfirst(Str::limit($this->slug, 30, '')),
-            'thumb' => $this->image ? $this->imageThumbLink : null,
+            'thumb' => $this->getCurrentImageAttribute('image'),
             'views' => $this->views,
             'rating' => $this->rating,
             'whatsapp' => $this->whatsapp ? $this->whatsapp : $this->mobile,

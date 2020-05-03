@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCashOnDeliveryToSettingsTable extends Migration
+class AddShipmentFixedRateToSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddCashOnDeliveryToSettingsTable extends Migration
     public function up()
     {
         Schema::table('settings', function (Blueprint $table) {
-            $table->boolean('cash_on_delivery')->default(0);
+            $table->boolean('shipment_fixed_rate')->default(1);
+            $table->decimal('shipment_fuel_percentage', 4, 2)->unsigned()->default(0.01);
         });
     }
 
@@ -26,7 +27,8 @@ class AddCashOnDeliveryToSettingsTable extends Migration
     public function down()
     {
         Schema::table('settings', function (Blueprint $table) {
-            $table->dropColumn('cash_on_delivery');
+            $table->dropColumn('shipment_fixed_rate');
+            $table->dropColumn('shipment_fuel_percentage');
         });
     }
 }

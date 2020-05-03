@@ -110,7 +110,7 @@
                         </h4>
                         <div class="tt-collapse-content">
                             <p>
-                                {{ trans('message.footer_about_us') }}
+                                {!! trans('message.footer_about_us')  !!}
                             </p>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                                                     href="mailto:{{ $settings->email }}">{{ $settings->email }}</a></p>
                                         <p>
                                             @endif
-                                            <span>{{ trans('general.duty_time') }}:</span> {{ trans('message.duty_time_message') }}
+                                            <span>{{ trans('general.duty_time') }}:</span> {!! trans('message.duty_time_message')  !!}
                                         </p>
                                 </address>
                             </div>
@@ -172,7 +172,7 @@
                     <div class="tt-col-item">
                         <!-- copyright -->
                         <div class="tt-box-copyright">
-                            &copy; {{ trans("message.copy_right") }}
+                            &copy; {!! trans("message.copy_right")  !!}
                         </div>
                         <!-- /copyright -->
                     </div>

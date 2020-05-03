@@ -47,7 +47,7 @@
                                     <img class="img-xs" src="{{ $element->imageThumbLink }}" alt="">
                                 </td>
                                 <td> {{$element->price }} </td>
-                                <td> {{ $element->user ? \Illuminate\Support\Str::limit($element->user->slug,20) : null}} </td>
+                                <td> {{ $element->user ? str_limit($element->user->slug,20) : null}} </td>
                                 <td>
                                     @if($element->properties->isNotEmpty())
                                         <ul>

@@ -5,6 +5,7 @@ namespace App\Models;
 
 class Setting extends PrimaryModel
 {
+    use ModelHelpers;
     protected $localeStrings = ['address', 'country', 'company', 'description', 'shipment_notes', 'policy', 'terms'];
     protected $guarded = [''];
     protected $casts = [

@@ -72,7 +72,7 @@ class CountryController extends Controller
      */
     public function edit($id)
     {
-        $element = Country::whereId($id)->first();
+        $element = Country::whereId($id)->with('shipment_packages')->first();
         $shipmentPackages = ShipmentPackage::active()->get();
         return view('backend.modules.country.edit', compact('element', 'shipmentPackages'));
     }

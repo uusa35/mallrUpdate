@@ -3,10 +3,10 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\Country;
 use Illuminate\Foundation\Application;
-use App\Models\Currency;
 
-class ApiCurrency
+class ApiCountry
 {
     public $app;
 
@@ -30,8 +30,8 @@ class ApiCurrency
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        $currency = !$request->hasHeader('currency') ? Currency::where('currency_symbol_en', 'KWD')->first()->currency_symbol_en : $request->header('currency');
-        $response->headers->set('currency', $currency);
+        $country = !$request->hasHeader('currency') ? Country::where('is_local', true)->first()->name : $request->header('country');
+        $response->headers->set('country', $country);
         return $response;
     }
 }

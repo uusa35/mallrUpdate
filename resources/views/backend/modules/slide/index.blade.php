@@ -40,7 +40,7 @@
                             <tr>
                                 <td>{{ $element->id }}</td>
                                 <td>
-                                    {{ \Illuminate\Support\Str::limit($element->url,20,'..') }}
+                                    {{ str_limit($element->url,20,'..') }}
                                 </td>
                                 <td>{{ $element->order }}</td>
                                 <td>

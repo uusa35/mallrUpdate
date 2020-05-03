@@ -44,8 +44,8 @@
                             <tr>
                                 <td>{{ $element->id }}</td>
                                 <td>{{ $element->name }}</td>
-                                <td>{{ \Illuminate\Support\Str::limit($element->slug_ar,25) }}</td>
-                                <td>{{ \Illuminate\Support\Str::limit($element->slug_en,25) }}</td>
+                                <td>{{ str_limit($element->slug_ar,25) }}</td>
+                                <td>{{ str_limit($element->slug_en,25) }}</td>
                                 <td>
                                     <img class="img-xs" src="{{ $element->imageThumbLink }}" alt="">
                                 </td>

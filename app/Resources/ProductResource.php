@@ -5,7 +5,6 @@ namespace App\Http\Resources;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
-use \Illuminate\Support\Str;
 
 class ProductResource extends JsonResource
 {
@@ -20,9 +19,7 @@ class ProductResource extends JsonResource
         return [
             'id' => $this->id,
             'sku' => $this->sku,
-            'name' => ucfirst(Str::limit($this->name, 30,'')),
-//            'name_ar' => Str::limit($this->name_ar, 30,''),
-//            'name_en' => Str::limit($this->name_en, 30,''),
+            'name' => ucfirst(str_limit($this->name, 30,'')),
             'on_new' => $this->on_new,
             'home_delivery_availability' => $this->home_delivery_availability,
             'shipment_availability' => $this->shipment_availability,
@@ -32,12 +29,12 @@ class ProductResource extends JsonResource
             'on_sale' => $this->on_sale,
             'is_available' => $this->is_available,
             'price' => (float) round($this->price, 2),
-            'finalPrice' => (float) round($this->finalPrice, 2),
+            'finalPrice' => $this->finalPrice,
             'convertedFinalPrice' => $this->convertedFinalPrice,
             'weight' => $this->weight,
             'sale_price' => (double)$this->sale_price,
-            'size_chart_image' => asset(env('THUMBNAIL').$this->size_chart_image),
-            'qr' => asset(env('THUMBNAIL').$this->qr),
+            'size_chart_image' => $this->getCurrentImageAttribute('size_chart_image'),
+            'qr' => $this->getCurrentImageAttribute('qr', 'large'),
             'description' => $this->description,
             'notes' => $this->notes,
             'keywords' => $this->keywords,
