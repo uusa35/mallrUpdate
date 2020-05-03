@@ -89,6 +89,7 @@
                                         {{--                                                </select>--}}
                                         {{--                                            </div>--}}
                                         {{--                                        </div>--}}
+                                        {{ dd($element->shipment_packages) }}
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.shipment_packages') }}
