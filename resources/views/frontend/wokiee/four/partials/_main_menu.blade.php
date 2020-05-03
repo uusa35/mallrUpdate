@@ -1,22 +1,10 @@
 <div class="tt-desktop-header headerunderline">
     <div class="container">
-        <div class="tt-header-holder">
-                        <div class="tt-col-obj tt-obj-logo">
-{{--            <div class="tt-obj-logo obj-aligment-center">--}}
-                <!-- logo -->
-                <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
-                    <img class="text-center" src="{{ $settings->logoThumb }}"
-                         alt="{{ $settings->company }}"></a>
-                <!-- /logo -->
-            </div>
-            <div class="tt-col-obj tt-obj-search-type2">
-                <div class="tt-search-type2">
-                    @include('frontend.wokiee.four.partials._search_form')
-                </div>
-            </div>
-
-        </div>
-
+        @if(env('MALLR'))
+            @include('frontend.wokiee.four.partials.header_logo_section_align')
+        @else
+            @include('frontend.wokiee.four.partials.header_logo_section_center')
+        @endif
     </div>
 
 
