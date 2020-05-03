@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="442" column="74" lean-forward="true" selection-start-line="442" selection-start-column="74" selection-end-line="442" selection-end-column="74" />
+            <state relative-caret-position="268">
+              <caret line="311" column="62" lean-forward="true" selection-start-line="311" selection-start-column="62" selection-end-line="311" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -80,8 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon_</find>
-      <find>bg</find>
       <find>thumb</find>
       <find>trans('mes</find>
       <find>cash_on</find>
@@ -110,6 +107,8 @@
       <find>notes</find>
       <find>size_ch</find>
       <find>image</find>
+      <find>size_cha</find>
+      <find>qr</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -491,12 +490,12 @@
       <workItem from="1588481774524" duration="1288000" />
       <workItem from="1588483532741" duration="14647000" />
       <workItem from="1588527752585" duration="289000" />
-      <workItem from="1588537157202" duration="172000" />
+      <workItem from="1588537157202" duration="255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139044000" />
+    <option name="totallyTimeSpent" value="139127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -898,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="442" column="74" lean-forward="true" selection-start-line="442" selection-start-column="74" selection-end-line="442" selection-end-column="74" />
+        <state relative-caret-position="268">
+          <caret line="311" column="62" lean-forward="true" selection-start-line="311" selection-start-column="62" selection-end-line="311" selection-end-column="62" />
         </state>
       </provider>
     </entry>

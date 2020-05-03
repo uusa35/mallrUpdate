@@ -311,7 +311,7 @@
                                                                         class="fa fa-fw fa-times"></i></a>
                                                         </div>
                                                     @endif
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="file"
                                                                        class="control-label">{{ trans('general.qr') }}
@@ -426,7 +426,7 @@
                                                         </span> --}}
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="form_control_1">{{ trans('general.image_chart') }}</label>
                                                         <input type="file" class="form-control tooltips"
@@ -440,7 +440,7 @@
                                                     </div>
                                                 </div>
                                                 @if($element->image)
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-2">
                                                         <img class="img-responsive img-sm"
                                                              src="{{ $element->imageThumbLink }}"
                                                              alt="">
