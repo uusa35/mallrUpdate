@@ -110,7 +110,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->is_available)
+            @if($element->is_available && !env('DAILY'))
                 <tr>
                     <td class="td-fixed-element">
                         <span><i class="fa fa-fw fa-lg icon-e-74"></i> {{ trans('general.available_items') }}:</span>
@@ -174,7 +174,7 @@
                         </td>
                     </tr>
                 @endif
-                @if($element->product_attributes->pluck('size')->isNotEmpty())
+                @if($element->product_attributes->pluck('size')->isNotEmpty() && !env('DAILY'))
                     <tr>
                         <td class="td-fixed-element"><i
                                     class="icon-e-69 fa fa-fw fa-lg"></i>{{ trans('general.sizes') }} :
@@ -188,7 +188,7 @@
                 @endif
             @else
                 @if(!$element->has_attributes)
-                    @if(!is_null($element->size))
+                    @if(!is_null($element->size) && !env('DAILY'))
                         <tr>
                             <td class="td-fixed-element"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
                                         class="ml-1"></span><span>{{ trans('general.size') }} : </span>
