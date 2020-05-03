@@ -11,9 +11,9 @@
    data-qty="{{ $element->availableQty }}"
    data-price="{{ $element->convertedFinalPrice }}"
    data-currency-name="{{ $currency->symbol }}"
-   @if($element->has_attributes)
-   data-colors="@foreach($element->product_attributes->pluck('colors')->unique() as $col) {!! $col->name !!}, @endforeach"
-   data-sizes="@foreach($element->product_attributes->pluck('size')->unique() as $size) {!! $size->name !!}, @endforeach"
+   @if($element->has_attributes && $element->product_attributes->filter()->isNotEmpty())
+   data-colors="@foreach($element->product_attributes->pluck('colors')->unique()->filter() as $col) {!! $col->name !!}, @endforeach"
+   data-sizes="@foreach($element->product_attributes->pluck('size')->unique()->filter() as $size) {!! $size->name !!}, @endforeach"
    @else
    @if($element->color)
    data-colors="{!! $element->color->name !!}"
@@ -60,9 +60,9 @@
                                         </span>
                                             </a>
                                         </div>
-                                        @if($element->has_attributes && $element->sizes->isNotEmpty())
-                                            @include('frontend.wokiee.four.partials._page_show_sizes',['sizes' => $element->product_attributes->pluck('size')->unique(),'id' => $element->id])
-                                            @include('frontend.wokiee.four.partials._page_show_colors',['colors' => $element->product_attributs->pluck('color')->unique(),'hidden' => true, 'id' => $element->id])
+                                        @if($element->has_attributes && $element->product_attributes->pluck('size')->filter()->isNotEmpty())
+                                            @include('frontend.wokiee.four.partials._page_show_sizes',['sizes' => $element->product_attributes->pluck('size')->unique()->filter(),'id' => $element->id])
+                                            @include('frontend.wokiee.four.partials._page_show_colors',['colors' => $element->product_attributes->pluck('color')->unique()->filter(),'hidden' => true, 'id' => $element->id])
                                         @endif
                                     </div>
                                     @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')

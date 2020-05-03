@@ -7,33 +7,19 @@ use Illuminate\Foundation\Application;
 
 class ApiLocalization
 {
-    public $app;
-
-    /**
-     * Localization constructor.
-     *
-     * @param \Illuminate\Foundation\Application $app
-     */
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-    }
-
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
     {
-        $this->app->setLocale($request->header('lang') ? $request->header('lang') : app()->getLocale());
-
         $response = $next($request);
-
-        $response->headers->set('lang', $request->header('lang'));
-
+        $lang = $request->hasHeader('lang') ? $request->header('lang') : app()->getLocale();
+        app()->setLocale($lang);
+        $response->headers->set('lang', $lang);
         return $response;
     }
 }

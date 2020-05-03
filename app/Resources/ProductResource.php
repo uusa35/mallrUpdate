@@ -32,7 +32,7 @@ class ProductResource extends JsonResource
             'on_sale' => $this->on_sale,
             'is_available' => $this->is_available,
             'price' => (float) round($this->price, 2),
-            'finalPrice' => (float) round($this->finalPrice, 2),
+            'finalPrice' => $this->finalPrice,
             'convertedFinalPrice' => $this->convertedFinalPrice,
             'weight' => $this->weight,
             'sale_price' => (double)$this->sale_price,
