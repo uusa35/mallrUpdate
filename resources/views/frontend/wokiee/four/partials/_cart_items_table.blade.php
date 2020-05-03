@@ -33,6 +33,10 @@
                                 @if($element->options->color)
                                     <li>{{ trans('general.color') }}: {{ $element->options->color->name }}</li>
                                 @endif
+                                @if($element->options->element->weight)
+                                    <li>{{ trans('general.weight') }}
+                                        : {{ $element->options->element->weight}} {{ trans('general.kg') }}</li>
+                                @endif
                                 @if($element->options->country_destination && app()->environment('local'))
                                     <li>{{ trans('general.shipment_destination') }}
                                         : {{ $element->options->country_destination->slug }} ---
@@ -52,11 +56,11 @@
                                     <div class="tt-price">
                                         {{ trans('general.final_price') }}  {{ $element->options->element->convertedFinalPrice }} {{ $currency->symbol }}
                                     </div>
-{{--                                    @if($element->options->element->shipment_package)--}}
-{{--                                        <div class="tt-price">--}}
-{{--                                            {{ trans('general.package_fee_price') }}  {{ getConvertedPrice($element->options->element->packageFeePrice) }} {{ $currency->symbol }}--}}
-{{--                                        </div>--}}
-{{--                                    @endif--}}
+                                    {{--                                    @if($element->options->element->shipment_package)--}}
+                                    {{--                                        <div class="tt-price">--}}
+                                    {{--                                            {{ trans('general.package_fee_price') }}  {{ getConvertedPrice($element->options->element->packageFeePrice) }} {{ $currency->symbol }}--}}
+                                    {{--                                        </div>--}}
+                                    {{--                                    @endif--}}
                                 </li>
                                 @if($element->options->type === 'product')
                                     <li>
