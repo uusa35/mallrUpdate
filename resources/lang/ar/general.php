@@ -1062,4 +1062,7 @@ return array (
   'paid_orders' => 'الطلبات المدفوعة',
   'completed_orders' => 'طلبات مدفوعة مكتملة',
   'is_paid' => 'حالة الدفع',
+  'till' => 'حتى',
+  'total_paid_orders' => 'الطلبات المدفوعة بنجاح',
+  'reports' => 'التقارير',
 );

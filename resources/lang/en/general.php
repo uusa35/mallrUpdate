@@ -855,4 +855,7 @@ return array (
   'is_paid' => 'is Paid',
   'paid_orders' => 'Paid Orders',
   'completed_orders' => 'Paid & Complete Orders',
+  'till' => 'till',
+  'total_paid_orders' => 'Total Paid Orders',
+  'reports' => 'Reports',
 );
