@@ -89,7 +89,6 @@
                                         {{--                                                </select>--}}
                                         {{--                                            </div>--}}
                                         {{--                                        </div>--}}
-                                        {{ dd($element->shipment_packages) }}
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="control-label">{{ trans('general.shipment_packages') }}
@@ -101,7 +100,7 @@
                                                         required>
                                                     <option>{{ trans('general.choose_shipment_package') }}</option>
                                                     @foreach($shipmentPackages as $package)
-                                                        <option value="{{ $package->id }}" {{ $element->shipment_packages()->isNotEmpty() && $element->shipment_packages()->first()->id === $package->id ? 'selected' : null }}>{{ $package->slug }}</option>
+                                                        <option value="{{ $package->id }}" {{ $element->shipment_packages->isNotEmpty() && $element->shipment_packages->first()->id === $package->id ? 'selected' : null }}>{{ $package->slug }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
