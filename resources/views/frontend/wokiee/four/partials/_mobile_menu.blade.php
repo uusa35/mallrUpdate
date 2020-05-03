@@ -55,7 +55,7 @@
                             </ul>
                         @endif
                     @endforeach
-                @elseif(env('BITS'))
+                @else
                     @foreach($categories->where('is_parent', true) as $cat)
                         <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                         @if($cat->children->isNotEmpty())
