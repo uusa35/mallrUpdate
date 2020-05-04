@@ -921,13 +921,13 @@
                                         accordingly.">
                                                             <input type="radio" data-toggle="tooltip"
                                                                    data-placement="bottom" title="hello"
-                                                                   name="check_stock" id="optionsRadios5" value="1">
+                                                                   name="check_stock" id="optionsRadios5" value="1" checked>
                                                             {{ trans('general.yes') }}</label>
                                                         <label class="radio-inline" data-toggle="tooltip"
                                                                data-placement="bottom" data-html="true"
                                                                title=" if Not Product will be added to cart without checking the current quantity.">
                                                             <input type="radio" name="check_stock" id="optionsRadios6"
-                                                                   checked value="0">
+                                                                    value="0">
                                                             in
                                                             {{ trans('general.no') }}</label>
 
