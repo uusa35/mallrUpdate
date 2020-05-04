@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/sidebar-toggle-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/sidebar-toggle-light.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/attribute/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="666">
-              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -47,16 +45,57 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="654">
-              <caret line="106" column="66" lean-forward="true" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
+              <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="929" column="67" selection-start-line="929" selection-start-column="67" selection-end-line="929" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="463">
               <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/themes/mobile/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/plugins/hr/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/PageLightResource.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/PageController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -72,8 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>convertedFinalPrice</find>
-      <find>currentCou</find>
       <find>getCurrentCur</find>
       <find>use \Illuminate\Support\Str</find>
       <find>use \Illuminate\Support\Str;</find>
@@ -102,6 +139,8 @@
       <find>.tt-title, .tt-collapse-title, .tt-block-title</find>
       <find>&quot;new</find>
       <find>&quot;new&quot;</find>
+      <find>check_</find>
+      <find>checked</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -114,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/ProductExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Services/Helpers.php" />
         <option value="$PROJECT_DIR$/app/Models/SellingModelHelpers.php" />
         <option value="$PROJECT_DIR$/app/Resources/ProductLightResource.php" />
@@ -165,6 +203,7 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_tags.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
       </list>
     </option>
   </component>
@@ -330,28 +369,47 @@
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="tinymce" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="tinymce" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="skins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="tinymce" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="silver" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="skins" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallr" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="skins" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="oxide" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallr" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="skins" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="oxide" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,15 +544,16 @@
       <workItem from="1588483532741" duration="14647000" />
       <workItem from="1588527752585" duration="289000" />
       <workItem from="1588537157202" duration="1824000" />
-      <workItem from="1588592103406" duration="1265000" />
+      <workItem from="1588592103406" duration="1720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141961000" />
+    <option name="totallyTimeSpent" value="142416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.21618743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -522,34 +581,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_14_145758_add_gift_fees_to_settings_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_01_175252_create_settings_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_26_104202_create_sessions_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_15_213342_change_price_in_classifieds_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_19_052612_add_cash_on_delivery_to_settings_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -846,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8118">
-          <caret line="451" column="126" selection-start-line="451" selection-start-column="126" selection-end-line="451" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -870,14 +894,14 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/attribute/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
-          <caret line="106" column="66" lean-forward="true" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
+          <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -885,6 +909,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/themes/mobile/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/plugins/hr/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/PageLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="929" column="67" selection-start-line="929" selection-start-column="67" selection-end-line="929" selection-end-column="67" />
         </state>
       </provider>
     </entry>
