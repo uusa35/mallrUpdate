@@ -932,7 +932,6 @@
                                                             {{ trans('general.no') }}</label>
 
                                                     </div>
-
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
