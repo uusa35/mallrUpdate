@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 return array (
   'date' => 'التاريخ',
   'order_number' => 'رقم الطلب',
@@ -1066,8 +1065,6 @@ return array (
   'till' => 'حتى',
   'total_paid_orders' => 'الطلبات المدفوعة بنجاح',
   'reports' => 'التقارير',
-=======
-return array(
     'mail_sent' => 'تحقق من بريدك الالكتروني',
     'size' => 'القياس',
     'price' => 'السعر',
@@ -2126,5 +2123,4 @@ return array(
     "cancelled" => "ألغاء",
     "shipment_fixed_rate" => " نظام تكلفة الشحن الثبات",
     "shipment_fuel_percentage" => "نسبة الوقود (تطبق فقط في حالة تطبيق تكلفة الشحن المتغيرة)"
->>>>>>> b1c82e680c9f3dd73f1e0c8062b597956632a9c6
 );

@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 return array (
   'mail_sent' => 'Check your email address',
   'size' => 'Size',
@@ -859,8 +858,6 @@ return array (
   'till' => 'till',
   'total_paid_orders' => 'Total Paid Orders',
   'reports' => 'Reports',
-=======
-return array(
     'mail_sent' => 'Check your email address',
     'size' => 'Size',
     'price' => 'Price',
@@ -1956,5 +1953,4 @@ return array(
     "viewers" => "Viewers",
     "shipment_fixed_rate" => "Shipment Fixed Rate",
     "shipment_fuel_percentage" => "Shipment Fuel Percentage (applied only when shipment fixed rate is false)"
->>>>>>> b1c82e680c9f3dd73f1e0c8062b597956632a9c6
 );

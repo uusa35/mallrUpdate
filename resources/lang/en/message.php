@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 return array (
   'copy_right' => 'All Rights Reserved',
   'admin_product_message' => 'admin_product_message_ar',
@@ -194,8 +193,6 @@ return array (
   'index_color_or_height' => 'Colors / heights this feature can be treated as a product height or color either of both. ',
   'order_is_complete_we_will_contact_u_soon' => 'Order is complete. we will contact you asap.',
   'order_cash_on_delivery' => 'Please Kindly Note that Cash On Delivery shall not take any effect outside Kuwait',
-=======
-return array(
     'copy_right' => 'All rights reserved. Lamset 7arayer',
     'admin_product_message' => 'admin_product_message',
     'create_product' => 'create_product',
@@ -469,5 +466,4 @@ return array(
     "return_policy" => "Return Policy depends on destination. shall update this later.",
     "shipment_fixed_rate" => "When Shipment Fixed rate is true, then shipment charge shall be fixed on each item ordered. rate can be modified from country Module."
 
->>>>>>> b1c82e680c9f3dd73f1e0c8062b597956632a9c6
 );
