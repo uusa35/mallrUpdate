@@ -122,7 +122,7 @@
 
     .tt-title, .tt-collapse-title, .tt-block-title {
         color: {{ $settings->header_one_theme_color }}        !important;
-        border-color: {{ $settings->header_one_theme_color }}        !important;
+{{--        border-color: {{ $settings->header_one_theme_color }}        !important;--}}
     }
 
     @media (max-width: 1024px) {
