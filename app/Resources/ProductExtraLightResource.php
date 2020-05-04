@@ -25,6 +25,7 @@ class ProductExtraLightResource extends JsonResource
             'convertedFinalPrice' => $this->convertedFinalPrice,
             'thumb' => $this->imageThumbLink,
             'isReallyHot' => $this->isReallyHot,
+            'hasStock' => $this->hasStock,
         ];
     }
 }
