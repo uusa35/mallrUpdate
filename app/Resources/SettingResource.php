@@ -48,6 +48,7 @@ class SettingResource extends JsonResource
             'gift_image' => $this->getCurrentImageAttribute('gift_image'),
             'shipment_notes' => $this->shipment_notes,
             'cash_on_delivery' => $this->cash_on_delivery,
+            'payment_method' => $this->payment_method,
             'size_chart' => $this->getCurrentImageAttribute('size_chart', 'large'),
             'colors' => [
                 'main_theme_color' => $this->main_theme_color,
