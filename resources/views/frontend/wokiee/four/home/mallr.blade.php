@@ -19,9 +19,9 @@
         @include('frontend.wokiee.four.partials._collection_slider_with_cover',['title' => trans('general.our_selection_from_collections'), 'elements' => $bestSaleCollections])
         @if(isset($designers) && $designers->isNotEmpty())
             @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.our_personal_shoppers'), 'elements' => $designers])
-            @if(isset($companies) && $companies->isNotEmpty())
-                @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
-            @endif
+        @endif
+        @if(isset($companies) && $companies->isNotEmpty())
+            @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
         @endif
         @if(isset($newProducts) && $newProducts->isNotEmpty())
             @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
