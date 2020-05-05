@@ -2,13 +2,17 @@
 
 @section('body')
     @if(env('BITS'))
-        @include('frontend.wokiee.four.partials.slider')
+        @if($sliders->isNotEmpty())
+            @include('frontend.wokiee.four.partials.slider')
+        @endif
         @if(isset($newProducts))
             @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
         @endif
 
     @elseif(env('MALLR'))
-        @include('frontend.wokiee.four.partials.slider')
+        @if($sliders->isNotEmpty())
+            @include('frontend.wokiee.four.partials.slider')
+        @endif
         @include('frontend.wokiee.four.partials._all_brands')
         {{--                        @include('frontend.wokiee.four.partials._products_metro_collection',['element' => $bestSaleCollections->first(), 'title' => trans('general.our_selection_from_collections')])--}}
         {{--            @include('frontend.wokiee.four.partials._products_slider_collections',['elements' => $bestSaleCollections, 'title' => trans('general.our_selection_from_collections'), 'items' => 2])--}}
