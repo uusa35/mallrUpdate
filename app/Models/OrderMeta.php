@@ -71,9 +71,26 @@ class OrderMeta extends PrimaryModel
 
     public function scopeBestSaleCollections($q)
     {
-        return $q->with(['collection.user' => function ($q) {
-            $q->onHome()->active()->with(['products' => function ($q) {
+//        return $q->whereHas('collection' ,function ($q) {
+//            return $q->active()->with(['user' => function ($q) {
+//                return $q->active()->onHome()->whereHas('products' ,function ($q) {
+//                    return $q->active();
+//                });
+//            }]);
+//        },'>',0)
+//            ->select(DB::raw('COUNT(*) as occurrences, collection_id'))
+//            ->groupBy('collection_id')
+//            ->orderBy('occurrences', 'DESC')
+//            ->take(15)
+//            ->get()
+//            ->pluck('collection')->unique()->filter();
+        return $q->with(['collection' => function ($q) {
+            return $q->active()->whereHas('user', function ($q) {
                 return $q->active();
+            })->with(['user' => function ($q) {
+                return $q->active()->with(['products' => function ($q) {
+                    return $q->active()->available()->hasImage()->hasStock()->hasAtLeastOneCategory();
+                }]);
             }]);
         }])
             ->select(DB::raw('COUNT(*) as occurrences, collection_id'))

@@ -1,3 +1,4 @@
+@if(isset($sliders) && $sliders->isNotEmpty())
 <div class="container-indent nomargin">
     <div class="container-fluid">
         <div class="row">
@@ -54,3 +55,4 @@
         </div>
     </div>
 </div>
+@endif
