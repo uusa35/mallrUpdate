@@ -33,7 +33,7 @@
                                                 <input type="text" value="{{ $element->title_ar }}" class="form-control tooltips" data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.title_ar') }}"
                                                        name="title_ar" placeholder="{{ trans('general.title_ar') }}">
-                                                <label for="form_control_1"> {{ trans('general.title_ar') }} *</label>
+                                                <label for="form_control_1"> {{ trans('general.title_ar') }}</label>
                                                 <span class="help-block">please enter proper title</span>
                                             </div>
                                         </div>
@@ -42,7 +42,7 @@
                                                 <input type="text" value="{{ $element->title_en }}" class="form-control tooltips" data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.title_en') }}"
                                                        name="title_en" placeholder="{{ trans('general.title_en') }}">
-                                                <label for="form_control_1">{{ trans('general.title_en') }}*</label>
+                                                <label for="form_control_1">{{ trans('general.title_en') }}</label>
                                                 <span class="help-block">please enter proper title</span>
                                             </div>
                                         </div>
@@ -52,7 +52,7 @@
                                                        class="form-control tooltips" data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.caption_ar') }}" name="caption_ar"
                                                        placeholder="{{ trans('general.caption_ar') }}">
-                                                <label for="form_control_1"> {{ trans('general.caption_ar') }} *</label>
+                                                <label for="form_control_1"> {{ trans('general.caption_ar') }}</label>
                                                 <span class="help-block">please enter proper caption</span>
                                             </div>
                                         </div>
@@ -62,7 +62,7 @@
                                                        class="form-control tooltips" data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.caption-en') }}" name="caption_en"
                                                        placeholder="{{ trans('general.caption_en') }}">
-                                                <label for="form_control_1">{{ trans('general.caption_en') }}*</label>
+                                                <label for="form_control_1">{{ trans('general.caption_en') }}</label>
                                                 <span class="help-block">please enter proper caption</span>
                                             </div>
                                         </div>
@@ -72,7 +72,7 @@
                                                        data-original-title="{{ trans('message.sequence') }}"
                                                        name="order" value="{{ $element->order }}"
                                                        placeholder="{{ trans('general.sequence') }}">
-                                                <label for="form_control_1">{{ trans('general.sequence') }}*</label>
+                                                <label for="form_control_1">{{ trans('general.sequence') }}</label>
                                                 <span class="help-block">slide Order is a number</span>
                                             </div>
                                         </div>
@@ -113,7 +113,7 @@
                                                        data-original-title="{{ trans('message.url') }}" name="url"
                                                        value="{{ $element->url }}"
                                                        placeholder="{{ trans('general.url') }}">
-                                                <label for="form_control_1">{{ trans('general.url') }}*</label>
+                                                <label for="form_control_1">{{ trans('general.url') }}</label>
                                                 <span class="help-block">full link is only allowed ('http://google.com')</span>
                                             </div>
                                         </div>

@@ -570,25 +570,27 @@
                                             @endif
                                         @endcan
 
-                                        @if(!$areas->isEmpty())
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.areas') }}</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select4" name="areas[]">
-                                                        <option disabled value=""
-                                                                style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
-                                                        @if($element->areas->isEmpty())
-                                                            <option value="all"
-                                                                    style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
-                                                        @endif
-                                                        @foreach($areas as $area)
-                                                            <option value="{{ $area->id }}" {{ in_array($area->id,$element->areas->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                            >{{ $area->slug }}</option>
-                                                        @endforeach
-                                                    </select>
+                                        @can('index','area')
+                                            @if(!$areas->isEmpty())
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.areas') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select4" name="areas[]">
+                                                            <option disabled value=""
+                                                                    style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
+                                                            @if($element->areas->isEmpty())
+                                                                <option value="all"
+                                                                        style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
+                                                            @endif
+                                                            @foreach($areas as $area)
+                                                                <option value="{{ $area->id }}" {{ in_array($area->id,$element->areas->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                >{{ $area->slug }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            @endif
                                         @endif
                                         @if($timings->isNotEmpty())
                                             <div class="col-md-4" id="timings">

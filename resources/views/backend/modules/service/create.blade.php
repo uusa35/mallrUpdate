@@ -89,7 +89,8 @@
                                                 <input id="duration" type="number" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.duration') }}"
-                                                       name="duration" value="{{ old('duration') ? old('duration') : 1}}"
+                                                       name="duration"
+                                                       value="{{ old('duration') ? old('duration') : 1}}"
                                                        placeholder="{{ trans('general.duration') }}" autofocus>
                                                 @if ($errors->has('duration'))
                                                     <span class="help-block">
@@ -320,25 +321,25 @@
                                                 </div>
                                             @endif
                                         @endcan
-
-                                        @if(!$areas->isEmpty())
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.areas') }}</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select4" name="areas[]">
-                                                        <option disabled value=""
-                                                                style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
-                                                        <option value="all"
-                                                                style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
-                                                        @foreach($areas as $area)
-                                                            <option value="{{ $area->id }}">{{ $area->slug }}</option>
-                                                        @endforeach
-                                                    </select>
+                                        @can('index','area')
+                                            @if(!$areas->isEmpty())
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.areas') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select4" name="areas[]">
+                                                            <option disabled value=""
+                                                                    style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
+                                                            <option value="all"
+                                                                    style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
+                                                            @foreach($areas as $area)
+                                                                <option value="{{ $area->id }}">{{ $area->slug }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            @endif
                                         @endif
-
                                         @if($timings->isNotEmpty())
                                             <div class="col-md-4" id="timings">
                                                 <div class="form-group">

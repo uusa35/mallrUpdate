@@ -78,7 +78,7 @@
                                                     *</label>
                                                 <input type="file" class="form-control tooltips" data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.image') }}" name="image"
-                                                       placeholder="{{ trans('general.image') }}">
+                                                       placeholder="{{ trans('general.image') }}" required>
                                                 <div class="help-block text-left">
                                                     {{ trans('message.best_fit',['width' => '1900 px', 'height' => '1000 px']) }}
                                                 </div>
@@ -101,7 +101,7 @@
                                                  data-original-title="{{ trans('message.url') }}">
                                                 <input type="url" class="form-control" name="url"
                                                        placeholder="{{ trans('general.url') }}">
-                                                <label for="form_control_1">{{ trans('general.url') }}*</label>
+                                                <label for="form_control_1">{{ trans('general.url') }}</label>
                                                 <span class="help-block">full link is only allowed ('http://google.com')</span>
                                             </div>
                                         </div>

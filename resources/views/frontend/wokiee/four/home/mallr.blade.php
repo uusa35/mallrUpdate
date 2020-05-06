@@ -2,22 +2,26 @@
 
 @section('body')
     @if(env('BITS'))
-        @include('frontend.wokiee.four.partials.slider')
+        @if($sliders->isNotEmpty())
+            @include('frontend.wokiee.four.partials.slider')
+        @endif
         @if(isset($newProducts))
             @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
         @endif
 
     @elseif(env('MALLR'))
-        @include('frontend.wokiee.four.partials.slider')
+        @if($sliders->isNotEmpty())
+            @include('frontend.wokiee.four.partials.slider')
+        @endif
         @include('frontend.wokiee.four.partials._all_brands')
         {{--                        @include('frontend.wokiee.four.partials._products_metro_collection',['element' => $bestSaleCollections->first(), 'title' => trans('general.our_selection_from_collections')])--}}
         {{--            @include('frontend.wokiee.four.partials._products_slider_collections',['elements' => $bestSaleCollections, 'title' => trans('general.our_selection_from_collections'), 'items' => 2])--}}
         @include('frontend.wokiee.four.partials._collection_slider_with_cover',['title' => trans('general.our_selection_from_collections'), 'elements' => $bestSaleCollections])
         @if(isset($designers) && $designers->isNotEmpty())
             @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.our_personal_shoppers'), 'elements' => $designers])
-            @if(isset($companies) && $companies->isNotEmpty())
-                @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
-            @endif
+        @endif
+        @if(isset($companies) && $companies->isNotEmpty())
+            @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
         @endif
         @if(isset($newProducts) && $newProducts->isNotEmpty())
             @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
