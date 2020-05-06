@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
-              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -63,16 +63,25 @@
         <entry file="file://$PROJECT_DIR$/app/Models/ProductAttribute.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="143" column="33" lean-forward="true" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+            <state relative-caret-position="757">
+              <caret line="402" column="164" selection-start-line="402" selection-start-column="164" selection-end-line="402" selection-end-column="164" />
             </state>
           </provider>
         </entry>
@@ -107,7 +116,6 @@
       <find>.slider</find>
       <find>url</find>
       <find>required</find>
-      <find>image</find>
       <find>*</find>
       <find>user_id</find>
       <find>area_</find>
@@ -118,6 +126,7 @@
       <find>logo</find>
       <find>tt-logo tt-logo-alignment</find>
       <find>curren</find>
+      <find>image</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -133,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/ShipmentPackage.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/shipment_package/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/shipment_package/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ShipmentPackageController.php" />
@@ -184,6 +192,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -493,12 +502,12 @@
       <workItem from="1588688182756" duration="1223000" />
       <workItem from="1588756150592" duration="1262000" />
       <workItem from="1588763455787" duration="625000" />
-      <workItem from="1588770163697" duration="661000" />
+      <workItem from="1588770163697" duration="898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152539000" />
+    <option name="totallyTimeSpent" value="152776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -530,13 +539,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1054,21 +1056,28 @@
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/ProductAttribute.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductAttributeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="143" column="33" lean-forward="true" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+        <state relative-caret-position="514">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="402" column="164" selection-start-line="402" selection-start-column="164" selection-end-line="402" selection-end-column="164" />
         </state>
       </provider>
     </entry>

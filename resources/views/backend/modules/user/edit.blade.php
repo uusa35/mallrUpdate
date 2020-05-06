@@ -354,7 +354,8 @@
                                                             <img class="img-responsive img-sm"
                                                                  src="{{ $element->imageThumbLink }}"
                                                                  alt="">
-                                                            {{--                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'category', 'id' => $element->id ]) }}"><i class="fa fa-fw fa-times"></i></a>--}}
+                                                            {{--                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ]) }}"><i--}}
+                                                            {{--                                                                        class="fa fa-fw fa-times"></i></a>--}}
                                                         </div>
                                                     @endif
                                                     <div class="col-md-4">
@@ -368,7 +369,6 @@
                                                             <div class="help-block text-left">
                                                                 {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
                                                             </div>
-
                                                         </div>
                                                         @if($element->banner)
                                                             <div class="col-md-12">
@@ -376,6 +376,8 @@
                                                                      src="{{ asset(env('THUMBNAIL').$element->banner) }}"
                                                                      alt="">
                                                             </div>
+                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id , 'colName' => 'banner']) }}"><i
+                                                                        class="fa fa-fw fa-times"></i></a>
                                                         @endif
                                                     </div>
                                                     <div class="col-md-4">
@@ -398,6 +400,8 @@
                                                                      src="{{ asset(env('THUMBNAIL').$element->bg) }}"
                                                                      alt="">
                                                             </div>
+                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ,'colName' => 'bg']) }}"><i
+                                                                        class="fa fa-fw fa-times"></i></a>
                                                         @endif
                                                     </div>
 
