@@ -3,7 +3,7 @@
         <div class="row">
             <div class="tt-promo-fullwidth-02">
                 @if($element->BgLargeLink)
-                    <img src="{{ $element->BgLargeLink ? $element->BgLargeLink : 'http://placehold.it/500x150' }}" alt="{{ $element->description }}"
+                    <img src="{{ $element->bg ? $element->BgLargeLink : 'http://placehold.it/500x150' }}" alt="{{ $element->description }}"
                          style="max-height : 500px; opacity: 0.5">
                 @endif
                 <div class="tt-description">
