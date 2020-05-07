@@ -41,7 +41,7 @@ class ViewComposers
 
     public function getCurrency(View $view)
     {
-        $currency = session()->has('currency') ? session()->get('currency') : Currency::whereHas('country', function ($q)  {
+        $currency = session()->has('currency') ? session()->get('currency') : Currency::whereHas('country', function ($q) {
             return $q->where('is_local', true);
         })->first();
         return $view->with(compact('currency'));
@@ -61,7 +61,11 @@ class ViewComposers
 
     public function getCategories(View $view)
     {
-        $categories = Category::active()->onlyParent()->with('children.children')->get();
+        $categories = Category::active()->onlyParent()->with(['children' => function ($q) {
+            return $q->active()->with(['children' => function ($q) {
+                return $q->active();
+            }]);
+        }])->get();
         return $view->with(compact('categories'));
     }
 
@@ -80,7 +84,7 @@ class ViewComposers
     public function getCountries(View $view)
     {
         $countries = Country::active()->with(['governates' => function ($q) {
-          return $q->with('areas')->orderby('order','asc');
+            return $q->with('areas')->orderby('order', 'asc');
         }])->get();
         return $view->with(compact('countries'));
     }

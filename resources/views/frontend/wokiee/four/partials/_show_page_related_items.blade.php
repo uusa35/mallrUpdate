@@ -1,5 +1,5 @@
 @if($elements->isNotEmpty())
-    <div class="container-indent">
+    <div class="container-indent hidden-sm">
         <div class="container container-fluid-custom-mobile-padding">
             <div class="tt-block-title text-left">
                 <h3 class="tt-title-small">{{ trans('general.related_products') }}</h3>

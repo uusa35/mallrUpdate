@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="tt-promo-fullwidth-02">
-                @if($element->BgLargeLink)
+                @if($element->bg)
                     <img src="{{ $element->BgLargeLink }}" alt="{{ $element->description }}"
                          style="max-height : 500px; opacity: 0.5">
                 @endif
