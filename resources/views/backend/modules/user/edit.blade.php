@@ -907,7 +907,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('whatsapp') ? ' has-error' : '' }}">
                                                             <label for="whatsapp"
-                                                                   class="control-label">{{ trans('general.whatsapp') }}</label>
+                                                                   class="control-label">{{ trans('general.whatsapp') }} (ex.: 96565XX2XXX)</label>
                                                             <input id="whatsapp" type="text"
                                                                    class="form-control tooltips"
                                                                    data-container="body" data-placement="top"

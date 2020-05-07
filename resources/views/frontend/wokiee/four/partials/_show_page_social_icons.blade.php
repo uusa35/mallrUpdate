@@ -14,7 +14,7 @@
                 <li><a href="{{ $element->user->youtube }}"><i class="fa fa-fw fa-youtube"></i></a></li>
             @endif
             @if($element->user->whatsapp)
-                <li><a href="{{ $element->user->whatsapp }}"><i class="fa fa-fw fa-whatsapp"></i></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone={{ $element->user->whatsapp }}&text={{ $element->name }}"><i class="fa fa-fw fa-whatsapp"></i></a></li>
             @endif
         </ul>
     </div>
