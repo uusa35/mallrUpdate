@@ -20,6 +20,7 @@
 <meta name="address" content="{{ $settings->address }}">
 <meta name="name" content="{{ $settings->company }}">
 <meta name="lang" content="{{ app()->getLocale() }}">
+<input type="hidden" value="{{ app()->getLocale() }}" id="appLang" />
 <meta itemProp="name" content="{{ $settings->company }}"/>
 <meta itemProp="description" content="{{ trans('general.meta_description') }}"/>
 <meta itemProp="image" content="{{ $settings->logoThumb }}"/>

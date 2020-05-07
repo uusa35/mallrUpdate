@@ -3,8 +3,10 @@
 use App\Events\MyEvent;
 use App\Http\Resources\ColorLightResource;
 use App\Http\Resources\ProductAttributeLightResource;
+use App\Http\Resources\ProductLightResource;
 use App\Http\Resources\UserResource;
 use App\Models\Color;
+use App\Models\Product;
 use App\Models\ProductAttribute;
 use Illuminate\Http\Request;
 
@@ -94,7 +96,7 @@ Route::get('qty', function () {
 // getList of colors according to size for ProductShowScreen
 Route::get('color/list', function () {
     $colorIds = ProductAttribute::where(['product_id' => request()->product_id, 'size_id' => request()->size_id])->get()->pluck('color_id')->toArray();
-    $colors = Color::active()->whereIn('id', $colorIds)->orderBy('name_en','asc')->groupBy('id')->get();
+    $colors = Color::active()->whereIn('id', $colorIds)->orderBy('name_en', 'asc')->groupBy('id')->get();
     return response()->json(ColorLightResource::collection($colors), 200);
 });
 
@@ -106,4 +108,13 @@ Route::get('attribute/qty', function () {
 
 // homekey special routes
 Route::resource('homekey/category', 'Api\Homekey\CategoryController')->only(['index', 'show']);
+Route::post('attributes', function () {
+    $product = Product::whereId(request()->product_id)->with('product_attributes.color', 'product_attributes.size')->first();
+    if ($product->has_attributes && $product->product_attributes->isNotEmpty()) {
+        $attributes = ProductAttribute::where('product_id', request()->product_id)->with('color', 'size')->get();
+        return response()->json(ProductAttributeLightResource::collection($attributes), 200);
+    }
+    return response()->json(false, 200);
+});
+
 

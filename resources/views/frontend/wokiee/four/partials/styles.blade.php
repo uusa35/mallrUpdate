@@ -68,10 +68,12 @@
     .tt-back-to-top,
     .btn.btn-border,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
-    .tt-image-box .tt-btn-wishlist {
+    .tt-image-box .tt-btn-wishlist ,
+    ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img)
+    {
         color: {{ $settings->btn_text_theme_color }}        !important;
         background-color: {{ $settings->btn_bg_theme_color }}        !important;
-        border-color: {{ $settings->btn_text_theme_color }}    !important;
+        {{--border-color: {{ $settings->btn_text_theme_color }}    !important;--}}
     }
 
     .tt-shopcart-table-02 .tt-title a, .tt-product:not(.tt-view) .tt-description .tt-add-info li a,

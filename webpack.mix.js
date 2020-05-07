@@ -219,4 +219,5 @@ mix.copyDirectory('../wokiee-ecommerce-html/html/external/rs-plugin/font', 'publ
 mix.copyDirectory('../wokiee-ecommerce-html/html/external/rs-plugin/images', 'public/images');
 mix.copyDirectory('../wokiee-ecommerce-html/html/external/rs-plugin/assets', 'public/assets');
 mix.copyDirectory('../wokiee-ecommerce-html/html/external', 'public/external');
+mix.react('resources/assets/js/productAttribute/index.js', 'public/js/productAttribute.js').version();
 

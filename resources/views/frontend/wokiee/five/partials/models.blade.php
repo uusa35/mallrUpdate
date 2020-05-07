@@ -23,7 +23,7 @@
                             </div>
                             <div class="tt-modal-product">
                                 <div class="tt-img">
-                                    <img src="images/loader.svg" data-src="images/product/product-01.jpg" alt="">
+                                    <img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-01.jpg" alt="">
                                 </div>
                                 <h2 class="tt-title"><a href="product.html">Flared Shift Dress</a></h2>
                                 <div class="tt-qty">
@@ -65,10 +65,10 @@
                     <div class="row">
                         <div class="col-12 col-md-5 col-lg-6">
                             <div class="tt-mobile-product-slider arrow-location-center">
-                                <div><img src="images/loader.svg" data-src="images/product/product-01.jpg" alt=""></div>
-                                <div><img src="images/loader.svg" data-src="images/product/product-01-02.jpg" alt=""></div>
-                                <div><img src="images/loader.svg" data-src="images/product/product-01-03.jpg" alt=""></div>
-                                <div><img src="images/loader.svg" data-src="images/product/product-01-04.jpg" alt=""></div>
+                                <div><img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-01.jpg" alt=""></div>
+                                <div><img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-01-02.jpg" alt=""></div>
+                                <div><img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-01-03.jpg" alt=""></div>
+                                <div><img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-01-04.jpg" alt=""></div>
                                 <div>
                                     <div class="tt-video-block">
                                         <a href="#" class="link-video"></a>
@@ -133,31 +133,31 @@
                                         <ul class="tt-options-swatch options-large">
                                             <li><a class="options-color" href="#">
 												<span class="swatch-img">
-													<img src="images/loader.svg" data-src="images/custom/texture-img-01.jpg" alt="">
+													<img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/custom/texture-img-01.jpg" alt="">
 												</span>
                                                     <span class="swatch-label color-black"></span>
                                                 </a></li>
                                             <li class="active"><a class="options-color" href="#">
 												<span class="swatch-img">
-													<img src="images/loader.svg" data-src="images/custom/texture-img-02.jpg" alt="">
+													<img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/custom/texture-img-02.jpg" alt="">
 												</span>
                                                     <span class="swatch-label color-black"></span>
                                                 </a></li>
                                             <li><a class="options-color" href="#">
 												<span class="swatch-img">
-													<img src="images/loader.svg" data-src="images/custom/texture-img-03.jpg" alt="">
+													<img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/custom/texture-img-03.jpg" alt="">
 												</span>
                                                     <span class="swatch-label color-black"></span>
                                                 </a></li>
                                             <li><a class="options-color" href="#">
 												<span class="swatch-img">
-													<img src="images/loader.svg" data-src="images/custom/texture-img-04.jpg" alt="">
+													<img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/custom/texture-img-04.jpg" alt="">
 												</span>
                                                     <span class="swatch-label color-black"></span>
                                                 </a></li>
                                             <li><a class="options-color" href="#">
 												<span class="swatch-img">
-													<img src="images/loader.svg" data-src="images/custom/texture-img-05.jpg" alt="">
+													<img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/custom/texture-img-05.jpg" alt="">
 												</span>
                                                     <span class="swatch-label color-black"></span>
                                                 </a></li>

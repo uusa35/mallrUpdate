@@ -13,7 +13,7 @@
                         @if($element->size_chart_image)
                             <img src="{{ asset(env('LARGE').$element->size_chart_image) }}" alt="{{ $element->name }}"
                                  class="img-responsive">
-                        @else
+                        @elseif($settings->size_chart_image)
                             <img src="{{ asset(env('LARGE').$settings->size_chart_image) }}" alt="{{ $element->name }}"
                                  class="img-responsive">
                         @endif

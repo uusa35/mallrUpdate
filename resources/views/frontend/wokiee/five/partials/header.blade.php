@@ -485,7 +485,7 @@
                                             <ul>
                                                 <li>
                                                     <a href="product.html">
-                                                        <div class="thumbnail"><img src="images/loader.svg" data-src="images/product/product-03.jpg" alt=""></div>
+                                                        <div class="thumbnail"><img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/product/product-03.jpg" alt=""></div>
                                                         <div class="tt-description">
                                                             <div class="tt-title">Flared Shift Bag</div>
                                                             <div class="tt-price">

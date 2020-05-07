@@ -304,7 +304,7 @@
                                                 <a class="tt-title-submenu"
                                                    href="listing-right-column.html">
                                                     BOTTOMS
-                                                    <img src="images/loader.svg"
+                                                    <img src="{{ asset(env('IMG_LOADER')) }}"
                                                          data-src="images/custom/header-category-02.jpg"
                                                          alt="">
                                                 </a>
@@ -323,7 +323,7 @@
                                                 <a class="tt-title-submenu"
                                                    href="listing-right-column.html">
                                                     ACCESSORIES
-                                                    <img src="images/loader.svg"
+                                                    <img src="{{ asset(env('IMG_LOADER')) }}"
                                                          data-src="images/custom/header-category-03.jpg"
                                                          alt="">
                                                 </a>

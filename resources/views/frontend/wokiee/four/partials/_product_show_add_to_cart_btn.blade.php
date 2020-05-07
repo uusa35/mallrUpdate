@@ -3,13 +3,15 @@
         <div class="col-item">
             <div class="tt-input-counter style-01" data-tooltip="{{ trans('general.choose_color_first') }}"
                  data-tposition="bottom">
-                <span class="minus-btn" id="minus-btn-{{ $element->id }}" data-product-id="{{ $element->id }}"></span>
+                <span class="minus-btn" id="minus-btn-{{ $element->id }}"
+                      data-product-id="{{ $element->id }}" {{ $element->has_attributes ? 'disabled' : null }}></span>
                 @if($element->has_attributes)
                     <input id="max-qty-{{ $element->id }}" type="number" value="1" size="1"/>
                 @else
                     <input id="max-qty-{{ $element->id }}" type="number" value="1" size="{{ $element->qty }}"/>
                 @endif
-                <span class="plus-btn" id="plus-btn-{{ $element->id }}" data-product-id="{{ $element->id }}"></span>
+                <span class="plus-btn" id="plus-btn-{{ $element->id }}"
+                      data-product-id="{{ $element->id }}" {{ $element->has_attributes ? 'disabled' : null }}></span>
             </div>
         </div>
         <div class="col-item">
@@ -30,7 +32,6 @@
                         data-tooltip="{{ trans('general.choose_color_then_size') }}"
                         data-tposition="top"
                         role="tooltip"
-                        disabled="{{ $element->has_attributes }}"
                         class="btn btn-lg  tooltip"
                         id="add_to_cart"><i class="icon-f-39"></i>{{ trans('general.add_to_cart') }}</button>
                 @if($element->has_attributes)
