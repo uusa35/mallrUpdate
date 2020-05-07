@@ -1,4 +1,11 @@
 <div class="tt-wrapper">
+    @if($element->has_attributes)
+        <div class="card bg-danger mb-3">
+            <div class="card-header">
+                <span class="text-white ">{{ trans('general.choose_color_then_size') }}</span>
+            </div>
+        </div>
+    @endif
     <div class="tt-row-custom-01">
         <div class="col-item">
             <div class="tt-input-counter style-01" data-tooltip="{{ trans('general.choose_color_first') }}"
@@ -34,11 +41,6 @@
                         role="tooltip"
                         class="btn btn-lg  tooltip"
                         id="add_to_cart"><i class="icon-f-39"></i>{{ trans('general.add_to_cart') }}</button>
-                @if($element->has_attributes)
-                    <p class="text-center">
-                        {{ trans('general.choose_color_then_size') }}
-                    </p>
-                @endif
             </form>
         </div>
     </div>
