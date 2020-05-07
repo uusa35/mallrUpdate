@@ -8,7 +8,6 @@ use App\Models\ShipmentPackage;
 use App\Services\Traits\ImageHelpers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Input;
 
 class CountryController extends Controller
 {
@@ -97,7 +96,7 @@ class CountryController extends Controller
             'packages' => 'array'
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withInput(Input::all())->withErrors($validate);
+            return redirect()->back()->withErrors($validate);
         }
         $element = Country::whereId($id)->first();
         if ($element) {
