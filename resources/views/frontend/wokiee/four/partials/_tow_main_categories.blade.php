@@ -5,7 +5,7 @@
         <div class="row tt-layout-promo-box">
             <div class="col-md-6">
                 <a href="listing-left-column.html" class="tt-promo-box tt-one-child">
-                    <img src="images/loader.svg" data-src="images/promo/index05-promo-img-04.jpg" alt="">
+                    <img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/promo/index05-promo-img-04.jpg" alt="">
                     <div class="tt-description">
                         <div class="tt-description-wrapper">
                             <div class="tt-background"></div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
                 <a href="listing-left-column.html" class="tt-promo-box tt-one-child">
-                    <img src="images/loader.svg" data-src="images/promo/index05-promo-img-05.jpg" alt="">
+                    <img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/promo/index05-promo-img-05.jpg" alt="">
                     <div class="tt-description">
                         <div class="tt-description-wrapper">
                             <div class="tt-background"></div>

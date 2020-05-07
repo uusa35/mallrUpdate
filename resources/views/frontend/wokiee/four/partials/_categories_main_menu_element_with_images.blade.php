@@ -16,7 +16,7 @@
                                                     @if($sub->imageLargeLink)
                                                         {{ $sub->name }}
                                                         <img class="img-menu-category img-responsive"
-                                                             src="{{ env('IMG_LOADER') }}"
+                                                             src="{{ asset(env('IMG_LOADER')) }}"
                                                              data-src="{{ $sub->imageThumbLink }}"
                                                              alt="{{ $sub->name }}">
                                                     @endif
@@ -44,7 +44,7 @@
                                             <a href="{{ route('frontend.service.search',['service_category_id' => $cat->id]) }}"
                                                class="tt-promo-02">
                                                 <img class="img-category img-responsive"
-                                                     src="{{ env('IMG_LOADER') }}"
+                                                     src="{{ asset(env('IMG_LOADER')) }}"
                                                      data-src="{{ $cat->imageThumbLink }}"
                                                      alt="{{ $cat->name }}">
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">
@@ -84,7 +84,7 @@
                                                     @if($sub->imageLargeLink)
                                                         {{ $sub->name }}
                                                         <img class="img-menu-category img-responsive"
-                                                             src="{{ env('IMG_LOADER') }}"
+                                                             src="{{ asset(env('IMG_LOADER')) }}"
                                                              data-src="{{ $sub->imageThumbLink }}"
                                                              alt="{{ $sub->name }}">
                                                     @endif
@@ -112,7 +112,7 @@
                                             <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
                                                class="tt-promo-02">
                                                 <img class="img-category img-responsive"
-                                                     src="{{ env('IMG_LOADER') }}"
+                                                     src="{{ asset(env('IMG_LOADER')) }}"
                                                      data-src="{{ $cat->imageThumbLink }}"
                                                      alt="{{ $cat->name }}">
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">

@@ -3,7 +3,7 @@
         <div class="row tt-layout-promo-box">
             <div class="col-sm-6 col-md-4">
                 <a href="listing-left-column.html" class="tt-promo-box">
-                    <img src="images/loader.svg" data-src="images/promo/index05-promo-img-07.jpg" alt="">
+                    <img src="{{ asset(env('IMG_LOADER')) }}" data-src="images/promo/index05-promo-img-07.jpg" alt="">
                     <div class="tt-description">
                         <div class="tt-description-wrapper">
                             <div class="tt-background"></div>
