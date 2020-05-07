@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/backend-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/backend-rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/backend.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/backend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/frontend-custom-ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/frontend-custom-ar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/frontend-custom-en.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/frontend-custom-en.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/plugins.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/plugins.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/wokiee-theme-sass-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/wokiee-theme-sass-rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/wokiee-theme-sass.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/wokiee-theme-sass.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/backend-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/backend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/datepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/frontend-ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend-ar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/frontend-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/frontend-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend-en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/productAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/productAttribute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/tinymce.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/tinymce.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/wokiee.demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/wokiee.demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
+            <state relative-caret-position="765">
+              <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -70,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+            <state relative-caret-position="255">
+              <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -118,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="288">
+              <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -240,10 +220,10 @@
         <option value="$PROJECT_DIR$/resources/assets/css/frontend-custom.css" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_related_items.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/CountryController.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_product_show_add_to_cart_btn.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php" />
       </list>
     </option>
   </component>
@@ -536,12 +516,12 @@
       <workItem from="1588763455787" duration="625000" />
       <workItem from="1588770163697" duration="1885000" />
       <workItem from="1588842642222" duration="16810000" />
-      <workItem from="1588873765390" duration="3068000" />
+      <workItem from="1588873765390" duration="3209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173641000" />
+    <option name="totallyTimeSpent" value="173782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -898,17 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
+        <state relative-caret-position="255">
+          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -919,10 +892,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/productAttribute/ProductAttributeApp.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+        <state relative-caret-position="765">
+          <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_page_social_icons.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
         </state>
       </provider>
     </entry>
