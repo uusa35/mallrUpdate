@@ -75,7 +75,9 @@
         </div>
     </div>
     {{--        @include('frontend.wokiee.four.partials._show_page_social_icons')--}}
+    @desktop
     @include('frontend.wokiee.four.partials._show_page_related_items',['elements' => $relatedItems])
+    @enddesktop
     @include('frontend.wokiee.four.partials._modal_page_show_video')
     @include('frontend.wokiee.four.partials._modal_size_chart')
     @include('frontend.wokiee.four.partials._modal_page_show_shipment')
