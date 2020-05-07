@@ -18,7 +18,7 @@ const ProductAttributeApp = () => {
     useEffect(() => {
         axios.post(`/api/attributes`, {product_id: productId})
             .then(r => {
-                    setAttributes(r.data)
+                setAttributes(r.data)
                 document.getElementById(`add_to_cart_${productId}`).setAttribute('disabled', 'disabled');
             })
             .catch(e => console.log('e', e))
@@ -39,7 +39,10 @@ const ProductAttributeApp = () => {
         const filteredAttributes = filter(attributes, (a => a.size.id === id))
         const filteredColors = map(filteredAttributes, 'color');
         setColors(filteredColors);
-        handleColorClick(first(filteredColors).id)
+        const firstColor = first(filteredColors);
+        handleColorClick(firstColor.id)
+        const attribute = first(filter(attributes, (a => a.color.id === firstColor.id && a.size.id === currentSize)));
+        setCurrentAttribute(attribute)
         setColorDisabled(false);
         document.getElementById(`size_id_${productId}`).setAttribute('value', id);
 
@@ -51,9 +54,9 @@ const ProductAttributeApp = () => {
         if (!isEmpty(attribute)) {
             setCurrentAttribute(attribute)
         }
-    })
+    }, [currentColor])
 
-    useMemo(() => {
+    useEffect(() => {
         if (!isEmpty(currentAttribute)) {
             const {color, size, qty} = currentAttribute;
             document.getElementById(`color_id_${productId}`).setAttribute('value', color.id);
@@ -61,9 +64,9 @@ const ProductAttributeApp = () => {
             document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', currentAttribute.id);
             document.getElementById(`max-qty-${productId}`).setAttribute('size', qty);
             document.getElementById(`max-qty-${productId}`).setAttribute('value', 1);
-            document.getElementById(`add_to_cart_${productId}`).removeAttribute('disabled');
             document.getElementById(`minus-btn-${productId}`).removeAttribute('disabled');
             document.getElementById(`plus-btn-${productId}`).removeAttribute('disabled');
+            document.getElementById(`add_to_cart_${productId}`).removeAttribute('disabled');
         } else {
             document.getElementById(`color_id_${productId}`).setAttribute('value', null);
             // document.getElementById(`qty_${productId}`).setAttribute('value', 1);
