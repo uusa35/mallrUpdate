@@ -65,7 +65,9 @@
 
                         <div class="tt-wrapper">
                             @include('frontend.wokiee.four.partials._product_show_information_widget')
+                            @desktop
                             <div class="sharethis-inline-share-buttons"></div>
+                            @enddesktop
                         </div>
                     </div>
                 </div>
@@ -81,7 +83,9 @@
 
 @section('scripts')
     @parent
+    @desktop
     <script type="text/javascript"
             src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>
+    @enddesktop
 @endsection
 
