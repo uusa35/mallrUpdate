@@ -51,7 +51,7 @@
                             @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')
                         @endif
                         @auth
-                            <div class="tt-wrapper">
+                            <div class="tt-wrapper pull-left mb-5">
                                 <ul class="tt-list-btn">
                                     <li>
                                         <a class="btn btn-link {{ $element->isFavorited ? 'active' : null }}"
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    {{--        @include('frontend.wokiee.four.partials._show_page_social_icons')--}}
+            @include('frontend.wokiee.four.partials._show_page_social_icons')
     @desktop
     @include('frontend.wokiee.four.partials._show_page_related_items',['elements' => $relatedItems])
     @enddesktop
@@ -86,8 +86,8 @@
 @section('scripts')
     @parent
     @desktop
-    <script type="text/javascript"
-            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>
+{{--    <script type="text/javascript"--}}
+{{--            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>--}}
     @enddesktop
 @endsection
 
