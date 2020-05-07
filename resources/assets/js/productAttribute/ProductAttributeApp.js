@@ -26,7 +26,7 @@ const ProductAttributeApp = () => {
 
     useMemo(() => {
         if (!isEmpty(attributes)) {
-            const colors = map(attributes, 'color');
+            const colors = map(uniqBy(attributes, 'color.id'), 'color');
             const sizes = map(uniqBy(attributes, 'size.id'), 'size');
             setColors(colors);
             setSizes(sizes);
@@ -39,6 +39,7 @@ const ProductAttributeApp = () => {
         const filteredAttributes = filter(attributes, (a => a.size.id === id))
         const filteredColors = map(filteredAttributes, 'color');
         setColors(filteredColors);
+        handleColorClick(first(filteredColors).id)
         setColorDisabled(false);
         document.getElementById(`size_id_${productId}`).setAttribute('value', id);
 
@@ -83,7 +84,7 @@ const ProductAttributeApp = () => {
                 <ul className="tt-options-swatch options-large">
                     {
                         map(sizes, (e, i) =>
-                            <li key={i} className={`${currentSize === e.id ? 'active' : null}`}>
+                            <li key={i} className={`${currentSize === e.id ? 'active' : ''}`}>
                                 <a style={{width: 80}} onClick={() => handleSizeClick(e.id)}><strong>{e.name}</strong>
                                 </a>
                             </li>
@@ -98,10 +99,10 @@ const ProductAttributeApp = () => {
                     {
                         map(colors, (e, i) => (
                             <li key={i}
-                                className={`${currentColor === e.id ? 'active' : null}`}>
+                                className={`${currentColor === e.id ? 'active' : ''}`}>
                                 <a
                                     disabled={colorDisabled} className="options-color tooltip"
-                                    data-tooltip={`${currentSize ? currentLang.chooseSizeThenColor : null}`}
+                                    data-tooltip={`${currentSize ? currentLang.chooseSizeThenColor : ''}`}
                                     onClick={() => handleColorClick(e.id)} style={{backgroundColor: e.code}}></a>
                             </li>
                         ))
