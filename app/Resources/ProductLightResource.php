@@ -30,6 +30,7 @@ class ProductLightResource extends JsonResource
             'isReallyHot' => $this->isReallyHot,
             'has_attributes' => $this->has_attributes,
             'qty' => (Int) $this->totalAvailableQty,
+            'hasStock' => $this->hasStock,
             'user' => new UserLightResource($this->whenLoaded('user')),
             'product_attributes' => ProductAttributeLightResource::collection($this->whenLoaded('product_attributes')),
             'shipment_package' => ShipmentPackageLightResource::collection($this->whenLoaded('shipment_package')),

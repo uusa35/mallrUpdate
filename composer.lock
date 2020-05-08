@@ -5646,6 +5646,19 @@
                 "dependency",
                 "package"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+>>>>>>> b03d387502a06290f3d4aa7cef999bb104d71cf1
             "time": "2020-05-06T08:28:10+00:00"
         },
         {
