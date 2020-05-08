@@ -33,45 +33,45 @@ $(document).ready(function() {
 
     // Product Page --> add Product to Cart
     // OnChanging Size DropDown
-    $('[id^="size-"]').on('change', function(e) {
-        productId = $(this).attr('data-element-id');
-        $(`a[id^=color-id-]`).addClass('d-none');
-    $(`a[id^="color-id-`).attr('qty', '');
-        $(`li[class^=color-id-element]`).removeClass('active');
-        // reset the max-qty
-        $(`#max-qty-${productId}`).attr('size', 1);
-        $(`#max-qty-${productId}`).attr('value', 1);
-        $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
-        size_id = e.target.value;
-        product_id = $(`#product_id_${productId}`).attr('value');
-        $(`input[name=size_id_${productId}]`).attr('value', size_id);
-        // reset the qty input
-        $(`input[name=qty_${productId}]`).attr('value', 1);
-        return axios.get('/api/qty', {params: {size_id, product_id}}).then(r => {
-            if (r.data.length >= 1) {
-                $(`#color-${productId}`).removeClass('d-none');
-                _.each(r.data, (e, i) => {
-                    console.log('the',e);
-                    color_element = $(`#color-id-${productId}-${e.color_id}`);
-                    color_element.removeClass('d-none');
-                    color_element.attr('data-qty', e.qty);
-                    color_element.attr('data-product-attribute-id', e.id);
-                });
-            }
-        }).catch(e => console.log(e));
-    });
-
-    $('a[id^="color-id-"]').on('click', function(e) {
-        color_id = $(this).data('color-id');
-        qty = $(this).data('qty');
-        product_attribute_id = $(this).data('product-attribute-id');
-        $(`#max-qty-${productId}`).attr('size', qty);
-        $(`input[id=color_id_${productId}]`).attr('value', color_id);
-        $(`input[id=size_id_${productId}]`).attr('value', size_id);
-        $(`input[id=product_attribute_id_${productId}]`).attr('value', product_attribute_id);
-        $(`#add_to_cart_${productId}`).attr('disabled', false);
-    });
-
+    // $('[id^="size-"]').on('change', function(e) {
+    //     productId = $(this).attr('data-element-id');
+    //     $(`a[id^=color-id-]`).addClass('d-none');
+    // $(`a[id^="color-id-`).attr('qty', '');
+    //     $(`li[class^=color-id-element]`).removeClass('active');
+    //     // reset the max-qty
+    //     $(`#max-qty-${productId}`).attr('size', 1);
+    //     $(`#max-qty-${productId}`).attr('value', 1);
+    //     $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
+    //     size_id = e.target.value;
+    //     product_id = $(`#product_id_${productId}`).attr('value');
+    //     $(`input[name=size_id_${productId}]`).attr('value', size_id);
+    //     // reset the qty input
+    //     $(`input[name=qty_${productId}]`).attr('value', 1);
+    //     return axios.get('/api/qty', {params: {size_id, product_id}}).then(r => {
+    //         if (r.data.length >= 1) {
+    //             $(`#color-${productId}`).removeClass('d-none');
+    //             _.each(r.data, (e, i) => {
+    //                 console.log('the',e);
+    //                 color_element = $(`#color-id-${productId}-${e.color_id}`);
+    //                 color_element.removeClass('d-none');
+    //                 color_element.attr('data-qty', e.qty);
+    //                 color_element.attr('data-product-attribute-id', e.id);
+    //             });
+    //         }
+    //     }).catch(e => console.log(e));
+    // });
+    //
+    // $('a[id^="color-id-"]').on('click', function(e) {
+    //     color_id = $(this).data('color-id');
+    //     qty = $(this).data('qty');
+    //     product_attribute_id = $(this).data('product-attribute-id');
+    //     $(`#max-qty-${productId}`).attr('size', qty);
+    //     $(`input[id=color_id_${productId}]`).attr('value', color_id);
+    //     $(`input[id=size_id_${productId}]`).attr('value', size_id);
+    //     $(`input[id=product_attribute_id_${productId}]`).attr('value', product_attribute_id);
+    //     $(`#add_to_cart_${productId}`).attr('disabled', false);
+    // });
+    //
     $(`[id^=plus-btn]`).on('click', function() {
         productId = $(this).data('product-id');
         console.log('the product id', productId);

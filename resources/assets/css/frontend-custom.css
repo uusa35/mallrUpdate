@@ -130,6 +130,12 @@ footer .tt-logo img {
     pointer-events: all !important;
 }
 
+.tt-product-single-info .tt-label {
+    border-radius: 0px !important;
+    text-align: center;
+    min-width: 60px;
+}
+
 
 /*someboostrap not included*/
 /*Bootstrap v4.0.0 (https://getbootstrap.com)*/

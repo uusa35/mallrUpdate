@@ -4,7 +4,7 @@
             <div class="tt-label tt-label-out-stock">{{ trans('general.exclusive') }}</div>
         @endif
         @if($element->on_new)
-            <div class="tt-label-new">{{ trans('general.new') }}</div>
+            <div class="tt-label tt-label-new">{{ trans('general.new') }}</div>
         @endif
         @if($element->isOnSale)
             <div class="tt-label tt-label-sale">{{ trans('general.on_sale') }}</div>
@@ -19,8 +19,8 @@
         @if($element->is_featured)
             <div class="tt-label tt-label-our-fatured">{{ trans('general.featured') }}</div>
         @endif
-{{--        @if($element->user->country)--}}
-{{--            <div class="tt-label tt-label-new">{{ $element->user->country->slug }}</div>--}}
-{{--        @endif--}}
+        {{--        @if($element->user->country)--}}
+        {{--            <div class="tt-label tt-label-new">{{ $element->user->country->slug }}</div>--}}
+        {{--        @endif--}}
     </div>
 </div>

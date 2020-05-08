@@ -11,10 +11,12 @@
                     {{ trans('message.size_chart') }}
                     <div class="tt-table-responsive-md">
                         @if($element->size_chart_image)
-                            <img src="{{ asset(env('LARGE').$element->size_chart_image) }}" alt="{{ $element->name }}"
+                            <img src="{{ $element->getCurrentImageAttribute('size_chart_image', 'large') }}"
+                                 alt="{{ $element->name }}"
                                  class="img-responsive">
-                        @elseif($settings->size_chart_image)
-                            <img src="{{ asset(env('LARGE').$settings->size_chart_image) }}" alt="{{ $element->name }}"
+                        @elseif($settings->size_chart)
+                            <img src="{{ $settings->getCurrentImageAttribute('size_chart', 'large') }}"
+                                 alt="{{ $element->name }}"
                                  class="img-responsive">
                         @endif
                     </div>

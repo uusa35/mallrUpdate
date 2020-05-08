@@ -3,7 +3,6 @@
  */
 
 $(document).ready(function() {
-    console.log('backend custom js');
     $('#dataTable').DataTable({
         "order": [[0, "desc"]],
         "bPaginate": true,
