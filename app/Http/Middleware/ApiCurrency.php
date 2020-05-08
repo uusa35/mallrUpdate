@@ -30,6 +30,6 @@ class ApiCurrency
     public function handle($request, Closure $next)
     {
         $currency = !$request->hasHeader('currency') ? Currency::where('currency_symbol_en', 'KWD')->first()->currency_symbol_en : $request->header('currency');
-        $next($request)->headers->set('currency', $currency);
+        return $next($request)->headers->set('currency', $currency);
     }
 }
