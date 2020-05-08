@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,8 +82,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+                <state relative-caret-position="126">
+                  <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -105,8 +104,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+                <state relative-caret-position="324">
+                  <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -219,8 +218,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_06_01_175252_create_settings_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/SettingController.php" />
         <option value="$PROJECT_DIR$/app/Resources/SettingResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php" />
       </list>
     </option>
   </component>
@@ -516,12 +515,12 @@
       <workItem from="1588873765390" duration="3702000" />
       <workItem from="1588925262123" duration="272000" />
       <workItem from="1588925827963" duration="1000" />
-      <workItem from="1588925957215" duration="739000" />
+      <workItem from="1588925957215" duration="885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175287000" />
+    <option name="totallyTimeSpent" value="175433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -906,17 +905,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="252">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiLocalization.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/ApiCurrency.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="126">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
