@@ -51,7 +51,7 @@ class ProductResource extends JsonResource
             'start_sale' => $this->start_sale,
             'end_sale' => Carbon::parse($this->end_sale)->format('d-m-Y'),
             'check_stock' => $this->check_stock,
-            'has_stock' => $this->hasStock,
+            'hasStock' => $this->hasStock,
             'isReallyHot' => $this->isReallyHot,
             'has_attributes' => $this->has_attributes,
             'wrap_as_gift' => $this->wrap_as_gift,
