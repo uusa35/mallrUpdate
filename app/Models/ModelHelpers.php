@@ -70,7 +70,7 @@ trait ModelHelpers
 
     public function getCurrentImageAttribute($colName = 'image', $sizeType = 'thumbnail')
     {
-        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl($sizeType, $colName) . $this->{$colName} : asset(env(strtoupper($sizeType)) . $this->{$colName});
+        return $this->{$colName}  ? ($this->checkStorageSpaces() ? $this->getStorageSpacesUrl($sizeType, $colName) . $this->{$colName} : asset(env(strtoupper($sizeType)) . $this->{$colName})) : null;
     }
 
     public function checkStorageSpaces()

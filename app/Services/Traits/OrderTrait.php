@@ -66,7 +66,7 @@ trait OrderTrait
             'coupon_id' => $coupon ? $coupon['id'] : null,
 //            'shipment_fees' => $request->has('shipment_fees') ? $request->shipment_fees : 0
         // Now it's fixed shipment fees from the country
-            'shipment_fees' => $country->fixed_shipment_charge
+            'shipment_fees' => $this->cart->content()->where('options.type', 'country')->first()->total()
         ]);
         if ($order) {
             $this->cart->content()->each(function ($element) use ($order, $user) {
