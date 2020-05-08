@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/ModelHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModelHelpers.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="568">
-              <caret line="72" column="199" lean-forward="true" selection-start-line="72" selection-start-column="199" selection-end-line="72" selection-end-column="199" />
+              <caret line="72" column="197" lean-forward="true" selection-start-line="72" selection-start-column="197" selection-end-line="72" selection-end-column="197" />
             </state>
           </provider>
         </entry>
@@ -459,12 +458,12 @@
       <workItem from="1588935251020" duration="5389000" />
       <workItem from="1588941541988" duration="698000" />
       <workItem from="1588948521928" duration="142000" />
-      <workItem from="1588974559730" duration="142000" />
+      <workItem from="1588974559730" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182435000" />
+    <option name="totallyTimeSpent" value="182510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -871,7 +870,7 @@
     <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
-          <caret line="72" column="199" lean-forward="true" selection-start-line="72" selection-start-column="199" selection-end-line="72" selection-end-column="199" />
+          <caret line="72" column="197" lean-forward="true" selection-start-line="72" selection-start-column="197" selection-end-line="72" selection-end-column="197" />
         </state>
       </provider>
     </entry>
