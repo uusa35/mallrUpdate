@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    console.log('from inside custom-ar')
-    console.log('from inside the Slick Carousel');
+    // console.log('from inside custom-ar')
+    // console.log('from inside the Slick Carousel');
     // var item = 5;
     // products = $('.tt-carousel-products');
     // brands = $('.tt-carousel-brands');

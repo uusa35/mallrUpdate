@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useCallback, useMemo} from 'react'
 import {trans} from "./trans";
 import axios from 'axios';
-import {filter, first, map, uniqBy, isEmpty} from 'lodash'
+import {filter, first, map, uniqBy, isEmpty , sum } from 'lodash'
 
 const ProductAttributeApp = () => {
     const [lang, setLang] = useState(document.getElementById('appLang').value)
@@ -58,20 +58,22 @@ const ProductAttributeApp = () => {
 
     useEffect(() => {
         if (!isEmpty(currentAttribute)) {
-            const {color, size, qty} = currentAttribute;
+            const {color, qty} = currentAttribute;
             document.getElementById(`color_id_${productId}`).setAttribute('value', color.id);
-            // document.getElementById(`qty_${productId}`).setAttribute('value', 1);
-            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', currentAttribute.id);
+            // const newQty = sum([document.getElementById(`qty_${productId}`).getAttribute('value'),1]);
+            // document.getElementById(`qty_${productId}`).setAttribute('value', newQty);
+            // console.log('new Qty', newQty);
             document.getElementById(`max-qty-${productId}`).setAttribute('size', qty);
+            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', currentAttribute.id);
             document.getElementById(`max-qty-${productId}`).setAttribute('value', 1);
             document.getElementById(`minus-btn-${productId}`).removeAttribute('disabled');
             document.getElementById(`plus-btn-${productId}`).removeAttribute('disabled');
             document.getElementById(`add_to_cart_${productId}`).removeAttribute('disabled');
         } else {
             document.getElementById(`color_id_${productId}`).setAttribute('value', null);
-            // document.getElementById(`qty_${productId}`).setAttribute('value', 1);
-            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', null);
+            // document.getElementById(`qty_${productId}`).setAttribute('value', 0);
             document.getElementById(`max-qty-${productId}`).setAttribute('size', 0);
+            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', null);
             document.getElementById(`max-qty-${productId}`).setAttribute('value', 1);
             document.getElementById(`add_to_cart_${productId}`).setAttribute('disabled', 'disabled');
             document.getElementById(`minus-btn-${productId}`).setAttribute('disabled', 'disabled');

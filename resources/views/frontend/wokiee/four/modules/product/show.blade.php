@@ -6,9 +6,7 @@
 
 @section('body')
     <div class="container-indent">
-        <!-- mobile product slider  -->
-    @include('frontend.wokiee.four.partials._service_show_gallery_mobile')
-    <!-- /mobile product slider  -->
+        @include('frontend.wokiee.four.partials._service_show_gallery_mobile')
         <div class="container  container-fluid-mobile">
             <div class="row">
                 <div class="col-6 hidden-xs">
@@ -21,25 +19,9 @@
                         @endif
                         @include('frontend.wokiee.four.partials._show_page_item_title_description_and_prices')
                         @include('frontend.wokiee.four.partials._service_show_is_really_hot_element')
+                        @include('frontend.wokiee.four.partials._shipment_and_size_chart_btns')
                         @if($element->canOrder)
                             <div class="tt-swatches-container">
-                                <div class="tt-wrapper product-information-buttons text-center">
-                                    <a data-toggle="modal" data-target="#modalProductInfo" href="#">
-                                        <span class="align-content-center">
-                                            <i class="fa fa-fw fa-lg icon-e-75"></i>
-                                            <span>
-                                        {{ trans('general.size_guide') }}
-                                            </span>
-                                        </span>
-                                    </a>
-                                    <a data-toggle="modal" data-target="#modalProductInfo-02" href="#">
-                                        <span>
-                                            <i class="fa fa-fw fa-lg icon-f-48"></i>
-                                        {{ trans('general.shipping') }}
-                                        </span>
-                                    </a>
-                                </div>
-                                <input type="hidden" value="{{ $element->id }}" id="product_id"/>
                                 @if($element->has_attributes)
                                     <div id="productAttributeApp"></div>
                                 @endif
@@ -74,7 +56,7 @@
             </div>
         </div>
     </div>
-            @include('frontend.wokiee.four.partials._show_page_social_icons')
+    @include('frontend.wokiee.four.partials._show_page_social_icons')
     @desktop
     @include('frontend.wokiee.four.partials._show_page_related_items',['elements' => $relatedItems])
     @enddesktop
@@ -86,8 +68,8 @@
 @section('scripts')
     @parent
     @desktop
-{{--    <script type="text/javascript"--}}
-{{--            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>--}}
+    <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>
     @enddesktop
 @endsection
 

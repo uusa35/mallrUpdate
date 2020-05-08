@@ -28,6 +28,7 @@
                     <input type="hidden" id="collection_id" name="collection_id"
                            value="{{ request()->has('collection_id') ? request()->collection_id : $collection_id }}">
                 @endif
+                <input type="hidden" value="{{ $element->id }}" id="product_id"/>
                 <input type="hidden" id="product_id_{{ $element->id }}" name="product_id" value="{{ $element->id }}">
                 <input type="hidden" id="size_id_{{ $element->id }}" name="size_id" value="">
                 <input type="hidden" id="color_id_{{ $element->id }}" name="color_id" value="">
