@@ -17,9 +17,9 @@ class CreateSettingsTable extends Migration
             $table->string('company_ar')->nullable();
             $table->string('company_en')->nullable();
             $table->string('address_ar')->nullable();
+            $table->string('address_en')->nullable();
             $table->mediumText('description_ar')->nullable();
             $table->mediumText('description_en')->nullable();
-            $table->string('address_en')->nullable();
             $table->string('mobile')->nullable();
             $table->string('phone')->nullable();
             $table->string('country_ar')->nullable();
