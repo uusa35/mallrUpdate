@@ -8,18 +8,6 @@ use App\Models\Currency;
 
 class ApiCurrency
 {
-    public $app;
-
-    /**
-     * Localization constructor.
-     *
-     * @param \Illuminate\Foundation\Application $app
-     */
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-    }
-
     /**
      * Handle an incoming request.
      *
