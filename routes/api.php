@@ -66,6 +66,8 @@ Route::group(['namespace' => 'Api'], function () {
     Route::resource('comment', 'CommentController')->only(['index']);
     Route::resource('page', 'PageController')->only(['index']);
     Route::resource('tag', 'TagController')->only(['index']);
+    Route::resource('color', 'ColorController')->only(['index']);
+    Route::resource('size', 'SizeController')->only(['index']);
     Route::post('map/event', function (Request $request) {
         event(new MyEvent($request->message, $request->id));
         return response()->json(['message' => $request->message, 'id' => $request->id], 200);
