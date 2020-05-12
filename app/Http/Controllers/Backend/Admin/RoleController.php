@@ -69,7 +69,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        $element = Role::whereId($id)->first();
+        $element = Role::whereId($id)->with('privileges')->first();
         $privileges = Privilege::with('roles')->get();
         $this->authorize('role.update', $element);
         return view('backend.modules.role.edit', compact('element', 'privileges'));

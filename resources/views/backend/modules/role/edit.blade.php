@@ -212,21 +212,19 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label sbold">{{ trans('general.is_visible') }}</label>
-                                                    <div class="radio-list">
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="is_visible" id="optionsRadios5"
-                                                                   value="1" {{ $element->is_visible ? 'checked' : null }}> {{ trans('general.is_visible') }}
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="is_visible" id="optionsRadios6"
-                                                                   value="0" {{ !$element->is_visible  ? 'checked' : null }}> {{ trans('general.not_is_visible') }}
-                                                        </label>
-                                                    </div>
-                                                    <span class="help-block"> Visible Means that this role shall appear on Application (ex. admin is invisible)</span>
+                                            <div class="form-group">
+                                                <label class="control-label sbold">{{ trans('general.is_visible') }}</label>
+                                                <div class="radio-list">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="is_visible" id="optionsRadios5"
+                                                               value="1" {{ $element->is_visible ? 'checked' : null }}> {{ trans('general.is_visible') }}
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="is_visible" id="optionsRadios6"
+                                                               value="0" {{ !$element->is_visible  ? 'checked' : null }}> {{ trans('general.not_is_visible') }}
+                                                    </label>
                                                 </div>
+                                                <span class="help-block"> Visible Means that this role shall appear on Application (ex. admin is invisible)</span>
                                             </div>
                                         </div>
                                         <!--/span-->
