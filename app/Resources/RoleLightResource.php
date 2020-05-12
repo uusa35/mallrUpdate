@@ -18,6 +18,7 @@ class RoleLightResource extends JsonResource
             'id' => $this->id,
             'slug' => ucfirst($this->slug),
             'thumb' => $this->getCurrentImageAttribute(),
+            'color' => $this->color
         ];
     }
 }
