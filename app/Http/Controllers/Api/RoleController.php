@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Resources\BranchResource;
-use App\Models\Branch;
+use App\Http\Resources\RoleLightResource;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BranchController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +16,8 @@ class BranchController extends Controller
      */
     public function index()
     {
-        $elements = Branch::active()->get();
-        return response()->json(BranchResource::collection($elements),200);
-    }
-
-    public function getLocalBranches() {
-        $elements = Branch::where(['active' => true, 'country_id' => 1])->get();
-        return response()->json(BranchResource::collection($elements),200);
+        $elements = Role::active()->where(['is_visible' => true, 'is_admin' => false, 'is_super' => false ])->orderBy('order','asc')->get();
+        return response()->json(RoleLightResource::collection($elements),200);
     }
 
     /**

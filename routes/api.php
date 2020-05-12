@@ -38,6 +38,7 @@ Route::group(['namespace' => 'Api'], function () {
     Route::get('location/address', 'GeoLocationController@getAddressFromLocation')->name('location.address');
     Route::get('country/ip', 'CountryController@getUserCountry');
     Route::resource('user', 'UserController')->only(['index', 'show']);
+    Route::resource('role', 'RoleController')->only(['index']);
     Route::post('authenticate', 'UserController@authenticate');
     Route::get('google/authenticate', 'UserController@googleAuthenticate');
     Route::post('register', 'UserController@register');
