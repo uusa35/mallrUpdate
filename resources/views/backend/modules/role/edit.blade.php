@@ -83,7 +83,30 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="file"
+                                                   class="control-label">{{ trans('general.main_image') }}
+                                                *</label>
+                                            <input class="form-control tooltips" data-container="body"
+                                                   data-placement="top"
+                                                   data-original-title="{{ trans('message.main_image') }}"
+                                                   name="image" placeholder="images" type="file"/>
+                                            <div class="help-block text-left">
+                                                {{ trans('message.best_fit',['width' => '500px', 'height' => '500px']) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if($element->image)
+                                        <div class="col-md-2">
+                                            <img class="img-responsive img-sm"
+                                                 src="{{ $element->imageThumbLink }}"
+                                                 alt="">
+                                            <a href="{{ route("backend.admin.image.clear",['model' => 'role', 'id' => $element->id ]) }}"><i
+                                                        class="fa fa-fw fa-times"></i></a>
+                                        </div>
+                                    @endif
+                                    <div class="col-md-3">
                                         <div class="form-group {{ $errors->has('color') ? ' has-error' : '' }}">
                                             <label for="color" class="control-label">{{ trans('general.color') }}
                                                 *</label>

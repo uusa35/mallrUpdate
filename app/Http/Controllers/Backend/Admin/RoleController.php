@@ -42,8 +42,9 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $this->authorize('role.create');
-        $element = Role::create($request->all());
+        $element = Role::create($request->request->except('image'));
         if ($element) {
+            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['500', '500'], true) : null;
             return redirect()->route('backend.admin.role.index')->with('success', 'role saved.');
         }
         return redirect()->back()->with('error', 'unknown error');
@@ -83,14 +84,16 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $element = Role::whereId($id)->first();
-        $element->update($request->except('privileges'));
+        $element = Role::whereId($id)->with('privileges')->first();
+        $element->update($request->except(['privileges','image']));
+        $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['500', '500'], true) : null;
         if($request->has('privileges')) {
             $removedIds = Privilege::whereNotIn('id',$request->privileges)->get()->pluck('id')->toArray();
             $privileges = Privilege::all();
             $element->privileges()->sync($privileges);
             $element->privileges()->updateExistingPivot($request->privileges, ['index' => true, 'view' => true, 'create' => true, 'update' => true, 'delete' => true]);
             $element->privileges()->updateExistingPivot($removedIds, ['index' => false, 'view' => false, 'create' => false, 'update' => false, 'delete' => false]);
+
         }
         return redirect()->route('backend.admin.role.index')->with('success', 'role updated');
     }
