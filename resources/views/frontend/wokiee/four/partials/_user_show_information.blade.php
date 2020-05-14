@@ -3,7 +3,7 @@
         <table class="tt-table-shop-01">
             {{--<table class="table table-responsive">--}}
             <tr>
-                <td class="td-fixed-element td-sm"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
+                <td class="td-fixed-element td-sm"><i class="fa-tag fa fa-fw fa-lg"></i><span
                             class="ml-1"></span><span>{{ trans('general.sku') }} : </span>
                     <span class="ml-2"></span></td>
                 <td>
@@ -22,7 +22,7 @@
             @endif
             @if($element->country)
                 <tr>
-                    <td class="td-fixed-element td-sm"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
+                    <td class="td-fixed-element td-sm"><i class="fa-globe fa fa-fw fa-lg"></i><span
                                 class="ml-1"></span><span>{{ trans('general.country') }} : </span>
                         <span class="ml-2"></span></td>
                     <td>
@@ -32,7 +32,7 @@
             @endif
             @if($element->description)
                 <tr>
-                    <td class="td-fixed-element td-sm"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
+                    <td class="td-fixed-element td-sm"><i class="fa-file-text fa fa-fw fa-lg"></i><span
                                 class="ml-1"></span><span>{{ trans('general.description') }} : </span>
                         <span class="ml-2"></span></td>
                     <td>
@@ -82,7 +82,7 @@
             @endif
             @if($element->mobile)
                 <tr>
-                    <td class="td-fixed-element td-sm"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
+                    <td class="td-fixed-element td-sm"><i class="fa-mobile-phone fa fa-fw fa-lg"></i><span
                                 class="ml-1"></span><span>{{ trans('general.mobile') }} : </span>
                         <span class="ml-2"></span></td>
                     <td>
