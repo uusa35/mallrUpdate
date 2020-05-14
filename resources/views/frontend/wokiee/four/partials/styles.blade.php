@@ -97,7 +97,8 @@
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
     .tt-image-box .tt-btn-wishlist ,
     ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img),
-    .btn > .fa, .fa-fw
+    .btn > .fa, .fa-fw,
+    .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview, .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview:hover
     {
         color: {{ $settings->btn_text_theme_color }}        !important;
         background-color: {{ $settings->btn_bg_theme_color }}        !important;
