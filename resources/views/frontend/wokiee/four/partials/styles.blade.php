@@ -96,7 +96,8 @@
     .btn.btn-border,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
     .tt-image-box .tt-btn-wishlist ,
-    ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img)
+    ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img),
+    .btn > .fa, .fa-fw
     {
         color: {{ $settings->btn_text_theme_color }}        !important;
         background-color: {{ $settings->btn_bg_theme_color }}        !important;
@@ -118,7 +119,6 @@
     .tt-menu-toggle.stylization-02,
     header .tt-dropdown-obj .tt-dropdown-toggle,
     header .tt-multi-obj ul li.active a [class^=icon-],
-    .fa, .fa-fw,
     .datepicker-panel > ul > li,
     .tt-social-icon li a, .tt-social-icon li a:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a, header .tt-dropdown-obj .tt-dropdown-toggle, .tt-dropdown-toggle {
