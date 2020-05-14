@@ -66,7 +66,7 @@
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>
                                 <td>
-                                    <span class="label {{ activeLabel($element->visible) }}">{{ activeText($element->visible,'visible on app') }}</span>
+                                    <span class="label {{ activeLabel($element->is_visible) }}">{{ activeText($element->is_visible,'visible on app') }}</span>
 
                                 </td>
                                 <td>

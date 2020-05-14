@@ -38,6 +38,7 @@ Route::group(['namespace' => 'Api'], function () {
     Route::get('location/address', 'GeoLocationController@getAddressFromLocation')->name('location.address');
     Route::get('country/ip', 'CountryController@getUserCountry');
     Route::resource('user', 'UserController')->only(['index', 'show']);
+    Route::resource('role', 'RoleController')->only(['index']);
     Route::post('authenticate', 'UserController@authenticate');
     Route::get('google/authenticate', 'UserController@googleAuthenticate');
     Route::post('register', 'UserController@register');
@@ -66,6 +67,8 @@ Route::group(['namespace' => 'Api'], function () {
     Route::resource('comment', 'CommentController')->only(['index']);
     Route::resource('page', 'PageController')->only(['index']);
     Route::resource('tag', 'TagController')->only(['index']);
+    Route::resource('color', 'ColorController')->only(['index']);
+    Route::resource('size', 'SizeController')->only(['index']);
     Route::post('map/event', function (Request $request) {
         event(new MyEvent($request->message, $request->id));
         return response()->json(['message' => $request->message, 'id' => $request->id], 200);
@@ -110,11 +113,11 @@ Route::get('attribute/qty', function () {
 Route::resource('homekey/category', 'Api\Homekey\CategoryController')->only(['index', 'show']);
 Route::post('attributes', function () {
     $product = Product::whereId(request()->product_id)->with('product_attributes.color', 'product_attributes.size')->first();
-    if ($product->has_attributes && $product->product_attributes->isNotEmpty()) {
+    if ($product && $product->has_attributes && $product->product_attributes->isNotEmpty()) {
         $attributes = ProductAttribute::where('product_id', request()->product_id)->with('color', 'size')->get();
         return response()->json(ProductAttributeLightResource::collection($attributes), 200);
     }
-    return response()->json(false, 200);
+    return response()->json(['message' => 'no_attributes'], 200);
 });
 
 

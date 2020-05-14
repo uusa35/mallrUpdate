@@ -35,8 +35,7 @@ class ProductController extends Controller
             return redirect()->route('frontend.home')->withErrors($validator->messages());
         }
         $elements = $this->product->active()->hasImage()->hasStock()->filters($filters)->with(
-            'brand', 'product_attributes.color', 'product_attributes.size', 'tags', 'user.country', 'images',
-            'colors', 'sizes', 'favorites'
+            'brand', 'product_attributes.color', 'product_attributes.size', 'tags', 'user.country', 'images', 'favorites'
         )->with(['categories' => function ($q) {
             return $q->has('products', '>', 0);
         }])->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);

@@ -21,5 +21,6 @@ $factory->define(Role::class, function (Faker $faker) {
         'active' => $faker->boolean(true),
         'color' => $faker->colorName,
         'order' => $faker->numberBetween(1, 10),
+        'image' => env('APP_MODE') . '-' . $faker->numberBetween(1, 42) . '.jpeg',
     ];
 });

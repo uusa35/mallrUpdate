@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Resources\BranchResource;
-use App\Models\Branch;
+use App\Http\Resources\SizeLightResource;
+use App\Models\Size;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BranchController extends Controller
+class SizeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +16,10 @@ class BranchController extends Controller
      */
     public function index()
     {
-        $elements = Branch::active()->get();
-        return response()->json(BranchResource::collection($elements),200);
+        $elements = Size::active()->get();
+        return response()->json(SizeLightResource::collection($elements),200);
     }
 
-    public function getLocalBranches() {
-        $elements = Branch::where(['active' => true, 'country_id' => 1])->get();
-        return response()->json(BranchResource::collection($elements),200);
-    }
 
     /**
      * Show the form for creating a new resource.

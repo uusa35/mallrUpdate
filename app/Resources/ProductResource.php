@@ -38,8 +38,8 @@ class ProductResource extends JsonResource
             'description' => $this->description,
             'notes' => $this->notes,
             'keywords' => $this->keywords,
-            'thumb' => $this->imageThumbLink,
-            'large' => $this->imageLargeLink,
+            'thumb' => $this->getCurrentImageAttribute(),
+            'large' => $this->getCurrentImageAttribute('image', 'large'),
             'views' => (integer) $this->views,
             'videoGroup'=> [
                 'video_url_one' => $this->video_url_one,

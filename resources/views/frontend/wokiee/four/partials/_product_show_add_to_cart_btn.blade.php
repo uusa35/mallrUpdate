@@ -1,6 +1,6 @@
 <div class="tt-wrapper">
     @if($element->has_attributes)
-        <div class="card bg-danger mb-3">
+        <div class="card bg-danger mb-3 d-none" id="alertCartMessage">
             <div class="card-header">
                 <span class="text-white ">{{ trans('general.choose_color_then_size') }}</span>
             </div>

@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useCallback, useMemo} from 'react'
 import {trans} from "./trans";
 import axios from 'axios';
-import {filter, first, map, uniqBy, isEmpty , sum } from 'lodash'
+import {filter, first, map, uniqBy, isEmpty, sum} from 'lodash'
+import $ from 'jquery'
 
 const ProductAttributeApp = () => {
-    const [lang, setLang] = useState(document.getElementById('appLang').value)
-    const [productId, setProductId] = useState(document.getElementById('product_id').value)
+    const [lang, setLang] = useState($('#appLang').value)
+    const [productId, setProductId] = useState($('#product_id').val())
     const [currentLang, setCurrentLang] = useState(trans(lang));
     const [attributes, setAttributes] = useState([]);
     const [colors, setColors] = useState([]);
@@ -16,12 +17,35 @@ const ProductAttributeApp = () => {
     const [colorDisabled, setColorDisabled] = useState(true);
 
     useEffect(() => {
-        axios.post(`/api/attributes`, {product_id: productId})
-            .then(r => {
-                setAttributes(r.data)
-                document.getElementById(`add_to_cart_${productId}`).setAttribute('disabled', 'disabled');
-            })
-            .catch(e => console.log('e', e))
+        $(document).ready(() => {
+            axios.post(`/api/attributes`, {product_id: productId})
+                .then(r => {
+                    setAttributes(r.data)
+                    $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
+                })
+                .catch(e => console.log('e', e))
+            // let qty = $(`#qty_${productId}`);
+            // const currentQty = $(`#qty_${productId}`).attr('value');
+            // const maxSize = $(`#max-qty-${productId}`).attr('max');
+            // $(`[id^=plus-btn]`).on('click', function() {
+            //     const newQty = parseInt(sum([currentQty, 1]));
+            //     console.log('newqty', newQty)
+            //     console.log('maxSize', maxSize)
+            //     if (newQty <= maxSize) {
+            //         console.log('form inside if')
+            //         $(`#qty_${productId}`).attr('value', newQty);
+            //         $(`#max-qty-${productId}`).attr('value', newQty);
+            //     }
+            // })
+            //
+            // $(`[id^=minus-btn]`).on('click', function() {
+            //     const newQty = sum([currentQty, -1]);
+            //     if (newQty <= maxSize && newQty > 0) {
+            //         $(`#qty_${productId}`).attr('value', newQty);
+            //         $(`#max-qty-${productId}`).attr('value', newQty);
+            //     }
+            // })
+        })
     }, [])
 
     useMemo(() => {
@@ -44,8 +68,8 @@ const ProductAttributeApp = () => {
         const attribute = first(filter(attributes, (a => a.color.id === firstColor.id && a.size.id === currentSize)));
         setCurrentAttribute(attribute)
         setColorDisabled(false);
-        document.getElementById(`size_id_${productId}`).setAttribute('value', id);
-
+        $(`#size_id_${productId}`).attr('value', id);
+        $('#alertCartMessage').removeClass('d-none');
     })
 
     const handleColorClick = useCallback((id) => {
@@ -57,29 +81,30 @@ const ProductAttributeApp = () => {
     }, [currentColor])
 
     useEffect(() => {
-        if (!isEmpty(currentAttribute)) {
-            const {color, qty} = currentAttribute;
-            document.getElementById(`color_id_${productId}`).setAttribute('value', color.id);
-            // const newQty = sum([document.getElementById(`qty_${productId}`).getAttribute('value'),1]);
-            // document.getElementById(`qty_${productId}`).setAttribute('value', newQty);
-            // console.log('new Qty', newQty);
-            document.getElementById(`max-qty-${productId}`).setAttribute('size', qty);
-            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', currentAttribute.id);
-            document.getElementById(`max-qty-${productId}`).setAttribute('value', 1);
-            document.getElementById(`minus-btn-${productId}`).removeAttribute('disabled');
-            document.getElementById(`plus-btn-${productId}`).removeAttribute('disabled');
-            document.getElementById(`add_to_cart_${productId}`).removeAttribute('disabled');
-        } else {
-            document.getElementById(`color_id_${productId}`).setAttribute('value', null);
-            // document.getElementById(`qty_${productId}`).setAttribute('value', 0);
-            document.getElementById(`max-qty-${productId}`).setAttribute('size', 0);
-            document.getElementById(`product_attribute_id_${productId}`).setAttribute('value', null);
-            document.getElementById(`max-qty-${productId}`).setAttribute('value', 1);
-            document.getElementById(`add_to_cart_${productId}`).setAttribute('disabled', 'disabled');
-            document.getElementById(`minus-btn-${productId}`).setAttribute('disabled', 'disabled');
-            document.getElementById(`plus-btn-${productId}`).setAttribute('disabled', 'disabled');
+        $(document).ready(() => {
+            if (!isEmpty(currentAttribute)) {
+                const {color, qty} = currentAttribute;
+                $(`#color_id_${productId}`).attr('value', color.id);
+                // const newQty = sum([$`#qty_${productId}`).getAttribute('value'),1]);
+                $(`#qty_${productId}`).attr('value', 1);
+                // console.log('new Qty', newQty);
+                $(`#max-qty-${productId}`).attr('size', qty);
+                $(`#product_attribute_id_${productId}`).attr('value', currentAttribute.id);
+                $(`#max-qty-${productId}`).attr('value', 1);
+                $(`#minus-btn-${productId}`).removeAttr('disabled');
+                $(`#plus-btn-${productId}`).removeAttr('disabled');
+                $(`#add_to_cart_${productId}`).removeAttr('disabled');
+            } else {
+                $(`#color_id_${productId}`).attr('value', null);
+                $(`#qty_${productId}`).attr('value', 0);
+                $(`#max-qty-${productId}`).removeAttr('size');
+                $(`#product_attribute_id_${productId}`).attr('value', null)
+                $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
+                $(`#minus-btn-${productId}`).attr('disabled', 'disabled');
+                $(`#plus-btn-${productId}`).attr('disabled', 'disabled');
 
-        }
+            }
+        });
     }, [currentAttribute])
 
     return (

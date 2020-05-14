@@ -8,7 +8,7 @@ class Role extends PrimaryModel
 {
     use LocaleTrait;
     protected $guarded = [''];
-    protected $localeStrings = ['slug'];
+    protected $localeStrings = ['slug','caption'];
     protected $casts = [
         'is_designer' => 'boolean',
         'is_client' => 'boolean',
