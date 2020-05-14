@@ -10,7 +10,7 @@
     @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.our_personal_shoppers'), 'elements' => $designers])
     @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
     @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
-    @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.on_sale_products'), 'elements' => $newProducts])
+    @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.on_sale_products'), 'elements' => $onSaleProducts])
     {{--        @if(isset($categoriesHome) && $categoriesHome->isNotEmpty())--}}
     {{--            @include('frontend.wokiee.four.partials._five_categories',['elements' => $categoriesHome])--}}
     {{--        @endif--}}
