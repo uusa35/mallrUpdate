@@ -21,11 +21,9 @@
             background-color: #ffffff;
             border-color: #000000;
         }
-
         .alert-danger i {
             color: red !important;
         }
-
         .page-link, .page-item.disabled .page-link {
             border: none !important;
             background-color: transparent !important;
@@ -76,7 +74,7 @@
         {{--border-color: {{ $settings->btn_text_theme_color }}    !important;--}}
     }
 
-    .tt-shopcart-table-02 .tt-title a, .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
+    .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
     .tt-desctop-menu:not(.tt-hover-02), .tt-btn-quickview {
@@ -105,12 +103,11 @@
     .tt-price, .old-price, p,
     .tt-login-form .tt-item .additional-links a,
     .money, .tt-description-wrapper, .tt-description-wrapper:hover, .tt-description,
-    .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block,
+    .product-information-buttons a, .tt-services-block,
     header .tt-multi-obj ul li a:hover, header .tt-multi-obj ul li a:hover, .tt-btn-quickview:hover,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-quickview:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a:hover, .tt-block-title .tt-description,
-    .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover, .tt-collapse-content a,
-    .tt-product:not(.tt-view) .tt-description .tt-title a
+    .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover, .tt-collapse-content a
     {
 
         color: {{ $settings->normal_text_theme_color }}        !important;
@@ -118,13 +115,16 @@
 
     h1, h2, h3, .tt-dropdown-toggle, .countdown-selection .theme-color, .tt-countdown, .tt-countdown_box, .tt-product-single-info > a, .tt-price, .old-price,
     .form-check-label, .card-header, label, label:not(.error), .card-text,
-    .money, header .tt-multi-obj ul li.active a, .tt-table-shop-01 tbody td a, .product-information-buttons a, .tt-services-block .tt-col-icon {
+    .money, header .tt-multi-obj ul li.active a, .product-information-buttons a, .tt-services-block .tt-col-icon,
+    .tt-title, .tt-collapse-title, .tt-block-title, .tt-block-title .tt-title a
+    {
         color: {{ $settings->header_one_theme_color }}  !important;
     }
 
-    .tt-title, .tt-collapse-title, .tt-block-title {
-        color: {{ $settings->header_one_theme_color }}        !important;
-{{--        border-color: {{ $settings->header_one_theme_color }}        !important;--}}
+    .tt-product:not(.tt-view) .tt-description .tt-title a, .tt-shopcart-table-02 .tt-title a,
+    .tt-table-shop-01 tbody td a
+    {
+        color: {{ $settings->header_tow_theme_color }}  !important;
     }
 
     @media (max-width: 1024px) {
@@ -132,25 +132,6 @@
             background-color: {{ $settings->header_theme_bg }}        !important;
             padding-bottom: 10px;
         }
-    }
-
-    .td-sm {
-        width: 8% !important;
-    }
-
-    .tt-obj-search-type2 {
-        width: 75%;
-    }
-
-    .select2-container--default .select2-selection--single {
-        font-size: 17px;
-        height: 38px;
-        padding: 5px;
-        max-width: 220px;
-    }
-
-    .select2-container--default .select2-results__group {
-        background-color: #dbdbdb;
     }
 
     a .url-normal {
@@ -174,10 +155,6 @@
     .panel-menu ul li a,
     .panel-menu .mm-prev-level {
         color: {{ $settings->main_theme_color ? $settings->main_theme_color : 'white' }};
-    }
-
-    .tt-coming-soon {
-        height: 100% !important;
     }
 
     .tt-col-icon, .tt-services-block .tt-col-icon {
