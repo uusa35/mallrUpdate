@@ -76,10 +76,10 @@ Route::group(['namespace' => 'Api'], function () {
     });
 });
 Route::resource('order', 'Api\OrderController')->only(['store']);
-Route::get('size', function () {
-    $productAttribute = ProductAttribute::where(['product_id' => request()->product_id, 'color_id' => request()->color_id])->where('qty', '>', 0)->with('size')->get();
-    return response()->json($productAttribute, 200);
-});
+//Route::get('size', function () {
+//    $productAttribute = ProductAttribute::where(['product_id' => request()->product_id, 'color_id' => request()->color_id])->where('qty', '>', 0)->with('size')->get();
+//    return response()->json($productAttribute, 200);
+//});
 
 Route::get('colors', function () {
     return ProductAttribute::where([
