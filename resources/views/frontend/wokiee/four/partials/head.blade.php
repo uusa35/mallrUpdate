@@ -20,7 +20,7 @@
 <meta name="address" content="{{ $settings->address }}">
 <meta name="name" content="{{ $settings->company }}">
 <meta name="lang" content="{{ app()->getLocale() }}">
-<input type="hidden" value="{{ app()->getLocale() }}" id="appLang" />
+<input type="hidden" value="{{ app()->getLocale() }}" id="appLang"/>
 <meta itemProp="name" content="{{ $settings->company }}"/>
 <meta itemProp="description" content="{{ trans('general.meta_description') }}"/>
 <meta itemProp="image" content="{{ $settings->logoThumb }}"/>
@@ -33,6 +33,11 @@
     <meta name="google-site-verification" content="zf7iPSnuJgFO519GO36uRJRgzZGHJCN0oAOjwm3fORk"/>
 @elseif(env('ABATI'))
     <meta name="google-site-verification" content="fy3pTvV0z024nR79nukGxw-tnOmJ2F5BnMeayo-g4-c"/>
+@elseif(env('MALLR'))
+    <meta name="google-site-verification" content="jr-GtLYg64G51nUppCuaH_p0C4NkAcofU5bPIkI9jG0"/>
+@endif
+@if(env('ONE_SIGNAL_APP_ID'))
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
@@ -41,7 +46,4 @@
             });
         });
     </script>
-@elseif(env('MALLR'))
-    <meta name="google-site-verification" content="jr-GtLYg64G51nUppCuaH_p0C4NkAcofU5bPIkI9jG0"/>
 @endif
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
