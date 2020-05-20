@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
                                     @if($element->menu_bg)
-                                        <div class="col-md-1">
+                                        <div class="col-lg-1">
                                             <img class="img-responsive img-sm"
                                                  src="{{ asset(env('THUMBNAIL').$element->menu_bg)}}"
                                                  alt="">
@@ -108,7 +108,7 @@
                                         </div>
                                     </div>
                                     @if($element->main_bg)
-                                        <div class="col-md-1">
+                                        <div class="col-lg-1">
                                             <img class="img-responsive img-sm"
                                                  src="{{ $element->getCurrentImageAttribute('main_bg') }}"
                                                  alt="">

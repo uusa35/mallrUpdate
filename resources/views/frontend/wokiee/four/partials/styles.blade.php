@@ -107,7 +107,7 @@
 
     }
 
-    .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
+    .tt-product:not(.tt-view) .tt-description .tt-add-info li a, .tt-description,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
     .tt-desctop-menu:not(.tt-hover-02), .tt-btn-quickview {
