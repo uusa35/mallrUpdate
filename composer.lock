@@ -2196,6 +2196,15 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
+>>>>>>> 3dd12d9112990518f9a6ae9e8f7da90c64344a28
             "time": "2020-05-18T15:13:39+00:00"
         },
         {

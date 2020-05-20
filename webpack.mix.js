@@ -12,8 +12,8 @@ const mix = require('laravel-mix');
  */
 mix.js('resources/assets/js/app.js', 'public/js').version()
     .sass('resources/assets/sass/app.scss', 'public/css').version()
-    .styles('../wokiee-ecommerce-html/html/css/theme.css', 'public/css/wokiee-theme-sass.css').version()
-    .styles('../wokiee-ecommerce-html/html/css/rtl.css', 'public/css/wokiee-theme-sass-rtl.css').version();
+    .styles('../wokiee-ecommerce-html/html/css/theme.css', 'public/css/theme.css').version()
+    .styles('../wokiee-ecommerce-html/html/css/rtl.css', 'public/css/theme-rtl.css').version();
 mix.styles(['resources/assets/css/frontend-custom-ar.css'], 'public/css/frontend-custom-ar.css').version();
 mix.styles(['resources/assets/css/frontend-custom-en.css'], 'public/css/frontend-custom-en.css').version();
 // frontend

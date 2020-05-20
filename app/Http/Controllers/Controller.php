@@ -15,5 +15,5 @@ class Controller extends BaseController
     const TAKE = 100;
     const TAKE_MID = 24;
     const TAKE_MIN = 12;
-    const TAKE_LESS = 6;
+    const TAKE_LESS = 10;
 }

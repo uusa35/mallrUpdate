@@ -1,8 +1,6 @@
-
-{{--<link rel="stylesheet" href="{{ mix('css/wokiee.demo.css') }}">--}}
-<link rel="stylesheet" href="{{ mix('css/wokiee-theme-sass.css') }}">
+<link rel="stylesheet" href="{{ mix('css/theme.css') }}">
 @if (app()->isLocale('ar'))
-    <link rel="stylesheet" href="{{ mix('css/wokiee-theme-sass-rtl.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/theme-rtl.css') }}">
     <link rel="stylesheet" href="{{ mix('css/frontend-custom-ar.css') }}">
 @else
     <link rel="stylesheet" href="{{ mix('css/frontend-custom-en.css') }}">
