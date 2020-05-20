@@ -3,10 +3,8 @@
 <script src="{{ mix('js/frontend-custom.js') }}"></script>
 <script src="{{ mix('js/productAttribute.js') }}"></script>
 @if(app()->isLocale('ar'))
-    {{--<script src="{{ mix('js/wokiee.demo-rtl.js') }}"></script>--}}
     <script src="{{ mix('js/frontend-ar.js') }}"></script>
 @else
-    {{--<script src="{{ mix('js/wokiee.demo.js') }}"></script>--}}
     <script src="{{ mix('js/frontend-en.js') }}"></script>
 @endif
 

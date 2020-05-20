@@ -33,15 +33,15 @@
     <meta name="google-site-verification" content="zf7iPSnuJgFO519GO36uRJRgzZGHJCN0oAOjwm3fORk"/>
 @elseif(env('ABATI'))
     <meta name="google-site-verification" content="fy3pTvV0z024nR79nukGxw-tnOmJ2F5BnMeayo-g4-c"/>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: `{!! env('ONE_SIGNAL_APP_ID') !!}`,
+            });
+        });
+    </script>
 @elseif(env('MALLR'))
     <meta name="google-site-verification" content="jr-GtLYg64G51nUppCuaH_p0C4NkAcofU5bPIkI9jG0"/>
 @endif
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-    var OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-        OneSignal.init({
-            appId: `{!! env('ONE_SIGNAL_APP_ID') !!}`,
-        });
-    });
-</script>

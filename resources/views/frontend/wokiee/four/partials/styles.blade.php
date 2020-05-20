@@ -44,7 +44,7 @@
         /*font-family: 'Tajawal', 'sans-serif' !important;*/
         font-family: 'fb', 'sans-serif' !important;
         /*font-family: 'skynews', 'sans-serif' !important;*/
-        direction: rtl;
+        /*direction: rtl;*/
     }
 
     @elseif(env('DAILY'))
@@ -58,7 +58,7 @@
         font-family: 'Tajawal', 'sans-serif' !important;
         /*font-family: 'fb', 'sans-serif' !important;*/
         /*font-family: 'skynews', 'sans-serif' !important;*/
-        direction: rtl;
+        /*direction: rtl;*/
     }
 
     @endif
