@@ -9,10 +9,10 @@
 </div>
 @component('mail::panel')
 # {{ trans('general.order_number') }} : {{ $order->id }}
-<strong style="float: right;"> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
-<strong style="float: right;"> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
-<strong style="float: right;"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
-<strong style="float: right;"> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
+<strong style=""> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
+<strong style=""> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
+<strong style=""> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
+<strong style=""> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
 <br>
 @endcomponent
 
