@@ -5,7 +5,7 @@ import {filter, first, map, uniqBy, isEmpty, sum} from 'lodash'
 import $ from 'jquery'
 
 const ProductAttributeApp = () => {
-    const [lang, setLang] = useState($('#appLang').value)
+    const [lang, setLang] = useState($('#appLang').val())
     const [productId, setProductId] = useState($('#product_id').val())
     const [currentLang, setCurrentLang] = useState(trans(lang));
     const [attributes, setAttributes] = useState([]);
@@ -87,7 +87,6 @@ const ProductAttributeApp = () => {
                 $(`#color_id_${productId}`).attr('value', color.id);
                 // const newQty = sum([$`#qty_${productId}`).getAttribute('value'),1]);
                 $(`#qty_${productId}`).attr('value', 1);
-                // console.log('new Qty', newQty);
                 $(`#max-qty-${productId}`).attr('size', qty);
                 $(`#product_attribute_id_${productId}`).attr('value', currentAttribute.id);
                 $(`#max-qty-${productId}`).attr('value', 1);
@@ -120,7 +119,6 @@ const ProductAttributeApp = () => {
                             </li>
                         )
                     }
-
                 </ul>
             </div>
             <div className="tt-wrapper">

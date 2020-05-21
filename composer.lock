@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "alexpechkarev/geometry-library",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alexpechkarev/geometry-library.git",
-                "reference": "63e913a4e36f6d837e2e3f003f087dd49ec722e5"
+                "reference": "85a0859e87343e871020f0bc7530309d75ab4a3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexpechkarev/geometry-library/zipball/63e913a4e36f6d837e2e3f003f087dd49ec722e5",
-                "reference": "63e913a4e36f6d837e2e3f003f087dd49ec722e5",
+                "url": "https://api.github.com/repos/alexpechkarev/geometry-library/zipball/85a0859e87343e871020f0bc7530309d75ab4a3c",
+                "reference": "85a0859e87343e871020f0bc7530309d75ab4a3c",
                 "shasum": ""
             },
             "type": "library",
@@ -50,24 +50,24 @@
                 "php geometry library",
                 "spherical geometry utilities"
             ],
-            "time": "2017-09-22T13:39:02+00:00"
+            "time": "2019-12-24T19:02:19+00:00"
         },
         {
             "name": "alexpechkarev/google-maps",
-            "version": "7.0.0",
+            "version": "7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alexpechkarev/google-maps.git",
-                "reference": "bb3872f7a103e975e4864254500ffb789b68b65a"
+                "reference": "61865e5d73ce64023a43cbb3cc16a368dedfca8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexpechkarev/google-maps/zipball/bb3872f7a103e975e4864254500ffb789b68b65a",
-                "reference": "bb3872f7a103e975e4864254500ffb789b68b65a",
+                "url": "https://api.github.com/repos/alexpechkarev/google-maps/zipball/61865e5d73ce64023a43cbb3cc16a368dedfca8f",
+                "reference": "61865e5d73ce64023a43cbb3cc16a368dedfca8f",
                 "shasum": ""
             },
             "require": {
-                "alexpechkarev/geometry-library": "1.0.1",
+                "alexpechkarev/geometry-library": "^1.0.2",
                 "ext-curl": "*",
                 "ext-json": "*",
                 "illuminate/config": "^7.0",
@@ -122,7 +122,7 @@
                 "roads api",
                 "time zone api"
             ],
-            "time": "2020-03-13T10:30:50+00:00"
+            "time": "2020-05-20T07:44:27+00:00"
         },
         {
             "name": "almasaeed2010/adminlte",
