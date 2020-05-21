@@ -5,14 +5,14 @@
 </div>
 
 <div style="text-align: left;">
-    {{ trans('general.date') }} : {{ Carbon\Carbon::today()->format('d/m/Y') }}
+{{ trans('general.date') }} : {{ Carbon\Carbon::today()->format('d/m/Y') }}
 </div>
 @component('mail::panel')
 # {{ trans('general.order_number') }} : {{ $order->id }}
-<strong style=""> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
-<strong style=""> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
-<strong style=""> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
-<strong style=""> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
+<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
+<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
+<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
+<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
 <br>
 @endcomponent
 
@@ -26,15 +26,17 @@
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }}|
 @elseif($orderMeta->product->size && $orderMeta->product->color)
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product->size->name }} | {{ $orderMeta->product->color->name }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
+@else
+| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ 'N/A' }} | {{ 'N/A' }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
 @endif
 @elseif($orderMeta->isServiceType)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ str_limit($orderMeta->service->name,10,'') }}|
 @elseif($orderMeta->isQuestionnaireType)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->created_at->format('d/m/Y') }} | {{ $orderMeta->questionnaire->user->slug }} | {{ $orderMeta->questionnaire->id }}|{{ str_limit($orderMeta->questionnaire->name,10,'') }}|
 @component('mail::panel')
-    <div style="font-size: large; font-weight: bold; direction: rtl !important;">
-        {{ trans('message.questionnaire_order_message') }}
-    </div>
+<div style="font-size: large; font-weight: bold;">
+{{ trans('message.questionnaire_order_message') }}
+</div>
 @endcomponent
 @endif
 @endforeach
@@ -58,7 +60,7 @@
 
 @component('mail::panel')
 <div style="font-size: large; font-weight: bold; text-align: center !important;">
-    {{ trans('message.we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service') }}
+{{ trans('message.we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service') }}
 </div>
 @endcomponent
 
@@ -74,7 +76,7 @@
 
 
 <div style="text-align: center; width: 100%; float: left; font-weight: bolder;">
-    مع تحيات,<br>
-    {{ env('APP_NAME') }}
+مع تحيات,<br>
+{{ env('APP_NAME') }}
 </div>
 @endcomponent
