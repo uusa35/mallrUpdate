@@ -327,7 +327,7 @@
                                                         <div class="form-group">
                                                             <label for="file"
                                                                    class="control-label">{{ trans('general.qr') }}
-                                                                *</label>
+                                                                </label>
 
                                                             <input class="form-control tooltips" data-container="body"
                                                                    data-placement="top"
