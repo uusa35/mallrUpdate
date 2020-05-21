@@ -26,6 +26,8 @@
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }}|
 @elseif($orderMeta->product->size && $orderMeta->product->color)
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product->size->name }} | {{ $orderMeta->product->color->name }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
+@else
+| {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ 'N/A' }} | {{ 'N/A' }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
 @endif
 @elseif($orderMeta->isServiceType)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ str_limit($orderMeta->service->name,10,'') }}|
