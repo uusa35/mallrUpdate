@@ -208,6 +208,7 @@ function getClientCountry()
         return Currency::where('country_code', request()->header('country'))->first();
     }
     // i want it to assign the country as null in case it's not included in the DB
+//    dd(session()->get('country'));
     return session()->get('country');
 }
 

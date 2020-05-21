@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Jobs\CheckCartItems;
+use App\Jobs\sendSuccessOrderEmail;
 use App\Models\Country;
 use App\Models\Order;
+use App\Models\Setting;
 use App\Services\CartTrait;
 use App\Services\Traits\OrderTrait;
 use Gloudemans\Shoppingcart\Cart;
@@ -31,7 +33,7 @@ class OrderController extends Controller
         $elements = Order::where(['user_id' => auth()->user()->id, 'status' => 'success'])->with('order_metas.product', 'order_metas.service')->paginate(self::TAKE);
 //        $ids = $orders->pluck('order_metas')->flatten()->unique()->pluck('product.id')->toArray();
 //        $elements = Product::whereIn('id', $ids)->paginate(12);
-        return view('frontend.wokiee.four.modules.order.index', compact('elements', 'orders'));
+        return view('frontend.wokiee.four.modules.order.index', compact('elements'));
     }
 
     /**
@@ -50,7 +52,7 @@ class OrderController extends Controller
         $validate = validator($request->all(), [
             'country_id' => 'required|exists:countries,id',
         ]);
-        if($validate->fails()) {
+        if ($validate->fails()) {
             return redirect()->back()->with('error', trans('general.country_is_required'));
         }
         $country = Country::whereId($request->country_id)->first();
@@ -122,5 +124,17 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function cashOnDeliveryReceived(Request $request)
+    {
+        $order = Order::whereId($request->id)->first();
+        if ($order->cash_on_delivery) {
+            $contactus = Setting::first();
+            dispatch(new sendSuccessOrderEmail($order, $order->user, $contactus))->delay(now()->addSeconds(10));
+            session()->forget('cart');
+            return redirect()->route('frontend.home')->with('success', trans('message.we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service'));
+        }
+        return redirect()->route('frontend.home')->with('error', 'Order is not complete');
     }
 }

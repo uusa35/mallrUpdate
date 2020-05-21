@@ -131,6 +131,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     // checkout.review is order.show
     Route::resource('order', 'OrderController');
     Route::get('view/invoice/{id}', 'OrderController@viewInvoice')->name('invoice.show');
+    Route::get('order/cash/delivery/{id}', 'OrderController@cashOnDeliveryReceived')->name('order.cash.delivery');
     Route::resource('category', 'CategoryController');
     Route::resource('user', 'UserController');
     Route::get('user/{id}/{name}', 'UserController@show')->name('user.show.name');

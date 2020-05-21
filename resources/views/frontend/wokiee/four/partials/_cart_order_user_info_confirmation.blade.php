@@ -111,7 +111,8 @@
                                         {{ trans('general.payment_confirm_go_to_payment') }}
                                     </button>
                                 @else
-                                    <a href="{{ route('frontend.home') }}" class="btn btn-lg">
+                                    <a href="{{ route('frontend.order.cash.delivery', $order->id) }}"
+                                       class="btn btn-lg">
                                         <span class="icon icon-check_circle"></span>
                                         {{ trans('general.order_cash_on_delivery_complete') }}
                                     </a>

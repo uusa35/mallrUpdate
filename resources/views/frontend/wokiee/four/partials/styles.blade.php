@@ -30,6 +30,9 @@
             border: none !important;
             background-color: transparent !important;
         }
+        .tt-product:not(.tt-view) .tt-description {
+            background-color: black !important;
+        }
     </style>
 @endif
 <style type="text/css">
@@ -103,15 +106,13 @@
     .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview, .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview:hover {
         color: {{ $settings->btn_text_theme_color }}         !important;
         background-color: {{ $settings->btn_bg_theme_color }}         !important;
-    {{--border-color: {{ $settings->btn_text_theme_color }}    !important;--}}
-
     }
 
-    .tt-product:not(.tt-view) .tt-description .tt-add-info li a,
+    .tt-product:not(.tt-view) .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
     .tt-desctop-menu:not(.tt-hover-02), .tt-btn-quickview {
-        color: {{ $settings->main_theme_color }}         !important;
+        color: {{ $settings->main_theme_color }} !important;
     }
 
     .tt-mobile-header .tt-top-line {
@@ -134,11 +135,12 @@
     .tt-product-single-info > a,
     .tt-price, .old-price, p,
     .tt-login-form .tt-item .additional-links a,
-    .money, .tt-description-wrapper, .tt-description-wrapper:hover, .tt-description,
+    .tt-description,
+    .money, .tt-description-wrapper, .tt-description-wrapper:hover,
     .product-information-buttons a, .tt-services-block,
     header .tt-multi-obj ul li a:hover, header .tt-multi-obj ul li a:hover, .tt-btn-quickview:hover,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-quickview:hover,
-    .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a:hover, .tt-block-title .tt-description,
+    .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a:hover, .tt-block-title,
     .tt-promo-box.hover-type-2:hover, .tt-product:not(.tt-view):hover, .tt-collapse-content a {
 
         color: {{ $settings->normal_text_theme_color }}         !important;
@@ -168,10 +170,6 @@
         color: {{ $settings->main_text_theme_color }}         !important;
         text-underline: none !important;
     }
-
-    /*.tt-product:not(.tt-view) .tt-description {*/
-    /*    background: transparent !important;*/
-    /*}*/
 
     /*     mobile menu */
     .panel-menu {

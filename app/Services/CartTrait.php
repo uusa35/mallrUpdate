@@ -49,7 +49,6 @@ trait CartTrait
 
     public function addCountryToCart($country, $cart)
     {
-
         $element = $cart->content()->where('options.type', 'country')->first();
         if ($element) {
             $cart->remove($element->rowId);

@@ -55,7 +55,7 @@
                                     @if($element->logo)
                                         <div class="col-md-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->logo)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('logo') }}"
                                                  alt="">
                                         </div>
                                     @endif
@@ -72,7 +72,7 @@
                                     @if($element->app_logo)
                                         <div class="col-md-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->app_logo)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('app_logo') }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'setting', 'id' => $element->id ,'colName' => 'app_logo']) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>
@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
                                     @if($element->menu_bg)
-                                        <div class="col-md-1">
+                                        <div class="col-lg-1">
                                             <img class="img-responsive img-sm"
                                                  src="{{ asset(env('THUMBNAIL').$element->menu_bg)}}"
                                                  alt="">
@@ -108,9 +108,9 @@
                                         </div>
                                     </div>
                                     @if($element->main_bg)
-                                        <div class="col-md-1">
+                                        <div class="col-lg-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->main_bg)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('main_bg') }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'setting', 'id' => $element->id ,'colName' => 'main_bg']) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>
@@ -131,7 +131,7 @@
                                     @if($element->size_chart)
                                         <div class="col-md-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->size_chart)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('size_chart') }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'setting', 'id' => $element->id ,'colName' => 'size_chart']) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>
@@ -152,7 +152,7 @@
                                     @if($element->shipment_prices)
                                         <div class="col-md-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->shipment_prices)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('shipment_prices') }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'setting', 'id' => $element->id ,'colName' => 'shipment_prices']) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>
@@ -186,7 +186,7 @@
                                     @if($element->gift_image)
                                         <div class="col-md-1">
                                             <img class="img-responsive img-sm"
-                                                 src="{{ asset(env('THUMBNAIL').$element->gift_image)}}"
+                                                 src="{{ $element->getCurrentImageAttribute('gift_image') }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'setting', 'id' => $element->id ,'colName' => 'gift_image']) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>

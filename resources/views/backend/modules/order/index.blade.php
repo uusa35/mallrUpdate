@@ -108,7 +108,7 @@
                         <tbody>
                         @foreach($elements as $element)
                             <tr>
-                                <td>{{ '#'.$element->id }}</td>
+                                <td>{{ $element->id }}</td>
                                 <td>
                                     @if($element->order_metas->isNotEmpty())
                                         <div class="btn-group-vertical btn-group-solid">
