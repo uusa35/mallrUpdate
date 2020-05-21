@@ -106,8 +106,6 @@
     .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview, .tt-product:not(.tt-view):hover .tt-image-box .tt-btn-quickview:hover {
         color: {{ $settings->btn_text_theme_color }}         !important;
         background-color: {{ $settings->btn_bg_theme_color }}         !important;
-    {{--border-color: {{ $settings->btn_text_theme_color }}    !important;--}}
-
     }
 
     .tt-product:not(.tt-view) .tt-add-info li a,
@@ -172,10 +170,6 @@
         color: {{ $settings->main_text_theme_color }}         !important;
         text-underline: none !important;
     }
-
-    /*.tt-product:not(.tt-view) .tt-description {*/
-    /*    background: transparent !important;*/
-    /*}*/
 
     /*     mobile menu */
     .panel-menu {
