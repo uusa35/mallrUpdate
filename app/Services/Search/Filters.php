@@ -37,6 +37,19 @@ class Filters extends QueryFilters
 //            ->orWhere('notes_en', 'like', "%{$search}%");
     }
 
+    public function slug($search)
+    {
+        return $this->builder
+            ->where('slug_ar', 'like', "%{$search}%")
+            ->orWhere('slug_en', 'like', "%{$search}%")
+            ->orWhere('description_ar', 'like', "%{$search}%")
+            ->orWhere('description_en', 'like', "%{$search}%");
+//            ->orWhere('notes_ar', 'like', "%{$search}%")
+//            ->orWhere('notes_en', 'like', "%{$search}%");
+    }
+
+
+
     public function product_category_id()
     {
         if(request()->has('user_id')) {
