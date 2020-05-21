@@ -72,13 +72,13 @@ class Filters extends QueryFilters
 
     public function classified_category_id()
     {
-//        $category = $this->category->whereId(request()->classified_category_id)->with('children')->first();
-//        if ($category->children->isEmpty()) {
-//            return $this->builder->where('category_id', request()->classified_category_id);
-//        } else {
-//            $ids = $category->children->pluck('id')->merge($category->id)->toArray();
-//            return $this->builder->whereIn('category_id', $ids);
-//        }
+        $category = $this->category->whereId(request()->classified_category_id)->with('children')->first();
+        if ($category->children->isEmpty()) {
+            return $this->builder->where('category_id', request()->classified_category_id);
+        } else {
+            $ids = $category->children->pluck('id')->merge($category->id)->toArray();
+            return $this->builder->whereIn('category_id', $ids);
+        }
 //        return $this->builder->whereHas('categories', function ($q) {
 //            return $q->where('category_id',request()->classified_category_id);
 //        })->orWhere('category_id', request()->classified_category_id);
