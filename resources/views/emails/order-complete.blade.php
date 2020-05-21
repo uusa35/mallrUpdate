@@ -9,10 +9,10 @@
 </div>
 @component('mail::panel')
 # {{ trans('general.order_number') }} : {{ $order->id }}
-<strong style="direction: rtl; float: right;"> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
-<strong style="direction: rtl; float: right;"> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
-<strong style="direction: rtl; float: right;"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
-<strong style="direction: rtl; float: right;"> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
+<strong style="float: right;"> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
+<strong style="float: right;"> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
+<strong style="float: right;"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
+<strong style="float: right;"> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
 <br>
 @endcomponent
 
@@ -57,7 +57,7 @@
 <hr>
 
 @component('mail::panel')
-<div style="font-size: large; font-weight: bold; direction: rtl !important;">
+<div style="font-size: large; font-weight: bold; text-align: center !important;">
     {{ trans('message.we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service') }}
 </div>
 @endcomponent
