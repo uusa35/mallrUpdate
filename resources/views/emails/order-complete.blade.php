@@ -24,7 +24,7 @@
 @if($orderMeta->isProductType)
 @if($orderMeta->product->has_attributes)
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }}|
-@else
+@elseif($orderMeta->product->size && $orderMeta->product->color)
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product->size->name }} | {{ $orderMeta->product->color->name }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
 @endif
 @elseif($orderMeta->isServiceType)
