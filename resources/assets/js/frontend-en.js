@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     console.log('frontend-en started');
     $('*[class^="tt-carousel-products"]').not('.slick-initialized').slick({
         rtl: false,
@@ -6,7 +6,7 @@ $(document).ready(function () {
         arrows: true,
         infinite: true,
         speed: 300,
-        slidesToShow:  4,
+        slidesToShow: 4,
         slidesToScroll: 4,
         adaptiveHeight: true,
         responsive: [{
