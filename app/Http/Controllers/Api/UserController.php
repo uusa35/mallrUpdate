@@ -21,7 +21,7 @@ class UserController extends Controller
 {
     public $element;
 
-    public public function __construct(User $user)
+    public function __construct(User $user)
     {
         $this->element = $user;
     }
@@ -34,11 +34,11 @@ class UserController extends Controller
     public function index()
     {
         if (request()->has('category_id')) {
-            $elements = $this->elemnet->active()->companies()->notAdmins()->whereHas('categories', function ($q) {
+            $elements = $this->element->active()->companies()->notAdmins()->whereHas('categories', function ($q) {
                 return $q->where(['category_id' => request()->category_id]);
             })->paginate(self::TAKE_MIN);
         } elseif (request()->has('type')) {
-            $elements = $this->elemnet->active()->whereHas('role', function ($q) {
+            $elements = $this->element->active()->whereHas('role', function ($q) {
                 return $q->where(request()->type, true);
             });
             if (request()->has('on_home')) {
@@ -58,7 +58,7 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json(['message' => $validator->errors()->first()], 400);
         }
-        $elements = $this->elemnet->filters($filters)->active()->notAdmins()->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
+        $elements = $this->element->filters($filters)->active()->notAdmins()->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
         if (!$elements->isEmpty()) {
             return response()->json(UserExtraLightResource::collection($elements), 200);
         } else {
@@ -95,7 +95,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $element = $this->elemnet->whereId($id)->with('role', 'images', 'slides')
+        $element = $this->element->whereId($id)->with('role', 'images', 'slides')
             ->with(['collections' => function ($q) {
                 return $q->active()->whereHas('products', function ($q) {
                     return $q->active()->hasImage()->available()->hasStock()->hasAtLeastOneCategory();
@@ -194,7 +194,7 @@ class UserController extends Controller
         }
         $authenticate = auth()->attempt($request->only('email', 'password'));
         if ($authenticate) {
-            $element = $this->elemnet->where(['email' => $request->email])->with(['product_favorites' => function ($q) {
+            $element = $this->element->where(['email' => $request->email])->with(['product_favorites' => function ($q) {
                 return $q->active()->hasImage()->available()->hasAtLeastOneCategory();
             }])->with(['orders' => function ($q) {
                 return $q->paid();
@@ -213,7 +213,7 @@ class UserController extends Controller
 
     public function reAuthenticate(Request $request)
     {
-        $element = $this->elemnet->whereId($request->user()->id)->with(['product_favorites' => function ($q) {
+        $element = $this->element->whereId($request->user()->id)->with(['product_favorites' => function ($q) {
             return $q->active()->hasStock()->hasImage()->available()->hasAtLeastOneCategory();
         }])->with(['orders' => function ($q) {
             return $q->paid();
@@ -243,7 +243,7 @@ class UserController extends Controller
         if ($validate->fails()) {
             return response()->json(['message' => $validate->errors()->first()], 400);
         }
-        $element = $this->elemnet->create([
+        $element = $this->element->create([
             'name' => $request->name,
             'slug_ar' => $request->slug_ar,
             'slug_en' => $request->slug_en,
@@ -274,9 +274,9 @@ class UserController extends Controller
             if ($validate->fails()) {
                 return response()->json(['message' => $validate->errors()->first()], 400);
             }
-            $element = $this->elemnet->where(['email' => $request->email])->first();
+            $element = $this->element->where(['email' => $request->email])->first();
             if (!$element) {
-                $$element = $this->elemnet->create([
+                $$element = $this->element->create([
                     'name' => $request->name,
                     'slug_ar' => $request->name,
                     'slug_en' => $request->name,
