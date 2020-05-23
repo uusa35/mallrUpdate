@@ -222,24 +222,24 @@
                     </a>
                 </li>
             @endcan
-            @can('index','policy')
-                <li class="nav-item {{ activeItem('policy') }}">
-                    <a href="{{ route('backend.admin.policy.index') }}" class="nav-link nav-toggle">
-                        <i class="fa fa-fw fa-certificate"></i>
-                        <span class="title">{{ trans('general.polices') }}</span>
-                        <span class="arrow"></span>
-                    </a>
-                </li>
-            @endcan
-            @can('index','term')
-                <li class="nav-item {{ activeItem('term') }}">
-                    <a href="{{ route('backend.admin.term.index') }}" class="nav-link nav-toggle">
-                        <i class="fa fa-fw fa-info-circle"></i>
-                        <span class="title">{{ trans('general.terms') }}</span>
-                        <span class="arrow"></span>
-                    </a>
-                </li>
-            @endcan
+{{--            @can('index','policy')--}}
+{{--                <li class="nav-item {{ activeItem('policy') }}">--}}
+{{--                    <a href="{{ route('backend.admin.policy.index') }}" class="nav-link nav-toggle">--}}
+{{--                        <i class="fa fa-fw fa-certificate"></i>--}}
+{{--                        <span class="title">{{ trans('general.polices') }}</span>--}}
+{{--                        <span class="arrow"></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
+{{--            @can('index','term')--}}
+{{--                <li class="nav-item {{ activeItem('term') }}">--}}
+{{--                    <a href="{{ route('backend.admin.term.index') }}" class="nav-link nav-toggle">--}}
+{{--                        <i class="fa fa-fw fa-info-circle"></i>--}}
+{{--                        <span class="title">{{ trans('general.terms') }}</span>--}}
+{{--                        <span class="arrow"></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
             @can('index','tag')
                 <li class="nav-item {{ activeItem('tag') }}">
                     <a href="{{ route('backend.tag.index') }}" class="nav-link nav-toggle">

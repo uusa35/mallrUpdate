@@ -135,7 +135,7 @@
                     @endcan
                     @can('isAdminOrAbove')
                         @can('index', 'user')
-                            <a href="{{ route('backend.user.index') }}">
+                            <a href="{{ route('backend.admin.user.index') }}">
                                 <div class="tile bg-red-sunglo tooltips"
                                      data-container="body" data-placement="bottom"
                                      data-original-title="{{ trans('message.index_user') }}"
