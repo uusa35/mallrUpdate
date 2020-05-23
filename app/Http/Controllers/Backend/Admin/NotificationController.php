@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use \Illuminate\Support\Str;
+use mysql_xdevapi\Exception;
 
 class NotificationController extends Controller
 {
@@ -56,42 +57,47 @@ class NotificationController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate->errors());
         }
-
-        if ($request->has('notificationable_type') && $request->notificationable_type !== 0) {
-            $modal = $request->notificationable_type === 'designer' || $request->notificationable_type === 'company' || $request->notificationable_type === 'shopper' ? 'user' : $request->notificationable_type;
-            if($modal === 'product') {
-                $id = $request->product_id;
-            } elseif($modal === 'classified') {
-                $id = $request->classified_id;
+        try {
+            if ($request->has('notificationable_type') && $request->notificationable_type !== 0) {
+                $modal = $request->notificationable_type === 'designer' || $request->notificationable_type === 'company' || $request->notificationable_type === 'shopper' ? 'user' : $request->notificationable_type;
+                if($modal === 'product') {
+                    $id = $request->product_id;
+                } elseif($modal === 'classified') {
+                    $id = $request->classified_id;
+                } else {
+                    $id = $request->user_id;
+                }
+                $className = '\App\Models\\' . Str::title($modal);
+                $element = new $className();
+                $item = $element->whereId($id)->first();
+                if(!$item) {
+                    throw new \Exception('Choose Notification Type Item');
+                }
+                $element = $item->notificationAlerts()->create([
+                    'title' => strip_tags($request->title),
+                    'description' => strip_tags($request->description),
+                    'type' => $request->notificationable_type,
+                    "url" => $request->has('type') && isset($item) ? env('APP_DEEP_LINK') . $request->type . '/' . $item->id : null,
+                    'notificationable_type' => $className,
+                    'notificationable_id' => $item->id
+                ]);
             } else {
-                $id = $request->user_id;
+                $element = Notification::create([
+                    'title' => strip_tags($request->title),
+                    'description' => strip_tags($request->description),
+                    'notificationable_type' => 0,
+                    'notificationable_id' => 0
+                ]);
             }
-            $className = '\App\Models\\' . Str::title($modal);
-            $element = new $className();
-            $item = $element->whereId($id)->first();
-            $element = $item->notificationAlerts()->create([
-                'title' => strip_tags($request->title),
-                'description' => strip_tags($request->description),
-                'type' => $request->notificationable_type,
-                "url" => $request->has('type') && isset($item) ? env('APP_DEEP_LINK') . $request->type . '/' . $item->id : null,
-                'notificationable_type' => $className,
-                'notificationable_id' => $item->id
-            ]);
-        } else {
-            $element = Notification::create([
-                'title' => strip_tags($request->title),
-                'description' => strip_tags($request->description),
-                'notificationable_type' => 0,
-                'notificationable_id' => 0
-            ]);
+            $url = $request->has('notificationable_type') && isset($item) ? env('APP_DEEP_LINK') . $request->notificationable_type . '/' . $item->id : null;
+            if ($element) {
+                $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1905', '750'], true) : null;
+                $this->notify($request->title, $request->description, $url, $request);
+                return redirect()->route('backend.admin.notification.index')->with('success', 'Notification added');
+            }
+        } catch(\Exception $e) {
+            return redirect()->back()->with('error', 'Notification is not saved. '. $e->getMessage());
         }
-        $url = $request->has('notificationable_type') && isset($item) ? env('APP_DEEP_LINK') . $request->notificationable_type . '/' . $item->id : null;
-        if ($element) {
-            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1905', '750'], true) : null;
-            $this->notify($request->title, $request->description, $url, $request);
-            return redirect()->route('backend.admin.notification.index')->with('success', 'Notification added');
-        }
-        return redirect()->back()->with('error', 'Notification is not saved.');
     }
 
     /**
