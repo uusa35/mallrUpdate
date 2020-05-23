@@ -178,9 +178,11 @@ class Filters extends QueryFilters
     public function area_id()
     {
         // List of users that servie area_id
-        return $this->builder->whereHas('areas', function ($q) {
-            return $q->where(['area_id' => request('area_id')]);
-        });
+        if($this->builder->has('areas')) {
+            return $this->builder->whereHas('areas', function ($q) {
+                return $q->where(['area_id' => request('area_id')]);
+            });
+        }
     }
 
     public function day_selected()
