@@ -228,13 +228,13 @@
                 <span class="arrow"></span>
             </a>
         </li>
-        <li class="nav-item {{ activeItem('policy') }}">
-            <a href="{{ route('backend.admin.policy.index') }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-certificate"></i>
-                <span class="title">{{ trans('general.polices') }}</span>
-                <span class="arrow"></span>
-            </a>
-        </li>
+{{--        <li class="nav-item {{ activeItem('policy') }}">--}}
+{{--            <a href="{{ route('backend.admin.policy.index') }}" class="nav-link nav-toggle">--}}
+{{--                <i class="fa fa-fw fa-certificate"></i>--}}
+{{--                <span class="title">{{ trans('general.polices') }}</span>--}}
+{{--                <span class="arrow"></span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         @can('superOne')
             <li class="nav-item {{ activeItem('role') }}">
                 <a href="{{ route('backend.admin.role.index') }}" class="nav-link nav-toggle">
@@ -261,13 +261,13 @@
                 </ul>
             </li>
         @endcan
-        <li class="nav-item {{ activeItem('term') }}">
-            <a href="{{ route('backend.admin.term.index') }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-info-circle"></i>
-                <span class="title">{{ trans('general.terms') }}</span>
-                <span class="arrow"></span>
-            </a>
-        </li>
+{{--        <li class="nav-item {{ activeItem('term') }}">--}}
+{{--            <a href="{{ route('backend.admin.term.index') }}" class="nav-link nav-toggle">--}}
+{{--                <i class="fa fa-fw fa-info-circle"></i>--}}
+{{--                <span class="title">{{ trans('general.terms') }}</span>--}}
+{{--                <span class="arrow"></span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <li class="nav-item {{ activeItem('tag') }}">
             <a href="{{ route('backend.tag.index') }}" class="nav-link nav-toggle">
                 <i class="fa fa-fw fa-tags"></i>
