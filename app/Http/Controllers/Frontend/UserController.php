@@ -70,6 +70,8 @@ class UserController extends Controller
             'collections.products.sizes',
             'images', 'fans'
         ])->first();
+        $services = collect([]);
+        $products = collect([]);
         IncreaseElementViews::dispatch($element);
         if (!request()->hasAny(['product_category_id', 'size_id', 'color_id'])) {
             $services = $element->services()->filters($filters)->with(
@@ -99,11 +101,12 @@ class UserController extends Controller
         $categoriesList = isset($services) ? $services->pluck('categories')->flatten()->unique('id') : $products->pluck('categories')->flatten()->unique('id');
         $vendors = isset($services) ? $services->pluck('user')->flatten()->unique('id') : null;
         $companies = $products->pluck('user')->flatten()->unique('id');
-        if($element->isDesigner) {
+        $collections = collect([]);
+        if ($element->isDesigner) {
             $collections = $element->collections->paginate(10);
         }
         return view('frontend.wokiee.four.modules.user.show', compact(
-            'element', 'products','collections',
+            'element', 'products', 'collections',
             'services', 'tags', 'sizes', 'colors', 'brands', 'categoriesList',
             'vendors', 'companies'
         ));

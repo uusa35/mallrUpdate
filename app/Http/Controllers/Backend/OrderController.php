@@ -6,6 +6,7 @@ use App\Mail\OrderShipped;
 use App\Models\Order;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use Illuminate\Mail\Markdown;
 use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
@@ -19,15 +20,24 @@ class OrderController extends Controller
     {
         $elements = Order::query();
         if (request()->has('status')) {
-            $elements = $elements->where('status', request()->status)
+            $elements = $elements->where(['status' => request()->status])
                 ->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+                ->whereHas('order_metas.product', function ($q) {
+                    return $q->where('user_id', auth()->id());
+                })
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else if (request()->has('paid')) {
             $elements = $elements->where('paid', true)
                 ->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+                ->whereHas('order_metas.product', function ($q) {
+                    return $q->where('user_id', auth()->id());
+                })
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else {
             $elements = $elements->with('order_metas.product.product_attributes', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+                ->whereHas('order_metas.product', function ($q) {
+                    return $q->where('user_id', auth()->id());
+                })
                 ->orderBy('id', 'desc')
                 ->paginate(50);
         }
@@ -64,7 +74,11 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        $element = Order::whereId($id)->with('order_metas')->first();
+        $element = Order::whereId($id)->with('order_metas.product.product_attributes','user.country')->first();
+        if ($element->order_metas->first()->isQuestionnaireType) {
+            $markdown = new Markdown(view(), config('mail.markdown'));
+            return $markdown->render('emails.order-complete', ['order' => $element, 'user' => $element->user]);
+        }
         return view('backend.modules.order.show', compact('element'));
     }
 

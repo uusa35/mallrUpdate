@@ -67,9 +67,9 @@
 
 @section('scripts')
     @parent
-{{--    @desktop--}}
-{{--    <script type="text/javascript"--}}
-{{--            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>--}}
-{{--    @enddesktop--}}
+    @desktop
+    <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=5c6ed2597056550011c4ab2a&product=inline-share-buttons"></script>
+    @enddesktop
 @endsection
 

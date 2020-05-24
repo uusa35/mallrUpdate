@@ -145,6 +145,11 @@
                                                             </button>
                                                         @endif
                                                     @endif
+                                                        <button type="button"
+                                                                class="btn blue">
+                                                            {{ trans('general.company') }} :
+                                                            - {{ $meta->product->user->name}}
+                                                        </button>
                                                 @elseif($meta->service && $meta->service_id)
                                                     <button type="button"
                                                             class="btn yellow">
@@ -206,50 +211,63 @@
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu pull-right" role="menu">
-                                            <li>
-                                                <a href="{{ route('backend.admin.order.show',$element->id) }}">
-                                                    <i class="fa fa-fw fa-edit"></i> {{ trans('general.view_order') }}
-                                                </a>
-                                            </li>
-                                            @if($element->paid || $element->cash_on_delivery)
+                                            @can('isAdminOrAbove')
+                                                <li>
+                                                    <a href="{{ route('backend.admin.order.show',$element->id) }}">
+                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.view_order') }}
+                                                    </a>
+                                                </li>
+                                                @if($element->paid || $element->cash_on_delivery)
+                                                    <li>
+                                                        <a href="{{ route('frontend.invoice.show',['id' => $element->id]) }}">
+                                                            <i class="fa fa-fw fa-paper-plane"></i> {{ trans('general.see_invoice') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'received']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_received') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'under_process']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_under_process') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'shipped']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_shipped') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.edit',$element->id) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.add_shipment_reference') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'delivered']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_delivered') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'completed']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_completed') }}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'cancelled']) }}">
+                                                            <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.cancelled') }}
+                                                        </a>
+                                                    </li>
+                                                @endif
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('backend.order.show',$element->id) }}">
+                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.view_order') }}
+                                                    </a>
+                                                </li>
                                                 <li>
                                                     <a href="{{ route('frontend.invoice.show',['id' => $element->id]) }}">
                                                         <i class="fa fa-fw fa-paper-plane"></i> {{ trans('general.see_invoice') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'received']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_received') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'under_process']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_under_process') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'shipped']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_shipped') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.edit',$element->id) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.add_shipment_reference') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'delivered']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_delivered') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'completed']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_completed') }}
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'cancelled']) }}">
-                                                        <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.cancelled') }}
                                                     </a>
                                                 </li>
                                             @endif

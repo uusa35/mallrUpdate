@@ -74,7 +74,7 @@
                                     {{ $element->weight }} {{ trans('general.kg') }}
                                 </td>
                                 <td>
-                                    <img class="img-xs" src="{{ $element->imageThumbLink }}" alt="">
+                                    <img class="img-xs" src="{{ $element->getCurrentImageAttribute() }}" alt="">
                                 </td>
                                 <td>{{ !is_null($element->end_sale) ? $element->end_sale->format('Y-m-d') : null }}</td>
                                 <td>

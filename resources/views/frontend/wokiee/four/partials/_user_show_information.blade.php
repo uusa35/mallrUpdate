@@ -171,17 +171,5 @@
                 </tr>
             @endif
         </table>
-        <div class="row" style="margin-top: 100px;">
-            <div class="col-lg-12">
-                @if(isset($element))
-                    <div class="col-12">
-                        <h4 class="text-lg-center">
-                            {{ trans('general.gallery') }}
-                        </h4>
-                    </div>
-                    @include("frontend.wokiee.four.partials._gallery",['element' => $element->images])
-                @endif
-            </div>
-        </div>
     </div>
 </div>

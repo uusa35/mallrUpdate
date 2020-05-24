@@ -63,3 +63,43 @@
         </a>
     </li>
 @endcan
+@can('index','order')
+    <li class="nav-item {{ activeItem('order') }}">
+        <a href="{{ route('backend.order.index') }}" class="nav-link nav-toggle">
+            <i class="fa fa-fw fa-money"></i>
+            <span class="title">{{ trans('general.orders') }}</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item ">
+                <a href="{{ route('backend.order.index') }}" class="nav-link nav-toggle">
+                    <i class="fa fa-fw fa-pie-chart"></i>
+                    <span class="title">{{ trans('general.orders') }}</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="{{ route('backend.order.index',['paid' => true]) }}" class="nav-link nav-toggle">
+                    <i class="fa fa-fw fa-pie-chart"></i>
+                    <span class="title">{{ trans('general.paid_orders') }}</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="{{ route('backend.order.index',['status' => 'completed']) }}"
+                   class="nav-link nav-toggle">
+                    <i class="fa fa-fw fa-pie-chart"></i>
+                    <span class="title">{{ trans('general.completed_orders') }}</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="{{ route('backend.order.index',['status' => 'failed']) }}" class="nav-link nav-toggle">
+                    <i class="fa fa-fw fa-pie-chart"></i>
+                    <span class="title">{{ trans('general.failed_orders') }}</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+        </ul>
+    </li>
+@endcan
