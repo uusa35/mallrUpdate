@@ -398,7 +398,7 @@
                                                     </h4></div>
                                                 <div class="list-item-content">
                                                     <h3 class="uppercase">
-                                                        <a href="javascript:;">{{ trans('general.total_paid_orders') }}
+                                                        <a href="javascript:;">{{ trans('general.total_paid_orders') }} {{ trans('general.from') }}
                                                             1 {{ Carbon\Carbon::today()->format('F') }} {{ trans('general.till') }} {{ Carbon\Carbon::today()->format('d/m/Y') }}</a>
                                                     </h3>
                                                 </div>

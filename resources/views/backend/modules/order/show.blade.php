@@ -75,6 +75,7 @@
                             <th>{{ trans('general.color') }}/ {{ trans('general.date') }}</th>
                             <th>{{ trans('general.size') }} / {{ trans('general.timing') }}</th>
                             <th>{{ trans('general.name') }}</th>
+                            <th>{{ trans('general.company') }}</th>
 
                             <th class="right">{{ trans('general.net_price') }}</th>
                             <th class="center">{{ trans('general.qty') }}</th>
@@ -91,13 +92,14 @@
                                         <td class="center">{{ $item->product_id }}</td>
                                         <td class="center">{{ $item->product->sku }}</td>
                                         <td class="center"><img class="img-xs"
-                                                                src="{{ $item->product->imageThumbLink }}"
+                                                                src="{{ $item->product->getCurrentImageAttribute() }}"
                                                                 alt=""></td>
                                         <td class="left strong">{{ $item->product_attribute->colorName}}</td>
                                         <td class="left strong">{{ $item->product_attribute->sizeName }}</td>
                                         <td class="left"><a
                                                     href="{{ !env('ABATI') ? route('frontend.product.show',$item->product_id) : '#'}}">{{ $item->product->name }}</a>
                                         </td>
+                                        <td><a href="{{ route('frontend.user.show', $item->product->user_id) }}">{{ $item->product->user->slug }}</a></td>
                                         <td class="right">{{ $item->price }} {{ trans('general.kd') }}</td>
                                         <td class="right">{{ $item->qty }}</td>
                                         <td class="right">{{ $item->product->weight }} KG</td>

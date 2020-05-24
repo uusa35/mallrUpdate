@@ -593,10 +593,11 @@
     </li>
 @endcan
 
+
 @can('index','slide')
     <li class="nav-item {{ activeItem('slide') }}">
         <a href="{{ route('backend.slide.index',['slidable_id' => auth()->id(), 'slidable_type' => 'user']) }}">
-            <i class="fa fa-fw fa-file-image-o"></i>
+            <i class="fa fa-fw fa-address-book-o"></i>
             <span class="title">{{ trans('general.slides') }}</span>
             <span class="arrow"></span>
         </a>
@@ -605,7 +606,7 @@
 @can('index','video')
     <li class="nav-item {{ activeItem('video') }}">
         <a href="{{ route('backend.video.index') }}" class="nav-link ">
-            <i class="fa fa-fw fa-file-image-o"></i>
+            <i class="fa fa-fw fa-play-circle-o"></i>
             <span class="title">{{ trans('general.videos') }}</span>
             <span class="arrow"></span>
         </a>
