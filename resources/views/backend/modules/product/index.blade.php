@@ -20,10 +20,11 @@
                             <th>{{ trans('general.sku') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th>{{ trans('general.price') }}</th>
+                            <th class="none">{{ trans('general.on_sale') }}</th>
                             <th class="none">{{ trans('general.sale_price') }}</th>
                             <th class="none">{{ trans('general.weight') }}</th>
                             <th>{{ trans('general.image') }}</th>
-                            <th class="none">{{ trans('general.end_sale') }}</th>
+                            <th class="none">{{ trans('general.company') }}</th>
                             <th>{{ trans('general.active') }}</th>
                             <th>{{ trans('general.company') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
@@ -36,6 +37,7 @@
                             <th>{{ trans('general.sku') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th>{{ trans('general.price') }}</th>
+                            <th class="none">{{ trans('general.on_sale') }}</th>
                             <th class="none">{{ trans('general.sale_price') }}</th>
                             <th class="none">{{ trans('general.weight') }}</th>
                             <th>{{ trans('general.image') }}</th>
@@ -66,6 +68,9 @@
                                 {{--</td>--}}
                                 <td>
                                     {{ $element->price }}
+                                </td>
+                                <td>
+                                    <label class="label {{ $element->isOnSale ? 'label-success' : 'label-warning'}}">{{ $element->isOnSale ? 'Yes' : 'No'}}</label>
                                 </td>
                                 <td>
                                     {{ $element->sale_price }}
