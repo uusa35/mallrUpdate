@@ -1059,5 +1059,6 @@ return array(
     "cancelled" => "ألغاء",
     "shipment_fixed_rate" => " نظام تكلفة الشحن الثبات",
     "shipment_fuel_percentage" => "نسبة الوقود (تطبق فقط في حالة تطبيق تكلفة الشحن المتغيرة)",
-    "new" => "جديد"
+    "new" => "جديد",
+    "today_date" => "تاريخ اليوم"
 );

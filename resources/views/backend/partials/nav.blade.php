@@ -134,20 +134,32 @@
                     {{--</li>--}}
                     {{--</ul>--}}
                     {{--</li>--}}
+                    <li class="dropdown dropdown-language">
+                        <div class="dropdown-toggle"
+                           data-close-others="true">
+                            <span class="langname">
+                                <i class="fa fa-fw fa-calendar"></i>&nbsp;
+                                {{ trans("general.today_date") .' :  '. Carbon\Carbon::today()->format('D - j F,Y') }} </span>
+                        </div>
+                    </li>
                     <li class="dropdown dropdown-language"
-                        style="background-color: {{ app()->isLocale('ar') ? 'white' : 'transparent' }}; padding-right: 20px; padding-left: 20px; ">
+                        style="background-color: {{ app()->isLocale('ar') ? 'whitesmoke' : 'transparent' }}; margin-left: 10px; ">
                         <a href="{{ route('backend.language.change','ar') }}" class="dropdown-toggle"
                            data-close-others="true">
-                            {{--<img alt="" src="{{ asset('img/flags/ar.png') }}">--}}
-                            <span class="langname"><i class="fa fa-fw fa-language"></i>&nbsp; {{ trans('general.arabic') }} </span>
+                            <img alt="" src="{{ asset('images/flags/ar.png') }}">
+                            <span class="langname">
+{{--                                <i class="fa fa-fw fa-language"></i>&nbsp; --}}
+                                {{ trans('general.arabic') }} </span>
                         </a>
                     </li>
                     <li class="dropdown dropdown-language"
-                        style="background-color: {{ app()->isLocale('en') ? 'white' : 'transparent' }}; padding-right: 20px; padding-left: 20px; ">
+                        style="background-color: {{ app()->isLocale('en') ? 'whitesmoke' : 'transparent' }}; margin-left: 10px ">
                         <a href="{{ route('backend.language.change','en') }}" class="dropdown-toggle"
                            data-close-others="true">
-                            {{--<img alt="" src="{{ asset('img/flags/en.png') }}">--}}
-                            <span class="langname"><i class="fa fa-fw fa-language"></i>&nbsp; {{ trans('general.english') }} </span>
+                            <img alt="" src="{{ asset('images/flags/en.png') }}">
+                            <span class="langname">
+{{--                                <i class="fa fa-fw fa-language"></i>&nbsp; --}}
+                                {{ trans('general.english') }} </span>
                         </a>
                     </li>
 
@@ -313,10 +325,10 @@
                             <li class="divider"></li>
                             @can('isAdminOrAbove')
                                 @can('index','setting')
-                                <li>
-                                    <a href="{{ route('backend.admin.setting.index') }}">
-                                        <i class="icon-settings"></i> {{ trans('general.app_settings') }} </a>
-                                </li>
+                                    <li>
+                                        <a href="{{ route('backend.admin.setting.index') }}">
+                                            <i class="icon-settings"></i> {{ trans('general.app_settings') }} </a>
+                                    </li>
                                 @endcan
                                 <li>
                                     <a href="{{ url('backend/admin/translations') }}">
