@@ -72,6 +72,7 @@ class UserController extends Controller
         ])->first();
         $services = collect([]);
         $products = collect([]);
+        $collections = collect([]);
         IncreaseElementViews::dispatch($element);
         if (!request()->hasAny(['product_category_id', 'size_id', 'color_id'])) {
             $services = $element->services()->filters($filters)->with(
@@ -101,7 +102,6 @@ class UserController extends Controller
         $categoriesList = isset($services) ? $services->pluck('categories')->flatten()->unique('id') : $products->pluck('categories')->flatten()->unique('id');
         $vendors = isset($services) ? $services->pluck('user')->flatten()->unique('id') : null;
         $companies = $products->pluck('user')->flatten()->unique('id');
-        $collections = collect([]);
         if ($element->isDesigner) {
             $collections = $element->collections->paginate(10);
         }

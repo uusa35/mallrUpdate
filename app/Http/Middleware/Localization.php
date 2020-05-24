@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Carbon\Carbon;
 use Closure;
 
 class Localization
@@ -16,6 +17,7 @@ class Localization
     public function handle($request, Closure $next)
     {
         session()->has('locale') ? app()->setLocale(session()->get('locale')) : null;
+        Carbon::setLocale(app()->getLocale());
         return $next($request);
     }
 }
