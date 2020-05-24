@@ -87,9 +87,10 @@ const ProductAttributeApp = () => {
                 $(`#color_id_${productId}`).attr('value', color.id);
                 // const newQty = sum([$`#qty_${productId}`).getAttribute('value'),1]);
                 $(`#qty_${productId}`).attr('value', 1);
-                $(`#max-qty-${productId}`).attr('size', qty);
                 $(`#product_attribute_id_${productId}`).attr('value', currentAttribute.id);
+                $(`#max-qty-${productId}`).attr('size', qty);
                 $(`#max-qty-${productId}`).attr('value', 1);
+                $(`#max-qty-${productId}`).attr('placeholder', 1);
                 $(`#minus-btn-${productId}`).removeAttr('disabled');
                 $(`#plus-btn-${productId}`).removeAttr('disabled');
                 $(`#add_to_cart_${productId}`).removeAttr('disabled');
@@ -97,6 +98,8 @@ const ProductAttributeApp = () => {
                 $(`#color_id_${productId}`).attr('value', null);
                 $(`#qty_${productId}`).attr('value', 0);
                 $(`#max-qty-${productId}`).removeAttr('size');
+                $(`#max-qty-${productId}`).attr('placeholder',1);
+                $(`#max-qty-${productId}`).attr('value',1);
                 $(`#product_attribute_id_${productId}`).attr('value', null)
                 $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
                 $(`#minus-btn-${productId}`).attr('disabled', 'disabled');

@@ -82,6 +82,7 @@ $(document).ready(function() {
         if (newQty <= maxSize) {
             qty.attr('value', newQty);
             $(`#max-qty-${productId}`).attr('value', newQty);
+            $(`#max-qty-${productId}`).attr('placeholder', newQty);
         }
     })
 
@@ -94,6 +95,7 @@ $(document).ready(function() {
         if (newQty <= maxSize  && newQty > 0) {
             qty.attr('value', newQty);
             $(`#max-qty-${productId}`).attr('value', newQty);
+            $(`#max-qty-${productId}`).attr('placeholder', newQty);
         }
     })
 
