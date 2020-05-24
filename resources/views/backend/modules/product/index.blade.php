@@ -73,7 +73,7 @@
                                     <label class="label {{ $element->isOnSale ? 'label-success' : 'label-warning'}}">{{ $element->isOnSale ? 'Yes' : 'No'}}</label>
                                 </td>
                                 <td>
-                                    {{ $element->sale_price }}
+                                    {{ $element->sale_price ? $element->sale_price : 'N/A'}}
                                 </td>
                                 <td>
                                     {{ $element->weight }} {{ trans('general.kg') }}
