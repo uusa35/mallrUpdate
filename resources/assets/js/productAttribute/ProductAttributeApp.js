@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useCallback, useMemo} from 'react'
 import {trans} from "./trans";
 import axios from 'axios';
-import {filter, first, map, uniqBy, isEmpty, sum} from 'lodash'
+import {filter, first, map, uniqBy, isEmpty, sum, isNull} from 'lodash'
 import $ from 'jquery'
 
 const ProductAttributeApp = () => {
@@ -12,8 +12,8 @@ const ProductAttributeApp = () => {
     const [colors, setColors] = useState([]);
     const [sizes, setSizes] = useState([]);
     const [currentAttribute, setCurrentAttribute] = useState([]);
-    const [currentColor, setCurrentColor] = useState([]);
-    const [currentSize, setCurrentSize] = useState([])
+    const [currentColor, setCurrentColor] = useState(null);
+    const [currentSize, setCurrentSize] = useState(null)
     const [colorDisabled, setColorDisabled] = useState(true);
 
     useEffect(() => {
@@ -59,54 +59,61 @@ const ProductAttributeApp = () => {
 
     const handleSizeClick = useCallback((id) => {
         setCurrentSize(id)
-        setCurrentAttribute(null)
-        const filteredAttributes = filter(attributes, (a => a.size.id === id))
-        const filteredColors = map(filteredAttributes, 'color');
-        setColors(filteredColors);
-        const firstColor = first(filteredColors);
-        handleColorClick(firstColor.id)
-        const attribute = first(filter(attributes, (a => a.color.id === firstColor.id && a.size.id === currentSize)));
-        setCurrentAttribute(attribute)
-        setColorDisabled(false);
-        $(`#size_id_${productId}`).attr('value', id);
-        $('#alertCartMessage').removeClass('d-none');
     })
+
+    useMemo(() => {
+        if (!isNull(currentSize)) {
+            const filteredAttributes = filter(attributes, (a => a.size.id === currentSize))
+            const filteredColors = map(filteredAttributes, 'color');
+            setColors(filteredColors);
+            const firstColor = first(filteredColors);
+            setCurrentColor(firstColor.id)
+            const attribute = first(filter(attributes, (a => a.color.id === firstColor.id && a.size.id === currentSize)));
+            setCurrentAttribute(attribute)
+            setColorDisabled(false);
+            $(`#size_id_${productId}`).attr('value', currentSize);
+            $('#alertCartMessage').removeClass('d-none');
+        }
+    }, [currentSize])
 
     const handleColorClick = useCallback((id) => {
         setCurrentColor(id)
-        const attribute = first(filter(attributes, (a => a.color.id === id && a.size.id === currentSize)));
-        if (!isEmpty(attribute)) {
-            setCurrentAttribute(attribute)
+    }, [currentColor])
+
+    useMemo(() => {
+        if (isNull(currentColor)) {
+            const attribute = first(filter(attributes, (a => a.color.id === currentColor && a.size.id === currentSize)));
+            if (!isEmpty(attribute)) {
+                setCurrentAttribute(attribute)
+            }
         }
     }, [currentColor])
 
-    useEffect(() => {
-        $(document).ready(() => {
-            if (!isEmpty(currentAttribute)) {
-                const {color, qty} = currentAttribute;
-                $(`#color_id_${productId}`).attr('value', color.id);
-                // const newQty = sum([$`#qty_${productId}`).getAttribute('value'),1]);
-                $(`#qty_${productId}`).attr('value', 1);
-                $(`#product_attribute_id_${productId}`).attr('value', currentAttribute.id);
-                $(`#max-qty-${productId}`).attr('size', qty);
-                $(`#max-qty-${productId}`).attr('value', 1);
-                $(`#max-qty-${productId}`).attr('placeholder', 1);
-                $(`#minus-btn-${productId}`).removeAttr('disabled');
-                $(`#plus-btn-${productId}`).removeAttr('disabled');
-                $(`#add_to_cart_${productId}`).removeAttr('disabled');
-            } else {
-                $(`#color_id_${productId}`).attr('value', null);
-                $(`#qty_${productId}`).attr('value', 0);
-                $(`#max-qty-${productId}`).removeAttr('size');
-                $(`#max-qty-${productId}`).attr('placeholder',1);
-                $(`#max-qty-${productId}`).attr('value',1);
-                $(`#product_attribute_id_${productId}`).attr('value', null)
-                $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
-                $(`#minus-btn-${productId}`).attr('disabled', 'disabled');
-                $(`#plus-btn-${productId}`).attr('disabled', 'disabled');
-
-            }
-        });
+    useMemo(() => {
+        if (!isEmpty(currentAttribute)) {
+            const {color, qty} = currentAttribute;
+            $(`#color_id_${productId}`).attr('value', color.id);
+            // const newQty = sum([$`#qty_${productId}`).getAttribute('value'),1]);
+            $(`#qty_${productId}`).attr('value', 1);
+            $(`#product_attribute_id_${productId}`).attr('value', currentAttribute.id);
+            $(`#max-qty-${productId}`).attr('size', qty);
+            $(`#max-qty-${productId}`).attr('value', 1);
+            $(`#max-qty-${productId}`).attr('placeholder', 1);
+            $(`#minus-btn-${productId}`).removeAttr('disabled');
+            $(`#plus-btn-${productId}`).removeAttr('disabled');
+            $(`#add_to_cart_${productId}`).removeAttr('disabled');
+        } else {
+            $(`#color_id_${productId}`).attr('value', null);
+            $(`#qty_${productId}`).attr('value', 0);
+            $(`#max-qty-${productId}`).removeAttr('size');
+            $(`#max-qty-${productId}`).attr('placeholder', 1);
+            $(`#max-qty-${productId}`).attr('value', 1);
+            $(`#product_attribute_id_${productId}`).attr('value', null)
+            $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
+            $(`#minus-btn-${productId}`).attr('disabled', 'disabled');
+            $(`#plus-btn-${productId}`).attr('disabled', 'disabled');
+        }
+        $(`#max-qty-${productId}`).val('1');
     }, [currentAttribute])
 
     return (
@@ -115,9 +122,10 @@ const ProductAttributeApp = () => {
                 <div className="tt-title-options">{currentLang.size}</div>
                 <ul className="tt-options-swatch options-large">
                     {
-                        map(sizes, (e, i) =>
-                            <li key={i} className={`${currentSize === e.id ? 'active' : ''}`}>
-                                <a style={{width: 80}} onClick={() => handleSizeClick(e.id)}><strong>{e.name}</strong>
+                        map(sizes, (s, i) =>
+                            <li key={i} className={`${currentSize === s.id ? 'active' : ''}`}>
+                                <a style={{minWidth: 80}}
+                                   onClick={() => handleSizeClick(s.id)}><strong>{s.name}</strong>
                                 </a>
                             </li>
                         )
@@ -128,13 +136,13 @@ const ProductAttributeApp = () => {
                 <div className="tt-title-options">{currentLang.choose_color}:</div>
                 <ul className="tt-options-swatch options-large">
                     {
-                        map(colors, (e, i) => (
+                        map(colors, (c, i) => (
                             <li key={i}
-                                className={`${currentColor === e.id ? 'active' : ''}`}>
+                                className={`${currentColor === c.id ? 'active' : ''}`}>
                                 <a
                                     disabled={colorDisabled} className="options-color tooltip"
                                     data-tooltip={`${currentSize ? currentLang.chooseSizeThenColor : ''}`}
-                                    onClick={() => handleColorClick(e.id)} style={{backgroundColor: e.code}}></a>
+                                    onClick={(e) => handleColorClick(c.id)} style={{backgroundColor: c.code}}></a>
                             </li>
                         ))
                     }
