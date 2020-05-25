@@ -35,7 +35,7 @@ class NotificationController extends Controller
      */
     public function create()
     {
-        $users = User::active()->scopeNotClient()->eget();
+        $users = User::active()->notClients()->eget();
         $products = Product::active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->get();
         $classifieds = Classified::active()->notExpired()->hasImage()->onHome()->available()->get();
         return view('backend.modules.notification.create', compact('users', 'products', 'classifieds'));
