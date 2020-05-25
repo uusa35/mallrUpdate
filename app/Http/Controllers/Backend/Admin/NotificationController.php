@@ -58,7 +58,8 @@ class NotificationController extends Controller
             return redirect()->back()->withErrors($validate->errors());
         }
         try {
-            if ($request->has('notificationable_type') && $request->notificationable_type !== 0) {
+            if ($request->has('notificationable_type') && $request->notificationable_type !== '0') {
+                dd('if');
                 $modal = $request->notificationable_type === 'designer' || $request->notificationable_type === 'company' || $request->notificationable_type === 'shopper' ? 'user' : $request->notificationable_type;
                 if($modal === 'product') {
                     $id = $request->product_id;

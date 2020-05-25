@@ -68,7 +68,7 @@
                                                 <select id="notificationable_type" class="form-control tooltips select2"
                                                         data-container="body" data-placement="top"
                                                         data-original-title="{{ trans('message.type_id') }}"
-                                                        name="notificationable_type">
+                                                        name="notificationable_type" required>
                                                     <option value="0">{{ trans('general.choose_type') }}</option>
                                                     <option value="company">{{ trans('general.company') }}</option>
                                                     @if(env('ABATI'))
