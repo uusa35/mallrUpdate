@@ -2124,5 +2124,6 @@ return array (
     "shipment_fixed_rate" => " نظام تكلفة الشحن الثبات",
     "shipment_fuel_percentage" => "نسبة الوقود (تطبق فقط في حالة تطبيق تكلفة الشحن المتغيرة)",
     "new" => "جديد",
-    "today_date" => "تاريخ اليوم"
+    "today_date" => "تاريخ اليوم",
+    "logo" => "لوجو"
 );

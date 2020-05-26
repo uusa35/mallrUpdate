@@ -16,6 +16,7 @@
                             <th class="all">{{ trans('general.id') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th class="none">{{ trans('general.slug') }}</th>
+                            <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
@@ -31,6 +32,7 @@
                             <th class="all">{{ trans('general.id') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th class="none">{{ trans('general.slug') }}</th>
+                            <th >{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
@@ -47,6 +49,7 @@
                                 <td>{{ $element->id }}</td>
                                 <td>{{ $element->name }}</td>
                                 <td>{{ $element->slug }}</td>
+                                <td><img src="{{ $element->getCurrentImageAttribute() }}" alt="" class="img-xs"/></td>
                                 <td>{{ $element->email  }}</td>
                                 <td>{{ $element->fullMobile }}</td>
                                 <td>{{ $element->phone }}</td>

@@ -32,6 +32,15 @@
     url('fonts/HelveticaNeueMEforSKYW21-Bd_web.ttf') format('truetype')
 }
 
+@font-face {
+font-family: 'GE SS Unique';
+src: url('fonts/GE_SS_Unique_Light.ttf') format('truetype'),
+url('fonts/GE_SS_Unique_Light.otf') format('otf'),
+url('fonts/GE_SS_Unique_Light.eot'),
+url('fonts/GE_SS_Unique_Light.eot?#iefix') format('embedded-opentype'); /* Super Modern Browsers */
+font-weight: bolder;
+font-style: normal;
+}
 
 /*body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {*/
     /*font-family: 'Cairo', sans-serif !important;*/

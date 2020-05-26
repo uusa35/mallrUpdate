@@ -1,56 +1,59 @@
 @include('frontend.wokiee.partials.styles')
-@if(env('EVENTKM') && app()->isLocale('en'))
-    <style type="text/css">
-        @font-face {
-            font-family: 'School';
-            src: url('fonts/School_Times.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-            font-family: 'School', 'sans-serif' !important;
-            text-transform: uppercase !important;
-        }
-    </style>
-@endif
-@if(env('EVENTKM'))
-    <style type="text/css">
-        .alert-danger {
-            color: #000000;
-            background-color: #ffffff;
-            border-color: #000000;
-        }
-
-        .alert-danger i {
-            color: red !important;
-        }
-
-        .page-link, .page-item.disabled .page-link {
-            border: none !important;
-            background-color: transparent !important;
-        }
-        .tt-product:not(.tt-view) .tt-description {
-            background-color: black !important;
-        }
-    </style>
-@endif
 <style type="text/css">
+    @if(env('EVENTKM') && app()->isLocale('en'))
+        @font-face {
+        font-family: 'School';
+        src: url('fonts/School_Times.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+        font-family: 'School', 'sans-serif' !important;
+        text-transform: uppercase !important;
+    }
+    @else
+        .alert-danger {
+        color: #000000;
+        background-color: #ffffff;
+        border-color: #000000;
+    }
+
+    .alert-danger i {
+        color: red !important;
+    }
+
+    .page-link, .page-item.disabled .page-link {
+        border: none !important;
+        background-color: transparent !important;
+    }
+    .tt-product:not(.tt-view) .tt-description {
+        background-color: black !important;
+    }
+    @endif
+
     @if(env('MALLR') || env('ABATI'))
+
     body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
     .container, .tt-title-small, .tt-description, header, footer
     .tt-collapse-title, .tt-collapse-content, .tt-collapse-block .tt-item .tt-collapse-title,
     .tt-label, .tt-label-sale, tt-label-new, tt-label tt-label-our-fatured,
     .tt-product-single-info .tt-label [class^=tt-label], .tt-collapse-title,
+    .tt-desctop-menu nav>ul>li.dropdown>a,
     .tt-collapse-content, .tt-title-options, .form-group, .form, .tt-table-03, select, option, .form-default select.form-control:not([size]):not([multiple])
     .form-default .form-group, label, label:not(.error), .tt-cart-total-title, .tt-cart-total-price, .tt-title-large, .tt-title {
         /*font-family: 'Tajawal', 'sans-serif' !important;*/
-        font-family: 'fb', 'sans-serif' !important;
-        /*font-family: 'skynews', 'sans-serif' !important;*/
+        /*font-family: 'fb', 'sans-serif' !important;*/
+        @if(app()->isLocale('ar'))
+        font-family: 'skynews', 'sans-serif' !important;
+        @else
+        font-family: 'YanoneKaffeesatz-Medium', 'sans-serif' !important;
+        @endif
         /*direction: rtl;*/
     }
 
     @elseif(env('DAILY'))
+
     body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
     .container, .tt-title-small, .tt-description, header, footer
     .tt-collapse-title, .tt-collapse-content, .tt-collapse-block .tt-item .tt-collapse-title,
@@ -58,7 +61,11 @@
     .tt-product-single-info .tt-label [class^=tt-label], .tt-collapse-title,
     .tt-collapse-content, .tt-title-options, .form-group, .form, .tt-table-03, select, option, .form-default select.form-control:not([size]):not([multiple])
     .form-default .form-group, label, label:not(.error), .tt-cart-total-title, .tt-cart-total-price, .tt-title-large, .tt-title {
-        font-family: 'Tajawal', 'sans-serif' !important;
+        @if(app()->isLocale('ar'))
+        font-family: 'GE SS Unique', 'sans-serif' !important;
+        @else
+        font-family: 'Tajawal-Light', 'sans-serif' !important;
+        @endif
         /*font-family: 'fb', 'sans-serif' !important;*/
         /*font-family: 'skynews', 'sans-serif' !important;*/
         /*direction: rtl;*/
