@@ -45,7 +45,6 @@
     .tt-desctop-menu nav > ul > li.dropdown > a,
     .tt-collapse-content, .tt-title-options, .form-group, .form, .tt-table-03, select, option, .form-default select.form-control:not([size]):not([multiple])
     .form-default .form-group, label, label:not(.error), .tt-cart-total-title, .tt-cart-total-price, .tt-title-large, .tt-title {
-        /*font-family: 'Tajawal', 'sans-serif' !important;*/
         /*font-family: 'fb', 'sans-serif' !important;*/
         @if(app()->isLocale('ar'))
  font-family: 'skynews', 'sans-serif' !important;
