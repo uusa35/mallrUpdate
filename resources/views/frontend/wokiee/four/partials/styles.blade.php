@@ -47,7 +47,7 @@
         @if(app()->isLocale('ar'))
         font-family: 'skynews', 'sans-serif' !important;
         @else
-        font-family: 'YanoneKaffeesatz-Medium', 'sans-serif' !important;
+        font-family: 'Tajawal-Light', 'sans-serif' !important;
         @endif
         /*direction: rtl;*/
     }
