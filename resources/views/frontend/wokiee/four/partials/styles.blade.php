@@ -12,7 +12,7 @@
         font-family: 'School', 'sans-serif' !important;
         text-transform: uppercase !important;
     }
-    @else
+    @elseif(env('EVENTKM'))
         .alert-danger {
         color: #000000;
         background-color: #ffffff;
