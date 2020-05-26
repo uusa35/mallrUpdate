@@ -49,7 +49,6 @@
         @else
         font-family: 'Tajawal-Light', 'sans-serif' !important;
         @endif
-        /*direction: rtl;*/
     }
 
     @elseif(env('DAILY'))
@@ -66,11 +65,22 @@
         @else
         font-family: 'Tajawal-Light', 'sans-serif' !important;
         @endif
-        /*font-family: 'fb', 'sans-serif' !important;*/
-        /*font-family: 'skynews', 'sans-serif' !important;*/
-        /*direction: rtl;*/
     }
 
+    @else
+    body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
+    .container, .tt-title-small, .tt-description, header, footer
+    .tt-collapse-title, .tt-collapse-content, .tt-collapse-block .tt-item .tt-collapse-title,
+    .tt-label, .tt-label-sale, tt-label-new, tt-label tt-label-our-fatured,
+    .tt-product-single-info .tt-label [class^=tt-label], .tt-collapse-title,
+    .tt-collapse-content, .tt-title-options, .form-group, .form, .tt-table-03, select, option, .form-default select.form-control:not([size]):not([multiple])
+    .form-default .form-group, label, label:not(.error), .tt-cart-total-title, .tt-cart-total-price, .tt-title-large, .tt-title {
+        @if(app()->isLocale('ar'))
+        font-family: 'fb', 'sans-serif' !important;
+        @else
+        font-family: 'Tajawal-Light', 'sans-serif' !important;
+    @endif
+    }
     @endif
     body, .tt-show, .page-link, .page-item.active, .page-link, .page-item.disabled {
         color: {{ $settings->main_theme_color ? $settings->main_theme_color : 'white' }};
