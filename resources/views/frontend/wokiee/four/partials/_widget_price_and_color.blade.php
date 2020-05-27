@@ -25,7 +25,7 @@
             @foreach($element->product_attributes->pluck('size')->unique('id')->take(4) as $size)
             <li><a href="{{ route('frontend.product.show.name', ['id' => $element->id, 'name' => $element->name]) }}" class="options-color-img"
                    data-src="images/product/product-03-05.jpg" data-src-hover="images/product/product-03-05-hover.jpg"
-                   data-tooltip="{{ $size->name }}" data-tposition="top">
+                   data-tooltip="{{ strlen($size->name) > 2 ? $size->name : trans('general.size')  }}" data-tposition="top">
                     <h5 style="color : lightgrey; padding-top: 5px">{{ strtoupper(substr($size->name,0,2)) }}</h5>
                 </a>
             </li>
