@@ -16,9 +16,6 @@ const ProductAttributeApp = () => {
     const [currentSize, setCurrentSize] = useState(null)
     const [colorDisabled, setColorDisabled] = useState(true);
 
-    console.log('sizes', sizes)
-    console.log('colors', colors);
-    console.log('attributes', attributes);
     useEffect(() => {
         $(document).ready(() => {
             axios.post(`/api/attributes`, {product_id: productId})
