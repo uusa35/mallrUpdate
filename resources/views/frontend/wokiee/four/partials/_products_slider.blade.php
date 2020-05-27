@@ -17,5 +17,8 @@
                 @endforeach
             </div>
         </div>
+        @foreach($elements as $element)
+            @include('frontend.wokiee.four.partials._add_to_cart_quick_view_product_btn')
+        @endforeach
     </div>
 @endif

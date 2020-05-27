@@ -33,15 +33,13 @@
                             @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')
                         @endif
                         @auth
-                            <div class="tt-wrapper pull-left mb-5">
-                                <ul class="tt-list-btn">
-                                    <li>
-                                        <a class="btn btn-link {{ $element->isFavorited ? 'active' : null }}"
+                            <div class="tt-wrapper mb-5">
+                                <div class="tt-row-btn">
+                                        <a class="btn btn-small col-lg-12 {{ $element->isFavorited ? 'active' : null }}"
                                            href="{{ route('frontend.favorite.product.add', $element->id) }}"><i
                                                     class="icon-n-072"></i>{{ trans('general.add_to_wish_list') }}</a>
-                                    </li>
                                     {{--<li><a class="btn-link" href="#"><i class="icon-n-08"></i>ADD TO COMPARE</a></li>--}}
-                                </ul>
+                                </div>
                             </div>
                         @endauth
 

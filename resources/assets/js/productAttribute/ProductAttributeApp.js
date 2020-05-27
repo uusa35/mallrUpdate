@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react'
+import React, {useState, useEffect, useMemo} from 'react'
 import {trans} from "./trans";
 import axios from 'axios';
-import {filter, first, map, uniqBy, isEmpty, sum, isNull} from 'lodash'
+import {filter, first, map, uniqBy, isEmpty, isNull} from 'lodash'
 import $ from 'jquery'
 
 const ProductAttributeApp = () => {
@@ -57,37 +57,28 @@ const ProductAttributeApp = () => {
         }
     }, [attributes])
 
-    const handleSizeClick = useCallback((id) => {
+    const handleSizeClick = (id) => {
         setCurrentSize(id)
-    })
+        setCurrentAttribute(null)
+        setCurrentColor(null)
+    }
 
     useMemo(() => {
         if (!isNull(currentSize)) {
             const filteredAttributes = filter(attributes, (a => a.size.id === currentSize))
             const filteredColors = map(filteredAttributes, 'color');
             setColors(filteredColors);
-            const firstColor = first(filteredColors);
-            setCurrentColor(firstColor.id)
-            const attribute = first(filter(attributes, (a => a.color.id === firstColor.id && a.size.id === currentSize)));
-            setCurrentAttribute(attribute)
-            setColorDisabled(false);
             $(`#size_id_${productId}`).attr('value', currentSize);
             $('#alertCartMessage').removeClass('d-none');
         }
     }, [currentSize])
 
-    const handleColorClick = useCallback((id) => {
+    const handleColorClick = (id) => {
         setCurrentColor(id)
-    }, [currentColor])
-
-    useMemo(() => {
-        if (isNull(currentColor)) {
-            const attribute = first(filter(attributes, (a => a.color.id === currentColor && a.size.id === currentSize)));
-            if (!isEmpty(attribute)) {
-                setCurrentAttribute(attribute)
-            }
-        }
-    }, [currentColor])
+        setColorDisabled(false);
+        const attribute = first(filter(attributes, (a => a.color.id === id && a.size.id === currentSize)));
+        setCurrentAttribute(attribute)
+    }
 
     useMemo(() => {
         if (!isEmpty(currentAttribute)) {
@@ -114,7 +105,7 @@ const ProductAttributeApp = () => {
             $(`#plus-btn-${productId}`).attr('disabled', 'disabled');
         }
         $(`#max-qty-${productId}`).val('1');
-    }, [currentAttribute])
+    }, [currentAttribute, currentColor, currentSize])
 
     return (
         <div className="tt-swatches-container">
