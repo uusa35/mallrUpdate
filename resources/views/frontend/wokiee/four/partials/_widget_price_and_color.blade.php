@@ -26,7 +26,7 @@
             <li><a href="#" class="options-color-img"
                    data-src="images/product/product-03-05.jpg" data-src-hover="images/product/product-03-05-hover.jpg"
                    data-tooltip="{{ $size->name }}" data-tposition="top">
-                    <h5 style="color : lightgrey; padding-top: 5px">{{ strtoupper(substr($size->name,0,1)) }}</h5>
+                    <h5 style="color : lightgrey; padding-top: 5px">{{ strtoupper(substr($size->name,0,2)) }}</h5>
                 </a>
             </li>
                 @endforeach
