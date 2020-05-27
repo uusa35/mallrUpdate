@@ -1955,5 +1955,6 @@ return array (
     "shipment_fuel_percentage" => "Shipment Fuel Percentage (applied only when shipment fixed rate is false)",
     "new" => "New",
     "today_date" => "Today's Date",
-    "logo" => "logo"
+    "logo" => "logo",
+    "order_now" => "Order Now"
 );

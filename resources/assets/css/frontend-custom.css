@@ -167,6 +167,10 @@ footer .tt-logo img {
     height: 100% !important;
 }
 
+.tt-product-single-info .tt-wrapper {
+    margin-top: 15px !important;
+}
+
 
 /*someboostrap not included*/
 /*Bootstrap v4.0.0 (https://getbootstrap.com)*/

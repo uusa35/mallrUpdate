@@ -27,8 +27,8 @@ class CartController extends Controller
 
     public function index()
     {
-        $country = $this->cart->content()->where('options.type','country')->first();
-        if($country) {
+        $country = $this->cart->content()->where('options.type', 'country')->first();
+        if ($country) {
             $country = Country::whereId($country->options->country_id)->first();
             CheckCartItems::dispatchNow($country);
         }
@@ -63,27 +63,31 @@ class CartController extends Controller
 
     public function addProduct(Request $request)
     {
-        $validator = validator($request->all(),
-            [
-                'product_id' => 'required|exists:products,id',
-                'product_attribute_id' => 'nullable|exists:product_attributes,id',
-                'size_id' => 'required_with:product_attribute_id|nullable|exists:sizes,id',
-                'color_id' => 'required_with:product_attribute_id|nullable|exists:colors,id',
-                'qty' => 'required|numeric|min:1',
-                'type' => 'required|alpha',
-            ]);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator);
+        try {
+            $validator = validator($request->all(),
+                [
+                    'product_id' => 'required|exists:products,id',
+                    'product_attribute_id' => 'nullable|exists:product_attributes,id',
+                    'size_id' => 'required_with:product_attribute_id|nullable|exists:sizes,id',
+                    'color_id' => 'required_with:product_attribute_id|nullable|exists:colors,id',
+                    'qty' => 'required|numeric|min:1',
+                    'type' => 'required|alpha',
+                ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator);
+            }
+            $product = Product::whereId($request->product_id)->with(
+                [
+                    'shipment_package.countries', 'product_attributes.color',
+                    'product_attributes.size'
+                ])->first();
+            if ($this->addProductToCart($request, $product, $this->cart)) {
+                return redirect()->back()->with('success', trans('message.product_added_to_cart_successfully'));
+            }
+            return redirect()->back()->with('error', trans('message.product_is_not_added_to_cart_successfully'));
+        } catch (\Exception $e) {
+            dd($e->getMessage());
         }
-        $product = Product::whereId($request->product_id)->with(
-            [
-                'shipment_package.countries','product_attributes.color',
-                'product_attributes.size'
-            ])->first();
-        if ($this->addProductToCart($request, $product, $this->cart)) {
-            return redirect()->back()->with('success', trans('message.product_added_to_cart_successfully'));
-        }
-        return redirect()->back()->with('error', trans('message.product_is_not_added_to_cart_successfully'));
     }
 
     public function checkStock(Product $product, ProductAttribute $productAttribute, $qty)
@@ -149,7 +153,7 @@ class CartController extends Controller
             ->where('minimum_charge', '<=', $this->cart->subTotal())
             ->first();
 
-        if ($coupon && $this->addCouponToCart($request,$coupon,$this->cart)) {
+        if ($coupon && $this->addCouponToCart($request, $coupon, $this->cart)) {
             return redirect()->back()->with('success', trans('message.coupon_shall_be_applied'));
         } else {
             session()->forget('coupon');

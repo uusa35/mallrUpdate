@@ -18,21 +18,23 @@
     @include('frontend.wokiee.four.partials._widget_price_and_color')
     <div class="tt-product-inside-hover text-center">
         <div class="tt-row-btn">
-            @if(isset($view) && $view)
+{{--            @if(isset($view) && $view)--}}
                 <a href="{{ route('frontend.product.show.name',['id' => $element->id , 'name' => $element->name]) }}"
-                   class="btn btn-small">
+                   class="btn btn-small mb-2">
                     <i class="fa fa-fw fa-lg icon-f-46"></i>
+                    {{ trans('general.order_now') }}
+                </a>
+{{--            @else--}}
+                <a href="#"
+                   id="addToCartBtn"
+                   data-toggle="modal"
+                   data-id="{{ $element->id }}"
+                   data-target="#addToCart-{{ $element->id }}"
+                   class="btn btn-small mb-2">
+                    <i class="fa fa-fw fa-lg fa-eye"></i>
                     {{ trans('general.view_details') }}
                 </a>
-            @else
-                <a href="#"
-                   data-toggle="modal"
-                   data-target="#addToCart-{{ $element->id }}"
-                   class="btn btn-small">
-                    <i class="fa fa-fw fa-lg icon-f-46"></i>
-                    {{ trans('general.add_collection_item_to_cart') }}
-                </a>
-            @endif
+{{--            @endif--}}
         </div>
         {{--        @if(isset($collection) && !is_null($collection))--}}
         {{--            <div class="tt-row-btn">--}}

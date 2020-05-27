@@ -1,7 +1,14 @@
 /* wokiee theme*/
 
 @font-face {
-    font-family: 'Tajawal';
+    font-family: 'Tajawal-Light';
+    src: url('fonts/Tajawal-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tajawal-Medium';
     src: url('fonts/Tajawal-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;

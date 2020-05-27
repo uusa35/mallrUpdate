@@ -1,7 +1,5 @@
 $(document).ready(function() {
-    console.log('frontend-custom.js is ready');
     $('#ModalquickView').on('show.bs.modal', function(e) {
-        console.log('showing the modal');
         //get data-id attribute of the clicked element
         var id = $(e.relatedTarget).data('id');
         var sku = $(e.relatedTarget).data('sku');
