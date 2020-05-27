@@ -28,7 +28,7 @@ class ProductLightResource extends JsonResource
             'description' => $this->description,
             'thumb' => $this->getCurrentImageAttribute(),
             'isReallyHot' => $this->isReallyHot,
-            'has_attributes' => $this->has_attributes,
+            'has_attributes' => $this->hasRealAttributes,
             'qty' => (Int) $this->totalAvailableQty,
             'hasStock' => $this->hasStock,
             'user' => new UserLightResource($this->whenLoaded('user')),

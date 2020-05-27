@@ -53,7 +53,7 @@ class ProductResource extends JsonResource
             'check_stock' => $this->check_stock,
             'has_stock' => $this->hasStock,
             'isReallyHot' => $this->isReallyHot,
-            'has_attributes' => $this->has_attributes,
+            'has_attributes' => $this->hasRealAttributes,
             'wrap_as_gift' => $this->wrap_as_gift,
             'show_attribute' => $this->show_attribute,
             'qty' => (Int)$this->totalAVailableQty,

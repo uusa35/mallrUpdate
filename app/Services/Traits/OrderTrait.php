@@ -241,11 +241,11 @@ trait OrderTrait
                 foreach ($request->cart as $item) {
                     if ($item['type'] === 'product') {
                         $product = Product::whereId($item['product_id'])->first();
-                        $productAttribute = $product->has_attributes ? ProductAttribute::whereId($item['product_attribute_id'])->first() : null;
+                        $productAttribute = $product->hasRealAttributes ? ProductAttribute::whereId($item['product_attribute_id'])->first() : null;
                         $order->order_metas()->create([
                             'order_id' => $order->id,
                             'product_id' => $item['product_id'],
-                            'product_attribute_id' => $product->has_attributes ? $item['product_attribute_id'] : null,
+                            'product_attribute_id' => $product->hasRealAttributes ? $item['product_attribute_id'] : null,
                             'collection_id' => $request->collection_id,
                             'qty' => $item['qty'],
                             'price' => $item['element']['finalPrice'],

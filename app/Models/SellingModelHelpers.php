@@ -15,7 +15,7 @@ trait SellingModelHelpers
 {
     public function getCanOrderAttribute($qty = 1, $attributeId = null)
     {
-        if ($this->has_attributes) {
+        if ($this->hasRealAttributes) {
             if (is_null($attributeId)) {
                 return $this->active && $this->is_available && $this->totalAvailableQty >= $qty;
             }

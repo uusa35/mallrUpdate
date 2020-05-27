@@ -16,7 +16,7 @@ class ProductAttributeLightResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'cart_id' => ($this->product->has_attributes ? $this->product_id : null ).$this->id,
+            'cart_id' => ($this->product->hasRealAttributes ? $this->product_id : null ).$this->id,
             'product_id'=> $this->product_id,
             'qty' => $this->qty,
             'color' => new ColorLightResource($this->whenLoaded('color')),

@@ -20,3 +20,4 @@
     </div>
     @include('frontend.wokiee.four.partials._product_widget_description')
 </div>
+    @include('frontend.wokiee.four.partials._add_to_cart_quick_view_product_btn',['element' => $element, 'currency' => $currency])

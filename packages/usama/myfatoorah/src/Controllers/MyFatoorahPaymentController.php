@@ -73,8 +73,8 @@ class MyFatoorahPaymentController extends Controller
         $order = Order::where(['reference_id' => $referenceId])->with('order_metas.product', 'user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color')->first();
         $order->order_metas->each(function ($orderMeta) use ($order) {
             if ($orderMeta->isProductType) {
-                if ($orderMeta->product->has_attributes && $orderMeta->product->check_stock && $orderMeta->product_attribute->qty > 0) {
-                    if ($orderMeta->product->has_attributes) {
+                if ($orderMeta->product->hasRealAttributes && $orderMeta->product->check_stock && $orderMeta->product_attribute->qty > 0) {
+                    if ($orderMeta->product->hasRealAttributes) {
                         $decrement = (int)$orderMeta->product_attribute->qty - (int)$orderMeta->qty > 0 ? (int)$orderMeta->product_attribute->qty - (int)$orderMeta->qty : 0;
                         $orderMeta->product->check_stock && $orderMeta->product_attribute->qty > 0 ? $orderMeta->product_attribute->update(['qty' => $decrement]) : null;
                     } else {

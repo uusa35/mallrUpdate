@@ -42,13 +42,15 @@
                                 @include('frontend.wokiee.four.partials._show_page_item_title_description_and_prices')
                                 @include('frontend.wokiee.four.partials._service_show_is_really_hot_element')
                                 @if($element->canOrder)
-{{--                                    <div class="tt-swatches-container">--}}
-                                        {{--                                        only for react js--}}
-                                        {{--                                        @if($element->has_attributes)--}}
-                                        {{--                                            <div id="productAttributeApp"></div>--}}
-                                        {{--                                        @endif--}}
-{{--                                    </div>--}}
-                                    {{--                                    @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')--}}
+                                    <div class="tt-wrapper">
+                                        <div class="tt-title-options">{{ trans('general.colors') }}:</div>
+                                        <ul class="tt-options-swatch options-large">
+                                            @foreach($element->colors as $col)
+                                                <li><a class="options-color" style="background-color: {{ $col->code }}"
+                                                       href="#"></a></li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                     <div class="tt-product-inside-hover text-center mt-4">
                                         <div class="tt-row-btn">
                                             {{--            @if(isset($view) && $view)--}}

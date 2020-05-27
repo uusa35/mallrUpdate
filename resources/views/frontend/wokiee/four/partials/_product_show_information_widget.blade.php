@@ -161,7 +161,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->has_attributes)
+            @if($element->hasRealAttributes)
                 @if($element->product_attributes->pluck('color')->isNotEmpty())
                     <tr>
                         <td class="td-fixed-element"><i
@@ -187,7 +187,7 @@
                     </tr>
                 @endif
             @else
-                @if(!$element->has_attributes)
+                @if(!$element->hasRealAttributes)
                     @if(!is_null($element->size) && !env('DAILY'))
                         <tr>
                             <td class="td-fixed-element"><i class="icon-f-02 fa fa-fw fa-lg"></i><span

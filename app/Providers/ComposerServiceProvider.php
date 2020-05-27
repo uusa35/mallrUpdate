@@ -65,6 +65,7 @@ class ComposerServiceProvider extends ServiceProvider
             'frontend.wokiee.four.home.*',
             'frontend.wokiee.four.*.show',
             'frontend.wokiee.four.partials._service_widget',
+            'frontend.wokiee.four.partials._product_widget',
             'frontend.wokiee.four.partials._cart_items_table',
             'frontend.wokiee.four.partials._cart_prices',
             'frontend.wokiee.four.partials._main_menu_cart_items',

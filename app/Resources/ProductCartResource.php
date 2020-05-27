@@ -26,7 +26,7 @@ class ProductCartResource extends JsonResource
             'description' => $this->description,
             'thumb' => $this->imageThumbLink,
             'large' => $this->imageLargeLink,
-            'has_attributes' => $this->has_attributes,
+            'has_attributes' => $this->hasRealAttributes,
             'qty' => (Int) request()->qty,
             'user' => new UserLightResource($this->whenLoaded('user')),
             'product_attributes' => ProductAttributeLightResource::collection($this->whenLoaded('product_attributes')),

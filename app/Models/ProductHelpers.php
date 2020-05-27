@@ -78,4 +78,9 @@ trait ProductHelpers
     {
         return (double)$this->weight * (double)$this->shipment_package->charge;
     }
+
+    public function getHasRealAttributesAttribute()
+    {
+        return $this->has_attributes && $this->product_attributes->isNotEmpty();
+    }
 }
