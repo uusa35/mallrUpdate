@@ -6,7 +6,7 @@ import $ from 'jquery'
 
 const ProductAttributeApp = () => {
     const [lang, setLang] = useState($('#appLang').val())
-    const [productId, setProductId] = useState($('#product_id').val())
+    const [productId, setProductId] = useState($(`#product_id`).val())
     const [currentLang, setCurrentLang] = useState(trans(lang));
     const [attributes, setAttributes] = useState([]);
     const [colors, setColors] = useState([]);
@@ -140,6 +140,7 @@ const ProductAttributeApp = () => {
                 </ul>
             </div>
         </div>
+
     );
 }
 

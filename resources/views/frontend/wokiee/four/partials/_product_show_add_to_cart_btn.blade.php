@@ -1,5 +1,5 @@
 <div class="tt-wrapper">
-    @if($element->has_attributes)
+    @if($element->hasRealAttributes)
         <div class="card bg-danger mb-3 d-none" id="alertCartMessage">
             <div class="card-header">
                 <span class="text-white ">{{ trans('general.choose_color_then_size') }}</span>
@@ -11,14 +11,14 @@
             <div class="tt-input-counter style-01" data-tooltip="{{ trans('general.choose_color_first') }}"
                  data-tposition="bottom">
                 <span class="minus-btn" id="minus-btn-{{ $element->id }}"
-                      data-product-id="{{ $element->id }}" {{ $element->has_attributes ? 'disabled' : null }}></span>
-                @if($element->has_attributes)
+                      data-product-id="{{ $element->id }}"></span>
+                @if($element->hasRealAttributes)
                     <input id="max-qty-{{ $element->id }}" type="number" value="1" size="1"/>
                 @else
                     <input id="max-qty-{{ $element->id }}" type="number" value="1" size="{{ $element->qty }}"/>
                 @endif
                 <span class="plus-btn" id="plus-btn-{{ $element->id }}"
-                      data-product-id="{{ $element->id }}" {{ $element->has_attributes ? 'disabled' : null }}></span>
+                      data-product-id="{{ $element->id }}"></span>
             </div>
         </div>
         <div class="col-item">

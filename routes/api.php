@@ -113,7 +113,7 @@ Route::get('attribute/qty', function () {
 Route::resource('homekey/category', 'Api\Homekey\CategoryController')->only(['index', 'show']);
 Route::post('attributes', function () {
     $product = Product::whereId(request()->product_id)->with('product_attributes.color', 'product_attributes.size')->first();
-    if ($product && $product->has_attributes && $product->product_attributes->isNotEmpty()) {
+    if ($product && $product->hasRealAttributes) {
         $attributes = ProductAttribute::where('product_id', request()->product_id)->with('color', 'size')->get();
         return response()->json(ProductAttributeLightResource::collection($attributes), 200);
     }

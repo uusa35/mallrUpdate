@@ -6,7 +6,7 @@
         <span class="sale-price">{{ $element->convertedPrice }}<span>{{ $currency->symbol }}</span></span>
     @endif
 </div>
-@if($element->has_attributes && $element->product_attributes->isNotEmpty())
+@if($element->hasRealAttributes)
     <div class="tt-option-block">
         {{--<ul class="tt-options-swatch">--}}
         {{--@foreach($element->product_attributes as $productAttribute)--}}

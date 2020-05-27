@@ -12,13 +12,10 @@
             >
                 @foreach($elements as $element)
                     <div class="col-lg-3 col-sm-12">
-                        @include('frontend.wokiee.four.partials._product_widget',['element' => $element,'view' => true])
+                        @include('frontend.wokiee.four.partials._product_widget',['element' => $element,'view' => true, 'currency' => $currency])
                     </div>
                 @endforeach
             </div>
         </div>
-        @foreach($elements as $element)
-            @include('frontend.wokiee.four.partials._add_to_cart_quick_view_product_btn')
-        @endforeach
     </div>
 @endif
