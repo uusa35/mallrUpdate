@@ -101,7 +101,14 @@
                                     </h5>
                                     <div id="element-description"></div>
                                     <div id="element-notes"></div>
+                                    <br/>
+                                    <div>
+                                        {{ trans('general.colors') }}
+                                    </div>
                                     <div id="element-colors"></div>
+                                    <div>
+                                        {{ trans('general.sizes') }}
+                                    </div>
                                     <div id="element-sizes"></div>
                                 </div>
                                 {{--<div class="tt-swatches-container">--}}
