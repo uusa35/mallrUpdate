@@ -82,26 +82,25 @@
                             <div class="tt-product-single-info">
                                 <div class="tt-add-info border-bottom">
                                     <ul>
-                                        <li><span><i class="icon-f-02 fa fa-fw fa-lg"></i>{{ trans('general.sku') }}: <span id="element-sku"></span></span></li>
-                                        <li><span><i class="fa fa-fw fa-lg icon-e-74"></i>{{ trans('general.availability') }}:</span> <span id="element-qty"></span></li>
+                                        <li><span>
+                                                </i>{{ trans('general.sku') }}: <span id="element-sku"></span></span></li>
+{{--                                        <li><span>{{ trans('general.availability') }}:</span> <span id="element-qty"></span></li>--}}
                                     </ul>
                                 </div>
-                                <h2 class="tt-title">
-                                    <div id="element-name"></div>
-                                </h2>
-                                <div class="tt-price border-bottom" style="margin-top: 20px; margin-bottom: 20px;">
-                                    <span class="new-price">
-                                        <span id="element-price"></span>
-                                        <span id="element-currency-name"></span>
-                                    </span>
-                                </div>
+
                                 <div class="tt-wrapper">
-                                    <h2 class="tt-title" style="margin-bottom: 10px;">
+                                    <h5>
+                                        <div id="element-name"></div>
+                                    </h5>
+                                    <h5>
+                                        {{ trans('general.price') }} : <span id="element-price"></span>
+                                        <span id="element-currency-name"></span>
+                                    </h5>
+                                    <h5>
                                         {{ trans('general.description') }}
-                                    </h2>
+                                    </h5>
                                     <div id="element-description"></div>
                                     <div id="element-notes"></div>
-                                    <hr>
                                     <div id="element-colors"></div>
                                     <div id="element-sizes"></div>
                                 </div>
@@ -175,11 +174,10 @@
                                         {{--<span class="plus-btn"></span>--}}
                                         {{--</div>--}}
                                         {{--</div>--}}
-                                        <div class="col-item">
-                                            <a id="element-url" href="#" class="btn btn-lg"><i
+
+                                            <a id="element-url" href="#" class="btn btn-sm col-lg-12"><i
                                                         class="fa fa-fw fa-eye fa-lg"></i>{{ trans('general.view_details') }}
                                             </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
