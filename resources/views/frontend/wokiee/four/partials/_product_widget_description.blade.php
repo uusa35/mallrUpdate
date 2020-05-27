@@ -22,18 +22,18 @@
                 <a href="{{ route('frontend.product.show.name',['id' => $element->id , 'name' => $element->name]) }}"
                    class="btn btn-small mb-2">
                     <i class="fa fa-fw fa-lg icon-f-46"></i>
-                    {{ trans('general.order_now') }}
-                </a>
-{{--            @else--}}
-                <a href="#"
-                   id="addToCartBtn"
-                   data-toggle="modal"
-                   data-id="{{ $element->id }}"
-                   data-target="#addToCart-{{ $element->id }}"
-                   class="btn btn-small mb-2">
-                    <i class="fa fa-fw fa-lg fa-eye"></i>
                     {{ trans('general.view_details') }}
                 </a>
+{{--            @else--}}
+{{--                <a href="#"--}}
+{{--                   id="addToCartBtn"--}}
+{{--                   data-toggle="modal"--}}
+{{--                   data-id="{{ $element->id }}"--}}
+{{--                   data-target="#addToCart-{{ $element->id }}"--}}
+{{--                   class="btn btn-small mb-2">--}}
+{{--                    <i class="fa fa-fw fa-lg fa-eye"></i>--}}
+{{--                    {{ trans('general.view_details') }}--}}
+{{--                </a>--}}
 {{--            @endif--}}
         </div>
         {{--        @if(isset($collection) && !is_null($collection))--}}

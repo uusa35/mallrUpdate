@@ -1,6 +1,6 @@
 <div class="tt-product thumbprod-center" style="padding: 10px;">
     <div class="tt-image-box">
-        @include('frontend.wokiee.four.partials._quick_view_product_btn')
+{{--        @include('frontend.wokiee.four.partials._quick_view_product_btn')--}}
         @auth
             <a href="{{ route('frontend.favorite.product.add', $element->id) }}"
                class="tt-btn-wishlist {{ $element->isFavorited ? 'active' : null }}"
@@ -20,4 +20,3 @@
     </div>
     @include('frontend.wokiee.four.partials._product_widget_description')
 </div>
-    @include('frontend.wokiee.four.partials._add_to_cart_quick_view_product_btn',['element' => $element, 'currency' => $currency])

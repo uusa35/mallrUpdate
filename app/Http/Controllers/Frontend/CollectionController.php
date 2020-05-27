@@ -49,7 +49,12 @@ class CollectionController extends Controller
      */
     public function show($id)
     {
-        $element = Collection::whereId($id)->with('products')->first();
+        $element = Collection::whereId($id)->with(['products.product_attributes.color',
+            'products.color','products.size',
+            'products.product_attributes.size',
+            'products.brand','products.user.country','products.shipment_package.countries',
+            'products.images','products.categories','products.favorites','products.tags'
+        ])->first();
         IncreaseElementViews::dispatch($element);
         return view('frontend.wokiee.four.modules.collection.show', compact('element'));
     }

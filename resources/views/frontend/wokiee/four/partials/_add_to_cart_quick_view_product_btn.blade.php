@@ -45,7 +45,7 @@
                                     <div class="tt-wrapper">
                                         <div class="tt-title-options">{{ trans('general.colors') }}:</div>
                                         <ul class="tt-options-swatch options-large">
-                                            @foreach($element->colors as $col)
+                                            @foreach($element->product_attributes->pluck('color')->unique('id') as $col)
                                                 <li><a class="options-color" style="background-color: {{ $col->code }}"
                                                        href="#"></a></li>
                                             @endforeach
