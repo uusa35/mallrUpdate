@@ -5179,19 +5179,6 @@
                 "env",
                 "environment"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> 9e457ea81c760fcca00cb01b1b0a079d869a4dd6
             "time": "2020-05-23T09:43:32+00:00"
         },
         {
@@ -5240,27 +5227,6 @@
                 "clean",
                 "php"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/moelleken",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/voku",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/voku",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/voku/portable-ascii",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> 9e457ea81c760fcca00cb01b1b0a079d869a4dd6
             "time": "2020-05-23T23:15:19+00:00"
         },
         {
