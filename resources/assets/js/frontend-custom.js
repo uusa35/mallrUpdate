@@ -1,12 +1,5 @@
 $(document).ready(function() {
-    console.log('frontend-custom.js is ready');
-    $('#addToCartBtn').on('click', function (e) {
-        console.log('clicked');
-        var id = $(e.relatedTarget).data('id');
-        $('#currentActiveProduct').val(id)
-    })
     $('#ModalquickView').on('show.bs.modal', function(e) {
-        console.log('showing the modal');
         //get data-id attribute of the clicked element
         var id = $(e.relatedTarget).data('id');
         var sku = $(e.relatedTarget).data('sku');
