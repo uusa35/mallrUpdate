@@ -16,14 +16,14 @@
         <ul class="tt-options-swatch">
             @foreach($element->product_attributes->pluck('color')->unique('id') as $color)
                 <li><a class="options-color" style="background-color: {{ $color->code }};"
-                       href="#"></a></li>
+                       href="{{ route('frontend.product.show.name', ['id' => $element->id, 'name' => $element->name]) }}"></a></li>
             @endforeach
         </ul>
     </div>
     <div class="tt-option-block">
         <ul class="tt-options-swatch js-change-img">
             @foreach($element->product_attributes->pluck('size')->unique('id')->take(4) as $size)
-            <li><a href="#" class="options-color-img"
+            <li><a href="{{ route('frontend.product.show.name', ['id' => $element->id, 'name' => $element->name]) }}" class="options-color-img"
                    data-src="images/product/product-03-05.jpg" data-src-hover="images/product/product-03-05-hover.jpg"
                    data-tooltip="{{ $size->name }}" data-tposition="top">
                     <h5 style="color : lightgrey; padding-top: 5px">{{ strtoupper(substr($size->name,0,2)) }}</h5>
