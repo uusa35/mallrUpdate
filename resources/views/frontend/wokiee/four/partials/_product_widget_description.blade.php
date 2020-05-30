@@ -4,11 +4,11 @@
             <li>
                 <a href="{{ route('frontend.product.search',['user_id' => $element->user_id]) }}">{{ str_limit($element->user->slug,25,'..') }}</a>
             </li>
-            @if($element->brand)
-                <li>
+            <li>
+                @if($element->brand)
                     <a href="{{ route('frontend.product.search', ['brand_id' => $element->brand->id]) }}">{{ $element->brand->slug }}</a>
-                </li>
-            @endif
+                @endif
+            </li>
         </ul>
         {{--@include('frontend.wokiee.four.partials._rating')--}}
     </div>
@@ -18,23 +18,23 @@
     @include('frontend.wokiee.four.partials._widget_price_and_color')
     <div class="tt-product-inside-hover text-center">
         <div class="tt-row-btn">
-{{--            @if(isset($view) && $view)--}}
-                <a href="{{ route('frontend.product.show.name',['id' => $element->id , 'name' => $element->name]) }}"
-                   class="btn btn-small mb-2">
-                    <i class="fa  fa-fw fa-lg icon-f-46"></i>
-                    {{ trans('general.view_details') }}
-                </a>
-{{--            @else--}}
-{{--                <a href="#"--}}
-{{--                   id="addToCartBtn"--}}
-{{--                   data-toggle="modal"--}}
-{{--                   data-id="{{ $element->id }}"--}}
-{{--                   data-target="#addToCart-{{ $element->id }}"--}}
-{{--                   class="btn btn-small mb-2">--}}
-{{--                    <i class="fa fa-fw fa-lg fa-eye"></i>--}}
-{{--                    {{ trans('general.view_details') }}--}}
-{{--                </a>--}}
-{{--            @endif--}}
+            {{--            @if(isset($view) && $view)--}}
+            <a href="{{ route('frontend.product.show.name',['id' => $element->id , 'name' => $element->name]) }}"
+               class="btn btn-small mb-2">
+                <i class="fa  fa-fw fa-lg icon-f-46"></i>
+                {{ trans('general.view_details') }}
+            </a>
+            {{--            @else--}}
+            {{--                <a href="#"--}}
+            {{--                   id="addToCartBtn"--}}
+            {{--                   data-toggle="modal"--}}
+            {{--                   data-id="{{ $element->id }}"--}}
+            {{--                   data-target="#addToCart-{{ $element->id }}"--}}
+            {{--                   class="btn btn-small mb-2">--}}
+            {{--                    <i class="fa fa-fw fa-lg fa-eye"></i>--}}
+            {{--                    {{ trans('general.view_details') }}--}}
+            {{--                </a>--}}
+            {{--            @endif--}}
         </div>
         {{--        @if(isset($collection) && !is_null($collection))--}}
         {{--            <div class="tt-row-btn">--}}
