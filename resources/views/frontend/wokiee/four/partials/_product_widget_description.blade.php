@@ -4,11 +4,11 @@
             <li>
                 <a href="{{ route('frontend.product.search',['user_id' => $element->user_id]) }}">{{ str_limit($element->user->slug,25,'..') }}</a>
             </li>
-            <li>
-                @if($element->brand)
-                    <a href="{{ route('frontend.product.search', ['brand_id' => $element->brand->id]) }}">{{ $element->brand->slug }}</a>
-                @endif
-            </li>
+{{--            @if($element->brand)--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('frontend.product.search', ['brand_id' => $element->brand->id]) }}">{{ $element->brand->slug }}</a>--}}
+{{--                </li>--}}
+{{--            @endif--}}
         </ul>
         {{--@include('frontend.wokiee.four.partials._rating')--}}
     </div>
