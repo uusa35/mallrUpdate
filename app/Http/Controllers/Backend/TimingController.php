@@ -38,7 +38,7 @@ class TimingController extends Controller
     {
         $this->authorize('timing.create');
         $services = auth()->user()->isAdminOrAbove ? Service::active()->get() : auth()->user()->services()->get();
-        $users = User::active()->get();
+        $users = User::active()->notAdmins()->notClients()->get();
         $days = Day::all();
         return view('backend.modules.timing.create', compact('services', 'users', 'days'));
     }
