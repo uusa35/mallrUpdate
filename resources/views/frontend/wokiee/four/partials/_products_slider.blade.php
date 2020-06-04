@@ -16,6 +16,9 @@
                     </div>
                 @endforeach
             </div>
+{{--            @foreach($elements as $element)--}}
+{{--                    @include('frontend.wokiee.four.partials._add_to_cart_quick_view_product_btn',['element' => $element, 'currency' => $currency])--}}
+{{--                @endforeach--}}
         </div>
     </div>
 @endif

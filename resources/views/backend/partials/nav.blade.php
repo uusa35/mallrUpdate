@@ -4,7 +4,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo" style="display: flex; justify-content: center; align-items: center;">
             <a href="{{ route('frontend.home') }}">
-                <img src="{{ $settings->logoThumb }}" alt="logo" class="img-logo logo-default"/> </a>
+                <img src="{{ $settings->getCurrentImageAttribute('logo') }}" alt="logo" class="img-xs logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>
@@ -295,7 +295,7 @@
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true">
-                            <img alt="" class="img-xs" src="{{ auth()->user()->imageThumbLink }}"/>
+                            <img alt="" class="img-xs logo-default" src="{{ auth()->user()->getCurrentImageAttribute() }}"/>
                             <i class="fa fa-angle-down"></i>
                             <span class="username username-hide-on-mobile"> {{ str_limit(auth()->user()->name,30) }}</span><br>
                         </a>

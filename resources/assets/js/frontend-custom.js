@@ -72,7 +72,6 @@ $(document).ready(function() {
     //
     $(`[id^=plus-btn]`).on('click', function() {
         productId = $(this).data('product-id');
-        console.log('the product id', productId);
         let qty = $(`input[id=qty_${productId}]`);
         currentQty = Number(qty.attr('value'));
         maxSize = Number($(`#max-qty-${productId}`).attr('size'));

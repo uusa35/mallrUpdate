@@ -32,7 +32,7 @@ class ServiceStore extends FormRequest
             'individuals' => 'nullable|numeric|max:999',
             'image' => "image|nullable|dimensions:width=1080,height=1440|max:".env('MAX_IMAGE_SIZE').'"',
             'images' => 'array|required',
-            'categories' => 'required|array',
+            'categories' => 'array',
             'price' => 'required|numeric|min:0.5|max:999',
             'on_sale' => 'boolean',
             'on_sale_on_homepage' => 'boolean',

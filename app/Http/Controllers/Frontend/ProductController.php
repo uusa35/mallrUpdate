@@ -58,7 +58,8 @@ class ProductController extends Controller
     {
         $element = $this->product->whereId($productId)->with([
             'product_attributes.color', 'product_attributes.size',
-            'images', 'tags', 'categories', 'favorites', 'brand','color','size'
+            'images', 'tags', 'categories', 'favorites', 'brand','color','size',
+            'shipment_package.countries'
         ])->first();
         IncreaseElementViews::dispatch($element);
         // return array of ['size_id', 'color', 'att_id','qty' ] for one product
