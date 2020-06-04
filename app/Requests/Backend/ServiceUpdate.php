@@ -41,7 +41,7 @@ class ServiceUpdate extends FormRequest
             'name_en' => 'required|min:3|max:200',
             'user_id' => 'required|exists:users,id',
             'image' => 'image|nullable|dimensions:width=1080,height=1440|max:300',
-            'categories' => 'array',
+            'categories' => 'required|array',
             'price' => 'required|numeric|min:0.5|max:999',
             'on_sale' => 'boolean',
             'on_sale_on_homepage' => 'boolean',
