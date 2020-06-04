@@ -54,7 +54,7 @@ class ServiceController extends Controller
         $tags = Tag::active()->get();
         $videos = Video::active()->get();
         $brands = Brand::active()->get();
-        $users = User::active()->notAdmins()->get();
+        $users = User::active()->notAdmins()->notClients()->get();
         $timings = Timing::active()->available()->workingDays()->orderBy('day_no', 'asc')->get()->groupBy('day_no');
         $areas = auth()->user()->isAdminOrAbove ? Area::active()->get() : Area::active()->where('country_id', auth()->user()->country_id)->with('country')->get();
         $addOns = Addon::active()->whereHas('items' ,function ($q) {
