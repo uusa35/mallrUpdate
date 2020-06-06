@@ -203,7 +203,7 @@ class UserController extends Controller
             }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
                 return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
             }])->with(['fans' => function ($q) {
-                return $q->active()->scopeCompanies();
+                return $q->active()->companies();
             }])->first();
             if ($element) {
                 $request->has('player_id') ? $element->update(['player_id' => $request->player_id]) : null;
@@ -224,7 +224,7 @@ class UserController extends Controller
         }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
             return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
         }])->with(['fans' => function ($q) {
-            return $q->active()->scopeCompanies();
+            return $q->active()->companies();
         }])->first();
         if ($element) {
             $request->has('player_id') ? $element->update(['player_id' => $request->player_id]) : null;
