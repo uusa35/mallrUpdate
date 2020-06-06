@@ -73,7 +73,7 @@ class UserResource extends JsonResource
                 'video_url_five' => $this->video_url_five,
             ],
             'commentsCount' => $this->comments->count(),
-            'myFans' => UserExtraLightResource::collection($this->whenLoaded('myFannedList')),
+            'myFannedList' => UserExtraLightResource::collection($this->whenLoaded('myFannedList')),
             'role' => RoleLightResource::make($this->whenLoaded('role')),
             'classifieds' => ClassifiedExtraLightResource::collection($this->whenLoaded('classifieds')),
             'products' => ProductExtraLightResource::collection($this->whenLoaded('products')),

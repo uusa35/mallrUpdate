@@ -109,7 +109,6 @@ class UserController extends Controller
                 }]);
             }])
             ->with('classifieds.category')
-            ->with('myFannedList')
             ->with(['comments' => function ($q) {
                 return $q->active()->with('owner')->orderBy('created_at', 'desc');
             }])->first();
@@ -203,7 +202,7 @@ class UserController extends Controller
                 return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
             }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
                 return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
-            }])->with(['fans' => function ($q) {
+            }])->with(['myFannedList' => function ($q) {
                 return $q->active()->companies();
             }])->first();
             if ($element) {
@@ -224,7 +223,7 @@ class UserController extends Controller
             return $q->active()->notExpired()->hasImage();
         }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
             return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
-        }])->with(['fans' => function ($q) {
+        }])->with(['myFannedList' => function ($q) {
             return $q->active()->companies();
         }])->first();
         if ($element) {
