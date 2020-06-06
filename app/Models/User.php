@@ -79,7 +79,7 @@ class User extends Authenticatable
 
     public function fans()
     {
-        return $this->belongsToMany(User::class, 'fans', 'user_id', 'fan_id');
+        return $this->belongsToMany(User::class, 'fans', 'fan_id');
     }
 
     public function images()
