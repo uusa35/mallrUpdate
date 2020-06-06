@@ -109,6 +109,7 @@ class UserController extends Controller
                 }]);
             }])
             ->with('classifieds.category')
+            ->with('myFannedList')
             ->with(['comments' => function ($q) {
                 return $q->active()->with('owner')->orderBy('created_at', 'desc');
             }])->first();

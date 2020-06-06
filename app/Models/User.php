@@ -82,6 +82,10 @@ class User extends Authenticatable
         return $this->belongsToMany(User::class, 'fans', 'fan_id');
     }
 
+    public function myFannedList() {
+        return $this->belongsToMany(User::class,'fans','user_id','fan_id');
+    }
+
     public function images()
     {
         return $this->morphMany(Image::class, 'imagable');
