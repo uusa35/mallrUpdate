@@ -87,17 +87,10 @@ class Filters extends QueryFilters
 
     public function user_category_id()
     {
-        $category = $this->category->whereId(request()->user_category_id)->with('children')->first();
-        if ($category->children->isEmpty()) {
-            return $this->builder->where('category_id', request()->user_category_id);
-        } else {
-            $ids = $category->children->pluck('id')->merge($category->id)->toArray();
-            return $this->builder->whereIn('category_id', $ids);
-        }
 //        return $this->builder->where('category_id', request()->user_category_id);
-//        return $this->builder->whereHas('categories', function ($q) {
-//            return $q->whereIn('category_id', is_array(request()->user_category_id) ? request()->user_category_id : [request()->user_category_id]);
-//        });
+        return $this->builder->whereHas('categories', function ($q) {
+            return $q->whereIn('category_id', is_array(request()->user_category_id) ? request()->user_category_id : [request()->user_category_id]);
+        });
     }
 
     public function categories()
