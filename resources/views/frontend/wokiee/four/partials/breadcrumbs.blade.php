@@ -1,6 +1,6 @@
-@if(str_contains(request()->route()->getPrefix(),'backend'))
-    @include('backend.partials.breadcrumbs')
-@else
+{{--@if(str_contains(request()->route()->getPrefix(),'backend'))--}}
+{{--    @include('backend.partials.breadcrumbs')--}}
+{{--@else--}}
     @if (count($breadcrumbs) > 0)
         <div class="tt-breadcrumb">
             <div class="container">
@@ -16,4 +16,4 @@
             </div>
         </div>
     @endif
-@endif
+{{--@endif--}}
