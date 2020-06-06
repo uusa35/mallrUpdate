@@ -18,7 +18,7 @@ trait HomePageTrait
 
     public function getMallrHome()
     {
-        $sliders = Slide::active()->onHome()->limit(6)->get();
+        $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
         $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
         $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
         $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images','user', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;

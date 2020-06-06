@@ -69,7 +69,7 @@ class ClassifiedController extends Controller
                 'name_ar' => 'required|min:3|max:200',
                 'name_ar' => 'required|min:3|max:200',
                 'mobile' => 'required|min:5|max:20',
-                'price' => 'required|numeric',
+                'price' => 'required|numeric|min:2|max:8',
                 'description_ar' => 'min:5|max:500',
                 'description_en' => 'min:5|max:500',
                 'image' => 'required|image',
