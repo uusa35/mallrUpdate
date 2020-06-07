@@ -67,7 +67,7 @@ class MyFatoorahPaymentController extends Controller
             'paymentId' => 'required'
         ]);
         if ($validate->fails()) {
-            throw new Excption($validate->errors()->first());
+            throw new \Exception($validate->errors()->first());
         }
         $referenceId = $this->getInvoiceId($request->paymentId);
         $order = Order::where(['reference_id' => $referenceId])->with('order_metas.product', 'user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color')->first();

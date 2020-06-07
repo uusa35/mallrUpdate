@@ -157,7 +157,7 @@ class ServiceController extends Controller
             $request->has_only_items ? $element->addons()->sync([]) : null;
             $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], true) : null;
-            if ($request->areas[0] === 'all') {
+            if ($request->areas && $request->areas[0] === 'all') {
                 $element->areas()->sync($element->user->country->areas->pluck('id')->toArray());
             } else {
                 $element->areas()->sync($request->areas);
