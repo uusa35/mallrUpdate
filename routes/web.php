@@ -13,8 +13,6 @@
 use App\Models\Order;
 use App\Models\User;
 use App\Notifications\OrderPaid;
-use App\Services\GoogleMapsGeocoder;
-use GoogleMaps\GoogleMaps;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 

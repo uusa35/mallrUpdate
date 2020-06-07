@@ -202,6 +202,8 @@ class UserController extends Controller
                 return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
             }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
                 return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
+            }])->with(['myFannedList' => function ($q) {
+                return $q->active()->companies();
             }])->first();
             if ($element) {
                 $request->has('player_id') ? $element->update(['player_id' => $request->player_id]) : null;
@@ -221,6 +223,8 @@ class UserController extends Controller
             return $q->active()->notExpired()->hasImage();
         }])->with(['country', 'collections'])->with(['classifieds' => function ($q) {
             return $q->active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup');
+        }])->with(['myFannedList' => function ($q) {
+            return $q->active()->companies();
         }])->first();
         if ($element) {
             $request->has('player_id') ? $element->update(['player_id' => $request->player_id]) : null;
@@ -234,11 +238,11 @@ class UserController extends Controller
         $validate = validator($request->all(), [
             'name' => 'required|min:3|max:200',
             'email' => 'required|email|unique:users',
-            'mobile' => 'required|min:5|max:20',
+            'mobile' => 'required|min:5|max:12|numeric',
             'password' => 'required|min:6',
             'address' => 'max:500|nullable',
             'country_id' => 'required|exists:countries,id',
-            'description' => 'max:1000|nullable',
+            'description' => 'min:4|max:1000|nullable',
         ]);
         if ($validate->fails()) {
             return response()->json(['message' => $validate->errors()->first()], 400);
