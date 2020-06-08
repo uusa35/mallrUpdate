@@ -409,7 +409,7 @@
                                                 </div>
                                                 <div class="list-datetime">
                                                     <h4>
-                                                        {{ $monthlyReports->pluck('order_metas')->count() }} {{ trans('general.product') }}
+                                                        {{ $monthlyReports->pluck('order_metas.product')->count() }} {{ trans('general.product') }}
                                                     </h4>
                                                 </div>
                                                 <div class="list-item-content">

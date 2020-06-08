@@ -19,14 +19,12 @@ class HomeController extends Controller
     use NotificationHelper;
     public function index()
     {
-        $start = Carbon::now()->startOfMonth();
-        $end = Carbon::now();
         $orders = Order::query();
         $monthlyReports = $orders->where('paid', true)
-            ->whereDate('created_at', '<=', $end)
-            ->whereDate('created_at', '>=', $start)
+            ->whereDate('created_at', '<=', Carbon::now())
+            ->whereDate('created_at', '>=', Carbon::now()->startOfMonth())
             ->with(['order_metas' => function ($q) {
-            return $q->where('item_type', 'product');
+            return $q->where('item_type', 'product')->with('product');
         }])->get();
         return view('backend.home', compact('monthlyReports'));
     }
