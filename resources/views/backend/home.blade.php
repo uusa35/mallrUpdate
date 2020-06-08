@@ -408,7 +408,7 @@
                                                     <i class="icon-check"></i>
                                                 </div>
                                                 <div class="list-datetime">
-                                                    {{ dd($monthlyReports) }}
+                                                    {{ dd($monthlyReports->pluck('order_metas.product')) }}
                                                     <h4>
                                                         {{ $monthlyReports->pluck('order_metas.product')->count() }} {{ trans('general.product') }}
                                                     </h4>
