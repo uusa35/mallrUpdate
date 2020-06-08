@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +38,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="604">
-                  <caret line="410" column="107" lean-forward="true" selection-start-line="410" selection-start-column="107" selection-end-line="410" selection-end-column="107" />
+                <state relative-caret-position="622">
+                  <caret line="411" column="107" lean-forward="true" selection-start-line="411" selection-start-column="107" selection-end-line="411" selection-end-column="107" />
                 </state>
               </provider>
             </entry>
@@ -73,8 +74,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+                <state relative-caret-position="342">
+                  <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="75" />
                 </state>
               </provider>
             </entry>
@@ -554,12 +555,12 @@
       <workItem from="1591537632756" duration="607000" />
       <workItem from="1591550199885" duration="603000" />
       <workItem from="1591616511239" duration="305000" />
-      <workItem from="1591640929138" duration="948000" />
+      <workItem from="1591640929138" duration="1061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284088000" />
+    <option name="totallyTimeSpent" value="284201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="0" />
@@ -955,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="410" column="107" lean-forward="true" selection-start-line="410" selection-start-column="107" selection-end-line="410" selection-end-column="107" />
+        <state relative-caret-position="622">
+          <caret line="411" column="107" lean-forward="true" selection-start-line="411" selection-start-column="107" selection-end-line="411" selection-end-column="107" />
         </state>
       </provider>
     </entry>

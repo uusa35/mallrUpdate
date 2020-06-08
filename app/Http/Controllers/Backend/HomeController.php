@@ -26,7 +26,8 @@ class HomeController extends Controller
             ->with(['order_metas' => function ($q) {
             return $q->where('item_type', 'product')->with('product');
         }])->get();
-        return view('backend.home', compact('monthlyReports'));
+        $productsCount = $monthlyReports->pluck('order_metas.product')->count();
+        return view('backend.home', compact('monthlyReports','productsCount'));
     }
 
     public function home()
