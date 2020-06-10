@@ -21,6 +21,7 @@
                             <th>{{ trans('general.company') }}</th>
                             <th>{{ trans('general.properties') }}</th>
                             <th>{{ trans('general.active') }}</th>
+                            <th class="none">{{ trans('general.expired_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
                         </thead>
@@ -34,6 +35,7 @@
                             <th>{{ trans('general.company') }}</th>
                             <th>{{ trans('general.properties') }}</th>
                             <th>{{ trans('general.active') }}</th>
+                            <th class="none">{{ trans('general.expired_at') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
                         </tfoot>
@@ -62,6 +64,7 @@
                                 <td>
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>
+                                <td>{{ $element->expired_at }}</td>
                                 <td>
                                     <div class="btn-group">
                                         <button type="button" class="btn green btn-xs btn-outline dropdown-toggle"

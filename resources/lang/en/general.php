@@ -1099,5 +1099,6 @@ return array(
     "new" => "New",
     "today_date" => "Today's Date",
     "logo" => "logo",
-    "order_now" => "Order Now"
+    "order_now" => "Order Now",
+    "expired_at" => "Expired at"
 );

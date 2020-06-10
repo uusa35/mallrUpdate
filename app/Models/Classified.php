@@ -111,7 +111,7 @@ class Classified extends PrimaryModel
 
     public function scopeNotExpired($q)
     {
-        return $q->whereDate('expired_at', '>', Carbon::today());
+        return $q->whereDate('expired_at', '>', Carbon::today()->subYears(3)); // temporarly i did it to show adds
     }
 
     public function scopeExpired($q)
