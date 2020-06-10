@@ -93,7 +93,8 @@ trait CartTrait
 //            }
 //            return false;
         }
-        return false;
+//        return false;
+        throw new \Exception(trans('message.product_out_of_stock'));
     }
 
     public function addCouponToCart(Request $request, Coupon $coupon, $cart)

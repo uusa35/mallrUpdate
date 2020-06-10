@@ -273,6 +273,7 @@ return array(
     "shipment_one" => "Shipment Policy depends on destination. shall update this later.",
     "return_policy" => "Return Policy depends on destination. shall update this later.",
     "shipment_fixed_rate" => "When Shipment Fixed rate is true, then shipment charge shall be fixed on each item ordered. rate can be modified from country Module.",
-    "product_is_not_added_to_cart_successfully" => "Product is not added to cart successfully. please try again."
+    "product_is_not_added_to_cart_successfully" => "Product is not added to cart successfully. please try again.",
+    "product_out_of_stock" => "Product is out of stock for the chosen Size / Color"
 
 );
