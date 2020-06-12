@@ -238,7 +238,7 @@ class UserController extends Controller
         $validate = validator($request->all(), [
             'name' => 'required|min:3|max:200',
             'email' => 'required|email|unique:users',
-            'mobile' => 'required|min:5|max:12|numeric',
+            'mobile' => 'required|min:5|max:12',
             'password' => 'required|min:6',
             'address' => 'max:500|nullable',
             'country_id' => 'required|exists:countries,id',
