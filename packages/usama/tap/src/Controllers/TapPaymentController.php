@@ -68,7 +68,7 @@ class TapPaymentController extends Controller
             'ref' => 'required'
         ]);
         if ($validate->fails()) {
-            throw new Excption($validate->errors()->first());
+            throw new \Exception($validate->errors()->first());
         }
         $order = Order::where(['reference_id' => $request->ref])->with([
             'order_metas.product',

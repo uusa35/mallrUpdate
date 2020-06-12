@@ -2126,5 +2126,6 @@ return array (
     "new" => "جديد",
     "today_date" => "تاريخ اليوم",
     "logo" => "لوجو",
-    "order_now" => "أطلب الآن"
+    "order_now" => "أطلب الآن",
+    "expired_at" => "ينتهي في"
 );
