@@ -243,6 +243,7 @@ class UserController extends Controller
             'address' => 'max:500|nullable',
             'country_id' => 'required|exists:countries,id',
             'description' => 'min:4|max:1000|nullable',
+            'role_id' => 'exists:roles,id'
         ]);
         if ($validate->fails()) {
             return response()->json(['message' => $validate->errors()->first()], 400);
@@ -256,7 +257,7 @@ class UserController extends Controller
             'mobile' => $request->mobile,
             'player_id' => $request->has('player_id') ? $request->player_id : null,
             'country_id' => $request->country_id,
-            'role_id' => Role::where('is_client', true)->first()->id,
+            'role_id' => $request->role_id ? $request->role_id : Role::where('is_client', true)->first()->id,
             'api_token' => rand(9999999, 99999999999),
             'address' => $request->address,
             'description_ar' => $request->description,
