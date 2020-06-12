@@ -65,8 +65,8 @@
                                             <div class="form-group">
                                                 <button class="btn btn-border"
                                                         type="submit">{{ trans('general.login') }}</button>
-                                                <a class="btn btn-border"
-                                                   href="auth/google">{{ trans('general.login_with_google') }}</a>
+{{--                                                <a class="btn btn-border"--}}
+{{--                                                   href="auth/google">{{ trans('general.login_with_google') }}</a>--}}
                                             </div>
                                         </div>
                                         <div class="col-auto align-self-end">
