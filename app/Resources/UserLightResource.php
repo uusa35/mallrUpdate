@@ -22,6 +22,7 @@ class UserLightResource extends JsonResource
             'views' => $this->views,
             'rating' => $this->rating,
             'whatsapp' => $this->whatsapp ? $this->whatsapp : $this->mobile,
+            'has_map' => ($this->longitude && $this->latitude),
             'service' => ucfirst(Str::limit($this->service, 30, '')),
             'role' => new RoleLightResource($this->whenLoaded('role')),
             'products' => ProductExtraLightResource::collection($this->whenLoaded('products')),
