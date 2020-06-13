@@ -4,8 +4,8 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
-                            class="icon icon-clear"></span></button>
+                <button type="button" data-dismiss="modal" aria-hidden="true"><i
+                            class="fa fa-fw fa-close"></i></button>
             </div>
             <div class="modal-body">
                 <div class="card">

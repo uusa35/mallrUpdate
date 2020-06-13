@@ -1,5 +1,6 @@
 @include('frontend.wokiee.partials.styles')
 @if(env('EVENTKM'))
+    @if(app()->getLocale() === 'en')
     <style type="text/css">
         @font-face {
             font-family: 'School';
@@ -32,6 +33,33 @@
             background-color: black !important;
         }
     </style>
+        @else
+        <style type="text/css">
+            body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+                font-family: 'GE SS Medium', 'sans-serif' !important;
+                text-transform: uppercase !important;
+            }
+
+            .alert-danger i {
+                color: red !important;
+            }
+
+            .alert-danger {
+                color: #000000;
+                background-color: #ffffff;
+                border-color: #000000;
+            }
+
+            .page-link, .page-item.disabled .page-link {
+                border: none !important;
+                background-color: transparent !important;
+            }
+
+            .tt-product:not(.tt-view) .tt-description {
+                background-color: black !important;
+            }
+        </style>
+        @endif
 @endif
 
 <style type="text/css">

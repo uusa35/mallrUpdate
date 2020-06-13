@@ -49,6 +49,12 @@ font-weight: bolder;
 font-style: normal;
 }
 
+
+@font-face {
+font-family: 'GE SS Medium';
+src: url('fonts/ge-ss-two-medium.ttf')
+}
+
 /*body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {*/
     /*font-family: 'Cairo', sans-serif !important;*/
     /*direction: rtl;*/
