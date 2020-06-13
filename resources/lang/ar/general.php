@@ -1065,5 +1065,6 @@ return array(
     "order_now" => "أطلب الآن",
     "expired_at" => "ينتهي في",
     "personal_information" => "المعلومات الشخصية",
-    "update" => "تحديث"
+    "update" => "تحديث",
+    "user_updated" => "تم تحديث البيانات الشخصية"
 );
