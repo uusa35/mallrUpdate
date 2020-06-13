@@ -1063,5 +1063,7 @@ return array(
     "today_date" => "تاريخ اليوم",
     "logo" => "لوجو",
     "order_now" => "أطلب الآن",
-    "expired_at" => "ينتهي في"
+    "expired_at" => "ينتهي في",
+    "personal_information" => "المعلومات الشخصية",
+    "update" => "تحديث"
 );

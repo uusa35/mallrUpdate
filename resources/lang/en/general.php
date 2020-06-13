@@ -1100,5 +1100,7 @@ return array(
     "today_date" => "Today's Date",
     "logo" => "logo",
     "order_now" => "Order Now",
-    "expired_at" => "Expired at"
+    "expired_at" => "Expired at",
+    "personal_information" => "Personal Information",
+    "update" => "Update"
 );

@@ -9,6 +9,8 @@ use App\Services\Search\Filters;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -120,7 +122,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $element = auth()->user();
+        return view('frontend.wokiee.four.modules.user.edit', compact('element'));
     }
 
     /**
@@ -132,7 +135,28 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $element = User::whereId(auth()->id())->first();
+        $validate = Validator::make($request->all(), [
+            'name' => 'required|string|max:80|min:5',
+            'email' => [
+                Rule::unique('users')->ignore($element->id),
+                'required',
+                'string',
+                'email'
+            ],
+//            'password' => ['string', 'min:6', 'confirmed'],
+            'mobile' => 'string|max:10|min:5',
+            'country_id' => ['required', 'integer', 'exists:countries,id'],
+//            'role_id' => ['required', 'integer', 'exists:roles,id'],
+        ]);
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate->errors()->first());
+        }
+        if ($element->update($request->all())) {
+            return redirect()->back()->with('success', trans('user_updated'));
+        }
+        return redirect()->back()->with('error', trans('user_is_not_updated'));
+
     }
 
     /**
