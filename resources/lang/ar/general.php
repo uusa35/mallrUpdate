@@ -1066,5 +1066,6 @@ return array(
     "expired_at" => "ينتهي في",
     "personal_information" => "المعلومات الشخصية",
     "update" => "تحديث",
-    "user_updated" => "تم تحديث البيانات الشخصية"
+    "user_updated" => "تم تحديث البيانات الشخصية",
+    "user_is_not_updated" => "لم يتم تحديث البيانات الشخصية بنجاح"
 );

@@ -153,9 +153,9 @@ class UserController extends Controller
             return redirect()->back()->withErrors($validate->errors()->first());
         }
         if ($element->update($request->all())) {
-            return redirect()->back()->with('success', trans('user_updated'));
+            return redirect()->back()->with('success', trans('general.user_updated'));
         }
-        return redirect()->back()->with('error', trans('user_is_not_updated'));
+        return redirect()->back()->with('error', trans('general.user_is_not_updated'));
 
     }
 

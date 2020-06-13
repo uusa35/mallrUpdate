@@ -1103,5 +1103,6 @@ return array(
     "expired_at" => "Expired at",
     "personal_information" => "Personal Information",
     "update" => "Update",
-    "user_updated" => "Personal Information updated."
+    "user_updated" => "Personal Information updated.",
+    "user_is_not_updated" => "Personal Information did not update."
 );
