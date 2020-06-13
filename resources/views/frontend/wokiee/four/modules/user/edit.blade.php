@@ -6,7 +6,7 @@
 @section('body')
     <div class="container-indent">
         <div class="container">
-            <h1 class="tt-title-subpages noborder">{{ trans('general.create_an_account') }}</h1>
+            <h1 class="tt-title-subpages noborder">{{ trans('general.update') }} {{ trans('general.information') }}</h1>
             <div class="tt-login-form">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6">

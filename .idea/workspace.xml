@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +47,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="66" column="55" lean-forward="true" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+                <state relative-caret-position="144">
+                  <caret line="8" column="115" selection-start-line="8" selection-start-column="115" selection-end-line="8" selection-end-column="115" />
                   <folding>
                     <element signature="e#4019#4053#0#HTML" expanded="true" />
                   </folding>
@@ -149,7 +148,7 @@
             <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="766">
-                  <caret line="1100" column="21" lean-forward="true" selection-start-line="1100" selection-start-column="21" selection-end-line="1100" selection-end-column="21" />
+                  <caret line="1100" column="21" selection-start-line="1100" selection-start-column="21" selection-end-line="1100" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -157,8 +156,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="946">
-                  <caret line="1069" column="65" selection-start-line="1069" selection-start-column="65" selection-end-line="1069" selection-end-column="65" />
+                <state relative-caret-position="244">
+                  <caret line="1030" column="33" selection-start-line="1030" selection-start-column="33" selection-end-line="1030" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -269,10 +268,10 @@
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/UserController.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -724,12 +723,12 @@
       <workItem from="1591811826114" duration="1000" />
       <workItem from="1591962349777" duration="4509000" />
       <workItem from="1591989956535" duration="2000" />
-      <workItem from="1592053828927" duration="2122000" />
+      <workItem from="1592053828927" duration="2177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294749000" />
+    <option name="totallyTimeSpent" value="294804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="0" />
@@ -1088,16 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="66" column="55" lean-forward="true" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
-          <folding>
-            <element signature="e#4019#4053#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
@@ -1114,15 +1103,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="1100" column="21" lean-forward="true" selection-start-line="1100" selection-start-column="21" selection-end-line="1100" selection-end-column="21" />
+        <state relative-caret-position="662">
+          <caret line="1089" column="23" selection-start-line="1089" selection-start-column="23" selection-end-line="1089" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="1069" column="65" selection-start-line="1069" selection-start-column="65" selection-end-line="1069" selection-end-column="65" />
+        <state relative-caret-position="910">
+          <caret line="1067" column="4" selection-start-line="1067" selection-start-column="4" selection-end-line="1067" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="115" selection-start-line="8" selection-start-column="115" selection-end-line="8" selection-end-column="115" />
+          <folding>
+            <element signature="e#4019#4053#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
