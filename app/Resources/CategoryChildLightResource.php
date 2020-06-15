@@ -25,6 +25,7 @@ class CategoryChildLightResource extends JsonResource
             'is_user' => $this->is_real_estate,
             'is_product' => $this->is_product,
             'is_classified' => $this->is_classified,
+            'is_featured' => $this->is_featured,
             'is_service' => $this->is_service,
             'has_children' => $this->children->where('active',true)->count() > 0,
             'has_categoryGroups' => $this->categoryGroups->where('active',true)->count() > 0,
