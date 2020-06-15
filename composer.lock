@@ -1654,16 +1654,16 @@
         },
         {
             "name": "jbroadway/urlify",
-            "version": "1.2.1-stable",
+            "version": "1.2.2-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbroadway/urlify.git",
-                "reference": "fa8f433622c6527c7d32d505370a236f77e33941"
+                "reference": "9b227e8548f16268cef55b5eb5d659a801fa824b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/fa8f433622c6527c7d32d505370a236f77e33941",
-                "reference": "fa8f433622c6527c7d32d505370a236f77e33941",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/9b227e8548f16268cef55b5eb5d659a801fa824b",
+                "reference": "9b227e8548f16268cef55b5eb5d659a801fa824b",
                 "shasum": ""
             },
             "require": {
@@ -1709,7 +1709,7 @@
                 "url",
                 "urlify"
             ],
-            "time": "2020-06-01T20:59:39+00:00"
+            "time": "2020-06-14T17:15:34+00:00"
         },
         {
             "name": "jeroennoten/laravel-adminlte",
@@ -6920,16 +6920,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.7.2",
+            "version": "2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "17d0d3f266c8f925ebd035cd36f83cf802b47d4a"
+                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/17d0d3f266c8f925ebd035cd36f83cf802b47d4a",
-                "reference": "17d0d3f266c8f925ebd035cd36f83cf802b47d4a",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
+                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
                 "shasum": ""
             },
             "require": {
@@ -6977,7 +6977,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2020-05-05T12:28:07+00:00"
+            "time": "2020-06-14T09:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
