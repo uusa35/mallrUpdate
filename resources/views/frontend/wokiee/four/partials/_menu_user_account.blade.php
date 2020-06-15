@@ -15,15 +15,20 @@
                             </a>
                         </li>
                         @if(env('MALLR') && auth()->user()->isClient)
-                        <li><a href="#">
-                                <i class="icon-f-90 fa fa-fw fa-lg"></i>
-                                {{ trans('general.your_balance') }} {{ auth()->user()->balance }} {{ trans('general.points') }}
-                            </a>
-                        </li>
+                            <li><a href="#">
+                                    <i class="icon-f-90 fa fa-fw fa-lg"></i>
+                                    {{ trans('general.your_balance') }} {{ auth()->user()->balance }} {{ trans('general.points') }}
+                                </a>
+                            </li>
                         @endif
                         <li><a href="{{ route('backend.home') }}">
                                 <i class="icon-f-81 fa fa-fw fa-lg"></i>
                                 {{ trans('general.control_panel') }}
+                            </a>
+                        </li>
+                        <li><a href="{{ route('frontend.user.edit', auth()->id()) }}">
+                                <i class="icon-f-81 fa fa-fw fa-lg"></i>
+                                {{ trans('general.personal_information') }}
                             </a>
                         </li>
                         <li><a href="{{ route('frontend.order.index') }}">

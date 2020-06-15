@@ -1957,5 +1957,9 @@ return array (
     "today_date" => "Today's Date",
     "logo" => "logo",
     "order_now" => "Order Now",
-    "expired_at" => "Expired at"
+    "expired_at" => "Expired at",
+    "personal_information" => "Personal Information",
+    "update" => "Update",
+    "user_updated" => "Personal Information updated.",
+    "user_is_not_updated" => "Personal Information did not update."
 );

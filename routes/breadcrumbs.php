@@ -79,6 +79,11 @@ Breadcrumbs::for('frontend.user.show', function ($trail, $element) {
     $trail->push($element->name, route('frontend.user.show', $element->id));
 });
 
+Breadcrumbs::for('frontend.user.edit', function ($trail, $element) {
+    $trail->parent('frontend.home');
+    $trail->push($element->name, route('frontend.user.show', $element->id));
+});
+
 Breadcrumbs::for('frontend.page.show', function ($trail, $element) {
     $trail->parent('frontend.home');
     $trail->push($element->title, route('frontend.page.show', $element->id));
