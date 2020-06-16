@@ -67,7 +67,7 @@
                         <tr>
                             <th class="all">{{ trans('general.order_id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
-                            <th>{{ trans('general.price') }}</th>
+                            <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
@@ -88,7 +88,7 @@
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
-                            <th>{{ trans('general.price') }}</th>
+                            <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.net_price') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
@@ -167,8 +167,8 @@
                                         </div>
                                     @endif
                                 </td>
-                                <td>{{ $element->price}}</td>
-                                <td>{{ $element->net_price}}</td>
+                                <td>{{ $element->shipment_fees}} {{ trans('general.kd') }}</td>
+                                <td>{{ $element->net_price}} {{ trans('general.kd') }}</td>
                                 <td>
                                     <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount .' '. trans('general.kd') : 'N/A'}}</span>
                                 </td>
