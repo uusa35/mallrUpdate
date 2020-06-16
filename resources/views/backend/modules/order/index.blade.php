@@ -202,7 +202,7 @@
                                 {{--                                <td>{{ $element->day }}</td>--}}
                                 {{--                                <td>{{ $element->time }}</td>--}}
                                 {{--                                <td>{{ $element->booked_at }}</td>--}}
-                                <td><span class="btn btn-primary">{{ $element->created_at->diffForHumans()}}</span>
+                                <td><span class="btn btn-primary">{{ $element->created_at->format('d/m/Y')}}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group">
