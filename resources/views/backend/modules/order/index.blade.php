@@ -68,7 +68,7 @@
                             <th class="all">{{ trans('general.order_id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.shipment_fees') }}</th>
-                            <th>{{ trans('general.net_price') }}</th>
+                            <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
@@ -89,7 +89,7 @@
                             <th class="all">{{ trans('general.id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.shipment_fees') }}</th>
-                            <th>{{ trans('general.net_price') }}</th>
+                            <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
