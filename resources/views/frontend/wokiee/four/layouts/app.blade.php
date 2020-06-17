@@ -16,7 +16,7 @@
     @include('frontend.wokiee.four.partials.loader')
 @endif
 
-@if(env('MALLR') || env('BITS') || ENV('EVENTKM') || env('DAILY'))
+@if(env('MALLR') || env('BITS') || ENV('EVENTKM') || env('DAILY') || env('HTB'))
 @section('header')
     @include('frontend.wokiee.four.partials.header')
 @show
@@ -29,7 +29,7 @@
     @yield('body')
 </div>
 @show
-@if(env('MALLR') || env('BITS') || ENV('EVENTKM') || env('DAILY'))
+@if(env('MALLR') || env('BITS') || ENV('EVENTKM') || env('DAILY') || env('HTB'))
 @section('footer')
     @include('frontend.wokiee.four.partials.footer')
 @show
