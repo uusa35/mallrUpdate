@@ -102,7 +102,7 @@
                                                     <label for="min"
                                                            class="control-label">{{ trans('general.min') }}</label>
                                                     <input id="min" type="number" class="form-control" name="min"
-                                                           value="{{ old('min') }}"
+                                                           value="{{ old('min')  ? old('min') : 1 }}"
                                                            placeholder="{{ trans('general.min') }}" autofocus>
                                                     @if ($errors->has('min'))
                                                         <span class="help-block">
@@ -118,7 +118,7 @@
                                                     <label for="max"
                                                            class="control-label">{{ trans('general.max') }}</label>
                                                     <input id="max" type="number" class="form-control" name="max"
-                                                           value="{{ old('max') }}"
+                                                           value="{{ old('max') ? old('max') : 50000 }}"
                                                            placeholder="{{ trans('general.max') }}" autofocus>
                                                     @if ($errors->has('max'))
                                                         <span class="help-block">
