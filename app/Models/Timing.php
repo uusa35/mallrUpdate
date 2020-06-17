@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Carbon\CarbonInterval;
+use Carbon\CarbonPeriod;
 
 class Timing extends PrimaryModel
 {
@@ -29,8 +31,9 @@ class Timing extends PrimaryModel
     }
 
     // timing can be attached to multi services if only enable_global_service is true
-    public function services() {
-        return $this->belongsToMany(Service::class,'service_timing');
+    public function services()
+    {
+        return $this->belongsToMany(Service::class, 'service_timing');
     }
 
     public function user()
@@ -77,14 +80,18 @@ class Timing extends PrimaryModel
         return Carbon::parse($this->end)->format('h:i a');
     }
 
-    public function getCurrentDateAttribute()
+    public function getCurrentDateAttribute($currentDate = null, $weeks = null)
     {
-        return Carbon::now()->format('l') === $this->day ? Carbon::parse($this->day)->addWeek()->format('d/m/Y') : Carbon::parse($this->day)->format('d/m/Y');
+        if($currentDate && $weeks) {
+            return Carbon::parse($currentDate)->addWeeks($weeks)->format('d/m/Y');
+        } else {
+            return Carbon::now()->format('l') === $this->day ? Carbon::parse($this->day)->addWeek()->format('d/m/Y') : Carbon::parse($this->day)->format('d/m/Y');
+        }
     }
 
     public function getTodayAttribute()
     {
-        if(!env('seeding')) {
+        if (!env('seeding')) {
             return Carbon::now()->format('l') === $this->day ? Carbon::parse($this->day)->addWeek()->format('d/m/Y') : Carbon::parse($this->day)->format('d/m/Y');
         }
     }

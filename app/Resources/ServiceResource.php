@@ -62,7 +62,7 @@ class ServiceResource extends JsonResource
             'tags' => TagLightResource::collection($this->whenLoaded('tags')),
             'videos' => VideoLightResource::collection($this->whenLoaded('videos')),
             'timings' => TimingLightResource::collection($this->whenLoaded('timings'))->groupBy('today'),
-                //->groupBy('day_name_'.app()->getLocale()),
+            'range' => RangeTimingLightResource::collection($this->whenLoaded('timings')),
             'isFavorite' => auth('api')->user() ? in_array($this->id, User::where('api_token', request()->api_token)->first()->service_favorites()->pluck('service_id')->toArray()) : false
         ];
     }

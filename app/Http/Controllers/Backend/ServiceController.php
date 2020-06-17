@@ -74,10 +74,14 @@ class ServiceController extends Controller
     {
         $end_sale = $request->has('end_sale') ? Carbon::parse(str_replace('-', '', $request->end_sale))->toDateTimeString() : null;
         $start_sale = $request->has('start_sale') ? Carbon::parse(str_replace('-', '', $request->start_sale))->toDateTimeString() : null;
-        $element = Service::create($request->except(['_token', 'image', 'images', 'categories', 'start_sale', 'end_sale', 'tags', 'areas', 'videos', 'timings','addons','items']));
+        $start_date = $request->has('start_date') ? Carbon::parse(str_replace('-', '', $request->start_date))->toDateTimeString() : null;
+        $end_date = $request->has('end_date') ? Carbon::parse(str_replace('-', '', $request->end_date))->toDateTimeString() : null;
+        $element = Service::create($request->except(['_token', 'image', 'images', 'categories', 'start_sale', 'start_date','end_date','end_sale', 'tags', 'areas', 'videos', 'timings','addons','items']));
         if ($element) {
             $start_sale ? $element->update(['start_sale' => $start_sale]) : null;
             $end_sale ? $element->update(['end_sale' => $end_sale]) : null;
+            $start_date ? $element->update(['start_date' => $start_date]) : null;
+            $end_date ? $element->update(['end_date' => $end_date]) : null;
             $element->categories()->sync($request->categories);
             $element->tags()->sync($request->tags);
             $element->videos()->sync($request->videos);
@@ -143,11 +147,15 @@ class ServiceController extends Controller
     {
         $end_sale = $request->has('end_sale') ? Carbon::parse(str_replace('-', '', $request->end_sale))->toDateTimeString() : null;
         $start_sale = $request->has('start_sale') ? Carbon::parse(str_replace('-', '', $request->start_sale))->toDateTimeString() : null;
+        $start_date = $request->has('start_date') ? Carbon::parse(str_replace('-', '', $request->start_date))->toDateTimeString() : null;
+        $end_date = $request->has('end_date') ? Carbon::parse(str_replace('-', '', $request->end_date))->toDateTimeString() : null;
         $element = Service::whereId($id)->first();
-        $updated = $element->update($request->except(['_token', 'image', 'images', 'categories', 'start_sale', 'end_sale', 'tags', 'areas', 'videos', 'timings']));
+        $updated = $element->update($request->except(['_token', 'image', 'images', 'categories', 'start_sale','start_date','end_date' ,'end_sale', 'tags', 'areas', 'videos', 'timings']));
         if ($updated) {
             $start_sale ? $element->update(['start_sale' => $start_sale]) : null;
             $end_sale ? $element->update(['end_sale' => $end_sale]) : null;
+            $start_date ? $element->update(['start_date' => $start_date]) : null;
+            $end_date ? $element->update(['end_date' => $end_date]) : null;
             $element->categories()->sync($request->categories);
             $element->tags()->sync($request->tags);
             $element->videos()->sync($request->videos);
