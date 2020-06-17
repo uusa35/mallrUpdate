@@ -1,4 +1,4 @@
-@if($brands->isNotEmpty())
+@if($brands->where('on_home', true)->isNotEmpty())
     <div class="container-indent">
         <div class="container container-fluid-custom-mobile-padding">
             <div class="tt-block-title">
