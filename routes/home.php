@@ -32,4 +32,7 @@ if (env('ABATI')) {
 } elseif (env('EXPO')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
+} elseif (env('HTB')) {
+    Route::get('/', 'HomeController@getMallrHome')->name('index');
+    Route::get('/home', 'HomeController@getMallrHome')->name('home');
 }
