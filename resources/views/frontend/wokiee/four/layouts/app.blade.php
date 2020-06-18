@@ -12,9 +12,7 @@
 </head>
 
 <body>
-@if(!app()->isLocal())
-    @include('frontend.wokiee.four.partials.loader')
-@endif
+@include('frontend.wokiee.four.partials.loader')
 
 @if(env('MALLR') || env('BITS') || ENV('EVENTKM') || env('DAILY') || env('HTB'))
 @section('header')
