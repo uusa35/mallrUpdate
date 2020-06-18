@@ -7,7 +7,7 @@
                 <div class="col-12 tt-coming-soon-content">
                     <a class="" href="{{ url('/') }}">
                         <img style="width: 150px; height: auto; max-height: 400px !important;"
-                             src="{{ $settings->logoLarge }}" alt="">
+                             src="{{ $settings->getCurrentImageAttribute('logo') }}" alt="">
                     </a>
                     <h1 class="tt-title"
                         style="margin-bottom: 20px; margin-top: 20px; line-height: 30px !important;">{{ $settings->company }}</h1>
@@ -17,11 +17,98 @@
                 </div>
             </div>
             <div class="row	justify-content-center">
+                <div class="tt-collapse-content text-center">
+                    @if($settings->apple)
+                        <a href="{{ url($settings->apple) }}">
+                            <img src="{{ asset('images/apple.png') }}" alt="{{ $settings->company }}"
+                                 class="img-responsive" style="max-width: 200px; margin: 10px;">
+                        </a>
+                    @endif
+                    @if($settings->android)
+
+                        <a href="{{ url($settings->android) }}">
+                            <img src="{{ asset('images/android.png') }}" alt="{{ $settings->company }}"
+                                 class="img-responsive" style="max-width: 200px; margin: 10px;">
+                        </a>
+                    @endif
+                </div>
+                <div class="col-12">
+                    <div class="tt-collapse-content text-center">
+                        <p>
+                            &copy; {{ trans("message.copy_right") }}
+                        </p>
+                        <ul class="tt-social-icon row	justify-content-center" style="padding: 20px;">
+                            @if($settings->facebook)
+                                <li><a href="{{ $settings->facebook }}" target="blank"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                            @endif
+                            @if($settings->twitter)
+                                <li><a href="{{ $settings->twitter }}" target="blank"><i
+                                                class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                            @endif
+                            @if($settings->instagram)
+                                <li><a href="{{ $settings->instagram }}" target="blank"><i
+                                                class="fa fa-fw fa-instagram"></i></a>
+                                </li>
+                            @endif
+                            @if($settings->whatsapp)
+                                <li>
+                                    <a href="https://api.whatsapp.com/send?phone={{ $settings->whatsapp }}&text={{ env('APP_NAME') }}"
+                                       target="blank"><i class="fa fa-fw fa-whatsapp"></i></a>
+                                </li>
+                            @endif
+                            @if($settings->youtube)
+                                <li><a href="{{ $settings->youtube }}" target="blank"><i
+                                                class="fa fa-fw fa-youtube"></i></a>
+                                </li>
+                            @endif
+                        </ul>
+                        <ul class="tt-social-icon row	justify-content-center " style="padding: 20px;">
+                            @if(app()->isLocale('en'))
+                                <li>
+                                    <a style="color : black;"
+                                       href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a style="color : black;"
+                                       href="{{ route('frontend.language.change',['locale' => 'en']) }}">{{ trans('general.english') }}</a>
+                                </li>
+                            @endif
+                        </ul>
+                        <ul class="tt-social-icon row	justify-content-center" style="padding: 20px;">
+                            @auth
+                                @can('isAdminOrAbove')
+                                    <li>
+                                        <a style="color : black;" href="{{ route('backend.home') }}"><i
+                                                    class="fa fa-fw fa-dashboard"></i>{{ trans('general.dashboard') }}</a>
+                                    </li>
+                                @endcan
+                                <li>
+                                    <a style="color : black;" href="{{ url('/logout') }}"
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-fw fa-sign-out"></i> {{ trans('general.logout') }} </a>
+                                </li>
+                            @else
+                                <li>
+                                    <a style="color : black;" href="{{ route('login') }}">{{ trans('general.login') }}</a>
+                                </li>
+                                <li>
+                                    <a style="color : black;"
+                                       href="{{ route('password.request') }}">{{ trans('general.forget_password') }}</a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row	justify-content-center">
                 <div class="col-12">
                     @if(isset($element) && $element)
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><img src="{{ $element->imageThumbLink }}" class="img-responsive"
+                                <h5 class="card-title"><img src="{{ $element->getCurrentImageAttribute() }}" class="img-responsive"
                                                             style="max-width: 300px;"
                                                             alt="{{ $element->slug }}"></h5>
                                 <h5 class="card-title">{{ $element->slug ? $element->slug : $element->name }}</h5>
@@ -44,93 +131,6 @@
                     @if(!isset($element))
                         @include("frontend.wokiee.four.partials._gallery",['element' => $settings->images])
                     @endif
-                </div>
-            </div>
-        </div>
-        <div class="row	justify-content-center">
-            <div class="tt-collapse-content text-center">
-                @if($settings->apple)
-                    <a href="{{ url($settings->apple) }}">
-                        <img src="{{ asset('images/apple.png') }}" alt="{{ $settings->company }}"
-                             class="img-responsive" style="max-width: 200px; margin: 10px;">
-                    </a>
-                @endif
-                @if($settings->android)
-
-                    <a href="{{ url($settings->android) }}">
-                        <img src="{{ asset('images/android.png') }}" alt="{{ $settings->company }}"
-                             class="img-responsive" style="max-width: 200px; margin: 10px;">
-                    </a>
-                @endif
-            </div>
-            <div class="col-12">
-                <div class="tt-collapse-content text-center">
-                    <p>
-                        &copy; {{ trans("message.copy_right") }}
-                    </p>
-                    <ul class="tt-social-icon row	justify-content-center" style="padding: 20px;">
-                        @if($settings->facebook)
-                            <li><a href="{{ $settings->facebook }}" target="blank"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                        @endif
-                        @if($settings->twitter)
-                            <li><a href="{{ $settings->twitter }}" target="blank"><i
-                                            class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                        @endif
-                        @if($settings->instagram)
-                            <li><a href="{{ $settings->instagram }}" target="blank"><i
-                                            class="fa fa-fw fa-instagram"></i></a>
-                            </li>
-                        @endif
-                        @if($settings->whatsapp)
-                            <li>
-                                <a href="https://api.whatsapp.com/send?phone={{ $settings->whatsapp }}&text={{ env('APP_NAME') }}"
-                                   target="blank"><i class="fa fa-fw fa-whatsapp"></i></a>
-                            </li>
-                        @endif
-                        @if($settings->youtube)
-                            <li><a href="{{ $settings->youtube }}" target="blank"><i
-                                            class="fa fa-fw fa-youtube"></i></a>
-                            </li>
-                        @endif
-                    </ul>
-                    <ul class="tt-social-icon row	justify-content-center " style="padding: 20px;">
-                        @if(app()->isLocale('en'))
-                            <li>
-                                <a style="color : black;"
-                                   href="{{ route('frontend.language.change',['locale' => 'ar']) }}">{{ trans('general.arabic') }}</a>
-                            </li>
-                        @else
-                            <li>
-                                <a style="color : black;"
-                                   href="{{ route('frontend.language.change',['locale' => 'en']) }}">{{ trans('general.english') }}</a>
-                            </li>
-                        @endif
-                    </ul>
-                    <ul class="tt-social-icon row	justify-content-center" style="padding: 20px;">
-                        @auth
-                            @can('isAdminOrAbove')
-                                <li>
-                                    <a style="color : black;" href="{{ route('backend.home') }}"><i
-                                                class="fa fa-fw fa-dashboard"></i>{{ trans('general.dashboard') }}</a>
-                                </li>
-                            @endcan
-                            <li>
-                                <a style="color : black;" href="{{ url('/logout') }}"
-                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                    <i class="fa fa-fw fa-sign-out"></i> {{ trans('general.logout') }} </a>
-                            </li>
-                        @else
-                            <li>
-                                <a style="color : black;" href="{{ route('login') }}">{{ trans('general.login') }}</a>
-                            </li>
-                            <li>
-                                <a style="color : black;"
-                                   href="{{ route('password.request') }}">{{ trans('general.forget_password') }}</a>
-                            </li>
-                        @endif
-                    </ul>
                 </div>
             </div>
         </div>
