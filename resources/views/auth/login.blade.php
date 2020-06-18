@@ -54,11 +54,11 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label class="" for="remember">
-                                            {{ trans('general.remember_me')}}
-                                        </label>
                                         <input class="form-check-input" type="checkbox" name="remember"
                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="" for="remember" style="padding-left : 20px; padding-right: 20px;">
+                                            {{ trans('general.remember_me')}}
+                                        </label>
                                     </div>
                                     <div class="row">
                                         <div class="col-auto mr-auto">
