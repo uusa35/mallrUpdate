@@ -16,25 +16,27 @@
                     </div>
                 </div>
             </div>
-            <div class="row	justify-content-center">
-                <div class="tt-collapse-content text-center">
-                    @if($settings->apple)
-                        <a href="{{ url($settings->apple) }}">
-                            <img src="{{ asset('images/apple.png') }}" alt="{{ $settings->company }}"
-                                 class="img-responsive" style="max-width: 200px; margin: 10px;">
-                        </a>
-                    @endif
-                    @if($settings->android)
+            <div class="row	justify-content-center" style="margin-top: 1%">
+                <div class="col-12">
+                    <div class="tt-collapse-content text-center">
+                        @if($settings->apple)
+                            <a href="{{ url($settings->apple) }}">
+                                <img src="{{ asset('images/apple.png') }}" alt="{{ $settings->company }}"
+                                     class="img-responsive" style="max-width: 200px; margin: 10px;">
+                            </a>
+                        @endif
+                        @if($settings->android)
 
-                        <a href="{{ url($settings->android) }}">
-                            <img src="{{ asset('images/android.png') }}" alt="{{ $settings->company }}"
-                                 class="img-responsive" style="max-width: 200px; margin: 10px;">
-                        </a>
-                    @endif
+                            <a href="{{ url($settings->android) }}">
+                                <img src="{{ asset('images/android.png') }}" alt="{{ $settings->company }}"
+                                     class="img-responsive" style="max-width: 200px; margin: 10px;">
+                            </a>
+                        @endif
+                    </div>
                 </div>
             </div>
-            <div class="row	justify-content-center">
-                <div class="col-12">
+            <div class="row	justify-content-center" style="margin-top: 4%">
+                <div class="col-lg-12">
                     @if(isset($element) && $element)
                         <div class="card">
                             <div class="card-body">
