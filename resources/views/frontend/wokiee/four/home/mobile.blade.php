@@ -32,14 +32,44 @@
                         </a>
                     @endif
                 </div>
+            </div>
+            <div class="row	justify-content-center">
+                <div class="col-12">
+                    @if(isset($element) && $element)
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="{{ $element->getCurrentImageAttribute() }}"
+                                                            class="img-responsive"
+                                                            style="max-width: 300px;"
+                                                            alt="{{ $element->slug }}"></h5>
+                                <h5 class="card-title">{{ $element->slug ? $element->slug : $element->name }}</h5>
+                                <p class="card-text">{{ $element->description }}</p>
+                                @if(request()->has('type'))
+                                    <div class="col-12">
+                                        <a href="{{ env('APP_DEEP_LINK') }}{{ request()->type }}/{{ $element->id }}"
+                                           class="btn btn-primary">{{ trans('general.view_company_on_app') }}</a>
+                                    </div>
+                                @else
+                                    <div class="col-12">
+                                        <a href="{{ env('APP_DEEP_LINK') }}{{ strtolower(class_basename($element)) }}/{{ $element->id }}"
+                                           class="btn btn-primary">{{ trans('general.view_company_on_app') }}</a>
+                                    </div>
+                                @endif
+                                <p class="card-text">{{ trans('message.not_installed') }}</p>
+                            </div>
+                        </div>
+                    @endif
+                    @if(!isset($element))
+                        @include("frontend.wokiee.four.partials._gallery",['element' => $settings->images])
+                    @endif
+                </div>
+
                 <div class="col-12">
                     <div class="tt-collapse-content text-center">
-                        <p>
-                            &copy; {{ trans("message.copy_right") }}
-                        </p>
                         <ul class="tt-social-icon row	justify-content-center" style="padding: 20px;">
                             @if($settings->facebook)
-                                <li><a href="{{ $settings->facebook }}" target="blank"><i class="fa fa-fw fa-facebook"></i></a>
+                                <li><a href="{{ $settings->facebook }}" target="blank"><i
+                                                class="fa fa-fw fa-facebook"></i></a>
                                 </li>
                             @endif
                             @if($settings->twitter)
@@ -82,7 +112,8 @@
                                 @can('isAdminOrAbove')
                                     <li>
                                         <a style="color : black;" href="{{ route('backend.home') }}"><i
-                                                    class="fa fa-fw fa-dashboard"></i>{{ trans('general.dashboard') }}</a>
+                                                    class="fa fa-fw fa-dashboard"></i>{{ trans('general.dashboard') }}
+                                        </a>
                                     </li>
                                 @endcan
                                 <li>
@@ -92,7 +123,8 @@
                                 </li>
                             @else
                                 <li>
-                                    <a style="color : black;" href="{{ route('login') }}">{{ trans('general.login') }}</a>
+                                    <a style="color : black;"
+                                       href="{{ route('login') }}">{{ trans('general.login') }}</a>
                                 </li>
                                 <li>
                                     <a style="color : black;"
@@ -101,36 +133,11 @@
                             @endif
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="row	justify-content-center">
-                <div class="col-12">
-                    @if(isset($element) && $element)
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"><img src="{{ $element->getCurrentImageAttribute() }}" class="img-responsive"
-                                                            style="max-width: 300px;"
-                                                            alt="{{ $element->slug }}"></h5>
-                                <h5 class="card-title">{{ $element->slug ? $element->slug : $element->name }}</h5>
-                                <p class="card-text">{{ $element->description }}</p>
-                                @if(request()->has('type'))
-                                    <div class="col-12">
-                                        <a href="{{ env('APP_DEEP_LINK') }}{{ request()->type }}/{{ $element->id }}"
-                                           class="btn btn-primary">{{ trans('general.view_company_on_app') }}</a>
-                                    </div>
-                                @else
-                                    <div class="col-12">
-                                        <a href="{{ env('APP_DEEP_LINK') }}{{ strtolower(class_basename($element)) }}/{{ $element->id }}"
-                                           class="btn btn-primary">{{ trans('general.view_company_on_app') }}</a>
-                                    </div>
-                                @endif
-                                <p class="card-text">{{ trans('message.not_installed') }}</p>
-                            </div>
-                        </div>
-                    @endif
-                    @if(!isset($element))
-                        @include("frontend.wokiee.four.partials._gallery",['element' => $settings->images])
-                    @endif
+                    <div class="col-12">
+                        <p>
+                            &copy; {{ trans("message.copy_right") }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
