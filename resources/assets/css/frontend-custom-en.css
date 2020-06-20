@@ -35,6 +35,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'sst-arabic-bold';
+    src: url('fonts/sst-arabic-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'School';
+    src: url('fonts/School_Times.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .date-picker-element {
     border-top-left-radius: 15px !important;
     border-bottom-left-radius: 15px !important;
