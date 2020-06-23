@@ -11,7 +11,7 @@
                     </td>
                 </tr>
             @endif
-            @if(!is_null($element->user))
+            @if(!is_null($element->user) && !env('HTB'))
                 <tr>
                     <td class="td-fixed-element">
                         <i class="fa fa-fw icon-e-39 fa-lg"></i>
@@ -23,7 +23,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->user->country)
+            @if($element->user->country && !env('HTB'))
                 <tr>
                     <span style="min-width: 130px;">
                     <td class="td-fixed-element">
@@ -35,7 +35,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->shipment_package && $element->shipment_package->countries->isNotEmpty())
+            @if($element->shipment_package && $element->shipment_package->countries->isNotEmpty() && !env('HTB'))
                 <tr>
                     <td class="td-fixed-element">
                         <span style="min-width: 130px;"><i class="fa fa-fw icon-f-48 fa-lg"></i> {{ trans('general.countries_available_for_shipment') }}:</span>
