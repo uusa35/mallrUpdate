@@ -2,16 +2,9 @@
 @if(env('EVENTKM'))
     @if(app()->getLocale() === 'en')
     <style type="text/css">
-        @font-face {
-            font-family: 'School';
-            src: url('fonts/School_Times.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-            font-family: 'School', 'sans-serif' !important;
-            text-transform: uppercase !important;
+            font-family: 'sst-arabic-bold', 'sans-serif' !important;
+            /*text-transform: uppercase !important;*/
         }
 
         .alert-danger i {
@@ -82,7 +75,7 @@
 
     }
 
-    @elseif(env('DAILY'))
+    @elseif(env('DAILY') || env('HTB'))
     body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
     .container, .tt-title-small, .tt-description, header, footer
     .tt-collapse-title, .tt-collapse-content, .tt-collapse-block .tt-item .tt-collapse-title,

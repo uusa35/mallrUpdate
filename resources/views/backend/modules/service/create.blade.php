@@ -358,6 +358,69 @@
                                             </div>
                                         @endif
 
+                                        <div class="col-md-3">
+                                            <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
+                                                <label for="start_date"
+                                                       class="control-label">{{ trans('general.start_date') }}</label>
+                                                <div class="input-group date form_datetime">
+                                                    <input type="text" readonly style="direction: ltr !important;"
+                                                           class="form-control tooltips" data-container="body"
+                                                           data-placement="top"
+                                                           data-original-title="{{ trans('message.start_date') }}"
+                                                           name="start_date"
+                                                           value="{{ old('start_date') ? old('start_date') : '01 January 2019 - 07:55' }}"
+                                                           required>
+                                                    <span class="input-group-btn"><button class="btn default date-set"
+                                                                                          type="button"><i
+                                                                    class="fa fa-calendar"></i></button></span>
+                                                </div>
+                                                <span class="help-block">
+                                                <strong>{{ trans('message.start_date') }}</strong>
+                                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
+                                                <label for="end_date"
+                                                       class="control-label">{{ trans('general.end_date') }}</label>
+                                                <div class="input-group date form_datetime">
+                                                    <input type="text" readonly style="direction: ltr !important;"
+                                                           class="form-control tooltips" data-container="body"
+                                                           data-placement="top"
+                                                           data-original-title="{{ trans('message.end_date') }}"
+                                                           name="end_date"
+                                                           value="{{ old('end_date') ? old('end_date') : '01 January 2019 - 07:55' }}"
+                                                           required>
+                                                    <span class="input-group-btn"><button class="btn default date-set"
+                                                                                          type="button"><i
+                                                                    class="fa fa-calendar"></i></button></span>
+                                                </div>
+                                                <span class="help-block">
+                                                <strong>{{ trans('message.end_date') }}</strong>
+                                            </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
+                                                <label for="range" class="control-label">{{ trans('general.week_range') }}
+                                                    *</label>
+                                                <input id="range" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.range') }}" name="range"
+                                                       value="{{ old('range') }}"
+                                                       placeholder="{{ trans('general.range') }}" autofocus>
+                                                @if ($errors->has('range'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('range') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
                                         <div class="row">
                                             @can('index','addon')
                                                 <div class="col-md-4">

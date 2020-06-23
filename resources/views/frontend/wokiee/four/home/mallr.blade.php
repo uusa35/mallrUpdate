@@ -1,7 +1,6 @@
 @extends('frontend.wokiee.four.layouts.app')
 
 @section('body')
-
     @include('frontend.wokiee.four.partials.slider')
     @include('frontend.wokiee.four.partials._all_brands')
     {{--                        @include('frontend.wokiee.four.partials._products_metro_collection',['element' => $bestSaleCollections->first(), 'title' => trans('general.our_selection_from_collections')])--}}

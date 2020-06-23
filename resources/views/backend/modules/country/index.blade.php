@@ -47,7 +47,7 @@
                             <td>{{ $element->slug_ar }}</td>
                             <td>{{ $element->slug_en }}</td>
                             <td>
-                                <img class="img-xs img-rounded" src="{{ asset(env('THUMBNAIL').$element->image) }}" alt="">
+                                <img class="img-xs img-rounded" src="{{ $element->getCurrentImageAttribute() }}" alt="">
                             </td>
                             <td>{{ $element->calling_code }}</td>
                             <td>

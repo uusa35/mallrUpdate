@@ -81,10 +81,11 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $element = Service::active()->whereId($id)->with(['images', 'videos', 'user'])->with(['timings' => function ($q) {
+        $service = Service::whereId($id)->first();
+        $element = Service::active()->whereId($id)->with(['images', 'videos', 'user'])->with(['timings' => function ($q) use($service) {
             return $q->active()->available()->workingDays()->orderBy('order','asc');
         }])->with(['categories' => function ($q) {
-            return $q->active()->limit('2');
+            return $q->active()->limit(SElf::TAKE_TINY);
         }])->first();
         if ($element) {
             IncreaseElementViews::dispatch($element);

@@ -67,8 +67,8 @@
                         <tr>
                             <th class="all">{{ trans('general.order_id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
-                            <th>{{ trans('general.price') }}</th>
-                            <th>{{ trans('general.net_price') }}</th>
+                            <th>{{ trans('general.shipment_fees') }}</th>
+                            <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
@@ -88,8 +88,8 @@
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
-                            <th>{{ trans('general.price') }}</th>
-                            <th>{{ trans('general.net_price') }}</th>
+                            <th>{{ trans('general.shipment_fees') }}</th>
+                            <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
@@ -167,8 +167,8 @@
                                         </div>
                                     @endif
                                 </td>
-                                <td>{{ $element->price}}</td>
-                                <td>{{ $element->net_price}}</td>
+                                <td>{{ $element->shipment_fees}} {{ trans('general.kd') }}</td>
+                                <td>{{ $element->net_price}} {{ trans('general.kd') }}</td>
                                 <td>
                                     <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount .' '. trans('general.kd') : 'N/A'}}</span>
                                 </td>
@@ -202,7 +202,7 @@
                                 {{--                                <td>{{ $element->day }}</td>--}}
                                 {{--                                <td>{{ $element->time }}</td>--}}
                                 {{--                                <td>{{ $element->booked_at }}</td>--}}
-                                <td><span class="btn btn-primary">{{ $element->created_at->diffForHumans()}}</span>
+                                <td><span class="btn btn-primary">{{ $element->created_at->format('d/m/Y')}}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group">

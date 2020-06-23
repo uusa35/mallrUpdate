@@ -21,6 +21,7 @@
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
                             <th class="none">{{ trans('general.address') }}</th>
+                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.country') }}</th>
                             <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
@@ -32,11 +33,12 @@
                             <th class="all">{{ trans('general.id') }}</th>
                             <th>{{ trans('general.name') }}</th>
                             <th class="none">{{ trans('general.slug') }}</th>
-                            <th >{{ trans('general.logo') }}</th>
+                            <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
                             <th class="none">{{ trans('general.address') }}</th>
+                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.country') }}</th>
                             <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
@@ -54,6 +56,17 @@
                                 <td>{{ $element->fullMobile }}</td>
                                 <td>{{ $element->phone }}</td>
                                 <td>{{ $element->address }}</td>
+                                <td>
+                                    @if($element->categories->isNotEmpty())
+                                        <ul>
+                                            @foreach($element->categories as $c)
+                                                <li>{{ $c->name }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @else
+                                        <button class="btn-sm btn-danger">N/A</button>
+                                    @endif
+                                </td>
                                 {{--                                <td>{{ $element->area }}</td>--}}
                                 <td>{{ $element->country ? $element->country->slug : 'N/A'}}</td>
                                 <td>

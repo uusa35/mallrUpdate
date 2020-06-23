@@ -35,6 +35,8 @@ $factory->define(Service::class, function (Faker $faker) use ($fakerAr) {
         'video_url_five' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
         'is_hot_deal' => $faker->boolean(true),
         'start_sale' => $faker->dateTime('now'),
+        'start_date' => $faker->dateTime('now'),
+        'range' => $faker->numberBetween(1,6),
         'end_sale' => $faker->dateTimeBetween('now', '1 year'),
         'user_id' => User::companies()->get()->random()->id,
         'active' => $faker->boolean(true),

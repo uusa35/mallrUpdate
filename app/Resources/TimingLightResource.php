@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Service;
+use App\Models\Timing;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -18,7 +20,7 @@ class TimingLightResource extends JsonResource
         return [
             'id' => $this->id,
             'day' => $this->day,
-            'date' => $this->currentDate,
+            'date' => $this->getCurrentDateAttribute($request->start_date, $request->range),
             'title' => $this->day_name,
             'start' => Carbon::parse($this->start)->format('h:i a'),
 //            'end' => $this->end,

@@ -1,6 +1,6 @@
 <div class="tt-desktop-header headerunderline">
     <div class="container">
-        @if(env('MALLR'))
+        @if(env('MALLR') || env('HTB'))
             @include('frontend.wokiee.four.partials.header_logo_section_align')
         @else
             @include('frontend.wokiee.four.partials.header_logo_section_center')

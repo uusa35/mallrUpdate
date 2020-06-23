@@ -1,5 +1,4 @@
 <div class="page-bar">
-
         <div class="btn-group pull-right" style="padding : 4px;">
             <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown"
                     data-hover="dropdown" data-delay="1000" data-close-others="true"> {{ trans('general.actions') }}

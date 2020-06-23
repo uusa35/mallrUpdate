@@ -108,7 +108,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('order') ? ' has-error' : '' }}">
                                                 <label for="order" class="control-label">{{ trans('general.sequence') }}
                                                     *</label>
@@ -134,6 +134,15 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @if($element->getCurrentImageAttribute())
+                                            <div class="col-lg-1">
+                                                <img class="img-responsive img-sm"
+                                                     src="{{ $element->getCurrentImageAttribute() }}"
+                                                     alt="">
+                                                <a href="{{ route("backend.admin.image.clear",['model' => 'page', 'id' => $element->id ,'colName' => 'image']) }}"><i
+                                                            class="fa fa-fw fa-times"></i></a>
+                                            </div>
+                                        @endif
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
