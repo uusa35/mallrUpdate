@@ -14,6 +14,7 @@ use App\Services\Search\Filters;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ClassifiedController extends Controller
 {
@@ -87,7 +88,13 @@ class ClassifiedController extends Controller
                 $element->update(['expired_at' => Carbon::now()->addWeeks(8), 'is_available' => true]);
                 if ($request->has('items')) {
                     foreach ($request->items as $k => $v) {
-                        $element->categoryGroups()->syncWithoutDetaching([$v['category_group_id'] => ['value' => $v['value'], 'property_id' => $v['property_id']]]);
+                        DB::table('classified_property')->insert([
+                            'classified_id' => $element->id,
+                            'category_group_id' => $v['category_group_id'],
+                            'value' => $v['value'],
+                            'propert_id' => $v['property_id']
+                        ]);
+//                        $element->categoryGroups()->syncWithoutDetaching([$v['category_group_id'] => ['value' => $v['value'], 'property_id' => $v['property_id']]]);
                     }
                 }
                 $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], true) : null;
