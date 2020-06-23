@@ -92,7 +92,7 @@ class ClassifiedController extends Controller
                             'classified_id' => $element->id,
                             'category_group_id' => $v['category_group_id'],
                             'value' => $v['value'],
-                            'propert_id' => $v['property_id']
+                            'property_id' => $v['property_id']
                         ]);
 //                        $element->categoryGroups()->syncWithoutDetaching([$v['category_group_id'] => ['value' => $v['value'], 'property_id' => $v['property_id']]]);
                     }
