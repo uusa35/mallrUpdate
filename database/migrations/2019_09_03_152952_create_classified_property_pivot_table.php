@@ -20,7 +20,7 @@ class CreateClassifiedPropertyPivotTable extends Migration
             $table->integer('property_id')->unsigned()->index();
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->string('value')->nullable();
-            $table->primary(['classified_id','category_group_id']);
+//            $table->primary(['classified_id','category_group_id']);
         });
     }
 
