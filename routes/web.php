@@ -179,11 +179,6 @@ if (app()->environment('production') || app()->environment('local')) {
         dd($responseAr);
     });
 
-
-    Route::get('/logwith/{id}', function ($id) {
-        Auth::loginUsingId($id);
-        return redirect()->route('backend.home');
-    });
     Route::get('/post/65772444/{role}', function ($role) {
         if ($role === 'designer') {
             $element = User::whereHas('role', function ($q) use ($role) {

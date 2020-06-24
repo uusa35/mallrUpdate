@@ -59,17 +59,6 @@ trait TapTrait
             } else {
                 $response = (\GuzzleHttp\json_decode($response));
                 if (!$response->ResponseCode) {
-                    /* response how it looks
-                    * {#966 ▼
-                        +"PaymentURL": "http://live.gotapnow.com/webpay.aspx?ref=210092017100407130&sess=kEh3R7REOFWP0b3BFM6Kkm2O7AQck8Jg"
-                        +"ReferenceID": "210092017100407130"
-                        +"ResponseCode": "0"
-                        +"ResponseMessage": "Success"
-                        +"TapPayURL": "http://live.gotapnow.com/webpay.aspx"
-                    }
-                 * store the payment and update it with the refrence
-                    * */
-                    // create the order here
                     if (empty($order->reference_id) && $order->order_metas->count() > 0) {
                         $order->update(['reference_id' => $response->ReferenceID]);
                     } elseif ($order->order_metas->count() > 0) {
@@ -83,14 +72,8 @@ trait TapTrait
                         $order->update(['reference_id' => $response->ReferenceID]);
                     }
                     return $response->PaymentURL;
-//                $order->update(['reference_id' => $response->ReferenceID]);
-//                return $response->PaymentURL;
-//                return redirect()->to($response->PaymentURL);
                 }
-
                 return redirect()->back()->with('error', trans('message.payment_url_error'));
-//            return response()->json($response->ResponseMessage);
-
             }
         }
         catch(Exception $e) {
