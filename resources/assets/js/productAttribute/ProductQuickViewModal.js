@@ -1,7 +1,6 @@
 import React from "react";
 
 const ProductQuickViewModal = ({element}) => {
-    console.log('the element', element);
     return (
         <div className="modal-body">
             <div className="tt-modal-quickview desctope">
