@@ -142,7 +142,7 @@ return array(
     'select_size' => 'أختر القياس',
     'remove_from_favorite' => 'ازالة من المفضلة',
     'add_to_favorite' => 'اضافة الى المفضلة',
-    'out_of_stock' => 'غير متوفر',
+    'out_of_stock' => 'نفذت الكمية',
     'approx' => 'تقريبا',
     'meta_description' => ' الكويت  الشركة  مناسبات خدمات شركات ملابس حفلات',
     'app_keywords' => ' الكويت تصميم مناسبات خدمات شركات ملابس حفلات موضة',
