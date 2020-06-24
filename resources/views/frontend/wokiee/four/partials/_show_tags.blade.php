@@ -13,7 +13,7 @@
             <span class="tt-label tt-label-new"
                   style="background-color: #978d2f;">{{ trans('general.available') }}</span>
         @else
-            <span class="tt-label tt-label-out-stock"
+            <span class="tt-label tt-label-sale"
                   style="background-color: #972500;">{{ trans('general.not_available') }}</span>
         @endif
         @if($element->is_featured)
