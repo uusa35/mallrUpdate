@@ -80,8 +80,8 @@ trait HomePageTrait
 
     public function getDailyHome()
     {
-        $sliders = Slide::active()->onHome()->limit(6)->get();
-        $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'user','favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
+        $sliders = Slide::active()->onHome()->limit(SElf::TAKE_LEAST)->get();
+        $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'user','favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_MID)->get();
         $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
         $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
         $productHotDeals = $this->product->active()->available()->onSale()->hotDeals()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
