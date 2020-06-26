@@ -292,35 +292,6 @@
                                             </div>
                                         @endif
 
-                                        @if(!$tags->isEmpty())
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.tags') }}</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select2" name="tags[]">
-                                                        @foreach($tags as $tag)
-                                                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        @endif
-
-                                        @can('index','video')
-                                            @if(!$videos->isEmpty())
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{{ trans('general.attach_videos_to_product') }}</label>
-                                                        <select multiple="multiple" class="multi-select"
-                                                                id="my_multi_select3" name="videos[]">
-                                                            @foreach($videos as $video)
-                                                                <option value="{{ $video->id }}">{{ $video->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endcan
                                         @can('index','area')
                                             @if(!$areas->isEmpty())
                                                 <div class="col-md-4">
@@ -361,14 +332,14 @@
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
                                                 <label for="start_date"
-                                                       class="control-label">{{ trans('general.start_date') }}</label>
+                                                       class="control-label">{{ trans('general.start_date') }}*</label>
                                                 <div class="input-group date form_datetime">
                                                     <input type="text" readonly style="direction: ltr !important;"
                                                            class="form-control tooltips" data-container="body"
                                                            data-placement="top"
                                                            data-original-title="{{ trans('message.start_date') }}"
                                                            name="start_date"
-                                                           value="{{ old('start_date') ? old('start_date') : '01 January 2019 - 07:55' }}"
+                                                           value="{{ old('start_date') ? old('start_date') : \Carbon\Carbon::now()->format('d M Y - h:i') }}"
                                                            required>
                                                     <span class="input-group-btn"><button class="btn default date-set"
                                                                                           type="button"><i
@@ -383,14 +354,14 @@
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
                                                 <label for="end_date"
-                                                       class="control-label">{{ trans('general.end_date') }}</label>
+                                                       class="control-label">{{ trans('general.end_date') }}*</label>
                                                 <div class="input-group date form_datetime">
                                                     <input type="text" readonly style="direction: ltr !important;"
                                                            class="form-control tooltips" data-container="body"
                                                            data-placement="top"
                                                            data-original-title="{{ trans('message.end_date') }}"
                                                            name="end_date"
-                                                           value="{{ old('end_date') ? old('end_date') : '01 January 2019 - 07:55' }}"
+                                                           value="{{ old('end_date') ? old('end_date') : \Carbon\Carbon::now()->addMonth()->format('d M Y - h:i') }}"
                                                            required>
                                                     <span class="input-group-btn"><button class="btn default date-set"
                                                                                           type="button"><i
@@ -402,10 +373,10 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4">
+                                        <div class="col-md-1">
                                             <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
                                                 <label for="range" class="control-label">{{ trans('general.week_range') }}
-                                                    *</label>
+                                                    </label>
                                                 <input id="range" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.range') }}" name="range"
@@ -422,6 +393,7 @@
                                         </div>
 
                                         <div class="row">
+                                            <div class="col-lg-12">
                                             @can('index','addon')
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -525,6 +497,7 @@
                                                 <input type="hidden" name="force_original_price" value="1">
                                                 <input type="hidden" name="is_package" value="0">
                                             @endcan
+                                            </div>
                                         </div>
 
                                         <div class="row">
@@ -787,6 +760,35 @@
                             <div class="portlet-body form">
                                 <div class="form-body">
                                     <div class="row">
+                                        @if(!$tags->isEmpty())
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">{{ trans('general.tags') }}</label>
+                                                    <select multiple="multiple" class="multi-select"
+                                                            id="my_multi_select2" name="tags[]">
+                                                        @foreach($tags as $tag)
+                                                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        @endif
+
+                                        @can('index','video')
+                                            @if(!$videos->isEmpty())
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.attach_videos') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select3" name="videos[]">
+                                                            @foreach($videos as $video)
+                                                                <option value="{{ $video->id }}">{{ $video->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endcan
                                         @can('isAdminOrAbove')
                                             <div class="col-md-4">
                                                 <div class="form-group">

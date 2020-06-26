@@ -1067,5 +1067,9 @@ return array(
     "personal_information" => "المعلومات الشخصية",
     "update" => "تحديث",
     "user_updated" => "تم تحديث البيانات الشخصية",
-    "user_is_not_updated" => "لم يتم تحديث البيانات الشخصية بنجاح"
+    "user_is_not_updated" => "لم يتم تحديث البيانات الشخصية بنجاح",
+    "start_date" => "تاريخ البداية",
+    "end_date" => "تاريخ الانتهاء",
+    "rage" => "المدى",
+    "week_range" => "المدى بالاسبوع"
 );
