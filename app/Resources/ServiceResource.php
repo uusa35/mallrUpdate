@@ -55,6 +55,7 @@ class ServiceResource extends JsonResource
                 'video_url_four' => $this->video_url_four,
                 'video_url_five' => $this->video_url_five,
             ],
+            'range' => new RangeTimingLightResource($this->timings,$this),
             'user' => new UserLightResource($this->whenLoaded('user')),
             'categories' => CategoryExtraLightResource::collection($this->whenLoaded('categories')),
             'images' => ImageLightResource::collection($this->whenLoaded('images')),
@@ -62,7 +63,6 @@ class ServiceResource extends JsonResource
             'tags' => TagLightResource::collection($this->whenLoaded('tags')),
             'videos' => VideoLightResource::collection($this->whenLoaded('videos')),
             'timings' => TimingLightResource::collection($this->whenLoaded('timings'))->groupBy('today'),
-            'range' => RangeTimingLightResource::collection($this->whenLoaded('timings')),
             'isFavorite' => auth('api')->user() ? in_array($this->id, User::where('api_token', request()->api_token)->first()->service_favorites()->pluck('service_id')->toArray()) : false
         ];
     }
