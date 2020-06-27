@@ -5,10 +5,19 @@ namespace App\Http\Resources;
 use App\Models\Service;
 use App\Models\Timing;
 use Carbon\Carbon;
+use Carbon\CarbonInterval;
+use Carbon\CarbonPeriod;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class RangeTimingLightResource extends JsonResource
 {
+    protected $service;
+    public function __construct($resource, $service)
+    {
+        parent::__construct($resource);
+        $this->service = $service;
+    }
+
     /**
      * Transform the resource into an array.
      *
@@ -17,6 +26,25 @@ class RangeTimingLightResource extends JsonResource
      */
     public function toArray($request)
     {
-//        dd($request->start_date);
+        $col = collect([]);
+        $newPeriod = new \DatePeriod(Carbon::parse($this->service->start_date),  CarbonInterval::day(1), Carbon::parse($this->service->end_date));
+        foreach($newPeriod as $date) {
+            $day =  Carbon::parse($date)->format('l');
+            foreach($this->service->timings as $time) {
+                if($day === $time->day) {
+                    $col->push([
+                        'id' => $time->id,
+                        'day' => $time->day,
+                        'date' => Carbon::parse($date)->format('d/m/Y'),
+                        'title' => $time->day,
+                        'start' => Carbon::parse($time->start)->format('h:i a'),
+                        'end' => Carbon::parse($time->end)->format('h:i a'),
+                        'day_no' => $time->day_no,
+                        'service_id' => $this->service->id,
+                    ]);
+                }
+            }
+        }
+        return $col->groupBy('date');
     }
 }

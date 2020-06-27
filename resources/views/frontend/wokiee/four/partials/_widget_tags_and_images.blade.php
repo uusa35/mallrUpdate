@@ -6,7 +6,7 @@
         <img class="" src="{{ $element->images->first()->imageLargeLink }}" alt="{{ $element->description }}">
 </span>
 @endif
-{{--<span class="tt-label-location d-none d-md-block">--}}
+<span class="tt-label-location d-none d-md-block">
 {{--    @if($element->on_new)--}}
 {{--        <span class="tt-label-new">{{ trans('general.new') }}</span>--}}
 {{--    @endif--}}
@@ -29,4 +29,7 @@
 {{--    @if($element->user)--}}
 {{--        <span class="tt-label-new">{{ $element->user->country->slug }}</span>--}}
 {{--    @endif--}}
-{{--</span>--}}
+    @if(!$element->hasStock)
+        <span class="tt-label-sale">{{ trans('general.out_of_stock') }}</span>
+    @endif
+</span>

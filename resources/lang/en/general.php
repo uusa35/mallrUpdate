@@ -1959,5 +1959,9 @@ return array (
     "personal_information" => "Personal Information",
     "update" => "Update",
     "user_updated" => "Personal Information updated.",
-    "user_is_not_updated" => "Personal Information did not update."
+    "user_is_not_updated" => "Personal Information did not update.",
+    "start_date" => "Start Date",
+    "end_date" => "End Date",
+    "rage" => "range",
+    "week_range" => "ًWeek Range"
 );

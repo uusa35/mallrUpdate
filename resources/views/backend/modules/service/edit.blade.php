@@ -635,7 +635,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
                                                 <label for="end_date"
-                                                       class="control-label">{{ trans('general.end_date') }}</label>
+                                                       class="control-label">{{ trans('general.end_date') }}*</label>
                                                 <div class="input-group date form_datetime">
                                                     <input type="text" readonly style="direction: ltr !important;"
                                                            class="form-control tooltips" data-container="body"
@@ -656,7 +656,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
                                                 <label for="range" class="control-label">{{ trans('general.week_range') }}
-                                                    *</label>
+                                                    </label>
                                                 <input id="range" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.range') }}" name="range"

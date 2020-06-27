@@ -25,7 +25,6 @@ class Service extends PrimaryModel
         'has_addons' => 'boolean'
     ];
 
-
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -36,11 +35,6 @@ class Service extends PrimaryModel
         return $this->belongsToMany(Timing::class,'service_timing');
 //        return $this->hasMany(Timing::class);
     }
-
-    public function globalTimings() {
-        return $this->belongsToMany(Timing::class,'service_timing');
-    }
-
 
     public function categories()
     {
