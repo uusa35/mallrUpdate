@@ -68,7 +68,7 @@
                                         </button>
                                         <ul class="dropdown-menu pull-right" role="menu">
                                             <li>
-                                                <a href="{{ route('backend.admin.privilege.edit',['id' => $element->id,'role_id' => $role->id]) }}">
+                                                <a href="{{ route('backend.admin.privilege.edit',['privilege' => $element->id,'role_id' => $role->id]) }}">
                                                     <i class="fa fa-fw fa-edit"></i> {{ trans('general.watch_roles_attached', ['role' => $role->name]) }}</a>
                                             </li>
                                             <li>
