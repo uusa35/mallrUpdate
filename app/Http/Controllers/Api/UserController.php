@@ -108,7 +108,9 @@ class UserController extends Controller
                     return $q->active();
                 }]);
             }])
-            ->with('classifieds.category')
+            ->with(['classifieds' => function ($q) {
+                return $q->active()->with('category');
+            }])
             ->with(['comments' => function ($q) {
                 return $q->active()->with('owner')->orderBy('created_at', 'desc');
             }])->first();
