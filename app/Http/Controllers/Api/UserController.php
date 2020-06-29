@@ -188,6 +188,7 @@ class UserController extends Controller
         $validate = validator($request->all(), [
             'email' => 'required|email',
             'password' => 'required',
+            'player_id' => 'nullable|string'
         ]);
         if ($validate->fails()) {
             return response()->json(['message' => $validate->errors()->first(), 400]);
