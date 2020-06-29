@@ -31,7 +31,6 @@ class ClassifiedExtraLightResource extends JsonResource
             'latitude' => (float)$this->latitude,
             'has_map' => ($this->longitude && $this->latitude),
             'category_id' => $this->category_id,
-            'area' => $this->area ? $this->area : $this->area()->first()->slug,
             'items' => ClassifiedItemLightResource::collection($this->whenLoaded('items')),
             'category' => CategoryExtraLightResource::make($this->whenLoaded('category')),
         ];

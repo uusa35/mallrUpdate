@@ -67,7 +67,7 @@ class ClassifiedResource extends JsonResource
             'created_at' => $this->created_at->diffForHumans(),
             'commentsCount' => $this->comments->count(),
             'expired_at' => $this->expired_at,
-            'area' => $this->area ? $this->area : $this->area()->first()->slug,
+            'area' => $this->area()->first() ? $this->area()->first()->slug : ($this->area ? $this->area : null),
             'isFavorite' => auth('api')->user() && request()->has('api_token') ? in_array($this->id, User::where('api_token', request()->api_token)->first()->classified_favorites()->pluck('classified_id')->toArray()) : false,
             'user' => new UserLightResource($this->whenLoaded('user')),
             'country' => new CountryLightResource($this->whenLoaded('country')),

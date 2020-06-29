@@ -4,6 +4,7 @@
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +49,7 @@
             <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="675">
-                  <caret line="69" column="79" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="79" />
+                  <caret line="69" column="113" lean-forward="true" selection-start-line="69" selection-start-column="113" selection-end-line="69" selection-end-column="113" />
                 </state>
               </provider>
             </entry>
@@ -201,20 +202,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+                <state relative-caret-position="540">
+                  <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
-                  <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+                <state relative-caret-position="486">
+                  <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
                 </state>
               </provider>
             </entry>
@@ -326,9 +327,9 @@
         <option value="$PROJECT_DIR$/app/Resources/UserLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
-        <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
-        <option value="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
       </list>
     </option>
   </component>
@@ -729,12 +730,12 @@
       <workItem from="1593034568772" duration="2211000" />
       <workItem from="1593179003113" duration="6094000" />
       <workItem from="1593264702927" duration="880000" />
-      <workItem from="1593417041461" duration="5498000" />
+      <workItem from="1593417041461" duration="5757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331752000" />
+    <option name="totallyTimeSpent" value="332011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -1059,8 +1060,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_01_145136_create_classifieds_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="321">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1113,24 +1114,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="69" column="79" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="79" />
+        <state relative-caret-position="414">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state relative-caret-position="540">
+          <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+        <state relative-caret-position="675">
+          <caret line="69" column="113" lean-forward="true" selection-start-line="69" selection-start-column="113" selection-end-line="69" selection-end-column="113" />
         </state>
       </provider>
     </entry>
