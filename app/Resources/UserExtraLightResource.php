@@ -21,6 +21,8 @@ class UserExtraLightResource extends JsonResource
             'thumb' => $this->getCurrentImageAttribute('image'),
             'rating' => $this->rating,
             'has_map' => ($this->longitude && $this->latitude),
+            'longitude' => (float)$this->longitude,
+            'latitude' => (float)$this->latitude,
         ];
     }
 }
