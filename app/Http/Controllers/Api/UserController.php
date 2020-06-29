@@ -193,7 +193,7 @@ class UserController extends Controller
             'player_id' => 'nullable|string'
         ]);
         if ($validate->fails()) {
-            return response()->json(['message' => $validate->errors()->first(), 400]);
+            return response()->json(['message' => $validate->errors()->first()], 400);
         }
         $authenticate = auth()->attempt($request->only('email', 'password'));
         if ($authenticate) {
