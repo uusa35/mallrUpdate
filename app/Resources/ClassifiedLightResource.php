@@ -27,6 +27,7 @@ class ClassifiedLightResource extends JsonResource
             'longitude' => (float)$this->longitude,
             'latitude' => (float)$this->latitude,
             'has_map' => ($this->longitude && $this->latitude),
+            'area' => $this->area ? $this->area : $this->area()->first()->slug,
             'items' => ClassifiedItemLightResource::collection($this->whenLoaded('items'))
 
         ];
