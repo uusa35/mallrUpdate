@@ -115,7 +115,7 @@ class ClassifiedController extends Controller
      */
     public function show($id)
     {
-        $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country'])->first();
+        $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country','area'])->first();
         if ($element) {
             IncreaseElementViews::dispatch($element);
             return response(new ClassifiedResource($element), 200);
