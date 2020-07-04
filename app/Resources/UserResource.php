@@ -50,7 +50,7 @@ class UserResource extends JsonResource
             'instagram' => $this->instagram,
             'youtube' => $this->youtube,
             'twitter' => $this->twitter,
-            'whatsapp' => $this->whatsapp ? $this->country->calling_code  + $this->whatsapp : null,
+            'whatsapp' => $this->whatsapp ? $this->country->calling_code  . $this->whatsapp : null,
             'iphone' => $this->iphone,
             'android' => $this->android,
             'longitude' => (float)$this->longitude,

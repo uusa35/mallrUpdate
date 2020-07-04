@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/UserResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,15 +62,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3564">
-                  <caret line="211" column="107" selection-start-line="211" selection-start-column="107" selection-end-line="211" selection-end-column="107" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/web.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="432">
@@ -115,11 +106,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="712">
-                  <caret line="51" column="114" lean-forward="true" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+                <state relative-caret-position="622">
+                  <caret line="48" column="55" lean-forward="true" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="698">
+                  <caret line="917" column="89" lean-forward="true" selection-start-line="917" selection-start-column="89" selection-end-line="917" selection-end-column="89" />
                 </state>
               </provider>
             </entry>
@@ -194,8 +194,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+                <state relative-caret-position="722">
+                  <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="99" selection-end-line="52" selection-end-column="99" />
                 </state>
               </provider>
             </entry>
@@ -232,7 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test</find>
       <find>testing</find>
       <find>logo</find>
       <find>getCurrentImageAttribute</find>
@@ -251,7 +250,6 @@
       <find>tags</find>
       <find>mobi</find>
       <find>calling</find>
-      <find>whatsap</find>
       <find>calling_code +</find>
       <find>priv</find>
       <find>edit</find>
@@ -262,6 +260,8 @@
       <find>whats</find>
       <find>mobile</find>
       <find>whatsa</find>
+      <find>whatsap</find>
+      <find>whatsapp</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -326,8 +326,8 @@
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
-        <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
       </list>
     </option>
   </component>
@@ -730,12 +730,12 @@
       <workItem from="1593264702927" duration="880000" />
       <workItem from="1593417041461" duration="6360000" />
       <workItem from="1593494240071" duration="2000" />
-      <workItem from="1593873570781" duration="278000" />
+      <workItem from="1593873570781" duration="477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332894000" />
+    <option name="totallyTimeSpent" value="333093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -778,13 +778,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="74" column="35" lean-forward="true" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="963">
@@ -1114,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1130,8 +1116,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="51" column="114" lean-forward="true" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+        <state relative-caret-position="622">
+          <caret line="48" column="55" lean-forward="true" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="99" selection-end-line="52" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="917" column="89" lean-forward="true" selection-start-line="917" selection-start-column="89" selection-end-line="917" selection-end-column="89" />
         </state>
       </provider>
     </entry>
