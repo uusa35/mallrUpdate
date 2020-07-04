@@ -217,29 +217,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-<<<<<<< HEAD
-            "version": "3.144.1",
+            "version": "3.145.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3c6cc59be6a01f228fb53b2b5f43c1fd7d44a88c"
+                "reference": "df5406b49f4f5774045e51e8fecc75717c4d6454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3c6cc59be6a01f228fb53b2b5f43c1fd7d44a88c",
-                "reference": "3c6cc59be6a01f228fb53b2b5f43c1fd7d44a88c",
-=======
-            "version": "3.144.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6848e85b4a019e1012e65cf8c82888863fe9dad7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6848e85b4a019e1012e65cf8c82888863fe9dad7",
-                "reference": "6848e85b4a019e1012e65cf8c82888863fe9dad7",
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/df5406b49f4f5774045e51e8fecc75717c4d6454",
+                "reference": "df5406b49f4f5774045e51e8fecc75717c4d6454",
                 "shasum": ""
             },
             "require": {
@@ -311,11 +298,7 @@
                 "s3",
                 "sdk"
             ],
-<<<<<<< HEAD
-            "time": "2020-06-30T18:14:11+00:00"
-=======
-            "time": "2020-06-29T18:15:16+00:00"
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
+            "time": "2020-07-02T18:12:35+00:00"
         },
         {
             "name": "barryvdh/laravel-translation-manager",
@@ -1682,16 +1665,16 @@
         },
         {
             "name": "jeroennoten/laravel-adminlte",
-            "version": "v3.3.1",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
-                "reference": "82e7a3f14a7de6e0a7bb33a1e659f87f024261a5"
+                "reference": "02a3029d433053f00f290e82c736b1a6d72c04f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/82e7a3f14a7de6e0a7bb33a1e659f87f024261a5",
-                "reference": "82e7a3f14a7de6e0a7bb33a1e659f87f024261a5",
+                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/02a3029d433053f00f290e82c736b1a6d72c04f7",
+                "reference": "02a3029d433053f00f290e82c736b1a6d72c04f7",
                 "shasum": ""
             },
             "require": {
@@ -1733,11 +1716,10 @@
                 "administrator",
                 "laravel"
             ],
-            "time": "2020-06-09T05:51:41+00:00"
+            "time": "2020-07-03T14:42:17+00:00"
         },
         {
             "name": "laravel/framework",
-<<<<<<< HEAD
             "version": "v7.18.0",
             "source": {
                 "type": "git",
@@ -1748,18 +1730,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/116b508bafd81de97b1c09744445d32a91076b60",
                 "reference": "116b508bafd81de97b1c09744445d32a91076b60",
-=======
-            "version": "v7.17.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "d16ff3a0a66d98e04163456b39c4b7302cf50a40"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d16ff3a0a66d98e04163456b39c4b7302cf50a40",
-                "reference": "d16ff3a0a66d98e04163456b39c4b7302cf50a40",
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
                 "shasum": ""
             },
             "require": {
@@ -1903,11 +1873,7 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
             "time": "2020-06-30T13:52:36+00:00"
-=======
-            "time": "2020-06-24T13:11:25+00:00"
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
         },
         {
             "name": "laravel/helpers",
@@ -2148,35 +2114,6 @@
                 "md",
                 "parser"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.colinodell.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.paypal.me/colinpodell/10.00",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/colinodell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/colinodell",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/league/commonmark",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
             "time": "2020-06-27T12:50:08+00:00"
         },
         {
@@ -2581,16 +2518,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.5.0",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463"
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/53c2753d756f5adb586dca79c2ec0e2654dd9463",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c346bbfafe2ff60680258b631afb730d186ed864",
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864",
                 "shasum": ""
             },
             "require": {
@@ -2629,7 +2566,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-06-03T07:24:19+00:00"
+            "time": "2020-07-02T17:12:47+00:00"
         },
         {
             "name": "opis/closure",
@@ -5025,23 +4962,6 @@
                 "psr-17",
                 "psr-7"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
             "time": "2020-06-25T08:21:47+00:00"
         },
         {
@@ -6099,23 +6019,6 @@
                 "dependency",
                 "package"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
             "time": "2020-06-24T19:23:30+00:00"
         },
         {
@@ -6915,15 +6818,6 @@
                 "object",
                 "object graph"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> e9b7d6e263d7e82b4bbec379ab63030623c5283b
             "time": "2020-06-29T13:22:24+00:00"
         },
         {
