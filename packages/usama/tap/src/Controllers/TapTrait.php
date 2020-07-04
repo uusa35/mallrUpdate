@@ -138,7 +138,6 @@ trait TapTrait
             ]);
         }
         if ($order->discount > 0) {
-            return 'from inside the discount';
             array_push($productsList, [
                 'CurrencyCode' => env('TAP_CURRENCY_CODE'),
                 'ImgUrl' => asset(env('LARGE')) . Setting::first()->logo,
