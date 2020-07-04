@@ -2514,6 +2514,19 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://opencollective.com/Carbon",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
+                    "type": "tidelift"
+                }
+            ],
+>>>>>>> a54b4ebaad3134c0a8d73b2aae59bd95fe8a95da
             "time": "2020-06-25T20:20:01+00:00"
         },
         {
@@ -3532,6 +3545,15 @@
                 "location",
                 "map"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+>>>>>>> a54b4ebaad3134c0a8d73b2aae59bd95fe8a95da
             "time": "2020-07-01T07:56:37+00:00"
         },
         {
