@@ -108,7 +108,9 @@ class UserController extends Controller
                     return $q->active();
                 }]);
             }])
-            ->with('classifieds.category')
+            ->with(['classifieds' => function ($q) {
+                return $q->active()->with('category');
+            }])
             ->with(['comments' => function ($q) {
                 return $q->active()->with('owner')->orderBy('created_at', 'desc');
             }])->first();
@@ -188,9 +190,10 @@ class UserController extends Controller
         $validate = validator($request->all(), [
             'email' => 'required|email',
             'password' => 'required',
+            'player_id' => 'nullable|string'
         ]);
         if ($validate->fails()) {
-            return response()->json(['message' => $validate->errors()->first(), 400]);
+            return response()->json(['message' => $validate->errors()->first()], 400);
         }
         $authenticate = auth()->attempt($request->only('email', 'password'));
         if ($authenticate) {

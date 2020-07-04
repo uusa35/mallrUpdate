@@ -115,12 +115,12 @@ class ClassifiedController extends Controller
      */
     public function show($id)
     {
-        $element = Classified::active()->whereId($id)->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments'])->first();
+        $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country','area'])->first();
         if ($element) {
             IncreaseElementViews::dispatch($element);
             return response(new ClassifiedResource($element), 200);
         }
-        return response()->json(['message' => trans('general.this_product_does_not_exist')], 400);
+        return response()->json(['message' => trans('general.this_classified_does_not_exist')], 400);
     }
 
     public function getClassifiedForCart(Request $request)
