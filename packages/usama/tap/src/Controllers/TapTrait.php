@@ -36,7 +36,7 @@ trait TapTrait
                 'lstGateWayDC' => [$this->getGateWay()],
                 'MerMastDC' => $this->getMerchant($order->net_price),
             ];
-            return $order->net_price;
+            return $finalArray;
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => config('tap.paymentUrl'),
@@ -138,6 +138,7 @@ trait TapTrait
             ]);
         }
         if ($order->discount > 0) {
+            return 'from inside the discount';
             array_push($productsList, [
                 'CurrencyCode' => env('TAP_CURRENCY_CODE'),
                 'ImgUrl' => asset(env('LARGE')) . Setting::first()->logo,
