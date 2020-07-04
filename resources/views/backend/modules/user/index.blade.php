@@ -14,8 +14,8 @@
                         <thead>
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.name') }}</th>
-                            <th class="none">{{ trans('general.slug') }}</th>
+                            <th class="none">{{ trans('general.name') }}</th>
+                            <th >{{ trans('general.slug') }}</th>
                             <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
@@ -31,8 +31,8 @@
                         <tfoot>
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
-                            <th>{{ trans('general.name') }}</th>
-                            <th class="none">{{ trans('general.slug') }}</th>
+                            <th class="none">{{ trans('general.name') }}</th>
+                            <th >{{ trans('general.slug') }}</th>
                             <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
@@ -49,7 +49,7 @@
                         @foreach($elements as $element)
                             <tr>
                                 <td>{{ $element->id }}</td>
-                                <td>{{ $element->name }}</td>
+                                <td>{{ $element->name }}  / {{ $element->slug_en }} / {{ $element->slug_ar }}</td>
                                 <td>{{ $element->slug }}</td>
                                 <td><img src="{{ $element->getCurrentImageAttribute() }}" alt="" class="img-xs"/></td>
                                 <td>{{ $element->email  }}</td>

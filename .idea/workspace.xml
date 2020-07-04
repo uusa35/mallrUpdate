@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,19 +35,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ClassifiedController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1944">
-                  <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+                <state relative-caret-position="414">
+                  <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -127,6 +115,15 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="712">
+                  <caret line="51" column="114" lean-forward="true" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -197,8 +194,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="215">
-                  <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+                <state relative-caret-position="359">
+                  <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -262,9 +259,9 @@
       <find>long</find>
       <find>area</find>
       <find>'area</find>
-      <find>whatsa</find>
       <find>whats</find>
       <find>mobile</find>
+      <find>whatsa</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -280,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mallr.blade.php" />
         <option value="$PROJECT_DIR$/routes/home.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/breadcrumbs.blade.php" />
@@ -331,6 +327,7 @@
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" />
       </list>
     </option>
   </component>
@@ -733,12 +730,12 @@
       <workItem from="1593264702927" duration="880000" />
       <workItem from="1593417041461" duration="6360000" />
       <workItem from="1593494240071" duration="2000" />
-      <workItem from="1593873570781" duration="88000" />
+      <workItem from="1593873570781" duration="278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332704000" />
+    <option name="totallyTimeSpent" value="332894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -781,13 +778,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_show_tags.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -1070,8 +1060,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_01_145136_create_classifieds_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="990">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1112,15 +1102,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="414">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1133,8 +1116,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        <state relative-caret-position="359">
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="51" column="114" lean-forward="true" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
         </state>
       </provider>
     </entry>
