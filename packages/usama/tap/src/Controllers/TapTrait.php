@@ -145,7 +145,7 @@ trait TapTrait
                 'TotalPrice' => -($order->discount),
                 'UnitID' => $order->id,
                 'UnitName' => 'Coupon',
-                'UnitPrice' => -($order->discout),
+                'UnitPrice' => 1,
                 'UnitDesc' => 'Coupon (Discount)',
                 'VndID' => '',
             ]);
