@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/UserResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,17 +48,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ClassifiedController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1206">
-                  <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+                <state relative-caret-position="432">
+                  <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -73,7 +66,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="284">
+                <state relative-caret-position="16092">
                   <caret line="894" column="38" selection-start-line="894" selection-start-column="38" selection-end-line="894" selection-end-column="38" />
                 </state>
               </provider>
@@ -82,8 +75,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CouponController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
-                  <caret line="61" column="92" lean-forward="true" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
+                <state relative-caret-position="1044">
+                  <caret line="61" column="92" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +85,7 @@
             <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/routes.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="216">
-                  <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+                  <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
                 </state>
               </provider>
             </entry>
@@ -106,11 +99,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="698">
-                  <caret line="146" column="52" lean-forward="true" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="52" />
+                <state relative-caret-position="626">
+                  <caret line="142" column="32" lean-forward="true" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -118,8 +111,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="225" column="51" lean-forward="true" selection-start-line="225" selection-start-column="51" selection-end-line="225" selection-end-column="51" />
+                <state relative-caret-position="3888">
+                  <caret line="225" column="51" selection-start-line="225" selection-start-column="51" selection-end-line="225" selection-end-column="51" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="364">
+                  <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
                 </state>
               </provider>
             </entry>
@@ -194,8 +196,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="393">
-                  <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+                <state relative-caret-position="321">
+                  <caret line="26" column="97" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="97" />
                 </state>
               </provider>
             </entry>
@@ -324,10 +326,10 @@
         <option value="$PROJECT_DIR$/app/Resources/UserExtraLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedExtraLightResource.php" />
-        <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
         <option value="$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php" />
+        <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
       </list>
     </option>
   </component>
@@ -484,11 +486,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="712" />
-    <option name="y" value="94" />
-    <option name="width" value="1920" />
-    <option name="height" value="1129" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1420" />
+    <option name="height" value="862" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -731,15 +732,16 @@
       <workItem from="1593417041461" duration="6360000" />
       <workItem from="1593494240071" duration="2000" />
       <workItem from="1593873570781" duration="1064000" />
-      <workItem from="1593886747021" duration="1902000" />
+      <workItem from="1593886747021" duration="2316000" />
+      <workItem from="1593937728583" duration="62000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335582000" />
+    <option name="totallyTimeSpent" value="336058000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="712" y="94" width="1920" height="1129" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" weight="0.28479657" />
@@ -975,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1021,6 +1016,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16092">
+          <caret line="894" column="38" selection-start-line="894" selection-start-column="38" selection-end-line="894" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CouponController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="61" column="92" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3888">
+          <caret line="225" column="51" selection-start-line="225" selection-start-column="51" selection-end-line="225" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1080,59 +1110,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="142" column="32" lean-forward="true" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        <state relative-caret-position="432">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/UserResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+        <state relative-caret-position="321">
+          <caret line="26" column="97" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/ClassifiedResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="894" column="38" selection-start-line="894" selection-start-column="38" selection-end-line="894" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CouponController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="61" column="92" lean-forward="true" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="225" column="51" lean-forward="true" selection-start-line="225" selection-start-column="51" selection-end-line="225" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="146" column="52" lean-forward="true" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="52" />
+        <state relative-caret-position="364">
+          <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
         </state>
       </provider>
     </entry>
