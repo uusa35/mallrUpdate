@@ -22,6 +22,8 @@ class Product extends PrimaryModel
         'is_hot_deal' => 'boolean',
         'exclusive' => 'boolean',
         'on_new' => 'boolean',
+        'direct_purchase' => 'boolean',
+        'tailor_measurement_service' => 'boolean',
         'weight' => 'float',
         'price' => 'float'
     ];
