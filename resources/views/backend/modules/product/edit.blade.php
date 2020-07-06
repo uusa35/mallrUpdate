@@ -1033,7 +1033,7 @@
                                                             {{ trans('general.yes') }}</label>
                                                         <label class="radio-inline">
                                                             <input type="radio" name="direct_purchase"
-                                                                   {{ !$element->wrap_as_gift ? 'checked' : null  }}
+                                                                   {{ !$element->direct_purchase ? 'checked' : null  }}
                                                                    id="optionsRadios4" value="0">
                                                             {{ trans('general.no') }}</label>
                                                     </div>
