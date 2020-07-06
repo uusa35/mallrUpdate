@@ -62,6 +62,8 @@ class ProductResource extends JsonResource
             'color_id' => $this->color_id,
             'size_id' => $this->size_id,
             'shipment_package_id' => $this->shipment_package_id,
+            'directPurchase' => $this->direct_purchase,
+            'tailorService' => $this->tailor_measurement_service,
             'user' => new UserExtraLightResource($this->whenLoaded('user')),
             'product_attributes' => $this->has_attributes ? ProductAttributeLightResource::collection($this->whenLoaded('product_attributes')) : [],
             'shipment_package' => ShipmentPackageLightResource::make($this->whenLoaded('shipment_package')),
