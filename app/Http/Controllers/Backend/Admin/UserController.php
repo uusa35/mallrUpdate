@@ -13,6 +13,7 @@ use App\Models\Role;
 use App\Services\Traits\ImageHelpers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -69,7 +70,7 @@ class UserController extends Controller
      */
     public function store(UserStore $request)
     {
-        $element = User::create($request->except('image', 'bg', 'banner', 'path', 'categories', 'images', 'products', 'surveys'));
+        $element = User::create($request->except('image', 'bg', 'banner', 'path', 'categories', 'images', 'products', 'surveys','current_password'));
         $country = request()->has('country_id') ? Country::whereId(request('country_id'))->first() : null;
         if ($element) {
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;
@@ -81,6 +82,7 @@ class UserController extends Controller
             $request->has('products') ? $element->productGroup()->sync($request->products) : null;
             $request->has('surveys') ? $element->surveys()->sync($request->surveys) : null;
             $country ? $element->update(['country_name' => $country->slug]) : null;
+            $element->update(['password' => Hash::make($request->current_password)]);
             return redirect()->route('backend.admin.user.index')->with('success', trans('general.user_added'));
         }
         return redirect()->route('backend.admin.user.create')->with('error', trans('general.user_not_added'));

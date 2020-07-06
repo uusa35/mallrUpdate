@@ -2135,5 +2135,7 @@ return array (
     "start_date" => "تاريخ البداية",
     "end_date" => "تاريخ الانتهاء",
     "rage" => "المدى",
-    "week_range" => "المدى بالاسبوع"
+    "week_range" => "المدى بالاسبوع",
+    "tailor_measurement_service" => "خدمة أخذ القياسات",
+    "direct_purchase" => "الشراء المباشر"
 );

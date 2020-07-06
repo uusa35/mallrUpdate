@@ -9,6 +9,27 @@
                 @include('backend.partials.forms.form_title',['title' => trans('general.index_order')])
                 <div class="portlet-body">
                     <div class="row">
+                        @can('isAdminOrAbove')
+                        <div class="col-lg-12">
+                            <div class="tiles padding-tb-20">
+                                @foreach($companies as $company)
+                                    <a href="{{ route('backend.admin.order.index', ['company_id' => $company->id]) }}">
+                                        <div class="tile bg-blue-chambray tooltips"
+                                             data-container="body" data-placement="bottom"
+                                             data-original-title="{{ $company->slug }}"
+                                        >
+                                            <div class="tile-body">
+                                                <img src="{{ $company->getCurrentImageAttribute() }}" alt="" class="text-center" style="width : 110px; height: 110px; text-align: center;">
+                                            </div>
+                                            <div class="tile-object text-center">
+                                                {{ str_limit($company->slug,'10') }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endcan
                         <div class="col-lg-12">
                             @include('backend.partials._admin_instructions',['title' => trans('general.orders') ,'message' => trans('message.index_order')])
                         </div>
@@ -70,6 +91,7 @@
                             <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.payment_method') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -91,6 +113,7 @@
                             <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
+                            <th class="none">{{ trans('general.payment_method') }}</th>
                             <th class="none">{{ trans('general.shipment') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
@@ -145,11 +168,11 @@
                                                             </button>
                                                         @endif
                                                     @endif
-                                                        <button type="button"
-                                                                class="btn blue">
-                                                            {{ trans('general.company') }} :
-                                                            - {{ $meta->product->user->name}}
-                                                        </button>
+                                                    <button type="button"
+                                                            class="btn blue">
+                                                        {{ trans('general.company') }} :
+                                                        - {{ $meta->product->user->slug}}
+                                                    </button>
                                                 @elseif($meta->service && $meta->service_id)
                                                     <button type="button"
                                                             class="btn yellow">
@@ -171,6 +194,9 @@
                                 <td>{{ $element->net_price}} {{ trans('general.kd') }}</td>
                                 <td>
                                     <span class="label label-{{ $element->discount ?  'warning' : 'danger' }}">{{ $element->discount ? $element->discount .' '. trans('general.kd') : 'N/A'}}</span>
+                                </td>
+                                <td>
+                                    <span class="label label-{{ $element->cash_on_delivery ?  'green' : 'warning' }}">{{ $element->cash_on_delivery ? trans('general.cash_on_delivery') : $element->payment_method }}</span>
                                 </td>
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">

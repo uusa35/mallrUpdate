@@ -1963,5 +1963,7 @@ return array (
     "start_date" => "Start Date",
     "end_date" => "End Date",
     "rage" => "range",
-    "week_range" => "ًWeek Range"
+    "week_range" => "ًWeek Range",
+    "tailor_measurement_service" => "Tailor Measurement Service",
+    "direct_purchase" => "Direct Purchase"
 );

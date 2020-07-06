@@ -964,6 +964,36 @@
                                                     </div>
 
                                                 </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label sbold tooltips"
+                                                               data-container="body" data-placement="top"
+                                                               data-original-title="{{ trans('message.direct_purchase') }}">{{ trans('general.direct_purchase') }}</label></br>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="direct_purchase"
+                                                                   id="optionsRadios3" value="1">
+                                                            {{ trans('general.yes') }}</label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="direct_purchase"
+                                                                   id="optionsRadios4" checked value="0">
+                                                            {{ trans('general.no') }}</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label sbold tooltips"
+                                                               data-container="body" data-placement="top"
+                                                               data-original-title="{{ trans('message.tailor_measurement_service') }}">{{ trans('general.tailor_measurement_service') }}</label></br>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="tailor_measurement_service"
+                                                                   id="optionsRadios3" value="1">
+                                                            {{ trans('general.yes') }}</label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="tailor_measurement_service"
+                                                                   id="optionsRadios4" checked value="0">
+                                                            {{ trans('general.no') }}</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
