@@ -23,6 +23,8 @@ $factory->define(Product::class, function (Faker $faker) use ($fakerAr) {
         'on_sale' => $faker->boolean,
         'on_home' => $faker->boolean,
         'is_available' => $faker->boolean(true),
+        'direct_purchase' => $faker->boolean(false),
+        'tailor_measurement_service' => $faker->boolean(false),
         'delivery_time' => $faker->numberBetween(1, 9),
         'price' => $faker->randomFloat(3, 10, 200),
         'sale_price' => function ($array) {

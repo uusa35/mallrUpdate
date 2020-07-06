@@ -267,6 +267,7 @@ class UserController extends Controller
             'description_en' => $request->description
         ]);
         if ($element) {
+            $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
             return response()->json(new UserResource($element), 200);
         }
         return resopnse()->json(['message' => trans('message.register_unknwon_error')], 400);

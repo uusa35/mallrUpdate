@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                                                <label for="name_ar" class="control-label">{{ trans('general.name') }}
+                                                <label for="name_ar" class="control-label required">{{ trans('general.name') }}
                                                     *</label>
                                                 <input id="name_ar" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -48,7 +48,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('slug_ar') ? ' has-error' : '' }}">
                                                 <label for="slug_ar"
-                                                       class="control-label">{{ trans('general.slug_ar') }}
+                                                       class="control-label required">{{ trans('general.slug_ar') }}
                                                     *</label>
                                                 <input id="slug_ar" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -67,7 +67,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('slug_en') ? ' has-error' : '' }}">
                                                 <label for="slug_en"
-                                                       class="control-label">{{ trans('general.slug_en') }}
+                                                       class="control-label required">{{ trans('general.slug_en') }}
                                                     *</label>
                                                 <input id="slug_en" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -84,9 +84,29 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
+                                            <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                                                <label for="password"
+                                                       class="control-label required">{{ trans('general.password') }}
+                                                    *</label>
+                                                <input id="password" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       minlength="6"
+                                                       data-original-title="{{ trans('message.password') }}"
+                                                       name="current_password" value="{{ old('current_password') }}"
+                                                       placeholder="{{ trans('general.password') }}" required autofocus>
+                                                @if ($errors->has('password'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('password') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="single"
-                                                       class="control-label">{{ trans('general.country') }}*</label>
+                                                       class="control-label required">{{ trans('general.country') }}*</label>
                                                 <select id="single" class="form-control tooltips select2"
                                                         data-container="body" data-placement="top"
                                                         data-original-title="{{ trans('message.country_id') }}"
@@ -101,86 +121,29 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="single"
-                                                       class="control-label">{{ trans('general.role') }}*</label>
+                                                       class="control-label required">{{ trans('general.role') }}*</label>
                                                 <select id="single" class="form-control tooltips select2"
                                                         data-container="body" data-placement="top"
                                                         data-original-title="{{ trans('message.role_id') }}"
                                                         name="role_id" required>
                                                     <option>{{ trans('general.choose_role') }}</option>
-                                                    @foreach($roles as $role)
-                                                        <option value="{{ $role->id }}">{{ $role->slug_en }}</option>
-                                                    @endforeach
+                                                    @if(auth()->user()->isSuper)
+                                                        @foreach($roles as $role)
+                                                            <option value="{{ $role->id }}">{{ $role->slug_en }}</option>
+                                                        @endforeach
+                                                    @else
+                                                        @foreach($roles->where('is_admin', false) as $role)
+                                                            <option value="{{ $role->id }}">{{ $role->slug_en }}</option>
+                                                        @endforeach
+                                                    @endif
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="description"
-                                                       class="control-label">{{ trans('general.description_arabic') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.description_arabic') }}"
-                                                          id="description_ar" name="description_ar"
-                                                          aria-multiline="true"
-                                                          maxlength="500" {{ old('description_ar') }}></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="description"
-                                                       class="control-label">{{ trans('general.description_english') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.description_english') }}"
-                                                          id="description_en" name="description_en"
-                                                          aria-multiline="true"
-                                                          maxlength="500">{{ old('description_en') }}</textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('service_en') ? ' has-error' : '' }}">
-                                                <label for="service_en"
-                                                       class="control-label">{{ trans('general.service_en') }}</label>
-                                                <input id="service_en" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.service_en') }}"
-                                                       name="service_en" value="{{ old('service_en') }}"
-                                                       placeholder="{{ trans('general.service_en') }}"
-                                                       autofocus>
-                                                @if ($errors->has('service_en'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('service_en') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('service_ar') ? ' has-error' : '' }}">
-                                                <label for="service_ar"
-                                                       class="control-label">{{ trans('general.service_ar') }}</label>
-                                                <input id="service_ar" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.service_ar') }}"
-                                                       name="service_ar" value="{{ old('service_ar') }}"
-                                                       placeholder="{{ trans('general.service_ar') }}"
-                                                       autofocus>
-                                                @if ($errors->has('service_ar'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('service_ar') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
-
                                         {{-- email + mobile --}}
 
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                                <label for="email" class="control-label">{{ trans('general.email') }}
+                                                <label for="email" class="control-label required">{{ trans('general.email') }}
                                                     *</label>
                                                 <input id="email" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -198,7 +161,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
-                                                <label for="mobile" class="control-label">{{ trans('general.mobile') }}
+                                                <label for="mobile" class="control-label required">{{ trans('general.mobile') }}
                                                     *</label>
                                                 <input id="mobile" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -218,7 +181,7 @@
                                         @if(!$categories->isEmpty())
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.categories') }}
+                                                    <label class="control-label required">{{ trans('general.categories') }}
                                                         *</label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select1" name="categories[]">
@@ -256,7 +219,7 @@
                                                            data-container="body" data-placement="top"
                                                            data-original-title="{{ trans('message.related_product_group') }}"
                                                     >{{ trans('general.related_product_group') }}
-                                                        *</label>
+                                                        </label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select2" name="products[]">
                                                         @foreach($products as $product)
@@ -268,48 +231,9 @@
                                                 </div>
                                             </div>
                                         @endif
-
-                                        {{-- password + confirm password --}}
-
-                                        <div class="col-md-4">
-                                            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                                <label for="phone"
-                                                       class="control-label">{{ trans('general.phone') }}</label>
-                                                <input id="phone" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.phone') }}" name="phone"
-                                                       placeholder="{{ trans('general.phone') }}"
-                                                       value="{{ old('phone') }}" autofocus>
-                                                @if ($errors->has('phone'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('phone') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group{{ $errors->has('fax') ? ' has-error' : '' }}">
-                                                <label for="fax"
-                                                       class="control-label">{{ trans('general.fax') }}</label>
-                                                <input id="fax" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.fax') }}" name="fax"
-                                                       placeholder="{{ trans('general.fax') }}" value="{{ old('fax') }}"
-                                                       autofocus>
-                                                @if ($errors->has('fax'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('fax') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="form_control_1">{{ trans('general.logo') }}</label>
+                                                <label for="form_control_1" class="control-label required">{{ trans('general.logo') }}*</label>
                                                 <input type="file" class="form-control tooltips" data-container="body"
                                                        data-placement="top"
                                                        data-original-title="{{ trans('message.main_image') }}"
@@ -317,6 +241,33 @@
                                                        required>
                                                 <div class="help-block text-left">
                                                     {{ trans('message.best_fit',['width' => '1000 px', 'height' => '1000 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="file"
+                                                       class="control-label required">{{ trans('general.more_images') }}*
+                                                </label>
+                                                <input class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.more_iamges') }}"
+                                                       name="images[]" placeholder="images" type="file"
+                                                       multiple/>
+                                                <div class="help-block text-left">
+                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_control_1">{{ trans('general.qr') }}</label>
+                                                <input type="file" class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.qr') }}" name="qr"
+                                                       placeholder="{{ trans('general.qr') }}">
+                                                <div class="help-block text-left">
+                                                    {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
                                                 </div>
                                             </div>
                                         </div>
@@ -352,6 +303,69 @@
                                                 @endif
                                             </div>
                                         </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="description"
+                                                       class="control-label">{{ trans('general.description_arabic') }}</label>
+                                                <textarea type="text" class="form-control tooltips"
+                                                          data-container="body" data-placement="top"
+                                                          data-original-title="{{ trans('message.description_arabic') }}"
+                                                          id="description_ar" name="description_ar"
+                                                          aria-multiline="true"
+                                                          maxlength="500" {{ old('description_ar') }}></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="description"
+                                                       class="control-label">{{ trans('general.description_english') }}</label>
+                                                <textarea type="text" class="form-control tooltips"
+                                                          data-container="body" data-placement="top"
+                                                          data-original-title="{{ trans('message.description_english') }}"
+                                                          id="description_en" name="description_en"
+                                                          aria-multiline="true"
+                                                          maxlength="500">{{ old('description_en') }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group {{ $errors->has('service_en') ? ' has-error' : '' }}">
+                                                <label for="service_en"
+                                                       class="control-label">{{ trans('general.service_en') }}</label>
+                                                <input id="service_en" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.service_en') }}"
+                                                       name="service_en" value="{{ old('service_en') }}"
+                                                       placeholder="{{ trans('general.service_en') }}"
+                                                       autofocus>
+                                                @if ($errors->has('service_en'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('service_en') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group {{ $errors->has('service_ar') ? ' has-error' : '' }}">
+                                                <label for="service_ar"
+                                                       class="control-label">{{ trans('general.service_ar') }}</label>
+                                                <input id="service_ar" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.service_ar') }}"
+                                                       name="service_ar" value="{{ old('service_ar') }}"
+                                                       placeholder="{{ trans('general.service_ar') }}"
+                                                       autofocus>
+                                                @if ($errors->has('service_ar'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('service_ar') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -366,33 +380,6 @@
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="file"
-                                                       class="control-label">{{ trans('general.more_images') }}
-                                                    </label>
-                                                <input class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.more_iamges') }}"
-                                                       name="images[]" placeholder="images" type="file"
-                                                       multiple/>
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="form_control_1">{{ trans('general.qr') }}</label>
-                                                <input type="file" class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.qr') }}" name="qr"
-                                                       placeholder="{{ trans('general.qr') }}">
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                                                 <label for="address"
                                                        class="control-label">{{ trans('general.address') }}</label>
@@ -405,6 +392,42 @@
                                                     <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('address') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                                                <label for="phone"
+                                                       class="control-label">{{ trans('general.phone') }}</label>
+                                                <input id="phone" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.phone') }}" name="phone"
+                                                       placeholder="{{ trans('general.phone') }}"
+                                                       value="{{ old('phone') }}" autofocus>
+                                                @if ($errors->has('phone'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('phone') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group{{ $errors->has('fax') ? ' has-error' : '' }}">
+                                                <label for="fax"
+                                                       class="control-label">{{ trans('general.fax') }}</label>
+                                                <input id="fax" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.fax') }}" name="fax"
+                                                       placeholder="{{ trans('general.fax') }}" value="{{ old('fax') }}"
+                                                       autofocus>
+                                                @if ($errors->has('fax'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('fax') }}
                                                 </strong>
                                             </span>
                                                 @endif
@@ -778,7 +801,8 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group{{ $errors->has('whatsapp') ? ' has-error' : '' }}">
                                                         <label for="whatsapp"
-                                                               class="control-label">{{ trans('general.whatsapp') }} (ex.: 96565XX2XXX)</label>
+                                                               class="control-label">{{ trans('general.whatsapp') }}
+                                                            (ex.: 96565XX2XXX)</label>
                                                         <input id="whatsapp" type="text" class="form-control tooltips"
                                                                data-container="body" data-placement="top"
                                                                data-original-title="{{ trans('message.whatsapp') }}"
