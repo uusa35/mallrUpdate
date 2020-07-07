@@ -82,7 +82,7 @@
                                                     <label for="duration" class="control-label">{{ trans('general.user') }} *</label>
                                                     <select class="form-control input-xlarge tooltips" data-container="body" data-placement="top" data-original-title="{{ trans('message.user') }}" name="user_id" id="user" required>
                                                         @foreach($users as $user)
-                                                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                                            <option value="{{ $user->id }}" {{ $user->id === $element->user_id ? 'selected' : '' }}>{{ $user->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
