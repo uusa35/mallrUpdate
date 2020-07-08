@@ -10,25 +10,29 @@
                 <div class="portlet-body">
                     <div class="row">
                         @can('isAdminOrAbove')
-                        <div class="col-lg-12">
-                            <div class="tiles padding-tb-20">
-                                @foreach($companies as $company)
-                                    <a href="{{ route('backend.admin.order.index', ['company_id' => $company->id]) }}">
-                                        <div class="tile bg-blue-chambray tooltips"
-                                             data-container="body" data-placement="bottom"
-                                             data-original-title="{{ $company->slug }}"
-                                        >
-                                            <div class="tile-body">
-                                                <img src="{{ $company->getCurrentImageAttribute() }}" alt="" class="text-center" style="width : 110px; height: 110px; text-align: center;">
-                                            </div>
-                                            <div class="tile-object text-center">
-                                                {{ str_limit($company->slug,'10') }}
-                                            </div>
-                                        </div>
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
+                            @if(isset($companies))
+                                <div class="col-lg-12">
+                                    <div class="tiles padding-tb-20">
+                                        @foreach($companies as $company)
+                                            <a href="{{ route('backend.admin.order.index', ['company_id' => $company->id]) }}">
+                                                <div class="tile bg-blue-chambray tooltips"
+                                                     data-container="body" data-placement="bottom"
+                                                     data-original-title="{{ $company->slug }}"
+                                                >
+                                                    <div class="tile-body">
+                                                        <img src="{{ $company->getCurrentImageAttribute() }}" alt=""
+                                                             class="text-center"
+                                                             style="width : 110px; height: 110px; text-align: center;">
+                                                    </div>
+                                                    <div class="tile-object text-center">
+                                                        {{ str_limit($company->slug,'10') }}
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
                         @endcan
                         <div class="col-lg-12">
                             @include('backend.partials._admin_instructions',['title' => trans('general.orders') ,'message' => trans('message.index_order')])
