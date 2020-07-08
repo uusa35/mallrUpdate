@@ -21,7 +21,9 @@ class OrderController extends Controller
     public function index()
     {
         $elements = Order::query();
-        $companies = User::active()->companies()->get();
+        $companies = User::active()->whereHas('role', function ($q) {
+            return $q->where('is_company', true)->orWhere('is_designer', true);
+        })->get();
         if (request()->has('status')) {
             $elements = $elements->where('status', request()->status)
                 ->with('order_metas.product.product_attributes','order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color','order_metas.service')
@@ -151,8 +153,8 @@ class OrderController extends Controller
             $element->order_metas()->delete();
         }
         if ($element->delete()) {
-            return redirect()->route('backend.order.index')->with('success', 'order deleted');
+            return redirect()->route('backend.admin.order.index')->with('success', 'order deleted');
         }
-        return redirect()->route('backend.order.index')->with('error', 'order not deleted');
+        return redirect()->route('backend.admin.order.index')->with('error', 'order not deleted');
     }
 }
