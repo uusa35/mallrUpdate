@@ -39,8 +39,12 @@
                                         <label for="area_id" class="sr-only">{{ trans('general.area') }}*</label>
                                         <select name="area_id" class="form-control" required>
                                             <option value="">{{ trans('general.choose_area') }}*</option>
-                                            @foreach($countries->where('is_local', true)->first()->areas as $area)
-                                                <option value="{{ $area->id }}" {{ session()->has('area_id') && session()->get('area_id') == $area->id ? 'selected' : null }}>{{ $area->slug }}</option>
+                                            @foreach($countries->where('is_local', true)->first()->governates as $gov)
+                                                <optgroup label="{{ $gov->slug }}">
+                                                    @foreach($gov->areas as $area)
+                                                        <option value="{{ $area->id }}" {{ session()->has('area_id') && session()->get('area_id') == $area->id ? 'selected' : null }}>{{ $area->slug }}</option>
+                                                    @endforeach
+                                                </optgroup>
                                             @endforeach
                                         </select>
                                     </div>

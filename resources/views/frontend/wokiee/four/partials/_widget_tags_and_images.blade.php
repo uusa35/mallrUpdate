@@ -29,7 +29,7 @@
 {{--    @if($element->user)--}}
 {{--        <span class="tt-label-new">{{ $element->user->country->slug }}</span>--}}
 {{--    @endif--}}
-    @if(!$element->hasStock)
+    @if(!$element->hasStock && $element->delivery_time)
         <span class="tt-label-sale">{{ trans('general.out_of_stock') }}</span>
     @endif
 </span>
