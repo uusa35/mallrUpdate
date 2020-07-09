@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,15 +35,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/category/index.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="648">
-                  <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/eventkm.blade.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -111,17 +101,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+                <state relative-caret-position="576">
+                  <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="663">
+                  <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+                <state relative-caret-position="674">
+                  <caret line="175" column="62" lean-forward="true" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
@@ -133,7 +132,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_modal_categories.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
+                <state relative-caret-position="720">
                   <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
                 </state>
               </provider>
@@ -143,7 +142,7 @@
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="837">
-                  <caret line="157" column="98" lean-forward="true" selection-start-line="157" selection-start-column="98" selection-end-line="157" selection-end-column="98" />
+                  <caret line="157" column="98" selection-start-line="157" selection-start-column="98" selection-end-line="157" selection-end-column="98" />
                 </state>
               </provider>
             </entry>
@@ -162,7 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>priv</find>
       <find>edit</find>
       <find>'area'</find>
       <find>long</find>
@@ -192,6 +190,7 @@
       <find>env(</find>
       <find>companies</find>
       <find>role</find>
+      <find>update</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -236,7 +235,6 @@
         <option value="$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapTrait.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/ClassifiedResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_07_06_075048_add_direct_purchase_to_products_table.php" />
@@ -258,6 +256,7 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_modal_categories.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
       </list>
     </option>
   </component>
@@ -415,8 +414,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="645" />
-    <option name="y" value="278" />
+    <option name="x" value="454" />
+    <option name="y" value="448" />
     <option name="width" value="1275" />
     <option name="height" value="674" />
   </component>
@@ -670,12 +669,13 @@
       <workItem from="1594147281145" duration="256000" />
       <workItem from="1594165385316" duration="69000" />
       <workItem from="1594214641282" duration="1129000" />
-      <workItem from="1594240892740" duration="267000" />
+      <workItem from="1594240892740" duration="373000" />
+      <workItem from="1594315055379" duration="119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345474000" />
+    <option name="totallyTimeSpent" value="345699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -848,13 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1046,31 +1039,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_modal_categories.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="576">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_modal_categories.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        <state relative-caret-position="720">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="837">
-          <caret line="157" column="98" lean-forward="true" selection-start-line="157" selection-start-column="98" selection-end-line="157" selection-end-column="98" />
+          <caret line="157" column="98" selection-start-line="157" selection-start-column="98" selection-end-line="157" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="175" column="62" lean-forward="true" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
         </state>
       </provider>
     </entry>

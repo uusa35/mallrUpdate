@@ -163,9 +163,15 @@ class UserController extends Controller
                 'mobile' => $request->mobile,
                 'address' => $request->address,
                 'description_ar' => $request->description,
-                'description_en' => $request->description
+                'description_en' => $request->description,
+
             ]);
             if ($updated) {
+                if (isNull($element->api_token)) {
+                    $element->update([
+                        'api_token' => rand(9999999, 99999999999),
+                    ]);
+                }
                 $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;
                 return response()->json(new UserResource($element), 200);
             }
