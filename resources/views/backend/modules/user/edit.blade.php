@@ -24,6 +24,9 @@
                                 @endif
                                 @csrf
                                 @method('put')
+                                @if(!$element->api_token)
+                                    <input type="hidden" name="api_token" value="{{ rand(9999999, 99999999999) }}"/>
+                                @endif
                                 <div class="form-body">
                                     <h3 class="form-section">{{ trans('general.edit_user') }}</h3>
                                     {{--name arabic / name english --}}
@@ -102,7 +105,8 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="single"
-                                                                   class="control-label">{{ trans('general.country') }}*</label>
+                                                                   class="control-label">{{ trans('general.country') }}
+                                                                *</label>
                                                             <select id="single" class="form-control tooltips select2"
                                                                     data-container="body" data-placement="top"
                                                                     data-original-title="{{ trans('message.country_id') }}"
@@ -118,7 +122,8 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="single"
-                                                                       class="control-label">{{ trans('general.role') }}*</label>
+                                                                       class="control-label">{{ trans('general.role') }}
+                                                                    *</label>
                                                                 <select id="single"
                                                                         class="form-control tooltips select2"
                                                                         data-container="body" data-placement="top"
@@ -906,7 +911,8 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('whatsapp') ? ' has-error' : '' }}">
                                                             <label for="whatsapp"
-                                                                   class="control-label">{{ trans('general.whatsapp') }} (ex.: 96565XX2XXX)</label>
+                                                                   class="control-label">{{ trans('general.whatsapp') }}
+                                                                (ex.: 96565XX2XXX)</label>
                                                             <input id="whatsapp" type="text"
                                                                    class="form-control tooltips"
                                                                    data-container="body" data-placement="top"
