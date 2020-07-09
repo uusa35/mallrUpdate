@@ -50,7 +50,7 @@
                             <tr>
                                 <td>{{ $element->id }}</td>
                                 <td>{{ $element->name }}  / {{ $element->slug_en }} / {{ $element->slug_ar }}</td>
-                                <td>{{ $element->slug }}</td>
+                                <td>{{ $element->slug ? $element->slug : $element->name }}</td>
                                 <td><img src="{{ $element->getCurrentImageAttribute() }}" alt="" class="img-xs"/></td>
                                 <td>{{ $element->email  }}</td>
                                 <td>{{ $element->fullMobile }}</td>
