@@ -33,6 +33,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
         Route::resource('group', 'CategoryGroupController');
         Route::resource('property', 'PropertyController');
         Route::resource('user', 'UserController');
+        Route::get('trashed/user','UserController@trashed')->name('user.trashed');
+        Route::get('restore/user/{id}','UserController@restore')->name('user.restore');
         Route::resource('color', 'ColorController');
         Route::resource('size', 'SizeController');
         Route::resource('coupon', 'CouponController');
