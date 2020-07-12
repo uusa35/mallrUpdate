@@ -13,7 +13,7 @@
                 <form class="horizontal-form" role="form" method="POST" action="{{ route('backend.admin.user.store') }}"
                       enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" name="api_token" value="{{ str_random(rand(10,99)) }}">
+                    <input type="hidden" name="api_token" value="{{ rand(9999999, 99999999999).str_random(5) }}">
                     <input type="hidden" name="password" value="{{ bcrypt('secret') }}">
                     <div class="form-body">
                         <h3 class="form-section">{{ trans('general.new_user') }}</h3>
