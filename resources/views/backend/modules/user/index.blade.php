@@ -15,7 +15,7 @@
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
                             <th class="none">{{ trans('general.name') }}</th>
-                            <th >{{ trans('general.slug') }}</th>
+                            <th>{{ trans('general.slug') }}</th>
                             <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
@@ -32,7 +32,7 @@
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
                             <th class="none">{{ trans('general.name') }}</th>
-                            <th >{{ trans('general.slug') }}</th>
+                            <th>{{ trans('general.slug') }}</th>
                             <th>{{ trans('general.logo') }}</th>
                             <th class="none">{{ trans('general.email') }}</th>
                             <th>{{ trans('general.mobile') }}</th>
@@ -49,7 +49,7 @@
                         @foreach($elements as $element)
                             <tr>
                                 <td>{{ $element->id }}</td>
-                                <td>{{ $element->name }}  / {{ $element->slug_en }} / {{ $element->slug_ar }}</td>
+                                <td>{{ $element->name }} / {{ $element->slug_en }} / {{ $element->slug_ar }}</td>
                                 <td>{{ $element->slug ? $element->slug : $element->name }}</td>
                                 <td><img src="{{ $element->getCurrentImageAttribute() }}" alt="" class="img-xs"/></td>
                                 <td>{{ $element->email  }}</td>
@@ -84,52 +84,63 @@
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu pull-right" role="menu">
-                                            <li>
-                                                <a href="{{ route('backend.reset.password',['email' => $element->email]) }}">
-                                                    <i class="fa fa-fw fa-edit"></i> Reset Password</a>
-                                            </li>
-                                            @if(auth()->user()->isAdmin)
+                                            @if(!$element->deleted_at)
                                                 <li>
-                                                    <a href="{{ route('backend.user.edit',$element->id) }}">
-                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.edit') }}
-                                                    </a>
+                                                    <a href="{{ route('backend.reset.password',['email' => $element->email]) }}">
+                                                        <i class="fa fa-fw fa-edit"></i> Reset Password</a>
                                                 </li>
-                                            @endif
-                                            <li>
-                                                <a href="{{ route('backend.activate',['model' => 'user','id' => $element->id]) }}">
-                                                    <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
-                                                </a>
-                                            </li>
-                                            @can('isAdminOrAbove')
-                                                <li>
-                                                    <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'user']) }}">
-                                                        <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
-                                                    </a>
-                                                </li>
-                                                @if($element->slides->isNotEmpty())
+                                                @if(auth()->user()->isAdmin)
                                                     <li>
-                                                        <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'user']) }}">
-                                                            <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
+                                                        <a href="{{ route('backend.user.edit',$element->id) }}">
+                                                            <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.edit') }}
                                                         </a>
                                                     </li>
                                                 @endif
-                                            @endcan
-                                            <li>
-                                                <a data-toggle="modal" href="#" data-target="#basic" data-title="Delete"
-                                                   data-content="Are you sure you want to delete {{ $element->name  }}?
+                                                <li>
+                                                    <a href="{{ route('backend.activate',['model' => 'user','id' => $element->id]) }}">
+                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
+                                                    </a>
+                                                </li>
+                                                @can('isAdminOrAbove')
+                                                    <li>
+                                                        <a href="{{ route('backend.slide.create',['slidable_id' => $element->id, 'slidable_type' => 'user']) }}">
+                                                            <i class="fa fa-fw fa-edit"></i> {{ trans('general.new_slide') }}
+                                                        </a>
+                                                    </li>
+                                                    @if($element->slides->isNotEmpty())
+                                                        <li>
+                                                            <a href="{{ route('backend.slide.index',['slidable_id' => $element->id, 'slidable_type' => 'user']) }}">
+                                                                <i class="fa fa-fw fa-edit"></i> {{ trans('general.list_of_slides') }}
+                                                            </a>
+                                                        </li>
+                                                    @endif
+                                                @endcan
+                                                <li>
+                                                    <a data-toggle="modal" href="#" data-target="#basic"
+                                                       data-title="Delete"
+                                                       data-content="Are you sure you want to delete {{ $element->name  }}?
                                                    </br> <h3 class='text-danger'>please note that all favorites / coupons shall be deleted accordingly.</h3>
                                                     " data-form_id="delete-{{ $element->id }}">
-                                                    <i class="fa fa-fw fa-recycle"></i> {{ trans('general.delete') }}
-                                                </a>
-                                                <form method="post" id="delete-{{ $element->id }}"
-                                                      action="{{ route('backend.admin.user.destroy',$element->id) }}">
-                                                    @csrf
-                                                    <input type="hidden" name="_method" value="delete"/>
-                                                    <button type="submit" class="btn btn-del hidden">
-                                                        <i class="fa fa-fw fa-times-circle"></i> {{ trans('general.delete') }}
-                                                    </button>
-                                                </form>
-                                            </li>
+                                                        <i class="fa fa-fw fa-recycle"></i> {{ trans('general.delete') }}
+                                                    </a>
+                                                    <form method="post" id="delete-{{ $element->id }}"
+                                                          action="{{ route('backend.admin.user.destroy',$element->id) }}">
+                                                        @csrf
+                                                        <input type="hidden" name="_method" value="delete"/>
+                                                        <button type="submit" class="btn btn-del hidden">
+                                                            <i class="fa fa-fw fa-times-circle"></i> {{ trans('general.delete') }}
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            @else
+                                                @can('isAdminOrAbove')
+                                                    <li>
+                                                        <a href="{{ route('backend.admin.user.restore',$element->id) }}">
+                                                            <i class="fa fa-fw fa-undo"></i> {{ trans('general.restore') }}
+                                                        </a>
+                                                    </li>
+                                                @endcan
+                                            @endif
                                         </ul>
                                     </div>
                                 </td>

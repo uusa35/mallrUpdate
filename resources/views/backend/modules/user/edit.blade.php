@@ -25,7 +25,7 @@
                                 @csrf
                                 @method('put')
                                 @if(!$element->api_token)
-                                    <input type="hidden" name="api_token" value="{{ rand(9999999, 99999999999) }}"/>
+                                    <input type="hidden" name="api_token" value="{{ rand(9999999, 99999999999).str_random(5) }}"/>
                                 @endif
                                 <div class="form-body">
                                     <h3 class="form-section">{{ trans('general.edit_user') }}</h3>

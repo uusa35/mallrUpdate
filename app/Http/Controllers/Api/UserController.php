@@ -169,7 +169,7 @@ class UserController extends Controller
             if ($updated) {
                 if (isNull($element->api_token)) {
                     $element->update([
-                        'api_token' => rand(9999999, 99999999999),
+                        'api_token' => rand(9999999, 99999999999).str_random(5),
                     ]);
                 }
                 $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;

@@ -196,6 +196,13 @@
                 </a>
             </li>
         @endforeach
+            <li class="nav-item {{ activeItem('user') }}">
+                <a href="{{ route('backend.admin.user.trashed') }}" class="nav-link nav-toggle">
+                    <i class="fa fa-fw fa-users"></i>
+                    <span class="title">{{ trans('general.trashed') }}</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
     </ul>
 </li>
 

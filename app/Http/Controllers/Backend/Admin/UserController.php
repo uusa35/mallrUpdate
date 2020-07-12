@@ -161,6 +161,7 @@ class UserController extends Controller
         $element = User::whereId($id)->with('products', 'services', 'role')->first();
         $roleId = $element->role_id;
         if ($element) {
+            $element->update(['active' => false]);
             if (!$element->role->is_admin) {
                 if ($element->delete()) {
                     return redirect()->route('backend.admin.user.index', ['role_id' => $roleId])->with('success','user deleted');
@@ -222,5 +223,18 @@ class UserController extends Controller
             return redirect()->back()->withErrors($validator)->withInputs();
         }
         $this->notify(request('title'), request('message'), request('ids'));
+    }
+
+    public function trashed() {
+        $elements = User::onlyTrashed()->get();
+        return view('backend.modules.user.index', compact('elements'));
+    }
+
+    public function restore($id)
+    {
+        $this->authorize('isSuper');
+        $element = User::withTrashed()->whereId($id)->first();
+        $element->restore();
+        return redirect()->back()->with('success', 'element restored');
     }
 }
