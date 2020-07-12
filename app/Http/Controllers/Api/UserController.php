@@ -167,7 +167,7 @@ class UserController extends Controller
 
             ]);
             if ($updated) {
-                if (isNull($element->api_token)) {
+                if (isEmpty($element->api_token)) {
                     $element->update([
                         'api_token' => rand(9999999, 99999999999).str_random(5),
                     ]);
