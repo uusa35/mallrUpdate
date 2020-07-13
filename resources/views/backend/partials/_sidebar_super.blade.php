@@ -450,16 +450,34 @@
         <li class="nav-item ">
             <a href="{{ route('backend.admin.order.index') }}" class="nav-link nav-toggle">
                 <i class="fa fa-fw fa-pie-chart"></i>
-                <span class="title">{{ trans('general.orders') }}</span>
+                <span class="title">{{ trans('general.all') }} {{ trans('general.orders') }}</span>
                 <span class="arrow"></span>
             </a>
         </li>
         <li class="nav-item ">
-            <a href="{{ route('backend.admin.order.index',['paid' => true]) }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-pie-chart"></i>
+            <a href="{{ route('backend.admin.order.search',['paid' => true]) }}" class="nav-link nav-toggle">
+                <i class="fa fa-fw fa-money"></i>
                 <span class="title">{{ trans('general.paid_orders') }}</span>
                 <span class="arrow"></span>
             </a>
+            <ul class="sub-menu">
+                <li class="nav-item ">
+                    <a href="{{ route('backend.admin.order.search',['cash_on_delivery' => true]) }}"
+                       class="nav-link nav-toggle">
+                        <i class="fa fa-fw fa-pie-chart"></i>
+                        <span class="title">{{ trans('general.cash_on_delivery') }}</span>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('backend.admin.order.search',['paid' => true, 'payment_method' => true]) }}"
+                       class="nav-link nav-toggle">
+                        <i class="fa fa-fw fa-pie-chart"></i>
+                        <span class="title">{{ trans('general.paid_online') }}</span>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="nav-item ">
             <a href="{{ route('backend.admin.order.index',['status' => 'completed']) }}" class="nav-link nav-toggle">

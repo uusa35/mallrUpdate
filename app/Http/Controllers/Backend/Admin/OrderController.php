@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers\Backend\Admin;
 
+use App\Http\Resources\ProductExtraLightResource;
 use App\Mail\OrderShipped;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\User;
+use App\Services\Search\Filters;
+use App\Services\Search\OrderFilters;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,25 +30,37 @@ class OrderController extends Controller
         })->get();
         if (request()->has('status')) {
             $elements = $elements->where('status', request()->status)
-                ->with('order_metas.product.product_attributes','order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color','order_metas.service')
+                ->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else if (request()->has('paid')) {
             $elements = $elements->where('paid', true)
-                ->with('order_metas.product.product_attributes','order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+                ->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else if (request()->has('company_id')) {
-            $elements = $elements->where(['paid' =>  true])
-                ->with('order_metas.product.product_attributes','order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
+            $elements = $elements->where(['paid' => true])
+                ->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->whereHas('order_metas.product', function ($q) {
                     return $q->where('user_id', request()->company_id);
                 })
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else {
-            $elements = $elements->with('order_metas.product.product_attributes','order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color','order_metas.service')
+            $elements = $elements->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
                 ->orderBy('id', 'desc')
                 ->paginate(parent::TAKE);
         }
 
+        return view('backend.modules.order.index', compact('elements', 'companies'));
+    }
+
+    public function search(OrderFilters $filters)
+    {
+        $companies = User::active()->whereHas('role', function ($q) {
+            return $q->where('is_company', true)->orWhere('is_designer', true);
+        })->get();
+        $elements = Order::filters($filters)->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
+        if ($elements->isEmpty()) {
+            return redirect()->route('backend.admin.order.index')->with('error', trans('message.no_items_found'));
+        }
         return view('backend.modules.order.index', compact('elements', 'companies'));
     }
 
@@ -77,7 +93,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        $element = Order::whereId($id)->with('order_metas.product.product_attributes', 'order_metas.product.user','user.country')->first();
+        $element = Order::whereId($id)->with('order_metas.product.product_attributes', 'order_metas.product.user', 'user.country')->first();
         if ($element->order_metas->first()->isQuestionnaireType) {
             $markdown = new Markdown(view(), config('mail.markdown'));
             return $markdown->render('emails.order-complete', ['order' => $element, 'user' => $element->user]);

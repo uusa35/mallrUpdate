@@ -2137,5 +2137,7 @@ return array (
     "rage" => "المدى",
     "week_range" => "المدى بالاسبوع",
     "tailor_measurement_service" => "خدمة أخذ القياسات",
-    "direct_purchase" => "الشراء المباشر"
+    "direct_purchase" => "الشراء المباشر",
+    "all" => "جميع",
+    "paid_online" => "المدفوع اونلاين"
 );
