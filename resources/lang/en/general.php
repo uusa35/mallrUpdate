@@ -1108,5 +1108,7 @@ return array(
     "rage" => "range",
     "week_range" => "ًWeek Range",
     "tailor_measurement_service" => "Tailor Measurement Service",
-    "direct_purchase" => "Direct Purchase"
+    "direct_purchase" => "Direct Purchase",
+    "all" => "all",
+    "paid_online" => "Paid Online"
 );

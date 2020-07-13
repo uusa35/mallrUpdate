@@ -48,6 +48,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
         Route::resource('term', 'TermController');
         Route::resource('order', 'OrderController');
         Route::get('status/order', 'OrderController@changeStatus')->name('order.status');
+        Route::get('search/order', 'OrderController@search')->name('order.search');
         Route::resource('tag', 'TagController');
         Route::resource('newsletter', 'NewsletterController');
         Route::resource('faq', 'FaqController');

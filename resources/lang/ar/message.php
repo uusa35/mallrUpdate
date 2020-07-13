@@ -16,7 +16,7 @@ return array(
     'check_stock_instructions' => 'check_stock_instructions',
     'on_new_instructions' => 'on_new_instructions',
     'sku' => 'sku',
-    'no_items_found' => 'لم يتم العثور على أية منتجات طبقا للمعايير المختارة.',
+    'no_items_found' => 'لم يتم العثور على أية عناصر طبقا للمعايير المختارة.',
     'register_account_password_is_your_mobile' => 'تم تسجيل بياناتك .. يمكنك الدخول إلى حسابك بالبريد الإلكتروني ورقم الهاتف',
     'service_added_to_cart_successfully' => 'تم إضافة الخدمة إلى عربة التسوق بنجاح ..',
     'service_is_not_added_to_cart_timing_u_selected_may_be_booked_please_try_another_timing' => 'عذا لم نتمكن من إضافة الخدمة إلى عربة التسوق .. ربما التوقيت الذي تم طلبه خلال هذا التاريخ محجوز .. يرجى اختيار توقيت مختلف .. شكرا',
