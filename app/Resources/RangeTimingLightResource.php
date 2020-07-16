@@ -37,7 +37,7 @@ class RangeTimingLightResource extends JsonResource
                             'id' => $time->id,
                             'day' => $time->day,
                             'date' => Carbon::parse($date)->format('d/m/Y'),
-                            'title' => $time->day,
+                            'title' => $time->day_name,
                             'start' => Carbon::parse($time->start)->format('h:i a'),
                             'end' => Carbon::parse($time->end)->format('h:i a'),
                             'day_no' => $time->day_no,
