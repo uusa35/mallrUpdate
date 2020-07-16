@@ -41,7 +41,7 @@ class ServiceController extends Controller
             return redirect()->route('frontend.home')->withErrors($validator->messages());
         }
         $elements = Service::active()->hasImage()->hasValidTimings()->filters($filters)->hasAtLeastOneCategory()->with(
-            'user.country', 'images','range'
+            'user.country', 'images','timings'
         )->with(['categories' => function ($q) {
             return $q->has('services', '>', 0);
         }])->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
