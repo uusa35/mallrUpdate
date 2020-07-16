@@ -150,7 +150,7 @@ class ServiceController extends Controller
         $start_date = $request->has('start_date') ? Carbon::parse(str_replace('-', '', $request->start_date))->toDateTimeString() : null;
         $end_date = $request->has('end_date') ? Carbon::parse(str_replace('-', '', $request->end_date))->toDateTimeString() : null;
         $element = Service::whereId($id)->first();
-        $updated = $element->update($request->except(['_token', 'image', 'images', 'categories', 'start_sale','start_date','end_date' ,'end_sale', 'tags', 'areas', 'videos', 'timings']));
+        $updated = $element->update($request->except(['_token', 'image', 'images', 'categories', 'start_sale','start_date','end_date' ,'end_sale', 'tags', 'areas', 'videos', 'timings', 'items']));
         if ($updated) {
             $start_sale ? $element->update(['start_sale' => $start_sale]) : null;
             $end_sale ? $element->update(['end_sale' => $end_sale]) : null;

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/switch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="643" column="74" lean-forward="true" selection-start-line="643" selection-start-column="74" selection-end-line="643" selection-end-column="74" />
+            <state relative-caret-position="594">
+              <caret line="645" column="68" lean-forward="true" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="871">
+              <caret line="162" column="109" lean-forward="true" selection-start-line="162" selection-start-column="109" selection-end-line="162" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -53,7 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>phone</find>
       <find>more_im</find>
       <find>service_ar</find>
       <find>password</find>
@@ -83,6 +91,7 @@
       <find>shipment_prices</find>
       <find>expo</find>
       <find>week</find>
+      <find>items</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -98,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/ServiceResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/TimingLightResource.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ServiceStore.php" />
@@ -149,6 +157,7 @@
         <option value="$PROJECT_DIR$/app/Resources/RoleLightResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php" />
       </list>
     </option>
   </component>
@@ -358,17 +367,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Services/Search" />
-      <recent name="$PROJECT_DIR$/public/css/fonts" />
-      <recent name="$PROJECT_DIR$/app/Resources" />
-      <recent name="$PROJECT_DIR$/resources/views/auth" />
-      <recent name="$PROJECT_DIR$/public/images/flags" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/user" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/storage/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/app/Services/Search" />
+      <recent name="$PROJECT_DIR$/public/css/fonts" />
+      <recent name="$PROJECT_DIR$/app/Resources" />
+      <recent name="$PROJECT_DIR$/resources/views/auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -593,12 +602,12 @@
       <workItem from="1594707861926" duration="230000" />
       <workItem from="1594720395235" duration="1689000" />
       <workItem from="1594800970577" duration="31000" />
-      <workItem from="1594885471983" duration="563000" />
+      <workItem from="1594885471983" duration="778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357667000" />
+    <option name="totallyTimeSpent" value="357882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -663,16 +672,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_category_widget.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_category_index_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1016,8 +1015,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="643" column="74" lean-forward="true" selection-start-line="643" selection-start-column="74" selection-end-line="643" selection-end-column="74" />
+        <state relative-caret-position="594">
+          <caret line="645" column="68" lean-forward="true" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="162" column="109" lean-forward="true" selection-start-line="162" selection-start-column="109" selection-end-line="162" selection-end-column="109" />
         </state>
       </provider>
     </entry>
