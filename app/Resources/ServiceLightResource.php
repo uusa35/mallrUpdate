@@ -41,6 +41,7 @@ class ServiceLightResource extends JsonResource
             'booking_limit' => $this->booking_limit,
             'user_id' => $this->user_id,
             'user' => new UserExtraLightResource($this->whenLoaded('user')),
+            'range' => new RangeTimingLightResource($this->timings,$this),
             'categories' => CategoryExtraLightResource::collection($this->whenLoaded('categories')),
             'images' => ImageLightResource::collection($this->whenLoaded('images')),
             'slides' => SlideLightResource::collection($this->whenLoaded('slides')),

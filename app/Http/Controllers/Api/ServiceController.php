@@ -41,7 +41,7 @@ class ServiceController extends Controller
             return redirect()->route('frontend.home')->withErrors($validator->messages());
         }
         $elements = Service::active()->hasImage()->hasValidTimings()->filters($filters)->hasAtLeastOneCategory()->with(
-            'user.country', 'images','range'
+            'user.country', 'images'
         )->with(['categories' => function ($q) {
             return $q->has('services', '>', 0);
         }])->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
@@ -81,8 +81,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::whereId($id)->first();
-        $element = Service::active()->whereId($id)->with(['images', 'videos', 'user'])->with(['timings' => function ($q) use($service) {
+        $element = Service::active()->whereId($id)->with(['images', 'videos', 'user'])->with(['timings' => function ($q) {
             return $q->active()->available()->workingDays()->orderBy('order','asc');
         }])->with(['categories' => function ($q) {
             return $q->active()->limit(SElf::TAKE_TINY);

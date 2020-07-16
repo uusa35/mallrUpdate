@@ -28,7 +28,7 @@ class ServiceExtraLightResource extends JsonResource
             'sale_price' => $this->sale_price,
             'thumb' => $this->imageThumbLink,
             'is_available' => $this->is_available,
-            'is_hot_deal' => $this->is_hot_deal,
+            'is_hot_deal' => $this->is_hot_deal
         ];
     }
 }

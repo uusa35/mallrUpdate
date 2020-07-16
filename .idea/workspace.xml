@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ServiceExtraLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ServiceExtraLightResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/ServiceLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/ServiceLightResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
-              <caret line="645" column="68" lean-forward="true" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
+              <caret line="645" column="68" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -45,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -59,11 +61,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="684">
+              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/ServiceResource.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="57" column="74" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/ServiceExtraLightResource.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -71,8 +91,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/ServiceLightResource.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="738">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -89,8 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>more_im</find>
-      <find>service_ar</find>
       <find>password</find>
       <find>roles</find>
       <find>logo&quot;</find>
@@ -119,6 +146,8 @@
       <find>expo</find>
       <find>week</find>
       <find>items</find>
+      <find>range</find>
+      <find>'range'</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -134,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Requests/Backend/ServiceStore.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ServiceUpdate.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/message.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php" />
@@ -183,8 +211,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/ServiceLightResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ServiceLightResource.php" />
+        <option value="$PROJECT_DIR$/app/Resources/ServiceExtraLightResource.php" />
       </list>
     </option>
   </component>
@@ -629,12 +658,12 @@
       <workItem from="1594707861926" duration="230000" />
       <workItem from="1594720395235" duration="1689000" />
       <workItem from="1594800970577" duration="31000" />
-      <workItem from="1594885471983" duration="1440000" />
+      <workItem from="1594885471983" duration="2009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358544000" />
+    <option name="totallyTimeSpent" value="359113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -699,20 +728,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="71" column="65" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_menu_services.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -1015,14 +1030,14 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="645" column="68" lean-forward="true" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
+          <caret line="645" column="68" selection-start-line="645" selection-start-column="68" selection-end-line="645" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1036,21 +1051,35 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/ServiceResource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="57" column="74" lean-forward="true" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/ServiceLightResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <caret line="57" column="74" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="684">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ServiceLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/ServiceExtraLightResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
         </state>
       </provider>
     </entry>
