@@ -31,6 +31,7 @@ class ServiceLightResource extends JsonResource
             'price' => (float)round($this->price, 2),
             'finalPrice' => (float)round($this->finalPrice, 2),
             'convertedFinalPrice' => $this->convertedFinalPrice,
+            'start_date' => $this->start_date,
             'sale_price' => $this->sale_price,
             'description' => $this->description,
             'thumb' => $this->imageThumbLink,
