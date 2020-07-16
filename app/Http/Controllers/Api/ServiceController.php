@@ -86,6 +86,7 @@ class ServiceController extends Controller
         }])->with(['categories' => function ($q) {
             return $q->active()->limit(SElf::TAKE_TINY);
         }])->first();
+        dd($element);
         if ($element) {
             IncreaseElementViews::dispatch($element);
             return response(new ServiceResource($element), 200);
