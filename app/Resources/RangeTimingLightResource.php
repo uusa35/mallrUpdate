@@ -28,23 +28,25 @@ class RangeTimingLightResource extends JsonResource
     {
         $col = collect([]);
         $newPeriod = new \DatePeriod(Carbon::parse($this->service->start_date),  CarbonInterval::day(1), Carbon::parse($this->service->end_date));
-        foreach($newPeriod as $date) {
-            $day =  Carbon::parse($date)->format('l');
-            foreach($this->service->timings as $time) {
-                if($day === $time->day) {
-                    $col->push([
-                        'id' => $time->id,
-                        'day' => $time->day,
-                        'date' => Carbon::parse($date)->format('d/m/Y'),
-                        'title' => $time->day,
-                        'start' => Carbon::parse($time->start)->format('h:i a'),
-                        'end' => Carbon::parse($time->end)->format('h:i a'),
-                        'day_no' => $time->day_no,
-                        'service_id' => $this->service->id,
-                    ]);
+        if($newPeriod) {
+            foreach($newPeriod as $date) {
+                $day =  Carbon::parse($date)->format('l');
+                foreach($this->service->timings as $time) {
+                    if($day === $time->day) {
+                        $col->push([
+                            'id' => $time->id,
+                            'day' => $time->day,
+                            'date' => Carbon::parse($date)->format('d/m/Y'),
+                            'title' => $time->day,
+                            'start' => Carbon::parse($time->start)->format('h:i a'),
+                            'end' => Carbon::parse($time->end)->format('h:i a'),
+                            'day_no' => $time->day_no,
+                            'service_id' => $this->service->id,
+                        ]);
+                    }
                 }
             }
+            return $col->groupBy('date');
         }
-        return $col->groupBy('date');
     }
 }
