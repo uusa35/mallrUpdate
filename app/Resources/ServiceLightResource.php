@@ -40,11 +40,11 @@ class ServiceLightResource extends JsonResource
             'multi_booking' => $this->multi_booking,
             'booking_limit' => $this->booking_limit,
             'user_id' => $this->user_id,
-            'user' => new UserLightResource($this->whenLoaded('user')),
-            'categories' => CategoryLightResource::collection($this->whenLoaded('categories')),
+            'user' => new UserExtraLightResource($this->whenLoaded('user')),
+            'categories' => CategoryExtraLightResource::collection($this->whenLoaded('categories')),
             'images' => ImageLightResource::collection($this->whenLoaded('images')),
             'slides' => SlideLightResource::collection($this->whenLoaded('slides')),
-            'tags' => TagLightResource::collection($this->whenLoaded('tags')),
+            'tags' => TagExtraLightResource::collection($this->whenLoaded('tags')),
         ];
     }
 }
