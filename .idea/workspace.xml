@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/switch.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="655" column="69" lean-forward="true" selection-start-line="655" selection-start-column="69" selection-end-line="655" selection-end-column="69" />
+            <state relative-caret-position="558">
+              <caret line="643" column="74" lean-forward="true" selection-start-line="643" selection-start-column="74" selection-end-line="643" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -326,20 +326,13 @@
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -355,7 +348,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js.eslint.nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Search" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -600,12 +593,12 @@
       <workItem from="1594707861926" duration="230000" />
       <workItem from="1594720395235" duration="1689000" />
       <workItem from="1594800970577" duration="31000" />
-      <workItem from="1594885471983" duration="22000" />
+      <workItem from="1594885471983" duration="563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357126000" />
+    <option name="totallyTimeSpent" value="357667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -1023,8 +1016,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="655" column="69" lean-forward="true" selection-start-line="655" selection-start-column="69" selection-end-line="655" selection-end-column="69" />
+        <state relative-caret-position="558">
+          <caret line="643" column="74" lean-forward="true" selection-start-line="643" selection-start-column="74" selection-end-line="643" selection-end-column="74" />
         </state>
       </provider>
     </entry>
