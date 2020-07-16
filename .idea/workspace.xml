@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Search/Filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Search/Filters.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="91" column="59" lean-forward="true" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
+            <state relative-caret-position="419">
+              <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -97,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Search/Filters.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="196" column="34" lean-forward="true" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+            <state relative-caret-position="555">
+              <caret line="211" column="57" lean-forward="true" selection-start-line="211" selection-start-column="57" selection-end-line="211" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -212,8 +210,8 @@
         <option value="$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php" />
         <option value="$PROJECT_DIR$/app/Models/ServiceHelpers.php" />
         <option value="$PROJECT_DIR$/app/Resources/ServiceLightResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" />
         <option value="$PROJECT_DIR$/app/Services/Search/Filters.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" />
       </list>
     </option>
   </component>
@@ -658,12 +656,12 @@
       <workItem from="1594707861926" duration="230000" />
       <workItem from="1594720395235" duration="1689000" />
       <workItem from="1594800970577" duration="31000" />
-      <workItem from="1594885471983" duration="3982000" />
+      <workItem from="1594885471983" duration="4676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361086000" />
+    <option name="totallyTimeSpent" value="361780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -1069,17 +1067,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
+    <entry file="file://$PROJECT_DIR$/app/Services/Search/Filters.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="91" column="59" lean-forward="true" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
+        <state relative-caret-position="555">
+          <caret line="211" column="57" lean-forward="true" selection-start-line="211" selection-start-column="57" selection-end-line="211" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Search/Filters.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="196" column="34" lean-forward="true" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+        <state relative-caret-position="419">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
         </state>
       </provider>
     </entry>
