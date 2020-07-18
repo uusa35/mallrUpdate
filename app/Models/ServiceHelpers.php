@@ -23,8 +23,8 @@ trait ServiceHelpers
 
     public function scopeHasValidTimings($q)
     {
-        return $q->whereHas('timings', function ($q) {
-            return $q->active()->workingDays();
-        },'>',0);
+            return $q->whereHas('timings', function ($q) {
+                return $q->active()->workingDays();
+            },'>',0)->where('start_date' ,'>=' , Carbon::today());
     }
 }

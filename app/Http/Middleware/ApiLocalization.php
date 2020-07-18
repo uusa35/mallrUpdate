@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Carbon\Carbon;
 use Closure;
 use Illuminate\Foundation\Application;
 
@@ -18,6 +19,7 @@ class ApiLocalization
     {
         $lang = $request->hasHeader('lang') ? $request->header('lang') : app()->getLocale();
         app()->setLocale($lang);
+        Carbon::setLocale($lang);
         $response = $next($request);
         $response->headers->set('lang', $lang);
         return $response;

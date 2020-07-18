@@ -31,6 +31,7 @@ class ServiceLightResource extends JsonResource
             'price' => (float)round($this->price, 2),
             'finalPrice' => (float)round($this->finalPrice, 2),
             'convertedFinalPrice' => $this->convertedFinalPrice,
+            'start_date' => $this->start_date,
             'sale_price' => $this->sale_price,
             'description' => $this->description,
             'thumb' => $this->imageThumbLink,
@@ -40,11 +41,12 @@ class ServiceLightResource extends JsonResource
             'multi_booking' => $this->multi_booking,
             'booking_limit' => $this->booking_limit,
             'user_id' => $this->user_id,
-            'user' => new UserLightResource($this->whenLoaded('user')),
-            'categories' => CategoryLightResource::collection($this->whenLoaded('categories')),
+            'user' => new UserExtraLightResource($this->whenLoaded('user')),
+            'range' => new RangeTimingLightResource($this->timings,$this),
+            'categories' => CategoryExtraLightResource::collection($this->whenLoaded('categories')),
             'images' => ImageLightResource::collection($this->whenLoaded('images')),
             'slides' => SlideLightResource::collection($this->whenLoaded('slides')),
-            'tags' => TagLightResource::collection($this->whenLoaded('tags')),
+            'tags' => TagExtraLightResource::collection($this->whenLoaded('tags')),
         ];
     }
 }

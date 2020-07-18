@@ -653,7 +653,7 @@
                                             </span>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 hidden">
                                             <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
                                                 <label for="range" class="control-label">{{ trans('general.week_range') }}
                                                     </label>

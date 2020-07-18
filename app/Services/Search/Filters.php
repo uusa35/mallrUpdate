@@ -8,6 +8,7 @@ use App\Models\Collection;
 use App\Models\Service;
 use App\Models\User;
 use Carbon\Carbon;
+use Carbon\CarbonInterval;
 use Illuminate\Http\Request;
 
 /**
@@ -191,6 +192,10 @@ class Filters extends QueryFilters
             });
         }
 
+    }
+
+    public function date_range() {
+        return $this->builder->whereDate('start_date', '>=', Carbon::today())->whereDate('end_date','>=', Carbon::parse(request('date_range')));
     }
 
     public function timing_value()
