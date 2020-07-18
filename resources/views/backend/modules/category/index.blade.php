@@ -52,7 +52,7 @@
                                     <span class="label label-lg {!! $element->trashed() ? 'label-danger' : activeLabel($element->active) !!} text-uppercase">{{ activeText($element->active)}}</span>
                                 </td>
                                 <td>
-                                    <img src="{{ asset('storage/uploads/images/thumbnail/'.$element->image) }}" alt=""
+                                    <img src="{{ $element->getCurrentImageAttribute() }}" alt=""
                                          class="img-sm">
                                 </td>
                                 <td>
