@@ -25,7 +25,8 @@ class Product extends PrimaryModel
         'direct_purchase' => 'boolean',
         'tailor_measurement_service' => 'boolean',
         'weight' => 'float',
-        'price' => 'float'
+        'price' => 'float',
+        'wrap_as_gift' => 'boolean'
     ];
 
 
