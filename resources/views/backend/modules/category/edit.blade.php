@@ -164,7 +164,7 @@
                                     </div>
                                     @if($element->image)
                                         <div class="col-md-3">
-                                            <img class="img-responsive img-sm" src="{{ $element->imageThumbLink }}"
+                                            <img class="img-responsive img-sm" src="{{ $element->getCurrentImageAttribute() }}"
                                                  alt="">
                                             <a href="{{ route("backend.admin.image.clear",['model' => 'category', 'id' => $element->id ]) }}"><i
                                                         class="fa fa-fw fa-times"></i></a>

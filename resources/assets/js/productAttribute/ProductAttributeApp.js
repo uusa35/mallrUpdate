@@ -24,27 +24,6 @@ const ProductAttributeApp = () => {
                     $(`#add_to_cart_${productId}`).attr('disabled', 'disabled');
                 })
                 .catch(e => console.log('e', e))
-            // let qty = $(`#qty_${productId}`);
-            // const currentQty = $(`#qty_${productId}`).attr('value');
-            // const maxSize = $(`#max-qty-${productId}`).attr('max');
-            // $(`[id^=plus-btn]`).on('click', function() {
-            //     const newQty = parseInt(sum([currentQty, 1]));
-            //     console.log('newqty', newQty)
-            //     console.log('maxSize', maxSize)
-            //     if (newQty <= maxSize) {
-            //         console.log('form inside if')
-            //         $(`#qty_${productId}`).attr('value', newQty);
-            //         $(`#max-qty-${productId}`).attr('value', newQty);
-            //     }
-            // })
-            //
-            // $(`[id^=minus-btn]`).on('click', function() {
-            //     const newQty = sum([currentQty, -1]);
-            //     if (newQty <= maxSize && newQty > 0) {
-            //         $(`#qty_${productId}`).attr('value', newQty);
-            //         $(`#max-qty-${productId}`).attr('value', newQty);
-            //     }
-            // })
         })
     }, [])
 
