@@ -3,8 +3,8 @@
 @section('body')
     @include('frontend.wokiee.four.partials.slider')
     @include('frontend.wokiee.four.partials._all_brands')
-    {{--                        @include('frontend.wokiee.four.partials._products_metro_collection',['element' => $bestSaleCollections->first(), 'title' => trans('general.our_selection_from_collections')])--}}
-    {{--            @include('frontend.wokiee.four.partials._products_slider_collections',['elements' => $bestSaleCollections, 'title' => trans('general.our_selection_from_collections'), 'items' => 2])--}}
+{{--                            @include('frontend.wokiee.four.partials._products_metro_collection',['element' => $bestSaleCollections->first(), 'title' => trans('general.our_selection_from_collections')])--}}
+{{--                @include('frontend.wokiee.four.partials._products_slider_collections',['elements' => $bestSaleCollections, 'title' => trans('general.our_selection_from_collections'), 'items' => 2])--}}
     @include('frontend.wokiee.four.partials._collection_slider_with_cover',['title' => trans('general.our_selection_from_collections'), 'elements' => $bestSaleCollections])
     @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.our_personal_shoppers'), 'elements' => $designers])
     @include('frontend.wokiee.four.partials._users_slider',['title' => trans('general.some_companies'), 'elements' => $companies])
