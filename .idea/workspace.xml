@@ -86,8 +86,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+                <state relative-caret-position="92">
+                  <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
                 </state>
               </provider>
             </entry>
@@ -106,8 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>no_items_found</find>
-      <find>shipment</find>
       <find>shipment_prices</find>
       <find>expo</find>
       <find>week</find>
@@ -136,6 +134,8 @@
       <find>wht</find>
       <find>products</find>
       <find>hasProd</find>
+      <find>compan</find>
+      <find>companies</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -663,7 +663,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370541000" />
+    <option name="totallyTimeSpent" value="370663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1531" height="809" extended-state="0" />
@@ -1088,8 +1088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+        <state relative-caret-position="92">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
         </state>
       </provider>
     </entry>
