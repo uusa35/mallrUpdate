@@ -34,7 +34,7 @@ class UserController extends Controller
     public function index()
     {
         if (request()->has('category_id')) {
-            $elements = $this->element->active()->companies()->notAdmins()->whereHas('categories', function ($q) {
+            $elements = $this->element->active()->companies()->notAdmins()->hasProducts()->whereHas('categories', function ($q) {
                 return $q->where(['category_id' => request()->category_id]);
             })->paginate(self::TAKE_MIN);
         } elseif (request()->has('type')) {
@@ -44,9 +44,9 @@ class UserController extends Controller
             if (request()->has('on_home')) {
                 $elements = $elements->where('on_home', request()->on_home);
             }
-            $elements = $elements->notAdmins()->paginate(self::TAKE_MIN);
+            $elements = $elements->notAdmins()->hasProducts()->paginate(self::TAKE_MIN);
         }
-        if ($elements->isNotEmpty()) {
+        if (isset($elements) && $elements->isNotEmpty()) {
             return response()->json(UserLightResource::collection($elements), 200);
         }
         return response()->json(['message' => 'no_items'], 400);
@@ -58,7 +58,7 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json(['message' => $validator->errors()->first()], 400);
         }
-        $elements = $this->element->filters($filters)->active()->notAdmins()->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
+        $elements = $this->element->filters($filters)->active()->notAdmins()->hasProducts()->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
         if (!$elements->isEmpty()) {
             return response()->json(UserExtraLightResource::collection($elements), 200);
         } else {
