@@ -139,7 +139,12 @@ trait UserHelpers
 
     public function getFullMobileAttribute()
     {
-        return $this->country->calling_code.$this->mobile;
+        return $this->mobile ? $this->country->calling_code.$this->mobile : null;
+    }
+
+    public function getFullWhatsappAttribute()
+    {
+        return $this->whatsapp ? $this->country->calling_code.$this->whatsapp : null;
     }
 
     public function getRatingAttribute()
