@@ -1967,5 +1967,6 @@ return array (
     "tailor_measurement_service" => "Tailor Measurement Service",
     "direct_purchase" => "Direct Purchase",
     "all" => "all",
-    "paid_online" => "Paid Online"
+    "paid_online" => "Paid Online",
+    "mobile_example" => "6X7XXX44 (Only Mobile Number)"
 );

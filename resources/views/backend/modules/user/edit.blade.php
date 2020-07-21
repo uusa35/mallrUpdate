@@ -235,7 +235,7 @@
                                                                    data-container="body" data-placement="top"
                                                                    data-original-title="{{ trans('message.mobile') }}"
                                                                    name="mobile" value="{{ $element->mobile }}"
-                                                                   placeholder="{{ trans('general.mobile') }} "
+                                                                   placeholder="{{ trans('general.mobile_example') }} "
                                                                    autofocus>
                                                             @if ($errors->has('mobile'))
                                                                 <span class="help-block">
@@ -918,7 +918,7 @@
                                                                    data-container="body" data-placement="top"
                                                                    data-original-title="{{ trans('message.whatsapp') }}"
                                                                    name="whatsapp"
-                                                                   placeholder="{{ trans('general.whatsapp') }}"
+                                                                   placeholder="{{ trans('general.mobile_example') }}"
                                                                    value="{{ $element->whatsapp }}" autofocus>
                                                             @if ($errors->has('whatsapp'))
                                                                 <span class="help-block">

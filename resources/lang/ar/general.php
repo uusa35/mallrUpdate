@@ -2139,5 +2139,6 @@ return array (
     "tailor_measurement_service" => "خدمة أخذ القياسات",
     "direct_purchase" => "الشراء المباشر",
     "all" => "جميع",
-    "paid_online" => "المدفوع اونلاين"
+    "paid_online" => "المدفوع اونلاين",
+    "mobile_example" => "6X7XXX44 فقط رقم الهاتف"
 );
