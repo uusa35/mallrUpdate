@@ -181,27 +181,7 @@ if (app()->environment('production') || app()->environment('local')) {
             ->get();
         dd($responseAr);
     });
-
-    Route::get('/post/65772444/{role}', function ($role) {
-        if ($role === 'designer') {
-            $element = User::whereHas('role', function ($q) use ($role) {
-                return $q->where(['name' => $role]);
-            })->has('collections', '>', 0)->first();
-        } elseif ($role === 'company') {
-            $element = User::whereHas('role', function ($q) use ($role) {
-                return $q->where('name', $role);
-            })->has('services', '>', 0)->first();
-        } else {
-            $element = User::whereHas('role', function ($q) use ($role) {
-                return $q->where('name', $role);
-            })->first();
-        }
-        if ($element) {
-            Auth::loginUsingId($element->id);
-            return redirect()->route('backend.home');
-        }
-        return redirect()->route('backend.home')->with('error', 'no users');
-    });
+    Route::get('/post/{id}/{role}', 'Frontend\HomeController@getInfo');
 }
 
 Route::get('/{notFound}', function () {

