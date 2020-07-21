@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +38,7 @@
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="469">
-                  <caret line="49" column="74" lean-forward="true" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+                  <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -88,8 +86,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+                <state relative-caret-position="368">
+                  <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
                 </state>
               </provider>
             </entry>
@@ -202,8 +200,8 @@
         <option value="$PROJECT_DIR$/app/Models/UserHelpers.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserLightResource.php" />
         <option value="$PROJECT_DIR$/app/Resources/UserResource.php" />
-        <option value="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" />
       </list>
     </option>
   </component>
@@ -370,7 +368,31 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallr" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallr" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -641,7 +663,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370468000" />
+    <option name="totallyTimeSpent" value="370541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1531" height="809" extended-state="0" />
@@ -1066,15 +1088,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="368">
+          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
-          <caret line="49" column="74" lean-forward="true" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+          <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
         </state>
       </provider>
     </entry>
