@@ -148,7 +148,7 @@
                                                 <input id="email" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
                                                        data-original-title="{{ trans('message.email') }}" name="email"
-                                                       value="{{ old('email') ? old('email') : (env('SCRAP') ? 'user'.rand(1,9999).'@escrap.com' : null ) }}"
+                                                       value="{{ old('email') ? old('email') : (env('ESCRAP') ? 'user'.rand(1,9999).'@escrap.com' : null ) }}"
                                                        placeholder="{{ trans('general.email') }}" required autofocus>
                                                 @if ($errors->has('email'))
                                                     <span class="help-block">

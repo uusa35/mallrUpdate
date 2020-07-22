@@ -105,6 +105,9 @@ trait UserHelpers
 
     public function scopeHasProducts($q)
     {
+        if(env('EESCRAP')) {
+            return $q;
+        }
         return $q->whereHas('products', function ($q) {
             return $q->active()->hasStock();
         }, '>', 0);
