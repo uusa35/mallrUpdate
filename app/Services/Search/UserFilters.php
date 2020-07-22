@@ -221,7 +221,10 @@ class UserFilters extends QueryFilters
 
     public function country_id()
     {
-        return $this->builder->where('country_id', request()->country_id);
+        if(env('EXPO')) {
+            return $this->builder->where('country_id', request()->country_id);
+        }
+        return $this->builder;
     }
 
     public function save()
