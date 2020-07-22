@@ -13,6 +13,7 @@ use App\Models\Product;
 use App\Models\Role;
 use App\Models\User;
 use App\Services\Search\Filters;
+use App\Services\Search\UserFilters;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -52,7 +53,7 @@ class UserController extends Controller
         return response()->json(['message' => 'no_items'], 400);
     }
 
-    public function search(Filters $filters)
+    public function search(UserFilters $filters)
     {
         $validator = validator(request()->all(), ['search' => 'nullable']);
         if ($validator->fails()) {
