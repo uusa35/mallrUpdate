@@ -27,7 +27,7 @@
 <link rel="shortcut icon" href="{{ asset('images/logo.ico') }}"/>
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ $settings->logoThumb }}">
 <link href="{{ $settings->logoThumb }}" rel="shortcut icon" type="image/jpg">
-@if(env('SCRAP'))
+@if(env('ESCRAP'))
     <meta name="google-site-verification" content="SR81NY4elhoRSNXOc1cHIIpu80aTPeiDiipsk4CMvRo"/>
 @elseif(env('EVENTKM'))
     <meta name="google-site-verification" content="zf7iPSnuJgFO519GO36uRJRgzZGHJCN0oAOjwm3fORk"/>
