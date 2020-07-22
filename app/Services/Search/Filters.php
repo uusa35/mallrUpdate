@@ -221,9 +221,12 @@ class Filters extends QueryFilters
 
     public function country_id()
     {
-        return $this->builder->whereHas('user', function ($q) {
-            return $q->where(['country_id' => request('country_id')]);
-        });
+        if(env('EXPO')) {
+            return $this->builder->whereHas('user', function ($q) {
+                return $q->where(['country_id' => request('country_id')]);
+            });
+        }
+        return $this->builder;
     }
 
     public function save()
