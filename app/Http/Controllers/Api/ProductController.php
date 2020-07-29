@@ -41,9 +41,6 @@ class ProductController extends Controller
             $query->onSale()->hotDeals();
 //            $elements = Product::active()->available()->onSale()->hotDeals()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'user.country', 'favorites')->limit(self::TAKE_LESS)->orderby('end_sale', 'desc')->get();
         }
-        if(request()->has('is_featured') && request()->is_featured) {
-            $query->where('is_featured', request()->is_featured);
-        }
         $elements = $query->with('product_attributes.size', 'product_attributes.color')->orderby('id', 'desc')->paginate(self::TAKE_MIN);
         return response()->json(ProductExtraLightResource::collection($elements), 200);
     }
