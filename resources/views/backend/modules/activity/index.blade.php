@@ -40,8 +40,8 @@
                                 <td>{{ $element->subject_type }}</td>
                                 <td>{{ $element->subject_id }}</td>
                                 <td>{{ $element->description }}</td>
-                                <td>{{ str_limit($element->causer->name,25) }}</td>
-                                <td>{{ $element->causer->id }}</td>
+                                <td>{{ $element->causer ? str_limit($element->causer->name,25)  : 'N/A'}}</td>
+                                <td>{{ $element->causer ? $element->causer->id  : 'N/A'}}</td>
                                 <td>{{ $element->created_at }}</td>
                                 <td>
                                     <div class="btn-group">
