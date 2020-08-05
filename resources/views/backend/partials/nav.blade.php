@@ -371,6 +371,11 @@
                             @endif
                             <li class="divider"></li>
                             <li>
+                                <a href="{{ route('backend.admin.activity.index') }}">
+                                    <i class="icon-new"></i> {{ trans('general.activities') }} </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     <i class="icon-key"></i> {{ trans('general.logout') }} </a>

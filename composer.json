@@ -30,6 +30,7 @@
         "renatomarinho/laravel-page-speed": "^1.8",
         "riverskies/laravel-mobile-detect": "^1.3",
         "spatie/geocoder": "^3.7",
+        "spatie/laravel-activitylog": "^3.14",
         "symfony/polyfill-iconv": "^1.15"
     },
     "require-dev": {

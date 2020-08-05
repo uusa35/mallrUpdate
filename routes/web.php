@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Notification;
 Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth', 'onlyActiveUsers', 'country']], function () {
     // Backend :: super + admin
     Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['admin']], function () {
+        Route::resource('activity', 'ActivityController');
         Route::resource('role', 'RoleController');
         Route::resource('privilege', 'PrivilegeController');
         Route::resource('setting', 'SettingController');

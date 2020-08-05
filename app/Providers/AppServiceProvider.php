@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Product;
+use App\Models\User;
+use App\Observers\ProductObserver;
+use App\Observers\UserObserver;
 use Carbon\Carbon;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -46,5 +50,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Carbon::setLocale(app()->getLocale());
         Schema::defaultStringLength(191);
+        User::observe(UserObserver::class);
+        Product::observe(ProductObserver::class);
     }
 }

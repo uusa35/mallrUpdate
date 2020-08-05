@@ -83,6 +83,11 @@ class UserController extends Controller
             $request->has('surveys') ? $element->surveys()->sync($request->surveys) : null;
             $country ? $element->update(['country_name' => $country->slug]) : null;
             $element->update(['password' => Hash::make($request->current_password)]);
+            activity()
+                ->performedOn($element)
+                ->causedBy(auth()->user());
+//                ->withProperties(['customProperty' => 'customValue'])
+//                ->log('Look, I logged something');
             return redirect()->route('backend.admin.user.index')->with('success', trans('general.user_added'));
         }
         return redirect()->route('backend.admin.user.create')->with('error', trans('general.user_not_added'));
@@ -160,6 +165,9 @@ class UserController extends Controller
     {
         $element = User::whereId($id)->with('products', 'services', 'role')->first();
         $roleId = $element->role_id;
+        activity()
+            ->performedOn($element)
+            ->causedBy(auth()->user());
         if ($element) {
             $element->update(['active' => false]);
             if (!$element->role->is_admin) {
