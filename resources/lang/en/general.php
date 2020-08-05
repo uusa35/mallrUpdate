@@ -1968,5 +1968,10 @@ return array (
     "direct_purchase" => "Direct Purchase",
     "all" => "all",
     "paid_online" => "Paid Online",
-    "mobile_example" => "6X7XXX44 (Only Mobile Number)"
+    "mobile_example" => "6X7XXX44 (Only Mobile Number)",
+    "user_name" => "Username",
+    "modified" => "Modified",
+    "subject" => "Subject",
+    "subject_id" => "Subject ID",
+    "user_id" => "User Id"
 );

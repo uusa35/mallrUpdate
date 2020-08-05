@@ -2140,5 +2140,10 @@ return array (
     "direct_purchase" => "الشراء المباشر",
     "all" => "جميع",
     "paid_online" => "المدفوع اونلاين",
-    "mobile_example" => "6X7XXX44 فقط رقم الهاتف"
+    "mobile_example" => "6X7XXX44 فقط رقم الهاتف",
+    "user_name" => "اسم المستخدم",
+    "modified" => "معدل",
+    "subject" => "الموضوع",
+    "subject_id" => "رقم العنصر المعدل",
+    "user_id" => "رقم المستخدم"
 );
