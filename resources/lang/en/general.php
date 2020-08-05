@@ -1973,5 +1973,7 @@ return array (
     "modified" => "Modified",
     "subject" => "Subject",
     "subject_id" => "Subject ID",
-    "user_id" => "User Id"
+    "user_id" => "User Id",
+    "activity" => "Activity",
+    "activities" => "Activities",
 );

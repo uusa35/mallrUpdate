@@ -2,7 +2,8 @@
 
 namespace App\Observers;
 
-use App\Product;
+
+use App\Models\Product;
 
 class ProductObserver
 {
