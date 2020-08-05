@@ -69,6 +69,8 @@ class UserObserver
      */
     public function forceDeleted(User $user)
     {
-        //
+        activity()->performedOn($user)
+            ->causedBy(auth()->user())
+            ->log(class_basename($user) . ' ' . __FUNCTION__);
     }
 }

@@ -42,7 +42,10 @@ class ProductObserver
      */
     public function deleted(Product $product)
     {
-        //
+        activity()
+            ->performedOn($product)
+            ->causedBy(auth()->user())
+            ->log(strtoupper(class_basename($product)) . ' ' . __FUNCTION__);
     }
 
     /**
@@ -64,6 +67,9 @@ class ProductObserver
      */
     public function forceDeleted(Product $product)
     {
-        //
+        activity()
+            ->performedOn($product)
+            ->causedBy(auth()->user())
+            ->log(strtoupper(class_basename($product)) . ' ' . __FUNCTION__);
     }
 }
