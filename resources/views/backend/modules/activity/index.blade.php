@@ -6,7 +6,7 @@
             <div class="portlet light bordered">
                 @include('backend.partials.forms.form_title',['title' => trans('general.index_activity')])
                 <div class="portlet-body">
-                    @include('backend.partials._admin_instructions',['title' => trans('general.activitys') ,'message' => trans('message.index_activity')])
+                    @include('backend.partials._admin_instructions',['title' => trans('general.activities') ,'message' => trans('message.index_activity')])
                     <table id="dataTable" class="table table-striped table-bordered table-hover" cellspacing="0"
                            width="100%">
                         <thead>

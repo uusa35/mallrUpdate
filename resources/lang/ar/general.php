@@ -1081,5 +1081,7 @@ return array(
     "modified" => "معدل",
     "subject" => "الموضوع",
     "subject_id" => "رقم العنصر المعدل",
-    "user_id" => "رقم المستخدم"
+    "user_id" => "رقم المستخدم",
+    "activity" => "نشاط",
+    "activities" => "أنشطة",
 );
