@@ -3537,6 +3537,15 @@
                 "location",
                 "map"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+>>>>>>> c1eeae7dc90b4aec7f1e961bc76c89122f2ce88f
             "time": "2020-08-05T07:26:39+00:00"
         },
         {

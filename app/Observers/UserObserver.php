@@ -16,12 +16,10 @@ class UserObserver
      */
     public function created(User $user)
     {
-        $settings = Setting::first();
         activity()
             ->performedOn($user)
             ->causedBy(auth()->user())
             ->log(strtoupper(class_basename($user)) . ' ' . __FUNCTION__);
-        $user->onlyClient ? $user->balance()->create(['points' => $settings->initial_points]) : $user->balance()->create(['points' => 0]);
     }
 
     /**
