@@ -178,12 +178,34 @@ trait ImageHelpers
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
                         $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
+                        if (env('FILESYSTEM_CLOUD') === 'do') {
+                            try {
+                                foreach ($sizes as $k => $value) {
+                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                                    $contents = Storage::disk('local')->get($fullPath);
+                                    Storage::disk('do')->put($fullPath, $contents, 'public');
+                                }
+                            } catch (Exception $e) {
+                                return $e->getMessage();
+                            }
+                        }
                         $model->images()->create([
                             'image' => $imagePath,
                         ]);
                     }
                 } else {
                     $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
+                    if (env('FILESYSTEM_CLOUD') === 'do') {
+                        try {
+                            foreach ($sizes as $k => $value) {
+                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                                $contents = Storage::disk('local')->get($fullPath);
+                                Storage::disk('do')->put($fullPath, $contents, 'public');
+                            }
+                        } catch (Exception $e) {
+                            return $e->getMessage();
+                        }
+                    }
                     return $model->images()->create([
                         'image' => $imagePath,
                     ]);
@@ -246,17 +268,6 @@ trait ImageHelpers
                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                 }
                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-            }
-            if (env('FILESYSTEM_CLOUD') === 'do') {
-                try {
-                    foreach ($sizes as $k => $value) {
-                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $contents = Storage::disk('local')->get($fullPath);
-                        Storage::disk('do')->put($fullPath, $contents, 'public');
-                    }
-                } catch (Exception $e) {
-                    return $e->getMessage();
-                }
             }
         }
         Storage::delete(public_path('storage/uploads/images/' . $imagePath));

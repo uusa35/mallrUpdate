@@ -31,7 +31,7 @@
     <favorites_list name="mallr" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6147776">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
@@ -46,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="259" column="13" selection-start-line="259" selection-start-column="13" selection-end-line="259" selection-end-column="13" />
+                <state relative-caret-position="345">
+                  <caret line="193" column="27" lean-forward="true" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -715,12 +715,12 @@
       <workItem from="1596696300256" duration="1417000" />
       <workItem from="1596707786356" duration="191000" />
       <workItem from="1596710807168" duration="566000" />
-      <workItem from="1596732086710" duration="3123000" />
+      <workItem from="1596732086710" duration="3710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="396121000" />
+    <option name="totallyTimeSpent" value="396708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1446" height="782" extended-state="0" />
@@ -1107,8 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="259" column="13" selection-start-line="259" selection-start-column="13" selection-end-line="259" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="193" column="27" lean-forward="true" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
         </state>
       </provider>
     </entry>
