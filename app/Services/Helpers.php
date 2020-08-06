@@ -226,3 +226,7 @@ function getRequestQueryUrlWithout($element = '')
 {
     return request()->url() . '?' . http_build_query(Arr::except(Request::query(), [$element, 'page']));
 }
+
+function isLocal() {
+    return env('APP_ENV') === 'local';
+}
