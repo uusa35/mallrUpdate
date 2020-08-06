@@ -181,6 +181,7 @@ trait ImageHelpers
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
                                 foreach ($sizes as $k => $value) {
+                                    $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                                     $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                     $contents = Storage::disk('local')->get($fullPath);
                                     Storage::disk('do')->put($fullPath, $contents, 'public');
@@ -198,6 +199,7 @@ trait ImageHelpers
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
                             foreach ($sizes as $k => $value) {
+                                $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                 $contents = Storage::disk('local')->get($fullPath);
                                 Storage::disk('do')->put($fullPath, $contents, 'public');
@@ -270,8 +272,7 @@ trait ImageHelpers
                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
             }
         }
-        Storage::put(public_path('storage/uploads/images/' . $imagePath), $img);
-//        Storage::delete(public_path('storage/uploads/images/' . $imagePath));
+        Storage::delete(public_path('storage/uploads/images/' . $imagePath));
         return $imagePath;
     }
 
