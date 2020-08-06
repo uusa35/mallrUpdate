@@ -49,4 +49,5 @@ return [
      * Laravel database.default will be used instead.
      */
 //    'database_connection' => env('ACTIVITY_LOGGER_DB_CONNECTION'),
+    'database_connection' => env('DB_CONNECTION'),
 ];
