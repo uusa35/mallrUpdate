@@ -179,7 +179,6 @@ trait ImageHelpers
                     foreach ($request[$inputName] as $image) {
                         $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         if (env('FILESYSTEM_CLOUD') === 'do') {
-                            $imagePath = Storage::disk('do')->put($image);
                             try {
                                 foreach ($sizes as $k => $value) {
                                     $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
