@@ -174,6 +174,7 @@ trait ImageHelpers
                                 $sizes = ['large', 'medium', 'thumbnail'])
     {
         try {
+            $storageInstance = new Storage();
             if ($request->hasFile($inputName)) {
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
@@ -181,9 +182,9 @@ trait ImageHelpers
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
                                 foreach ($sizes as $k => $value) {
-                                    $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                                     $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                    $contents = Storage::disk('local')->get($fullPath);
+//                                    $contents = Storage::disk('local')->get($fullPath);
+                                    $contents = $storageInstance->disk('local')->get($fullPath);
                                     Storage::disk('do')->put($fullPath, $contents, 'public');
                                 }
                             } catch (Exception $e) {
@@ -199,9 +200,9 @@ trait ImageHelpers
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
                             foreach ($sizes as $k => $value) {
-                                $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                $contents = Storage::disk('local')->get($fullPath);
+//                                $contents = Storage::disk('local')->get($fullPath);
+                                $contents = $storageInstance->disk('local')->get($fullPath);
                                 Storage::disk('do')->put($fullPath, $contents, 'public');
                             }
                         } catch (Exception $e) {

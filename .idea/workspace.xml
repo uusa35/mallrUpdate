@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="556">
-              <caret line="277" column="53" selection-start-line="277" selection-start-column="53" selection-end-line="277" selection-end-column="53" />
+              <caret line="277" column="51" selection-start-line="277" selection-start-column="51" selection-end-line="277" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="201" column="134" selection-start-line="201" selection-start-column="134" selection-end-line="201" selection-end-column="134" />
+            <state relative-caret-position="509">
+              <caret line="204" column="92" lean-forward="true" selection-start-line="204" selection-start-column="92" selection-end-line="204" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -698,12 +698,12 @@
       <workItem from="1596696300256" duration="1417000" />
       <workItem from="1596707786356" duration="191000" />
       <workItem from="1596710807168" duration="566000" />
-      <workItem from="1596732086710" duration="2110000" />
+      <workItem from="1596732086710" duration="2429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395108000" />
+    <option name="totallyTimeSpent" value="395427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1446" height="782" extended-state="0" />
@@ -1084,14 +1084,14 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
-          <caret line="277" column="53" selection-start-line="277" selection-start-column="53" selection-end-line="277" selection-end-column="53" />
+          <caret line="277" column="51" selection-start-line="277" selection-start-column="51" selection-end-line="277" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="201" column="134" selection-start-line="201" selection-start-column="134" selection-end-line="201" selection-end-column="134" />
+        <state relative-caret-position="509">
+          <caret line="204" column="92" lean-forward="true" selection-start-line="204" selection-start-column="92" selection-end-line="204" selection-end-column="92" />
         </state>
       </provider>
     </entry>
