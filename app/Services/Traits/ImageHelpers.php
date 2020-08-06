@@ -179,6 +179,7 @@ trait ImageHelpers
                     foreach ($request[$inputName] as $image) {
                         $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         if (env('FILESYSTEM_CLOUD') === 'do') {
+                            $imagePath = Storage::disk('do')->put($image);
                             try {
                                 foreach ($sizes as $k => $value) {
                                     $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
@@ -198,6 +199,7 @@ trait ImageHelpers
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
                             foreach ($sizes as $k => $value) {
+                                $imagePath = Storage::disk('do')->put($request[$inputName][0]);
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                 $contents = Storage::disk('local')->get($fullPath);
                                 Storage::disk('do')->put($fullPath, $contents, 'public');
