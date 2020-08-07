@@ -189,7 +189,7 @@ trait ImageHelpers
                                 $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
 //                                    $image->storePublicly('public/uploads/images/' . $value . '', 'do');
-                                    Storage::copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
+                                    Storage::copy($path,'public/uploads/images/'.$value.'/'.$imagePath,'public');
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
