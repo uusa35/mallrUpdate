@@ -179,9 +179,11 @@ trait ImageHelpers
                     foreach ($request[$inputName] as $image) {
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
-                                $imagePath = $image->store('public/uploads/images/','do');
+                                $image->store('public/uploads/images/','do');
+                                $imagePath = $imagePath = str_replace('public/uploads/images/', '', $image->getClientOriginalName());
                                 foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $image->getClientOriginalName();
+                                    //https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/thumbnail/public/uploads/images//8pFClb6GzXwx6kD3o7WPoKOHAavd8wU34RPU1ALB.png
+                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                     Storage::disk('do')->put($fullPath, $image, 'public');
                                 }
                             } catch (Exception $e) {
@@ -197,9 +199,10 @@ trait ImageHelpers
                 } else {
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
-                            $imagePath = $request[$inputName][0]->store('public/uploads/images/','do');
+                            $request[$inputName][0]->store('public/uploads/images/','do');
+                            $imagePath = $imagePath = str_replace('public/uploads/images/', '', $request[$inputName][0]->getClientOriginalName());
                             foreach ($sizes as $k => $value) {
-                                $fullPath = 'public/uploads/images/' . $value . '/' . $request[$inputName][0]->getClientOriginalName();
+                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                 Storage::disk('do')->put($fullPath, $imagePath, 'public');
                             }
                         } catch (Exception $e) {
