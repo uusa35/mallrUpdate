@@ -179,8 +179,8 @@ trait ImageHelpers
                     foreach ($request[$inputName] as $image) {
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
-                                $image->store('public/uploads/images/','do');
-                                $imagePath = $imagePath = str_replace('public/uploads/images/', '', $image->getClientOriginalName());
+                                $path = $image->store('public/uploads/images/','do');
+                                $imagePath = $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
                                     //https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/thumbnail/public/uploads/images//8pFClb6GzXwx6kD3o7WPoKOHAavd8wU34RPU1ALB.png
                                     $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
@@ -199,8 +199,8 @@ trait ImageHelpers
                 } else {
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
-                            $request[$inputName][0]->store('public/uploads/images/','do');
-                            $imagePath = $imagePath = str_replace('public/uploads/images/', '', $request[$inputName][0]->getClientOriginalName());
+                            $path = $request[$inputName][0]->store('public/uploads/images/','do');
+                            $imagePath = $imagePath = str_replace('public/uploads/images/', '', $path);
                             foreach ($sizes as $k => $value) {
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                 Storage::disk('do')->put($fullPath, $imagePath, 'public');
