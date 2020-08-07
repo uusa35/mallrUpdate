@@ -274,7 +274,7 @@ class UserController extends Controller
             'description_en' => $request->description
         ]);
         if ($element) {
-            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;
+//            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;
             $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
             return response()->json(new UserResource($element), 200);
         }

@@ -181,7 +181,7 @@ trait ImageHelpers
                             try {
                                 $imagePath = $image->store('public/uploads/images/','do');
                                 foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath->getClientOriginalName();
+                                    $fullPath = 'public/uploads/images/' . $value . '/' . $image->getClientOriginalName();
                                     Storage::disk('do')->put($fullPath, $image, 'public');
                                 }
                             } catch (Exception $e) {
@@ -199,7 +199,7 @@ trait ImageHelpers
                         try {
                             $imagePath = $request[$inputName][0]->store('public/uploads/images/','do');
                             foreach ($sizes as $k => $value) {
-                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath->getClientOriginalName();
+                                $fullPath = 'public/uploads/images/' . $value . '/' . $request[$inputName][0]->getClientOriginalName();
                                 Storage::disk('do')->put($fullPath, $imagePath, 'public');
                             }
                         } catch (Exception $e) {
