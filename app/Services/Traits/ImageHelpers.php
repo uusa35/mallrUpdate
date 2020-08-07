@@ -238,15 +238,15 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0], $dimensions[1]);
                 }
-                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                             $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                            $contents = Storage::disk('local')->get($fullPath);
                             Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
+                } else {
+                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 }
 
             } elseif ($value === 'medium') {
@@ -257,15 +257,15 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
                 }
-                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $contents = Storage::disk('local')->get($fullPath);
                         Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
+                } else {
+                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 }
             } elseif ($value === 'thumbnail') {
                 if ($ratio) {
@@ -275,15 +275,15 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                 }
-                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $contents = Storage::disk('local')->get($fullPath);
                         Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
+                } else {
+                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
                 }
             }
         }
