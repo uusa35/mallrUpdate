@@ -178,6 +178,17 @@ trait ImageHelpers
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
                         $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
+                        if (env('FILESYSTEM_CLOUD') === 'do') {
+                            try {
+                                $imagePath = $image->store('public/uplaods/images/','do');
+                                foreach ($sizes as $k => $value) {
+                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                                    Storage::disk('do')->put($fullPath, $image, 'public');
+                                }
+                            } catch (Exception $e) {
+                                return $e->getMessage();
+                            }
+                        }
                         $model->images()->create([
                             'image' => $imagePath,
                         ]);
@@ -186,10 +197,10 @@ trait ImageHelpers
                     $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
+                            $imagePath = $request[$inputName][0]->store('public/uplaods/images/','do');
                             foreach ($sizes as $k => $value) {
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                $contents = Storage::disk('local')->get($fullPath);
-                                Storage::disk('do')->put($fullPath, $contents, 'public');
+                                Storage::disk('do')->put($fullPath, $image, 'public');
                             }
                         } catch (Exception $e) {
                             return $e->getMessage();
@@ -226,16 +237,9 @@ trait ImageHelpers
 
     public function saveImageForGallery($image, $dimensions, $ratio, $sizes, $model)
     {
-        if (env('FILESYSTEM_CLOUD') === 'do') {
-//            $store = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
-//            $img = Image::make($image);
-            $imagePath = $image->store('public/uploads/images','do');
-            $img = Image::make('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $imagePath);
-        } else {
-            $imagePath = $image->store('public/uploads/images');
-            $imagePath = str_replace('public/uploads/images/', '', $imagePath);
-            $img = Image::make(storage_path('app/public/uploads/images/' . $imagePath));
-        }
+        $imagePath = $image->store('public/uploads/images');
+        $imagePath = str_replace('public/uploads/images/', '', $imagePath);
+        $img = Image::make(public_path('storage/uploads/images/' . $imagePath));
         foreach ($sizes as $key => $value) {
             if ($value === 'large') {
                 if ($ratio) {
@@ -245,18 +249,7 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0], $dimensions[1]);
                 }
-                if (env('FILESYSTEM_CLOUD') === 'do') {
-                    try {
-                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
-                        Storage::disk('do')->put($fullPath, $img, 'public');
-                    } catch (Exception $e) {
-                        return $e->getMessage();
-                    }
-                } else {
-                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                }
-
+                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
             } elseif ($value === 'medium') {
                 if ($ratio) {
                     $img->resize($dimensions[0] / 2, null, function ($constraint) {
@@ -265,17 +258,7 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
                 }
-                if (env('FILESYSTEM_CLOUD') === 'do') {
-                    try {
-                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
-                        Storage::disk('do')->put($fullPath, $img, 'public');
-                    } catch (Exception $e) {
-                        return $e->getMessage();
-                    }
-                } else {
-                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                }
+                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
             } elseif ($value === 'thumbnail') {
                 if ($ratio) {
                     $img->resize($dimensions[0] / 3, null, function ($constraint) {
@@ -284,17 +267,7 @@ trait ImageHelpers
                 } else {
                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                 }
-                if (env('FILESYSTEM_CLOUD') === 'do') {
-                    try {
-                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
-                        Storage::disk('do')->put($fullPath, $img, 'public');
-                    } catch (Exception $e) {
-                        return $e->getMessage();
-                    }
-                } else {
-                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                }
+                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
             }
         }
         Storage::delete(public_path('storage/uploads/images/' . $imagePath));
