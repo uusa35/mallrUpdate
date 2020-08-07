@@ -228,8 +228,7 @@ trait ImageHelpers
     {
         if (env('FILESYSTEM_CLOUD') === 'do') {
             $store = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
-            $imagePath = basename($store);
-            dd($imagePath);
+            $imagePath = base_path($store);
             $img = Image::make($imagePath);
         } else {
             $imagePath = $image->store('public/uploads/images');
