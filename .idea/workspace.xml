@@ -47,7 +47,7 @@
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="852">
-                  <caret line="207" column="112" lean-forward="true" selection-start-line="207" selection-start-column="112" selection-end-line="207" selection-end-column="112" />
+                  <caret line="207" column="104" lean-forward="true" selection-start-line="207" selection-start-column="104" selection-end-line="207" selection-end-column="104" />
                 </state>
               </provider>
             </entry>
@@ -652,12 +652,12 @@
       <workItem from="1596707786356" duration="191000" />
       <workItem from="1596710807168" duration="566000" />
       <workItem from="1596732086710" duration="4076000" />
-      <workItem from="1596835038689" duration="6415000" />
+      <workItem from="1596835038689" duration="6557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="403489000" />
+    <option name="totallyTimeSpent" value="403631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1045,7 +1045,7 @@
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="852">
-          <caret line="207" column="112" lean-forward="true" selection-start-line="207" selection-start-column="112" selection-end-line="207" selection-end-column="112" />
+          <caret line="207" column="104" lean-forward="true" selection-start-line="207" selection-start-column="104" selection-end-line="207" selection-end-column="104" />
         </state>
       </provider>
     </entry>
