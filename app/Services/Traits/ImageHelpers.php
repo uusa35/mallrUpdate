@@ -227,9 +227,10 @@ trait ImageHelpers
     public function saveImageForGallery($image, $dimensions, $ratio, $sizes, $model)
     {
         if (env('FILESYSTEM_CLOUD') === 'do') {
-            $store = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
-            $imagePath = base_path($store);
-            $img = Image::make($imagePath);
+//            $store = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
+//            $img = Image::make($image);
+            $imagePath = $image->store('public/uploads/images','do');
+            $img = Image::make('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $imagePath);
         } else {
             $imagePath = $image->store('public/uploads/images');
             $imagePath = str_replace('public/uploads/images/', '', $imagePath);
@@ -246,8 +247,8 @@ trait ImageHelpers
                 }
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
-                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
+                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
                         Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
@@ -266,8 +267,8 @@ trait ImageHelpers
                 }
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
-                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
+                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
                         Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
@@ -285,8 +286,8 @@ trait ImageHelpers
                 }
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
-                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        $fullPath = 'https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath;
+                        $img->save('https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/' . $value . '/' . $imagePath);
                         Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
