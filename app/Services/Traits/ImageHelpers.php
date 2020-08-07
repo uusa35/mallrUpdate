@@ -189,7 +189,7 @@ trait ImageHelpers
                                 $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
 //                                    $image->storePublicly('public/uploads/images/' . $value . '', 'do');
-                                    Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath,'public');
+                                    Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
@@ -208,7 +208,7 @@ trait ImageHelpers
                             $imagePath = str_replace('public/uploads/images/', '', $path);
                             foreach ($sizes as $k => $value) {
 //                                $request[$inputName][0]->storePublicly('public/uploads/images/' . $value . '', 'do');
-                                Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath,'public');
+                                Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                             }
                         } catch (Exception $e) {
                             return $e->getMessage();
