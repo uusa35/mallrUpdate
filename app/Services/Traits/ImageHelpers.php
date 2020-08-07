@@ -56,7 +56,7 @@ trait ImageHelpers
 //                                    Storage::disk('do')->put($fullPath, $contents, 'public');
 //                                }
                                 foreach ($sizes as $k => $value) {
-                                    $request->storePublicly('public/uploads/images/' . $value . '', 'do');
+                                    Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
