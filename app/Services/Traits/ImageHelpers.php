@@ -241,7 +241,7 @@ trait ImageHelpers
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                             $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                            Storage::disk('do')->put($fullPath, $img, 'public');
+                            Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -260,7 +260,7 @@ trait ImageHelpers
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        Storage::disk('do')->put($fullPath, $img, 'public');
+                        Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -278,7 +278,7 @@ trait ImageHelpers
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        Storage::disk('do')->put($fullPath, $img, 'public');
+                        Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
