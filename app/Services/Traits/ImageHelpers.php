@@ -178,17 +178,6 @@ trait ImageHelpers
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
                         $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
-                        if (env('FILESYSTEM_CLOUD') === 'do') {
-                            try {
-                                foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                    $contents = Storage::disk('local')->get($fullPath);
-                                    Storage::disk('do')->put($fullPath, $contents, 'public');
-                                }
-                            } catch (Exception $e) {
-                                return $e->getMessage();
-                            }
-                        }
                         $model->images()->create([
                             'image' => $imagePath,
                         ]);
@@ -250,6 +239,16 @@ trait ImageHelpers
                     $img->resize($dimensions[0], $dimensions[1]);
                 }
                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                if (env('FILESYSTEM_CLOUD') === 'do') {
+                    try {
+                            $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                            $contents = Storage::disk('local')->get($fullPath);
+                            Storage::disk('do')->put($fullPath, $contents, 'public');
+                    } catch (Exception $e) {
+                        return $e->getMessage();
+                    }
+                }
+
             } elseif ($value === 'medium') {
                 if ($ratio) {
                     $img->resize($dimensions[0] / 2, null, function ($constraint) {
@@ -259,6 +258,15 @@ trait ImageHelpers
                     $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
                 }
                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                if (env('FILESYSTEM_CLOUD') === 'do') {
+                    try {
+                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                        $contents = Storage::disk('local')->get($fullPath);
+                        Storage::disk('do')->put($fullPath, $contents, 'public');
+                    } catch (Exception $e) {
+                        return $e->getMessage();
+                    }
+                }
             } elseif ($value === 'thumbnail') {
                 if ($ratio) {
                     $img->resize($dimensions[0] / 3, null, function ($constraint) {
@@ -268,6 +276,15 @@ trait ImageHelpers
                     $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
                 }
                 $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                if (env('FILESYSTEM_CLOUD') === 'do') {
+                    try {
+                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                        $contents = Storage::disk('local')->get($fullPath);
+                        Storage::disk('do')->put($fullPath, $contents, 'public');
+                    } catch (Exception $e) {
+                        return $e->getMessage();
+                    }
+                }
             }
         }
         Storage::delete(public_path('storage/uploads/images/' . $imagePath));
