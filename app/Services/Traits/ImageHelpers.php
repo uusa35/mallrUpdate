@@ -177,34 +177,36 @@ trait ImageHelpers
             if ($request->hasFile($inputName)) {
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
-                        $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
-                                $imagePath = $image->store('public/uplaods/images/','do');
+                                $imagePath = $image->store('public/uploads/images/','do');
                                 foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath->getClientOriginalName();
                                     Storage::disk('do')->put($fullPath, $image, 'public');
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
                             }
+                        } else {
+                            $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         }
                         $model->images()->create([
                             'image' => $imagePath,
                         ]);
                     }
                 } else {
-                    $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
-                            $imagePath = $request[$inputName][0]->store('public/uplaods/images/','do');
+                            $imagePath = $request[$inputName][0]->store('public/uploads/images/','do');
                             foreach ($sizes as $k => $value) {
-                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                Storage::disk('do')->put($fullPath, $image, 'public');
+                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath->getClientOriginalName();
+                                Storage::disk('do')->put($fullPath, $imagePath, 'public');
                             }
                         } catch (Exception $e) {
                             return $e->getMessage();
                         }
+                    } else {
+                        $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     }
                     return $model->images()->create([
                         'image' => $imagePath,
