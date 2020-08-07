@@ -179,13 +179,13 @@ trait ImageHelpers
                     foreach ($request[$inputName] as $image) {
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
-                                $path = $image->storePublicly('public/uploads/images/','do');
+                                $path = $image->storePublicly('public/uploads/images','do');
                                 $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
                                     //https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/thumbnail/public/uploads/images//8pFClb6GzXwx6kD3o7WPoKOHAavd8wU34RPU1ALB.png
 //                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
 //                                    Storage::disk('do')->put($fullPath, $image, 'public');
-                                     $image->storePublicly('public/uploads/images/'.$value,'do');
+                                     $image->storePublicly('public/uploads/images/'.$value.' ','do');
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
@@ -205,7 +205,7 @@ trait ImageHelpers
                             foreach ($sizes as $k => $value) {
 //                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
 //                                Storage::disk('do')->put($fullPath, $imagePath, 'public');
-                                $request[$inputName][0]->storePublicly('public/uploads/images/'.$value,'do');
+                                $request[$inputName][0]->storePublicly('public/uploads/images/'.$value.' ','do');
                             }
                         } catch (Exception $e) {
                             return $e->getMessage();
