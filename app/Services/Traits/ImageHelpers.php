@@ -243,7 +243,7 @@ trait ImageHelpers
                     try {
                             $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                             $contents = Storage::disk('local')->get($fullPath);
-                            Storage::disk('do')->put($fullPath, $contents, 'public');
+                            Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -262,7 +262,7 @@ trait ImageHelpers
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                         $contents = Storage::disk('local')->get($fullPath);
-                        Storage::disk('do')->put($fullPath, $contents, 'public');
+                        Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -280,7 +280,7 @@ trait ImageHelpers
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                         $contents = Storage::disk('local')->get($fullPath);
-                        Storage::disk('do')->put($fullPath, $contents, 'public');
+                        Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }

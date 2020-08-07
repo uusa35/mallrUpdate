@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +48,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="242">
-                      <caret line="185" column="51" lean-forward="true" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
+                    <state relative-caret-position="404">
+                      <caret line="194" column="52" lean-forward="true" selection-start-line="194" selection-start-column="52" selection-end-line="194" selection-end-column="52" />
                     </state>
                   </provider>
                 </entry>
@@ -85,8 +84,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="705">
-                      <caret line="286" column="17" selection-start-line="286" selection-start-column="17" selection-end-line="286" selection-end-column="17" />
+                    <state relative-caret-position="479">
+                      <caret line="282" column="76" lean-forward="true" selection-start-line="282" selection-start-column="76" selection-end-line="282" selection-end-column="76" />
                     </state>
                   </provider>
                 </entry>
@@ -100,8 +99,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="139">
-                  <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+                <state relative-caret-position="869">
+                  <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -376,9 +375,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="24" />
-    <option name="width" value="1446" />
-    <option name="height" value="782" />
+    <option name="y" value="26" />
+    <option name="width" value="1420" />
+    <option name="height" value="663" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -670,12 +669,12 @@
       <workItem from="1596707786356" duration="191000" />
       <workItem from="1596710807168" duration="566000" />
       <workItem from="1596732086710" duration="4076000" />
-      <workItem from="1596835038689" duration="520000" />
+      <workItem from="1596835038689" duration="1169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="397594000" />
+    <option name="totallyTimeSpent" value="398243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1062,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="185" column="51" lean-forward="true" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
+        <state relative-caret-position="479">
+          <caret line="282" column="76" lean-forward="true" selection-start-line="282" selection-start-column="76" selection-end-line="282" selection-end-column="76" />
         </state>
       </provider>
     </entry>
