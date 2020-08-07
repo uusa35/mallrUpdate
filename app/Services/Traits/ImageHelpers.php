@@ -227,8 +227,8 @@ trait ImageHelpers
     public function saveImageForGallery($image, $dimensions, $ratio, $sizes, $model)
     {
         if (env('FILESYSTEM_CLOUD') === 'do') {
-            $imagePath = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
-            dd($imagePath);
+            $store = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
+            $imagePath = basename($store);
             $img = Image::make($imagePath);
         } else {
             $imagePath = $image->store('public/uploads/images');
