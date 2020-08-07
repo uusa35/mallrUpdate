@@ -226,9 +226,14 @@ trait ImageHelpers
 
     public function saveImageForGallery($image, $dimensions, $ratio, $sizes, $model)
     {
-        $imagePath = $image->store('public/uploads/images');
-        $imagePath = str_replace('public/uploads/images/', '', $imagePath);
-        $img = Image::make(public_path('storage/uploads/images/' . $imagePath));
+        if (env('FILESYSTEM_CLOUD') === 'do') {
+            $imagePath = Storage::disk('do')->put('public/uploads/images/', $image, 'public');
+            $img = Image::make($imagePath);
+        } else {
+            $imagePath = $image->store('public/uploads/images');
+            $imagePath = str_replace('public/uploads/images/', '', $imagePath);
+            $img = Image::make(storage_path('app/public/uploads/images/' . $imagePath));
+        }
         foreach ($sizes as $key => $value) {
             if ($value === 'large') {
                 if ($ratio) {
@@ -240,8 +245,9 @@ trait ImageHelpers
                 }
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
-                            $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                            Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
+                        $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -260,7 +266,8 @@ trait ImageHelpers
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
+                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }
@@ -278,7 +285,8 @@ trait ImageHelpers
                 if (env('FILESYSTEM_CLOUD') === 'do') {
                     try {
                         $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                        Storage::disk('do')->put($fullPath, $img->save($fullPath), 'public');
+                        $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                        Storage::disk('do')->put($fullPath, $img, 'public');
                     } catch (Exception $e) {
                         return $e->getMessage();
                     }

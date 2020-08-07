@@ -84,8 +84,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="422">
-                      <caret line="280" column="93" lean-forward="true" selection-start-line="280" selection-start-column="93" selection-end-line="280" selection-end-column="93" />
+                    <state relative-caret-position="93">
+                      <caret line="231" column="16" lean-forward="true" selection-start-line="231" selection-start-column="16" selection-end-line="231" selection-end-column="16" />
                     </state>
                   </provider>
                 </entry>
@@ -99,8 +99,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="869">
-                  <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+                <state relative-caret-position="221">
+                  <caret line="50" column="100" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="50" selection-end-column="100" />
                 </state>
               </provider>
             </entry>
@@ -669,12 +669,12 @@
       <workItem from="1596707786356" duration="191000" />
       <workItem from="1596710807168" duration="566000" />
       <workItem from="1596732086710" duration="4076000" />
-      <workItem from="1596835038689" duration="1613000" />
+      <workItem from="1596835038689" duration="2241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398687000" />
+    <option name="totallyTimeSpent" value="399315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1061,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/ImageHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="280" column="93" lean-forward="true" selection-start-line="280" selection-start-column="93" selection-end-line="280" selection-end-column="93" />
+        <state relative-caret-position="93">
+          <caret line="231" column="16" lean-forward="true" selection-start-line="231" selection-start-column="16" selection-end-line="231" selection-end-column="16" />
         </state>
       </provider>
     </entry>
