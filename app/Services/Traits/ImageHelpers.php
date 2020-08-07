@@ -48,13 +48,13 @@ trait ImageHelpers
                     } else {
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
+                                $path = $request->$inputName->storePublicly('public/uploads/images', 'do');
+                                $imagePath = str_replace('public/uploads/images/', '', $path);
 //                                foreach ($sizes as $k => $value) {
 //                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
 //                                    $contents = Storage::disk('local')->get($fullPath);
 //                                    Storage::disk('do')->put($fullPath, $contents, 'public');
 //                                }
-                                $path = $request->$inputName->storePublicly('public/uploads/images', 'do');
-                                $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
                                     $request->storePublicly('public/uploads/images/' . $value . '', 'do');
                                 }
