@@ -180,11 +180,12 @@ trait ImageHelpers
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
                                 $path = $image->storePublicly('public/uploads/images/','do');
-                                $imagePath = $imagePath = str_replace('public/uploads/images/', '', $path);
+                                $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
                                     //https://expo-kw-spaces.sgp1.digitaloceanspaces.com/public/uploads/images/thumbnail/public/uploads/images//8pFClb6GzXwx6kD3o7WPoKOHAavd8wU34RPU1ALB.png
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                    Storage::disk('do')->put($fullPath, $image, 'public');
+//                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+//                                    Storage::disk('do')->put($fullPath, $image, 'public');
+                                     $image->storePublicly('public/uploads/images/'.$value.'/','do');
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
@@ -200,7 +201,7 @@ trait ImageHelpers
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
                             $path = $request[$inputName][0]->storePublicly('public/uploads/images/','do');
-                            $imagePath = $imagePath = str_replace('public/uploads/images/', '', $path);
+                            $imagePath = str_replace('public/uploads/images/', '', $path);
                             foreach ($sizes as $k => $value) {
                                 $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
                                 Storage::disk('do')->put($fullPath, $imagePath, 'public');
