@@ -195,7 +195,8 @@ class Filters extends QueryFilters
     }
 
     public function date_range() {
-        return $this->builder->whereDate('start_date', '>=', Carbon::today())->whereDate('end_date','>=', Carbon::parse(request('date_range')));
+//        return $this->builder->whereDate('start_date', '>=', Carbon::today())->whereDate('end_date','>=', Carbon::parse(request('date_range')));
+        return $this->builder->whereDate('end_date','>=', Carbon::parse(request('date_range')));
     }
 
     public function timing_value()
