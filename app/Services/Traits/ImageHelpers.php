@@ -46,48 +46,54 @@ trait ImageHelpers
                             $inputName => $path,
                         ]);
                     } else {
-                        $imagePath = $request->$inputName->store('public/uploads/images');
-                        $imagePath = str_replace('public/uploads/images/', '', $imagePath);
-                        $img = Image::make(storage_path('app/public/uploads/images/' . $imagePath));
-                        foreach ($sizes as $key => $value) {
-                            if ($value === 'large') {
-                                if ($ratio) {
-                                    $img->resize($dimensions[0], null, function ($constraint) {
-                                        $constraint->aspectRatio();
-                                    });
-                                } else {
-                                    $img->resize($dimensions[0], $dimensions[1]);
-                                }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                            } elseif ($value === 'medium') {
-                                if ($ratio) {
-                                    $img->resize($dimensions[0] / 2, null, function ($constraint) {
-                                        $constraint->aspectRatio();
-                                    });
-                                } else {
-                                    $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
-                                }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                            } elseif ($value === 'thumbnail') {
-                                if ($ratio) {
-                                    $img->resize($dimensions[0] / 3, null, function ($constraint) {
-                                        $constraint->aspectRatio();
-                                    });
-                                } else {
-                                    $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
-                                }
-                                $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
-                            }
-                        }
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
+                                $path = $request->$inputName->storePublicly('public/uploads/images', 'do');
+                                $imagePath = str_replace('public/uploads/images/', '', $path);
+//                                foreach ($sizes as $k => $value) {
+//                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
+//                                    $contents = Storage::disk('local')->get($fullPath);
+//                                    Storage::disk('do')->put($fullPath, $contents, 'public');
+//                                }
                                 foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                    $contents = Storage::disk('local')->get($fullPath);
-                                    Storage::disk('do')->put($fullPath, $contents, 'public');
+                                    Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
+                            }
+                        } else {
+                            $imagePath = $request->$inputName->store('public/uploads/images');
+                            $imagePath = str_replace('public/uploads/images/', '', $imagePath);
+                            $img = Image::make(storage_path('app/public/uploads/images/' . $imagePath));
+                            foreach ($sizes as $key => $value) {
+                                if ($value === 'large') {
+                                    if ($ratio) {
+                                        $img->resize($dimensions[0], null, function ($constraint) {
+                                            $constraint->aspectRatio();
+                                        });
+                                    } else {
+                                        $img->resize($dimensions[0], $dimensions[1]);
+                                    }
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                } elseif ($value === 'medium') {
+                                    if ($ratio) {
+                                        $img->resize($dimensions[0] / 2, null, function ($constraint) {
+                                            $constraint->aspectRatio();
+                                        });
+                                    } else {
+                                        $img->resize($dimensions[0] / 2, $dimensions[0] / 2);
+                                    }
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                } elseif ($value === 'thumbnail') {
+                                    if ($ratio) {
+                                        $img->resize($dimensions[0] / 3, null, function ($constraint) {
+                                            $constraint->aspectRatio();
+                                        });
+                                    } else {
+                                        $img->resize($dimensions[0] / 3, $dimensions[0] / 3);
+                                    }
+                                    $img->save(storage_path('app/public/uploads/images/' . $value . '/' . $imagePath));
+                                }
                             }
                         }
                         $model->update([
@@ -177,34 +183,38 @@ trait ImageHelpers
             if ($request->hasFile($inputName)) {
                 if (count($request[$inputName]) > 1) {
                     foreach ($request[$inputName] as $image) {
-                        $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         if (env('FILESYSTEM_CLOUD') === 'do') {
                             try {
+                                $path = $image->storePublicly('public/uploads/images', 'do');
+                                $imagePath = str_replace('public/uploads/images/', '', $path);
                                 foreach ($sizes as $k => $value) {
-                                    $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                    $contents = Storage::disk('local')->get($fullPath);
-                                    Storage::disk('do')->put($fullPath, $contents, 'public');
+//                                    $image->storePublicly('public/uploads/images/' . $value . '', 'do');
+                                    Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                                 }
                             } catch (Exception $e) {
                                 return $e->getMessage();
                             }
+                        } else {
+                            $imagePath = $this->saveImageForGallery($image, $dimensions, $ratio, $sizes, $model);
                         }
                         $model->images()->create([
                             'image' => $imagePath,
                         ]);
                     }
                 } else {
-                    $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     if (env('FILESYSTEM_CLOUD') === 'do') {
                         try {
+                            $path = $request[$inputName][0]->storePublicly('public/uploads/images/', 'do');
+                            $imagePath = str_replace('public/uploads/images/', '', $path);
                             foreach ($sizes as $k => $value) {
-                                $fullPath = 'public/uploads/images/' . $value . '/' . $imagePath;
-                                $contents = Storage::disk('local')->get($fullPath);
-                                Storage::disk('do')->put($fullPath, $contents, 'public');
+//                                $request[$inputName][0]->storePublicly('public/uploads/images/' . $value . '', 'do');
+                                Storage::disk('do')->copy($path,'public/uploads/images/'.$value.'/'.$imagePath);
                             }
                         } catch (Exception $e) {
                             return $e->getMessage();
                         }
+                    } else {
+                        $imagePath = $this->saveImageForGallery($request[$inputName][0], $dimensions, $ratio, $sizes, $model);
                     }
                     return $model->images()->create([
                         'image' => $imagePath,
