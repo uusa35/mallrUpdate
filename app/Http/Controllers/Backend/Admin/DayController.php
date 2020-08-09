@@ -13,4 +13,17 @@ class DayController extends Controller
         $elements = Day::all();
         return view('backend.modules.day.index', compact('elements'));
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $element = Day::whereId($id)->first();
+        return view('backend.modules.day.edit', compact('element'));
+    }
+
 }

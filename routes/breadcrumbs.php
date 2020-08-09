@@ -262,6 +262,11 @@ Breadcrumbs::for('backend.admin.day.index', function ($trail) {
     $trail->push(trans('general.index_day'), route('backend.admin.day.index'));
 });
 
+Breadcrumbs::for('backend.admin.day.edit', function ($trail, $element) {
+    $trail->parent('backend.admin.day.index');
+    $trail->push(trans('general.edit_day'), route('backend.admin.day.edit', $element));
+});
+
 Breadcrumbs::for('backend.order.show', function ($trail, $element) {
     $trail->parent('backend.order.index');
     $trail->push('order details', route('backend.order.show', $element));
