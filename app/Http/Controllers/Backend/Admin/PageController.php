@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend\Admin;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Input;
 
 class PageController extends Controller
 {
@@ -48,7 +47,7 @@ class PageController extends Controller
             'content_en' => 'required|min:100',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate->errors());
         }
         $element = Page::create($request->request->all());
         if ($element) {
@@ -100,7 +99,7 @@ class PageController extends Controller
             'content_en' => 'required|min:100',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate);
+            return redirect()->back()->withErrors($validate->errors());
         }
         $element = Page::whereId($id)->first();
         $updated = $element->update($request->request->all());
