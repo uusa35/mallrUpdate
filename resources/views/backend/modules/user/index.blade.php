@@ -71,7 +71,7 @@
                                 <td>{{ $element->country ? $element->country->slug : 'N/A'}}</td>
                                 <td>
                                     @if($element->role)
-                                        <button class="btn red {{ activeLabel(!$element->active) }}">{{ activeText($element->active, $element->role->name) }}</button>
+                                        <button class="btn red {{ activeLabel(!$element->active) }}">{{ activeText($element->active, $element->role->slug) }}</button>
                                     @endif
                                 </td>
                                 <td>

@@ -25,6 +25,6 @@ trait ServiceHelpers
     {
             return $q->whereHas('timings', function ($q) {
                 return $q->active()->workingDays();
-            },'>',0)->where('start_date' ,'>=' , Carbon::today());
+            },'>',0)->where('end_date' ,'>=' , Carbon::today());
     }
 }
