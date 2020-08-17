@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +69,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="289" column="191" selection-start-line="289" selection-start-column="191" selection-end-line="289" selection-end-column="191" />
+            <state relative-caret-position="861">
+              <caret line="296" column="95" selection-start-line="296" selection-start-column="95" selection-end-line="296" selection-end-column="95" />
               <folding>
                 <element signature="e#25342#25415#0#HTML" expanded="true" />
+                <element signature="e#25869#25962#0#HTML" expanded="true" />
                 <element signature="e#26450#26476#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -714,12 +713,12 @@
       <workItem from="1597557802551" duration="214000" />
       <workItem from="1597559760584" duration="346000" />
       <workItem from="1597646215052" duration="1649000" />
-      <workItem from="1597681048884" duration="1289000" />
+      <workItem from="1597681048884" duration="1585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411361000" />
+    <option name="totallyTimeSpent" value="411657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1106,10 +1105,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="289" column="191" selection-start-line="289" selection-start-column="191" selection-end-line="289" selection-end-column="191" />
+        <state relative-caret-position="861">
+          <caret line="296" column="95" selection-start-line="296" selection-start-column="95" selection-end-line="296" selection-end-column="95" />
           <folding>
             <element signature="e#25342#25415#0#HTML" expanded="true" />
+            <element signature="e#25869#25962#0#HTML" expanded="true" />
             <element signature="e#26450#26476#0#HTML" expanded="true" />
           </folding>
         </state>
