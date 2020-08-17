@@ -205,7 +205,7 @@ class ClassifiedController extends Controller
     {
         $element = Classified::whereId($id)->first();
         if ($element->delete()) {
-            return response()->json(['message' => trans('message.success')], 200);
+            return response()->json(['message' => trans('message.success'), 'done' => true], 200);
         } else {
             return response()->json(['message' => trans('message.failure')], 400);
         }

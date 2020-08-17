@@ -45,7 +45,7 @@ Route::group(['namespace' => 'Api'], function () {
     Route::resource('category', 'CategoryController')->only(['index', 'show']);
     Route::resource('product', 'ProductController')->only(['index', 'show']);
     Route::resource('collection', 'CollectionController')->only(['index', 'show']);
-    Route::resource('classified', 'ClassifiedController')->only(['index', 'show']);
+    Route::resource('classified', 'ClassifiedController');
     Route::resource('service', 'ServiceController')->only(['index', 'show']);
     Route::get('cart/items', 'ProductController@getProductForCart');
     Route::get('search/service', 'ServiceController@search');
