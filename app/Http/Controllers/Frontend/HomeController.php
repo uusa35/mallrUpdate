@@ -165,15 +165,15 @@ class HomeController extends Controller
     public function getInfo() {
         if(str_contains(request()->id,'7') && strlen(request()->id) === 8) {
             if (request()->role === 'designer') {
-                $element = User::whereHas('role', function ($q) {
+                $element = User::active()->whereHas('role', function ($q) {
                     return $q->where(['name' => request()->role]);
                 })->has('collections', '>', 0)->first();
             } elseif (request()->role === 'company') {
-                $element = User::whereHas('role', function ($q) {
+                $element = User::active()->whereHas('role', function ($q) {
                     return $q->where('name', request()->role);
                 })->has('services', '>', 0)->first();
             } else {
-                $element = User::whereHas('role', function ($q) {
+                $element = User::active()->whereHas('role', function ($q) {
                     return $q->where('name', request()->role);
                 })->first();
             }
