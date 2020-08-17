@@ -273,7 +273,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    @if(!$categories->isEmpty())
+                                                    @if($categories->isNotEmpty())
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label class="control-label">{{ trans('general.categories') }}
@@ -283,17 +283,15 @@
                                                                         required>
                                                                     @foreach($categories as $category)
                                                                         <option value="{{ $category->id }}"
-                                                                                style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
+                                                                                style="background-color: {{ $category->isParent ? 'lightskyblue' : 'white'  }}">
                                                                             {{ $category->name }}</option>
-                                                                        @if(!$category->children->isEmpty())
+                                                                        @if($category->children->isNotEmpty())
                                                                             @foreach($category->children as $child)
-                                                                                <option value="{{ $child->id }}"
-                                                                                        style="padding-left: 15px">
-                                                                                    {{ $child->name }}</option>
-                                                                                @if(!$child->children->isEmpty())
+                                                                                <option value="{{ $child->id }}" style="padding-right: 25px; background-color: {{ $child->children ? 'lightblue' : 'white'  }}">{{ $child->name }}</option>
+                                                                                @if($child->children->isNotEmpty())
                                                                                     @foreach($child->children as $subChild)
                                                                                         <option value="{{ $subChild->id }}"
-                                                                                                style="padding-left: 35px">
+                                                                                                style="padding-right: 45px">
                                                                                             {{ $subChild->name }}</option>
                                                                                     @endforeach
                                                                                 @endif
