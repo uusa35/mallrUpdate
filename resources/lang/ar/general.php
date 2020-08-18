@@ -2113,6 +2113,8 @@ return array (
     "order_id" => "رقم الطلب",
     "all_users" => "جميع المستخدمين",
     "apply" => "تطبيق",
+    "apple" => "أبل ستور",
+    "google_play" => "جوجل بلاي",
     "from" => "من",
     "to" => "إلى",
     "reports" => "التقارير",
@@ -2151,5 +2153,6 @@ return array (
     "activities" => "أنشطة",
     "access_dashboard" => "دخول  لوحة التحكم",
     "dashboard" => "لوحة التحكم",
-    "account" => "الحساب"
+    "account" => "الحساب",
+    "links" => "روابط"
 );

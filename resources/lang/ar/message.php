@@ -452,6 +452,6 @@ return array (
     "activity" => "نشاط",
     "activities" => "أنشطة",
     "access_dashboard" => "دخول  لوحة التحكم",
-    "dashboard" => "لوحة التحكم"
-
+    "dashboard" => "لوحة التحكم",
+    "new_user_welcome" => "مرحبا بك",
 );

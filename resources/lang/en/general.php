@@ -1979,5 +1979,8 @@ return array (
     "activities" => "Activities",
     "access_dashboard" => "Access Dashboard",
     "dashboard" => "Access Dashboard",
-    "account" => "Account"
+    "account" => "Account",
+    "apple" => "Apple Store",
+    "google_play" => "Google Play",
+    "links" => "Links"
 );
