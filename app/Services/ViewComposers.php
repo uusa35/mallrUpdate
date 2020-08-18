@@ -109,7 +109,7 @@ class ViewComposers
 
     public function getPages(View $view)
     {
-        $pages = Page::active()->get();
+        $pages = Page::active()->orderBy('order','asc')->get();
         return $view->with(compact('pages'));
     }
 
