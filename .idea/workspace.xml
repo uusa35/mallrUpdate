@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +65,7 @@
             <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="474">
-                  <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+                  <caret line="27" column="71" lean-forward="true" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
                   <folding>
                     <element signature="e#34#62#0#PHP" expanded="true" />
                   </folding>
@@ -923,12 +922,12 @@
       <workItem from="1597559760584" duration="346000" />
       <workItem from="1597646215052" duration="1649000" />
       <workItem from="1597681048884" duration="1804000" />
-      <workItem from="1597729626732" duration="8190000" />
+      <workItem from="1597729626732" duration="8449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420066000" />
+    <option name="totallyTimeSpent" value="420325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1394,7 +1393,7 @@
     <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
-          <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+          <caret line="27" column="71" lean-forward="true" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
           <folding>
             <element signature="e#34#62#0#PHP" expanded="true" />
           </folding>
