@@ -246,5 +246,9 @@ return array(
     "product_out_of_stock" => "نفذت الكمية المتاحة للمنتج لهذا القياس / اللون ",
     "start_date" => "تاريخ البداية ",
     "end_date" => "تاريخ الانتهاء",
+    "activity" => "نشاط",
+    "activities" => "أنشطة",
+    "access_dashboard" => "دخول  لوحة التحكم",
+    "dashboard" => "لوحة التحكم"
 
 );

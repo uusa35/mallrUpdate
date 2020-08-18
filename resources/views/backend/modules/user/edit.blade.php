@@ -777,6 +777,24 @@
                                                             <div class="form-group">
                                                                 <label class="control-label sbold tooltips"
                                                                        data-container="body" data-placement="top"
+                                                                       data-original-title="{{ trans('message.access_dashboard') }}">{{ trans('general.access_dashboard') }}</label></br>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="access_dashboard"
+                                                                           {{ $element->access_dashboard ? 'checked' : null  }}
+                                                                           id="optionsRadios1" value="1">
+                                                                    {{ trans('general.yes') }} </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="access_dashboard"
+                                                                           {{ !$element->access_dashboard ? 'checked' : null  }}
+                                                                           id="optionsRadios2"
+                                                                           value="0"> {{ trans('general.no') }}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label sbold tooltips"
+                                                                       data-container="body" data-placement="top"
                                                                        data-original-title="{{ trans('message.on_home') }}">{{ trans('general.on_home') }}</label></br>
                                                                 <label class="radio-inline">
                                                                     <input type="radio" name="on_home"

@@ -604,6 +604,7 @@ return array(
     'not_on_footer' => 'عدم إظهار بالفوتر',
     'index_page' => 'قائمة الصفحات',
     'toggle_active' => 'تفعيل / الغاء',
+    'toggle_access_dashboard' => 'لوحة التحكم تفعيل/الغاء',
     'assign_new_attribute' => 'إضافه خاصية جديدة',
     'delete' => 'حذف',
     'assign_child' => 'إضافه تصنيف فرعي',
@@ -1084,4 +1085,7 @@ return array(
     "user_id" => "رقم المستخدم",
     "activity" => "نشاط",
     "activities" => "أنشطة",
+    "access_dashboard" => "دخول  لوحة التحكم",
+    "dashboard" => "لوحة التحكم",
+    "account" => "الحساب"
 );

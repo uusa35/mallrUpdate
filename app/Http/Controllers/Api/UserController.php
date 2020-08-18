@@ -271,7 +271,8 @@ class UserController extends Controller
             'api_token' => rand(9999999, 99999999999),
             'address' => $request->address,
             'description_ar' => $request->description,
-            'description_en' => $request->description
+            'description_en' => $request->description,
+            'access_dashboard' => env('EXPO'),
         ]);
         if ($element) {
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1000', '1000'], true) : null;

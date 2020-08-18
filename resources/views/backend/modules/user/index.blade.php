@@ -21,10 +21,11 @@
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
                             <th class="none">{{ trans('general.address') }}</th>
-                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.country') }}</th>
                             <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
+                            <th class="none">{{ trans('general.access_dashboard') }}</th>
+                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
                         </thead>
@@ -38,10 +39,11 @@
                             <th>{{ trans('general.mobile') }}</th>
                             <th class="none">{{ trans('general.phone') }}</th>
                             <th class="none">{{ trans('general.address') }}</th>
-                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.country') }}</th>
                             <th>{{ trans('general.role') }}</th>
                             <th>{{ trans('general.active') }}</th>
+                            <th class="none">{{ trans('general.access_dashboard') }}</th>
+                            <th class="none">{{ trans('general.categories') }}</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
                         </tfoot>
@@ -56,17 +58,6 @@
                                 <td>{{ $element->fullMobile }}</td>
                                 <td>{{ $element->phone }}</td>
                                 <td>{{ $element->address }}</td>
-                                <td>
-                                    @if($element->categories->isNotEmpty())
-                                        <ul>
-                                            @foreach($element->categories as $c)
-                                                <li>{{ $c->name }}</li>
-                                            @endforeach
-                                        </ul>
-                                    @else
-                                        <button class="btn-sm btn-danger">N/A</button>
-                                    @endif
-                                </td>
                                 {{--                                <td>{{ $element->area }}</td>--}}
                                 <td>{{ $element->country ? $element->country->slug : 'N/A'}}</td>
                                 <td>
@@ -76,6 +67,20 @@
                                 </td>
                                 <td>
                                     <button class="btn {{ activeBtn($element->active) }}">{{ activeText($element->active) }}</button>
+                                </td>
+                                <td>
+                                    <button class="btn {{ activeBtn($element->access_dashboard) }}">{{ activeText($element->access_dashboard) }}</button>
+                                </td>
+                                <td>
+                                    @if($element->categories->isNotEmpty())
+                                        <div class="col-lg-12">
+                                            @foreach($element->categories as $c)
+                                                <button type="button" class="btn green btn-xs">{{ $c->name }}</button>
+                                            @endforeach
+                                        </div>
+                                    @else
+                                        <button class="btn-sm btn-danger">N/A</button>
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="btn-group">
@@ -98,7 +103,12 @@
                                                 @endif
                                                 <li>
                                                     <a href="{{ route('backend.activate',['model' => 'user','id' => $element->id]) }}">
-                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
+                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.account') }} {{ trans('general.toggle_active') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('backend.access.dashboard',['model' => 'user','id' => $element->id]) }}">
+                                                        <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_access_dashboard') }}
                                                     </a>
                                                 </li>
                                                 @can('isAdminOrAbove')

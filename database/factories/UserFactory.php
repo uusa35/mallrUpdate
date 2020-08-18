@@ -38,6 +38,8 @@ $factory->define(App\Models\User::class, function (Faker $faker)  {
         'bg' => env('APP_MODE') . '-' . $faker->numberBetween(1, 10) . '.jpeg',
         'phone' => $faker->bankAccountNumber,
         'address' => $faker->address,
+        'address_2' => $faker->address,
+        'address_3' => $faker->address,
         'area' => $faker->streetName,
         'block' => $faker->randomDigit,
         'street' => $faker->streetName,

@@ -46,5 +46,4 @@
     @include('backend.partials.scripts')
 @show
 </body>
-
 </html>

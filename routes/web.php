@@ -16,7 +16,7 @@ use App\Notifications\OrderPaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
-Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth', 'onlyActiveUsers', 'country']], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth', 'onlyActiveUsers', 'country','dashboard']], function () {
     // Backend :: super + admin
     Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['admin']], function () {
         Route::resource('activity', 'ActivityController');
@@ -77,6 +77,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
     Route::get('/', 'HomeController@index')->name('index');
     Route::get('home', 'HomeController@index')->name('home');
     Route::get('activate', 'HomeController@toggleActivate')->name('activate');
+    Route::get('access/dashboard', 'HomeController@toggleAccessDashBoard')->name('access.dashboard');
     Route::get('language/{locale}', 'HomeController@changeLanguage')->name('language.change');
     Route::get('reset/password', 'UserController@getResetPassword')->name('reset.password');
     Route::post('reset/password', 'UserController@postResetPassword')->name('reset');

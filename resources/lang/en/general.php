@@ -608,6 +608,7 @@ return array(
     'not_on_footer' => 'Do not show bills',
     'index_page' => 'Page list',
     'toggle_active' => 'Activate / Cancel',
+    'toggle_access_dashboard' => 'Activate/Cancel Dashboard',
     'assign_new_attribute' => 'Add a new property',
     'delete' => 'Delete',
     'assign_child' => 'Add a subcategory',
@@ -1119,4 +1120,7 @@ return array(
     "user_id" => "User Id",
     "activity" => "Activity",
     "activities" => "Activities",
+    "access_dashboard" => "Access Dashboard",
+    "dashboard" => "Access Dashboard",
+    "account" => "Account"
 );
