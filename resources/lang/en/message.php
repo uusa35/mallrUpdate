@@ -281,5 +281,6 @@ return array(
     "activities" => "Activities",
     "access_dashboard" => "Access Dashboard",
     "dashboard" => "Access Dashboard",
+    "new_user_welcome" => "Welcome to our store.",
 
 );

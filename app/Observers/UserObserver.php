@@ -3,8 +3,11 @@
 namespace App\Observers;
 
 
+use App\Mail\WelcomeNewUser;
 use App\Models\Setting;
 use App\Models\User;
+use Illuminate\Mail\Markdown;
+use Illuminate\Support\Facades\Mail;
 
 class UserObserver
 {
@@ -20,6 +23,10 @@ class UserObserver
             ->performedOn($user)
             ->causedBy(auth()->user())
             ->log(strtoupper(class_basename($user)) . ' ' . __FUNCTION__);
+//        $markdown = new Markdown(view(), config('mail.markdown'));
+//        return $markdown->render('emails.new_user', ['user' => $user, 'settings' => Setting::first()]);
+        return Mail::to($user->email)->send(new WelcomeNewUser($user));
+
     }
 
     /**
