@@ -64,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="474">
-                  <caret line="27" column="71" lean-forward="true" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+                <state relative-caret-position="475">
+                  <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
                   <folding>
                     <element signature="e#34#62#0#PHP" expanded="true" />
                   </folding>
@@ -561,9 +561,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1420" />
-    <option name="height" value="808" />
+    <option name="x" value="669" />
+    <option name="y" value="132" />
+    <option name="width" value="1235" />
+    <option name="height" value="651" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -922,12 +923,12 @@
       <workItem from="1597559760584" duration="346000" />
       <workItem from="1597646215052" duration="1649000" />
       <workItem from="1597681048884" duration="1804000" />
-      <workItem from="1597729626732" duration="8449000" />
+      <workItem from="1597729626732" duration="8664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420325000" />
+    <option name="totallyTimeSpent" value="420540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -1392,8 +1393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="27" column="71" lean-forward="true" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+        <state relative-caret-position="475">
+          <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
           <folding>
             <element signature="e#34#62#0#PHP" expanded="true" />
           </folding>
