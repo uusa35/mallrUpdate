@@ -217,16 +217,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.149.1",
+            "version": "3.149.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "8630a2426622d003e27382e2bd129cde5678ae85"
+                "reference": "e8a0d608e8379ad8b283812064136229ba2c1d11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8630a2426622d003e27382e2bd129cde5678ae85",
-                "reference": "8630a2426622d003e27382e2bd129cde5678ae85",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e8a0d608e8379ad8b283812064136229ba2c1d11",
+                "reference": "e8a0d608e8379ad8b283812064136229ba2c1d11",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-08-14T18:11:00+00:00"
+            "time": "2020-08-17T18:11:59+00:00"
         },
         {
             "name": "barryvdh/laravel-translation-manager",
@@ -2054,16 +2054,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.5.3",
+            "version": "1.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "2574454b97e4103dc4e36917bd783b25624aefcd"
+                "reference": "21819c989e69bab07e933866ad30c7e3f32984ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2574454b97e4103dc4e36917bd783b25624aefcd",
-                "reference": "2574454b97e4103dc4e36917bd783b25624aefcd",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/21819c989e69bab07e933866ad30c7e3f32984ba",
+                "reference": "21819c989e69bab07e933866ad30c7e3f32984ba",
                 "shasum": ""
             },
             "require": {
@@ -2119,7 +2119,37 @@
                 "md",
                 "parser"
             ],
+<<<<<<< HEAD
             "time": "2020-07-19T22:47:30+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.colinodell.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/colinpodell/10.00",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/colinodell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/colinodell",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/commonmark",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-08-18T01:19:12+00:00"
+>>>>>>> 1b1eccd02e7246ec682888530bd7f3e691527bbf
         },
         {
             "name": "league/flysystem",
@@ -7719,6 +7749,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {

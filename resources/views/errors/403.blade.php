@@ -41,7 +41,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">{{ $exception->getMessage() }}</div>
-                <div class="text-center"><a href="{{ url('/') }}">back</a></div>
+                <div class="text-center"><a href="{{ url('/') }}">{{ trans('general.back') }}</a></div>
             </div>
         </div>
     </body>

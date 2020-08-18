@@ -115,7 +115,7 @@ class ClassifiedController extends Controller
      */
     public function show($id)
     {
-        $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country','area'])->first();
+        $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country', 'area'])->first();
         if ($element) {
             IncreaseElementViews::dispatch($element);
             return response(new ClassifiedResource($element), 200);
@@ -203,6 +203,11 @@ class ClassifiedController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $element = Classified::whereId($id)->first();
+        if ($element->delete()) {
+            return response()->json(['message' => trans('message.success'), 'done' => true], 200);
+        } else {
+            return response()->json(['message' => trans('message.failure')], 400);
+        }
     }
 }

@@ -39,7 +39,7 @@ class OrderController extends Controller
                     return $q->where('user_id', auth()->id());
                 })
                 ->orderBy('id', 'desc')
-                ->paginate(50);
+                ->paginate(parent::TAKE);
         }
 
         return view('backend.modules.order.index', compact('elements'));

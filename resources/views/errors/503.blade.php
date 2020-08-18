@@ -114,13 +114,14 @@
 <div class="container">
     <div class="content">
         <div class="header">
-            <a href="#">
-                <img src="{{ App\Models\Setting::first()->logoThumb }}" alt="{{ env('APP_NAME') }}" class="img-sm"/>
+            <a href="{{ url('/') }}">
+                <img src="{{ App\Models\Setting::first()->logoThumb }}" alt="{{ env('APP_NAME') }}" class="img-xs"/>
             </a>
         </div>
         <div class="title">
-                {{ $exception->getMessage() }}
+            {{ $exception->getMessage() }}
         </div>
+        <div class="text-center"><a href="{{ url('/') }}">{{ trans('general.back') }}</a></div>
     </div>
 </div>
 {{--<footer>--}}

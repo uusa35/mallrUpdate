@@ -65,7 +65,7 @@
 @endcan
 @can('index','order')
     <li class="nav-item {{ activeItem('order') }}">
-        <a href="{{ route('backend.admin.order.index',['paid' => true]) }}" class="nav-link nav-toggle">
+        <a href="{{ route('backend.order.index',['paid' => true]) }}" class="nav-link nav-toggle">
             <i class="fa fa-fw fa-money"></i>
             <span class="title">{{ trans('general.orders') }}</span>
             <span class="arrow"></span>

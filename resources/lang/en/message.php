@@ -469,5 +469,9 @@ return array (
     "product_out_of_stock" => "Product is out of stock for the chosen Size / Color",
     "start_date" => "Start Date",
     "end_date" => "End Date",
+    "activity" => "Activity",
+    "activities" => "Activities",
+    "access_dashboard" => "Access Dashboard",
+    "dashboard" => "Access Dashboard",
 
 );

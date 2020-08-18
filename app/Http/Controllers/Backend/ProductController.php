@@ -48,8 +48,8 @@ class ProductController extends Controller
     {
         $this->authorize('product.create');
         $categories = Category::active()->where('is_product',true)->with(['children' => function ($q) {
-            return $q->where('is_product', true)->with(['children' => function ($q) {
-                return $q->where('is_product', true);
+            return $q->active()->where('is_product', true)->with(['children' => function ($q) {
+                return $q->active()->where('is_product', true);
             }]);
         }])->get();
         $tags = Tag::active()->get();
