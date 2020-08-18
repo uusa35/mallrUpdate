@@ -105,6 +105,7 @@ class ComposerServiceProvider extends ServiceProvider
             'backend.modules.order.show',
             'backend.layouts.app',
             'errors.503',
+            'errors.403',
         ], 'App\Services\ViewComposers@getSettings');
 
         view()->composer([

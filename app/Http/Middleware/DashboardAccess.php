@@ -15,7 +15,7 @@ class DashboardAccess
      */
     public function handle($request, Closure $next)
     {
-        abort_if(auth()->check() && !auth()->user()->access_dashboard, '400',  'Your Dashboard Account is disabled. Please contact administration.');
+        abort_if(auth()->check() && !auth()->user()->access_dashboard, '503',  'Your Dashboard Account is disabled. Please contact administration.');
         return $next($request);
     }
 }
