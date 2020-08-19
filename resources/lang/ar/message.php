@@ -251,4 +251,5 @@ return array(
     "access_dashboard" => "دخول  لوحة التحكم",
     "dashboard" => "لوحة التحكم",
     "new_user_welcome" => "مرحبا بك",
+    'max_upload' => 'أقصى حجم متاح لتحميل الصور  (:max KB)',
 );
