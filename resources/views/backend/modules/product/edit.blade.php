@@ -444,7 +444,7 @@
                                                         <img class="img-responsive img-sm"
                                                              src="{{ $element->imageThumbLink }}"
                                                              alt="">
-                                                        <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'size_chart']) }}"><i
+                                                        <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'size_chart_image']) }}"><i
                                                                     class="fa fa-fw fa-times"></i></a>
                                                     </div>
                                                 @endif
