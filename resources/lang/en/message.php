@@ -344,7 +344,6 @@ return array (
     'failure_product_delete' => 'Product not deleted',
     'failure_service_delete' => 'Service was not deleted',
     'success_service_delete' => 'Service was successfully deleted',
-
     'best_fit' => 'The appropriate image size (width :width - height :height)',
     'store_success' => 'Data recorded successfully',
     'edit_currency' => 'Modify currency',
@@ -474,5 +473,6 @@ return array (
     "access_dashboard" => "Access Dashboard",
     "dashboard" => "Access Dashboard",
     "new_user_welcome" => "Welcome to our store.",
+    'max_upload' => 'Max Image Upload  (:max KB)',
 
 );
