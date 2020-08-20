@@ -90,12 +90,15 @@ class SizeController extends Controller
      */
     public function destroy($id)
     {
-        $element = Size::whereId($id)->first()->delete();
-
-        if ($element) {
-
-            return redirect()->route('backend.size.index')->with('success', 'size deleted');
+        try {
+            $element = Size::whereId($id)->first();
+            if ($element->products()->get()->isEmpty()) {
+                $element->delete();
+                return redirect()->route('backend.admin.size.index')->with('success', 'size deleted');
+            }
+            return redirect()->route('backend.admin.size.index')->with('error', 'size not deleted, some products using this size.');
+        } catch(\Exception $e) {
+            return redirect()->back()->with(['error' => $e->getMessage()]);
         }
-        return redirect()->route('backend.admin.size.index')->with('error', 'size not deleted');
     }
 }

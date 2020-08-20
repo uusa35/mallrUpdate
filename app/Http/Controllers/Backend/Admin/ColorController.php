@@ -89,10 +89,15 @@ class ColorController extends Controller
      */
     public function destroy($id)
     {
-        $element = Color::whereId($id)->first()->delete();
-        if ($element) {
-            return redirect()->route('backend.admin.color.index')->with('success', 'color deleted');
+        try {
+            $element = Color::whereId($id)->first();
+            if ($element->products()->get()->isEmpty()) {
+                $element->delete();
+                return redirect()->route('backend.admin.color.index')->with('success', 'color deleted');
+            }
+            return redirect()->route('backend.admin.color.index')->with('error', 'color not deleted, some products using this color.');
+        } catch(\Exception $e) {
+            return redirect()->back()->with(['error' => $e->getMessage()]);
         }
-        return redirect()->route('backend.admin.color.index')->with('error', 'color not deleted');
     }
 }
