@@ -44,7 +44,7 @@ class TagController extends Controller
             'slug_en' => 'required|min:3',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Tag::create($request->all());
         if ($element) {
@@ -92,7 +92,7 @@ class TagController extends Controller
             'slug_en' => 'required|min:3',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Tag::whereId($id)->first()->update($request->all());
         if ($element) {
