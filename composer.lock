@@ -217,16 +217,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.150.1",
+            "version": "3.150.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d59b85d6854e58154e22a796322ba153ef69ade2"
+                "reference": "1aef7e270f15347df82279f05d85f551f85c8b87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d59b85d6854e58154e22a796322ba153ef69ade2",
-                "reference": "d59b85d6854e58154e22a796322ba153ef69ade2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1aef7e270f15347df82279f05d85f551f85c8b87",
+                "reference": "1aef7e270f15347df82279f05d85f551f85c8b87",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-08-19T18:19:07+00:00"
+            "time": "2020-08-20T18:12:35+00:00"
         },
         {
             "name": "barryvdh/laravel-translation-manager",
@@ -462,12 +462,6 @@
                 "bignum",
                 "brick",
                 "math"
-            ],
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/brick/math",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-08-18T23:57:15+00:00"
         },
@@ -2210,17 +2204,7 @@
                 "sftp",
                 "storage"
             ],
-<<<<<<< HEAD
-            "time": "2020-08-12T14:23:41+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://offset.earth/frankdejonge",
-                    "type": "other"
-                }
-            ],
             "time": "2020-08-18T10:57:55+00:00"
->>>>>>> 0ea9c2f1b45e36de1c1cef88bf6afa464486b098
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -3422,17 +3406,7 @@
                 "identifier",
                 "uuid"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-28T16:51:01+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/ramsey",
-                    "type": "github"
-                }
-            ],
             "time": "2020-08-18T17:17:46+00:00"
->>>>>>> 0ea9c2f1b45e36de1c1cef88bf6afa464486b098
         },
         {
             "name": "renatomarinho/laravel-page-speed",
@@ -6427,25 +6401,7 @@
                 "Xdebug",
                 "performance"
             ],
-<<<<<<< HEAD
-            "time": "2020-06-04T11:16:35+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-08-19T10:27:58+00:00"
->>>>>>> 0ea9c2f1b45e36de1c1cef88bf6afa464486b098
         },
         {
             "name": "doctrine/instantiator",
