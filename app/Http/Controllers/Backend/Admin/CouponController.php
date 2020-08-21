@@ -54,7 +54,7 @@ class CouponController extends Controller
         ]);
 
         if ($validate->fails()) {
-            return redirect()->back()->withInput(Input::all())->withErrors($validate);
+            return redirect()->back()->withErrors($validate);
         }
 
         $coupon = Coupon::create($request->request->all());

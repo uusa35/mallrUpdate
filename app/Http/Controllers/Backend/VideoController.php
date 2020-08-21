@@ -55,7 +55,7 @@ class VideoController extends Controller
             'on_home' => 'boolean',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Video::create($request->request->all());
         if ($element) {
@@ -109,7 +109,7 @@ class VideoController extends Controller
             'on_home' => 'boolean',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput(Input::all());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Video::whereId($id)->first();
         if ($element->update($request->request->all())) {

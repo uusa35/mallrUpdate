@@ -47,7 +47,7 @@ class PageController extends Controller
             'content_en' => 'required|min:100',
         ]);
         if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate->errors());
+            return redirect()->back()->withErrors($validate);
         }
         $element = Page::create($request->request->all());
         if ($element) {
