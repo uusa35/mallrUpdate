@@ -215,7 +215,7 @@
                                             <input type="text" class="form-control" name="instagram" placeholder="..."
                                                    value="{{ $element->instagram }}">
                                             <label for="form_control_1">{{ trans('general.instagram') }}</label>
-                                            <span class="help-block">{{ trans('general.instagram') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>

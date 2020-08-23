@@ -1090,5 +1090,7 @@ return array(
     "access_dashboard" => "دخول  لوحة التحكم",
     "dashboard" => "لوحة التحكم",
     "account" => "الحساب",
-    "links" => "روابط"
+    "links" => "روابط",
+    "full_link" => " http://www.google.com/sample وضع الرابط بالكامل",
+    "snapchat" => "سناب شات"
 );

@@ -1125,5 +1125,7 @@ return array(
     "account" => "Account",
     "apple" => "Apple Store",
     "google_play" => "Google Play",
-    "links" => "Links"
+    "links" => "Links",
+    "full_link" => "ex. Full Link http://www.google.com/sample",
+    "snapchat" => "Snapchat"
 );
