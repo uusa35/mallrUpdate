@@ -225,7 +225,7 @@
                                             <input type="text" class="form-control" name="snapchat" placeholder="..."
                                                    value="{{ $element->snapchat }}">
                                             <label for="form_control_1">{{ trans('general.snapchat') }}</label>
-                                            <span class="help-block">{{ trans('general.snapchat') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                             <input type="text" class="form-control" name="twitter" placeholder="..."
                                                    value="{{ $element->twitter }}">
                                             <label for="form_control_1">{{ trans('general.twitter') }}</label>
-                                            <span class="help-block">{{ trans('general.twitter') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +246,7 @@
                                             <input type="text" class="form-control" name="youtube" placeholder="..."
                                                    value="{{ $element->youtube }}">
                                             <label for="form_control_1">{{ trans('general.youtube') }}</label>
-                                            <span class="help-block">{{ trans('general.youtube') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -256,7 +256,7 @@
                                             <input type="text" class="form-control" name="facebook" placeholder="..."
                                                    value="{{ $element->facebook }}">
                                             <label for="form_control_1">{{ trans('general.facebook') }}</label>
-                                            <span class="help-block">{{ trans('general.facebook') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +266,7 @@
                                             <input type="text" class="form-control" name="phone" placeholder="..."
                                                    value="{{ $element->phone }}">
                                             <label for="form_control_1">{{ trans('general.phone') }}</label>
-                                            <span class="help-block">{{ trans('general.phone') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -276,7 +276,7 @@
                                             <input type="text" class="form-control" name="mobile" placeholder="..."
                                                    value="{{ $element->mobile }}">
                                             <label for="form_control_1">{{ trans('general.mobile') }}</label>
-                                            <span class="help-block">{{ trans('general.mobile') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -297,7 +297,7 @@
                                             <input type="text" class="form-control" name="address_ar" placeholder="..."
                                                    value="{{ $element->address_ar }}">
                                             <label for="form_control_1">{{ trans('general.address_ar') }}</label>
-                                            <span class="help-block">address_ar</span>
+                                            <span class="help-block">{{ trans('general.address_ar') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +307,7 @@
                                             <input type="text" class="form-control" name="address_en" placeholder="..."
                                                    value="{{ $element->address_en }}">
                                             <label for="form_control_1">{{ trans('general.address_en') }}</label>
-                                            <span class="help-block">address_en</span>
+                                            <span class="help-block">{{ trans('general.address_en') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -317,7 +317,7 @@
                                             <input type="text" class="form-control" name="country_ar" placeholder="..."
                                                    value="{{ $element->country_ar }}">
                                             <label for="form_control_1">{{ trans('general.country_ar') }}</label>
-                                            <span class="help-block">country_ar</span>
+                                            <span class="help-block">{{ trans('general.country_ar') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -327,7 +327,7 @@
                                             <input type="text" class="form-control" name="country_en" placeholder="..."
                                                    value="{{ $element->country_en }}">
                                             <label for="form_control_1">{{ trans('general.country_en') }}</label>
-                                            <span class="help-block">country_en</span>
+                                            <span class="help-block">{{ trans('general.country_en') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@
                                             <input type="text" class="form-control" name="longitude" placeholder="..."
                                                    value="{{ $element->longitude }}">
                                             <label for="form_control_1">{{ trans('general.longitude') }}</label>
-                                            <span class="help-block">longitude</span>
+                                            <span class="help-block">{{ trans('general.longitude') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -347,7 +347,7 @@
                                             <input type="text" class="form-control" name="latitude" placeholder="..."
                                                    value="{{ $element->latitude }}">
                                             <label for="form_control_1">{{ trans('general.latitude') }}</label>
-                                            <span class="help-block">latitude</span>
+                                            <span class="help-block">{{ trans('general.latitude') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -357,7 +357,7 @@
                                             <input type="text" class="form-control" name="apple" placeholder="..."
                                                    value="{{ $element->apple }}">
                                             <label for="form_control_1">{{ trans('general.apple_url') }} </label>
-                                            <span class="help-block">apple</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -367,7 +367,7 @@
                                             <input type="text" class="form-control" name="android" placeholder="..."
                                                    value="{{ $element->android }}">
                                             <label for="form_control_1">{{ trans('general.android_url') }}</label>
-                                            <span class="help-block">{{ trans('general.android') }}</span>
+                                            <span class="help-block">{{ trans('general.full_link') }}</span>
                                         </div>
                                     </div>
                                 </div>
