@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="123" column="94" lean-forward="true" selection-start-line="123" selection-start-column="94" selection-end-line="123" selection-end-column="111" />
+              <caret line="177" column="90" lean-forward="true" selection-start-line="177" selection-start-column="90" selection-end-line="177" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -51,20 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="909">
-              <caret line="1130" column="46" lean-forward="true" selection-start-line="1130" selection-start-column="46" selection-end-line="1130" selection-end-column="46" />
+            <state relative-caret-position="945">
+              <caret line="1132" column="47" selection-start-line="1132" selection-start-column="47" selection-end-line="1132" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="909">
-              <caret line="1095" column="41" selection-start-line="1095" selection-start-column="41" selection-end-line="1095" selection-end-column="41" />
+            <state relative-caret-position="945">
+              <caret line="1097" column="51" lean-forward="true" selection-start-line="1097" selection-start-column="51" selection-end-line="1097" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -81,8 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>invoice</find>
-      <find>'about'</find>
       <find>desc</find>
       <find>&quot;welcome&quot;</find>
       <find>aboutus</find>
@@ -111,6 +109,8 @@
       <find>about</find>
       <find>global_size</find>
       <find>global_siz</find>
+      <find>fixed_sh</find>
+      <find>gift_im</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/VideoController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
       </list>
     </option>
   </component>
@@ -706,12 +706,12 @@
       <workItem from="1597940767529" duration="415000" />
       <workItem from="1598039576851" duration="540000" />
       <workItem from="1598177193460" duration="575000" />
-      <workItem from="1598179624687" duration="404000" />
+      <workItem from="1598179624687" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426295000" />
+    <option name="totallyTimeSpent" value="426489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -1098,21 +1098,21 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="123" column="94" lean-forward="true" selection-start-line="123" selection-start-column="94" selection-end-line="123" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="1130" column="46" lean-forward="true" selection-start-line="1130" selection-start-column="46" selection-end-line="1130" selection-end-column="46" />
+          <caret line="177" column="90" lean-forward="true" selection-start-line="177" selection-start-column="90" selection-end-line="177" selection-end-column="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="1095" column="41" selection-start-line="1095" selection-start-column="41" selection-end-line="1095" selection-end-column="41" />
+        <state relative-caret-position="945">
+          <caret line="1097" column="51" lean-forward="true" selection-start-line="1097" selection-start-column="51" selection-end-line="1097" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="1132" column="47" selection-start-line="1132" selection-start-column="47" selection-end-line="1132" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -1128,5 +1128,7 @@ return array(
     "links" => "Links",
     "full_link" => "ex. Full Link http://www.google.com/sample",
     "snapchat" => "Snapchat",
-    "global_size_chart" => "Global Size Chart"
+    "global_size_chart" => "Global Size Chart",
+    "fixed_shipment_fees" => "Fixed Shipment Fees List",
+    "gift_image" => "Product Gift Service Image"
 );

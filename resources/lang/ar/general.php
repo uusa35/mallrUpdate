@@ -1093,5 +1093,7 @@ return array(
     "links" => "روابط",
     "full_link" => " http://www.google.com/sample وضع الرابط بالكامل",
     "snapchat" => "سناب شات",
-    "global_size_chart" => "صورة القياسات"
+    "global_size_chart" => "صورة القياسات",
+    "fixed_shipment_fees" => "صورة اسعار خدمات الشحن الثابتة",
+    "gift_image" => "صورة خدمة اعتبار المنتج كهدية"
 );
