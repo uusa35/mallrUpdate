@@ -70,7 +70,7 @@ trait ModelHelpers
 
     public function getProductSizeChartImageAttribute()
     {
-        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . $this->image : asset(env('THUMBNAIL') . $this->size_chart_image);
+        return $this->checkStorageSpaces() ? $this->getStorageSpacesUrl('thumbnail') . Setting::first()->size_chart : asset(env('THUMBNAIL') . $this->size_chart_image);
     }
 
     public function getCurrentImageAttribute($colName = 'image', $sizeType = 'thumbnail')
