@@ -1092,5 +1092,6 @@ return array(
     "account" => "الحساب",
     "links" => "روابط",
     "full_link" => " http://www.google.com/sample وضع الرابط بالكامل",
-    "snapchat" => "سناب شات"
+    "snapchat" => "سناب شات",
+    "global_size_chart" => "صورة القياسات"
 );

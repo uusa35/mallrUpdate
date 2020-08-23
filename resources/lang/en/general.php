@@ -1127,5 +1127,6 @@ return array(
     "google_play" => "Google Play",
     "links" => "Links",
     "full_link" => "ex. Full Link http://www.google.com/sample",
-    "snapchat" => "Snapchat"
+    "snapchat" => "Snapchat",
+    "global_size_chart" => "Global Size Chart"
 );
