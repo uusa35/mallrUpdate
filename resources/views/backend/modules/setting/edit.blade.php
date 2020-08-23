@@ -123,7 +123,7 @@
                                                        placeholder="...">
                                                 <label for="form_control_1">{{ trans('general.global_size_chart') }}</label>
                                                 <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1850 px']) }}
+                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
                                                 </div>
                                             </div>
                                         </div>
