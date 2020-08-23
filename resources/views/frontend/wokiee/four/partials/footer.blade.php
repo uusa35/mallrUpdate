@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                @if(count(trans('message.footer_about_us')) > 5)
+                @if(strlen(trans('message.footer_about_us')) > 5)
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="tt-mobile-collapse">
                             <h4 class="tt-collapse-title">
