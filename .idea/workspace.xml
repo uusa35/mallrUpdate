@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Models/ModelHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModelHelpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,16 @@
         <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="482">
-              <caret line="72" column="115" selection-start-line="72" selection-start-column="115" selection-end-line="72" selection-end-column="115" />
+              <caret line="72" column="169" selection-start-line="72" selection-start-column="169" selection-end-line="72" selection-end-column="169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="444" column="93" selection-start-line="444" selection-start-column="79" selection-end-line="444" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -99,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>apple</find>
       <find>email.pn</find>
       <find>User</find>
       <find>Use</find>
@@ -129,6 +136,7 @@
       <find>size_ch</find>
       <find>getProductSizeChartImageAttribute</find>
       <find>size_c</find>
+      <find>size_cha</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -725,12 +733,12 @@
       <workItem from="1597940767529" duration="415000" />
       <workItem from="1598039576851" duration="540000" />
       <workItem from="1598177193460" duration="575000" />
-      <workItem from="1598179624687" duration="1480000" />
+      <workItem from="1598179624687" duration="1801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427371000" />
+    <option name="totallyTimeSpent" value="427692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -957,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14850">
-          <caret line="825" column="107" selection-start-line="825" selection-start-column="107" selection-end-line="825" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1128,10 +1129,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="444" column="93" selection-start-line="444" selection-start-column="79" selection-end-line="444" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
-          <caret line="72" column="115" selection-start-line="72" selection-start-column="115" selection-end-line="72" selection-end-column="115" />
+          <caret line="72" column="169" selection-start-line="72" selection-start-column="169" selection-end-line="72" selection-end-column="169" />
         </state>
       </provider>
     </entry>
