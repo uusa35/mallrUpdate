@@ -439,10 +439,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                @if($element->image)
+                                                @if($element->size_chart_image)
                                                     <div class="col-md-2">
                                                         <img class="img-responsive img-sm"
-                                                             src="{{ $element->imageThumbLink }}"
+                                                             src="{{ $element->getProductSizeChartImageAttribute() }}"
                                                              alt="">
                                                         <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'size_chart_image']) }}"><i
                                                                     class="fa fa-fw fa-times"></i></a>

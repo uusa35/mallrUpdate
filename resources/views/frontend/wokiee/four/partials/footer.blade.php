@@ -103,18 +103,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="tt-mobile-collapse">
-                        <h4 class="tt-collapse-title">
-                            {{ trans("general.about_us") }}
-                        </h4>
-                        <div class="tt-collapse-content">
-                            <p>
-                                {!! trans('message.footer_about_us')  !!}
-                            </p>
+                @if(strlen(trans('message.footer_about_us')) > 5)
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="tt-mobile-collapse">
+                            <h4 class="tt-collapse-title">
+                                {{ trans("general.about_us") }}
+                            </h4>
+                            <div class="tt-collapse-content">
+                                <p>
+                                    {!! trans('message.footer_about_us')  !!}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="tt-newsletter">
                         <div class="tt-mobile-collapse">
