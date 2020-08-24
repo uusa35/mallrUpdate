@@ -172,11 +172,13 @@
                                                             </button>
                                                         @endif
                                                     @endif
-                                                    <button type="button"
-                                                            class="btn blue">
-                                                        {{ trans('general.company') }} :
-                                                        - {{ $meta->product->user->slug}}
-                                                    </button>
+                                                    @if($meta->product->user)
+                                                        <button type="button"
+                                                                class="btn blue">
+                                                            {{ trans('general.company') }} :
+                                                            - {{ $meta->product->user->slug}}
+                                                        </button>
+                                                    @endif
                                                 @elseif($meta->service && $meta->service_id)
                                                     <button type="button"
                                                             class="btn yellow">
