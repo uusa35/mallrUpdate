@@ -497,7 +497,7 @@
                         @can('isAdminOrAbove')
                             <div class="tab-pane active" id="portlet_tab_1">
                                 <div class="portlet-body">
-                                    <div class="scroller" style="height: 100%" data-rail-visible="1"
+                                    <div class="scroller" style="height: 100%; min-height: 1000px;" data-rail-visible="1"
                                          data-rail-color="yellow" data-handle-color="#a1b2bd">
                                         @include('backend.partials._images_samples')
                                     </div>
@@ -512,7 +512,7 @@
                             {{--                            </div>--}}
                         @endif
                         <div class="tab-pane" id="portlet_tab_3">
-                            <div class="scroller" data-rail-visible="1" style="height:100%"
+                            <div class="scroller" data-rail-visible="1" style="height:100%; min-height: 1000px;"
                                  data-rail-color="yellow" data-handle-color="#a1b2bd">
                                 @include('backend.partials._videos_for_company')
                             </div>
