@@ -88,10 +88,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <img src="{{ $element->imageThumbLink }}" alt=""
-                                                 class="img-responsive img-rounded">
-                                        </div>
+                                        @if($element->image)
+                                            <div class="col-md-2">
+                                                <img class="img-responsive img-sm"
+                                                     src="{{ $element->getImageThumbLinkAttribute() }}"
+                                                     alt="">
+                                                <a href="{{ route("backend.admin.image.clear",['model' => 'slide', 'id' => $element->id , 'colName' => 'image']) }}"><i
+                                                            class="fa fa-fw fa-times"></i></a>
+                                            </div>
+                                        @endif
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="form_control_1">{{ trans('general.path') }}</label>
