@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/samples/900x1900.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/SlideController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/SlideController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,8 +200,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="103">
-                      <caret line="75" column="68" lean-forward="true" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+                    <state relative-caret-position="238">
+                      <caret line="82" column="136" selection-start-line="82" selection-start-column="115" selection-end-line="82" selection-end-column="136" />
                     </state>
                   </provider>
                 </entry>
@@ -216,11 +212,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="839">
-                  <caret line="64" column="58" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+                <state relative-caret-position="623">
+                  <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
                 </state>
               </provider>
             </entry>
@@ -270,6 +266,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="661">
                   <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="438">
+                  <caret line="86" column="137" selection-start-line="86" selection-start-column="137" selection-end-line="86" selection-end-column="137" />
                 </state>
               </provider>
             </entry>
@@ -373,7 +378,6 @@
         <option value="$PROJECT_DIR$/app/Requests/SettingUpdate.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelHelpers.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_videos_for_super.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
@@ -385,6 +389,7 @@
         <option value="$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/SlideController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -912,12 +917,12 @@
       <workItem from="1598039576851" duration="540000" />
       <workItem from="1598177193460" duration="575000" />
       <workItem from="1598179624687" duration="3130000" />
-      <workItem from="1598246514619" duration="5904000" />
+      <workItem from="1598246514619" duration="6005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434925000" />
+    <option name="totallyTimeSpent" value="435026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1159,13 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="85" column="82" lean-forward="true" selection-start-line="85" selection-start-column="82" selection-end-line="85" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
@@ -1285,13 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="75" column="68" lean-forward="true" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/SlideController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
@@ -1310,10 +1301,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="82" column="136" selection-start-line="82" selection-start-column="115" selection-end-line="82" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="64" column="58" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+        <state relative-caret-position="623">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/slide/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="86" column="137" selection-start-line="86" selection-start-column="137" selection-end-line="86" selection-end-column="137" />
         </state>
       </provider>
     </entry>
