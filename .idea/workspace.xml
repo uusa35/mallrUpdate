@@ -196,8 +196,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/emails/order-complete.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="602">
-                  <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+                <state relative-caret-position="342">
+                  <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
@@ -216,7 +216,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>size_</find>
       <find>size_chart_image</find>
       <find>size_chart</find>
       <find>shipment</find>
@@ -246,6 +245,7 @@
       <find>banner</find>
       <find>slide</find>
       <find>has_att</find>
+      <find>sku</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -840,12 +840,12 @@
       <workItem from="1598039576851" duration="540000" />
       <workItem from="1598177193460" duration="575000" />
       <workItem from="1598179624687" duration="3130000" />
-      <workItem from="1598246514619" duration="3571000" />
+      <workItem from="1598246514619" duration="3651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432592000" />
+    <option name="totallyTimeSpent" value="432672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1244,8 +1244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/order-complete.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        <state relative-caret-position="342">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
         </state>
       </provider>
     </entry>

@@ -21,7 +21,7 @@
 | {{ trans('general.price') }}| {{ trans('general.qty') }}| {{  trans('general.size_or_date') }}  | {{ trans('general.length_color_or_time') }}|{{ trans('general.sku') }}|{{ trans('general.name') }}|
 | ------------- |:-------------:| --------:| --------:|--------:|--------:|
 @foreach($order->order_metas as $orderMeta)
-@if($orderMeta->isProductType)
+@if($orderMeta->isProductType && $orderMeta->product)
 @if($orderMeta->product && $orderMeta->product->has_attributes)
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ $orderMeta->product_attribute->size->name }}| {{ $orderMeta->product_attribute->color->name }}| {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }}|
 @elseif($orderMeta->product && $orderMeta->product->size && $orderMeta->product->color)
@@ -29,7 +29,7 @@
 @else
 | {{ $orderMeta->price }}| {{ $orderMeta->qty }}| {{ 'N/A' }} | {{ 'N/A' }} | {{ str_limit($orderMeta->product->sku,3,'') }}| {{ str_limit($orderMeta->product->name,10,'') }} |
 @endif
-@elseif($orderMeta->isServiceType)
+@elseif($orderMeta->isServiceType && $orderMeta->service)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ str_limit($orderMeta->service->name,10,'') }}|
 @elseif($orderMeta->isQuestionnaireType)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->created_at->format('d/m/Y') }} | {{ $orderMeta->questionnaire->user->slug }} | {{ $orderMeta->questionnaire->id }}|{{ str_limit($orderMeta->questionnaire->name,10,'') }}|
