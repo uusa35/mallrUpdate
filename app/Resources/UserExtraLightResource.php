@@ -18,6 +18,7 @@ class UserExtraLightResource extends JsonResource
         return [
             'id' => $this->id,
             'slug' => ucfirst(Str::limit($this->slug ? $this->slug : $this->name, 30, '')),
+            'description' => $this->description ? ucfirst(Str::limit($this->description, 80, '')) : ucfirst(Str::limit($this->service, 80, '')),
             'thumb' => $this->getCurrentImageAttribute('image'),
             'fullMobile' => $this->fullMobile,
             'rating' => $this->rating,
