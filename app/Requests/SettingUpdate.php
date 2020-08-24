@@ -28,7 +28,7 @@ class SettingUpdate extends FormRequest
             'app_logo.dimensions' => trans('message.best_fit', ['width' => '1024 px', 'height' => '210 px']),
             'menu_bg.dimensions' => trans('message.best_fit', ['width' => '1242 px', 'height' => '2688 px']),
             'main_bg.dimensions' => trans('message.best_fit', ['width' => '1242 px', 'height' => '2688 px']),
-            'size_chart.dimensions' => trans('message.best_fit', ['width' => '1080 px', 'height' => '1024 px']),
+            'size_chart.dimensions' => trans('message.best_fit', ['width' => '1080 px', 'height' => '1440 px']),
         ];
     }
 
@@ -47,7 +47,7 @@ class SettingUpdate extends FormRequest
             'app_logo' => 'image|nullable|dimensions:max_width:600,height=221',
             'menu_bg' => 'image|nullable|dimensions:width=1242,max_height=2688',
             'main_bg' => 'image|nullable|dimensions:width=1242,max_height=2688',
-            'size_chart' => 'image|nullable|dimensions:width=1080,max_height=1024',
+            'size_chart' => 'image|nullable|dimensions:width=1080,max_height=1440',
         ];
     }
 }

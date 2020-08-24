@@ -2204,17 +2204,7 @@
                 "sftp",
                 "storage"
             ],
-<<<<<<< HEAD
-            "time": "2020-08-18T10:57:55+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://offset.earth/frankdejonge",
-                    "type": "other"
-                }
-            ],
             "time": "2020-08-23T07:39:11+00:00"
->>>>>>> 51ea45f5737bc0b8cd92300ea1b1d07dec213399
         },
         {
             "name": "league/flysystem-aws-s3-v3",

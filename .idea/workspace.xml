@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ModelHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModelHelpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/SettingUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/SettingUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="177" column="90" selection-start-line="177" selection-start-column="90" selection-end-line="177" selection-end-column="100" />
+            <state relative-caret-position="465">
+              <caret line="127" column="50" lean-forward="true" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -72,25 +74,43 @@
         <entry file="file://$PROJECT_DIR$/app/Resources/ProductResource.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="36" column="67" lean-forward="true" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="72" column="278" selection-start-line="72" selection-start-column="278" selection-end-line="72" selection-end-column="278" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="444" column="115" selection-start-line="444" selection-start-column="115" selection-end-line="444" selection-end-column="115" />
+            <state relative-caret-position="195">
+              <caret line="425" column="68" lean-forward="true" selection-start-line="425" selection-start-column="68" selection-end-line="425" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Requests/SettingUpdate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/SettingController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -135,8 +155,8 @@
       <find>show_at</find>
       <find>size_ch</find>
       <find>getProductSizeChartImageAttribute</find>
-      <find>size_c</find>
       <find>size_cha</find>
+      <find>size_c</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -153,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php" />
         <option value="$PROJECT_DIR$/app/Models/Timing.php" />
         <option value="$PROJECT_DIR$/app/Models/ServiceHelpers.php" />
         <option value="$PROJECT_DIR$/app/Services/Search/Filters.php" />
@@ -198,12 +217,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/TagController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/CouponController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/VideoController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
-        <option value="$PROJECT_DIR$/app/Models/ModelHelpers.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Requests/SettingUpdate.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/ModelHelpers.php" />
       </list>
     </option>
   </component>
@@ -733,12 +753,12 @@
       <workItem from="1597940767529" duration="415000" />
       <workItem from="1598039576851" duration="540000" />
       <workItem from="1598177193460" duration="575000" />
-      <workItem from="1598179624687" duration="1952000" />
+      <workItem from="1598179624687" duration="2557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427843000" />
+    <option name="totallyTimeSpent" value="428448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
@@ -781,20 +801,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_18_054811_add_access_dashboard_to_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -1094,13 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="177" column="90" selection-start-line="177" selection-start-column="90" selection-end-line="177" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -1118,7 +1117,7 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/ProductResource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="36" column="67" lean-forward="true" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1129,17 +1128,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/SettingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="405">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Requests/SettingUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="444" column="115" selection-start-line="444" selection-start-column="115" selection-end-line="444" selection-end-column="115" />
+        <state relative-caret-position="195">
+          <caret line="425" column="68" lean-forward="true" selection-start-line="425" selection-start-column="68" selection-end-line="425" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/setting/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="127" column="50" lean-forward="true" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ModelHelpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="72" column="278" selection-start-line="72" selection-start-column="278" selection-end-line="72" selection-end-column="278" />
         </state>
       </provider>
     </entry>
