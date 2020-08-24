@@ -44,7 +44,7 @@
                                 </td>
                                 <td>{{ $element->order }}</td>
                                 <td>
-                                    <img src="{{ asset(env('THUMBNAIL').$element->image) }}" alt=""
+                                    <img src="{{ $element->imageThumbLink }}" alt=""
                                          class="img-responsive img-xs">
                                 </td>
                                 <td>

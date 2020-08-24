@@ -6,7 +6,7 @@
                     <div class="panel-heading">{{ trans('general.new_company_or_user') }}</div>
                     <div class="panel-body text-center">
                         <iframe width="450" height="300"
-                                src="https://www.youtube.com/embed/KTkClkW0MZw" frameborder="0"
+                                src="https://www.youtube.com/embed/bOF2dKjVCqs" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                     </div>
@@ -19,7 +19,7 @@
                     <div class="panel-heading">{{ trans('general.new_category') }}</div>
                     <div class="panel-body text-center">
                         <iframe width="450" height="300"
-                                src="https://www.youtube.com/embed/KTkClkW0MZw" frameborder="0"
+                                src="https://www.youtube.com/embed/bOF2dKjVCqs" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="panel-heading">{{ trans('general.new_commercial') }}</div>
                     <div class="panel-body text-center">
                         <iframe width="450" height="300"
-                                src="https://www.youtube.com/embed/KTkClkW0MZw"
+                                src="https://www.youtube.com/embed/bOF2dKjVCqs"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
@@ -60,7 +60,7 @@
                     <div class="panel-heading">{{ trans('general.new_color') }}</div>
                     <div class="panel-body text-center">
                         <iframe width="450" height="300"
-                                src="https://www.youtube.com/embed/KTkClkW0MZw"
+                                src="https://www.youtube.com/embed/bOF2dKjVCqs"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
@@ -74,7 +74,7 @@
                     <div class="panel-heading">{{ trans('general.new_size') }}</div>
                     <div class="panel-body text-center">
                         <iframe width="450" height="300"
-                                src="https://www.youtube.com/embed/KTkClkW0MZw"
+                                src="https://www.youtube.com/embed/bOF2dKjVCqs"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>

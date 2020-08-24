@@ -61,7 +61,11 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">{{ trans('general.slides') }} - {{ trans('general.image') }}</div>
                         <div class="panel-body text-center">
-                            <img src="{{ asset('images/samples/1900x1000.png') }}" class="img-responsive"/>
+                            <img src="{{ asset('images/samples/900x1900.png') }}" class="img-responsive"/>
+                            <div class="alert alert-danger">
+                                Intro Slide Width is 900px and maxHeight is 1900px </br>
+                                Normal Slides should be 900px x 1000px
+                            </div>
                         </div>
                     </div>
                 </div>

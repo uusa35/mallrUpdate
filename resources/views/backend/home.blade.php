@@ -482,10 +482,10 @@
                             <li class="active">
                                 <a href="#portlet_tab_1" data-toggle="tab"> {{ trans('general.sizes') }} </a>
                             </li>
-                            <li>
-                                <a href="#portlet_tab_2"
-                                   data-toggle="tab"> {{ trans('general.videos_for_new_items_for_super') }}</a>
-                            </li>
+                            {{--                            <li>--}}
+                            {{--                                <a href="#portlet_tab_2"--}}
+                            {{--                                   data-toggle="tab"> {{ trans('general.videos_for_new_items_for_super') }}</a>--}}
+                            {{--                            </li>--}}
                         @endcan
                         <li class="">
                             <a href="#portlet_tab_3" data-toggle="tab">{{ trans('general.videos_for_new_items') }} </a>
@@ -497,22 +497,22 @@
                         @can('isAdminOrAbove')
                             <div class="tab-pane active" id="portlet_tab_1">
                                 <div class="portlet-body">
-                                    <div class="scroller" style="height: 100%" data-rail-visible="1"
+                                    <div class="scroller" style="height: 100%; min-height: 1000px;" data-rail-visible="1"
                                          data-rail-color="yellow" data-handle-color="#a1b2bd">
                                         @include('backend.partials._images_samples')
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="portlet_tab_2">
-                                <div class="scroller" style="height:100%" data-rail-visible="1"
-                                     data-rail-color="yellow"
-                                     data-handle-color="#a1b2bd">
-                                    @include('backend.partials._videos_for_super')
-                                </div>
-                            </div>
+                            {{--                            <div class="tab-pane" id="portlet_tab_2">--}}
+                            {{--                                <div class="scroller" style="height:100%" data-rail-visible="1"--}}
+                            {{--                                     data-rail-color="yellow"--}}
+                            {{--                                     data-handle-color="#a1b2bd">--}}
+                            {{--                                    @include('backend.partials._videos_for_super')--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         @endif
                         <div class="tab-pane" id="portlet_tab_3">
-                            <div class="scroller" data-rail-visible="1"
+                            <div class="scroller" data-rail-visible="1" style="height:100%; min-height: 1000px;"
                                  data-rail-color="yellow" data-handle-color="#a1b2bd">
                                 @include('backend.partials._videos_for_company')
                             </div>
