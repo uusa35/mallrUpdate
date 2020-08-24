@@ -33,6 +33,8 @@
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->service_date }} | {{ $orderMeta->service_time }} | {{ $orderMeta->service->id }}|{{ str_limit($orderMeta->service->name,10,'') }}|
 @elseif($orderMeta->isQuestionnaireType)
 | {{ $orderMeta->price }}| {{ str_limit($orderMeta->notes,20) }}| {{ $orderMeta->created_at->format('d/m/Y') }} | {{ $orderMeta->questionnaire->user->slug }} | {{ $orderMeta->questionnaire->id }}|{{ str_limit($orderMeta->questionnaire->name,10,'') }}|
+@else
+| {{ trans('general.item_deleted') }} |
 @component('mail::panel')
 <div style="font-size: large; font-weight: bold;">
 {{ trans('message.questionnaire_order_message') }}
