@@ -2,16 +2,19 @@
 
 namespace App\Services\Traits;
 
+use App\Jobs\sendSuccessOrderEmail;
 use App\Models\Country;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductAttribute;
 use App\Models\Questionnaire;
 use App\Models\Role;
+use App\Models\Setting;
 use App\Models\Timing;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 trait OrderTrait
 {
@@ -271,6 +274,10 @@ trait OrderTrait
                             'service_time' => $timing->start
                         ]);
                     }
+                }
+                if ($order->cash_on_delivery) {
+                    $contactus = Setting::first();
+                    Mail::to($request->email)->cc($contactus->email)->send(new sendSuccessOrderEmail($order, $order->user, $contactus));
                 }
                 return $order;
             }

@@ -41,10 +41,6 @@ class OrderController extends Controller
     {
         $order = $this->checkCart($request); // check cart then create order
         if (is_string($order)) {
-            if ($request->cash_on_delivery) {
-                $contactus = Setting::first();
-                Mail::to($order->email)->cc($contactus->email)->send(new sendSuccessOrderEmail($order, $order->user, $contactus));
-            }
             return response()->json(['message' => $order], 400);
         } else {
             return response()->json(['url' => route('frontend.invoice.show', ['id' => $order->id])], 200);
