@@ -46,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="275" column="21" lean-forward="true" selection-start-line="275" selection-start-column="21" selection-end-line="275" selection-end-column="21" />
+                <state relative-caret-position="725">
+                  <caret line="279" column="120" selection-start-line="279" selection-start-column="120" selection-end-line="279" selection-end-column="120" />
                   <folding>
                     <element signature="e#39#74#0#PHP" expanded="true" />
                   </folding>
@@ -135,11 +135,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="64" />
+                <state relative-caret-position="702">
+                  <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="696">
+                  <caret line="104" column="108" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="108" />
                 </state>
               </provider>
             </entry>
@@ -771,12 +780,12 @@
       <workItem from="1598246514619" duration="6543000" />
       <workItem from="1598305778485" duration="731000" />
       <workItem from="1598434425281" duration="1256000" />
-      <workItem from="1598855355131" duration="1302000" />
+      <workItem from="1598855355131" duration="1578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438853000" />
+    <option name="totallyTimeSpent" value="439129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1116,13 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1134,13 +1136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="95" column="108" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="95" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1165,10 +1160,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/usama/tap/src/Controllers/TapPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="275" column="21" lean-forward="true" selection-start-line="275" selection-start-column="21" selection-end-line="275" selection-end-column="21" />
+        <state relative-caret-position="725">
+          <caret line="279" column="120" selection-start-line="279" selection-start-column="120" selection-end-line="279" selection-end-column="120" />
           <folding>
             <element signature="e#39#74#0#PHP" expanded="true" />
           </folding>
