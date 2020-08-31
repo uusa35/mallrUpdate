@@ -10,7 +10,7 @@
                     <div class="col-6 col-lg-3">
                     <div class="tt-product thumbprod-center" style="padding: 10px;">
                         <div class="tt-image-box">
-                            <a href="{{ route('frontend.user.search', ['category_id' => $element->category_id]) }}">
+                            <a href="{{ route('frontend.user.search', ['category_id' => $element->category_id, 'is_company' => true]) }}">
                                 @include('frontend.wokiee.four.partials._widget_tags_and_images')
                             </a>
                         </div>
