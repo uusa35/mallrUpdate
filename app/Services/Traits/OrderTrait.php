@@ -2,16 +2,19 @@
 
 namespace App\Services\Traits;
 
+use App\Jobs\sendSuccessOrderEmail;
 use App\Models\Country;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductAttribute;
 use App\Models\Questionnaire;
 use App\Models\Role;
+use App\Models\Setting;
 use App\Models\Timing;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 trait OrderTrait
 {
@@ -252,8 +255,8 @@ trait OrderTrait
                             'item_name' => $item['element']['name'],
                             'item_type' => class_basename($product),
                             'notes' => $item['notes'] ? $item['notes'] : null,
-                            'product_size' => $productAttribute ? $productAttribute->size->name : $product->size->name,
-                            'product_color' => $productAttribute ? $productAttribute->color->name : $product->color->name,
+                            'product_size' => $productAttribute ? $productAttribute->size->name : $product->size ? $product->size->name : null,
+                            'product_color' => $productAttribute ? $productAttribute->color->name : $product->color ? $product->color->name: null,
                         ]);
                     } else if ($item['type'] === 'service') {
                         // later we should check of multi Booking !!!
@@ -271,6 +274,10 @@ trait OrderTrait
                             'service_time' => $timing->start
                         ]);
                     }
+                }
+                if ($order->cash_on_delivery) {
+                    $contactus = Setting::first();
+                    dispatch(new sendSuccessOrderEmail($order, $order->user, $contactus))->delay(now()->addSeconds(10));
                 }
                 return $order;
             }
