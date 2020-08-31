@@ -4,17 +4,12 @@ namespace Usama\MyFatoorah;
 
 use App\Http\Controllers\Controller;
 use App\Jobs\sendSuccessOrderEmail;
-use App\Mail\OrderComplete;
 use App\Models\Coupon;
-use App\Models\Product;
-use App\Models\ProductAttribute;
 use App\Models\Setting;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Markdown;
-use Illuminate\Support\Facades\Mail;
-use League\Flysystem\Exception;
 
 /**
  * Created by PhpStorm.

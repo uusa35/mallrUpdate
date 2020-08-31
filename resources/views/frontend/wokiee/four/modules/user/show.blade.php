@@ -31,18 +31,20 @@
                             @include('frontend.wokiee.four.partials._product_and_services_search_widget',['services' => isset($services) ? $services : null,'products' => isset($products) ? $products : null])
                         </div>
                     @endif
-                    <div class="row" style="margin-top: 100px;">
-                        <div class="col-lg-12">
-                            @if(isset($element))
-                                <div class="col-12">
-                                    <h4 class="text-lg-center mb-5">
-                                        {{ trans('general.gallery') }}
-                                    </h4>
-                                </div>
-                                @include("frontend.wokiee.four.partials._gallery",['element' => $element->images])
-                            @endif
+                    @if($element->images->isNotEmpty())
+                        <div class="row" style="margin-top: 100px;">
+                            <div class="col-lg-12">
+                                @if(isset($element))
+                                    <div class="col-12">
+                                        <h4 class="text-lg-center mb-5">
+                                            {{ trans('general.gallery') }}
+                                        </h4>
+                                    </div>
+                                    @include("frontend.wokiee.four.partials._gallery",['element' => $element->images])
+                                @endif
+                            </div>
                         </div>
-                    </div>
+                    @endif
                     @if(isset($collections) && $collections->isNotEmpty())
                         <div class="text-center tt_product_showmore">
                             <div class="col-lg-12">

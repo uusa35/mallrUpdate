@@ -4,7 +4,7 @@
         {{--<a href="#" class="tt-btn-compare" data-tooltip="Add to Compare"--}}
         {{--data-tposition="{{ app()->isLocale('ar') ? 'right' : 'left' }}"--}}
         {{--></a>--}}
-        @if($isUsers)
+        @if(isset($isUsers) && $isUsers)
             <a href="{{ route('frontend.service.search', ['user_id' => $element->id]) }}">
                 @include('frontend.wokiee.four.partials._widget_tags_and_images')
             </a>

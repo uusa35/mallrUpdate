@@ -2,6 +2,7 @@
 
 namespace App\Services\Traits;
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Commercial;
 use App\Models\OrderMeta;
@@ -99,6 +100,18 @@ trait HomePageTrait
             'topDoubleCommercials',
             'bottomDoubleCommercials',
             'tripleCommercials'
+        ));
+    }
+
+    public function getEscrapHome()
+    {
+//        $sliders = Slide::active()->onHome()->limit(SElf::TAKE_TINY)->get();
+        $subCategories = Category::active()->onHome()->onlyForUsers()->onlyChildren()->orderBy('order','desc')->limit(SELF::TAKE_LESS)->get();
+        $categoriesHome = Category::active()->onHome()->onlyForUsers()->onlyParent()->orderBy('order', 'desc')->limit(SELF::TAKE_TINY)->get();
+        return view('frontend.wokiee.four.home.escrap', compact(
+//            'sliders',
+        'subCategories',
+            'categoriesHome'
         ));
     }
 }

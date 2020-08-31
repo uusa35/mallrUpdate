@@ -20,7 +20,7 @@
             {{--                    @else--}}
             {{--                        <a href="{{ route('frontend.product.search', ['user_id' => $element->id]) }}">--}}
             {{--                    @endif--}}
-            <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">
+            <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->name]) }}">
                             <span class="tt-img"><img src="{{ $element->imageLargeLink }}"
                                                       alt="{{ $element->description }}"></span>
             </a>
@@ -29,7 +29,7 @@
             <div class="tt-row">
                 <ul class="tt-add-info">
                     <li>
-                        <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ str_limit($element->slug,25) }}</a>
+                        <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->name]) }}">{{ str_limit($element->slug,25) }}</a>
                         {{--                        @if($element->isDesigner)--}}
                         {{--                            <a href="{{ route('frontend.product.search', ['designer_id' => $element->id]) }}">{{ $element->slug }}</a>--}}
                         {{--                        @else--}}
@@ -40,7 +40,7 @@
                 {{--@include('frontend.wokiee.four.partials._rating')--}}
             </div>
             <h2 class="tt-title">
-                <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->slug]) }}">{{ str_limit($element->description,40,'...') }}</a>
+                <a href="{{ route('frontend.user.show.name', ['id' => $element->id,'name' => $element->name]) }}">{{ str_limit($element->description,40,'...') }}</a>
                 {{--                @if($element->isDesigner)--}}
                 {{--                    <a href="{{ route('frontend.product.search', ['designer_id' => $element->id]) }}">{{ str_limit($element->description,100,'...') }}</a>--}}
                 {{--                @else--}}
