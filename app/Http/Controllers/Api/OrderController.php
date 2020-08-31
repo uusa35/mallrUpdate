@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\sendSuccessOrderEmail;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -30,23 +32,27 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $order = $this->checkCart($request); // check cart then create order
         if (is_string($order)) {
+            if ($request->cash_on_delivery) {
+                $contactus = Setting::first();
+                dispatch(new sendSuccessOrderEmail($order, $order->user, $contactus))->delay(now()->addSeconds(30));
+            }
             return response()->json(['message' => $order], 400);
         } else {
-            return response()->json(['url' => route('frontend.invoice.show',['id' => $order->id]) ], 200);
+            return response()->json(['url' => route('frontend.invoice.show', ['id' => $order->id])], 200);
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -57,7 +63,7 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -68,8 +74,8 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -80,7 +86,7 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
