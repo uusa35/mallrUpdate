@@ -277,7 +277,7 @@ trait OrderTrait
                 }
                 if ($order->cash_on_delivery) {
                     $contactus = Setting::first();
-                    Mail::to($request->email)->cc($contactus->email)->send(new sendSuccessOrderEmail($order, $order->user, $contactus));
+                    Mail::to($order->email)->cc($contactus->email)->send(new sendSuccessOrderEmail($order, $order->user, $contactus));
                 }
                 return $order;
             }
