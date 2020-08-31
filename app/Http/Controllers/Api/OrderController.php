@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Jobs\sendSuccessOrderEmail;
+use App\Mail\WelcomeNewUser;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -41,7 +43,7 @@ class OrderController extends Controller
         if (is_string($order)) {
             if ($request->cash_on_delivery) {
                 $contactus = Setting::first();
-                dispatch(new sendSuccessOrderEmail($order, $order->user, $contactus))->delay(now()->addSeconds(30));
+                Mail::to($order->email)->cc($contactus->email)->send(new sendSuccessOrderEmail($order, $order->user, $contactus));
             }
             return response()->json(['message' => $order], 400);
         } else {
