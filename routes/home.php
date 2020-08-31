@@ -9,8 +9,8 @@ if (env('ABATI')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('ESCRAP')) {
-    Route::get('/', 'HomeController@getEscrapHome')->name('index');
-    Route::get('/home', 'HomeController@getEscrapHome')->name('home');
+    Route::get('/', 'HomeController@getMobileLayout')->name('index');
+    Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('ABATI')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
