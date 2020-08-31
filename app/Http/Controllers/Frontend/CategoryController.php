@@ -29,6 +29,11 @@ class CategoryController extends Controller
             $categoriesList = $services->pluck('categories')->flatten()->unique('id')->sortKeysDesc();
             $vendors = $services->pluck('user')->unique('id')->flatten();
             $areas = $services->pluck('user.areas')->flatten()->unique('id');
+        } elseif(env('ESCRAP') && request()->parent_id) {
+            $parent = Category::where('parent_id', request()->parent_id)->first();
+            $elements = $parent->children()->paginate(self::TAKE_MID);
+            return view('frontend.wokiee.four.modules.category.sub_category.index', compact('elements'));
+
         }
         return view('frontend.wokiee.four.modules.category.index', compact('elements', 'categoriesList', 'vendors', 'areas', 'tags'));
 

@@ -6,9 +6,9 @@
                 {{--                <div class="tt-description">{{ trans('message.recent_products') }}</div>--}}
             </div>
             <div class="row flex-sm-row tt-layout-promo-box">
-                @foreach($elements->take(4) as $element)
+                @foreach($elements as $element)
                     <div class="col-sm-6">
-                        <a href="listing-left-column.html"
+                        <a href="{{ route('frontend.category.index',['parent_id' => $element->id]) }}"
                            class="tt-promo-box tt-one-child hover-type-2">
                             <img src="{{ asset(env('IMG_LOADER')) }}"
                                  data-src="{{ $element->getCurrentImageAttribute('image', 'large') }}"
