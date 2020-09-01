@@ -20,6 +20,7 @@ trait HomePageTrait
     public function getMallrHome()
     {
         $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
+        $brands = Brand::active()->onHome()->orderBy('order','asc')->take(10)->get();
         $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
         $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
         $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images','user', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
@@ -41,6 +42,7 @@ trait HomePageTrait
         $tripleCommercials = Commercial::active()->triple()->orderBy('order', 'desc')->limit(3)->get();
         return view('frontend.wokiee.four.home.mallr', compact(
             'sliders',
+            'brands',
             'newProducts',
             'onSaleProducts',
             'bestSalesProducts',
@@ -118,6 +120,7 @@ trait HomePageTrait
     public function getNashKwHome()
     {
         $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
+        $brands = Brand::active()->onHome()->orderBy('order','asc')->take(10)->get();
         $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
         $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
         $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images','user', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
@@ -137,7 +140,8 @@ trait HomePageTrait
         $topDoubleCommercials = Commercial::active()->double()->orderBy('order', 'desc')->limit(2)->get();
         $bottomDoubleCommercials = Commercial::active()->double()->orderBy('order', 'desc')->limit(2)->get();
         $tripleCommercials = Commercial::active()->triple()->orderBy('order', 'desc')->limit(3)->get();
-        return view('frontend.wokiee.four.home.mallr', compact(
+        return view('frontend.wokiee.four.home.nashkw', compact(
+            'brands',
             'sliders',
             'newProducts',
             'onSaleProducts',
