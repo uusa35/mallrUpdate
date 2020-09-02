@@ -69,6 +69,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{ trans('general.slides') }} - {{ trans('general.image') }}</div>
+                        <div class="panel-body text-center">
+                            <img src="{{ asset('images/samples/900x474.png') }}" class="img-responsive"/>
+                            <div class="alert alert-danger">
+                                Intro Slide Width is 900px and maxHeight is 1900px </br>
+                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 474px (Home Slide))
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endcan
     </div>
 @endcan
