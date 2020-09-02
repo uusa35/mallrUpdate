@@ -25,8 +25,8 @@
                         </div>
                     <div class="col-lg-4 col-sm-12">
                         <a href="{{ route('frontend.service.search',['on_sale' => true]) }}" class="tt-promo-box">
-                            <img src="{{ app()->isLocale('ar') ? asset('img/event-02.jpg') : asset('img/event-02-en.jpg') }}"
-                                 data-src="{{ app()->isLocale('ar') ? asset('img/event-02.jpg') : asset('img/event-02-en.jpg') }}"
+                            <img src="{{ app()->isLocale('ar') ? asset('img/event-002.jpg') : asset('img/event-02-en.jpg') }}"
+                                 data-src="{{ app()->isLocale('ar') ? asset('img/event-002.jpg') : asset('img/event-02-en.jpg') }}"
                                  alt="{{ $settings->company }}"
                                  class=""
                             >
