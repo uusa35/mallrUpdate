@@ -3,7 +3,7 @@
 @section('body')
     @include('frontend.wokiee.four.partials.slider')
     @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.new_arrivals'), 'elements' => $newProducts])
-    @include('frontend.wokiee.four.partials._all_brands')
+{{--    @include('frontend.wokiee.four.partials._all_brands', ['elements' => $brands])--}}
     @include('frontend.wokiee.four.partials._products_slider',['title' => trans('general.on_sale_products'), 'elements' => $onSaleProducts])
     {{--        @if(isset($categoriesHome) && $categoriesHome->isNotEmpty())--}}
     {{--            @include('frontend.wokiee.four.partials._five_categories',['elements' => $categoriesHome])--}}
