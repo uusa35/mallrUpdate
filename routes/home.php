@@ -29,6 +29,9 @@ if (env('ABATI')) {
 } elseif (env('ATSPOT')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
+} elseif (env('NASHKW')) {
+    Route::get('/', 'HomeController@getNashKwHome')->name('index');
+    Route::get('/home', 'HomeController@getNashKwHome')->name('home');
 } elseif (env('EXPO')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');

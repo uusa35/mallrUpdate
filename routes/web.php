@@ -137,6 +137,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     Route::get('order/cash/delivery/{id}', 'OrderController@cashOnDeliveryReceived')->name('order.cash.delivery');
     Route::resource('category', 'CategoryController');
     Route::resource('user', 'UserController');
+    Route::get('search/user', 'UserController@search')->name('user.search');
     Route::get('user/{id}/{name}', 'UserController@show')->name('user.show.name');
     Route::resource('page', 'PageController')->only(['show']);
     Route::get('page/{id}/{name}', 'PageController@show')->name('page.show.name');
@@ -181,7 +182,6 @@ if (app()->environment('production') || app()->environment('local')) {
                 'language' => 'ar'
             ])
             ->get();
-        dd($responseAr);
     });
     Route::get('/post/{id}/{role}', 'Frontend\HomeController@getInfo');
 }

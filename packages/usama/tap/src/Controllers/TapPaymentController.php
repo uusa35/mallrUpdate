@@ -4,7 +4,6 @@ namespace Usama\Tap;
 
 use App\Http\Controllers\Controller;
 use App\Jobs\sendSuccessOrderEmail;
-use App\Mail\OrderComplete;
 use App\Models\Ad;
 use App\Models\Coupon;
 use App\Models\Setting;
@@ -13,10 +12,8 @@ use App\Models\Order;
 use App\Models\OrderAttribute;
 use App\Models\Plan;
 use App\Models\User;
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Markdown;
-use Illuminate\Support\Facades\Mail;
 
 /**
  * Created by PhpStorm.

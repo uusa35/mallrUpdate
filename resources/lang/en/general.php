@@ -1988,5 +1988,6 @@ return array (
     "global_size_chart" => "Global Size Chart",
     "fixed_shipment_fees" => "Fixed Shipment Fees List",
     "gift_image" => "Product Gift Service Image",
-    "item_deleted" => "Item was deleted from our databases."
+    "item_deleted" => "Item was deleted from our databases.",
+    "sub_categories" => "Sub Categories"
 );

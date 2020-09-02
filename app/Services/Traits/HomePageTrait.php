@@ -2,6 +2,7 @@
 
 namespace App\Services\Traits;
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Commercial;
 use App\Models\OrderMeta;
@@ -19,6 +20,7 @@ trait HomePageTrait
     public function getMallrHome()
     {
         $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
+        $brands = Brand::active()->onHome()->orderBy('order','asc')->take(10)->get();
         $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
         $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
         $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images','user', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
@@ -40,6 +42,7 @@ trait HomePageTrait
         $tripleCommercials = Commercial::active()->triple()->orderBy('order', 'desc')->limit(3)->get();
         return view('frontend.wokiee.four.home.mallr', compact(
             'sliders',
+            'brands',
             'newProducts',
             'onSaleProducts',
             'bestSalesProducts',
@@ -99,6 +102,58 @@ trait HomePageTrait
             'topDoubleCommercials',
             'bottomDoubleCommercials',
             'tripleCommercials'
+        ));
+    }
+
+    public function getEscrapHome()
+    {
+//        $sliders = Slide::active()->onHome()->limit(SElf::TAKE_TINY)->get();
+        $subCategories = Category::active()->onHome()->onlyForUsers()->onlyChildren()->orderBy('order','desc')->limit(SELF::TAKE_LESS)->get();
+        $categoriesHome = Category::active()->onHome()->onlyForUsers()->onlyParent()->orderBy('order', 'desc')->limit(SELF::TAKE_TINY)->get();
+        return view('frontend.wokiee.four.home.escrap', compact(
+//            'sliders',
+        'subCategories',
+            'categoriesHome'
+        ));
+    }
+
+    public function getNashKwHome()
+    {
+        $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
+        $brands = Brand::active()->onHome()->orderBy('order','asc')->take(10)->get();
+        $newProducts = $this->product->active()->available()->onHome()->onNew()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country', 'favorites')->orderBy('created_at', 'desc')->limit(self::TAKE_LESS)->get();
+        $onSaleProducts = $this->product->active()->available()->onSaleOnHome()->hasImage()->serveCountries()->hasStock()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
+        $bestSalesProducts = $this->product->whereIn('id', $this->product->active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images','user', 'favorites', 'user.country')->limit(self::TAKE_LESS)->get();;
+        $productHotDeals = $this->product->active()->available()->onSale()->hotDeals()->hasImage()->serveCountries()->hasAtLeastOneCategory()->with('brand', 'product_attributes.color', 'product_attributes.size', 'color', 'size', 'images', 'user.country','user','favorites')->orderby('end_sale', 'desc')->limit(self::TAKE_LESS)->get();
+        $bestSaleCollections = OrderMeta::bestSaleCollections();
+        $designers = User::active()->onHome()->designers()->whereHas('collections', function ($q) {
+            return $q->whereHas('products', function ($q) {
+                return $q->active();
+            }, '>', 0);
+        }, '>', 0)->with('role')->with(['surveys' => function ($q) {
+            return $q->where('is_order', true)->active();
+        }])->notAdmins()->hasProducts()->get();
+        $companies = User::active()->onHome()->companies()->notAdmins()->hasProducts()->whereHas('products', function ($q) {
+            return $q->active();
+        }, '>', 0)->with('role')->get();
+        $categoriesHome = Category::active()->onHome()->isFeatured()->orderBy('order', 'desc')->limit(4)->get();
+        $topDoubleCommercials = Commercial::active()->double()->orderBy('order', 'desc')->limit(2)->get();
+        $bottomDoubleCommercials = Commercial::active()->double()->orderBy('order', 'desc')->limit(2)->get();
+        $tripleCommercials = Commercial::active()->triple()->orderBy('order', 'desc')->limit(3)->get();
+        return view('frontend.wokiee.four.home.nashkw', compact(
+            'brands',
+            'sliders',
+            'newProducts',
+            'onSaleProducts',
+            'bestSalesProducts',
+            'productHotDeals',
+            'categoriesHome',
+            'topDoubleCommercials',
+            'bottomDoubleCommercials',
+            'tripleCommercials',
+            'bestSaleCollections',
+            'designers',
+            'companies'
         ));
     }
 }

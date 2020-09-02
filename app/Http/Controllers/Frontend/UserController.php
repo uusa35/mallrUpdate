@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Http\Resources\UserExtraLightResource;
 use App\Jobs\IncreaseElementViews;
 use App\Models\Product;
 use App\Models\User;
 use App\Services\Search\Filters;
+use App\Services\Search\UserFilters;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\Paginator;
@@ -31,6 +33,22 @@ class UserController extends Controller
             return $q->where(request()->type, true);
         })->paginate(self::TAKE_MIN);
         return view('frontend.wokiee.four.modules.user.index', compact('elements'));
+    }
+
+    public function search(UserFilters $filters)
+    {
+        $validator = validator(request()->all(), ['search' => 'nullable']);
+        if ($validator->fails()) {
+            return redirect()->route('frontend.home')->withErrors($validator->messages());
+        }
+        $elements = User::filters($filters)->active()->notAdmins()->hasProducts()->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
+        if ($elements->isNotEmpty()) {
+            return view('frontend.wokiee.four.modules.user.index', compact(
+                'elements'
+            ));
+        } else {
+            return redirect()->route('frontend.home')->with('error', trans('message.no_items_found'));
+        }
     }
 
     /**

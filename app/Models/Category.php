@@ -131,6 +131,11 @@ class Category extends PrimaryModel
         return $q->where('parent_id', 0);
     }
 
+    public function scopeOnlyChildren($q)
+    {
+        return $q->where('parent_id','!=', 0);
+    }
+
     public function getIsParentAttribute()
     {
         return $this->parent_id === 0 ? true : false;

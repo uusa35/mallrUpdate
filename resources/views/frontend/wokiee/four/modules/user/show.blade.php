@@ -7,6 +7,7 @@
 @section('body')
     <div class="container-indent nomargin">
         @include('frontend.wokiee.four.partials._user_show_header')
+
         <div class="container-indent">
             {{--            <div class="container container-fluid-custom-mobile-padding">--}}
             <div class="container">
@@ -14,44 +15,48 @@
                     @include('frontend.wokiee.four.partials._user_show_information')
                 </div>
                 {{--<div class="col-md-4 col-lg-3 col-xl-3 leftColumn aside desctop-no-sidebar">--}}
-                <div class="col-lg-12" style="padding-top: 20px;">
-                    @if(env('MALLR') && isset($element) && $element->isDesigner && isset($collections))
-                        <div class="row">
-                            <div class="col-12">
-                                <h4 class="text-lg-center">{{ trans('general.collections') }}</h4>
-                            </div>
-                            @foreach($collections as $collection)
-                                <div class="col-lg-3 col-sm-12">
-                                    @include('frontend.wokiee.four.partials._collection_widget_cover',['element' => $collection,'title' => trans('general.personal_shopper')])
-                                </div>
-                            @endforeach
-                        </div>
-                    @elseif($element->isCompany)
-                        <div class="row">
-                            @include('frontend.wokiee.four.partials._product_and_services_search_widget',['services' => isset($services) ? $services : null,'products' => isset($products) ? $products : null])
-                        </div>
-                    @endif
-                    <div class="row" style="margin-top: 100px;">
-                        <div class="col-lg-12">
-                            @if(isset($element))
+                @if(ENV('MALLR') || ENV('DAILY'))
+                    <div class="col-lg-12" style="padding-top: 20px;">
+                        @if(env('MALLR') && isset($element) && $element->isDesigner && isset($collections))
+                            <div class="row">
                                 <div class="col-12">
-                                    <h4 class="text-lg-center mb-5">
-                                        {{ trans('general.gallery') }}
-                                    </h4>
+                                    <h4 class="text-lg-center">{{ trans('general.collections') }}</h4>
                                 </div>
-                                @include("frontend.wokiee.four.partials._gallery",['element' => $element->images])
-                            @endif
-                        </div>
-                    </div>
-                    @if(isset($collections) && $collections->isNotEmpty())
-                        <div class="text-center tt_product_showmore">
-                            <div class="col-lg-12">
-                                {{ $collections->withPath(request()->getUri())->links() }}
-                                {{--                            @include('frontend.wokiee.four.partials._pagination',['elements' => $collections])--}}
+                                @foreach($collections as $collection)
+                                    <div class="col-lg-3 col-sm-12">
+                                        @include('frontend.wokiee.four.partials._collection_widget_cover',['element' => $collection,'title' => trans('general.personal_shopper')])
+                                    </div>
+                                @endforeach
                             </div>
-                        </div>
-                    @endif
-                </div>
+                        @elseif($element->isCompany)
+                            <div class="row">
+                                @include('frontend.wokiee.four.partials._product_and_services_search_widget',['services' => isset($services) ? $services : null,'products' => isset($products) ? $products : null])
+                            </div>
+                        @endif
+                        @if($element->images->isNotEmpty())
+                            <div class="row" style="margin-top: 100px;">
+                                <div class="col-lg-12">
+                                    @if(isset($element))
+                                        <div class="col-12">
+                                            <h4 class="text-lg-center mb-5">
+                                                {{ trans('general.gallery') }}
+                                            </h4>
+                                        </div>
+                                        @include("frontend.wokiee.four.partials._gallery",['element' => $element->images])
+                                    @endif
+                                </div>
+                            </div>
+                        @endif
+                        @if(isset($collections) && $collections->isNotEmpty())
+                            <div class="text-center tt_product_showmore">
+                                <div class="col-lg-12">
+                                    {{ $collections->withPath(request()->getUri())->links() }}
+                                    {{--                            @include('frontend.wokiee.four.partials._pagination',['elements' => $collections])--}}
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                @endif
             </div>
         </div>
     </div>
