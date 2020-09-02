@@ -72,7 +72,9 @@
                         <div class="tt-collapse-content">
                             <ul class="tt-list">
                                 @foreach($pages->where('on_footer', true) as $page)
-                                    <li><a href="{{ $page->url }}">{{ $page->slug }}</a></li>
+                                    <li>
+                                        <a href="{{ $page->url ? $page->url : route('frontend.page.show.name',['id' => $page->id ,'name' => $element->title]) }} }}">{{ $page->slug }}</a>
+                                    </li>
                                 @endforeach
                                 @guest
                                     <li><a href="{{ route('register') }}">{{ trans('general.register') }}</a></li>

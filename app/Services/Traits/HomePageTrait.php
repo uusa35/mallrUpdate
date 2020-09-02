@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Commercial;
 use App\Models\OrderMeta;
+use App\Models\Page;
 use App\Models\Slide;
 use App\Models\User;
 
@@ -14,7 +15,8 @@ trait HomePageTrait
 
     public function getMobileLayout()
     {
-        return view('frontend.wokiee.four.home.mobile');
+        $pages = Page::where(['on_menu_mobile' => true,'on_footer' => true, 'active' => true])->get();
+        return view('frontend.wokiee.four.home.mobile', compact('pages'));
     }
 
     public function getMallrHome()
