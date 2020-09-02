@@ -64,7 +64,7 @@
                             <img src="{{ asset('images/samples/900x1900.png') }}" class="img-responsive"/>
                             <div class="alert alert-danger">
                                 Intro Slide Width is 900px and maxHeight is 1900px </br>
-                                Normal Slides should be 900px x 1000px
+                                Normal Slides should be 900px x (Height must be 1900px (Intro Slide) or Height 474px (Home Slide))
                             </div>
                         </div>
                     </div>
