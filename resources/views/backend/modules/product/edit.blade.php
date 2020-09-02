@@ -684,7 +684,7 @@
                                                         </span> --}}
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-4 col-push-lg-2">
                                                     <div class="form-group">
                                                         <label class="control-label">{{ trans('general.end_sale_date') }}</label>
                                                         <div class="input-group date form_datetime">
