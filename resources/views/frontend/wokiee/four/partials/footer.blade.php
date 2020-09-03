@@ -73,7 +73,7 @@
                             <ul class="tt-list">
                                 @foreach($pages->where('on_footer', true) as $page)
                                     <li>
-                                        <a href="{{ $page->url ? $page->url : route('frontend.page.show.name',['id' => $page->id ,'name' => $element->title]) }} }}">{{ $page->slug }}</a>
+                                        <a href="{{ $page->url ? $page->url : route('frontend.page.show.name',['id' => $page->id ,'name' => $page->title]) }} }}">{{ $page->slug }}</a>
                                     </li>
                                 @endforeach
                                 @guest
