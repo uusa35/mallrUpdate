@@ -30,7 +30,7 @@
             <meta property="instagram:card" content="{{ $element->imageThumbLink }}">
             <meta property="instagram:url" content="{{ url()->current() }}">
             <meta property="instagram:title" content="{{ $element->name }}">
-            <meta property="instagram:description" content="{{ $elements->description }}">
+            <meta property="instagram:description" content="{{ $element->description }}">
             <meta property="instagram:image" content="{{ $element->imageThumbLink }}">
         @endif
     @endif
