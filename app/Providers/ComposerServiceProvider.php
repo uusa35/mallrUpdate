@@ -96,6 +96,8 @@ class ComposerServiceProvider extends ServiceProvider
             'frontend.wokiee.four.layouts.app',
             'frontend.wokiee.four.layouts.mobile',
             'frontend.wokiee.four.home.mobile',
+            'frontend.wokiee.four.modules.product.show',
+            'frontend.wokiee.four.modules.service.show',
             'frontend.*.*.partials._search_side_bar',
             'frontend.*.*.partials._btns_home',
             'frontend.*.*.partials._modal_size_chart',

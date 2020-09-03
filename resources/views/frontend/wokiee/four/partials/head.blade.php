@@ -35,31 +35,30 @@
     <meta itemProp="android" content="{{ $settings->android }}"/>
 @endif
 <meta itemProp="apple" content="{{ $settings->apple }}"/>
-@if($settings->facebook)
-    <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
-    <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
-    <meta property="facebook:card" content="{{ $settings->logoThumb }}">
-    <meta property="facebook:url" content="{{ $settings->facebook }}">
-    <meta property="facebook:title" content="{{ $settings->company }}">
-    <meta property="facebook:description" content="{{ $settings->description }}">
-    <meta property="facebook:image" content="{{ $settings->logoThumb }}">
-@endif
-@if($settings->twitter)
-    <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
-    <meta property="twitter:card" content="{{ $settings->logoThumb }}">
-    <meta property="twitter:url" content="{{ $settings->twitter }}">
-    <meta property="twitter:title" content="{{ $settings->company }}">
-    <meta property="twitter:description" content="{{ $settings->description }}">
-    <meta property="twitter:image" content="{{ $settings->logoThumb }}">
+@if(!\Str::contains(Route::getCurrentRoute()->getName(), ['product','service']))
+    @if($settings->facebook)
+        <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+        <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+        <meta property="facebook:card" content="{{ $settings->logoThumb }}">
+        <meta property="facebook:url" content="{{ $settings->facebook }}">
+        <meta property="facebook:title" content="{{ $settings->company }}">
+        <meta property="facebook:description" content="{{ $settings->description }}">
+        <meta property="facebook:image" content="{{ $settings->logoThumb }}">
+    @endif
+    @if($settings->twitter)
+        <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
+        <meta property="twitter:card" content="{{ $settings->logoThumb }}">
+        <meta property="twitter:url" content="{{ $settings->twitter }}">
+        <meta property="twitter:title" content="{{ $settings->company }}">
+        <meta property="twitter:description" content="{{ $settings->description }}">
+        <meta property="twitter:image" content="{{ $settings->logoThumb }}">
+    @endif
 @endif
 @if($settings->latitude)
     <meta itemProp="latitude" content="{{ $settings->latitude }}"/>
 @endif
 @if($settings->longitude)
     <meta itemProp="longitude" content="{{ $settings->longitude }}"/>
-@endif
-@if($settings->policy)
-    <meta itemProp="policy" content="{{ $settings->policy}}"/>
 @endif
 
 

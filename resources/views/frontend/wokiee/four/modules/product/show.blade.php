@@ -4,6 +4,30 @@
     {{ Breadcrumbs::render('frontend.product.show',$element) }}
 @endsection
 
+@section('title')
+    <title>{{ $element->name }}</title>
+    <meta name="title" content="{{ $element->name .' '. $element->description }}">
+    @if(\Str::contains(Route::getCurrentRoute()->getName(), ['product','service']))
+        @if($settings->facebook)
+            <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+            <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+            <meta property="facebook:card" content="{{ $element->imageThumbLink }}">
+            <meta property="facebook:url" content="{{ url()->current() }}">
+            <meta property="facebook:title" content="{{ $settings->company }}">
+            <meta property="facebook:description" content="{{ $settings->description }}">
+            <meta property="facebook:image" content="{{ $element->imageThumbLink }}">
+        @endif
+        @if($settings->twitter)
+            <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
+            <meta property="twitter:card" content="{{ $element->imageThumbLink }}">
+            <meta property="twitter:url" content="{{ url()->current() }}">
+            <meta property="twitter:title" content="{{ $settings->company }}">
+            <meta property="twitter:description" content="{{ $settings->description }}">
+            <meta property="twitter:image" content="{{ $element->imageThumbLink }}">
+        @endif
+    @endif
+    @show
+
 @section('body')
     <div class="container-indent">
         @include('frontend.wokiee.four.partials._service_show_gallery_mobile')
