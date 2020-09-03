@@ -10,7 +10,6 @@
     @if(\Str::contains(Route::getCurrentRoute()->getName(), ['product','service']))
         @if($settings->facebook)
             <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
-            <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
             <meta property="facebook:card" content="{{ $element->imageThumbLink }}">
             <meta property="facebook:url" content="{{ url()->current() }}">
             <meta property="facebook:title" content="{{ $element->company }}">
