@@ -100,7 +100,7 @@
                             @foreach($pages as $page)
                                 <li>
                                     <a style="color : black;"
-                                       href="{{ $page->url ? $page->url : route('frontend.page.show.name',['id' => $page->id ,'name' => $element->title]) }}">{{ $page->title }}</a>
+                                       href="{{ $page->url ? $page->url : route('frontend.page.show.name',['id' => $page->id ,'name' => $page->title]) }}">{{ $page->title }}</a>
                                 </li>
                             @endforeach
                             @if(app()->isLocale('en'))

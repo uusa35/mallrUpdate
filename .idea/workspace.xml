@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/samples/900x474.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="75" column="74" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
+            <state relative-caret-position="803">
+              <caret line="74" column="60" lean-forward="true" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -92,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="132" column="36" lean-forward="true" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+            <state relative-caret-position="405">
+              <caret line="102" column="177" lean-forward="true" selection-start-line="102" selection-start-column="177" selection-end-line="102" selection-end-column="177" />
               <folding>
                 <element signature="e#6086#6108#0#HTML" expanded="true" />
               </folding>
@@ -170,9 +167,9 @@
       <find>sale_dat</find>
       <find>mobile</find>
       <find>active</find>
-      <find>pages</find>
       <find>page.show</find>
       <find>slider</find>
+      <find>pages</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -238,8 +235,8 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php" />
       </list>
     </option>
   </component>
@@ -755,12 +752,12 @@
       <workItem from="1598942846279" duration="640000" />
       <workItem from="1598948583461" duration="448000" />
       <workItem from="1599020482544" duration="1334000" />
-      <workItem from="1599025662621" duration="988000" />
+      <workItem from="1599025662621" duration="1623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449780000" />
+    <option name="totallyTimeSpent" value="450415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1153,16 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="132" column="36" lean-forward="true" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
-          <folding>
-            <element signature="e#6086#6108#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -1172,8 +1159,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_images_samples.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="75" column="74" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
+        <state relative-caret-position="803">
+          <caret line="74" column="60" lean-forward="true" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/mobile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="102" column="177" lean-forward="true" selection-start-line="102" selection-start-column="177" selection-end-line="102" selection-end-column="177" />
+          <folding>
+            <element signature="e#6086#6108#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
