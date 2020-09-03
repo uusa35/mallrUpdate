@@ -25,6 +25,14 @@
             <meta property="twitter:description" content="{{ $settings->description }}">
             <meta property="twitter:image" content="{{ $element->imageThumbLink }}">
         @endif
+        @if($settings->instagram)
+            <meta itemProp="instagram" content="{{ $settings->instagram }}"/>
+            <meta property="instagram:card" content="{{ $element->imageThumbLink }}">
+            <meta property="instagram:url" content="{{ url()->current() }}">
+            <meta property="instagram:title" content="{{ $settings->company }}">
+            <meta property="instagram:description" content="{{ $settings->description }}">
+            <meta property="instagram:image" content="{{ $element->imageThumbLink }}">
+        @endif
     @endif
     @show
 
