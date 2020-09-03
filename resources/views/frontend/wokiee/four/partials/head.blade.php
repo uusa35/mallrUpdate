@@ -60,9 +60,6 @@
 @if($settings->longitude)
     <meta itemProp="longitude" content="{{ $settings->longitude }}"/>
 @endif
-@if($settings->policy)
-    <meta itemProp="policy" content="{{ $settings->policy}}"/>
-@endif
 
 
 
