@@ -8,8 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="{{ config('app.name') }}" content="E-commerce">
 <meta name="theme-color" content="{{ $settings->main_theme_color }}">
-<meta name="description"
-      content="{{ trans('general.meta_description') . $settings->company_ar .' ' .  $settings->company_en . ' ' . trans('general.app_keywords')}}">
 <meta name="keywords" content="{{ trans('general.app_keywords') }}"/>
 <meta name="author" content="{{ trans('general.app_author') }}">
 <meta name="country" content="{{ $settings->country }}">
@@ -22,8 +20,31 @@
 <meta name="lang" content="{{ app()->getLocale() }}">
 <input type="hidden" value="{{ app()->getLocale() }}" id="appLang"/>
 <meta itemProp="name" content="{{ $settings->company }}"/>
-<meta itemProp="description" content="{{ trans('general.meta_description') }}"/>
+<meta itemProp="description" content="{{ $settings->company . ' '.  $settings->description }}"/>
 <meta itemProp="image" content="{{ $settings->logoThumb }}"/>
+@if($settings->whatsapp)
+    <meta itemProp="whatsapp" content="{{ $settings->whatsapp }}"/>
+@endif
+@if($settings->android)
+    <meta itemProp="android" content="{{ $settings->android }}"/>
+@endif
+<meta itemProp="apple" content="{{ $settings->apple }}"/>
+@if($settings->facebook)
+    <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+@endif
+@if($settings->twitter)
+    <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
+@endif
+@if($settings->latitude)
+    <meta itemProp="latitude" content="{{ $settings->latitude }}"/>
+@endif
+@if($settings->longitude)
+    <meta itemProp="longitude" content="{{ $settings->longitude }}"/>
+@endif
+@if($settings->policy)
+    <meta itemProp="policy" content="{{ $settings->policy}}"/>
+@endif
+
 <link rel="shortcut icon" href="{{ asset('images/logo.ico') }}"/>
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ $settings->logoThumb }}">
 <link href="{{ $settings->logoThumb }}" rel="shortcut icon" type="image/jpg">
