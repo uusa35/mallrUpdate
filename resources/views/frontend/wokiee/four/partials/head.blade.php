@@ -1,5 +1,6 @@
 @section('title')
     <title>{{ $settings->company_ar .' '. $settings->company_en }}</title>
+    <meta name="title" content="{{ $settings->company_ar .' '. $settings->company_en }}">
 @show
 <meta http-equiv="Content-type" charset="utf-8" content="text/html; charset=utf-8">
 <!--[if IE]>
@@ -22,6 +23,11 @@
 <meta itemProp="name" content="{{ $settings->company }}"/>
 <meta itemProp="description" content="{{ $settings->company . ' '.  $settings->description }}"/>
 <meta itemProp="image" content="{{ $settings->logoThumb }}"/>
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ env('APP_URL') }}">
+<meta property="og:title" content="{{ $settings->comapny_ar . ' '. $settings->company_en }}">
+<meta property="og:description" content="{{ $settings->description }}">
+<meta property="og:image" content="{{ $settings->logoThumb }}">
 @if($settings->whatsapp)
     <meta itemProp="whatsapp" content="{{ $settings->whatsapp }}"/>
 @endif
@@ -31,9 +37,20 @@
 <meta itemProp="apple" content="{{ $settings->apple }}"/>
 @if($settings->facebook)
     <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+    <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
+    <meta property="facebook:card" content="{{ $settings->logoThumb }}">
+    <meta property="facebook:url" content="{{ $settings->facebook }}">
+    <meta property="facebook:title" content="{{ $settings->company }}">
+    <meta property="facebook:description" content="{{ $settings->description }}">
+    <meta property="facebook:image" content="{{ $settings->logoThumb }}">
 @endif
 @if($settings->twitter)
     <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
+    <meta property="twitter:card" content="{{ $settings->logoThumb }}">
+    <meta property="twitter:url" content="{{ $settings->twitter }}">
+    <meta property="twitter:title" content="{{ $settings->company }}">
+    <meta property="twitter:description" content="{{ $settings->description }}">
+    <meta property="twitter:image" content="{{ $settings->logoThumb }}">
 @endif
 @if($settings->latitude)
     <meta itemProp="latitude" content="{{ $settings->latitude }}"/>
@@ -44,6 +61,9 @@
 @if($settings->policy)
     <meta itemProp="policy" content="{{ $settings->policy}}"/>
 @endif
+
+
+
 
 <link rel="shortcut icon" href="{{ asset('images/logo.ico') }}"/>
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ $settings->logoThumb }}">
