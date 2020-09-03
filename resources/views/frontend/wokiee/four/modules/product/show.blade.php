@@ -13,28 +13,28 @@
             <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
             <meta property="facebook:card" content="{{ $element->imageThumbLink }}">
             <meta property="facebook:url" content="{{ url()->current() }}">
-            <meta property="facebook:title" content="{{ $settings->company }}">
-            <meta property="facebook:description" content="{{ $settings->description }}">
+            <meta property="facebook:title" content="{{ $element->company }}">
+            <meta property="facebook:description" content="{{ $element->description }}">
             <meta property="facebook:image" content="{{ $element->imageThumbLink }}">
         @endif
         @if($settings->twitter)
             <meta itemProp="twitter" content="{{ $settings->twitter }}"/>
             <meta property="twitter:card" content="{{ $element->imageThumbLink }}">
             <meta property="twitter:url" content="{{ url()->current() }}">
-            <meta property="twitter:title" content="{{ $settings->company }}">
-            <meta property="twitter:description" content="{{ $settings->description }}">
+            <meta property="twitter:title" content="{{ $element->name }}">
+            <meta property="twitter:description" content="{{ $element->description }}">
             <meta property="twitter:image" content="{{ $element->imageThumbLink }}">
         @endif
         @if($settings->instagram)
             <meta itemProp="instagram" content="{{ $settings->instagram }}"/>
             <meta property="instagram:card" content="{{ $element->imageThumbLink }}">
             <meta property="instagram:url" content="{{ url()->current() }}">
-            <meta property="instagram:title" content="{{ $settings->company }}">
-            <meta property="instagram:description" content="{{ $settings->description }}">
+            <meta property="instagram:title" content="{{ $element->name }}">
+            <meta property="instagram:description" content="{{ $elements->description }}">
             <meta property="instagram:image" content="{{ $element->imageThumbLink }}">
         @endif
     @endif
-    @show
+@show
 
 @section('body')
     <div class="container-indent">
@@ -67,9 +67,9 @@
                         @auth
                             <div class="tt-wrapper mb-5">
                                 <div class="tt-row-btn">
-                                        <a class="btn btn-small col-lg-12 {{ $element->isFavorited ? 'active' : null }}"
-                                           href="{{ route('frontend.favorite.product.add', $element->id) }}"><i
-                                                    class="icon-n-072"></i>{{ trans('general.add_to_wish_list') }}</a>
+                                    <a class="btn btn-small col-lg-12 {{ $element->isFavorited ? 'active' : null }}"
+                                       href="{{ route('frontend.favorite.product.add', $element->id) }}"><i
+                                                class="icon-n-072"></i>{{ trans('general.add_to_wish_list') }}</a>
                                     {{--<li><a class="btn-link" href="#"><i class="icon-n-08"></i>ADD TO COMPARE</a></li>--}}
                                 </div>
                             </div>
