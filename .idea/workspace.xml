@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="565">
-              <caret line="90" column="40" lean-forward="true" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+              <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -54,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="130" lean-forward="true" selection-start-line="30" selection-start-column="130" selection-end-line="30" selection-end-column="130" />
+            <state relative-caret-position="432">
+              <caret line="29" column="122" selection-start-line="29" selection-start-column="122" selection-end-line="29" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -716,12 +715,12 @@
       <workItem from="1599053545908" duration="231000" />
       <workItem from="1599129383164" duration="3126000" />
       <workItem from="1599205707123" duration="307000" />
-      <workItem from="1599366852074" duration="205000" />
+      <workItem from="1599366852074" duration="264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="454701000" />
+    <option name="totallyTimeSpent" value="454760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1106,7 +1105,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
-          <caret line="90" column="40" lean-forward="true" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+          <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1119,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/RangeTimingLightResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="130" lean-forward="true" selection-start-line="30" selection-start-column="130" selection-end-line="30" selection-end-column="130" />
+        <state relative-caret-position="432">
+          <caret line="29" column="122" selection-start-line="29" selection-start-column="122" selection-end-line="29" selection-end-column="122" />
         </state>
       </provider>
     </entry>
