@@ -35,10 +35,10 @@
         </div>
     </div>
     <div class="container-fluid tt-top-line">
-        <div class="row">
+        <div class="row" style="margin-top: 50px;">
             <div class="tt-logo-container">
                 <!-- mobile logo -->
-                <a class="tt-logo tt-logo-alignment" style="padding-top: 50px;" href="{{ route('frontend.home') }}">
+                <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
                     <img class="text-center" src="{{ $settings->logoThumb }}" alt="{{ $settings->description }}">
                 </a>
                 <!-- /mobile logo -->

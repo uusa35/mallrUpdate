@@ -27,7 +27,8 @@ class RangeTimingLightResource extends JsonResource
     public function toArray($request)
     {
         $col = collect([]);
-        $newPeriod = new \DatePeriod(Carbon::parse($this->service->start_date),  CarbonInterval::day(1), Carbon::parse($this->service->end_date));
+        $startDate = Carbon::parse($this->service->start_date) > Carbon::now()  ? Carbon::parse($this->service->start_date) : Carbon::now();
+        $newPeriod = new \DatePeriod(Carbon::parse($startDate),  CarbonInterval::day(1), Carbon::parse($this->service->end_date));
         if($newPeriod) {
             foreach($newPeriod as $date) {
                 $day =  Carbon::parse($date)->format('l');
