@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/order-complete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/order-complete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +65,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="723">
-                  <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+                <state relative-caret-position="475">
+                  <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -923,12 +922,12 @@
       <workItem from="1599129383164" duration="3126000" />
       <workItem from="1599205707123" duration="307000" />
       <workItem from="1599366852074" duration="1952000" />
-      <workItem from="1599462758242" duration="11015000" />
+      <workItem from="1599462758242" duration="11054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467463000" />
+    <option name="totallyTimeSpent" value="467502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1334,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        <state relative-caret-position="475">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
         </state>
       </provider>
     </entry>
