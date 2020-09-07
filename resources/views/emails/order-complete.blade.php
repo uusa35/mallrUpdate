@@ -1,5 +1,5 @@
 @component('mail::message')
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <div style="display: flex; width : 100%; align-items: center; justify-content: center">
 <img src="{{ $settings->getCurrentImageAttribute('logo') }}" alt="{{ $settings->company }}" style="width : 150px; margin-bottom: 20px">
 </div>

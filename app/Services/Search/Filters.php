@@ -199,6 +199,10 @@ class Filters extends QueryFilters
         return $this->builder->whereDate('end_date','>=', Carbon::parse(request('date_range')));
     }
 
+    public function exact_date() {
+        return $this->builder->whereDate('end_date','=', Carbon::parse(request('exact_date')));
+    }
+
     public function timing_value()
     {
         return $this->builder->whereHas('timings', function ($q) {
