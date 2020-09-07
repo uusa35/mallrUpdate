@@ -2,10 +2,10 @@
     <title>{{ $settings->company_ar .' '. $settings->company_en }}</title>
     <meta name="title" content="{{ $settings->company_ar .' '. $settings->company_en }}">
 @show
-<meta http-equiv="Content-type" charset="utf-8" content="text/html; charset=utf-8">
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <![endif]-->
+<meta http-equiv="Content-type" charset="utf-8" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="{{ config('app.name') }}" content="E-commerce">
 <meta name="theme-color" content="{{ $settings->main_theme_color }}">
@@ -35,7 +35,7 @@
     <meta itemProp="android" content="{{ $settings->android }}"/>
 @endif
 <meta itemProp="apple" content="{{ $settings->apple }}"/>
-@if(!\Str::contains(Route::getCurrentRoute()->getName(), ['product','service']))
+@if(Route::getCurrentRoute() && !\Str::contains(Route::getCurrentRoute()->getName(), ['product','service']))
     @if($settings->facebook)
         <meta itemProp="facebook" content="{{ $settings->facebook }}"/>
         <meta itemProp="facebook" content="{{ $settings->facebook }}"/>

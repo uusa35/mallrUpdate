@@ -134,6 +134,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     // checkout.review is order.show
     Route::resource('order', 'OrderController');
     Route::get('view/invoice/{id}', 'OrderController@viewInvoice')->name('invoice.show');
+    Route::get('view/invoice/pdf/{id}', 'OrderController@pdfInvoice')->name('invoice.pdf');
     Route::get('order/cash/delivery/{id}', 'OrderController@cashOnDeliveryReceived')->name('order.cash.delivery');
     Route::resource('category', 'CategoryController');
     Route::resource('user', 'UserController');
@@ -185,8 +186,20 @@ if (app()->environment('production') || app()->environment('local')) {
     });
     Route::get('/post/{id}/{role}', 'Frontend\HomeController@getInfo');
 }
+Route::get('/marwa/{scoreOne}/{scoreTow}/{scoreThree}/{attestedHours}', function ($materialScoreOne, $materialScoreTow, $materialScoreThree, $attestedHours) {
+    $degreeOne = $materialScoreOne / 25;
+    $degreeTow = $materialScoreTow / 25;
+    $degreeThree = $materialScoreThree / 25;
+    $pointOne = $degreeOne * $attestedHours;
+    $pointTow = $degreeTow * $attestedHours;
+    $pointThree = $degreeThree * $attestedHours;
+    $semesterRate = ($pointOne + $pointTow + $pointThree) / 3;
+    $collectiveRate = $semesterRate / 3;
+    return response()->json(['Grade Point Average (GPA)' => round($collectiveRate,2)], 200);
+});
 
 Route::get('/{notFound}', function () {
     abort('404', trans('message.not_found'));
 });
+
 
