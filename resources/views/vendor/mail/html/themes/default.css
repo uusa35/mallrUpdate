@@ -43,7 +43,7 @@
     /* Typography */
     h1 {
         color: #3d4852;
-        font-size: 19px;
+        font-size: 14px;
         font-weight: bold;
         margin-top: 0;
         text-align: left;
@@ -51,7 +51,7 @@
 
     h2 {
         color: #3d4852;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
         margin-top: 0;
         text-align: left;
@@ -59,7 +59,7 @@
 
     h3 {
         color: #3d4852;
-        font-size: 14px;
+        font-size: 10px;
         font-weight: bold;
         margin-top: 0;
         text-align: left;
@@ -67,7 +67,7 @@
 
     p {
         color: #3d4852;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 1.5em;
         margin-top: 0;
         text-align: left;
@@ -75,7 +75,7 @@
     }
 
     p.sub {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bolder;
     }
 
