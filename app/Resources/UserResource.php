@@ -24,7 +24,7 @@ class UserResource extends JsonResource
             'description' => $this->description,
             'service' => $this->service,
             'email' => $this->email,
-            'mobile' => $this->fullMobile,
+            'mobile' => $this->mobile,
             'fullMobile' => $this->fullMobile,
             'phone' => $this->phone ? '+'.$this->country->calling_code  . $this->phone : null,
             'fax' => $this->fax ? $this->country->calling_code  . $this->fax : null,
