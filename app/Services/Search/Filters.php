@@ -200,7 +200,7 @@ class Filters extends QueryFilters
     }
 
     public function exact_date() {
-        return $this->builder->whereDate('start_date','=', Carbon::parse(request('exact_date')));
+        return $this->builder->whereDate('start_date','>=', Carbon::parse(request('exact_date')));
     }
 
     public function timing_value()
