@@ -65,8 +65,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="531">
-                  <caret line="190" column="27" lean-forward="true" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
+                <state relative-caret-position="333">
+                  <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -241,10 +241,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>title</find>
-      <find>facebook:url</find>
-      <find>facebook</find>
-      <find>@section('title</find>
       <find>append</find>
       <find>settings</find>
       <find>polic</find>
@@ -271,6 +267,10 @@
       <find>@sc</find>
       <find>font-siz</find>
       <find>th {</find>
+      <find>body</find>
+      <find>table</find>
+      <find>80%</find>
+      <find>tbody</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -922,12 +922,12 @@
       <workItem from="1599129383164" duration="3126000" />
       <workItem from="1599205707123" duration="307000" />
       <workItem from="1599366852074" duration="1952000" />
-      <workItem from="1599462758242" duration="10645000" />
+      <workItem from="1599462758242" duration="10874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467093000" />
+    <option name="totallyTimeSpent" value="467322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1333,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/themes/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="190" column="27" lean-forward="true" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
+        <state relative-caret-position="333">
+          <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
         </state>
       </provider>
     </entry>
