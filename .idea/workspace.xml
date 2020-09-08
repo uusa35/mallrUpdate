@@ -46,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="603">
-                  <caret line="191" column="82" selection-start-line="191" selection-start-column="82" selection-end-line="191" selection-end-column="82" />
+                <state relative-caret-position="711">
+                  <caret line="197" column="27" selection-start-line="197" selection-start-column="27" selection-end-line="197" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -241,7 +241,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tt-logo tt-logo-alignment</find>
       <find>@scr</find>
       <find>th</find>
       <find>Barryvdh\DomPDF\ServiceProvider::class,</find>
@@ -271,6 +270,7 @@
       <find>menu_</find>
       <find>header .tt-color-scheme-01 .tt-box-info ul li a</find>
       <find>.tt-social-icon li a</find>
+      <find>.tt-logo img</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -922,12 +922,12 @@
       <workItem from="1599129383164" duration="3126000" />
       <workItem from="1599205707123" duration="307000" />
       <workItem from="1599366852074" duration="1952000" />
-      <workItem from="1599462758242" duration="12228000" />
+      <workItem from="1599462758242" duration="12459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468676000" />
+    <option name="totallyTimeSpent" value="468907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1329,8 +1329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="191" column="82" selection-start-line="191" selection-start-column="82" selection-end-line="191" selection-end-column="82" />
+        <state relative-caret-position="711">
+          <caret line="197" column="27" selection-start-line="197" selection-start-column="27" selection-end-line="197" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -193,6 +193,11 @@
         color: {{ $settings->menu_theme_bg ? 'white' : $settings->menu_theme_color }}               !important;
     }
 
+    .tt-logo img {
+        margin-top : 12px;
+        margin-bottom: 0px;
+    }
+
     .countdown-selection
     .theme-color,
     .tt-countdown, .tt-countdown_box,
