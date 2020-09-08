@@ -133,7 +133,7 @@
         background-color: {{ $settings->header_theme_bg }}                 !important;
     }
 
-    footer .tt-color-scheme-02, footer, .tt-footer-center, .tt-footer-col, footer .tt-footer-custom:last-child {
+    footer .tt-color-scheme-02, footer, .tt-footer-center, footer .tt-footer-custom:last-child {
         color: {{ $settings->footer_theme_color }}                 !important;
         background-color: {{ $settings->footer_bg_theme_color }}                 !important;
     }
@@ -185,7 +185,7 @@
         border-bottom-width: 5px;
     }
 
-    footer .tt-footer-col {
+    .tt-footer-col {
         border-top-color: {{ $settings->menu_theme_bg }}  !important;
         border-bottom-width: 5px;
     }
