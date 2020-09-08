@@ -46,8 +46,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="477">
-                  <caret line="194" column="74" selection-start-line="194" selection-start-column="74" selection-end-line="194" selection-end-column="74" />
+                <state relative-caret-position="911">
+                  <caret line="187" column="32" selection-start-line="187" selection-start-column="32" selection-end-line="187" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -56,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/resources/views/emails/order-complete.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="324">
-                  <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+                  <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
                   <folding>
                     <element signature="e#34#115#0#HTML" expanded="true" />
                     <element signature="e#266#291#0#HTML" expanded="true" />
@@ -244,8 +244,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loadHt</find>
-      <find>font-sz</find>
       <find>font-si</find>
       <find>strong</find>
       <find>p {</find>
@@ -274,6 +272,8 @@
       <find>border-bottom</find>
       <find>footer .tt-footer-col</find>
       <find>.tt-footer-col</find>
+      <find>footer .tt-footer-custom:last-child</find>
+      <find>footer .tt-color-scheme-02</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -925,12 +925,12 @@
       <workItem from="1599129383164" duration="3126000" />
       <workItem from="1599205707123" duration="307000" />
       <workItem from="1599366852074" duration="1952000" />
-      <workItem from="1599462758242" duration="14706000" />
+      <workItem from="1599462758242" duration="15118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471154000" />
+    <option name="totallyTimeSpent" value="471566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1320,7 +1320,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/emails/order-complete.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="e#34#115#0#HTML" expanded="true" />
             <element signature="e#266#291#0#HTML" expanded="true" />
@@ -1335,8 +1335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="194" column="74" selection-start-line="194" selection-start-column="74" selection-end-line="194" selection-end-column="74" />
+        <state relative-caret-position="911">
+          <caret line="187" column="32" selection-start-line="187" selection-start-column="32" selection-end-line="187" selection-end-column="32" />
         </state>
       </provider>
     </entry>

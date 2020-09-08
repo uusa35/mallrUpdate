@@ -185,9 +185,8 @@
         border-bottom-width: 5px;
     }
 
-    .tt-footer-col {
-        border-top-color: {{ $settings->menu_theme_bg }}  !important;
-        border-bottom-width: 5px;
+    footer .tt-color-scheme-02 {
+        border-top: 5px solid {{ $settings->menu_theme_bg }} !important;
     }
 
     header .tt-color-scheme-01 {
