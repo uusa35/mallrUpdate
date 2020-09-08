@@ -192,6 +192,7 @@
 
     header .tt-color-scheme-01 {
         background-color: {{ $settings->menu_theme_bg }}   !important;
+        color: {{ $settings->menu_theme_color }}               !important;
     }
 
     header .tt-color-scheme-01 .tt-box-info ul li a , header .tt-social-icon li a {
