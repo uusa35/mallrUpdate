@@ -10,7 +10,7 @@
 # {{ trans('general.order_number') }} : {{ $order->id }}
 <strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.gentlemen') }} / {{ $user->name ? $user->name : $user->slug }}</strong><br>
 <strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.address') }}/ {{ $user->address }}</strong><br>
-<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>
+{{--<strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.area') }}/ {{ $order->area }}</strong><br>--}}
 <strong style="float : {{ app()->getLocale() === 'ar' ? 'right' : 'left' }}; direction : {{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"> {{ trans('general.mobile') }} / {{ $user->mobile }}</strong>
 <br>
 @endcomponent
