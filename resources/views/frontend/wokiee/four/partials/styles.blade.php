@@ -185,6 +185,11 @@
         border-bottom-width: 5px;
     }
 
+    footer .tt-footer-col {
+        border-top-color: {{ $settings->menu_theme_bg }}  !important;
+        border-bottom-width: 5px;
+    }
+
     header .tt-color-scheme-01 {
         background-color: {{ $settings->menu_theme_bg }}   !important;
     }
@@ -266,7 +271,7 @@
 
     @if(env('NASHKW'))
     body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-        font-family: 'Tajawal-Medium', 'sans-serif' !important;
+        font-family: 'GE SS Unique', 'sans-serif' !important;
         text-transform: uppercase !important;
     }
     @endif
