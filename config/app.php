@@ -197,6 +197,7 @@ return [
         //NotificationChannels\OneSignal\OneSignalServiceProvider::class,
         Berkayk\OneSignal\OneSignalServiceProvider::class,
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
         // TelescopeServiceProvider::class
 
     ],
@@ -251,7 +252,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
-
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

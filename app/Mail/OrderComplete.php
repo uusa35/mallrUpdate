@@ -34,5 +34,9 @@ class OrderComplete extends Mailable
     public function build()
     {
         $this->markdown('emails.order-complete');
+        $this->withSwiftMessage(function ($message) {
+            $message->getHeaders()
+                ->addTextHeader('"Content-Type', 'text/html; charset=utf-8');
+        });
     }
 }

@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\Setting;
 use App\Services\CartTrait;
 use App\Services\Traits\OrderTrait;
+use Barryvdh\DomPDF\Facade as PDF;
 use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Markdown;
@@ -90,6 +91,16 @@ class OrderController extends Controller
         $order = Order::whereId($id)->with('order_metas.product', 'order_metas.product_attribute.color', 'order_metas.product_attribute.size', 'services')->first();
         $markdown = new Markdown(view(), config('mail.markdown'));
         return $markdown->render('emails.order-complete', ['order' => $order, 'user' => $order->user]);
+    }
+
+    public function pdfInvoice($id) {
+        $order = Order::whereId($id)->with('order_metas.product', 'order_metas.product_attribute.color', 'order_metas.product_attribute.size', 'services')->first();
+        $markdown = new Markdown(view(), config('mail.markdown'));
+        $final =  $markdown->render('emails.order-complete', ['order' => $order, 'user' => $order->user]);
+//        dd(html_entity_decode($final));
+//        $pdf = PDF::loadView('emails.order-complete', ['order' => $order, 'user' => $order->user])->setPaper('a4', 'landscape');
+        $pdf = PDF::loadHTML($final)->setPaper('a4','portrait');
+        return $pdf->save('invoice.pdf','storage/public/uploads/files','UTF-8')->stream('download.pdf');
     }
 
     /**

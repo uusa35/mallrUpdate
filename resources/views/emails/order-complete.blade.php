@@ -1,5 +1,4 @@
 @component('mail::message')
-
 <div style="display: flex; width : 100%; align-items: center; justify-content: center">
 <img src="{{ $settings->getCurrentImageAttribute('logo') }}" alt="{{ $settings->company }}" style="width : 150px; margin-bottom: 20px">
 </div>
@@ -38,7 +37,7 @@
 @endif
 @if($orderMeta->isQuestionnaireType)
 @component('mail::panel')
-<div style="font-size: large; font-weight: bold;">
+<div style="font-size: small; font-weight: bold;">
 {{ trans('message.questionnaire_order_message') }}
 </div>
 @endcomponent
@@ -63,7 +62,7 @@
 <hr>
 
 @component('mail::panel')
-<div style="font-size: large; font-weight: bold; text-align: center !important;">
+<div style="font-size: small; font-weight: bold; text-align: center !important;">
 {{ trans('message.we_received_your_order_order_shall_be_reviewed_thank_your_for_choosing_our_service') }}
 </div>
 @endcomponent
