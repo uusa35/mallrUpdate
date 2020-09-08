@@ -198,6 +198,10 @@
         margin-bottom: 0px;
     }
 
+    .tt-desctop-menu img {
+        max-width: 250px;
+    }
+
     .countdown-selection
     .theme-color,
     .tt-countdown, .tt-countdown_box,
