@@ -17,7 +17,7 @@
                                                         {{ $sub->name }}
                                                         <img class="img-menu-category img-responsive"
                                                              src="{{ asset(env('IMG_LOADER')) }}"
-                                                             data-src="{{ $sub->imageThumbLink }}"
+                                                             data-src="{{ $sub->getImageThumbLinkAttribute() }}"
                                                              alt="{{ $sub->name }}">
                                                     @endif
                                                 </a>
@@ -45,7 +45,7 @@
                                                class="tt-promo-02">
                                                 <img class="img-category img-responsive"
                                                      src="{{ asset(env('IMG_LOADER')) }}"
-                                                     data-src="{{ $cat->imageThumbLink }}"
+                                                     data-src="{{ $cat->getImageThumbLinkAttribute() }}"
                                                      alt="{{ $cat->name }}">
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">
                                                     <div class="tt-description-wrapper">
@@ -85,7 +85,7 @@
                                                         {{ $sub->name }}
                                                         <img class="img-menu-category img-responsive"
                                                              src="{{ asset(env('IMG_LOADER')) }}"
-                                                             data-src="{{ $sub->imageThumbLink }}"
+                                                             data-src="{{ $sub->getImageThumbLinkAttribute() }}"
                                                              alt="{{ $sub->name }}">
                                                     @endif
                                                 </a>
@@ -113,7 +113,7 @@
                                                class="tt-promo-02">
                                                 <img class="img-category img-responsive"
                                                      src="{{ asset(env('IMG_LOADER')) }}"
-                                                     data-src="{{ $cat->imageThumbLink }}"
+                                                     data-src="{{ $cat->getImageThumbLinkAttribute() }}"
                                                      alt="{{ $cat->name }}">
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">
                                                     <div class="tt-description-wrapper">
