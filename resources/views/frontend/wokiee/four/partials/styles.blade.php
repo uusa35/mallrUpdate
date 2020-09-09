@@ -276,7 +276,7 @@
     }
     @endif
 
-    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after {
+    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before {
         font-family: wokiee!important;
     }
 </style>
