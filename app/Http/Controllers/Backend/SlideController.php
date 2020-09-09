@@ -80,7 +80,7 @@ class SlideController extends Controller
         $item = $item->withoutGlobalScopes()->whereId($request->slidable_id)->first();
         $element = $item->slides()->create($request->request->all());
         if ($element) {
-            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], [$request->is_intro ? '900' : '1900'], true) : null;
+            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1900'], true) : null;
             $request->hasFile('path') ? $this->savePath($request, $element) : null;
             return redirect()->route('backend.slide.index', ['slidable_id' => $element->slidable_id, 'slidable_type' => request('slidable_type')])->with('success', trans('message.store_success'));
         }
@@ -129,7 +129,7 @@ class SlideController extends Controller
         $element = Slide::whereId($id)->first();
         $updated = $element->update($request->request->all());
         if ($updated) {
-            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], [$request->is_intro ? '900' : '1900'], true) : null;
+            $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1900'], true) : null;
             $request->hasFile('path') ? $this->savePath($request, $element) : null;
             return redirect()->route('backend.slide.index', ['slidable_id' => $element->slidable_id, 'slidable_type' => $element->type])->with('success', trans('message.update_success'));
         }
