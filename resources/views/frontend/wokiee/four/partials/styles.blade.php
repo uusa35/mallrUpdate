@@ -275,4 +275,8 @@
         text-transform: uppercase !important;
     }
     @endif
+
+    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after {
+        font-family: wokiee!important;
+    }
 </style>
