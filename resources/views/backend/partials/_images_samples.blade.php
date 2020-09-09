@@ -61,10 +61,10 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">{{ trans('general.slides') }} - {{ trans('general.image') }}</div>
                         <div class="panel-body text-center">
-                            <img src="{{ asset('images/samples/900x1900.png') }}" class="img-responsive"/>
+                            <img src="http://placehold.it/900x1900?text=900x1900" class="img-responsive"/>
                             <div class="alert alert-danger">
                                 Intro Slide Width is 900px and maxHeight is 1900px </br>
-                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 474px (Home Slide))
+                                Normal Slides should be width : 1900px x (Height must be 1900px (Intro Slide) or Height 575 (Home Slide))
                             </div>
                         </div>
                     </div>
@@ -73,10 +73,10 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">{{ trans('general.slides') }} - {{ trans('general.image') }}</div>
                         <div class="panel-body text-center">
-                            <img src="{{ asset('images/samples/900x474.png') }}" class="img-responsive"/>
+                            <img src="http://placehold.it/900x575?text=900x575" class="img-responsive"/>
                             <div class="alert alert-danger">
                                 Intro Slide Width is 900px and maxHeight is 1900px </br>
-                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 474px (Home Slide))
+                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 575px (Home Slide))
                             </div>
                         </div>
                     </div>
