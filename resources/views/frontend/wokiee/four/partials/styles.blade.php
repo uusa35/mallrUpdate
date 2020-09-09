@@ -201,6 +201,9 @@
     .tt-desctop-menu img {
         max-width: 250px;
     }
+    .img-menu-category {
+        max-height: 250px !important;
+    }
 
     .countdown-selection
     .theme-color,
