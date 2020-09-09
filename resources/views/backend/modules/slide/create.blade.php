@@ -80,7 +80,7 @@
                                                        data-original-title="{{ trans('message.image') }}" name="image"
                                                        placeholder="{{ trans('general.image') }}" required>
                                                 <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '900 px', 'height' => 'Height is 1900 px for Intro / 474 for Home Slide']) }}
+                                                    {{ trans('message.best_fit',['width' => '900 px', 'height' => 'Height is 1900 px for Intro / 375 for Home Slide']) }}
                                                 </div>
                                             </div>
                                         </div>
