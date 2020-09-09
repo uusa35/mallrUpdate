@@ -1,5 +1,4 @@
 <div class="tt-header-holder">
-
     <div class="tt-obj-logo obj-aligment-center">
         <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
             <img class="text-center" src="{{ $settings->logoThumb }}"
