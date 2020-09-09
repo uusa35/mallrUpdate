@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="278" column="161" selection-start-line="278" selection-start-column="161" selection-end-line="278" selection-end-column="161" />
+            <state relative-caret-position="839">
+              <caret line="278" column="221" selection-start-line="278" selection-start-column="221" selection-end-line="278" selection-end-column="221" />
             </state>
           </provider>
         </entry>
@@ -63,7 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table</find>
       <find>80%</find>
       <find>tbody</find>
       <find>tt-desktop-header</find>
@@ -93,6 +91,7 @@
       <find>laravel</find>
       <find>support</find>
       <find>.modal .modal-header .close:before</find>
+      <find>.slider-revolution.revolution-default .tp-leftarrow:before</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -672,12 +671,12 @@
       <workItem from="1599628407233" duration="1000" />
       <workItem from="1599642102654" duration="39000" />
       <workItem from="1599642377977" duration="1079000" />
-      <workItem from="1599651264451" duration="5000" />
+      <workItem from="1599651264451" duration="64000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474244000" />
+    <option name="totallyTimeSpent" value="474303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1079,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="278" column="161" selection-start-line="278" selection-start-column="161" selection-end-line="278" selection-end-column="161" />
+        <state relative-caret-position="839">
+          <caret line="278" column="221" selection-start-line="278" selection-start-column="221" selection-end-line="278" selection-end-column="221" />
         </state>
       </provider>
     </entry>
