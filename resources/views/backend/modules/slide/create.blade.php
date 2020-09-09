@@ -11,6 +11,16 @@
         <div class="portlet-body">
             @include('backend.partials._admin_instructions',['title' => trans('general.slides') ,'message' => trans('message.index_slide')])
             <div class="portlet-body form">
+                <div class="alert alert-danger">
+                    <ul>
+                        <li>
+                            Home Slide : width  : 1905px x height : 750px
+                        </li>
+                        <li>
+                            Intro Slide : width  : 900px x height : 1900px
+                        </li>
+                    </ul>
+                </div>
                 <form class="horizontal-form" role="form" method="POST" action="{{ route('backend.slide.store') }}"
                       enctype="multipart/form-data">
                     @csrf
