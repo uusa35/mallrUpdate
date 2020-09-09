@@ -199,8 +199,9 @@
     }
 
     .tt-logo img {
-        margin-top : 12px;
-        margin-bottom: 0px;
+        /*margin-top : 12px;*/
+        /*margin-bottom: 0px;*/
+        max-height: 60px !important;
     }
 
     .tt-desctop-menu img {
