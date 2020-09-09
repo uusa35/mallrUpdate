@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="container-fluid tt-top-line">
-        <div class="row" style="margin-top: 50px;">
+        <div class="row">
             <div class="tt-logo-container">
                 <!-- mobile logo -->
                 <a class="tt-logo tt-logo-alignment" href="{{ route('frontend.home') }}">
