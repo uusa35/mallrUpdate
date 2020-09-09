@@ -133,7 +133,7 @@
         background-color: {{ $settings->header_theme_bg }}                 !important;
     }
 
-    footer .tt-color-scheme-02, footer, .tt-footer-center, .tt-footer-col, footer .tt-footer-custom:last-child {
+    footer .tt-color-scheme-02, footer, .tt-footer-center, footer .tt-footer-custom:last-child {
         color: {{ $settings->footer_theme_color }}                 !important;
         background-color: {{ $settings->footer_bg_theme_color }}                 !important;
     }
@@ -185,8 +185,13 @@
         border-bottom-width: 5px;
     }
 
+    footer .tt-color-scheme-02 {
+        border-top: 5px solid {{ $settings->menu_theme_bg }} !important;
+    }
+
     header .tt-color-scheme-01 {
         background-color: {{ $settings->menu_theme_bg }}   !important;
+        color: {{ $settings->menu_theme_color }}               !important;
     }
 
     header .tt-color-scheme-01 .tt-box-info ul li a , header .tt-social-icon li a {
@@ -266,8 +271,12 @@
 
     @if(env('NASHKW'))
     body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-        font-family: 'Tajawal-Medium', 'sans-serif' !important;
+        font-family: 'GE SS Unique', 'sans-serif' !important;
         text-transform: uppercase !important;
     }
     @endif
+
+    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after {
+        font-family: wokiee!important;
+    }
 </style>
