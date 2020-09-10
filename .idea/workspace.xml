@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="297" column="37" lean-forward="true" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="37" />
+            <state relative-caret-position="803">
+              <caret line="296" column="5" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -136,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cover</find>
       <find>style</find>
       <find>margin</find>
       <find>logo</find>
@@ -166,6 +165,7 @@
       <find>data-bgposition</find>
       <find>max</find>
       <find>tp-banner-container</find>
+      <find>.slider-revolution</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -805,12 +805,12 @@
       <workItem from="1599651264451" duration="3174000" />
       <workItem from="1599676222223" duration="2200000" />
       <workItem from="1599715928781" duration="4567000" />
-      <workItem from="1599730188697" duration="3566000" />
+      <workItem from="1599730188697" duration="3729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="487746000" />
+    <option name="totallyTimeSpent" value="487909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1212,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="297" column="37" lean-forward="true" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="37" />
+        <state relative-caret-position="803">
+          <caret line="296" column="5" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
         </state>
       </provider>
     </entry>

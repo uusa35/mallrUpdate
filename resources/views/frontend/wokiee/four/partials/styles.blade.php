@@ -294,7 +294,7 @@
         margin-top: 10px;
     }
 
-    .tp-banner-container {
+    .tp-banner-container, .slider-revolution {
       max-height: 730px !important;
     }
 </style>
