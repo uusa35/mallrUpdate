@@ -143,7 +143,7 @@
                     </div>
                     <div class="col-12">
                         <p>
-                            &copy; {{ trans("message.copy_right") }}
+                            &copy; {{ trans("message.copy_right") }} - {{  $settings->company }}
                         </p>
                     </div>
                 </div>
