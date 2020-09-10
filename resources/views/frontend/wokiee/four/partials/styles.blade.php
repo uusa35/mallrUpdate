@@ -293,4 +293,8 @@
     .tt-header-holder {
         margin-top: 10px;
     }
+
+    .tp-banner-container {
+      max-height: 730px !important;
+    }
 </style>
