@@ -176,7 +176,7 @@
                     <div class="tt-col-item">
                         <!-- copyright -->
                         <div class="tt-box-copyright">
-                            &copy; {!! trans("message.copy_right")  !!}
+                            &copy; {!! trans("message.copy_right")  !!} - {{ $settings->company }}
                         </div>
                         <!-- /copyright -->
                     </div>
