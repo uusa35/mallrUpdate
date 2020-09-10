@@ -280,4 +280,8 @@
     .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before, .slider-revolution.revolution-default .tp-leftarrow:before {
         font-family: wokiee!important;
     }
+
+    .tt-header-holder {
+        margin-top : 10px;
+    }
 </style>
