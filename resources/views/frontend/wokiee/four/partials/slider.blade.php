@@ -14,7 +14,7 @@
                                     data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"
                                     data-title="Slide">
                                     <img src="{{ $s->imageLargeLink }}" alt="slide1"
-                                         data-bgposition="center center" data-bgfit="cover"
+                                         data-bgposition="center center" data-bgfit="contain"
                                          data-bgrepeat="no-repeat">
                                     <div class="tp-caption tp-caption1 lft stb"
                                          data-x="center"
