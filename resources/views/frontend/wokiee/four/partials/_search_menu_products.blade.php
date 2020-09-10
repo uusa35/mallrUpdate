@@ -1,4 +1,4 @@
-<div class="tt-col-obj tt-obj-search-type2">
+<div class="tt-col-obj tt-obj-search-type2 hidden-xs">
     <div class="tt-search-type2">
         <!-- tt-search -->
         <form action="{{ route('frontend.product.search') }}" method="get" role="search">
