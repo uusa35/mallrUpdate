@@ -22,7 +22,7 @@
                 background-color: transparent !important;
             }
 
-            .tt-product:not(.tt-view) .tt-description {
+            .tt-product:not(.tt-view) .tt-description, .tt-footer-col  {
                 background-color: black !important;
             }
         </style>
@@ -48,7 +48,7 @@
                 background-color: transparent !important;
             }
 
-            .tt-product:not(.tt-view) .tt-description {
+            .tt-product:not(.tt-view) .tt-description, .tt-footer-col {
                 background-color: black !important;
             }
         </style>
