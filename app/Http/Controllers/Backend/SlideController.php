@@ -69,7 +69,7 @@ class SlideController extends Controller
         $validate = validator($request->all(), [
             'slidable_id' => 'required|numeric',
             'slidable_type' => 'required|alpha',
-            'image' => "image|dimensions:max_width=1900,max_height=1900,min_height=750|max:".env('MAX_IMAGE_SIZE').'"',
+            'image' => "image|dimensions:max_width=1900,max_height=1900,min_height=720|max:".env('MAX_IMAGE_SIZE').'"',
 //            'image' => 'required|image|dimensions:width=1900,height=1000'
         ]);
         if ($validate->fails()) {
@@ -121,7 +121,7 @@ class SlideController extends Controller
     public function update(Request $request, $id)
     {
         $validate = validator($request->all(), [
-            'image' => "image|dimensions:max_width=1900,max_height=1900,min_height=750|max:".env('MAX_IMAGE_SIZE').'"',
+            'image' => "image|dimensions:max_width=1900,max_height=1900,min_height=720|max:".env('MAX_IMAGE_SIZE').'"',
         ]);
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate->errors());
