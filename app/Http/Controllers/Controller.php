@@ -11,7 +11,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, ImageHelpers, OrderTrait;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, ImageHelpers;
+//        OrderTrait;
     const TAKE = 100;
     const TAKE_MID = 24;
     const TAKE_MIN = 12;

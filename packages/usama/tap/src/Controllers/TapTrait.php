@@ -7,12 +7,14 @@ use App\Models\Product;
 use App\Models\ProductAttribute;
 use App\Models\Setting;
 use App\Models\User;
+use App\Services\Traits\OrderTrait;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use mysql_xdevapi\Exception;
 
 trait TapTrait
 {
+    use OrderTrait;
     public function processPayment($order, $user)
     {
         try {

@@ -2,8 +2,11 @@
 
 namespace Usama\MyFatoorah;
 
+use App\Services\Traits\OrderTrait;
+
 trait MyFatoorahTrait
 {
+    use OrderTrait;
     public function processPayment($order, $user)
     {
         try {
