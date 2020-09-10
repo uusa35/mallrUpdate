@@ -64,7 +64,7 @@
                             <img src="http://placehold.it/900x1900?text=900x1900" class="img-responsive"/>
                             <div class="alert alert-danger">
                                 Intro Slide Width is 900px and maxHeight is 1900px </br>
-                                Normal Slides should be width : 1900px x (Height must be 1900px (Intro Slide) or Height 630 (Home Slide))
+                                Normal Slides should be width : 1900px x (Height must be 1900px (Intro Slide) or Height 750 (Home Slide))
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <img src="http://placehold.it/1900x575?text=1900x750" class="img-responsive"/>
                             <div class="alert alert-danger">
                                 Intro Slide Width is 900px and maxHeight is 1900px </br>
-                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 630px (Home Slide))
+                                Normal Slides should be width : 900px x (Height must be 1900px (Intro Slide) or Height 750px (Home Slide))
                             </div>
                         </div>
                     </div>
