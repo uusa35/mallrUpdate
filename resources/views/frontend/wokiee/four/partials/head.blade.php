@@ -1,6 +1,6 @@
 @section('title')
-    <title>{{ $settings->company_ar .' '. $settings->company_en }}</title>
-    <meta name="title" content="{{ $settings->company_ar .' '. $settings->company_en }}">
+<title>{{ $settings->company_ar .' '. $settings->company_en }}</title>
+<meta name="title" content="{{ $settings->company_ar .' '. $settings->company_en }}">
 @show
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,9 +64,10 @@
 
 
 
-<link rel="shortcut icon" href="{{ asset('images/logo.ico') }}"/>
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ $settings->logoThumb }}">
-<link href="{{ $settings->logoThumb }}" rel="shortcut icon" type="image/jpg">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+      href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}">
+{{--<link href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}" rel="shortcut icon" type="image/jpg" >--}}
+<link href="{{ asset(env('APP_CASE').'.ico') }}" rel="shortcut icon" type="image/x-icon">
 @if(env('ESCRAP'))
     <meta name="google-site-verification" content="SR81NY4elhoRSNXOc1cHIIpu80aTPeiDiipsk4CMvRo"/>
 @elseif(env('EVENTKM'))
