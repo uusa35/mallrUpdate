@@ -27,7 +27,9 @@ class OrderController extends Controller
         $elements = Order::query();
         $companies = User::active()->whereHas('role', function ($q) {
             return $q->where('is_company', true)->orWhere('is_designer', true);
-        })->get();
+        })->whereHas('products', function ($q) {
+            return $q->active();
+        },'>',0)->get();
         if (request()->has('status')) {
             $elements = $elements->where('status', request()->status)
                 ->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
