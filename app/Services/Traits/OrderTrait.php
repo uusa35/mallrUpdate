@@ -283,6 +283,7 @@ trait OrderTrait
             }
             return trans('message.order_is_not_created');
         } catch (\Exception $e) {
+            return $e;
             return $e->getMessage();
         }
     }
