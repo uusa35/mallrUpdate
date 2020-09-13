@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="">
+    <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
       <change beforePath="$PROJECT_DIR$/app/Services/Traits/OrderTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Traits/OrderTrait.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="285" column="19" selection-start-line="285" selection-start-column="19" selection-end-line="285" selection-end-column="19" />
+            <state relative-caret-position="767">
+              <caret line="285" column="59" lean-forward="true" selection-start-line="285" selection-start-column="59" selection-end-line="285" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -116,8 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>max-he</find>
-      <find>@sc</find>
       <find>?</find>
       <find>createWebOrder</find>
       <find>createUser</find>
@@ -146,6 +144,8 @@
       <find>size_id</find>
       <find>size</find>
       <find>$user_id</find>
+      <find>line</find>
+      <find>OrderTrai</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -749,12 +749,12 @@
       <workItem from="1599769730470" duration="95000" />
       <workItem from="1599921352632" duration="1768000" />
       <workItem from="1599975258648" duration="1002000" />
-      <workItem from="1599988063946" duration="2088000" />
+      <workItem from="1599988063946" duration="2250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494922000" />
+    <option name="totallyTimeSpent" value="495084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1152,8 +1152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="285" column="19" selection-start-line="285" selection-start-column="19" selection-end-line="285" selection-end-column="19" />
+        <state relative-caret-position="767">
+          <caret line="285" column="59" lean-forward="true" selection-start-line="285" selection-start-column="59" selection-end-line="285" selection-end-column="59" />
         </state>
       </provider>
     </entry>
