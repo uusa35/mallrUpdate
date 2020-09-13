@@ -98,17 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="258" column="152" lean-forward="true" selection-start-line="258" selection-start-column="152" selection-end-line="258" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Size.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="423">
+              <caret line="260" column="56" lean-forward="true" selection-start-line="260" selection-start-column="56" selection-end-line="260" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -758,12 +749,12 @@
       <workItem from="1599769730470" duration="95000" />
       <workItem from="1599921352632" duration="1768000" />
       <workItem from="1599975258648" duration="1002000" />
-      <workItem from="1599988063946" duration="2853000" />
+      <workItem from="1599988063946" duration="3084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495687000" />
+    <option name="totallyTimeSpent" value="495918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -811,16 +802,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="162" column="14" selection-start-line="162" selection-start-column="14" selection-end-line="162" selection-end-column="14" />
-          <folding>
-            <element signature="e#9941#9947#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1131,13 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Size.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1789">
@@ -1159,10 +1133,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductAttribute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Size.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Traits/OrderTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="258" column="152" lean-forward="true" selection-start-line="258" selection-start-column="152" selection-end-line="258" selection-end-column="152" />
+        <state relative-caret-position="423">
+          <caret line="260" column="56" lean-forward="true" selection-start-line="260" selection-start-column="56" selection-end-line="260" selection-end-column="56" />
         </state>
       </provider>
     </entry>
