@@ -65,9 +65,8 @@
 
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
-      href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}">
-<link href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}" rel="shortcut icon" type="image/jpg" >
-{{--<link href="{{ asset(env('APP_CASE').'.ico') }}" rel="shortcut icon" type="image/x-icon">--}}
+      href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}"/>
+<link href="{{ $settings->logo ? $settings->getCurrentImageAttribute('logo') : $settings->getCurrentImageAttribute('app_logo') }}" rel="shortcut icon" type="image/jpg"/>
 @if(env('ESCRAP'))
     <meta name="google-site-verification" content="SR81NY4elhoRSNXOc1cHIIpu80aTPeiDiipsk4CMvRo"/>
 @elseif(env('EVENTKM'))
