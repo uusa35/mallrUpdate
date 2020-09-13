@@ -3112,6 +3112,19 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://opencollective.com/Carbon",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
+                    "type": "tidelift"
+                }
+            ],
+>>>>>>> d8b2ee1d265f7c7956eeb024151cc94f64485161
             "time": "2020-09-10T12:16:42+00:00"
         },
         {
@@ -3999,6 +4012,15 @@
                 "queue",
                 "set"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                }
+            ],
+>>>>>>> d8b2ee1d265f7c7956eeb024151cc94f64485161
             "time": "2020-09-10T20:58:17+00:00"
         },
         {
