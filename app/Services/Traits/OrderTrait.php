@@ -285,7 +285,7 @@ trait OrderTrait
             }
             return trans('message.order_is_not_created');
         } catch (\Exception $e) {
-            return $e->getLine() . ' - '. $e->getMessage();
+            return $e->getLine() . ' - '. $e->getMessage() .' - '. $e->getFile();
         }
     }
 }
