@@ -255,8 +255,8 @@ trait OrderTrait
                             'item_name' => $item['element']['name'],
                             'item_type' => class_basename($product),
                             'notes' => $item['notes'] ? $item['notes'] : null,
-                            'product_size' => $productAttribute && $productAttribute->size ? $productAttribute->size->name : $product->size ? $product->size->name : null,
-                            'product_color' => $productAttribute && $productAttribute->color ? $productAttribute->color->name : $product->color ? $product->color->name: null,
+//                            'product_size' => $productAttribute && $productAttribute->size ? $productAttribute->size->name : $product->size ? $product->size->name : null,
+//                            'product_color' => $productAttribute && $productAttribute->color ? $productAttribute->color->name : $product->color ? $product->color->name: null,
                         ]);
                     } else if ($item['type'] === 'service') {
                         // later we should check of multi Booking !!!
