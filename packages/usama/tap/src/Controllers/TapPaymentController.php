@@ -53,7 +53,6 @@ class TapPaymentController extends Controller
             $order = $order->whereId($request->order_id)->with('order_metas.product', 'order_metas.product_attribute')->first();
             $user = auth()->user();
             $paymentUrl = $this->processPayment($order, $user);
-            dd($paymentUrl);
             if ($paymentUrl) {
                 return redirect()->to($paymentUrl);
             }
