@@ -41,21 +41,25 @@ class TapPaymentController extends Controller
 
     public function makePayment(Request $request)
     {
-        $validate = validator($request->all(), [
-            'order_id' => 'required|numeric|exists:orders,id',
-        ]);
-        if ($validate->fails()) {
-            return redirect()->back()->with('errors', $validate->errors());
+        try {
+            $validate = validator($request->all(), [
+                'order_id' => 'required|numeric|exists:orders,id',
+            ]);
+            if ($validate->fails()) {
+                return redirect()->back()->with('errors', $validate->errors());
+            }
+            $className = env('ORDER_MODEL_PATH');
+            $order = new $className();
+            $order = $order->whereId($request->order_id)->with('order_metas.product', 'order_metas.product_attribute')->first();
+            $user = auth()->user();
+            $paymentUrl = $this->processPayment($order, $user);
+            if ($paymentUrl) {
+                return redirect()->to($paymentUrl);
+            }
+            //            abort(404, 'Payment Url Failed');
+        } catch(\Exception $e) {
+            abort(404, $e->getMessage());
         }
-        $className = env('ORDER_MODEL_PATH');
-        $order = new $className();
-        $order = $order->whereId($request->order_id)->with('order_metas.product', 'order_metas.product_attribute')->first();
-        $user = auth()->user();
-        $paymentUrl = $this->processPayment($order, $user);
-        if ($paymentUrl) {
-            return redirect()->to($paymentUrl);
-        }
-        abort(404, 'Payment Url Failed');
     }
 
     public function result(Request $request)
