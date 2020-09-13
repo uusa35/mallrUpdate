@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/favicon.ico
 /public/*.xml
 /storage/*.key
 /vendor
