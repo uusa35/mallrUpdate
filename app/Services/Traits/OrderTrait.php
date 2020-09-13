@@ -245,6 +245,7 @@ trait OrderTrait
                     if ($item['type'] === 'product') {
                         $product = Product::whereId($item['product_id'])->first();
                         $productAttribute = $product->hasRealAttributes ? ProductAttribute::whereId($item['product_attribute_id'])->first() : null;
+                        abort('404',$productAttribute->id);
                         $order->order_metas()->create([
                             'order_id' => $order->id,
                             'product_id' => $item['product_id'],
@@ -287,6 +288,3 @@ trait OrderTrait
         }
     }
 }
-
-
-
