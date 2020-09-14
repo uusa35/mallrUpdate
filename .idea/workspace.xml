@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/head.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+            <state relative-caret-position="515">
+              <caret line="69" column="85" lean-forward="true" selection-start-line="69" selection-start-column="85" selection-end-line="69" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -760,12 +760,12 @@
       <workItem from="1600007174080" duration="21000" />
       <workItem from="1600007197136" duration="10000" />
       <workItem from="1600007224216" duration="1784000" />
-      <workItem from="1600011296949" duration="1657000" />
+      <workItem from="1600011296949" duration="1829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502113000" />
+    <option name="totallyTimeSpent" value="502285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1151,8 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+        <state relative-caret-position="515">
+          <caret line="69" column="85" lean-forward="true" selection-start-line="69" selection-start-column="85" selection-end-line="69" selection-end-column="85" />
         </state>
       </provider>
     </entry>
