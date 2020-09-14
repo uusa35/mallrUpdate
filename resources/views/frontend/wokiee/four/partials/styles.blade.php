@@ -297,4 +297,8 @@
      .slider-revolution {
       max-height: 720px !important;
     }
+
+    .tt-promo-02>img {
+        transform: none !important;
+    }
 </style>
