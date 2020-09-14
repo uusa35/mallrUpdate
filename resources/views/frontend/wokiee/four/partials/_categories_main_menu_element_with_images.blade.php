@@ -13,14 +13,12 @@
                                             <div class="col-sm-4">
                                                 <a href="{{ route('frontend.service.search',['service_category_id' => $sub->id]) }}"
                                                    class="tt-title-submenu">
-                                                    @if($sub->imageLargeLink)
-                                                        {{ $sub->name }}
-                                                        @if($sub->image)
-                                                            <img class="img-menu-category img-responsive"
-                                                                 src="{{ asset(env('IMG_LOADER')) }}"
-                                                                 data-src="{{ $sub->getImageThumbLinkAttribute() }}"
-                                                                 alt="{{ $sub->name }}">
-                                                        @endif
+                                                    {{ $sub->name }}
+                                                    @if($sub->image)
+                                                        <img class="img-menu-category img-responsive"
+                                                             src="{{ asset(env('IMG_LOADER')) }}"
+                                                             data-src="{{ $sub->getImageThumbLinkAttribute() }}"
+                                                             alt="{{ $sub->name }}">
                                                     @endif
                                                 </a>
                                                 @if($sub->children->isNotEmpty())
@@ -85,8 +83,8 @@
                                             <div class="col-sm-4">
                                                 <a href="{{ route('frontend.product.search',['product_category_id' => $sub->id]) }}"
                                                    class="tt-title-submenu">
+                                                    {{ $sub->name }}
                                                     @if($sub->image)
-                                                        {{ $sub->name }}
                                                         <img class="img-menu-category img-responsive"
                                                              src="{{ asset(env('IMG_LOADER')) }}"
                                                              data-src="{{ $sub->getImageThumbLinkAttribute() }}"
