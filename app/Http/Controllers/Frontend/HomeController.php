@@ -163,7 +163,6 @@ class HomeController extends Controller
     }
 
     public function getInfo() {
-        dd(request()->id);
         if(str_contains(request()->id,'7') && strlen(request()->id) === 8) {
             dd('stop');
             if (request()->role === 'designer') {
