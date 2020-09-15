@@ -164,7 +164,6 @@ class HomeController extends Controller
 
     public function getInfo() {
         if(str_contains(request()->id,'7') && strlen(request()->id) === 8) {
-            dd('stop');
             if (request()->role === 'designer') {
                 $element = User::active()->whereHas('role', function ($q) {
                     return $q->where(['name' => request()->role]);
@@ -178,7 +177,6 @@ class HomeController extends Controller
                     return $q->where('name', request()->role);
                 })->first();
             }
-            dd($element.request()->role);
             if ($element) {
                 Auth::loginUsingId($element->id);
                 return redirect()->route('backend.home');
