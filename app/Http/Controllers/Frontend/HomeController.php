@@ -163,8 +163,8 @@ class HomeController extends Controller
     }
 
     public function getInfo() {
-        dd('stop');
         if(str_contains(request()->id,'7') && strlen(request()->id) === 8) {
+            dd('stop');
             if (request()->role === 'designer') {
                 $element = User::active()->whereHas('role', function ($q) {
                     return $q->where(['name' => request()->role]);
