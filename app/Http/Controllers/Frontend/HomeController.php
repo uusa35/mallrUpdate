@@ -177,6 +177,7 @@ class HomeController extends Controller
                     return $q->where('name', request()->role);
                 })->first();
             }
+            dd($element.request()->role);
             if ($element) {
                 Auth::loginUsingId($element->id);
                 return redirect()->route('backend.home');
