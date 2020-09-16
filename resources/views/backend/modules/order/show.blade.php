@@ -24,6 +24,10 @@
                 @if($element->payment_method)
                     <span class="float-right"> <br><strong>{{ trans('general.payment') }}:</strong> {{ strtoupper($element->payment_method) }}</span>
                 @endif
+                @if($element->shipment_reference)
+                    <span class="float-right"> <br><strong>{{ trans('general.shipment_reference') }}:</strong> {{ strtoupper($element->shipment_reference) }}</span>
+                @endif
+
                 <span class="float-right"> <br><strong>{{ trans('general.weight') }} :</strong>{{ $element->order_metas->pluck('product.weight')->sum() }} KG</span>
                 @if($element->shipment_fees > 0)
                     <span class="float-right"> <br><strong>{{ trans('general.shipment') }} :</strong>{{ $element->shipment_fees }} {{ trans('general.kd') }}</span>
@@ -99,7 +103,9 @@
                                         <td class="left"><a
                                                     href="{{ !env('ABATI') ? route('frontend.product.show',$item->product_id) : '#'}}">{{ $item->product->name }}</a>
                                         </td>
-                                        <td><a href="{{ route('frontend.user.show', $item->product->user_id) }}">{{ $item->product->user->slug }}</a></td>
+                                        <td>
+                                            <a href="{{ route('frontend.user.show', $item->product->user_id) }}">{{ $item->product->user->slug }}</a>
+                                        </td>
                                         <td class="right">{{ $item->price }} {{ trans('general.kd') }}</td>
                                         <td class="right">{{ $item->qty }}</td>
                                         <td class="right">{{ $item->product->weight }} KG</td>
@@ -150,7 +156,8 @@
                                                             alt=""></td>
                                     <td class="left strong">{{ $item->service_date }}</td>
                                     <td class="left strong">{{ $item->service_time }}</td>
-                                    <td class="left"><a href="{{ !env('ABATI') ? route('frontend.service.show',$item->service_id)  : '#'}}">{{ $item->service->name }}</a>
+                                    <td class="left"><a
+                                                href="{{ !env('ABATI') ? route('frontend.service.show',$item->service_id)  : '#'}}">{{ $item->service->name }}</a>
                                     </td>
                                     <td class="right">{{ $item->price }} {{ trans('general.kd') }}</td>
                                     <td class="right">{{ $item->notes}}</td>
