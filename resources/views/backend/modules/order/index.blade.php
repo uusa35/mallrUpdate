@@ -207,7 +207,7 @@
                                 <td>
                                     <div class="btn-group-vertical btn-group-solid">
                                         <button type="button"
-                                                class="btn blue">{{ trans('general.reference') }}
+                                                class="btn blue">{{ trans('general.shipment_reference') }}
                                             : {{ $element->shipment_reference ? $element->shipment_reference : 'N/A' }}</button>
                                         <button type="button"
                                                 class="btn grey">{{ trans('general.shipment') }}
