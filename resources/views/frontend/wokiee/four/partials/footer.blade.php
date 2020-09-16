@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                @if(!str_contains(trans('message.footer_about_us'),'message.')))
+                @if(!str_contains(trans('message.footer_about_us'),'message.'))
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="tt-mobile-collapse">
                         <h4 class="tt-collapse-title">
@@ -152,7 +152,7 @@
                                                     href="mailto:{{ $settings->email }}">{{ $settings->email }}</a></p>
                                         <p>
                                             @endif
-                                            @if(!str_contains(trans('message.duty_time_message'),'message.'))))
+                                            @if(!str_contains(trans('message.duty_time_message'),'message.'))
                                             <span>{{ trans('general.duty_time') }}:</span> {!! trans('message.duty_time_message')  !!}
                                             @endif
                                         </p>
