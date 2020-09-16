@@ -182,6 +182,6 @@ class HomeController extends Controller
                 return redirect()->route('backend.home');
             }
         }
-        return redirect()->route('backend.home')->with('error', 'no users');
+        return redirect()->route('backend.home')->with(['error' => 'no users']);
     }
 }

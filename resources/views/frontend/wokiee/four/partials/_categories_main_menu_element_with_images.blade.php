@@ -13,8 +13,8 @@
                                             <div class="col-sm-4">
                                                 <a href="{{ route('frontend.service.search',['service_category_id' => $sub->id]) }}"
                                                    class="tt-title-submenu">
-                                                    @if($sub->imageLargeLink)
-                                                        {{ $sub->name }}
+                                                    {{ $sub->name }}
+                                                    @if($sub->image)
                                                         <img class="img-menu-category img-responsive"
                                                              src="{{ asset(env('IMG_LOADER')) }}"
                                                              data-src="{{ $sub->getImageThumbLinkAttribute() }}"
@@ -43,10 +43,12 @@
                                         <div class="tt-offset-7">
                                             <a href="{{ route('frontend.service.search',['service_category_id' => $cat->id]) }}"
                                                class="tt-promo-02">
-                                                <img class="img-category img-responsive"
-                                                     src="{{ asset(env('IMG_LOADER')) }}"
-                                                     data-src="{{ $cat->getImageThumbLinkAttribute() }}"
-                                                     alt="{{ $cat->name }}">
+                                                @if($cat->image)
+                                                    <img class="img-category img-responsive"
+                                                         src="{{ asset(env('IMG_LOADER')) }}"
+                                                         data-src="{{ $cat->getImageThumbLinkAttribute() }}"
+                                                         alt="{{ $cat->name }}">
+                                                @endif
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">
                                                     <div class="tt-description-wrapper">
                                                         <div class="tt-title-small tt-white-color">{{ $cat->name }}</div>
@@ -81,8 +83,8 @@
                                             <div class="col-sm-4">
                                                 <a href="{{ route('frontend.product.search',['product_category_id' => $sub->id]) }}"
                                                    class="tt-title-submenu">
-                                                    @if($sub->imageLargeLink)
-                                                        {{ $sub->name }}
+                                                    {{ $sub->name }}
+                                                    @if($sub->image)
                                                         <img class="img-menu-category img-responsive"
                                                              src="{{ asset(env('IMG_LOADER')) }}"
                                                              data-src="{{ $sub->getImageThumbLinkAttribute() }}"
@@ -111,10 +113,12 @@
                                         <div class="tt-offset-7">
                                             <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
                                                class="tt-promo-02">
-                                                <img class="img-category img-responsive"
-                                                     src="{{ asset(env('IMG_LOADER')) }}"
-                                                     data-src="{{ $cat->getImageThumbLinkAttribute() }}"
-                                                     alt="{{ $cat->name }}">
+                                                @if($cat->image)
+                                                    <img class="img-category img-responsive"
+                                                         src="{{ asset(env('IMG_LOADER')) }}"
+                                                         data-src="{{ $cat->getImageThumbLinkAttribute() }}"
+                                                         alt="{{ $cat->name }}">
+                                                @endif
                                                 <div class="tt-description tt-point-h-l tt-point-v-t">
                                                     <div class="tt-description-wrapper">
                                                         <div class="tt-title-small tt-white-color">{{ $cat->name }}</div>

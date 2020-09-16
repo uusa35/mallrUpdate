@@ -162,6 +162,10 @@
         background-color: {{ $settings->btn_bg_theme_color }}                  !important;
     }
 
+    .btn.btn-border {
+        border: none !important;
+    }
+
     .tt-product:not(.tt-view) .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
@@ -270,7 +274,8 @@
 
     @if(env('NASHKW') || env('BITS'))
     body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-        font-family: 'GE SS Unique', 'sans-serif' !important;
+        font-family: 'skynews', 'sans-serif' !important;
+        /*font-family: 'GE SS Unique', 'sans-serif' !important;*/
         text-transform: uppercase !important;
     }
 
@@ -296,5 +301,9 @@
 
      .slider-revolution {
       max-height: 720px !important;
+    }
+
+    .tt-promo-02>img {
+        transform: none !important;
     }
 </style>
