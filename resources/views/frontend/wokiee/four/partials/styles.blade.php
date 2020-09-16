@@ -162,6 +162,10 @@
         background-color: {{ $settings->btn_bg_theme_color }}                  !important;
     }
 
+    .btn.btn-border {
+        border: none !important;
+    }
+
     .tt-product:not(.tt-view) .tt-add-info li a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown.active > a,
