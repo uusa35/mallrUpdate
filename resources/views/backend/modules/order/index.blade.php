@@ -96,7 +96,7 @@
                             <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.payment_method') }}</th>
-                            <th class="none">{{ trans('general.shipment') }}</th>
+                            <th class="none">{{ trans('general.shipment_reference') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
                             <th>{{ trans('general.address') }}</th>
@@ -118,7 +118,7 @@
                             <th>{{ trans('general.total') }}</th>
                             <th class="none">{{ trans('general.discount') }}</th>
                             <th class="none">{{ trans('general.payment_method') }}</th>
-                            <th class="none">{{ trans('general.shipment') }}</th>
+                            <th class="none">{{ trans('general.shipment_reference') }}</th>
                             <th class="none">{{ trans('general.reference_id') }}</th>
                             <th>{{ trans('general.payment_status') }}</th>
                             <th>{{ trans('general.address') }}</th>
