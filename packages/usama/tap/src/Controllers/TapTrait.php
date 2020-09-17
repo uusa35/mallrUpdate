@@ -38,6 +38,8 @@ trait TapTrait
                 'lstGateWayDC' => [$this->getGateWay()],
                 'MerMastDC' => $this->getMerchant($order->net_price),
             ];
+            return $finalArray;
+            return false;
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => config('tap.paymentUrl'),
@@ -60,7 +62,6 @@ trait TapTrait
                 echo "cURL Error #:" . $err;
             } else {
                 $response = (\GuzzleHttp\json_decode($response));
-                dd($response);
                 if (!$response->ResponseCode) {
                     if (empty($order->reference_id) && $order->order_metas->count() > 0) {
                         $order->update(['reference_id' => $response->ReferenceID]);
