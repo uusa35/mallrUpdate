@@ -1,7 +1,7 @@
 <header>
     @include('frontend.wokiee.four.partials._top_bar')
 
-    @include('frontend.wokiee.four.partials._mobile_categories_menu')
+{{--    @include('frontend.wokiee.four.partials._mobile_categories_menu')--}}
 
     @include('frontend.wokiee.four.partials._mobile_menu')
 
