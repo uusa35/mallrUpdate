@@ -33,7 +33,6 @@ class TapPaymentController extends Controller
         }
         $user = User::whereId($order->user_id)->first();
         $paymentUrl = $this->processPayment($order, $user);
-        dd($paymentUrl);
         if ($paymentUrl) {
             return response()->json(['paymentUrl' => $paymentUrl], 200);
         }
