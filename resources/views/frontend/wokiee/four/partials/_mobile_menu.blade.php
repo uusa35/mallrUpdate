@@ -39,11 +39,11 @@
                                         <a href="{{ route('frontend.product.search',['product_category_id' => $sub->id]) }}">{{ $sub->name }}</a>
                                         @if($sub->children->isNotEmpty())
                                             <ul>
-                                                @foreach($cat->children as $sub)
+                                                @foreach($sub->children as $child)
                                                     <li>
-                                                        <a href="{{ route('frontend.product.search',['product_category_id' => $sub->id]) }}">{{ $sub->name }}
-                                                            @if($sub->on_new)
-                                                                <span class="tt-badge tt-fatured">{{ trans('genera.new') }}</span>
+                                                        <a href="{{ route('frontend.product.search',['product_category_id' => $child->id]) }}">{{ $child->name }}
+                                                            @if($child->on_new)
+                                                                <span class="tt-badge tt-fatured">{{ trans('general.new') }}</span>
                                                             @endif
                                                         </a>
                                                     </li>
