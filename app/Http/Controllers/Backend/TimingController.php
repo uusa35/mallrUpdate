@@ -21,7 +21,8 @@ class TimingController extends Controller
     {
         $this->authorize('index', 'timing');
         if (auth()->user()->isAdminOrABove && !request()->has('service_id')) {
-            $elements = Timing::has('service', '>', 0)->with('service.user')->get();
+//            $elements = Timing::has('service', '>', 0)->with('service.user')->get();
+            $elements = Timing::with('service.user')->get();
         } else {
             $elements = request()->has('service_id') ?
                 Timing::active()->where(['service_id' => request('service_id')])->with('service.user')->get() : Timing::where(['user_id' => auth()->id()])->with('service.user')->get();
