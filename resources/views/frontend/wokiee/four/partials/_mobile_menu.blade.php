@@ -57,8 +57,8 @@
                     @endforeach
                 @else
                     @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
-                        <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                         @if($cat->children->isNotEmpty())
+                            <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                             <ul>
                                 @foreach($cat->children as $sub)
                                     <li>
@@ -79,6 +79,8 @@
                                     </li>
                                 @endforeach
                             </ul>
+                        @else
+                            <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                         @endif
                     @endforeach
                 @endif
