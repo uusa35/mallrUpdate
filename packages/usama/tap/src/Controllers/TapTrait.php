@@ -60,6 +60,7 @@ trait TapTrait
                 echo "cURL Error #:" . $err;
             } else {
                 $response = (\GuzzleHttp\json_decode($response));
+                dd($response);
                 if (!$response->ResponseCode) {
                     if (empty($order->reference_id) && $order->order_metas->count() > 0) {
                         $order->update(['reference_id' => $response->ReferenceID]);
