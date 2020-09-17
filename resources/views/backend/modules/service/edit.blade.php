@@ -595,7 +595,7 @@
                                         @if($timings->isNotEmpty())
                                             <div class="col-md-4" id="timings">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.timings') }}</label>
+                                                    <label class="control-label">{{ trans('general.timings') }}*</label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select5" name="timings[]" required>
                                                         @foreach($timings as $set)
