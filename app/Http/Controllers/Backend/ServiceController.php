@@ -91,7 +91,7 @@ class ServiceController extends Controller
             $request->has_only_items ? $element->addons()->sync([]) : null;
             $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
             $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], true) : null;
-            $request->areas[0] === 'all' ? $element->areas()->sync($element->user->country->areas->pluck('id')->toArray()) : $element->areas()->sync($request->areas);
+            !is_null($request->areas) && $request->areas[0] === 'all' ? $element->areas()->sync($element->user->country->areas->pluck('id')->toArray()) : $element->areas()->sync($request->areas);
             return redirect()->route('backend.service.index')->with('success', trans('general.service_saved'));
         }
         return redirect()->back()->with('error', trans('general.service_not_saved'));
