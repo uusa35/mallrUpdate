@@ -1,10 +1,10 @@
 <nav class="panel-menu mobile-main-menu {{ app()->isLocale('ar') ? 'mm-right' : null }}">
     <ul>
         <li><a href="{{ route('frontend.home') }}">{{ trans('general.home') }}</a></li>
-        <li>
-            @if(isset($categories) && $categories->isNotEmpty())
-                @if(env('EVENTKM'))
-                    @foreach($categories->where('is_parent', true) as $cat)
+        @if(isset($categories) && $categories->isNotEmpty())
+            @if(env('EVENTKM'))
+                @foreach($categories->where('is_parent', true) as $cat)
+                    <li>
                         <a href="{{ route('frontend.service.search',['service_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                         @if($cat->children->isNotEmpty())
                             <ul>
@@ -28,9 +28,11 @@
                                 @endforeach
                             </ul>
                         @endif
-                    @endforeach
-                @elseif(env('MALLR'))
-                    @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
+                    </li>
+                @endforeach
+            @elseif(env('MALLR'))
+                @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
+                    <li>
                         <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                         @if($cat->children->isNotEmpty())
                             <ul>
@@ -54,11 +56,12 @@
                                 @endforeach
                             </ul>
                         @endif
-                    @endforeach
-                @else
-                    @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
-                        @if($cat->children->isNotEmpty())
-                            <h1>test has children</h1>
+                    </li>
+                @endforeach
+            @else
+                @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
+                    @if($cat->children->isNotEmpty())
+                        <li>
                             <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
                             <ul>
                                 @foreach($cat->children as $sub)
@@ -80,14 +83,15 @@
                                     </li>
                                 @endforeach
                             </ul>
-                        @else
-                            <h1>test does not</h1>
+                        </li>
+                    @else
+                        <li>
                             <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ $cat->name }}</a>
-                        @endif
-                    @endforeach
-                @endif
+                        </li>
+                    @endif
+                @endforeach
             @endif
-        </li>
+        @endif
         <li>
             <a href="{{ route('frontend.cart.index') }}">{{ trans('general.cart') }}</a>
         </li>
