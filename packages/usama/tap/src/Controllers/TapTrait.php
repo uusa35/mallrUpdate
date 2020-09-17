@@ -38,8 +38,6 @@ trait TapTrait
                 'lstGateWayDC' => [$this->getGateWay()],
                 'MerMastDC' => $this->getMerchant($order->net_price),
             ];
-//            dd(json_encode($finalArray, JSON_UNESCAPED_SLASHES));
-//            dd('stop');
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => config('tap.paymentUrl'),
