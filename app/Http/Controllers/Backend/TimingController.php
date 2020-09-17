@@ -51,13 +51,14 @@ class TimingController extends Controller
      */
     public function store(TimingStore $request)
     {
-        $days = $request->day_id == '10' ? Day::all() : Day::whereId($request->day_id)->first();
+        $days = $request->day_id == '10' ? Day::all() : Day::whereId($request->day_id)->get();
         if ($days->count() > 1) {
             foreach ($days as $day) {
                 $request->request->add(['day_id' => $day->id, 'day_no' => $day->day_no, 'day_name_en' => $day->day_name_en, 'day_name_ar' => $day->day_name_ar, 'day' => $day->day]);
                 $timing = Timing::create($request->request->all());
             }
         } else {
+            $days = $days->first();
             $request->request->add(['day_no' => $days->day_no, 'day_name_en' => $days->day_name_en, 'day_name_ar' => $days->day_name_ar, 'day' => $days->day]);
             $timing = Timing::create($request->request->all());
         }
