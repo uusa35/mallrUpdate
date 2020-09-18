@@ -1,3 +1,4 @@
+{{--<div class="tt-mobile-product-layout visible-xs">--}}
 <div class="tt-mobile-product-layout visible-xs">
     <div class="tt-mobile-product-slider arrow-location-center slick-animated-show-js">
         <div><img src="{{ $element->imageLargeLink }}" alt="{{ $element->slug }}"></div>

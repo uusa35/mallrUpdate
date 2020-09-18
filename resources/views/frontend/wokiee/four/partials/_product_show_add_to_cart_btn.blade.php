@@ -6,7 +6,8 @@
             </div>
         </div>
     @endif
-    <div class="tt-row-custom-01">
+{{--    <div class="tt-row-custom-01">--}}
+    <div class="tt-row-center">
         <div class="col-item">
             <div class="tt-input-counter style-01" data-tooltip="{{ trans('general.choose_color_first') }}"
                  data-tposition="bottom">
