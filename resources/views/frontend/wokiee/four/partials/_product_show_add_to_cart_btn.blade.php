@@ -41,6 +41,7 @@
                         data-tooltip="{{ trans('general.choose_color_then_size') }}"
                         data-tposition="top"
                         role="tooltip"
+                        style="width : 100%; margin-top: 10px"
                         class="btn btn-lg  tooltip"
                         id="add_to_cart"><i class="icon-f-39"></i>{{ trans('general.add_to_cart') }}</button>
             </form>
