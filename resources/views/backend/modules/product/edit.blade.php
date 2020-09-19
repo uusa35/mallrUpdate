@@ -261,20 +261,23 @@
                                                                         id="my_multi_select1" name="categories[]">
                                                                     @foreach($categories as $category)
                                                                         <option value="{{ $category->id }}"
-                                                                                {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
+                                                                                {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                style="background-color: {{ $category->isParent ? 'lightblue' : null  }}"
+                                                                        >
                                                                             {{ $category->name }}</option>
-                                                                        @if(!$category->children->isEmpty())
+                                                                        @if($category->children->isNotEmpty() && $category->children->count()  >= 1)
                                                                             @foreach($category->children as $child)
                                                                                 <option value="{{ $child->id }}"
-                                                                                        {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                        style="padding-left: 15px">
+                                                                                        {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                        style="padding-left: 15px"
+                                                                                >
                                                                                     {{ $child->name }}</option>
-                                                                                @if(!$child->children->isEmpty())
+                                                                                @if($child->children->isNotEmpty() && $child->children->count() >= 1)
                                                                                     @foreach($child->children as $subChild)
                                                                                         <option value="{{ $subChild->id }}"
-                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                                style="padding-left: 35px">
+                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                                style="padding-left: 35px"
+                                                                                        >
                                                                                             {{ $subChild->name }}</option>
                                                                                     @endforeach
                                                                                 @endif
