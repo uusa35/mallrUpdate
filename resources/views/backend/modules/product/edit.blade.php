@@ -265,23 +265,31 @@
                                                                                 style="background-color: {{ $category->isParent ? 'lightblue' : null  }}"
                                                                         >
                                                                             {{ $category->name }}</option>
-                                                                        @if($category->children->isNotEmpty() && $category->children->count()  >= 1)
-                                                                            @foreach($category->children as $child)
-                                                                                <option value="{{ $child->id }}"
-                                                                                        {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                        @if($category->children->isNotEmpty() &&)
+                                                                            @if($category->children->count()  === 1)
+                                                                                <option value="{{ $category->children->first()->id }}"
+                                                                                        {{ in_array($category->children->first()->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
                                                                                         style="padding-left: 15px"
                                                                                 >
-                                                                                    {{ $child->name }}</option>
-                                                                                @if($child->children->isNotEmpty() && $child->children->count() >= 1)
-                                                                                    @foreach($child->children as $subChild)
-                                                                                        <option value="{{ $subChild->id }}"
-                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
-                                                                                                style="padding-left: 35px"
-                                                                                        >
-                                                                                            {{ $subChild->name }}</option>
-                                                                                    @endforeach
-                                                                                @endif
-                                                                            @endforeach
+                                                                                    {{ $category->children->first()->id->name }}</option>
+                                                                            @else
+                                                                                @foreach($category->children as $child)
+                                                                                    <option value="{{ $child->id }}"
+                                                                                            {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                            style="padding-left: 15px"
+                                                                                    >
+                                                                                        {{ $child->name }}</option>
+                                                                                    @if($child->children->isNotEmpty() && $child->children->count() >= 1)
+                                                                                        @foreach($child->children as $subChild)
+                                                                                            <option value="{{ $subChild->id }}"
+                                                                                                    {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                                    style="padding-left: 35px"
+                                                                                            >
+                                                                                                {{ $subChild->name }}</option>
+                                                                                        @endforeach
+                                                                                    @endif
+                                                                                @endforeach
+                                                                            @endif
                                                                         @endif
                                                                     @endforeach
                                                                 </select>
@@ -314,32 +322,32 @@
                                                                         class="fa fa-fw fa-times"></i></a>
                                                         </div>
                                                     @endif
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label for="file"
-                                                                       class="control-label">{{ trans('general.qr') }}
-                                                                    </label>
-                                                                <input class="form-control tooltips" data-container="body"
-                                                                       data-placement="top"
-                                                                       data-original-title="{{ trans('message.qr') }}"
-                                                                       name="qr" placeholder="qr" type="file"/>
-                                                                <div class="help-block text-left">
-                                                                    {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
-                                                                </div>
-                                                                <div class="help-block text-left">
-                                                                    {{ trans('general.qr_link') . '  : ' . route('frontend.deep.linking',['id' => $element->id , 'model' => 'product']) }}
-                                                                </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="file"
+                                                                   class="control-label">{{ trans('general.qr') }}
+                                                            </label>
+                                                            <input class="form-control tooltips" data-container="body"
+                                                                   data-placement="top"
+                                                                   data-original-title="{{ trans('message.qr') }}"
+                                                                   name="qr" placeholder="qr" type="file"/>
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
+                                                            </div>
+                                                            <div class="help-block text-left">
+                                                                {{ trans('general.qr_link') . '  : ' . route('frontend.deep.linking',['id' => $element->id , 'model' => 'product']) }}
                                                             </div>
                                                         </div>
-                                                        @if($element->qr)
-                                                            <div class="col-md-1">
-                                                                <img class="img-responsive img-sm"
-                                                                     src="{{ asset(env('THUMBNAIL').$element->qr) }}"
-                                                                     alt="">
-                                                                <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'qr']) }}"><i
-                                                                            class="fa fa-fw fa-times"></i></a>
-                                                            </div>
-                                                        @endif
+                                                    </div>
+                                                    @if($element->qr)
+                                                        <div class="col-md-1">
+                                                            <img class="img-responsive img-sm"
+                                                                 src="{{ asset(env('THUMBNAIL').$element->qr) }}"
+                                                                 alt="">
+                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'product', 'id' => $element->id , 'colName' => 'qr']) }}"><i
+                                                                        class="fa fa-fw fa-times"></i></a>
+                                                        </div>
+                                                    @endif
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
