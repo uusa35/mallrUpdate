@@ -204,4 +204,5 @@ return array (
   'this_user_does_not_exist' => 'لا يوجد بيانات لهذا المستخدم',
   'favorite_success' => 'تم أضافه / حذف من المفضلة بنجاح',
   'order_is_complete_we_will_contact_u_soon' => 'تم استلام طلبك .. سيتم التواصل معك في اقرب وقت.',
+  'max_upload' => 'اقصى حجم لرفع الصور ١٥٠ كيلو بايت',
 );

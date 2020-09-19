@@ -1067,4 +1067,6 @@ return array (
   'total_paid_orders' => 'الطلبات المدفوعة بنجاح',
   'reports' => 'التقارير',
   'order_id' => 'رقم الطلب',
+  'start_date' => 'تاريخ البداية',
+  'end_date' => 'تاريخ الانتهاء',
 );

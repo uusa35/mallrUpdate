@@ -44,8 +44,8 @@
                                 <td> {{$element->day }} </td>
                                 <td> {{$element->start }} </td>
                                 <td> {{$element->end }} </td>
-                                <td> {{$element->service->name }} </td>
-                                <td> {{$element->service->user ? $element->service->user->name : 'N/A'}} </td>
+                                <td> {{$element->service ? $element->service->name : 'N/A'}} </td>
+                                <td> {{$element->service && $element->service->user ? $element->service->user->name : 'N/A'}} </td>
                                 <td> {{$element->is_off }} </td>
                                 <td>
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
