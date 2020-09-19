@@ -265,7 +265,7 @@
                                                                                 style="background-color: {{ $category->isParent ? 'lightblue' : null  }}"
                                                                         >
                                                                             {{ $category->name }}</option>
-                                                                        @if($category->children->isNotEmpty() &&)
+                                                                        @if($category->children->isNotEmpty())
                                                                             @if($category->children->count()  === 1)
                                                                                 <option value="{{ $category->children->first()->id }}"
                                                                                         {{ in_array($category->children->first()->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
