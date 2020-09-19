@@ -266,14 +266,14 @@
                                                                         >
                                                                             {{ $category->name }}</option>
                                                                         @if($category->children->isNotEmpty() && $category->children->count()  >= 1)
-                                                                            @foreach($category->children as $child)
+                                                                            @foreach($category->children->unique() as $child)
                                                                                 <option value="{{ $child->id }}"
                                                                                         {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
                                                                                         style="padding-left: 15px"
                                                                                 >
                                                                                     {{ $child->name }}</option>
                                                                                 @if($child->children->isNotEmpty() && $child->children->count() >= 1)
-                                                                                    @foreach($child->children as $subChild)
+                                                                                    @foreach($child->children->unique() as $subChild)
                                                                                         <option value="{{ $subChild->id }}"
                                                                                                 {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
                                                                                                 style="padding-left: 35px"
