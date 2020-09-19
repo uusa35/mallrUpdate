@@ -272,15 +272,15 @@
                                                                                         style="padding-left: 15px"
                                                                                 >
                                                                                     {{ $child->name }}</option>
-{{--                                                                                @if($child->children->isNotEmpty() && $child->children->count() >= 1)--}}
-{{--                                                                                    @foreach($child->children as $subChild)--}}
-{{--                                                                                        <option value="{{ $subChild->id }}"--}}
-{{--                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}--}}
-{{--                                                                                                style="padding-left: 35px"--}}
-{{--                                                                                        >--}}
-{{--                                                                                            {{ $subChild->name }}</option>--}}
-{{--                                                                                    @endforeach--}}
-{{--                                                                                @endif--}}
+                                                                                @if($child->children->isNotEmpty() && $child->children->count() >= 1)
+                                                                                    @foreach($child->children as $subChild)
+                                                                                        <option value="{{ $subChild->id }}"
+                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : '' }}
+                                                                                                style="padding-left: 35px"
+                                                                                        >
+                                                                                            {{ $subChild->name }}</option>
+                                                                                    @endforeach
+                                                                                @endif
                                                                             @endforeach
                                                                         @endif
                                                                     @endforeach
