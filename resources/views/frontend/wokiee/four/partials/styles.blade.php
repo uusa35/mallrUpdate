@@ -306,4 +306,7 @@
     .tt-promo-02>img {
         transform: none !important;
     }
+    .slick-slide {
+        height : auto !important;
+    }
 </style>
