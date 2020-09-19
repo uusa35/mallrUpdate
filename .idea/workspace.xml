@@ -182,11 +182,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="587">
-                  <caret line="281" column="106" lean-forward="true" selection-start-line="281" selection-start-column="106" selection-end-line="281" selection-end-column="106" />
+                <state relative-caret-position="331">
+                  <caret line="273" column="111" lean-forward="true" selection-start-line="273" selection-start-column="111" selection-end-line="273" selection-end-column="111" />
                   <folding>
                     <element signature="e#22661#22928#0#HTML" expanded="true" />
-                    <element signature="e#25382#25622#0#HTML" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -873,12 +872,12 @@
       <workItem from="1600375807278" duration="1046000" />
       <workItem from="1600377703846" duration="287000" />
       <workItem from="1600442702761" duration="1285000" />
-      <workItem from="1600523895193" duration="1272000" />
+      <workItem from="1600523895193" duration="1382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="514644000" />
+    <option name="totallyTimeSpent" value="514754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1278,11 +1277,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="281" column="106" lean-forward="true" selection-start-line="281" selection-start-column="106" selection-end-line="281" selection-end-column="106" />
+        <state relative-caret-position="331">
+          <caret line="273" column="111" lean-forward="true" selection-start-line="273" selection-start-column="111" selection-end-line="273" selection-end-column="111" />
           <folding>
             <element signature="e#22661#22928#0#HTML" expanded="true" />
-            <element signature="e#25382#25622#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
