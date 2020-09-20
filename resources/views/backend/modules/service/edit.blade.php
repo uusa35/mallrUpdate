@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('sku') ? ' has-error' : '' }}">
-                                                <label for="sku" class="control-label">{{ trans('general.sku') }}
+                                                <label for="sku" class="control-label required">{{ trans('general.sku') }}
                                                     *</label>
                                                 <input id="sku" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -49,7 +49,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('name_ar') ? ' has-error' : '' }}">
                                                 <label for="name_ar"
-                                                       class="control-label">{{ trans('general.name_ar') }}
+                                                       class="control-label required">{{ trans('general.name_ar') }}
                                                     *</label>
                                                 <input id="name_ar" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -68,7 +68,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group {{ $errors->has('name_en') ? ' has-error' : '' }}">
                                                 <label for="name_en"
-                                                       class="control-label">{{ trans('general.name_en') }}
+                                                       class="control-label required">{{ trans('general.name_en') }}
                                                     *</label>
                                                 <input id="name_en" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -188,7 +188,7 @@
 
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
-                                                <label for="price" class="control-label">{{ trans('general.price') }}
+                                                <label for="price" class="control-label required">{{ trans('general.price') }}
                                                     *</label>
                                                 <input id="price" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -209,7 +209,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
                                                 <label for="sale_price"
-                                                       class="control-label">{{ trans('general.sale_price') }}
+                                                       class="control-label required">{{ trans('general.sale_price') }}
                                                     *</label>
                                                 <input id="sale_price" type="text" class="form-control tooltips"
                                                        data-container="body" data-placement="top"
@@ -230,7 +230,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="single"
-                                                           class="control-label">{{ trans('general.owner') }}
+                                                           class="control-label required">{{ trans('general.owner') }}
                                                         *</label>
                                                     <select id="" name="user_id" class="form-control select2" required>
                                                         <option value="">{{ trans('general.choose_user') }}</option>
@@ -245,7 +245,7 @@
                                         @endif
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="form_control_1">{{ trans('general.main_image') }}</label>
+                                                <label for="form_control_1 required">{{ trans('general.main_image') }}</label>
                                                 <input type="file" class="form-control tooltips" data-container="body"
                                                        data-placement="top"
                                                        data-original-title="{{ trans('message.main_image') }}"
@@ -263,7 +263,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="file"
-                                                       class="control-label">{{ trans('general.more_images') }}
+                                                       class="control-label required">{{ trans('general.more_images') }}
                                                     *</label>
 
                                                 <input class="form-control tooltips" data-container="body"
@@ -509,7 +509,7 @@
                                         @if(!$categories->isEmpty())
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.categories') }}
+                                                    <label class="control-label required">{{ trans('general.categories') }}
                                                         *</label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select1" name="categories[]">
@@ -595,7 +595,7 @@
                                         @if($timings->isNotEmpty())
                                             <div class="col-md-4" id="timings">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.timings') }}*</label>
+                                                    <label class="control-label rquired">{{ trans('general.timings') }}*</label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select5" name="timings[]" required>
                                                         @foreach($timings as $set)
@@ -614,7 +614,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
                                                 <label for="start_date"
-                                                       class="control-label">{{ trans('general.start_date') }}</label>
+                                                       class="control-label required">{{ trans('general.start_date') }}</label>
                                                 <div class="input-group date form_datetime">
                                                     <input type="text" readonly style="direction: ltr !important;"
                                                            class="form-control tooltips" data-container="body"
@@ -635,7 +635,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
                                                 <label for="end_date"
-                                                       class="control-label">{{ trans('general.end_date') }}*</label>
+                                                       class="control-label required">{{ trans('general.end_date') }}*</label>
                                                 <div class="input-group date form_datetime">
                                                     <input type="text" readonly style="direction: ltr !important;"
                                                            class="form-control tooltips" data-container="body"
