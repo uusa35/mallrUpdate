@@ -276,7 +276,7 @@
                                                     @if($categories->isNotEmpty())
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <label class="control-label">{{ trans('general.categories') }}
+                                                                <label class="control-label required">{{ trans('general.categories') }}
                                                                     *</label>
                                                                 <select multiple="multiple" class="multi-select"
                                                                         id="my_multi_select1" name="categories[]"
@@ -309,7 +309,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
-                                                                   class="control-label">{{ trans('general.main_image') }}
+                                                                   class="control-label required">{{ trans('general.main_image') }}
                                                                 *</label>
 
                                                             <input class="form-control tooltips" data-container="body"
@@ -344,7 +344,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
-                                                                   class="control-label">{{ trans('general.more_images') }}
+                                                                   class="control-label required">{{ trans('general.more_images') }}
                                                                 *</label>
 
                                                             <input class="form-control tooltips" data-container="body"
