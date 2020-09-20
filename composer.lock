@@ -7317,6 +7317,15 @@
                 "flare",
                 "reporting"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+>>>>>>> 4eb8eb1978d308b49da15ea7c157a9502f972f26
             "time": "2020-09-18T06:35:11+00:00"
         },
         {

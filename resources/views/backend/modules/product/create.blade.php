@@ -285,11 +285,11 @@
                                                                         <option value="{{ $category->id }}"
                                                                                 style="background-color: {{ $category->isParent ? 'lightskyblue' : 'white'  }}">
                                                                             {{ $category->name }}</option>
-                                                                        @if($category->children->isNotEmpty())
+                                                                        @if($category->children->isNotEmpty() && $category->children->count()  >= 1)
                                                                             @foreach($category->children as $child)
                                                                                 <option value="{{ $child->id }}"
                                                                                         style="padding-right: 25px; background-color: {{ $child->children ? 'lightblue' : 'white'  }}">{{ $child->name }}</option>
-                                                                                @if($child->children->isNotEmpty())
+                                                                                @if($child->children->isNotEmpty() && $child->children->count() >= 1)
                                                                                     @foreach($child->children as $subChild)
                                                                                         <option value="{{ $subChild->id }}"
                                                                                                 style="padding-right: 45px">
