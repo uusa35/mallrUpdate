@@ -24,9 +24,10 @@
                             <th class="none">{{ trans('general.sale_price') }}</th>
                             <th class="none">{{ trans('general.weight') }}</th>
                             <th>{{ trans('general.image') }}</th>
-                            <th class="none">{{ trans('general.company') }}</th>
+                            <th class="none">{{ trans('general.end_sale') }}</th>
                             <th>{{ trans('general.active') }}</th>
-                            <th>{{ trans('general.company') }}</th>
+                            <th class="none">{{ trans('general.company') }}</th>
+                            <th class="none">{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -43,7 +44,8 @@
                             <th>{{ trans('general.image') }}</th>
                             <th class="none">{{ trans('general.end_sale') }}</th>
                             <th>{{ trans('general.active') }}</th>
-                            <th>{{ trans('general.company') }}</th>
+                            <th class="none">{{ trans('general.company') }}</th>
+                            <th class="none">{{ trans('general.created_at') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -86,6 +88,7 @@
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>
                                 <td>{{ $element->user ?  str_limit($element->user->slug,20) : 'N/A' }}</td>
+                                <td>{{ $element->created_at }}</td>
                                 <td>
                                     @if($element->product_attributes->isNotEmpty())
                                         @foreach($element->product_attributes as $attribute)

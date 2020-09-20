@@ -57,7 +57,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group {{ $errors->has('sku') ? ' has-error' : '' }}">
                                                             <label for="sku"
-                                                                   class="control-label">{{ trans('general.sku') }}
+                                                                   class="control-label required">{{ trans('general.sku') }}
                                                                 *</label>
                                                             <input id="sku" type="text" class="form-control tooltips"
                                                                    data-container="body" data-placement="top"
@@ -80,7 +80,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group {{ $errors->has('name_ar') ? ' has-error' : '' }}">
                                                             <label for="name_ar"
-                                                                   class="control-label">{{ trans('general.name_arabic') }}
+                                                                   class="control-label required">{{ trans('general.name_arabic') }}
                                                                 *</label>
                                                             <input id="name_ar" type="text"
                                                                    class="form-control tooltips" data-container="body"
@@ -104,7 +104,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('name_en') ? ' has-error' : '' }}">
                                                             <label for="name_en"
-                                                                   class="control-label">{{ trans('general.name_english') }}
+                                                                   class="control-label required">{{ trans('general.name_english') }}
                                                                 *</label>
                                                             <input id="name_en" type="text"
                                                                    class="form-control tooltips" data-container="body"
@@ -202,7 +202,7 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="single"
-                                                                       class="control-label">{{ trans('general.owner') }}
+                                                                       class="control-label required">{{ trans('general.owner') }}
                                                                     *</label>
                                                                 <select name="user_id" class="form-control tooltips"
                                                                         data-container="body" data-placement="top"
@@ -255,7 +255,7 @@
                                                     @if(!$categories->isEmpty())
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <label class="control-label">{{ trans('general.categories') }}
+                                                                <label class="control-label required">{{ trans('general.categories') }}
                                                                     *</label>
                                                                 <select multiple="multiple" class="multi-select"
                                                                         id="my_multi_select1" name="categories[]">
@@ -294,7 +294,7 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="file"
-                                                                   class="control-label">{{ trans('general.main_image') }}
+                                                                   class="control-label required">{{ trans('general.main_image') }}
                                                                 *</label>
                                                             <input class="form-control tooltips" data-container="body"
                                                                    data-placement="top"
@@ -343,7 +343,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
-                                                                   class="control-label">{{ trans('general.more_images') }}
+                                                                   class="control-label required">{{ trans('general.more_images') }}
                                                                 *</label>
 
                                                             <input class="form-control tooltips" data-container="body"
@@ -455,7 +455,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
                                                         <label for="sale_price"
-                                                               class="control-label">{{ trans('general.sale_price') }}</label>
+                                                               class="control-label required">{{ trans('general.sale_price') }}</label>
                                                         <input id="sale_price" type="text" class="form-control tooltips"
                                                                data-container="body" data-placement="top"
                                                                data-original-title="{{ trans('message.sale_price') }}"
