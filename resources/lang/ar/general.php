@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 return array (
   'date' => 'التاريخ',
   'order_number' => 'رقم الطلب',
@@ -1070,8 +1069,6 @@ return array (
   'order_id' => 'رقم الطلب',
   'start_date' => 'تاريخ البداية',
   'end_date' => 'تاريخ الانتهاء',
-=======
-return array(
     'mail_sent' => 'تحقق من بريدك الالكتروني',
     'size' => 'القياس',
     'price' => 'السعر',
@@ -2169,5 +2166,4 @@ return array(
     "gift_image" => "صورة خدمة اعتبار المنتج كهدية",
     "item_deleted" => "هذا العنصر تم حذفه من قاعدة البيانات",
     "sub_categories" => "التصنيفات الفرعية"
->>>>>>> 4ef6558121750e6d06e6ec99fbb4d457829e8acc
 );
