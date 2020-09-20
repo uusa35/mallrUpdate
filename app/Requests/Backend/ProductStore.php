@@ -48,7 +48,7 @@ class ProductStore extends FormRequest
             'image' => "image|nullable|dimensions:width=1080,height=1440|max:".env('MAX_IMAGE_SIZE').'"',
             'qr' => "image|nullable|dimensions:width=300,height=300|max:".env('MAX_IMAGE_SIZE').'"',
             'images' => 'array|required',
-            'categories' => 'required|array',
+            'categories' => 'required|array|min:1',
             'price' => 'required|numeric|min:0.5|max:999',
             'qty' => 'required|numeric|min:1|max:999',
             'weight' => 'required|numeric|min:0.1|max:10',

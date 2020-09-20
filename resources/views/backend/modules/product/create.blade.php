@@ -280,7 +280,7 @@
                                                                     *</label>
                                                                 <select multiple="multiple" class="multi-select"
                                                                         id="my_multi_select1" name="categories[]"
-                                                                        required>
+                                                                        >
                                                                     @foreach($categories as $category)
                                                                         <option value="{{ $category->id }}"
                                                                                 style="background-color: {{ $category->isParent ? 'lightskyblue' : 'white'  }}">
