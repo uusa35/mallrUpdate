@@ -114,7 +114,8 @@ class SurveyController extends Controller
         $element = Survey::whereId($id)->active()->with('users')->with(['questions' => function ($q) {
             return $q->with('answers')->orderBy('order','asc');
         }])->first();
-        $user = User::whereId(request()->user_id)->first();
+        $user = auth()->id() ? auth()->user() : User::whereId(request()->user_id)->first();
+        dd($element);
         if ($element) {
             return view('frontend.wokiee.four.modules.survey.show', compact('element', 'user'));
         } elseif (auth()->user()->isAdmin && $element) {
