@@ -14,7 +14,7 @@ use Usama\Tap\TapTrait;
 
 class SurveyController extends Controller
 {
-    use OrderTrait, TapTrait;
+    use TapTrait;
 
     /**
      * Display a listing of the resource.
