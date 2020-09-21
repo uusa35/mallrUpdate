@@ -8,7 +8,7 @@
     <div class="portlet box blue">
         @include('backend.partials.forms.form_title',['title' => trans('general.edit_service')])
         <div class="portlet-body">
-            @include('backend.partials._admin_instructions',['title' => trans('general.products') ,'message' =>
+            @include('backend.partials._admin_instructions',['title' => trans('general.services') ,'message' =>
             trans('message.edit_service')])
             <div class="portlet-body form">
                 <form class="horizontal-form" role="form" method="POST"
