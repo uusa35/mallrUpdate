@@ -54,7 +54,7 @@
                                         <div class="form-body">
                                             <div class="row">
                                                 <div class="col-lg-12">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
                                                         <div class="form-group {{ $errors->has('sku') ? ' has-error' : '' }}">
                                                             <label for="sku"
                                                                    class="control-label required">{{ trans('general.sku') }}
@@ -77,7 +77,7 @@
                                                             </span> --}}
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
                                                         <div class="form-group {{ $errors->has('name_ar') ? ' has-error' : '' }}">
                                                             <label for="name_ar"
                                                                    class="control-label required">{{ trans('general.name_arabic') }}
@@ -101,7 +101,7 @@
                                                             </span> --}}
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
                                                         <div class="form-group{{ $errors->has('name_en') ? ' has-error' : '' }}">
                                                             <label for="name_en"
                                                                    class="control-label required">{{ trans('general.name_english') }}
@@ -125,8 +125,7 @@
                                                             </span> --}}
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-12">
+
                                                     <div class="col-md-3">
                                                         <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
                                                             <label for="price"
@@ -196,85 +195,25 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
-                                                            <label for="delivery_time"
-                                                                   class="control-label">{{ trans('general.delivery_time') }}
-                                                            </label>
-                                                            <input id="delivery_time" type="number" max="99"
-                                                                   maxlength="2" class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.delivery_time') }}"
-                                                                   name="delivery_time"
-                                                                   value="{{ $element->delivery_time }}"
-                                                                   placeholder="{{ trans('general.delivery_time') }}"
-                                                                   autofocus>
-                                                            @if ($errors->has('delivery_time'))
-                                                                <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('delivery_time') }}
-                                                </strong>
-                                            </span>
-                                                            @endif
-                                                            {{-- <span class="help-block">
-                                                                                                                                <strong>{{ trans('message.delivery_time') }}</strong>
-                                                            </span> --}}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    @can('isAdminOrAbove')
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label for="single"
-                                                                       class="control-label required">{{ trans('general.owner') }}
-                                                                    *</label>
-                                                                <select name="user_id" class="form-control tooltips"
-                                                                        data-container="body" data-placement="top"
-                                                                        data-original-title="{{ trans('message.owner') }}">
-                                                                    <option value="">{{ trans('general.choose_user') }}</option>
-                                                                    @foreach($users as $user)
-                                                                        <option value="{{ $user->id }}" {{ $element->user_id === $user->id ? 'selected' : null  }}>{{ $user->slug }}</option>
-                                                                    @endforeach
-                                                                </select>
+                                                        @can('isAdminOrAbove')
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label for="single"
+                                                                           class="control-label required">{{ trans('general.owner') }}
+                                                                        *</label>
+                                                                    <select name="user_id" class="form-control tooltips"
+                                                                            data-container="body" data-placement="top"
+                                                                            data-original-title="{{ trans('message.owner') }}">
+                                                                        <option value="">{{ trans('general.choose_user') }}</option>
+                                                                        @foreach($users as $user)
+                                                                            <option value="{{ $user->id }}" {{ $element->user_id === $user->id ? 'selected' : null  }}>{{ $user->slug }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    @else
-                                                        <input type="hidden" name="user_id" value="{{ auth()->id()}}">
-                                                    @endcan
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="single"
-                                                                   class="control-label">{{ trans('general.shipment_package') }}
-                                                            </label>
-                                                            <select id="" name="shipment_package_id"
-                                                                    class="form-control tooltips" data-container="body"
-                                                                    data-placement="top"
-                                                                    data-original-title="{{ trans('message.shipment_package') }}"
-                                                            >
-                                                                <option value="">{{ trans('choose_product_package_grade') }}</option>
-                                                                @foreach($shipment_packages as $shipment_package)
-                                                                    <option value="{{ $shipment_package->id }}" {{ $element->shipment_package_id && $element->shipment_package_id === $shipment_package->id ? 'selected' : null  }}>
-                                                                        {{ $shipment_package->slug_en }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="brand_id"
-                                                                   class="control-label">{{ trans('general.brand') }}
-                                                            </label>
-                                                            <select id="" name="brand_id" class="form-control tooltips"
-                                                                    data-container="body" data-placement="top"
-                                                                    data-original-title="{{ trans('message.brand') }}">
-                                                                <option value="">{{ trans('general.choose_brand') }}</option>
-                                                                @foreach($brands as $brand)
-                                                                    <option value="{{ $brand->id }}" {{ $element->brand_id && $element->brand->id === $brand->id ? 'selected' : null  }}>{{ $brand->slug }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                        @else
+                                                            <input type="hidden" name="user_id" value="{{ auth()->id()}}">
+                                                        @endcan
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="col-md-4">
@@ -358,6 +297,7 @@
                                                         </div>
                                                     </div>
                                                 @endif
+
                                             </div>
 
                                             <div class="row">
@@ -624,6 +564,64 @@
                                             </strong>
                                         </span>
                                                         @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
+                                                        <label for="delivery_time"
+                                                               class="control-label">{{ trans('general.delivery_time') }}
+                                                        </label>
+                                                        <input id="delivery_time" type="number" max="99"
+                                                               maxlength="2" class="form-control tooltips"
+                                                               data-container="body" data-placement="top"
+                                                               data-original-title="{{ trans('message.delivery_time') }}"
+                                                               name="delivery_time"
+                                                               value="{{ $element->delivery_time }}"
+                                                               placeholder="{{ trans('general.delivery_time') }}"
+                                                               autofocus>
+                                                        @if ($errors->has('delivery_time'))
+                                                            <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('delivery_time') }}
+                                                </strong>
+                                            </span>
+                                                        @endif
+                                                        {{-- <span class="help-block">
+                                                                                                                            <strong>{{ trans('message.delivery_time') }}</strong>
+                                                        </span> --}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="brand_id"
+                                                               class="control-label">{{ trans('general.brand') }}
+                                                        </label>
+                                                        <select id="" name="brand_id" class="form-control tooltips"
+                                                                data-container="body" data-placement="top"
+                                                                data-original-title="{{ trans('message.brand') }}">
+                                                            <option value="">{{ trans('general.choose_brand') }}</option>
+                                                            @foreach($brands as $brand)
+                                                                <option value="{{ $brand->id }}" {{ $element->brand_id && $element->brand->id === $brand->id ? 'selected' : null  }}>{{ $brand->slug }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="single"
+                                                               class="control-label">{{ trans('general.shipment_package') }}
+                                                        </label>
+                                                        <select id="" name="shipment_package_id"
+                                                                class="form-control tooltips" data-container="body"
+                                                                data-placement="top"
+                                                                data-original-title="{{ trans('message.shipment_package') }}"
+                                                        >
+                                                            <option value="">{{ trans('choose_product_package_grade') }}</option>
+                                                            @foreach($shipment_packages as $shipment_package)
+                                                                <option value="{{ $shipment_package->id }}" {{ $element->shipment_package_id && $element->shipment_package_id === $shipment_package->id ? 'selected' : null  }}>
+                                                                    {{ $shipment_package->slug_en }}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">

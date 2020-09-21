@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,10 +53,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="359" column="54" selection-start-line="359" selection-start-column="54" selection-end-line="359" selection-end-column="54" />
+            <state relative-caret-position="947">
+              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+              <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+              <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
               <folding>
-                <element signature="e#31024#32331#0#HTML" />
                 <element signature="e#32556#32773#0#HTML" />
                 <element signature="e#28149#32306#0#HTML" />
                 <element signature="e#42225#44197#0#HTML" />
@@ -80,14 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ar</find>
-      <find>lang</find>
-      <find>text-white</find>
-      <find>card-header</find>
-      <find>tt-row-center</find>
-      <find>card bg-danger</find>
-      <find>يجب الضغ</find>
-      <find>shipment_no</find>
       <find>price</find>
       <find>required</find>
       <find>image</find>
@@ -101,7 +92,6 @@
       <find>sale_pri</find>
       <find>price&quot;</find>
       <find>weig</find>
-      <find>deli</find>
       <find>chart</find>
       <find>qty</find>
       <find>chart&quot;</find>
@@ -110,6 +100,15 @@
       <find>qr&quot;</find>
       <find>color_id&quot;</find>
       <find>categorie</find>
+      <find>sale_pric</find>
+      <find>deli</find>
+      <find>notes_ar</find>
+      <find>brand_id&quot;</find>
+      <find>keywords</find>
+      <find>shipment</find>
+      <find>brand&quot;</find>
+      <find>owner_id</find>
+      <find>weigh</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -732,12 +731,12 @@
       <workItem from="1600624327613" duration="233000" />
       <workItem from="1600625271708" duration="424000" />
       <workItem from="1600625842708" duration="1519000" />
-      <workItem from="1600672131455" duration="1012000" />
+      <workItem from="1600672131455" duration="1592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519159000" />
+    <option name="totallyTimeSpent" value="519739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1151,10 +1150,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="359" column="54" selection-start-line="359" selection-start-column="54" selection-end-line="359" selection-end-column="54" />
+        <state relative-caret-position="947">
+          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+          <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
           <folding>
-            <element signature="e#31024#32331#0#HTML" />
             <element signature="e#32556#32773#0#HTML" />
             <element signature="e#28149#32306#0#HTML" />
             <element signature="e#42225#44197#0#HTML" />
