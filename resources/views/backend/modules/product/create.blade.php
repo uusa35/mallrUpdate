@@ -174,103 +174,9 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label class="control-label sbold tooltips"
-                                                                       data-container="body" data-placement="top"
-                                                                       data-original-title="{{ trans('message.on_sale') }}">{{ trans('general.on_sale') }}</label></br>
-                                                                <label class="radio-inline">
-                                                                    <input type="radio" name="on_sale"
-                                                                           id="optionsRadios3"
-                                                                           value="1">
-                                                                    {{ trans('general.yes') }}</label>
-                                                                <label class="radio-inline">
-                                                                    <input type="radio" name="on_sale"
-                                                                           id="optionsRadios4"
-                                                                           checked value="0">
-                                                                    {{ trans('general.no') }}</label>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label class="control-label sbold tooltips"
-                                                                       data-container="body" data-placement="top"
-                                                                       data-original-title="{{ trans('message.on_new') }}">{{ trans('general.on_new') }}</label></br>
-                                                                <label class="radio-inline">
-                                                                    <input type="radio" name="on_new"
-                                                                           id="optionsRadios3"
-                                                                           value="1">
-                                                                    {{ trans('general.yes') }}</label>
-                                                                <label class="radio-inline">
-                                                                    <input type="radio" name="on_new"
-                                                                           id="optionsRadios4"
-                                                                           checked value="0">
-                                                                    {{ trans('general.no') }}</label>
-                                                            </div>
-                                                        </div>
                                                     @else
                                                         <input type="hidden" name="user_id" value="{{ auth()->id()}}">
                                                     @endcan
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="single"
-                                                                   class="control-label">{{ trans('general.shipment_package') }}
-                                                            </label>
-                                                            <select id="" name="shipment_package_id"
-                                                                    class="form-control tooltips" data-container="body"
-                                                                    data-placement="top"
-                                                                    data-original-title="{{ trans('message.shipment_package') }}"
-                                                            >
-                                                                <option value="">{{ trans('general.choose_package') }}</option>
-                                                                @foreach($shipment_packages as $shipment_package)
-                                                                    <option value="{{ $shipment_package->id }}">
-                                                                        {{ $shipment_package->slug_en }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="brand_id"
-                                                                   class="control-label">{{ trans('general.brand') }}
-                                                            </label>
-                                                            <select id="" name="brand_id" class="form-control tooltips"
-                                                                    data-container="body" data-placement="top"
-                                                                    data-original-title="{{ trans('message.brand') }}">
-                                                                <option value="">{{ trans('general.choose_brand') }}</option>
-                                                                @foreach($brands as $brand)
-                                                                    <option value="{{ $brand->id }}">{{ $brand->slug }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
-                                                            <label for="delivery_time"
-                                                                   class="control-label">{{ trans('general.delivery_time') }}
-                                                                / {{ trans('general.hours') }}
-                                                            </label>
-                                                            <input id="delivery_time" type="number" max="99"
-                                                                   maxlength="2" class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.delivery_time') }}"
-                                                                   name="delivery_time"
-                                                                   value="{{ old('delivery_time') }}"
-                                                                   placeholder="{{ trans('general.delivery_time') }}"
-                                                                   autofocus>
-                                                            @if ($errors->has('delivery_time'))
-                                                                <span class="help-block">
-                                                                    <strong>
-                                                                        {{ $errors->first('delivery_time') }}
-                                                                    </strong>
-                                                                </span>
-                                                            @endif
-                                                            {{-- <span class="help-block">
-                                                                                                                                <strong>{{ trans('message.delivery_time') }}</strong>
-                                                            </span> --}}
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     @if($categories->isNotEmpty())
@@ -280,7 +186,7 @@
                                                                     *</label>
                                                                 <select multiple="multiple" class="multi-select"
                                                                         id="my_multi_select1" name="categories[]"
-                                                                        >
+                                                                >
                                                                     @foreach($categories as $category)
                                                                         <option value="{{ $category->id }}"
                                                                                 style="background-color: {{ $category->isParent ? 'lightskyblue' : 'white'  }}">
@@ -392,80 +298,163 @@
                                         <div class="form-body">
 
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="single"
-                                                               class="control-label">{{ trans('general.color') }}
-                                                        </label>
-                                                        <select id="color_id" name="color_id"
-                                                                class="form-control tooltips" data-container="body"
-                                                                data-placement="top"
-                                                                data-original-title="{{ trans('message.color') }}"
-                                                        >
-                                                            <option value="">{{ trans('general.choose_color') }}</option>
-                                                            @foreach($colors as $color)
-                                                                <option value="{{ $color->id }}">{{ $color->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                        {{-- <span class="help-block">
-                                                                                                                <strong>{{ trans('message.color_instructions') }}</strong>
-                                                        </span> --}}
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="size_id"
-                                                               class="control-label">{{ trans('general.size') }}
-                                                        </label>
-                                                        <select id="size_id" name="size_id"
-                                                                class="form-control tooltips" data-container="body"
-                                                                data-placement="top"
-                                                                data-original-title="{{ trans('message.size') }}">
-                                                            <option value="">{{ trans('general.choose_size') }}</option>
-                                                            @foreach($sizes as $size)
-                                                                <option value="{{ $size->id }}">{{ $size->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                        <div class="help-block text-left">
-                                                            {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
+                                                <div class="col-lg-12">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="single"
+                                                                   class="control-label">{{ trans('general.color') }}
+                                                            </label>
+                                                            <select id="color_id" name="color_id"
+                                                                    class="form-control tooltips" data-container="body"
+                                                                    data-placement="top"
+                                                                    data-original-title="{{ trans('message.color') }}"
+                                                            >
+                                                                <option value="">{{ trans('general.choose_color') }}</option>
+                                                                @foreach($colors as $color)
+                                                                    <option value="{{ $color->id }}">{{ $color->name }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                            {{-- <span class="help-block">
+                                                                                                                    <strong>{{ trans('message.color_instructions') }}</strong>
+                                                            </span> --}}
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_control_1">{{ trans('general.image_chart') }}</label>
-                                                        <input type="file" class="form-control tooltips"
-                                                               data-container="body" data-placement="top"
-                                                               data-original-title="{{ trans('message.image_chart') }}"
-                                                               name="size_chart_image"
-                                                               placeholder="{{ trans('general.image_chart') }}">
-                                                        <div class="help-block text-left">
-                                                            {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440']) }}
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="size_id"
+                                                                   class="control-label">{{ trans('general.size') }}
+                                                            </label>
+                                                            <select id="size_id" name="size_id"
+                                                                    class="form-control tooltips" data-container="body"
+                                                                    data-placement="top"
+                                                                    data-original-title="{{ trans('message.size') }}">
+                                                                <option value="">{{ trans('general.choose_size') }}</option>
+                                                                @foreach($sizes as $size)
+                                                                    <option value="{{ $size->id }}">{{ $size->name }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                            <div class="help-block text-left small">
+                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
-                                                        <label for="sale_price"
-                                                               class="control-label">{{ trans('general.sale_price') }}</label>
-                                                        <input id="sale_price" type="text" class="form-control tooltips"
-                                                               data-container="body" data-placement="top"
-                                                               data-original-title="{{ trans('message.sale_price') }}"
-                                                               name="sale_price" maxlength="5"
-                                                               value="{{ old('sale_price') }}"
-                                                               placeholder="{{ trans('general.sale_price') }}"
-                                                               autofocus>
-                                                        @if ($errors->has('sale_price'))
-                                                            <span class="help-block">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="single"
+                                                                   class="control-label">{{ trans('general.shipment_package') }}
+                                                            </label>
+                                                            <select id="" name="shipment_package_id"
+                                                                    class="form-control tooltips" data-container="body"
+                                                                    data-placement="top"
+                                                                    data-original-title="{{ trans('message.shipment_package') }}"
+                                                            >
+                                                                <option value="">{{ trans('general.choose_package') }}</option>
+                                                                @foreach($shipment_packages as $shipment_package)
+                                                                    <option value="{{ $shipment_package->id }}">
+                                                                        {{ $shipment_package->slug_en }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="brand_id"
+                                                                   class="control-label">{{ trans('general.brand') }}
+                                                            </label>
+                                                            <select id="" name="brand_id" class="form-control tooltips"
+                                                                    data-container="body" data-placement="top"
+                                                                    data-original-title="{{ trans('message.brand') }}">
+                                                                <option value="">{{ trans('general.choose_brand') }}</option>
+                                                                @foreach($brands as $brand)
+                                                                    <option value="{{ $brand->id }}">{{ $brand->slug }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
+                                                            <label for="quantity"
+                                                                   class="control-label">{{ trans('general.quantity') }}</label>
+                                                            <input id="quantity" type="text"
+                                                                   class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.quantity') }}"
+                                                                   name="qty" maxlength="5"
+                                                                   value="{{ old('quantity') }}"
+                                                                   placeholder="{{ trans('general.quantity') }}"
+                                                                   autofocus
+                                                                   required>
+                                                            @if ($errors->has('quantity'))
+                                                                <span class="help-block">
+                                            <strong>
+                                                {{ $errors->first('quantity') }}
+                                            </strong>
+                                        </span>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
+                                                            <label for="delivery_time"
+                                                                   class="control-label">{{ trans('general.delivery_time') }}
+                                                                / {{ trans('general.hours') }}
+                                                            </label>
+                                                            <input id="delivery_time" type="number" max="99"
+                                                                   maxlength="2" class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.delivery_time') }}"
+                                                                   name="delivery_time"
+                                                                   value="{{ old('delivery_time') }}"
+                                                                   placeholder="{{ trans('general.delivery_time') }}"
+                                                                   autofocus>
+                                                            @if ($errors->has('delivery_time'))
+                                                                <span class="help-block">
+                                                                    <strong>
+                                                                        {{ $errors->first('delivery_time') }}
+                                                                    </strong>
+                                                                </span>
+                                                            @endif
+                                                            {{-- <span class="help-block">
+                                                                                                                                <strong>{{ trans('message.delivery_time') }}</strong>
+                                                            </span> --}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
+                                                            <label for="sale_price"
+                                                                   class="control-label">{{ trans('general.sale_price') }}</label>
+                                                            <input id="sale_price" type="text"
+                                                                   class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.sale_price') }}"
+                                                                   name="sale_price" maxlength="5"
+                                                                   value="{{ old('sale_price') }}"
+                                                                   placeholder="{{ trans('general.sale_price') }}"
+                                                                   autofocus>
+                                                            @if ($errors->has('sale_price'))
+                                                                <span class="help-block">
                                             <strong>
                                                 {{ $errors->first('sale_price') }}
                                             </strong>
                                         </span>
-                                                        @endif
-                                                        {{-- <span class="help-block">
-                                                                                                                            <strong>{{ trans('message.sale_price') }}</strong>
-                                                        </span> --}}
+                                                            @endif
+                                                            {{-- <span class="help-block">
+                                                                                                                                <strong>{{ trans('message.sale_price') }}</strong>
+                                                            </span> --}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="form_control_1">{{ trans('general.image_chart') }}</label>
+                                                            <input type="file" class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.image_chart') }}"
+                                                                   name="size_chart_image"
+                                                                   placeholder="{{ trans('general.image_chart') }}">
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440']) }}
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -710,25 +699,6 @@
                                                         </span> --}}
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
-                                                        <label for="quantity"
-                                                               class="control-label">{{ trans('general.quantity') }}</label>
-                                                        <input id="quantity" type="text" class="form-control tooltips"
-                                                               data-container="body" data-placement="top"
-                                                               data-original-title="{{ trans('message.quantity') }}"
-                                                               name="qty" maxlength="5" value="{{ old('quantity') }}"
-                                                               placeholder="{{ trans('general.quantity') }}" autofocus
-                                                               required>
-                                                        @if ($errors->has('quantity'))
-                                                            <span class="help-block">
-                                            <strong>
-                                                {{ $errors->first('quantity') }}
-                                            </strong>
-                                        </span>
-                                                        @endif
-                                                    </div>
-                                                </div>
                                             </div>
                                             <div class="row">
                                                 @if(!$tags->isEmpty())
@@ -788,6 +758,41 @@
                                                                        value="0">
                                                                 {{ trans('general.no') }}
                                                             </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label class="control-label sbold tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.on_sale') }}">{{ trans('general.on_sale') }}</label></br>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="on_sale"
+                                                                       id="optionsRadios3"
+                                                                       value="1">
+                                                                {{ trans('general.yes') }}</label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="on_sale"
+                                                                       id="optionsRadios4"
+                                                                       checked value="0">
+                                                                {{ trans('general.no') }}</label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label class="control-label sbold tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.on_new') }}">{{ trans('general.on_new') }}</label></br>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="on_new"
+                                                                       id="optionsRadios3"
+                                                                       value="1">
+                                                                {{ trans('general.yes') }}</label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="on_new"
+                                                                       id="optionsRadios4"
+                                                                       checked value="0">
+                                                                {{ trans('general.no') }}</label>
                                                         </div>
                                                     </div>
                                                 @else
