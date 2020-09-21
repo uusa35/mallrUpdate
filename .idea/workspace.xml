@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,18 +50,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="947">
-              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-              <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
-              <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+            <state relative-caret-position="461">
+              <caret line="76" column="72" lean-forward="true" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
               <folding>
                 <element signature="e#32556#32773#0#HTML" />
                 <element signature="e#28149#32306#0#HTML" />
                 <element signature="e#42225#44197#0#HTML" />
                 <element signature="e#42245#44702#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="340" column="72" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="72" />
+              <caret line="358" column="72" selection-start-line="358" selection-start-column="72" selection-end-line="358" selection-end-column="72" />
+              <caret line="373" column="72" selection-start-line="373" selection-start-column="72" selection-end-line="373" selection-end-column="72" />
+              <caret line="395" column="72" selection-start-line="395" selection-start-column="72" selection-end-line="395" selection-end-column="72" />
+              <caret line="421" column="72" selection-start-line="421" selection-start-column="72" selection-end-line="421" selection-end-column="72" />
+              <folding>
+                <element signature="e#36212#37848#0#HTML" />
+                <element signature="e#29047#30667#0#HTML" />
+                <element signature="e#30720#32058#0#HTML" />
+                <element signature="e#31984#33574#0#HTML" />
+                <element signature="e#32111#34546#0#HTML" />
+                <element signature="e#36023#38023#0#HTML" />
+                <element signature="e#66012#67607#0#HTML" />
+                <element signature="e#67664#69254#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -79,10 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>price</find>
-      <find>required</find>
-      <find>image</find>
-      <find>user_id&quot;</find>
       <find>start_dat</find>
       <find>more_im</find>
       <find>image&quot;</find>
@@ -109,6 +126,10 @@
       <find>brand&quot;</find>
       <find>owner_id</find>
       <find>weigh</find>
+      <find>on_sale</find>
+      <find>deliv</find>
+      <find>qty&quot;</find>
+      <find>ship</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -169,13 +190,13 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/general.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/productAttribute/trans.js" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ProductStore.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
       </list>
     </option>
   </component>
@@ -731,12 +752,12 @@
       <workItem from="1600624327613" duration="233000" />
       <workItem from="1600625271708" duration="424000" />
       <workItem from="1600625842708" duration="1519000" />
-      <workItem from="1600672131455" duration="1592000" />
+      <workItem from="1600672131455" duration="2262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519739000" />
+    <option name="totallyTimeSpent" value="520409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1106,13 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="284" column="106" selection-start-line="284" selection-start-column="106" selection-end-line="284" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1150,15 +1164,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
-          <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+        <state relative-caret-position="461">
+          <caret line="76" column="72" lean-forward="true" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
           <folding>
             <element signature="e#32556#32773#0#HTML" />
             <element signature="e#28149#32306#0#HTML" />
             <element signature="e#42225#44197#0#HTML" />
             <element signature="e#42245#44702#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="340" column="72" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="72" />
+          <caret line="358" column="72" selection-start-line="358" selection-start-column="72" selection-end-line="358" selection-end-column="72" />
+          <caret line="373" column="72" selection-start-line="373" selection-start-column="72" selection-end-line="373" selection-end-column="72" />
+          <caret line="395" column="72" selection-start-line="395" selection-start-column="72" selection-end-line="395" selection-end-column="72" />
+          <caret line="421" column="72" selection-start-line="421" selection-start-column="72" selection-end-line="421" selection-end-column="72" />
+          <folding>
+            <element signature="e#36212#37848#0#HTML" />
+            <element signature="e#29047#30667#0#HTML" />
+            <element signature="e#30720#32058#0#HTML" />
+            <element signature="e#31984#33574#0#HTML" />
+            <element signature="e#32111#34546#0#HTML" />
+            <element signature="e#36023#38023#0#HTML" />
+            <element signature="e#66012#67607#0#HTML" />
+            <element signature="e#67664#69254#0#HTML" />
           </folding>
         </state>
       </provider>
