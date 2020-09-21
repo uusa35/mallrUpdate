@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,15 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="340" column="72" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="72" />
-              <caret line="358" column="72" selection-start-line="358" selection-start-column="72" selection-end-line="358" selection-end-column="72" />
-              <caret line="373" column="72" selection-start-line="373" selection-start-column="72" selection-end-line="373" selection-end-column="72" />
-              <caret line="395" column="72" selection-start-line="395" selection-start-column="72" selection-end-line="395" selection-end-column="72" />
-              <caret line="421" column="72" selection-start-line="421" selection-start-column="72" selection-end-line="421" selection-end-column="72" />
+            <state relative-caret-position="415">
+              <caret line="358" column="45" lean-forward="true" selection-start-line="358" selection-start-column="45" selection-end-line="358" selection-end-column="45" />
               <folding>
                 <element signature="e#36212#37848#0#HTML" />
                 <element signature="e#29047#30667#0#HTML" />
@@ -83,6 +79,55 @@
                 <element signature="e#36023#38023#0#HTML" />
                 <element signature="e#66012#67607#0#HTML" />
                 <element signature="e#67664#69254#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="615" column="46" lean-forward="true" selection-start-line="615" selection-start-column="46" selection-end-line="615" selection-end-column="46" />
+              <folding>
+                <element signature="e#22546#22580#0#HTML" expanded="true" />
+                <element signature="e#24535#24569#0#HTML" expanded="true" />
+                <element signature="e#0#76376#0#Blade" />
+                <element signature="e#0#76376#0#Blade" />
+                <element signature="e#26716#27962#0#HTML" />
+                <element signature="e#27668#31897#0#HTML" />
+                <element signature="e#37115#38858#0#HTML" />
+                <element signature="e#38899#40527#0#HTML" />
+                <element signature="e#40568#42132#0#HTML" />
+                <element signature="e#42173#43821#0#HTML" />
+                <element signature="e#43862#45500#0#HTML" />
+                <element signature="e#45541#47179#0#HTML" />
+                <element signature="e#46530#48030#0#HTML" />
+                <element signature="e#48071#49649#0#HTML" />
+                <element signature="e#51308#52920#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="947">
+              <caret line="684" column="50" selection-start-line="684" selection-start-column="50" selection-end-line="684" selection-end-column="50" />
+              <folding>
+                <element signature="e#37440#39126#0#HTML" />
+                <element signature="e#37507#39079#0#HTML" />
+                <element signature="e#39167#40789#0#HTML" />
+                <element signature="e#40830#42536#0#HTML" />
+                <element signature="e#42577#44273#0#HTML" />
+                <element signature="e#44314#46010#0#HTML" />
+                <element signature="e#49678#51341#0#HTML" />
+                <element signature="e#51449#52759#0#HTML" />
+                <element signature="e#52553#53602#0#HTML" />
+                <element signature="e#53718#54645#0#HTML" />
+                <element signature="e#54737#55647#0#HTML" />
+                <element signature="e#55688#56597#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -100,17 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start_dat</find>
-      <find>more_im</find>
-      <find>image&quot;</find>
-      <find>timings</find>
-      <find>email_verified_at</find>
-      <find>rememberToken</find>
-      <find>sale_pri</find>
-      <find>price&quot;</find>
-      <find>weig</find>
-      <find>chart</find>
-      <find>qty</find>
       <find>chart&quot;</find>
       <find>sale_da</find>
       <find>categories</find>
@@ -121,7 +155,6 @@
       <find>deli</find>
       <find>notes_ar</find>
       <find>brand_id&quot;</find>
-      <find>keywords</find>
       <find>shipment</find>
       <find>brand&quot;</find>
       <find>owner_id</find>
@@ -130,6 +163,18 @@
       <find>deliv</find>
       <find>qty&quot;</find>
       <find>ship</find>
+      <find>main_im</find>
+      <find>original</find>
+      <find>original_pri</find>
+      <find>keywords</find>
+      <find>sale_</find>
+      <find>duration</find>
+      <find>duration&quot;</find>
+      <find>video_u</find>
+      <find>tags</find>
+      <find>start_da</find>
+      <find>description</find>
+      <find>end_sa</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -192,11 +237,11 @@
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Requests/Backend/ProductStore.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_admin_instructions.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -752,12 +797,12 @@
       <workItem from="1600624327613" duration="233000" />
       <workItem from="1600625271708" duration="424000" />
       <workItem from="1600625842708" duration="1519000" />
-      <workItem from="1600672131455" duration="2262000" />
+      <workItem from="1600672131455" duration="3911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="520409000" />
+    <option name="totallyTimeSpent" value="522058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1094,25 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="588" column="38" selection-start-line="588" selection-start-column="38" selection-end-line="588" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="278" column="56" selection-start-line="278" selection-start-column="56" selection-end-line="278" selection-end-column="56" />
-          <folding>
-            <element signature="e#19374#21918#0#HTML" />
-            <element signature="e#26642#28520#0#HTML" />
-            <element signature="e#28644#30518#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
@@ -1177,12 +1203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="340" column="72" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="72" />
-          <caret line="358" column="72" selection-start-line="358" selection-start-column="72" selection-end-line="358" selection-end-column="72" />
-          <caret line="373" column="72" selection-start-line="373" selection-start-column="72" selection-end-line="373" selection-end-column="72" />
-          <caret line="395" column="72" selection-start-line="395" selection-start-column="72" selection-end-line="395" selection-end-column="72" />
-          <caret line="421" column="72" selection-start-line="421" selection-start-column="72" selection-end-line="421" selection-end-column="72" />
+        <state relative-caret-position="415">
+          <caret line="358" column="45" lean-forward="true" selection-start-line="358" selection-start-column="45" selection-end-line="358" selection-end-column="45" />
           <folding>
             <element signature="e#36212#37848#0#HTML" />
             <element signature="e#29047#30667#0#HTML" />
@@ -1192,6 +1214,51 @@
             <element signature="e#36023#38023#0#HTML" />
             <element signature="e#66012#67607#0#HTML" />
             <element signature="e#67664#69254#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="615" column="46" lean-forward="true" selection-start-line="615" selection-start-column="46" selection-end-line="615" selection-end-column="46" />
+          <folding>
+            <element signature="e#22546#22580#0#HTML" expanded="true" />
+            <element signature="e#24535#24569#0#HTML" expanded="true" />
+            <element signature="e#0#76376#0#Blade" />
+            <element signature="e#0#76376#0#Blade" />
+            <element signature="e#26716#27962#0#HTML" />
+            <element signature="e#27668#31897#0#HTML" />
+            <element signature="e#37115#38858#0#HTML" />
+            <element signature="e#38899#40527#0#HTML" />
+            <element signature="e#40568#42132#0#HTML" />
+            <element signature="e#42173#43821#0#HTML" />
+            <element signature="e#43862#45500#0#HTML" />
+            <element signature="e#45541#47179#0#HTML" />
+            <element signature="e#46530#48030#0#HTML" />
+            <element signature="e#48071#49649#0#HTML" />
+            <element signature="e#51308#52920#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="947">
+          <caret line="684" column="50" selection-start-line="684" selection-start-column="50" selection-end-line="684" selection-end-column="50" />
+          <folding>
+            <element signature="e#37440#39126#0#HTML" />
+            <element signature="e#37507#39079#0#HTML" />
+            <element signature="e#39167#40789#0#HTML" />
+            <element signature="e#40830#42536#0#HTML" />
+            <element signature="e#42577#44273#0#HTML" />
+            <element signature="e#44314#46010#0#HTML" />
+            <element signature="e#49678#51341#0#HTML" />
+            <element signature="e#51449#52759#0#HTML" />
+            <element signature="e#52553#53602#0#HTML" />
+            <element signature="e#53718#54645#0#HTML" />
+            <element signature="e#54737#55647#0#HTML" />
+            <element signature="e#55688#56597#0#HTML" />
           </folding>
         </state>
       </provider>

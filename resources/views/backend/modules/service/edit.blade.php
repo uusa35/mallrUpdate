@@ -276,6 +276,188 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @if(!$categories->isEmpty())
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label required">{{ trans('general.categories') }}
+                                                        *</label>
+                                                    <select multiple="multiple" class="multi-select"
+                                                            id="my_multi_select1" name="categories[]">
+                                                        @foreach($categories as $category)
+                                                            <option value="{{ $category->id }}"
+                                                                    {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                    style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
+                                                                {{ $category->name }}</option>
+                                                            @if(!$category->children->isEmpty())
+                                                                @foreach($category->children as $child)
+                                                                    <option value="{{ $child->id }}"
+                                                                            {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                            style="padding-left: 15px">
+                                                                        {{ $child->name }}</option>
+                                                                    @if(!$child->children->isEmpty())
+                                                                        @foreach($child->children as $subChild)
+                                                                            <option value="{{ $subChild->id }}"
+                                                                                    {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                                    style="padding-left: 35px">
+                                                                                {{ $subChild->name }}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endforeach
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        @if($timings->isNotEmpty())
+                                            <div class="col-md-4" id="timings">
+                                                <div class="form-group">
+                                                    <label class="control-label required">{{ trans('general.timings') }}*</label>
+                                                    <select multiple="multiple" class="multi-select"
+                                                            id="my_multi_select5" name="timings[]" required>
+                                                        @foreach($timings as $set)
+                                                            @foreach($set as $timing)
+                                                                <option value="{{ $timing->id }}"
+                                                                        {{ in_array($timing->id,$element->timings->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                >{{ $timing->day_name }}
+                                                                    - {{  $timing->startDuty }}
+                                                                    : {{ $timing->endDuty  }}</option>
+                                                            @endforeach
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        <div class="col-md-6">
+                                            <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
+                                                <label for="start_date"
+                                                       class="control-label required">{{ trans('general.start_date') }}</label>
+                                                <div class="input-group date form_datetime">
+                                                    <input type="text" readonly style="direction: ltr !important;"
+                                                           class="form-control tooltips" data-container="body"
+                                                           data-placement="top"
+                                                           data-original-title="{{ trans('message.start_date') }}"
+                                                           name="start_date"
+                                                           value="{{ $element->start_date ? $element->start_date : '01 January 2019 - 07:55' }}"
+                                                           required>
+                                                    <span class="input-group-btn"><button class="btn default date-set"
+                                                                                          type="button"><i
+                                                                    class="fa fa-calendar"></i></button></span>
+                                                </div>
+                                                <span class="help-block">
+                                                <strong>{{ trans('message.start_date') }}</strong>
+                                            </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
+                                                <label for="end_date"
+                                                       class="control-label required">{{ trans('general.end_date') }}*</label>
+                                                <div class="input-group date form_datetime">
+                                                    <input type="text" readonly style="direction: ltr !important;"
+                                                           class="form-control tooltips" data-container="body"
+                                                           data-placement="top"
+                                                           data-original-title="{{ trans('message.end_date') }}"
+                                                           name="end_date"
+                                                           value="{{ $element->end_date ? $element->end_date : '01 January 2019 - 07:55' }}"
+                                                           required>
+                                                    <span class="input-group-btn"><button class="btn default date-set"
+                                                                                          type="button"><i
+                                                                    class="fa fa-calendar"></i></button></span>
+                                                </div>
+                                                <span class="help-block">
+                                                <strong>{{ trans('message.end_date') }}</strong>
+                                            </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 hidden">
+                                            <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
+                                                <label for="range" class="control-label">{{ trans('general.week_range') }}
+                                                    </label>
+                                                <input id="range" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.range') }}" name="range"
+                                                       value="{{ $element->range }}"
+                                                       placeholder="{{ trans('general.range') }}" autofocus>
+                                                @if ($errors->has('range'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('range') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-body">
+                        <div class="portlet box blue ">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        @if(!$tags->isEmpty())
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">{{ trans('general.tags') }}</label>
+                                                    <select multiple="multiple" class="multi-select"
+                                                            id="my_multi_select2" name="tags[]">
+                                                        @foreach($tags as $tag)
+                                                            <option value="{{ $tag->id }}" {{ in_array($tag->id,$element->tags->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                            >{{ $tag->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        @can('index','video')
+                                            @if(!$videos->isEmpty())
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.attach_videos_to_product') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select3" name="videos[]">
+                                                            @foreach($videos as $video)
+                                                                <option value="{{ $video->id }}" {{ in_array($video->id,$element->tags->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                >{{ $video->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endcan
+
+                                        @can('index','area')
+                                            @if(!$areas->isEmpty())
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label">{{ trans('general.areas') }}</label>
+                                                        <select multiple="multiple" class="multi-select"
+                                                                id="my_multi_select4" name="areas[]">
+                                                            <option disabled value=""
+                                                                    style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
+                                                            @if($element->areas->isEmpty())
+                                                                <option value="all"
+                                                                        style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
+                                                            @endif
+                                                            @foreach($areas as $area)
+                                                                <option value="{{ $area->id }}" {{ in_array($area->id,$element->areas->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                >{{ $area->slug }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endif
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group{{ $errors->has('video_url_one') ? ' has-error' : '' }}">
                                                 <label for="video_url_one"
@@ -397,9 +579,6 @@
                                                                                           type="button"><i
                                                                     class="fa fa-calendar"></i></button></span>
                                                 </div>
-                                                <span class="help-block">
-                                                <strong>{{ trans('message.start_sale_date') }}</strong>
-                                            </span>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -416,9 +595,6 @@
                                                                                           type="button"><i
                                                                     class="fa fa-calendar"></i></button></span>
                                                 </div>
-                                                <span class="help-block">
-                                                <strong>{{ trans('message.end_sale_date') }}</strong>
-                                            </span>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -460,232 +636,54 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label for="description"
-                                                       class="control-label">{{ trans('general.description_arabic') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.description_ar') }}"
-                                                          id="description_ar" name="description_ar"
-                                                          aria-multiline="true"
-                                                          maxlength="500" {{ $element->description_ar }}></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="description"
-                                                       class="control-label">{{ trans('general.description_english') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.description_en') }}"
-                                                          id="description_en" name="description_en"
-                                                          aria-multiline="true"
-                                                          maxlength="500">{{ $element->description_en }}</textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="notes_ar"
-                                                       class="control-label">{{ trans('general.notes_ar') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.notes_ar') }}"
-                                                          id="notes_ar" name="notes_ar" aria-multiline="true"
-                                                          maxlength="500" {{ $element->notes_ar }}></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="notes_en"
-                                                       class="control-label">{{ trans('general.notes_en') }}</label>
-                                                <textarea type="text" class="form-control tooltips"
-                                                          data-container="body" data-placement="top"
-                                                          data-original-title="{{ trans('message.notes_en') }}"
-                                                          id="notes_en" name="notes_en" aria-multiline="true"
-                                                          maxlength="500">{{ $element->notes_en }}</textarea>
-                                            </div>
-                                        </div>
-                                        @if(!$categories->isEmpty())
-                                            <div class="col-md-4">
+                                        <div class="col-lg-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label required">{{ trans('general.categories') }}
-                                                        *</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select1" name="categories[]">
-                                                        @foreach($categories as $category)
-                                                            <option value="{{ $category->id }}"
-                                                                    {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                    style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
-                                                                {{ $category->name }}</option>
-                                                            @if(!$category->children->isEmpty())
-                                                                @foreach($category->children as $child)
-                                                                    <option value="{{ $child->id }}"
-                                                                            {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                            style="padding-left: 15px">
-                                                                        {{ $child->name }}</option>
-                                                                    @if(!$child->children->isEmpty())
-                                                                        @foreach($child->children as $subChild)
-                                                                            <option value="{{ $subChild->id }}"
-                                                                                    {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                    style="padding-left: 35px">
-                                                                                {{ $subChild->name }}</option>
-                                                                        @endforeach
-                                                                    @endif
-                                                                @endforeach
-                                                            @endif
-                                                        @endforeach
-                                                    </select>
+                                                    <label for="description"
+                                                           class="control-label">{{ trans('general.description_arabic') }}</label>
+                                                    <textarea type="text" class="form-control tooltips"
+                                                              data-container="body" data-placement="top"
+                                                              data-original-title="{{ trans('message.description_ar') }}"
+                                                              id="description_ar" name="description_ar"
+                                                              aria-multiline="true"
+                                                              maxlength="500" {{ $element->description_ar }}></textarea>
                                                 </div>
                                             </div>
-                                        @endif
-                                        @if(!$tags->isEmpty())
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ trans('general.tags') }}</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select2" name="tags[]">
-                                                        @foreach($tags as $tag)
-                                                            <option value="{{ $tag->id }}" {{ in_array($tag->id,$element->tags->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                            >{{ $tag->name }}</option>
-                                                        @endforeach
-                                                    </select>
+                                                    <label for="description"
+                                                           class="control-label">{{ trans('general.description_english') }}</label>
+                                                    <textarea type="text" class="form-control tooltips"
+                                                              data-container="body" data-placement="top"
+                                                              data-original-title="{{ trans('message.description_en') }}"
+                                                              id="description_en" name="description_en"
+                                                              aria-multiline="true"
+                                                              maxlength="500">{{ $element->description_en }}</textarea>
                                                 </div>
                                             </div>
-                                        @endif
-                                        @can('index','video')
-                                            @if(!$videos->isEmpty())
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{{ trans('general.attach_videos_to_product') }}</label>
-                                                        <select multiple="multiple" class="multi-select"
-                                                                id="my_multi_select3" name="videos[]">
-                                                            @foreach($videos as $video)
-                                                                <option value="{{ $video->id }}" {{ in_array($video->id,$element->tags->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                >{{ $video->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endcan
-
-                                        @can('index','area')
-                                            @if(!$areas->isEmpty())
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label class="control-label">{{ trans('general.areas') }}</label>
-                                                        <select multiple="multiple" class="multi-select"
-                                                                id="my_multi_select4" name="areas[]">
-                                                            <option disabled value=""
-                                                                    style="background-color: lightgrey">{{  $areas->first()->country->slug }}</option>
-                                                            @if($element->areas->isEmpty())
-                                                                <option value="all"
-                                                                        style="background-color: lightgrey">{{  trans('general.all_areas') }}</option>
-                                                            @endif
-                                                            @foreach($areas as $area)
-                                                                <option value="{{ $area->id }}" {{ in_array($area->id,$element->areas->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                >{{ $area->slug }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endif
-                                        @if($timings->isNotEmpty())
-                                            <div class="col-md-4" id="timings">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label required">{{ trans('general.timings') }}*</label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select5" name="timings[]" required>
-                                                        @foreach($timings as $set)
-                                                            @foreach($set as $timing)
-                                                                <option value="{{ $timing->id }}"
-                                                                        {{ in_array($timing->id,$element->timings->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                >{{ $timing->day_name }}
-                                                                    - {{  $timing->startDuty }}
-                                                                    : {{ $timing->endDuty  }}</option>
-                                                            @endforeach
-                                                        @endforeach
-                                                    </select>
+                                                    <label for="notes_ar"
+                                                           class="control-label">{{ trans('general.notes_ar') }}</label>
+                                                    <textarea type="text" class="form-control tooltips"
+                                                              data-container="body" data-placement="top"
+                                                              data-original-title="{{ trans('message.notes_ar') }}"
+                                                              id="notes_ar" name="notes_ar" aria-multiline="true"
+                                                              maxlength="500" {{ $element->notes_ar }}></textarea>
                                                 </div>
                                             </div>
-                                        @endif
-                                        <div class="col-md-3">
-                                            <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
-                                                <label for="start_date"
-                                                       class="control-label required">{{ trans('general.start_date') }}</label>
-                                                <div class="input-group date form_datetime">
-                                                    <input type="text" readonly style="direction: ltr !important;"
-                                                           class="form-control tooltips" data-container="body"
-                                                           data-placement="top"
-                                                           data-original-title="{{ trans('message.start_date') }}"
-                                                           name="start_date"
-                                                           value="{{ $element->start_date ? $element->start_date : '01 January 2019 - 07:55' }}"
-                                                           required>
-                                                    <span class="input-group-btn"><button class="btn default date-set"
-                                                                                          type="button"><i
-                                                                    class="fa fa-calendar"></i></button></span>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="notes_en"
+                                                           class="control-label">{{ trans('general.notes_en') }}</label>
+                                                    <textarea type="text" class="form-control tooltips"
+                                                              data-container="body" data-placement="top"
+                                                              data-original-title="{{ trans('message.notes_en') }}"
+                                                              id="notes_en" name="notes_en" aria-multiline="true"
+                                                              maxlength="500">{{ $element->notes_en }}</textarea>
                                                 </div>
-                                                <span class="help-block">
-                                                <strong>{{ trans('message.start_date') }}</strong>
-                                            </span>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
-                                                <label for="end_date"
-                                                       class="control-label required">{{ trans('general.end_date') }}*</label>
-                                                <div class="input-group date form_datetime">
-                                                    <input type="text" readonly style="direction: ltr !important;"
-                                                           class="form-control tooltips" data-container="body"
-                                                           data-placement="top"
-                                                           data-original-title="{{ trans('message.end_date') }}"
-                                                           name="end_date"
-                                                           value="{{ $element->end_date ? $element->end_date : '01 January 2019 - 07:55' }}"
-                                                           required>
-                                                    <span class="input-group-btn"><button class="btn default date-set"
-                                                                                          type="button"><i
-                                                                    class="fa fa-calendar"></i></button></span>
-                                                </div>
-                                                <span class="help-block">
-                                                <strong>{{ trans('message.end_date') }}</strong>
-                                            </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 hidden">
-                                            <div class="form-group{{ $errors->has('range') ? ' has-error' : '' }}">
-                                                <label for="range" class="control-label">{{ trans('general.week_range') }}
-                                                    </label>
-                                                <input id="range" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.range') }}" name="range"
-                                                       value="{{ $element->range }}"
-                                                       placeholder="{{ trans('general.range') }}" autofocus>
-                                                @if ($errors->has('range'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('range') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-body">
-                        <div class="portlet box blue ">
-                            <div class="portlet-title">
-                                <div class="caption">
-                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
-                                </div>
-                            </div>
-                            <div class="portlet-body form">
-                                <div class="form-body">
-                                    <div class="row">
                                         @can('index','addon')
                                             <div class="col-md-4">
                                                 <div class="form-group">
