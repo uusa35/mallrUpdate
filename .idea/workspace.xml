@@ -113,9 +113,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="947">
-              <caret line="684" column="50" selection-start-line="684" selection-start-column="50" selection-end-line="684" selection-end-column="50" />
+            <state relative-caret-position="767">
+              <caret line="580" column="46" lean-forward="true" selection-start-line="580" selection-start-column="46" selection-end-line="580" selection-end-column="46" />
+              <caret line="601" column="46" lean-forward="true" selection-start-line="601" selection-start-column="46" selection-end-line="601" selection-end-column="46" />
               <folding>
+                <element signature="e#54666#56070#0#HTML" />
+                <element signature="e#24732#24833#0#HTML" />
+                <element signature="e#25987#27851#0#HTML" />
+                <element signature="e#27892#29741#0#HTML" />
+                <element signature="e#29685#30741#0#HTML" />
+                <element signature="e#30782#31029#0#HTML" />
+                <element signature="e#31070#32270#0#HTML" />
                 <element signature="e#37440#39126#0#HTML" />
                 <element signature="e#37507#39079#0#HTML" />
                 <element signature="e#39167#40789#0#HTML" />
@@ -124,6 +132,9 @@
                 <element signature="e#44314#46010#0#HTML" />
                 <element signature="e#49678#51341#0#HTML" />
                 <element signature="e#51449#52759#0#HTML" />
+                <element signature="e#46377#47804#0#HTML" />
+                <element signature="e#47845#49490#0#HTML" />
+                <element signature="e#51155#52735#0#HTML" />
                 <element signature="e#52553#53602#0#HTML" />
                 <element signature="e#53718#54645#0#HTML" />
                 <element signature="e#54737#55647#0#HTML" />
@@ -145,9 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chart&quot;</find>
-      <find>sale_da</find>
-      <find>categories</find>
       <find>qr&quot;</find>
       <find>color_id&quot;</find>
       <find>categorie</find>
@@ -163,10 +171,8 @@
       <find>deliv</find>
       <find>qty&quot;</find>
       <find>ship</find>
-      <find>main_im</find>
       <find>original</find>
       <find>original_pri</find>
-      <find>keywords</find>
       <find>sale_</find>
       <find>duration</find>
       <find>duration&quot;</find>
@@ -175,6 +181,11 @@
       <find>start_da</find>
       <find>description</find>
       <find>end_sa</find>
+      <find>main_im</find>
+      <find>setup_</find>
+      <find>keywords</find>
+      <find>sale_pri</find>
+      <find>keyword</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -797,12 +808,12 @@
       <workItem from="1600624327613" duration="233000" />
       <workItem from="1600625271708" duration="424000" />
       <workItem from="1600625842708" duration="1519000" />
-      <workItem from="1600672131455" duration="3911000" />
+      <workItem from="1600672131455" duration="4273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522058000" />
+    <option name="totallyTimeSpent" value="522420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1244,9 +1255,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/service/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="684" column="50" selection-start-line="684" selection-start-column="50" selection-end-line="684" selection-end-column="50" />
+        <state relative-caret-position="767">
+          <caret line="580" column="46" lean-forward="true" selection-start-line="580" selection-start-column="46" selection-end-line="580" selection-end-column="46" />
+          <caret line="601" column="46" lean-forward="true" selection-start-line="601" selection-start-column="46" selection-end-line="601" selection-end-column="46" />
           <folding>
+            <element signature="e#54666#56070#0#HTML" />
+            <element signature="e#24732#24833#0#HTML" />
+            <element signature="e#25987#27851#0#HTML" />
+            <element signature="e#27892#29741#0#HTML" />
+            <element signature="e#29685#30741#0#HTML" />
+            <element signature="e#30782#31029#0#HTML" />
+            <element signature="e#31070#32270#0#HTML" />
             <element signature="e#37440#39126#0#HTML" />
             <element signature="e#37507#39079#0#HTML" />
             <element signature="e#39167#40789#0#HTML" />
@@ -1255,6 +1274,9 @@
             <element signature="e#44314#46010#0#HTML" />
             <element signature="e#49678#51341#0#HTML" />
             <element signature="e#51449#52759#0#HTML" />
+            <element signature="e#46377#47804#0#HTML" />
+            <element signature="e#47845#49490#0#HTML" />
+            <element signature="e#51155#52735#0#HTML" />
             <element signature="e#52553#53602#0#HTML" />
             <element signature="e#53718#54645#0#HTML" />
             <element signature="e#54737#55647#0#HTML" />
