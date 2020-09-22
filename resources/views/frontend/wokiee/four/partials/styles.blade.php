@@ -272,7 +272,7 @@
         color: {{ $settings->icon_theme_color }}             !important;
     }
 
-    @if(env('NASHKW') || env('BITS'))
+    @if(env('NASHKW') || env('BITS') || ENV('EMAKEUP'))
     body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
         font-family: 'skynews', 'sans-serif' !important;
         /*font-family: 'GE SS Unique', 'sans-serif' !important;*/
