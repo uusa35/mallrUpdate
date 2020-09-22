@@ -29,7 +29,7 @@
         color : {{ $settings->icon_theme_color }} !important;
     }
 
-    .page-sidebar .page-sidebar-menu>li.active.open>a>i, .page-sidebar .page-sidebar-menu>li.active>a>i {
+    .page-sidebar .page-sidebar-menu>li>a>i {
         color : {{ $settings->btn_bg_theme_color }} !important;
     }
 </style>
