@@ -24,12 +24,4 @@
         /*color : white !important;*/
         color : {{ auth()->user()->role->color }} !important;
     }
-
-    .page-sidebar .page-sidebar-menu>li.open>a>i {
-        color : {{ $settings->icon_theme_color }} !important;
-    }
-
-    .page-sidebar .page-sidebar-menu>li>a>i {
-        color : {{ $settings->btn_bg_theme_color }} !important;
-    }
 </style>

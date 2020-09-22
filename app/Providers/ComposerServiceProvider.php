@@ -94,7 +94,6 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer([
             'frontend.wokiee.four.layouts.app',
-            'backend..layouts.app',
             'frontend.wokiee.four.layouts.mobile',
             'frontend.wokiee.four.home.mobile',
             'frontend.wokiee.four.modules.product.show',
