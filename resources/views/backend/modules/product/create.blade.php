@@ -231,25 +231,6 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="file"
-                                                                   class="control-label">{{ trans('general.qr') }}
-                                                            </label>
-
-                                                            <input class="form-control tooltips" data-container="body"
-                                                                   data-placement="top"
-                                                                   data-original-title="{{ trans('message.qr') }}"
-                                                                   name="qr" placeholder="qr" type="file"
-                                                            />
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
-                                                            </div>
-                                                            <div class="help-block text-left">
-                                                                {{ trans('general.qr_link') . '  : ' . url('/').'/element/linking?id=00&model=product'}}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="file"
                                                                    class="control-label required">{{ trans('general.more_images') }}
                                                                 *</label>
 
@@ -371,7 +352,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
                                                             <label for="quantity"
                                                                    class="control-label">{{ trans('general.quantity') }}</label>
@@ -393,7 +374,7 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
                                                             <label for="delivery_time"
                                                                    class="control-label">{{ trans('general.delivery_time') }}
@@ -419,7 +400,7 @@
                                                             </span> --}}
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
                                                             <label for="sale_price"
                                                                    class="control-label">{{ trans('general.sale_price') }}</label>
@@ -451,8 +432,27 @@
                                                                    data-original-title="{{ trans('message.image_chart') }}"
                                                                    name="size_chart_image"
                                                                    placeholder="{{ trans('general.image_chart') }}">
-                                                            <div class="help-block text-left">
+                                                            <div class="help-block text-left small">
                                                                 {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440']) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="file"
+                                                                   class="control-label">{{ trans('general.qr') }}
+                                                            </label>
+
+                                                            <input class="form-control tooltips" data-container="body"
+                                                                   data-placement="top"
+                                                                   data-original-title="{{ trans('message.qr') }}"
+                                                                   name="qr" placeholder="qr" type="file"
+                                                            />
+                                                            <div class="help-block text-left small">
+                                                                {{ trans('message.best_fit',['width' => '300 px', 'height' => '300 px']) }}
+                                                            </div>
+                                                            <div class="help-block text-left small">
+                                                                {{ trans('general.qr_link') . '  : ' . url('/').'/element/linking?id=00&model=product'}}
                                                             </div>
                                                         </div>
                                                     </div>

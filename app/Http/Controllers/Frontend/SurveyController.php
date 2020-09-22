@@ -14,7 +14,7 @@ use Usama\Tap\TapTrait;
 
 class SurveyController extends Controller
 {
-    use OrderTrait, TapTrait;
+    use TapTrait;
 
     /**
      * Display a listing of the resource.
@@ -114,7 +114,7 @@ class SurveyController extends Controller
         $element = Survey::whereId($id)->active()->with('users')->with(['questions' => function ($q) {
             return $q->with('answers')->orderBy('order','asc');
         }])->first();
-        $user = User::whereId(request()->user_id)->first();
+        $user = auth()->id() ? auth()->user() : User::whereId(request()->user_id)->first();
         if ($element) {
             return view('frontend.wokiee.four.modules.survey.show', compact('element', 'user'));
         } elseif (auth()->user()->isAdmin && $element) {
