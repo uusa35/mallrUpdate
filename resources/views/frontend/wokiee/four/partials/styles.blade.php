@@ -291,7 +291,7 @@
         height : auto !important;
     }
 
-    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before, .slider-revolution.revolution-default .tp-leftarrow:before, body:not(.touch-device) .tt-portfolio-content.layout-default figure figcaption .tt-btn-zomm::before {
+    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before, .slider-revolution.revolution-default .tp-leftarrow:before, body:not(.touch-device) .tt-portfolio-content.layout-default figure figcaption .tt-btn-zomm::before, .mfp-arrow:after {
         font-family: wokiee !important;
     }
 
