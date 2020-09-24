@@ -3,7 +3,7 @@
     <div class="tt-portfolio-masonry">
         <div class="tt-filter-nav">
             <div class="button active" data-filter="*">{{ trans('general.all') }}</div>
-            @foreach($categories->where('is_product',true)->where('on_home', true)->take(6) as $cat)
+            @foreach($categories->where('is_product',true)->where('on_home', true)->take(3) as $cat)
                 <div class="button" data-filter=".sort-value-{!! $cat->id !!}">{{ $cat->name }}</div>
             @endforeach
         </div>
