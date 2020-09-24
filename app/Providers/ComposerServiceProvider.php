@@ -90,6 +90,7 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer([
             'frontend.wokiee.four.layouts.app',
+            'frontend.wokiee.four.partials._home_grid_main_categories'
         ], 'App\Services\ViewComposers@getCategories');
 
         view()->composer([

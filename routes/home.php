@@ -32,7 +32,10 @@ if (env('ABATI')) {
 } elseif (env('NASHKW')) {
     Route::get('/', 'HomeController@getNashKwHome')->name('index');
     Route::get('/home', 'HomeController@getNashKwHome')->name('home');
-} elseif (env('EXPO')) {
+}elseif (env('EMAKEUP')) {
+    Route::get('/', 'HomeController@getEmakeupHome')->name('index');
+    Route::get('/home', 'HomeController@getEmakeupHome')->name('home');
+}  elseif (env('EXPO')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('HTB')) {
