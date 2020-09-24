@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +81,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_categories_main_menu_element_with_images.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="75" column="103" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="103" />
+                <state relative-caret-position="452">
+                  <caret line="83" column="115" selection-start-line="83" selection-start-column="115" selection-end-line="83" selection-end-column="115" />
                 </state>
               </provider>
             </entry>
@@ -118,11 +118,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="918">
-                  <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+                <state relative-caret-position="234">
+                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
                 </state>
               </provider>
             </entry>
@@ -144,6 +144,15 @@
                   <folding>
                     <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="97" lean-forward="true" selection-start-column="97" selection-end-column="97" />
                 </state>
               </provider>
             </entry>
@@ -213,7 +222,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/slider.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/OrderController.php" />
         <option value="$PROJECT_DIR$/app/Services/Traits/OrderTrait.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_categories_main_menu_element_with_images.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/head.blade.php" />
@@ -259,6 +267,7 @@
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/styles.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php" />
       </list>
     </option>
   </component>
@@ -864,12 +873,12 @@
       <workItem from="1600757328106" duration="422000" />
       <workItem from="1600758627851" duration="720000" />
       <workItem from="1600768559337" duration="411000" />
-      <workItem from="1600933416817" duration="1794000" />
+      <workItem from="1600933416817" duration="1910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="527471000" />
+    <option name="totallyTimeSpent" value="527587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -932,13 +941,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="310" column="69" selection-start-line="310" selection-start-column="69" selection-end-line="310" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/productAttribute/trans.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1297,15 +1299,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_categories_main_menu_element_with_images.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="75" column="103" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="103" />
+        <state relative-caret-position="452">
+          <caret line="83" column="115" selection-start-line="83" selection-start-column="115" selection-end-line="83" selection-end-column="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="234">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_search_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="97" lean-forward="true" selection-start-column="97" selection-end-column="97" />
         </state>
       </provider>
     </entry>
