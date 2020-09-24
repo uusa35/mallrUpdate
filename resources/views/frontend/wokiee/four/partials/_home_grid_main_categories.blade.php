@@ -4,12 +4,12 @@
         <div class="tt-filter-nav">
             <div class="button active" data-filter="*">{{ trans('general.all') }}</div>
             @foreach($categories->where('is_product',true)->where('on_home', true)->take(6) as $cat)
-                <div class="button" data-filter=".sort-value-{!! $cat->parent_id !!}">{{ $cat->name }}</div>
+                <div class="button" data-filter=".sort-value-{!! $cat->id !!}">{{ $cat->name }}</div>
             @endforeach
         </div>
         <div class="tt-portfolio-content layout-default tt-grid-col-3  tt-add-item">
-            @foreach($categories->where('is_product',true)->where('on_home', true)->take(6) as $cat)
-                <div class="element-item sort-value-{!! $cat->parent_id !!}">
+            @foreach($categories->where('is_product',true)->where('on_home', true)->take(3) as $cat)
+                <div class="element-item sort-value-{!! $cat->id !!}">
                     <figure>
                         <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}">
                         <figcaption>
