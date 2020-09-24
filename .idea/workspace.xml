@@ -121,8 +121,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="1" selection-start-column="1" selection-end-column="1" />
+                <state relative-caret-position="918">
+                  <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -864,12 +864,12 @@
       <workItem from="1600757328106" duration="422000" />
       <workItem from="1600758627851" duration="720000" />
       <workItem from="1600768559337" duration="411000" />
-      <workItem from="1600933416817" duration="1752000" />
+      <workItem from="1600933416817" duration="1794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="527429000" />
+    <option name="totallyTimeSpent" value="527471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1304,8 +1304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_home_grid_main_categories.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state relative-caret-position="918">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
         </state>
       </provider>
     </entry>
