@@ -39,7 +39,7 @@
             @foreach($categories->where('is_product',true)->where('on_home', true)->take(4) as $cat)
                 @if($cat->image)
                     <div class="col-6 col-sm-6 col-md-3 col-12-575width">
-                        <a href="href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
+                        <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
                         class="tt-promo-box tt-one-child">
                         <img src="{{ asset(env('IMG_LOADER')) }}" data-src="{{ $cat->getImageThumbLinkAttribute() }}"
                              alt="{{ $cat->name }}">
