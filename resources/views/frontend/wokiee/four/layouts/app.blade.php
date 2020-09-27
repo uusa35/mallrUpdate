@@ -27,10 +27,11 @@
     @yield('body')
 </div>
 @show
-@if(!env('MOBILE_LAYOUT'))
+
 @section('footer')
     @include('frontend.wokiee.four.partials.footer')
 @show
+@if(!env('MOBILE_LAYOUT'))
 @section('models')
     @include('frontend.wokiee.four.partials.modals')
 @show

@@ -1,4 +1,3 @@
-<a href="#" class="tt-back-to-top">{{ trans('general.back_to_top') }}</a>
 <!-- modal (AddToCartProduct) -->
 {{--<div class="modal  fade"  id="modalAddToCartProduct" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">--}}
 {{--<div class="modal-dialog">--}}
