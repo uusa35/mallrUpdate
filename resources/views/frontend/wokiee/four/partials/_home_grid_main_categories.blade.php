@@ -54,20 +54,20 @@
         @endforeach
     </div>
 </div>
-<div class="container-indent1">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-sm-12">
-                <div class="tt-promo-fullwidth tt-promo-parallax" style="background-image: url({!! $categories->where('is_product',true)->where('on_home', true)->first()->getImageThumbLinkAttribute() !!});">
-                    <div class="tt-description">
-                        <div class="tt-description-wrapper">
-                            <div class="tt-title-small"><span class="tt-light-green-color">{{ $categories->where('is_product',true)->where('on_home', true)->first()->name }}</span></div>
-                            <div class="tt-title-large"><span class="tt-white-color">{{ $categories->where('is_product',true)->where('on_home', true)->first()->caption }}</span></div>
-                            <a href="{{ route('frontend.product.search',['product_category_id' => $categories->where('is_product',true)->where('on_home', true)->first()->id]) }}" class="btn btn-xl">{{ trans('general.shop_now') }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{--<div class="container-indent1">--}}
+{{--    <div class="container-fluid">--}}
+{{--        <div class="row no-gutter">--}}
+{{--            <div class="col-sm-12">--}}
+{{--                <div class="tt-promo-fullwidth tt-promo-parallax" style="background-image: url({!! $categories->where('is_product',true)->where('on_home', true)->first()->getImageThumbLinkAttribute() !!});">--}}
+{{--                    <div class="tt-description">--}}
+{{--                        <div class="tt-description-wrapper">--}}
+{{--                            <div class="tt-title-small"><span class="tt-light-green-color">{{ $categories->where('is_product',true)->where('on_home', true)->first()->name }}</span></div>--}}
+{{--                            <div class="tt-title-large"><span class="tt-white-color">{{ $categories->where('is_product',true)->where('on_home', true)->first()->caption }}</span></div>--}}
+{{--                            <a href="{{ route('frontend.product.search',['product_category_id' => $categories->where('is_product',true)->where('on_home', true)->first()->id]) }}" class="btn btn-xl">{{ trans('general.shop_now') }}</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
