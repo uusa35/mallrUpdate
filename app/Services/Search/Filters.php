@@ -31,7 +31,7 @@ class Filters extends QueryFilters
     {
         return $this->builder
             ->where('sku', 'like', "%{$search}%")
-            ->where('name_ar', 'like', "%{$search}%")
+            ->orWhere('name_ar', 'like', "%{$search}%")
             ->orWhere('name_en', 'like', "%{$search}%")
             ->orWhere('description_ar', 'like', "%{$search}%")
             ->orWhere('description_en', 'like', "%{$search}%");
