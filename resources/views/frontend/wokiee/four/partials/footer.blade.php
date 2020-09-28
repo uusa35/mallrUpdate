@@ -194,8 +194,8 @@
 @if($settings->whatsapp)
     <a href="https://api.whatsapp.com/send?phone={{ $settings->whatsapp }}&text={{ env('APP_NAME') }}"
        target="_blank"
-       class="tt-bottom-left tooltips tt-btn-quickview"
-       data-name="whatsapp" data-tpositio="top"
+       class="tt-bottom-left tt-btn-quickview"
+       data-toggle="tooltip"
        data-tooltip="{{ trans('general.contactus') }}"
        style="position: fixed; bottom: 50px; right : 5px; background-color: {!! $settings->btn_bg_theme_color !!}; padding : 13px; border-radius: 5px"><i
                 style="color : white" class="fa fa-fw fa-whatsapp fa-2x"></i></a>
