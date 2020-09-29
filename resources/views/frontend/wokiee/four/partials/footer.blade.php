@@ -197,6 +197,6 @@
        class="tt-bottom-left tt-btn-quickview"
        data-toggle="tooltip"
        data-tooltip="{{ trans('general.contactus') }}"
-       style="position: fixed; bottom: 50px; right : 5px; background-color: {!! $settings->btn_bg_theme_color !!}; padding : 13px; border-radius: 5px"><i
+       style="position: fixed; bottom: 50px; {!! app()->getLocale() === 'ar' ? 'right' : 'left' !!}: 5px; background-color: {!! $settings->btn_bg_theme_color !!}; padding : 13px; border-radius: 5px"><i
                 style="color : white" class="fa fa-fw fa-whatsapp fa-2x"></i></a>
 @endif
