@@ -7164,6 +7164,23 @@
                 "validation",
                 "versioning"
             ],
+<<<<<<< HEAD
+=======
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+>>>>>>> f126ecf14ff525e2fd238fc59b35c210d8a911ec
             "time": "2020-09-27T13:13:07+00:00"
         },
         {

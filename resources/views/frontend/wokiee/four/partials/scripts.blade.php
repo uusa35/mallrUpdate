@@ -109,8 +109,4 @@
         {{--min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")--}}
     {{--});--}}
     $('.areas').select2();
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    })
-    // $("#whatsapp-contactus").tooltip().tooltip("open");
 </script>
