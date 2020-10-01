@@ -82,7 +82,7 @@ class UserStore extends FormRequest
             'country_id' => 'required|numeric|exists:countries,id',
             'role_id' => 'required|numeric|exists:roles,id',
             'merchant_id' => 'nullable|max:200|min:3|unique:users,merchant_id',
-            'categories' => 'nullable|array'
+            'categories' => 'required|array'
         ];
     }
 }
