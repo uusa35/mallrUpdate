@@ -113,6 +113,7 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer([
             'frontend.wokiee.four.layouts.app',
+            'frontend.wokiee.four.home.mobile',
         ], 'App\Services\ViewComposers@getPages');
 
         view()->composer([
