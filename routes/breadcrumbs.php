@@ -43,6 +43,15 @@ Breadcrumbs::for('frontend.service.show', function ($trail, $element) {
     $trail->push($element->name, route('frontend.service.show', $element->id));
 });
 
+Breadcrumbs::for('frontend.classified.index', function ($trail) {
+    $trail->parent('frontend.home');
+    $trail->push(trans('general.classifieds'), route('frontend.classified.search'));
+});
+Breadcrumbs::for('frontend.classified.show', function ($trail, $element) {
+    $trail->parent('frontend.classified.index');
+    $trail->push($element->name, route('frontend.classified.show', $element->id));
+});
+
 Breadcrumbs::for('frontend.brand.index', function ($trail) {
     $trail->parent('frontend.home');
     $trail->push(trans('general.brands'), route('frontend.brand.index'));

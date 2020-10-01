@@ -120,6 +120,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     Route::resource('product', 'ProductController');
     Route::get('product/{id}/{name}', 'ProductController@show')->name('product.show.name');
     Route::resource('service', 'ServiceController');
+    Route::resource('classified', 'ClassifiedController');
+    Route::get('classified/{id}/{name}', 'ClassifiedController@show')->name('classified.show.name');
     Route::resource('collection', 'CollectionController')->only(['index', 'show']);
     Route::get('service/{id}/{name}', 'ServiceController@show')->name('service.show.name');
     Route::post('cart/add/service', 'CartController@addService')->name('cart.add.service');
@@ -149,6 +151,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     Route::get('search/service/clear', 'ServiceController@getClearSearch')->name('service.clear');
     Route::get('search/product/clear', 'ProductController@getClearSearch')->name('product.clear');
     Route::get('search/service', 'ServiceController@search')->name('service.search');
+    Route::get('search/classified', 'ClassifiedController@search')->name('classified.search');
     Route::get('currency/{currency}', 'HomeController@changeCurrency')->name('currency.change');
     Route::get('language/{locale}', 'HomeController@changeLanguage')->name('language.change');
     Route::get('country/set', 'HomeController@setCountry')->name('country.set');

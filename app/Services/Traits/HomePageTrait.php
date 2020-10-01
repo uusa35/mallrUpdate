@@ -198,4 +198,18 @@ trait HomePageTrait
             'companies'
         ));
     }
+
+    public function getHomekeyHome()
+    {
+        $sliders = Slide::active()->onHome()->limit(SELF::TAKE_LESS)->get();
+        $companies = User::active()->onHome()->companies()->notAdmins()->whereHas('products', function ($q) {
+            return $q->active();
+        }, '>', 0)->with('role')->get();
+        $categoriesHome = Category::active()->onHome()->onlyChildren()->orderBy('order', 'desc')->limit(10)->get();
+        return view('frontend.wokiee.four.home.homekey', compact(
+            'sliders',
+            'categoriesHome',
+            'companies'
+        ));
+    }
 }
