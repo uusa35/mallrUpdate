@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/ClassifiedController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/homekey.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/classified/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_categories_slider.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_category_widget.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_widget.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classifieds_search_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
+            <state relative-caret-position="649">
+              <caret line="198" column="77" lean-forward="true" selection-start-line="198" selection-start-column="77" selection-end-line="198" selection-end-column="77" />
               <folding>
                 <element signature="e#30138#31549#0#HTML" />
                 <element signature="e#31590#32981#0#HTML" />
@@ -87,6 +74,15 @@
                 <element signature="e#42534#43509#0#HTML" />
                 <element signature="e#43550#44542#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="432" column="58" selection-start-line="432" selection-start-column="58" selection-end-line="432" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -103,14 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>categories</find>
-      <find>.mfp-arrow:before</find>
-      <find>ACCESSORI</find>
-      <find>btn_c</find>
-      <find>tt-back-to-top tt-show</find>
-      <find>btn_</find>
-      <find>whatsap</find>
-      <find>toop</find>
       <find>size</find>
       <find>sizes</find>
       <find>tool</find>
@@ -133,6 +121,14 @@
       <find>bg'</find>
       <find>more_im</find>
       <find>logo</find>
+      <find>more_ima</find>
+      <find>bg</find>
+      <find>main_im</find>
+      <find>descript</find>
+      <find>phone&quot;</find>
+      <find>fax&quot;</find>
+      <find>mobile</find>
+      <find>*</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -149,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/modules/order/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ServiceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/TimingController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/timing/index.blade.php" />
@@ -200,6 +195,7 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classifieds_search_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/classified/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -863,12 +859,12 @@
       <workItem from="1601271985128" duration="1314000" />
       <workItem from="1601374761899" duration="131000" />
       <workItem from="1601475102710" duration="1745000" />
-      <workItem from="1601593133626" duration="588000" />
+      <workItem from="1601593133626" duration="901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="535383000" />
+    <option name="totallyTimeSpent" value="535696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -936,9 +932,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_widget_is_really_hot.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1280,8 +1273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
+        <state relative-caret-position="649">
+          <caret line="198" column="77" lean-forward="true" selection-start-line="198" selection-start-column="77" selection-end-line="198" selection-end-column="77" />
           <folding>
             <element signature="e#30138#31549#0#HTML" />
             <element signature="e#31590#32981#0#HTML" />
@@ -1292,6 +1285,13 @@
             <element signature="e#42534#43509#0#HTML" />
             <element signature="e#43550#44542#0#HTML" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="432" column="58" selection-start-line="432" selection-start-column="58" selection-end-line="432" selection-end-column="58" />
         </state>
       </provider>
     </entry>

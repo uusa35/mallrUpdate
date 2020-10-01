@@ -137,6 +137,188 @@
                                                             </div>
                                                         </div>
                                                     @endcan
+
+                                                    {{-- email + mobile --}}
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                                            <label for="email"
+                                                                   class="control-label">{{ trans('general.email') }}
+                                                                *</label>
+                                                            <input id="email" type="text" class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.email') }}"
+                                                                   name="email" value="{{ $element->email }}"
+                                                                   placeholder="{{ trans('general.email') }}" required
+                                                                   autofocus>
+                                                            @if ($errors->has('email'))
+                                                                <span class="help-block">
+                                                                <strong>
+                                                                    {{ $errors->first('email') }}
+                                                                </strong>
+                                                            </span>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+
+                                                    @if(!$categories->isEmpty())
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">{{ trans('general.categories') }}
+                                                                    *</label>
+                                                                <select multiple="multiple" class="multi-select"
+                                                                        id="my_multi_select1" name="categories[]">
+                                                                    @foreach($categories as $category)
+                                                                        <option value="{{ $category->id }}"
+                                                                                {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                                style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
+                                                                            {{ $category->name }}</option>
+                                                                        @if(!$category->children->isEmpty())
+                                                                            @foreach($category->children as $child)
+                                                                                <option value="{{ $child->id }}"
+                                                                                        {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                                        style="padding-left: 15px">
+                                                                                    {{ $child->name }}</option>
+                                                                                @if(!$child->children->isEmpty())
+                                                                                    @foreach($child->children as $subChild)
+                                                                                        <option value="{{ $subChild->id }}"
+                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
+                                                                                                style="padding-left: 35px">
+                                                                                            {{ $subChild->name }}</option>
+                                                                                    @endforeach
+                                                                                @endif
+                                                                            @endforeach
+                                                                        @endif
+                                                                    @endforeach
+                                                                </select>
+                                                                {{-- <span class="help-block">
+                                                                                                                                                    <strong>{{ trans('message.categories_instructions') }}</strong>
+                                                                </span> --}}
+                                                            </div>
+                                                        </div>
+                                                    @endif
+
+                                                    @if(!$products->isEmpty())
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label class="control-label">{{ trans('general.products') }}
+                                                                    *</label>
+                                                                <select multiple="multiple" class="multi-select"
+                                                                        id="my_multi_select2" name="products[]">
+                                                                    @foreach($products as $product)
+                                                                        <option value="{{ $product->id }}" {{ in_array($product->id,$element->productGroup->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}>
+                                                                            {{ $product->name }} - SKU
+                                                                            : {{ $product->sku }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+
+                                                    {{-- password + confirm password --}}
+
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <label for="form_control_1">{{ trans('general.main_image') }}</label>
+                                                            <input type="file" class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.main_image') }}"
+                                                                   name="image"
+                                                                   placeholder="{{ trans('general.main_image') }}"
+                                                            >
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '1000 px', 'height' => '1000 px']) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @if($element->image)
+                                                        <div class="col-md-2">
+                                                            <img class="img-responsive img-sm"
+                                                                 src="{{ $element->imageThumbLink }}"
+                                                                 alt="">
+                                                            {{--                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ]) }}"><i--}}
+                                                            {{--                                                                        class="fa fa-fw fa-times"></i></a>--}}
+                                                        </div>
+                                                    @endif
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="form_control_1">{{ trans('general.banner') }}</label>
+                                                            <input type="file" class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.banner') }}"
+                                                                   name="banner"
+                                                                   placeholder="{{ trans('general.banner') }}">
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
+                                                            </div>
+                                                        </div>
+                                                        @if($element->banner)
+                                                            <div class="col-md-12">
+                                                                <img class="img-responsive"
+                                                                     src="{{ asset(env('THUMBNAIL').$element->banner) }}"
+                                                                     alt="">
+                                                            </div>
+                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id , 'colName' => 'banner']) }}"><i
+                                                                        class="fa fa-fw fa-times"></i></a>
+                                                        @endif
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group {{ $errors->has('bg') ? ' has-error' : '' }}">
+                                                            <label for="bg"
+                                                                   class="control-label">{{ trans('general.bg') }}</label>
+                                                            <input type="file"
+                                                                   class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.bg') }}"
+                                                                   name="bg">
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
+                                                            </div>
+                                                        </div>
+                                                        @if($element->bg)
+                                                            <div class="col-md-12">
+                                                                <img class="img-responsive img-sm"
+                                                                     src="{{ asset(env('THUMBNAIL').$element->bg) }}"
+                                                                     alt="">
+                                                            </div>
+                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ,'colName' => 'bg']) }}"><i
+                                                                        class="fa fa-fw fa-times"></i></a>
+                                                        @endif
+                                                    </div>
+
+                                                    @can('index','survey')
+                                                        @if(!$element->surveys->isEmpty() && env('MALLR'))
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label tooltips"
+                                                                           data-container="body" data-placement="top"
+                                                                           data-original-title="{{ trans('message.surveys') }}"
+                                                                    >{{ trans('general.surveys') }}
+                                                                        *</label>
+                                                                    <select multiple="multiple" class="multi-select"
+                                                                            id="my_multi_select3" name="surveys[]">
+                                                                        @foreach($element->surveys as $survey)
+                                                                            <option value="{{ $survey->id }}" {{ in_array($survey->id,$element->surveys->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}>
+                                                                                {{ $survey->name }} </option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                    @endcan
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portlet box blue ">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body form">
+                                            <div class="form-body">
+                                                <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="description"
@@ -203,34 +385,37 @@
                                                             @endif
                                                         </div>
                                                     </div>
-
-                                                    {{-- email + mobile --}}
-
                                                     <div class="col-md-4">
-                                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                                            <label for="email"
-                                                                   class="control-label">{{ trans('general.email') }}
-                                                                *</label>
-                                                            <input id="email" type="text" class="form-control tooltips"
+                                                        <div class="form-group">
+                                                            <label for="file"
+                                                                   class="control-label">{{ trans('general.more_images') }}</label>
+
+                                                            <input class="form-control tooltips" data-container="body"
+                                                                   data-placement="top"
+                                                                   data-original-title="{{ trans('message.more_iamges') }}"
+                                                                   name="images[]" placeholder="images" type="file"
+                                                                   multiple/>
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="form_control_1">{{ trans('general.qr') }}</label>
+                                                            <input type="file" class="form-control tooltips"
                                                                    data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.email') }}"
-                                                                   name="email" value="{{ $element->email }}"
-                                                                   placeholder="{{ trans('general.email') }}" required
-                                                                   autofocus>
-                                                            @if ($errors->has('email'))
-                                                                <span class="help-block">
-                                                                <strong>
-                                                                    {{ $errors->first('email') }}
-                                                                </strong>
-                                                            </span>
-                                                            @endif
+                                                                   data-original-title="{{ trans('message.qr') }}"
+                                                                   name="qr" placeholder="{{ trans('general.qr') }}">
+                                                            <div class="help-block text-left">
+                                                                {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
                                                             <label for="mobile"
-                                                                   class="control-label">{{ trans('general.mobile') }}
-                                                                *</label>
+                                                                   class="control-label">{{ trans('general.mobile') }}</label>
                                                             <input id="mobile" type="text" class="form-control tooltips"
                                                                    data-container="body" data-placement="top"
                                                                    data-original-title="{{ trans('message.mobile') }}"
@@ -246,63 +431,6 @@
                                                             @endif
                                                         </div>
                                                     </div>
-
-                                                    @if(!$categories->isEmpty())
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label class="control-label">{{ trans('general.categories') }}
-                                                                    *</label>
-                                                                <select multiple="multiple" class="multi-select"
-                                                                        id="my_multi_select1" name="categories[]">
-                                                                    @foreach($categories as $category)
-                                                                        <option value="{{ $category->id }}"
-                                                                                {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
-                                                                            {{ $category->name }}</option>
-                                                                        @if(!$category->children->isEmpty())
-                                                                            @foreach($category->children as $child)
-                                                                                <option value="{{ $child->id }}"
-                                                                                        {{ in_array($child->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                        style="padding-left: 15px">
-                                                                                    {{ $child->name }}</option>
-                                                                                @if(!$child->children->isEmpty())
-                                                                                    @foreach($child->children as $subChild)
-                                                                                        <option value="{{ $subChild->id }}"
-                                                                                                {{ in_array($subChild->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
-                                                                                                style="padding-left: 35px">
-                                                                                            {{ $subChild->name }}</option>
-                                                                                    @endforeach
-                                                                                @endif
-                                                                            @endforeach
-                                                                        @endif
-                                                                    @endforeach
-                                                                </select>
-                                                                {{-- <span class="help-block">
-                                                                                                                                                    <strong>{{ trans('message.categories_instructions') }}</strong>
-                                                                </span> --}}
-                                                            </div>
-                                                        </div>
-                                                    @endif
-
-                                                    @if(!$products->isEmpty())
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label class="control-label">{{ trans('general.products') }}
-                                                                    *</label>
-                                                                <select multiple="multiple" class="multi-select"
-                                                                        id="my_multi_select2" name="products[]">
-                                                                    @foreach($products as $product)
-                                                                        <option value="{{ $product->id }}" {{ in_array($product->id,$element->productGroup->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}>
-                                                                            {{ $product->name }} - SKU
-                                                                            : {{ $product->sku }}</option>
-                                                                    @endforeach
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    @endif
-
-                                                    {{-- password + confirm password --}}
-
                                                     <div class="col-md-4">
                                                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                                             <label for="phone"
@@ -338,136 +466,6 @@
                                                 </strong>
                                             </span>
                                                             @endif
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="form_control_1">{{ trans('general.main_image') }}</label>
-                                                            <input type="file" class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.main_image') }}"
-                                                                   name="image"
-                                                                   placeholder="{{ trans('general.main_image') }}"
-                                                            >
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '1000 px', 'height' => '1000 px']) }}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    @if($element->image)
-                                                        <div class="col-md-2">
-                                                            <img class="img-responsive img-sm"
-                                                                 src="{{ $element->imageThumbLink }}"
-                                                                 alt="">
-                                                            {{--                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ]) }}"><i--}}
-                                                            {{--                                                                        class="fa fa-fw fa-times"></i></a>--}}
-                                                        </div>
-                                                    @endif
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="form_control_1">{{ trans('general.banner') }}</label>
-                                                            <input type="file" class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.banner') }}"
-                                                                   name="banner"
-                                                                   placeholder="{{ trans('general.banner') }}">
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
-                                                            </div>
-                                                        </div>
-                                                        @if($element->banner)
-                                                            <div class="col-md-12">
-                                                                <img class="img-responsive"
-                                                                     src="{{ asset(env('THUMBNAIL').$element->banner) }}"
-                                                                     alt="">
-                                                            </div>
-                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id , 'colName' => 'banner']) }}"><i
-                                                                        class="fa fa-fw fa-times"></i></a>
-                                                        @endif
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group {{ $errors->has('bg') ? ' has-error' : '' }}">
-                                                            <label for="demo"
-                                                                   class="control-label">{{ trans('general.bg') }}
-                                                                *</label>
-                                                            <input type="file"
-                                                                   class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.bg') }}"
-                                                                   data-control="hue" name="bg">
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
-                                                            </div>
-                                                        </div>
-                                                        @if($element->bg)
-                                                            <div class="col-md-12">
-                                                                <img class="img-responsive img-sm"
-                                                                     src="{{ asset(env('THUMBNAIL').$element->bg) }}"
-                                                                     alt="">
-                                                            </div>
-                                                            <a href="{{ route("backend.admin.image.clear",['model' => 'user', 'id' => $element->id ,'colName' => 'bg']) }}"><i
-                                                                        class="fa fa-fw fa-times"></i></a>
-                                                        @endif
-                                                    </div>
-
-                                                    @can('index','survey')
-                                                        @if(!$element->surveys->isEmpty() && env('MALLR'))
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label class="control-label tooltips"
-                                                                           data-container="body" data-placement="top"
-                                                                           data-original-title="{{ trans('message.surveys') }}"
-                                                                    >{{ trans('general.surveys') }}
-                                                                        *</label>
-                                                                    <select multiple="multiple" class="multi-select"
-                                                                            id="my_multi_select3" name="surveys[]">
-                                                                        @foreach($element->surveys as $survey)
-                                                                            <option value="{{ $survey->id }}" {{ in_array($survey->id,$element->surveys->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}>
-                                                                                {{ $survey->name }} </option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        @endif
-                                                    @endcan
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="portlet box blue ">
-                                        <div class="portlet-title">
-                                            <div class="caption">
-                                                <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
-                                            </div>
-                                        </div>
-                                        <div class="portlet-body form">
-                                            <div class="form-body">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="file"
-                                                                   class="control-label">{{ trans('general.more_images') }}</label>
-
-                                                            <input class="form-control tooltips" data-container="body"
-                                                                   data-placement="top"
-                                                                   data-original-title="{{ trans('message.more_iamges') }}"
-                                                                   name="images[]" placeholder="images" type="file"
-                                                                   multiple/>
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="form_control_1">{{ trans('general.qr') }}</label>
-                                                            <input type="file" class="form-control tooltips"
-                                                                   data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.qr') }}"
-                                                                   name="qr" placeholder="{{ trans('general.qr') }}">
-                                                            <div class="help-block text-left">
-                                                                {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
