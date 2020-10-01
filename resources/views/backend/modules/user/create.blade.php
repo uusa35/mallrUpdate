@@ -177,7 +177,19 @@
                                                 @endif
                                             </div>
                                         </div>
-
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_control_1" class="control-label required">{{ trans('general.logo') }}*</label>
+                                                <input type="file" class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.main_image') }}"
+                                                       name="image" placeholder="{{ trans('general.main_image') }}"
+                                                       required>
+                                                <div class="help-block text-left">
+                                                    {{ trans('message.best_fit',['width' => '1000 px', 'height' => '1000 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
                                         @if(!$categories->isEmpty())
                                             <div class="col-md-4">
                                                 <div class="form-group">
@@ -211,98 +223,19 @@
                                                 </div>
                                             </div>
                                         @endif
-
-                                        @if(!$products->isEmpty())
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label tooltips"
-                                                           data-container="body" data-placement="top"
-                                                           data-original-title="{{ trans('message.related_product_group') }}"
-                                                    >{{ trans('general.related_product_group') }}
-                                                        </label>
-                                                    <select multiple="multiple" class="multi-select"
-                                                            id="my_multi_select2" name="products[]">
-                                                        @foreach($products as $product)
-                                                            <option value="{{ $product->id }}">
-                                                                {{ $product->name }} - SKU
-                                                                : {{ $product->sku }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        @endif
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="form_control_1" class="control-label required">{{ trans('general.logo') }}*</label>
-                                                <input type="file" class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.main_image') }}"
-                                                       name="image" placeholder="{{ trans('general.main_image') }}"
-                                                       required>
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1000 px', 'height' => '1000 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="file"
-                                                       class="control-label required">{{ trans('general.more_images') }}*
-                                                </label>
-                                                <input class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.more_iamges') }}"
-                                                       name="images[]" placeholder="images" type="file"
-                                                       multiple/>
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="form_control_1">{{ trans('general.qr') }}</label>
-                                                <input type="file" class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.qr') }}" name="qr"
-                                                       placeholder="{{ trans('general.qr') }}">
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="form_control_1">{{ trans('general.banner') }}</label>
-                                                <input type="file" class="form-control tooltips" data-container="body"
-                                                       data-placement="top"
-                                                       data-original-title="{{ trans('message.banner') }}" name="banner"
-                                                       placeholder="{{ trans('general.banner') }}">
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('bg') ? ' has-error' : '' }}">
-                                                <label for="demo"
-                                                       class="control-label">{{ trans('general.bg') }}</label>
-                                                <input type="file" id="hue-demo" class="form-control tooltips demo"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.bg') }}"
-                                                       data-control="hue" name="bg" value="#ff6161">
-                                                <div class="help-block text-left">
-                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
-                                                </div>
-                                                @if ($errors->has('demo'))
-                                                    <span class="help-block">
-                                                <strong>
-                                                    {{ $errors->first('demo') }}
-                                                </strong>
-                                            </span>
-                                                @endif
-                                            </div>
-                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet box blue ">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <div class="form-body">
+                                    <div class="row">
 
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -366,19 +299,44 @@
                                                 @endif
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portlet box blue ">
-                            <div class="portlet-title">
-                                <div class="caption">
-                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}
-                                </div>
-                            </div>
-                            <div class="portlet-body form">
-                                <div class="form-body">
-                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group {{ $errors->has('service_en') ? ' has-error' : '' }}">
+                                                <label for="service_en"
+                                                       class="control-label">{{ trans('general.service_en') }}</label>
+                                                <input id="service_en" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.service_en') }}"
+                                                       name="service_en" value="{{ old('service_en') }}"
+                                                       placeholder="{{ trans('general.service_en') }}"
+                                                       autofocus>
+                                                @if ($errors->has('service_en'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('service_en') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group {{ $errors->has('service_ar') ? ' has-error' : '' }}">
+                                                <label for="service_ar"
+                                                       class="control-label">{{ trans('general.service_ar') }}</label>
+                                                <input id="service_ar" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.service_ar') }}"
+                                                       name="service_ar" value="{{ old('service_ar') }}"
+                                                       placeholder="{{ trans('general.service_ar') }}"
+                                                       autofocus>
+                                                @if ($errors->has('service_ar'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('service_ar') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
                                         <div class="col-md-4">
                                             <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                                                 <label for="address"
@@ -536,6 +494,84 @@
                                                     <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('apartment') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        @if(!$products->isEmpty())
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label tooltips"
+                                                           data-container="body" data-placement="top"
+                                                           data-original-title="{{ trans('message.related_product_group') }}"
+                                                    >{{ trans('general.related_product_group') }}
+                                                    </label>
+                                                    <select multiple="multiple" class="multi-select"
+                                                            id="my_multi_select2" name="products[]">
+                                                        @foreach($products as $product)
+                                                            <option value="{{ $product->id }}">
+                                                                {{ $product->name }} - SKU
+                                                                : {{ $product->sku }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="file"
+                                                       class="control-label">{{ trans('general.more_images') }}
+                                                </label>
+                                                <input class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.more_iamges') }}"
+                                                       name="images[]" placeholder="images" type="file"
+                                                       multiple/>
+                                                <div class="help-block text-left small">
+                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '1440 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_control_1">{{ trans('general.qr') }}</label>
+                                                <input type="file" class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.qr') }}" name="qr"
+                                                       placeholder="{{ trans('general.qr') }}">
+                                                <div class="help-block text-left small">
+                                                    {{ trans('message.best_fit',['width' => '500 px', 'height' => '500 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_control_1">{{ trans('general.banner') }}</label>
+                                                <input type="file" class="form-control tooltips" data-container="body"
+                                                       data-placement="top"
+                                                       data-original-title="{{ trans('message.banner') }}" name="banner"
+                                                       placeholder="{{ trans('general.banner') }}">
+                                                <div class="help-block text-left small">
+                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group {{ $errors->has('bg') ? ' has-error' : '' }}">
+                                                <label for="demo"
+                                                       class="control-label">{{ trans('general.bg') }}</label>
+                                                <input type="file"  class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.bg') }}"
+                                                       data-control="hue" name="bg" value="#ff6161">
+                                                <div class="help-block text-left small">
+                                                    {{ trans('message.best_fit',['width' => '1080 px', 'height' => '350 px']) }}
+                                                </div>
+                                                @if ($errors->has('demo'))
+                                                    <span class="help-block small">
+                                                <strong>
+                                                    {{ $errors->first('demo') }}
                                                 </strong>
                                             </span>
                                                 @endif
