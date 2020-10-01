@@ -197,7 +197,7 @@
                                                         *</label>
                                                     <select multiple="multiple" class="multi-select"
                                                             id="my_multi_select1" name="categories[]">
-                                                        @foreach($categories as $category)
+                                                        @foreach($categories->unique() as $category)
                                                             <option value="{{ $category->id }}"
                                                                     style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
                                                                 {{ $category->name }}</option>

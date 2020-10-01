@@ -168,7 +168,7 @@
                                                                     *</label>
                                                                 <select multiple="multiple" class="multi-select"
                                                                         id="my_multi_select1" name="categories[]">
-                                                                    @foreach($categories as $category)
+                                                                    @foreach($categories->unique() as $category)
                                                                         <option value="{{ $category->id }}"
                                                                                 {{ in_array($category->id,$element->categories->pluck('id')->unique()->flatten()->toArray()) ? 'selected' : null }}
                                                                                 style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">
