@@ -854,10 +854,13 @@ return array (
   'payment' => 'Payment',
   'shipment_reference' => 'Shipment Ref',
   'is_paid' => 'is Paid',
+  'mobile_app_home_bg' => 'Bg Main Page',
   'paid_orders' => 'Paid Orders',
   'completed_orders' => 'Paid & Complete Orders',
   'till' => 'till',
   'total_paid_orders' => 'Total Paid Orders',
   'reports' => 'Reports',
   'order_id' => 'Order Id',
+  'mobile_example' => 'Only Mobile Number (without Country Code)',
+  'logo' => 'Logo',
 );
