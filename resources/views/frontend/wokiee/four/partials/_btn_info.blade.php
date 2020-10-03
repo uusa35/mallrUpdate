@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row tt-services-listing">
             <div class="col-xs-12 col-md-6 col-lg-4">
-                <a href="faq.html" class="tt-services-block">
+                <a href="#" class="tt-services-block">
                     <div class="tt-col-icon">
                         <i class="icon-f-48"></i>
                     </div>
@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-4">
-                <a href="faq.html" class="tt-services-block">
+                <a href="#" class="tt-services-block">
                     <div class="tt-col-icon">
                         <i class="icon-f-35"></i>
                     </div>
@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-4">
-                <a href="faq.html" class="tt-services-block">
+                <a href="#" class="tt-services-block">
                     <div class="tt-col-icon">
                         <i class="icon-e-09"></i>
                     </div>
