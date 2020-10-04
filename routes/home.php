@@ -6,10 +6,13 @@ if (env('ABATI')) {
     Route::get('/', 'HomeController@getMallrHome')->name('index');
     Route::get('/home', 'HomeController@getMallrHome')->name('home');
 } elseif (env('HOMEKEY')) {
-//    Route::get('/', 'HomeController@getMobileLayout')->name('index');
-//    Route::get('/home', 'HomeController@getMobileLayout')->name('home');
-    Route::get('/', 'HomeController@getHomekeyHome')->name('index');
-    Route::get('/home', 'HomeController@getHomekeyHome')->name('home');
+    if (auth()->user()->isSuper) {
+        Route::get('/', 'HomeController@getHomekeyHome')->name('index');
+        Route::get('/home', 'HomeController@getHomekeyHome')->name('home');
+    } else {
+        Route::get('/', 'HomeController@getMobileLayout')->name('index');
+        Route::get('/home', 'HomeController@getMobileLayout')->name('home');
+    }
 } elseif (env('ESCRAP')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
@@ -34,10 +37,10 @@ if (env('ABATI')) {
 } elseif (env('NASHKW')) {
     Route::get('/', 'HomeController@getNashKwHome')->name('index');
     Route::get('/home', 'HomeController@getNashKwHome')->name('home');
-}elseif (env('EMAKEUP')) {
+} elseif (env('EMAKEUP')) {
     Route::get('/', 'HomeController@getEmakeupHome')->name('index');
     Route::get('/home', 'HomeController@getEmakeupHome')->name('home');
-}  elseif (env('EXPO')) {
+} elseif (env('EXPO')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('HTB')) {
