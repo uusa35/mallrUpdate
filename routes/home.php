@@ -6,7 +6,7 @@ if (env('ABATI')) {
     Route::get('/', 'HomeController@getMallrHome')->name('index');
     Route::get('/home', 'HomeController@getMallrHome')->name('home');
 } elseif (env('HOMEKEY')) {
-    if (auth()->user()->id === 1) {
+    if (auth()->id() === 1) {
         Route::get('/', 'HomeController@getHomekeyHome')->name('index');
         Route::get('/home', 'HomeController@getHomekeyHome')->name('home');
     } else {
