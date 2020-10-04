@@ -31,8 +31,10 @@ class ClassifiedController extends Controller
             $elements = Classified::active()->notExpired()->hasImage()->available()->with('items.property', 'items.categoryGroup')->paginate(self::TAKE_MIN);
         }
         if (!$elements->isEmpty()) {
+            $categoriesList = $elements->pluck('categories')->flatten()->unique('id')->sortKeysDesc();
             return view('frontend.wokiee.four.modules.classified.index', compact(
-                'elements'
+                'elements',
+                'categoriesList'
             ));
         } else {
             return redirect()->route('frontend.home')->with('error', trans('message.no_items_found'));
@@ -45,10 +47,12 @@ class ClassifiedController extends Controller
         if ($validator->fails()) {
             return redirect()->route('frontend.home')->withErrors($validator->messages());
         }
-        $elements = Classified::filters($filters)->active()->hasImage()->notExpired()->with(['items.property', 'items.categoryGroup'])->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
+        $elements = Classified::filters($filters)->active()->hasImage()->notExpired()->with(['items.property', 'items.categoryGroup', 'categories'])->orderBy('id', 'desc')->paginate(Self::TAKE_MIN);
         if (!$elements->isEmpty()) {
+            $categoriesList = $elements->pluck('categories')->flatten()->unique('id')->sortKeysDesc();
             return view('frontend.wokiee.four.modules.classified.index', compact(
-                'elements'
+                'elements',
+                'categoriesList'
             ));
         } else {
             return redirect()->route('frontend.home')->with('error', trans('message.no_items_found'));
@@ -62,7 +66,7 @@ class ClassifiedController extends Controller
      */
     public function create()
     {
-        //
+        return view('frontend.wokiee.four.modules.classified.create');
     }
 
     /**
@@ -107,9 +111,12 @@ class ClassifiedController extends Controller
                 }
                 $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], true) : null;
                 $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
-                return response()->json(ClassifiedLightResource::make($element), 200);
+                if ($element->category->categoryGroups->isEmpty()) {
+                    return redirect()->route('backend.classified.index')->with('success', trans('general.classified_saved'));
+                }
+                return redirect()->route('frontend.property.attach', ['id' => $element->id])->with('success', trans('general.classified_saved'));
             }
-            return response()->json(['message' => trans('message.failure')], 400);
+            return redirect()->back()->with('error', trans('general.classified_not_saved'));
         } catch (\Exception $e) {
             return response()->json(['message' => $e->getMessage()], 400);
         }
@@ -126,7 +133,7 @@ class ClassifiedController extends Controller
         $element = Classified::whereId($id)->active()->with(['images', 'user', 'items.property', 'items.categoryGroup', 'category', 'comments', 'country', 'area'])->first();
         if ($element) {
             IncreaseElementViews::dispatch($element);
-            return response(new ClassifiedResource($element), 200);
+            return view('frontend.wokiee.four.modules.classified.show', compact('element'));
         }
         return response()->json(['message' => trans('general.this_classified_does_not_exist')], 400);
     }

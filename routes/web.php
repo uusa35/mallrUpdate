@@ -117,11 +117,21 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['country']], function () {
     include('home.php');
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('favorite', 'FavoriteController@index')->name('favorite.index');
+        Route::get('favorite/add/product/{id}', 'FavoriteController@addProduct')->name('favorite.product.add');
+        Route::get('favorite/add/service/{id}', 'FavoriteController@addService')->name('favorite.service.add');
+        Route::get('favorite/remove/product/{id}', 'FavoriteController@removeProduct')->name('favorite.product.remove');
+        Route::get('favorite/remove/service/{id}', 'FavoriteController@removeService')->name('favorite.service.remove');
+        Route::resource('survey', 'SurveyController')->only(['show', 'store']);
+        Route::resource('classified', 'ClassifiedController')->only(['create','store','edit','update','delete']);
+        Route::get('property/attach', 'PropertyController@getAttach')->name('property.attach');
+    });
     Route::resource('product', 'ProductController');
     Route::get('product/{id}/{name}', 'ProductController@show')->name('product.show.name');
     Route::resource('service', 'ServiceController');
-    Route::resource('classified', 'ClassifiedController');
     Route::get('classified/{id}/{name}', 'ClassifiedController@show')->name('classified.show.name');
+    Route::resource('classified', 'ClassifiedController')->only(['index','show']);
     Route::resource('collection', 'CollectionController')->only(['index', 'show']);
     Route::get('service/{id}/{name}', 'ServiceController@show')->name('service.show.name');
     Route::post('cart/add/service', 'CartController@addService')->name('cart.add.service');
@@ -157,14 +167,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
     Route::get('country/set', 'HomeController@setCountry')->name('country.set');
     Route::get('element/linking', 'HomeController@handleDeepLinking')->name('deep.linking');
     Route::resource('fan', 'FanController')->only(['create', 'index']);
-    Route::group(['middleware' => ['auth']], function () {
-        Route::get('favorite', 'FavoriteController@index')->name('favorite.index');
-        Route::get('favorite/add/product/{id}', 'FavoriteController@addProduct')->name('favorite.product.add');
-        Route::get('favorite/add/service/{id}', 'FavoriteController@addService')->name('favorite.service.add');
-        Route::get('favorite/remove/product/{id}', 'FavoriteController@removeProduct')->name('favorite.product.remove');
-        Route::get('favorite/remove/service/{id}', 'FavoriteController@removeService')->name('favorite.service.remove');
-        Route::resource('survey', 'SurveyController')->only(['show', 'store']);
-    });
 });
 
 Auth::routes();

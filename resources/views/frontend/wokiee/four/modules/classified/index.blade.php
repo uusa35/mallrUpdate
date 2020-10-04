@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row" style="padding-top: 20px;">
                     {{--<div class="col-md-4 col-lg-3 col-xl-3 leftColumn aside desctop-no-sidebar">--}}
-                    <div class="col-md-4 col-lg-3 col-xl-3 leftColumn aside">
+                    <div class="col-md-4 col-lg-3 col-xl-3 leftColumn aside">x
                         @include('frontend.wokiee.four.partials._search_side_bar',['classifieds' => $elements])
                     </div>
                     <div class="col-md-9">

@@ -27,6 +27,9 @@
 @if(isset($services) && $services->isNotEmpty())
     @include('frontend.wokiee.four.partials._search_side_bar_service_categories')
 @endif
+@if(isset($classifieds) && $classifieds->isNotEmpty())
+    @include('frontend.wokiee.four.partials._search_side_bar_categories')
+@endif
 @include('frontend.wokiee.four.partials._search_side_bar_tags')
 
 <div class="tt-content-aside">

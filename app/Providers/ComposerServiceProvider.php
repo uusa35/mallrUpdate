@@ -38,6 +38,7 @@ class ComposerServiceProvider extends ServiceProvider
             'backend.partials.sidebar',
             'auth.*',
             'frontend.wokiee.four.modules.user.edit',
+            'frontend.wokiee.four.modules.classified.create',
         ], 'App\Services\ViewComposers@getCountries');
 
         view()->composer([
@@ -90,7 +91,8 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer([
             'frontend.wokiee.four.layouts.app',
-            'frontend.wokiee.four.partials._home_grid_main_categories'
+            'frontend.wokiee.four.partials._home_grid_main_categories',
+            'frontend.wokiee.four.modules.classified.create',
         ], 'App\Services\ViewComposers@getCategories');
 
         view()->composer([
