@@ -121,10 +121,13 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
         Route::get('favorite', 'FavoriteController@index')->name('favorite.index');
         Route::get('favorite/add/product/{id}', 'FavoriteController@addProduct')->name('favorite.product.add');
         Route::get('favorite/add/service/{id}', 'FavoriteController@addService')->name('favorite.service.add');
+        Route::get('favorite/add/classified/{id}', 'FavoriteController@addClassified')->name('favorite.classified.add');
         Route::get('favorite/remove/product/{id}', 'FavoriteController@removeProduct')->name('favorite.product.remove');
         Route::get('favorite/remove/service/{id}', 'FavoriteController@removeService')->name('favorite.service.remove');
+        Route::get('favorite/remove/classified/{id}', 'FavoriteController@removeClassified')->name('favorite.classified.remove');
         Route::resource('survey', 'SurveyController')->only(['show', 'store']);
         Route::resource('classified', 'ClassifiedController')->only(['create','store','edit','update','delete']);
+        Route::get('classified/category/choose', 'ClassifiedController@chooseCategory')->name('classified.choose');
         Route::get('property/attach', 'PropertyController@getAttach')->name('property.attach');
     });
     Route::resource('product', 'ProductController');

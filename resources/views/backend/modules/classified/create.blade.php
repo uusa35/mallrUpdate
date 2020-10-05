@@ -111,6 +111,25 @@
                                             </div>
                                         </div>
 
+                                        <div class="col-md-4">
+                                            <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
+                                                <label for="mobile" class="control-label">{{ trans('general.mobile') }}
+                                                    *</label>
+                                                <input id="mobile" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.mobile') }}" name="mobile"
+                                                       value="{{ old('mobile') }}"
+                                                       placeholder="{{ trans('general.mobile') }}" required autofocus>
+                                                @if ($errors->has('mobile'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('mobile') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
                                         @can('isAdminOrAbove')
                                             <div class="col-md-4">
                                                 <div class="form-group">

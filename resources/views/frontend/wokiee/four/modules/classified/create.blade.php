@@ -12,6 +12,7 @@
                       action="{{ route('frontend.classified.store') }}"
                       enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" name="category_id" value="{{ request()->classified_category_id }}">
                     <div class="form-body">
                         <h3 class="form-section">{{ trans('general.new_classified') }}</h3>
                         <div class="portlet box blue ">
@@ -62,7 +63,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
                                                 <label for="price" class="control-label">{{ trans('general.price') }}
                                                     *</label>
@@ -75,6 +76,25 @@
                                                     <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('price') }}
+                                                </strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
+                                                <label for="mobile" class="control-label">{{ trans('general.mobile') }}
+                                                    *</label>
+                                                <input id="mobile" type="text" class="form-control tooltips"
+                                                       data-container="body" data-placement="top"
+                                                       data-original-title="{{ trans('message.mobile') }}" name="mobile"
+                                                       value="{{ old('mobile') }}"
+                                                       placeholder="{{ trans('general.mobile') }}" required autofocus>
+                                                @if ($errors->has('mobile'))
+                                                    <span class="help-block">
+                                                <strong>
+                                                    {{ $errors->first('mobile') }}
                                                 </strong>
                                             </span>
                                                 @endif
@@ -111,57 +131,99 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
-                                        @if($categories->where('is_classified',true)->isNotEmpty())
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="single"
-                                                           class="control-label">{{ trans('general.main_category') }}
-                                                        *</label>
-                                                    <select id="" name="category_id" class="form-control select2"
-                                                            required>
-                                                        <option value="">{{ trans('general.choose_category') }}</option>
-                                                        @foreach($categories as $category)
-                                                            <option value="{{ $category->id }}"
-                                                                    style="background-color: {{ $category->is_parent ? 'blue' : null  }}">{{ $category->name }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
+
+                                        @if($category->categoryGroups->isNotEmpty())
+                                            @foreach($category->categoryGroups->unique() as $group)
+                                                @if($group->is_multi)
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="single"
+                                                                   class="control-label">{{ $group->name }}
+                                                                *</label>
+                                                            <select id="" name="items[{{ $group->id }}]"
+                                                                    class="form-control select2"
+                                                                    required>
+                                                                @foreach($group->properties as $property)
+                                                                    <option value="{{ $property->id }}">{{ $property->name}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                @else
+                                                    @foreach($group->properties as $property)
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="form_control_1">{{ $property->name }}</label>
+                                                                <input type="text" class="form-control tooltips"
+                                                                       data-container="body"
+                                                                       data-placement="top"
+                                                                       data-original-title="{{ $property->name }}"
+                                                                       name="items[]"
+                                                                       placeholder="{{ $property->name }}"
+                                                                >
+                                                                <div class="help-block text-left">
+                                                                    {{ $property->caption }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                @endif
+                                            @endforeach
                                         @endif
-{{--                                        @if(!$categories->isEmpty())--}}
-{{--                                            <div class="col-md-6}}
-{{--                                                <div class="form-group">--}}
-{{--                                                    <label class="control-label">{{ trans('general.more_categories') }}--}}
-{{--                                                        *</label>--}}
-{{--                                                    <select multiple="multiple" class="multi-select"--}}
-{{--                                                            id="my_multi_select1" name="categories[]">--}}
-{{--                                                        @foreach($categories as $category)--}}
-{{--                                                            <option value="{{ $category->id }}"--}}
-{{--                                                                    style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">--}}
-{{--                                                                {{ $category->name }}</option>--}}
-{{--                                                            @if(!$category->children->isEmpty())--}}
-{{--                                                                @foreach($category->children as $child)--}}
-{{--                                                                    <option value="{{ $child->id }}"--}}
-{{--                                                                            style="padding-left: 15px">--}}
-{{--                                                                        {{ $child->name }}</option>--}}
-{{--                                                                    @if(!$child->children->isEmpty())--}}
-{{--                                                                        @foreach($child->children as $subChild)--}}
-{{--                                                                            <option value="{{ $subChild->id }}"--}}
-{{--                                                                                    style="padding-left: 35px">--}}
-{{--                                                                                {{ $subChild->name }}</option>--}}
-{{--                                                                        @endforeach--}}
-{{--                                                                    @endif--}}
-{{--                                                                @endforeach--}}
-{{--                                                            @endif--}}
-{{--                                                        @endforeach--}}
-{{--                                                    </select>--}}
-{{--                                                    --}}{{-- <span class="help-block">--}}
-{{--                                                                                                                                        <strong>{{ trans('message.categories_instructions') }}</strong>--}}
-{{--                                                    </span> --}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        @endif--}}
+
+
+                                            @if($categories->where('is_classified',true)->isNotEmpty())
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="single"
+                                                               class="control-label">{{ trans('general.main_category') }}
+                                                            *</label>
+                                                        <select id="" name="category_id" class="form-control select2"
+                                                                required disabled="disabled">
+                                                            @foreach($categories as $category)
+                                                                <option value="{{ $category->id }}" {{ request()->classified_category_id === $category->id ? 'selected' : null }}
+                                                                style="background-color: {{ $category->is_parent ? 'blue' : null  }}">{{ $category->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            @endif
+
+                                        {{--                                        @if(!$categories->isEmpty())--}}
+                                        {{--                                            <div class="col-md-6}}
+                                        {{--                                                <div class="form-group">--}}
+                                        {{--                                                    <label class="control-label">{{ trans('general.more_categories') }}--}}
+                                        {{--                                                        *</label>--}}
+                                        {{--                                                    <select multiple="multiple" class="multi-select"--}}
+                                        {{--                                                            id="my_multi_select1" name="categories[]">--}}
+                                        {{--                                                        @foreach($categories as $category)--}}
+                                        {{--                                                            <option value="{{ $category->id }}"--}}
+                                        {{--                                                                    style="background-color: {{ $category->isParent ? 'lightblue' : null  }}">--}}
+                                        {{--                                                                {{ $category->name }}</option>--}}
+                                        {{--                                                            @if(!$category->children->isEmpty())--}}
+                                        {{--                                                                @foreach($category->children as $child)--}}
+                                        {{--                                                                    <option value="{{ $child->id }}"--}}
+                                        {{--                                                                            style="padding-left: 15px">--}}
+                                        {{--                                                                        {{ $child->name }}</option>--}}
+                                        {{--                                                                    @if(!$child->children->isEmpty())--}}
+                                        {{--                                                                        @foreach($child->children as $subChild)--}}
+                                        {{--                                                                            <option value="{{ $subChild->id }}"--}}
+                                        {{--                                                                                    style="padding-left: 35px">--}}
+                                        {{--                                                                                {{ $subChild->name }}</option>--}}
+                                        {{--                                                                        @endforeach--}}
+                                        {{--                                                                    @endif--}}
+                                        {{--                                                                @endforeach--}}
+                                        {{--                                                            @endif--}}
+                                        {{--                                                        @endforeach--}}
+                                        {{--                                                    </select>--}}
+                                        {{--                                                    --}}{{-- <span class="help-block">--}}
+                                        {{--                                                                                                                                        <strong>{{ trans('message.categories_instructions') }}</strong>--}}
+                                        {{--                                                    </span> --}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        @endif--}}
                                         @if(!$countries->isEmpty())
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -180,19 +242,19 @@
                                             </div>
                                         @endif
 
-{{--                                        @if(!$tags->isEmpty())--}}
-{{--                                            <div class="col-md-12}}
-{{--                                                <div class="form-group">--}}
-{{--                                                    <label class="control-label">{{ trans('general.tags') }}</label>--}}
-{{--                                                    <select multiple="multiple" class="multi-select"--}}
-{{--                                                            id="my_multi_select2" name="tags[]">--}}
-{{--                                                        @foreach($tags as $tag)--}}
-{{--                                                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>--}}
-{{--                                                        @endforeach--}}
-{{--                                                    </select>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        @endif--}}
+                                        {{--                                        @if(!$tags->isEmpty())--}}
+                                        {{--                                            <div class="col-md-12}}
+                                        {{--                                                <div class="form-group">--}}
+                                        {{--                                                    <label class="control-label">{{ trans('general.tags') }}</label>--}}
+                                        {{--                                                    <select multiple="multiple" class="multi-select"--}}
+                                        {{--                                                            id="my_multi_select2" name="tags[]">--}}
+                                        {{--                                                        @foreach($tags as $tag)--}}
+                                        {{--                                                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>--}}
+                                        {{--                                                        @endforeach--}}
+                                        {{--                                                    </select>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        @endif--}}
 
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -238,26 +300,26 @@
                                             </div>
                                         </div>
 
-{{--                                        <div class="col-md-12}}
-{{--                                            <div class="form-group{{ $errors->has('expired_at') ? ' has-error' : '' }}">--}}
-{{--                                                <label for="expired_at"--}}
-{{--                                                       class="control-label">{{ trans('general.expired_at_date') }}</label>--}}
-{{--                                                <div class="input-group date form_datetime">--}}
-{{--                                                    <input type="text" readonly--}}
-{{--                                                           style="direction: ltr !important;"--}}
-{{--                                                           class="form-control tooltips" data-container="body"--}}
-{{--                                                           data-placement="top"--}}
-{{--                                                           data-original-title="{{ trans('message.expired_at_date') }}"--}}
-{{--                                                           name="expired_at"--}}
-{{--                                                           value="{{ \Carbon\Carbon::now()->addWeeks(4)->format('d F Y - h:i') }}"--}}
-{{--                                                           required>--}}
-{{--                                                    <span class="input-group-btn"><button--}}
-{{--                                                                class="btn default date-set" type="button"><i--}}
-{{--                                                                    class="fa fa-calendar"></i></button></span>--}}
-{{--                                                </div>--}}
-{{--                                                <span class="help-block"><strong>{{ trans('message.expired_at_date') }}</strong></span>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
+                                        {{--                                        <div class="col-md-12}}
+                                        {{--                                            <div class="form-group{{ $errors->has('expired_at') ? ' has-error' : '' }}">--}}
+                                        {{--                                                <label for="expired_at"--}}
+                                        {{--                                                       class="control-label">{{ trans('general.expired_at_date') }}</label>--}}
+                                        {{--                                                <div class="input-group date form_datetime">--}}
+                                        {{--                                                    <input type="text" readonly--}}
+                                        {{--                                                           style="direction: ltr !important;"--}}
+                                        {{--                                                           class="form-control tooltips" data-container="body"--}}
+                                        {{--                                                           data-placement="top"--}}
+                                        {{--                                                           data-original-title="{{ trans('message.expired_at_date') }}"--}}
+                                        {{--                                                           name="expired_at"--}}
+                                        {{--                                                           value="{{ \Carbon\Carbon::now()->addWeeks(4)->format('d F Y - h:i') }}"--}}
+                                        {{--                                                           required>--}}
+                                        {{--                                                    <span class="input-group-btn"><button--}}
+                                        {{--                                                                class="btn default date-set" type="button"><i--}}
+                                        {{--                                                                    class="fa fa-calendar"></i></button></span>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                                <span class="help-block"><strong>{{ trans('message.expired_at_date') }}</strong></span>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div>--}}
 
                                         <div class="col-md-6">
                                             <div class="form-group{{ $errors->has('video_url_one') ? ' has-error' : '' }}">
@@ -359,90 +421,76 @@
                                                 @endif
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="form-body">
-                        <div class="portlet box blue ">
-                            <div class="portlet-body form">
-                                <div class="form-body">
-                                    <div class="row">
-
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('address') ? ' has-error' : '' }}">
-                                                <label for="address"
-                                                       class="control-label">{{ trans('general.address') }}
-                                                    *</label>
-                                                <input id="address" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.address') }}"
-                                                       name="address" value="{{ old('address') }}"
-                                                       placeholder="{{ trans('general.address') }}" autofocus>
-                                                @if ($errors->has('address'))
-                                                    <span class="help-block">
+                                            <div class="col-md-6">
+                                                <div class="form-group {{ $errors->has('address') ? ' has-error' : '' }}">
+                                                    <label for="address"
+                                                           class="control-label">{{ trans('general.address') }}
+                                                        *</label>
+                                                    <input id="address" type="text" class="form-control tooltips"
+                                                           data-container="body" data-placement="top"
+                                                           data-original-title="{{ trans('message.address') }}"
+                                                           name="address" value="{{ old('address') }}"
+                                                           placeholder="{{ trans('general.address') }}" autofocus>
+                                                    @if ($errors->has('address'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('address') }}
                                                 </strong>
                                             </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('longitude') ? ' has-error' : '' }}">
-                                                <label for="longitude"
-                                                       class="control-label">{{ trans('general.longitude') }}
-                                                    *</label>
-                                                <input id="longitude" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.longitude') }}"
-                                                       name="longitude" value="{{ old('longitude') }}"
-                                                       placeholder="{{ trans('general.longitude') }}" autofocus>
-                                                @if ($errors->has('longitude'))
-                                                    <span class="help-block">
+                                            <div class="col-md-6">
+                                                <div class="form-group {{ $errors->has('longitude') ? ' has-error' : '' }}">
+                                                    <label for="longitude"
+                                                           class="control-label">{{ trans('general.longitude') }}
+                                                        *</label>
+                                                    <input id="longitude" type="text" class="form-control tooltips"
+                                                           data-container="body" data-placement="top"
+                                                           data-original-title="{{ trans('message.longitude') }}"
+                                                           name="longitude" value="{{ old('longitude') }}"
+                                                           placeholder="{{ trans('general.longitude') }}" autofocus>
+                                                    @if ($errors->has('longitude'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('longitude') }}
                                                 </strong>
                                             </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group {{ $errors->has('latitude') ? ' has-error' : '' }}">
-                                                <label for="latitude"
-                                                       class="control-label">{{ trans('general.latitude') }}
-                                                    *</label>
-                                                <input id="latitude" type="text" class="form-control tooltips"
-                                                       data-container="body" data-placement="top"
-                                                       data-original-title="{{ trans('message.latitude') }}"
-                                                       name="latitude" value="{{ old('latitude') }}"
-                                                       placeholder="{{ trans('general.latitude') }}" autofocus>
-                                                @if ($errors->has('latitude'))
-                                                    <span class="help-block">
+                                            <div class="col-md-6">
+                                                <div class="form-group {{ $errors->has('latitude') ? ' has-error' : '' }}">
+                                                    <label for="latitude"
+                                                           class="control-label">{{ trans('general.latitude') }}
+                                                        *</label>
+                                                    <input id="latitude" type="text" class="form-control tooltips"
+                                                           data-container="body" data-placement="top"
+                                                           data-original-title="{{ trans('message.latitude') }}"
+                                                           name="latitude" value="{{ old('latitude') }}"
+                                                           placeholder="{{ trans('general.latitude') }}" autofocus>
+                                                    @if ($errors->has('latitude'))
+                                                        <span class="help-block">
                                                 <strong>
                                                     {{ $errors->first('latitude') }}
                                                 </strong>
                                             </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="form-body">
                         <div class="portlet box blue ">
-{{--                            <div class="portlet-title">--}}
-{{--                                <div class="caption">--}}
-{{--                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            {{--                            <div class="portlet-title">--}}
+                            {{--                                <div class="caption">--}}
+                            {{--                                    <i class="fa fa-gift"></i> {{ trans('general.more_details') }}--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                             <div class="portlet-body form">
                                 <div class="form-body">
                                     <div class="row">

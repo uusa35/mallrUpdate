@@ -23,7 +23,7 @@
                         @endif
 {{--                        @if(env('HOMEKEY') && auth()->user()->isClient)--}}
                         @if(env('HOMEKEY'))
-                        <li><a href="{{ route('frontend.classified.create') }}">
+                        <li><a href="{{ route('frontend.classified.choose') }}">
                                 <i class="icon-f-81 fa fa-fw fa-lg"></i>
                                 {{ trans('general.create_classified') }}
                             </a>

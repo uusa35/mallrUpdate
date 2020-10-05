@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Classified;
 use App\Models\Favorite;
 use App\Models\Product;
 use App\Models\Service;
@@ -31,6 +32,12 @@ class FavoriteController extends Controller
         return redirect()->back()->with('success', trans('message.favorite_saved'));
     }
 
+    public function addClassified($id)
+    {
+        Classified::whereId($id)->first()->favorites()->sync(auth()->user()->id);
+        return redirect()->back()->with('success', trans('message.favorite_saved'));
+    }
+
     public function removeProduct($id)
     {
         $element = Favorite::where(['product_id' => $id, 'user_id' => auth()->user()->id])->first()->delete();
@@ -43,6 +50,15 @@ class FavoriteController extends Controller
     public function removeService($id)
     {
         $element = Favorite::where(['service_id' => $id, 'user_id' => auth()->user()->id])->first()->delete();
+        if ($element) {
+            return redirect()->back()->with('success', trans('general.favorite_deleted'));
+        }
+        return redirect()->back()->with('error', trans('general.favorite_not_deleted'));
+    }
+
+    public function removeClassified($id)
+    {
+        $element = Favorite::where(['classified_id' => $id, 'user_id' => auth()->user()->id])->first()->delete();
         if ($element) {
             return redirect()->back()->with('success', trans('general.favorite_deleted'));
         }

@@ -9,6 +9,8 @@ use App\Http\Resources\ClassifiedExtraLightResource;
 use App\Http\Resources\ClassifiedLightResource;
 use App\Http\Resources\ClassifiedResource;
 use App\Jobs\IncreaseElementViews;
+use App\Models\Category;
+use App\Models\CategoryGroup;
 use App\Models\Classified;
 use App\Services\Search\Filters;
 use Carbon\Carbon;
@@ -41,6 +43,12 @@ class ClassifiedController extends Controller
         }
     }
 
+    public function chooseCategory()
+    {
+        $elements = Category::where('is_classified', true)->active()->get();
+        return view('frontend.wokiee.four.modules.classified.choose', compact('elements'));
+    }
+
     public function search(Filters $filters)
     {
         $validator = validator(request()->all(), ['search' => 'nullable']);
@@ -66,7 +74,14 @@ class ClassifiedController extends Controller
      */
     public function create()
     {
-        return view('frontend.wokiee.four.modules.classified.create');
+        $validate = validator(request()->all(), [
+            'classified_category_id' => 'required|integer'
+        ]);
+        if ($validate->fails()) {
+            return redirect()->back()->with(['error' => trans('general.category_does_not_exist')]);
+        }
+        $category = Category::whereId(request()->classified_category_id)->with('categoryGroups.properties')->first();
+        return view('frontend.wokiee.four.modules.classified.create', compact('category'));
     }
 
     /**
@@ -112,7 +127,7 @@ class ClassifiedController extends Controller
                 $request->hasFile('image') ? $this->saveMimes($element, $request, ['image'], ['1080', '1440'], true) : null;
                 $request->has('images') ? $this->saveGallery($element, $request, 'images', ['1080', '1440'], true) : null;
                 if ($element->category->categoryGroups->isEmpty()) {
-                    return redirect()->route('backend.classified.index')->with('success', trans('general.classified_saved'));
+                    return redirect()->route('frontend.classified.index')->with('success', trans('general.classified_saved'));
                 }
                 return redirect()->route('frontend.property.attach', ['id' => $element->id])->with('success', trans('general.classified_saved'));
             }

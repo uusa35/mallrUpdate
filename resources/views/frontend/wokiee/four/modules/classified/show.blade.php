@@ -45,24 +45,8 @@
                 </div>
                 <div class="col-6">
                     <div class="tt-product-single-info">
-                        @if(!env('EVENTKM'))
-                            @include('frontend.wokiee.four.partials._show_tags')
-                        @endif
                         @include('frontend.wokiee.four.partials._show_page_item_title_description_and_prices')
                         @include('frontend.wokiee.four.partials._service_show_is_really_hot_element')
-                        @include('frontend.wokiee.four.partials._shipment_and_size_chart_btns')
-                        @if($element->canOrder)
-                            <div class="tt-swatches-container">
-                                @if($element->hasRealAttributes)
-                                    <div id="productAttributeApp"></div>
-                                @endif
-                                {{--                                @if($element->has_attributes && $element->product_attributes->isNotEmpty())--}}
-                                {{--                                    @include('frontend.wokiee.four.partials._page_show_sizes',['sizes' => $element->product_attributes->pluck('size')->unique(),'id' => $element->id])--}}
-                                {{--                                    @include('frontend.wokiee.four.partials._page_show_colors',['colors' => $element->product_attributes->pluck('color')->unique(),'hidden' => true,'id' => $element->id])--}}
-                                {{--                                @endif--}}
-                            </div>
-                            @include('frontend.wokiee.four.partials._product_show_add_to_cart_btn')
-                        @endif
                         @auth
                             <div class="tt-wrapper mb-5">
                                 <div class="tt-row-btn">
@@ -73,7 +57,7 @@
                                 </div>
                             </div>
                         @endauth
-
+                        @include('frontend.wokiee.four.partials.classified._category_group_widget')
                         <div class="tt-wrapper">
                             @include('frontend.wokiee.four.partials._product_show_information_widget')
                             @desktop
