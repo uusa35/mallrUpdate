@@ -6,10 +6,10 @@ if (env('ABATI')) {
     Route::get('/', 'HomeController@getMallrHome')->name('index');
     Route::get('/home', 'HomeController@getMallrHome')->name('home');
 } elseif (env('HOMEKEY')) {
-        Route::get('/', 'HomeController@getHomekeyHome')->name('index');
-        Route::get('/home', 'HomeController@getHomekeyHome')->name('home');
-//        Route::get('/', 'HomeController@getMobileLayout')->name('index');
-//        Route::get('/home', 'HomeController@getMobileLayout')->name('home');
+//        Route::get('/', 'HomeController@getHomekeyHome')->name('index');
+//        Route::get('/home', 'HomeController@getHomekeyHome')->name('home');
+        Route::get('/', 'HomeController@getMobileLayout')->name('index');
+        Route::get('/home', 'HomeController@getMobileLayout')->name('home');
 } elseif (env('ESCRAP')) {
     Route::get('/', 'HomeController@getMobileLayout')->name('index');
     Route::get('/home', 'HomeController@getMobileLayout')->name('home');
