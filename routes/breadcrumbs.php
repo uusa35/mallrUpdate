@@ -52,6 +52,11 @@ Breadcrumbs::for('frontend.classified.show', function ($trail, $element) {
     $trail->push($element->name, route('frontend.classified.show', $element->id));
 });
 
+Breadcrumbs::for('frontend.classified.create', function ($trail) {
+    $trail->parent('frontend.classified.index');
+    $trail->push(trans('general.create_classified'), route('frontend.classified.create'));
+});
+
 Breadcrumbs::for('frontend.brand.index', function ($trail) {
     $trail->parent('frontend.home');
     $trail->push(trans('general.brands'), route('frontend.brand.index'));

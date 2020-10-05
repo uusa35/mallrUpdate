@@ -1,7 +1,7 @@
 <div class="tt-add-info">
     <div class="tt-table-responsive">
         <table class="tt-table-shop-01">
-            @if(is_null($element->sku))
+            @if($element->sku)
                 <tr>
                     <td class="td-fixed-element"><i class="icon-f-02 fa fa-fw fa-lg"></i><span
                                 class="ml-1"></span><span>{{ trans('general.sku') }} : </span>
@@ -11,7 +11,7 @@
                     </td>
                 </tr>
             @endif
-            @if(!is_null($element->user) && !env('HTB'))
+            @if($element->user && !is_null($element->user) && !env('HTB') && !env('HOMEKEY'))
                 <tr>
                     <td class="td-fixed-element">
                         <i class="fa fa-fw icon-e-39 fa-lg"></i>

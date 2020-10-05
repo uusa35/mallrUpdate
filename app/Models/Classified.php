@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Classified extends PrimaryModel
 {
-    use SoftDeletes, ModelHelpers;
+    use SoftDeletes, ModelHelpers, SellingModelHelpers;
     protected $localeStrings = ['name', 'description'];
     protected $guarded = [''];
     protected $dates = ['created_at', 'updated_at', 'expired_at'];
