@@ -25,7 +25,9 @@ class UserObserver
             ->log(strtoupper(class_basename($user)) . ' ' . __FUNCTION__);
 //        $markdown = new Markdown(view(), config('mail.markdown'));
 //        return $markdown->render('emails.new_user', ['user' => $user, 'settings' => Setting::first()]);
-        Mail::to($user->email)->send(new WelcomeNewUser($user));
+        if(env('APP_NAME') !== 'E-MAKEUP') {
+            Mail::to($user->email)->send(new WelcomeNewUser($user));
+        }
 
     }
 
