@@ -91,6 +91,7 @@
                         <thead>
                         <tr>
                             <th class="all">{{ trans('general.order_id') }}</th>
+                            <th class="none">{{ trans('general.order_id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.total') }}</th>
@@ -113,6 +114,7 @@
                         <tfoot>
                         <tr>
                             <th class="all">{{ trans('general.id') }}</th>
+                            <th class="none">{{ trans('general.order_id') }}</th>
                             <th class="none">{{ trans('general.product_size_quantity') }}</th>
                             <th>{{ trans('general.shipment_fees') }}</th>
                             <th>{{ trans('general.total') }}</th>
@@ -136,6 +138,7 @@
                         @foreach($elements as $element)
                             <tr>
                                 <td>{{ $element->id }}</td>
+                                <td>#{{ $element->id }}</td>
                                 <td>
                                     @if($element->order_metas->isNotEmpty())
                                         <div class="btn-group-vertical btn-group-solid">
