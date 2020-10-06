@@ -255,11 +255,11 @@
                                                             <i class="fa fa-fw fa-paper-plane"></i> {{ trans('general.see_invoice') }}
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="{{ route('frontend.invoice.pdf',['id' => $element->id]) }}">
-                                                            <i class="fa fa-fw fa-paper-plane"></i> {{ trans('general.see_invoice_in_pdf') }}
-                                                        </a>
-                                                    </li>
+{{--                                                    <li>--}}
+{{--                                                        <a href="{{ route('frontend.invoice.pdf',['id' => $element->id]) }}">--}}
+{{--                                                            <i class="fa fa-fw fa-paper-plane"></i> {{ trans('general.see_invoice_in_pdf') }}--}}
+{{--                                                        </a>--}}
+{{--                                                    </li>--}}
                                                     <li>
                                                         <a href="{{ route('backend.admin.order.status',['id' => $element->id,'status' => 'received']) }}">
                                                             <i class="fa fa-fw fa-hand-paper-o"></i> {{ trans('general.order_received') }}
