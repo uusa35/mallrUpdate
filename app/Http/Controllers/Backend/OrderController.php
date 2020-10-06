@@ -38,7 +38,7 @@ class OrderController extends Controller
                 ->whereHas('order_metas.product', function ($q) {
                     return $q->where('user_id', auth()->id());
                 })
-                ->orderBy('id', 'desc')
+                ->orderBy('created_at', 'desc')
                 ->paginate(parent::TAKE);
         }
 

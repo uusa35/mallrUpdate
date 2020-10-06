@@ -47,7 +47,7 @@ class OrderController extends Controller
                 ->orderBy('id', 'desc')->paginate(parent::TAKE);
         } else {
             $elements = $elements->with('order_metas.product.product_attributes', 'order_metas.product.user', 'order_metas.product_attribute.size', 'order_metas.product_attribute.color', 'order_metas.service')
-                ->orderBy('id', 'desc')
+                ->orderBy('created_at', 'desc')
                 ->paginate(parent::TAKE);
         }
 
