@@ -58,7 +58,7 @@
                                             <i class="fa fa-fw fa-check-circle"></i> {{ trans('general.toggle_active') }}
                                         </a>
                                     </li>
-                                    @can('currency.delete')
+                                    @can('currency.delete', $element)
                                         <li>
                                             <a data-toggle="modal" href="#" data-target="#basic" data-title="Delete"
                                                data-content="Are you sure you want to delete page {{ $element->name }}? "

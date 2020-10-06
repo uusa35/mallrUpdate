@@ -116,7 +116,7 @@ class CurrencyController extends Controller
     public function destroy($id)
     {
         $element = Currency::whereId($id)->first();
-        $this->authorize('currency.delete');
+        $this->authorize('currency.delete', $element);
         if ($element->delete()) {
             return redirect()->route('backend.admin.currency.index')->with('success', 'currency deleted successfully');
         }
