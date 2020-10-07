@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Commercial;
+use App\Models\Commercial;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CommercialPolicy

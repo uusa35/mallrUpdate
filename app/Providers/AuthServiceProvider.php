@@ -10,6 +10,7 @@ use App\Policies\CategoryPolicy;
 use App\Policies\ClassifiedPolicy;
 use App\Policies\CollectionPolicy;
 use App\Policies\ColorPolicy;
+use App\Policies\CommentPolicy;
 use App\Policies\CommercialPolicy;
 use App\Policies\CountryPolicy;
 use App\Policies\CouponPolicy;
@@ -92,6 +93,7 @@ class AuthServiceProvider extends ServiceProvider
         Gate::resource('group', CategoryGroupPolicy::class);
         Gate::resource('addon', AddonPolicy::class);
         Gate::resource('item', ItemPolicy::class);
+        Gate::resource('comment', CommentPolicy::class);
 
         Gate::define('superOne', function () {
             return auth()->user()->isSuper && auth()->id() === 1;
