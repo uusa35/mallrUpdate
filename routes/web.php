@@ -54,6 +54,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
         Route::resource('newsletter', 'NewsletterController');
         Route::resource('faq', 'FaqController');
         Route::resource('commercial', 'CommercialController');
+        Route::resource('comment', 'CommentController');
         Route::resource('notification', 'NotificationController');
         Route::resource('policy', 'PolicyController');
         Route::resource('coupon', 'CouponController');
