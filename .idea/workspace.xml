@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/CommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/modules/comment/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/CommentPolicy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/CommercialPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/CommercialPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,24 +36,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/CommercialController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Admin/CommentController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
@@ -68,20 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/comment/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/breadcrumbs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="160" column="67" selection-start-line="160" selection-start-column="67" selection-end-line="160" selection-end-column="67" />
+            <state relative-caret-position="810">
+              <caret line="46" column="93" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -127,6 +97,36 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
               <caret line="329" column="48" lean-forward="true" selection-start-line="329" selection-start-column="48" selection-end-line="329" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="891">
+              <caret line="95" column="56" lean-forward="true" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Policies/CommentPolicy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Policies/CommercialPolicy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding>
+                <element signature="e#32#52#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,9 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Services/Traits/HomePageTrait.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/home/homekey.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_categories_slider.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_category_widget.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classified_widget.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_classifieds_search_list.blade.php" />
@@ -240,6 +237,9 @@
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/comment/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Policies/CommentPolicy.php" />
+        <option value="$PROJECT_DIR$/app/Policies/CommercialPolicy.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -457,18 +457,7 @@
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallr" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Policies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
@@ -494,41 +483,6 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="color" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="commercial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallr" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="country" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -543,7 +497,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js.eslint.nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/modules/comment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Policies" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -554,11 +508,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Policies" />
       <recent name="$PROJECT_DIR$/resources/views/backend/modules/comment" />
       <recent name="$PROJECT_DIR$/resources/views/backend/modules/commercial" />
       <recent name="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/comment" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Backend/Admin" />
-      <recent name="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/classified" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/img" />
@@ -907,12 +861,12 @@
       <workItem from="1602007972303" duration="365000" />
       <workItem from="1602012156649" duration="513000" />
       <workItem from="1602057233268" duration="730000" />
-      <workItem from="1602090580634" duration="755000" />
+      <workItem from="1602090580634" duration="997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553788000" />
+    <option name="totallyTimeSpent" value="554030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -985,20 +939,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="100" column="64" selection-start-line="100" selection-start-column="64" selection-end-line="100" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="80" column="83" lean-forward="true" selection-start-line="80" selection-start-column="83" selection-end-line="80" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/category/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1205,13 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -1346,8 +1279,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/comment/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state relative-caret-position="810">
+          <caret line="46" column="93" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Policies/CommentPolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Policies/CommercialPolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <element signature="e#32#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="95" column="56" lean-forward="true" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
         </state>
       </provider>
     </entry>
