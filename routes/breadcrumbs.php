@@ -158,6 +158,11 @@ Breadcrumbs::for('backend.product.trashed', function ($trail) {
     $trail->push('trashed', route('backend.product.trashed'));
 });
 
+Breadcrumbs::for('backend.admin.comment.index', function ($trail) {
+    $trail->parent('backend.home');
+    $trail->push(trans('general.comments'), route('backend.admin.comment.index'));
+});
+
 
 Breadcrumbs::for('backend.product.restore', function ($trail) {
     $trail->parent('backend.product.index');
