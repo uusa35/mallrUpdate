@@ -335,7 +335,7 @@
         </li>
         <li class="nav-item {{ activeItem('comment') }}">
             <a href="{{ route('backend.admin.comment.index') }}" class="nav-link nav-toggle">
-                <i class="fa fa-fw fa-address-card-o "></i>
+                <i class="fa fa-fw fa-comment-o"></i>
                 <span class="title">{{ trans('general.comments') }}</span>
                 <span class="arrow"></span>
             </a>
