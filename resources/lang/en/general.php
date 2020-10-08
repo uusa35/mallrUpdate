@@ -863,4 +863,5 @@ return array (
   'order_id' => 'Order Id',
   'mobile_example' => 'Only Mobile Number (without Country Code)',
   'logo' => 'Logo',
+  'comments' => 'comments',
 );
