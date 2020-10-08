@@ -281,6 +281,10 @@
 
     @endif
 
+    .tt-desctop-menu nav>ul>li.dropdown>a {
+        font-size: small !important;
+    }
+
     .tt-logo img {
         margin-top : 5px;
         /*margin-bottom: 0px;*/
