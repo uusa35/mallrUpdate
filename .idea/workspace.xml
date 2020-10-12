@@ -91,12 +91,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/classified/_category_group_widget.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-                  <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+                <state relative-caret-position="90">
+                  <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
                   <folding>
                     <element signature="e#76#185#0#HTML" expanded="true" />
-                    <element signature="e#298#481#0#HTML" expanded="true" />
+                    <element signature="e#558#597#0#HTML" expanded="true" />
                     <element signature="e#750#858#0#HTML" expanded="true" />
                   </folding>
                 </state>
@@ -851,12 +850,12 @@
       <workItem from="1602090580634" duration="1685000" />
       <workItem from="1602156996947" duration="34000" />
       <workItem from="1602415368560" duration="1476000" />
-      <workItem from="1602486517339" duration="1313000" />
+      <workItem from="1602486517339" duration="1370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557541000" />
+    <option name="totallyTimeSpent" value="557598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1290,12 +1289,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/classified/_category_group_widget.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-          <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+        <state relative-caret-position="90">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
           <folding>
             <element signature="e#76#185#0#HTML" expanded="true" />
-            <element signature="e#298#481#0#HTML" expanded="true" />
+            <element signature="e#558#597#0#HTML" expanded="true" />
             <element signature="e#750#858#0#HTML" expanded="true" />
           </folding>
         </state>
