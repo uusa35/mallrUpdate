@@ -1,15 +1,11 @@
 @if(isset($elements) && $elements->isNotEmpty())
     <div class="container-indent">
         <div class="container container-fluid-custom-mobile-padding">
-            @if($title)
+            @if(isset($title))
                 <div class="tt-block-title">
                     <h1 class="tt-title">
-                        @if($elements->first()->isDesigner)
-                            <a href="{{ route('frontend.user.index', ['type' => 'is_designer']) }}" class="url-normal">{{ $title }}</a>
-                        @else
 
-                            <a href="{{ route('frontend.user.index', ['type' => 'is_company']) }}" class="url-normal">{{ $title }}</a>
-                        @endif
+                        <a href="{{ route('frontend.category.index') }}" class="url-normal">{{ $title }}</a>
                     </h1>
                     {{--                    <div class="tt-description">{{ trans('message.our_designers') }}</div>--}}
                 </div>
