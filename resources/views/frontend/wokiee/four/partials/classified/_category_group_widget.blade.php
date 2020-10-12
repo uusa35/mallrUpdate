@@ -16,7 +16,7 @@
                         <span class="text-center">{{ $item->value  }}</span>
                     </div>
                 </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 @endif
