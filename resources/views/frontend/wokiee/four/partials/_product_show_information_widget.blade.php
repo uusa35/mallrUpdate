@@ -47,7 +47,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->user->country)
+            @if($element->user->country && !env('HOMEKEY'))
                 <tr>
                     <td class="td-fixed-element">
                     <span style="min-width: 130px;"><i class="fa fa-fw icon-g-45 fa-lg"></i>

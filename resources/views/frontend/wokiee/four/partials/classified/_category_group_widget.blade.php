@@ -10,7 +10,7 @@
                              alt="{{ $item->categoryGroup->name  }}">
                     </div>
                     <div style="align-items: center; justify-content: center; font-size: smaller; align-self: center; padding-top: 0.2rem;">
-                        <span class="text-center">{{ str_limit($item->categoryGroup->name,15,'')  }}</span>
+                        <span class="text-center">{{ str_limit($item->categoryGroup->name,10,'')  }}</span>
                     </div>
                     <div>
                         <span class="text-center">{{ $item->value  }}</span>
