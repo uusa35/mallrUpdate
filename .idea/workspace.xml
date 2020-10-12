@@ -91,10 +91,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/classified/_category_group_widget.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+                <state relative-caret-position="36">
+                  <caret line="2" column="146" selection-start-line="2" selection-start-column="146" selection-end-line="2" selection-end-column="146" />
                   <folding>
-                    <element signature="e#76#185#0#HTML" expanded="true" />
+                    <element signature="e#76#210#0#HTML" expanded="true" />
+                    <element signature="e#298#486#0#HTML" expanded="true" />
                     <element signature="e#501#558#0#HTML" />
                     <element signature="e#558#597#0#HTML" expanded="true" />
                     <element signature="e#750#858#0#HTML" expanded="true" />
@@ -853,12 +854,12 @@
       <workItem from="1602090580634" duration="1685000" />
       <workItem from="1602156996947" duration="34000" />
       <workItem from="1602415368560" duration="1476000" />
-      <workItem from="1602486517339" duration="1710000" />
+      <workItem from="1602486517339" duration="1746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557938000" />
+    <option name="totallyTimeSpent" value="557974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1292,10 +1293,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/classified/_category_group_widget.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+        <state relative-caret-position="36">
+          <caret line="2" column="146" selection-start-line="2" selection-start-column="146" selection-end-line="2" selection-end-column="146" />
           <folding>
-            <element signature="e#76#185#0#HTML" expanded="true" />
+            <element signature="e#76#210#0#HTML" expanded="true" />
+            <element signature="e#298#486#0#HTML" expanded="true" />
             <element signature="e#501#558#0#HTML" />
             <element signature="e#558#597#0#HTML" expanded="true" />
             <element signature="e#750#858#0#HTML" expanded="true" />
