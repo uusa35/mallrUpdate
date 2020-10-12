@@ -5,7 +5,7 @@
                 <div class="text-center"
                      style="flex: 1; padding : 0.5rem; margin:0.2rem; max-width: 100px; border: 0.3px solid lightgrey; border-radius: 5px; justify-content: center; align-items: center; flex-direction: column; flex-wrap: nowrap">
                     <div>
-                        <img class="text-center" style="width: 75px; max-width: 75px;"
+                        <img class="text-center" style="width: 75px; height: 75px; max-width: 75px;"
                              src="{{ $item->categoryGroup->getImageThumbLinkAttribute() }}"
                              alt="{{ $item->categoryGroup->name  }}">
                     </div>

@@ -110,7 +110,7 @@
                     </td>
                 </tr>
             @endif
-            @if($element->is_available && !env('DAILY'))
+            @if($element->is_available && !env('DAILY') && !env('HOMEKEY'))
                 <tr>
                     <td class="td-fixed-element">
                         <span><i class="fa fa-fw fa-lg icon-e-74"></i> {{ trans('general.available_items') }}:</span>
