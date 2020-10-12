@@ -6,8 +6,12 @@
                     <img class="img-xs text-center" src="{{ $item->categoryGroup->getImageThumbLinkAttribute() }}"
                          alt="{{ $item->categoryGroup->name  }}">
                     <div>
-                        <span class="text-center">{{ $item->categoryGroup->name  }}</span>
-                        <span class="text-center">{{ $item->categoryGroup->value  }}</span>
+                        <div class="col-lg-12">
+                            <span class="text-center">{{ $item->categoryGroup->name  }}</span>
+                        </div>
+                        <div class="col-lg-12">
+                        <span class="text-center">{{ $item->value  }}</span>
+                        </div>
                     </div>
                 </div>
             @endforeach
