@@ -5,7 +5,8 @@
                 <div class="text-center"
                      style="flex: 1; padding : 0.5rem; max-width: 100px; border: 0.5px solid lightgrey; border-radius: 10px; justify-content: center; align-items: center; flex-direction: column; flex-wrap: nowrap">
                     <div>
-                        <img class="text-center" style="width: 75px; max-width: 75px;" src="{{ $item->categoryGroup->getImageThumbLinkAttribute() }}"
+                        <img class="text-center" style="width: 75px; max-width: 75px;"
+                             src="{{ $item->categoryGroup->getImageThumbLinkAttribute() }}"
                              alt="{{ $item->categoryGroup->name  }}">
                     </div>
                     <div style="align-items: center; justify-content: center; font-size: smaller; align-self: center; padding-top: 0.2rem;">
@@ -17,6 +18,5 @@
                 </div>
         </div>
         @endforeach
-    </div>
     </div>
 @endif
