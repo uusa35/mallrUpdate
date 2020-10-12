@@ -3,7 +3,7 @@
         <div style="display: flex; flex : 1; justify-content: center; align-items: center; flex-wrap: wrap; margin : 0.5rem">
             @foreach($element->items as $item)
                 <div class="text-center"
-                     style="padding : 0.5rem; max-width: 80px; border: 0.5px solid lightgrey; border-radius: 10px; justify-content: center; align-items: center; flex-direction: column; flex-wrap: wrap">
+                     style="flex: 1; padding : 0.5rem; max-width: 100px; border: 0.5px solid lightgrey; border-radius: 10px; justify-content: center; align-items: center; flex-direction: column; flex-wrap: nowrap">
                     <div>
                         <img class="text-center" style="width: 75px; max-width: 75px;" src="{{ $item->categoryGroup->getImageThumbLinkAttribute() }}"
                              alt="{{ $item->categoryGroup->name  }}">
