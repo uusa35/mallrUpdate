@@ -16,6 +16,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $categoriesList = [];
+        $vendors = [];
+        $areas = [];
+        $tags = [];
         if (env('MALLR')) {
             $elements = Category::active()->onlyProducts()->paginate(self::TAKE_MIN);
         } elseif (env('EVENTKM')) {
@@ -29,13 +33,15 @@ class CategoryController extends Controller
             $categoriesList = $services->pluck('categories')->flatten()->unique('id')->sortKeysDesc();
             $vendors = $services->pluck('user')->unique('id')->flatten();
             $areas = $services->pluck('user.areas')->flatten()->unique('id');
+            return view('frontend.wokiee.four.modules.category.index', compact('elements', 'categoriesList', 'vendors', 'areas', 'tags'));
         } elseif(env('ESCRAP') && request()->parent_id) {
             $parent = Category::where('parent_id', request()->parent_id)->first();
             $elements = $parent->children()->onlyForUsers()->paginate(self::TAKE_MID);
             return view('frontend.wokiee.four.modules.category.sub_category.index', compact('elements'));
-
+        } elseif (env('HOMEKEY')) {
+            $elements = Category::active()->onlyForServices()->paginate(self::TAKE);
+            return view('frontend.wokiee.four.modules.category.homekey.index', compact('elements', 'categoriesList', 'vendors', 'areas', 'tags'));
         }
-        return view('frontend.wokiee.four.modules.category.index', compact('elements', 'categoriesList', 'vendors', 'areas', 'tags'));
 
     }
 

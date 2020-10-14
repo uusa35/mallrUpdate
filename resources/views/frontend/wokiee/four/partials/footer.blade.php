@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    @if(!str_contains(trans('message.footer_about_us'),'message.'))
+                    @if(strlen(trans('message.footer_about_us')) > 30)
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="tt-mobile-collapse">
                                 <h4 class="tt-collapse-title">
