@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/modules/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/modules/page/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +37,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/page/index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+                <state relative-caret-position="252">
+                  <caret line="58" column="109" lean-forward="true" selection-start-line="58" selection-start-column="109" selection-end-line="58" selection-end-column="109" />
                 </state>
               </provider>
             </entry>
@@ -734,12 +733,12 @@
       <workItem from="1602486517339" duration="4731000" />
       <workItem from="1602570345992" duration="209000" />
       <workItem from="1602571803833" duration="884000" />
-      <workItem from="1602649354201" duration="427000" />
+      <workItem from="1602649354201" duration="511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562479000" />
+    <option name="totallyTimeSpent" value="562563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1159,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/page/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+        <state relative-caret-position="252">
+          <caret line="58" column="109" lean-forward="true" selection-start-line="58" selection-start-column="109" selection-end-line="58" selection-end-column="109" />
         </state>
       </provider>
     </entry>
