@@ -43,4 +43,7 @@ if (env('ABATI')) {
 } elseif (env('HTB')) {
     Route::get('/', 'HomeController@getMallrHome')->name('index');
     Route::get('/home', 'HomeController@getMallrHome')->name('home');
+} elseif (env('HUDA')) {
+    Route::get('/', 'HomeController@getMallrHome')->name('index');
+    Route::get('/home', 'HomeController@getMallrHome')->name('home');
 }

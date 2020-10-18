@@ -1,61 +1,37 @@
 @include('frontend.wokiee.partials.styles')
-@if(env('EVENTKM'))
-    @if(app()->getLocale() === 'en')
-        <style type="text/css">
-            body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-                font-family: 'sst-arabic-bold', 'sans-serif' !important;
-                /*text-transform: uppercase !important;*/
-            }
-
-            .alert-danger i {
-                color: red !important;
-            }
-
-            .alert-danger {
-                color: #000000;
-                background-color: #ffffff;
-                border-color: #000000;
-            }
-
-            .page-link, .page-item.disabled .page-link {
-                border: none !important;
-                background-color: transparent !important;
-            }
-
-            .tt-product:not(.tt-view) .tt-description, .tt-footer-col {
-                background-color: black !important;
-            }
-        </style>
-    @else
-        <style type="text/css">
-            body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
-                font-family: 'GE SS Unique', 'sans-serif' !important;
-                text-transform: uppercase !important;
-            }
-
-            .alert-danger i {
-                color: red !important;
-            }
-
-            .alert-danger {
-                color: #000000;
-                background-color: #ffffff;
-                border-color: #000000;
-            }
-
-            .page-link, .page-item.disabled .page-link {
-                border: none !important;
-                background-color: transparent !important;
-            }
-
-            .tt-product:not(.tt-view) .tt-description, .tt-footer-col {
-                background-color: black !important;
-            }
-        </style>
-    @endif
-@endif
-
 <style type="text/css">
+    .tt-desctop-menu nav>ul>li.dropdown>a {
+        font-size: small !important;
+    }
+
+    .tt-logo img {
+        margin-top : 5px;
+        /*margin-bottom: 0px;*/
+        /*max-height: 60px !important;*/
+    }
+
+    .tt-mobile-header .tt-logo-container {
+        height : auto !important;
+    }
+
+    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before, .slider-revolution.revolution-default .tp-leftarrow:before, body:not(.touch-device) .tt-portfolio-content.layout-default figure figcaption .tt-btn-zomm::before, .mfp-arrow:after, .mfp-arrow:before  {
+        font-family: wokiee !important;
+    }
+
+    .tt-header-holder {
+        margin-top: 10px;
+    }
+
+    .slider-revolution {
+        max-height: 720px !important;
+    }
+
+    .tt-promo-02>img {
+        transform: none !important;
+    }
+    .slick-slide {
+        height : auto !important;
+    }
     @if(env('MALLR') || env('ABATI'))
 
     body, html, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, td, thead, tfoot, span, .btn, ul, li,
@@ -280,37 +256,69 @@
     }
 
     @endif
-
-    .tt-desctop-menu nav>ul>li.dropdown>a {
-        font-size: small !important;
-    }
-
-    .tt-logo img {
-        margin-top : 5px;
-        /*margin-bottom: 0px;*/
-        /*max-height: 60px !important;*/
-    }
-
-    .tt-mobile-header .tt-logo-container {
-        height : auto !important;
-    }
-
-    .modal .modal-header .close:before, .mfp-close:before, .mfp-arrow-right:before, .mfp-arrow:after, .slider-revolution.revolution-default .tp-rightarrow:before, .slider-revolution.revolution-default .tp-leftarrow:before, body:not(.touch-device) .tt-portfolio-content.layout-default figure figcaption .tt-btn-zomm::before, .mfp-arrow:after, .mfp-arrow:before  {
-        font-family: wokiee !important;
-    }
-
-    .tt-header-holder {
-        margin-top: 10px;
-    }
-
-     .slider-revolution {
-      max-height: 720px !important;
-    }
-
-    .tt-promo-02>img {
-        transform: none !important;
-    }
-    .slick-slide {
-        height : auto !important;
-    }
 </style>
+
+@if(env('EVENTKM'))
+    @if(app()->getLocale() === 'en')
+        <style type="text/css">
+            body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+                font-family: 'sst-arabic-bold', 'sans-serif' !important;
+                /*text-transform: uppercase !important;*/
+            }
+
+            .tt-desctop-menu nav>ul>li.dropdown>a {
+                font-size: large !important;
+            }
+
+            .alert-danger i {
+                color: red !important;
+            }
+
+            .alert-danger {
+                color: #000000;
+                background-color: #ffffff;
+                border-color: #000000;
+            }
+
+            .page-link, .page-item.disabled .page-link {
+                border: none !important;
+                background-color: transparent !important;
+            }
+
+            .tt-product:not(.tt-view) .tt-description, .tt-footer-col {
+                background-color: black !important;
+            }
+        </style>
+    @else
+        <style type="text/css">
+            body, html, div, a, p, h1, h2, h3, h4, h5, h6, table, row, td, th, tr, thead, tfoot, button, span, .btn, .btn-del, ul, li, .page-content, .portlet, .light, .profile-sidebar-portlet {
+                font-family: 'GE SS Unique', 'sans-serif' !important;
+                text-transform: uppercase !important;
+            }
+
+            .tt-desctop-menu nav>ul>li.dropdown>a {
+                font-size: large !important;
+            }
+
+            .alert-danger i {
+                color: red !important;
+            }
+
+            .alert-danger {
+                color: #000000;
+                background-color: #ffffff;
+                border-color: #000000;
+            }
+
+            .page-link, .page-item.disabled .page-link {
+                border: none !important;
+                background-color: transparent !important;
+            }
+
+            .tt-product:not(.tt-view) .tt-description, .tt-footer-col {
+                background-color: black !important;
+            }
+        </style>
+    @endif
+@endif
+

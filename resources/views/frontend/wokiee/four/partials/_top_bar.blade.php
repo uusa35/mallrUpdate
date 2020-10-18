@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            @if($settings)
+            @if($settings && !env('EVENTKM'))
                 <div class="tt-col-right ml-auto">
                     <ul class="tt-social-icon">
                         @include('frontend.wokiee.four.partials._social_icons_home')

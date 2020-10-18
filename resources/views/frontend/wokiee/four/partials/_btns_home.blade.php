@@ -6,7 +6,7 @@
             <div class="container-fluid-custom">
                 <div class="row justify-content-md-center">
 
-                        <div class="col-lg-4 col-sm-12 text-center">
+                        <div class="col-lg-3 col-lg-pull-1 col-sm-12 text-center">
                             <a href="{{ route('frontend.category.index') }}" class="tt-promo-box" style="background-color: transparent !important;">
                                 <img src="{{ app()->isLocale('ar') ? asset('img/event-01.jpg') : asset('img/event-01-en.jpg')}}"
                                      data-src="{{ app()->isLocale('ar') ? asset('img/event-01.jpg') : asset('img/event-01-en.jpg')}}"
@@ -24,7 +24,7 @@
 {{--                                </div>--}}
                             </a>
                         </div>
-                    <div class="col-lg-4 col-sm-12 text-center">
+                    <div class="col-lg-3 col-lg-pull-1 col-sm-12 text-center">
                         <a href="{{ route('frontend.service.search',['on_sale' => true]) }}" class="tt-promo-box">
                             <img src="{{ app()->isLocale('ar') ? asset('img/event-002.jpg') : asset('img/event-02-en.jpg') }}"
                                  data-src="{{ app()->isLocale('ar') ? asset('img/event-002.jpg') : asset('img/event-02-en.jpg') }}"
@@ -42,7 +42,7 @@
 {{--                            </div>--}}
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-12 text-center">
+                    <div class="col-lg-3 col-lg-pull-1 col-sm-12 text-center">
                         <a href="{{ route('frontend.user.index',['type' => 'is_company']) }}" class="tt-promo-box">
                             <img src="{{ app()->isLocale('ar') ? asset('img/event-03.jpg') : asset('img/event-03-en.jpg')}}"
                                  data-src="{{ app()->isLocale('ar') ? asset('img/event-03.jpg') : asset('img/event-03-en.jpg')}}"
