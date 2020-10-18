@@ -140,9 +140,9 @@
                                         @if($settings->mobile)
                                             <p><i class="fa fa-fw fa-mobile"></i> {{ $settings->mobile }}</p>
                                         @endif
-                                        @if($settings->instagram)
+                                        @if($settings->instagram && env('EVENTKM'))
                                             <p><i class="fa fa-fw fa-instagram"></i><a
-                                                        href="{{ $settings->instagram }}"> {{ $settings->name }}</a></p>
+                                                        href="{{ $settings->instagram }}"> {{ $settings->company }}</a></p>
                                         @endif
                                         @if($settings->whatsapp)
                                             <p><i class="fa fa-fw fa-whatsapp"></i> <a
