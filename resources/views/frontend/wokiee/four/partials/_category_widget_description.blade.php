@@ -2,7 +2,7 @@
     <div class="tt-row">
         <ul class="tt-add-info">
             <li>
-                <a href="{{ route('frontend.category.show',$element->id) }}">{{ str_limit($element->name,60,'..') }}</a>
+                <a href="{{ route('frontend.category.show',$element->id) }}" class="h3">{{ str_limit($element->name,60,'..') }}</a>
             </li>
         </ul>
         {{--@include('frontend.wokiee.four.partials._rating')--}}
