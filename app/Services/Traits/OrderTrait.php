@@ -140,7 +140,7 @@ trait OrderTrait
                 ]);
             } else {
                 $user = User::create([
-                    'name' => $request->email,
+                    'name' => $request->name,
                     'email' => $request->email,
                     'password' => bcrypt($request->mobile),
                     'country_id' => $request->country_id,

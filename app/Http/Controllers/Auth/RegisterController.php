@@ -70,6 +70,8 @@ class RegisterController extends Controller
         $role = Role::whereId($data['role_id'])->where(['is_super' => false , 'is_admin' => false,'is_client' => true ])->first();
         return User::create([
             'name' => $data['name'],
+            'slug_ar' => $data['name'],
+            'slug_en' => $data['name'],
             'email' => $data['email'],
             'mobile' => $data['mobile'],
             'password' => Hash::make($data['password']),
