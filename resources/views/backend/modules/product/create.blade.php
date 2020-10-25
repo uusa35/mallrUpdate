@@ -352,7 +352,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
                                                         <div class="form-group{{ $errors->has('quantity') ? ' has-error' : '' }}">
                                                             <label for="quantity"
                                                                    class="control-label">{{ trans('general.quantity') }}</label>
@@ -374,7 +374,31 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
+                                                        <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
+                                                            <label for="sale_price"
+                                                                   class="control-label">{{ trans('general.sale_price') }}</label>
+                                                            <input id="sale_price" type="text"
+                                                                   class="form-control tooltips"
+                                                                   data-container="body" data-placement="top"
+                                                                   data-original-title="{{ trans('message.sale_price') }}"
+                                                                   name="sale_price" maxlength="5"
+                                                                   value="{{ old('sale_price') }}"
+                                                                   placeholder="{{ trans('general.sale_price') }}"
+                                                                   autofocus>
+                                                            @if ($errors->has('sale_price'))
+                                                                <span class="help-block">
+                                            <strong>
+                                                {{ $errors->first('sale_price') }}
+                                            </strong>
+                                        </span>
+                                                            @endif
+                                                            {{-- <span class="help-block">
+                                                                                                                                <strong>{{ trans('message.sale_price') }}</strong>
+                                                            </span> --}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
                                                         <div class="form-group{{ $errors->has('delivery_time') ? ' has-error' : '' }}">
                                                             <label for="delivery_time"
                                                                    class="control-label">{{ trans('general.delivery_time') }}
@@ -401,29 +425,31 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <div class="form-group{{ $errors->has('sale_price') ? ' has-error' : '' }}">
-                                                            <label for="sale_price"
-                                                                   class="control-label">{{ trans('general.sale_price') }}</label>
-                                                            <input id="sale_price" type="text"
+                                                        <div class="form-group{{ $errors->has('barcode') ? ' has-error' : '' }}">
+                                                            <label for="barcode"
+                                                                   class="control-label">{{ trans('general.barcode') }}
+                                                            </label>
+                                                            <input id="barcode" type="text"
                                                                    class="form-control tooltips"
                                                                    data-container="body" data-placement="top"
-                                                                   data-original-title="{{ trans('message.sale_price') }}"
-                                                                   name="sale_price" maxlength="5"
-                                                                   value="{{ old('sale_price') }}"
-                                                                   placeholder="{{ trans('general.sale_price') }}"
+                                                                   data-original-title="{{ trans('message.barcode') }}"
+                                                                   name="barcode"
+                                                                   value="{{ old('barcode') }}"
+                                                                   placeholder="{{ trans('general.barcode') }}"
                                                                    autofocus>
-                                                            @if ($errors->has('sale_price'))
+                                                            @if ($errors->has('barcode'))
                                                                 <span class="help-block">
-                                            <strong>
-                                                {{ $errors->first('sale_price') }}
-                                            </strong>
-                                        </span>
+                                                                    <strong>
+                                                                        {{ $errors->first('barcode') }}
+                                                                    </strong>
+                                                                </span>
                                                             @endif
                                                             {{-- <span class="help-block">
-                                                                                                                                <strong>{{ trans('message.sale_price') }}</strong>
+                                                                                                                                <strong>{{ trans('message.delivery_time') }}</strong>
                                                             </span> --}}
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="form_control_1">{{ trans('general.image_chart') }}</label>
