@@ -217,16 +217,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.158.8",
+            "version": "3.158.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6f68f8f3b459166e96e2ba46cd720668f14255e2"
+                "reference": "40bfb8c7bb2b105c32c7201b3c7fab681370d9ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6f68f8f3b459166e96e2ba46cd720668f14255e2",
-                "reference": "6f68f8f3b459166e96e2ba46cd720668f14255e2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/40bfb8c7bb2b105c32c7201b3c7fab681370d9ca",
+                "reference": "40bfb8c7bb2b105c32c7201b3c7fab681370d9ca",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-10-16T18:15:17+00:00"
+            "time": "2020-10-19T18:14:24+00:00"
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -816,16 +816,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.11.1",
+            "version": "2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86"
+                "reference": "b88a45cbc395e850b2d958dcd7b9d49d09ff23e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
-                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/b88a45cbc395e850b2d958dcd7b9d49d09ff23e0",
+                "reference": "b88a45cbc395e850b2d958dcd7b9d49d09ff23e0",
                 "shasum": ""
             },
             "require": {
@@ -837,12 +837,11 @@
             "require-dev": {
                 "doctrine/coding-standard": "^8.1",
                 "jetbrains/phpstorm-stubs": "^2019.1",
-                "nikic/php-parser": "^4.4",
                 "phpstan/phpstan": "^0.12.40",
-                "phpunit/phpunit": "^9.3",
+                "phpunit/phpunit": "^9.4",
                 "psalm/plugin-phpunit": "^0.10.0",
                 "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
-                "vimeo/psalm": "^3.14.2"
+                "vimeo/psalm": "^3.17.2"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -906,7 +905,7 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-            "time": "2020-09-27T04:09:41+00:00"
+            "time": "2020-10-19T02:01:37+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1243,15 +1242,6 @@
                 "cron",
                 "schedule"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/dragonmantank",
-                    "type": "github"
-                }
-            ],
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
             "time": "2020-10-13T00:52:37+00:00"
         },
         {
@@ -2678,37 +2668,7 @@
                 "md",
                 "parser"
             ],
-<<<<<<< HEAD
-            "time": "2020-09-13T14:44:46+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://enjoy.gitstore.app/repositories/thephpleague/commonmark",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.colinodell.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.paypal.me/colinpodell/10.00",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/colinodell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/colinodell",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/league/commonmark",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-17T21:33:03+00:00"
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
         },
         {
             "name": "league/flysystem",
@@ -2844,16 +2804,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28"
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ea2fbfc988bade315acd5967e6d02274086d0f28",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
                 "shasum": ""
             },
             "require": {
@@ -2881,7 +2841,7 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
-            "time": "2020-09-21T18:10:53+00:00"
+            "time": "2020-10-18T11:50:25+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -3150,19 +3110,6 @@
                 "datetime",
                 "time"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://opencollective.com/Carbon",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
             "time": "2020-10-12T20:36:09+00:00"
         },
         {
@@ -5067,25 +5014,7 @@
                 "interoperability",
                 "standards"
             ],
-<<<<<<< HEAD
-            "time": "2020-09-07T11:33:47+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-14T17:08:19+00:00"
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
         },
         {
             "name": "symfony/http-foundation",
@@ -7174,23 +7103,6 @@
                 "dependency",
                 "package"
             ],
-<<<<<<< HEAD
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
             "time": "2020-10-13T13:59:09+00:00"
         },
         {
@@ -8777,17 +8689,7 @@
                 "highlight.php",
                 "syntax"
             ],
-<<<<<<< HEAD
-            "time": "2020-08-27T03:24:44+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/allejo",
-                    "type": "github"
-                }
-            ],
             "time": "2020-10-16T07:43:22+00:00"
->>>>>>> 4432f712f875a2a3eb801f269366c9c6804819b9
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
