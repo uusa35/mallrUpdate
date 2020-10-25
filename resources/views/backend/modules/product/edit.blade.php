@@ -195,25 +195,25 @@
                                                             @endif
                                                         </div>
                                                     </div>
-                                                        @can('isAdminOrAbove')
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label for="single"
-                                                                           class="control-label required">{{ trans('general.owner') }}
-                                                                        *</label>
-                                                                    <select name="user_id" class="form-control tooltips"
-                                                                            data-container="body" data-placement="top"
-                                                                            data-original-title="{{ trans('message.owner') }}">
-                                                                        <option value="">{{ trans('general.choose_user') }}</option>
-                                                                        @foreach($users as $user)
-                                                                            <option value="{{ $user->id }}" {{ $element->user_id === $user->id ? 'selected' : null  }}>{{ $user->slug }}</option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
+                                                    @can('isAdminOrAbove')
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="single"
+                                                                       class="control-label required">{{ trans('general.owner') }}
+                                                                    *</label>
+                                                                <select name="user_id" class="form-control tooltips"
+                                                                        data-container="body" data-placement="top"
+                                                                        data-original-title="{{ trans('message.owner') }}">
+                                                                    <option value="">{{ trans('general.choose_user') }}</option>
+                                                                    @foreach($users as $user)
+                                                                        <option value="{{ $user->id }}" {{ $element->user_id === $user->id ? 'selected' : null  }}>{{ $user->slug }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
-                                                        @else
-                                                            <input type="hidden" name="user_id" value="{{ auth()->id()}}">
-                                                        @endcan
+                                                        </div>
+                                                    @else
+                                                        <input type="hidden" name="user_id" value="{{ auth()->id()}}">
+                                                    @endcan
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="col-md-4">
@@ -729,6 +729,36 @@
                                                         @endif
                                                     </div>
                                                 </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group{{ $errors->has('barcode') ? ' has-error' : '' }}">
+                                                        <label for="barcode"
+                                                               class="control-label">{{ trans('general.barcode') }}
+                                                        </label>
+                                                        <input id="barcode" type="text"
+                                                               class="form-control tooltips"
+                                                               data-container="body" data-placement="top"
+                                                               data-original-title="{{ trans('message.barcode') }}"
+                                                               name="barcode"
+                                                               value="{{ $element->barcode }}"
+                                                               placeholder="{{ trans('general.barcode') }}"
+                                                               autofocus>
+                                                        @if ($errors->has('barcode'))
+                                                            <span class="help-block">
+                                                                    <strong>
+                                                                        {{ $errors->first('barcode') }}
+                                                                    </strong>
+                                                                </span>
+                                                        @endif
+                                                        {{-- <span class="help-block">
+                                                                                                                            <strong>{{ trans('message.delivery_time') }}</strong>
+                                                        </span> --}}
+                                                    </div>
+                                                </div>
+                                                @if($element->barcode)
+                                                    <div class="col-md-2">
+                                                        {!! DNS2D::getBarcodeHTML($element->barcode, env('BARCODE_TYPE'),2,1); !!}
+                                                    </div>
+                                                @endif
                                             </div>
                                             <div class="row">
                                                 @if(!$tags->isEmpty())

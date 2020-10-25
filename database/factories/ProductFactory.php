@@ -54,6 +54,7 @@ $factory->define(Product::class, function (Faker $faker) use ($fakerAr) {
         'video_url_four' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
         'video_url_five' => 'http://www.youtube.com/embed/GhyKqj_P2E4',
         'qty' => $faker->numberBetween(1, 99),
+        'barcode' => $faker->isbn13,
         'brand_id' => Brand::all()->random()->id,
         'views' => $faker->randomNumber(),
         'wrap_as_gift' => $faker->boolean(true),
