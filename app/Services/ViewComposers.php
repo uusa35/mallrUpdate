@@ -29,13 +29,13 @@ class ViewComposers
 
     public function getCart(View $view)
     {
-        $cart = Cart::content();
+        $cart = Cart::instance('shopping')->content();
         return $view->with(compact('cart'));
     }
 
     public function getCartCount(View $view)
     {
-        $cartCount = Cart::count();
+        $cartCount = Cart::instance('shopping')->count();
         return $view->with(compact('cartCount'));
     }
 

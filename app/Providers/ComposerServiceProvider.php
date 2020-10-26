@@ -66,6 +66,7 @@ class ComposerServiceProvider extends ServiceProvider
         view()->composer([
             'frontend.wokiee.four.home.*',
             'frontend.wokiee.four.*.show',
+            'frontend.wokiee.four.modules.product.compare',
             'frontend.wokiee.four.partials._service_widget',
             'frontend.wokiee.four.partials._products_slider',
             'frontend.wokiee.four.partials._collection_widget',

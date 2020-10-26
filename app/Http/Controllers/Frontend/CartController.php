@@ -22,7 +22,7 @@ class CartController extends Controller
 
     public function __construct(Cart $cart)
     {
-        $this->cart = $cart;
+        $this->cart = $cart->instance('shopping');
     }
 
     public function index()

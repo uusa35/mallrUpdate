@@ -67,7 +67,7 @@ function getCouponValue()
 {
     $coupon = session()->has('coupon') ? session()->get('coupon') : null;
     if (!is_null($coupon)) {
-        return $coupon->is_percentage ? (Cart::total() * ($coupon->value / 100)) : $coupon->value;
+        return $coupon->is_percentage ? (Cart::instance('shopping')->total() * ($coupon->value / 100)) : $coupon->value;
     }
     return 0;
 }
@@ -75,7 +75,7 @@ function getCouponValue()
 
 function getCartNetTotal()
 {
-    $cartTotalVal = str_replace(',', '', Cart::total());
+    $cartTotalVal = str_replace(',', '', Cart::instance('shopping')->total());
     return (float)$cartTotalVal - (float)getCouponValue();
 }
 
@@ -83,7 +83,7 @@ function getCartNetTotal()
 function getDeliveryServiceCost()
 {
     $settings = Setting::first();
-    $cartValue = Cart::total();
+    $cartValue = Cart::instance('shopping')->total();
     if ($cartValue >= $settings->delivery_service_minimum_charge) {
         return 0;
     }

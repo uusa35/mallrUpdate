@@ -16,7 +16,7 @@ use App\Notifications\OrderPaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
-Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth', 'onlyActiveUsers', 'country','dashboard']], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth', 'onlyActiveUsers', 'country', 'dashboard']], function () {
     // Backend :: super + admin
     Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['admin']], function () {
         Route::resource('activity', 'ActivityController');
@@ -29,13 +29,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
         Route::resource('country', 'CountryController');
         Route::resource('currency', 'CurrencyController');
         Route::resource('category', 'CategoryController');
-        Route::get('trashed/category','CategoryController@trashed')->name('category.trashed');
-        Route::get('restore/category/{id}','CategoryController@restore')->name('category.restore');
+        Route::get('trashed/category', 'CategoryController@trashed')->name('category.trashed');
+        Route::get('restore/category/{id}', 'CategoryController@restore')->name('category.restore');
         Route::resource('group', 'CategoryGroupController');
         Route::resource('property', 'PropertyController');
         Route::resource('user', 'UserController');
-        Route::get('trashed/user','UserController@trashed')->name('user.trashed');
-        Route::get('restore/user/{id}','UserController@restore')->name('user.restore');
+        Route::get('trashed/user', 'UserController@trashed')->name('user.trashed');
+        Route::get('restore/user/{id}', 'UserController@restore')->name('user.restore');
         Route::resource('color', 'ColorController');
         Route::resource('size', 'SizeController');
         Route::resource('coupon', 'CouponController');
@@ -68,11 +68,11 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
         Route::resource('device', 'DeviceController');
         // addons + items
         Route::resource('addon', 'AddonController');
-        Route::get('trashed/addon','AddonController@trashed')->name('addon.trashed');
-        Route::get('restore/addon/{id}','AddonController@restore')->name('addon.restore');
+        Route::get('trashed/addon', 'AddonController@trashed')->name('addon.trashed');
+        Route::get('restore/addon/{id}', 'AddonController@restore')->name('addon.restore');
         Route::resource('item', 'ItemController');
-        Route::get('trashed/item','ItemController@trashed')->name('item.trashed');
-        Route::get('restore/item/{id}','ItemController@restore')->name('item.restore');
+        Route::get('trashed/item', 'ItemController@trashed')->name('item.trashed');
+        Route::get('restore/item/{id}', 'ItemController@restore')->name('item.restore');
     });
     // Backend :: companies // Designers accordingly
     Route::get('/', 'HomeController@index')->name('index');
@@ -84,17 +84,17 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'as' => 'backend.
     Route::post('reset/password', 'UserController@postResetPassword')->name('reset');
     Route::resource('user', 'UserController')->only(['edit', 'update', 'show', 'index']);
     Route::resource('product', 'ProductController');
-    Route::get('product/trashed','ProductController@trashed')->name('product.trashed');
-    Route::get('product/restore/{id}','ProductController@restore')->name('product.restore');
+    Route::get('product/trashed', 'ProductController@trashed')->name('product.trashed');
+    Route::get('product/restore/{id}', 'ProductController@restore')->name('product.restore');
     Route::resource('attribute', 'ProductAttributeController');
-    Route::get('trashed/attribute','ProductAttributeController@trashed')->name('attribute.trashed');
+    Route::get('trashed/attribute', 'ProductAttributeController@trashed')->name('attribute.trashed');
     Route::resource('service', 'ServiceController');
-    Route::get('trashed/service','ServiceController@trashed')->name('service.trashed');
-    Route::get('restore/service/{id}','ServiceController@restore')->name('service.restore');
+    Route::get('trashed/service', 'ServiceController@trashed')->name('service.trashed');
+    Route::get('restore/service/{id}', 'ServiceController@restore')->name('service.restore');
     Route::resource('timing', 'TimingController');
     Route::resource('classified', 'ClassifiedController');
-    Route::get('trashed/classified','ClassifiedController@trashed')->name('classified.trashed');
-    Route::get('restore/classified/{id}','ClassifiedController@restore')->name('classified.restore');
+    Route::get('trashed/classified', 'ClassifiedController@trashed')->name('classified.trashed');
+    Route::get('restore/classified/{id}', 'ClassifiedController@restore')->name('classified.restore');
     Route::get('property/attach', 'PropertyController@getAttach')->name('property.attach');
     Route::post('property/attach', 'PropertyController@postAttach')->name('property.attach');
     Route::get('property/dettach', 'PropertyController@detach')->name('property.detach');
@@ -127,15 +127,18 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => ['
         Route::get('favorite/remove/service/{id}', 'FavoriteController@removeService')->name('favorite.service.remove');
         Route::get('favorite/remove/classified/{id}', 'FavoriteController@removeClassified')->name('favorite.classified.remove');
         Route::resource('survey', 'SurveyController')->only(['show', 'store']);
-        Route::resource('classified', 'ClassifiedController')->only(['create','store','edit','update','delete']);
+        Route::resource('classified', 'ClassifiedController')->only(['create', 'store', 'edit', 'update', 'delete']);
         Route::get('classified/category/choose', 'ClassifiedController@chooseCategory')->name('classified.choose');
         Route::get('property/attach', 'PropertyController@getAttach')->name('property.attach');
     });
     Route::resource('product', 'ProductController');
     Route::get('product/{id}/{name}', 'ProductController@show')->name('product.show.name');
+    Route::get('compare/product/', 'ProductController@compare')->name('product.compare');
+    Route::get('compare/product/add/{id}', 'ProductController@addToComparison')->name('product.compare.add');
+    Route::get('compare/product/remove/{id}', 'ProductController@removeFromComparison')->name('product.compare.remove');
     Route::resource('service', 'ServiceController');
     Route::get('classified/{id}/{name}', 'ClassifiedController@show')->name('classified.show.name');
-    Route::resource('classified', 'ClassifiedController')->only(['index','show']);
+    Route::resource('classified', 'ClassifiedController')->only(['index', 'show']);
     Route::resource('collection', 'CollectionController')->only(['index', 'show']);
     Route::get('service/{id}/{name}', 'ServiceController@show')->name('service.show.name');
     Route::post('cart/add/service', 'CartController@addService')->name('cart.add.service');
@@ -204,7 +207,7 @@ Route::get('/marwa/{scoreOne}/{scoreTow}/{scoreThree}/{attestedHours}', function
     $pointThree = $degreeThree * $attestedHours;
     $semesterRate = ($pointOne + $pointTow + $pointThree) / 3;
     $collectiveRate = $semesterRate / 3;
-    return response()->json(['Grade Point Average (GPA)' => round($collectiveRate,2)], 200);
+    return response()->json(['Grade Point Average (GPA)' => round($collectiveRate, 2)], 200);
 });
 
 Route::get('/{notFound}', function () {

@@ -21,7 +21,7 @@ class OrderController extends Controller
 
     public function __construct(Cart $cart)
     {
-        $this->cart = $cart;
+        $this->cart = $cart->instance('shopping');
     }
 
     /**
@@ -61,7 +61,7 @@ class OrderController extends Controller
         $this->addCountryToCart($country, $this->cart);
         $user = $this->createUser($request);
         if ($user && $country) {
-            $order = $this->createWebOrder($request, $user);
+            $order = $this->createWebOrder($request, $user, $this->cart);
             if ($order) {
                 auth()->login($user);
                 $elements = $this->cart->content();

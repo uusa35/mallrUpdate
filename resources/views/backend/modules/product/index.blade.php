@@ -28,6 +28,7 @@
                             <th>{{ trans('general.active') }}</th>
                             <th class="none">{{ trans('general.company') }}</th>
                             <th class="none">{{ trans('general.created_at') }}</th>
+                            <th class="none">{{ trans('general.barcode') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -46,6 +47,7 @@
                             <th>{{ trans('general.active') }}</th>
                             <th class="none">{{ trans('general.company') }}</th>
                             <th class="none">{{ trans('general.created_at') }}</th>
+                            <th class="none">{{ trans('general.barcode') }}</th>
                             <th>{{ trans('general.attributes') }} x/clr/qty</th>
                             <th>{{ trans('general.actions') }}</th>
                         </tr>
@@ -72,10 +74,10 @@
                                     {{ $element->price }}
                                 </td>
                                 <td>
-                                    <label class="label {{ $element->isOnSale ? 'label-success' : 'label-warning'}}">{{ $element->isOnSale ? 'Yes' : 'No'}}</label>
+                                    <label class="label {{ $element->isOnSale ? 'label-success' : 'label-warning'}}"><b>{{ $element->isOnSale ? 'Yes' : 'No'}}</b></label>
                                 </td>
                                 <td>
-                                    {{ $element->sale_price ? $element->sale_price : 'N/A'}}
+                                    {!! $element->sale_price ? $element->sale_price : '<label class="label label-warning"><b>N/A</b></label>'!!}
                                 </td>
                                 <td>
                                     {{ $element->weight }} {{ trans('general.kg') }}
@@ -87,8 +89,9 @@
                                 <td>
                                     <span class="label {{ activeLabel($element->active) }}">{{ activeText($element->active) }}</span>
                                 </td>
-                                <td>{{ $element->user ?  str_limit($element->user->slug,20) : 'N/A' }}</td>
+                                <td>{{ $element->user ?  str_limit($element->user->slug,20) : '<label class="label label-warning"><b>N/A</b></label>' }}</td>
                                 <td>{{ $element->created_at }}</td>
+                                <td>{!! $element->barcode ? DNS2D::getBarcodeHTML($element->barcode, env('BARCODE_TYPE'),2,1) : '<label class="label label-warning"><b>N/A</b></label>' !!}</td>
                                 <td>
                                     @if($element->product_attributes->isNotEmpty())
                                         @foreach($element->product_attributes as $attribute)

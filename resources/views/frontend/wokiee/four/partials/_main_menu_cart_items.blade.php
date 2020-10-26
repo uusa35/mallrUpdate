@@ -1,6 +1,6 @@
 <div class="tt-cart-content">
     <div class="tt-cart-list">
-        @foreach(Cart::content() as $element)
+        @foreach(Cart::instance('shopping')->content() as $element)
             <div class="tt-item">
                 @if($element->options->type === 'product' || $element->options->type === 'service')
                     <a href="{{ route('frontend.'.$element->options->type.'.show.name', ['id' => $element->options->element_id, 'name' => $element->name]) }}">
@@ -48,10 +48,10 @@
             </div>
         @endforeach
     </div>
-    @if(Cart::content()->where('options.type', 'country')->first())
+    @if(Cart::instance('shopping')->content()->where('options.type', 'country')->first())
         <div class="tt-cart-total-row">
             <div class="tt-cart-total-title">{{ trans('general.shipment_fees') }}:</div>
-            <div class="tt-cart-total-price">{{ Cart::content()->where('options.type', 'country')->first()->total }} {{ $currency->symbol }}</div>
+            <div class="tt-cart-total-price">{{ Cart::instance('shopping')->content()->where('options.type', 'country')->first()->total }} {{ $currency->symbol }}</div>
         </div>
     @endif
     <div class="tt-cart-total-row">

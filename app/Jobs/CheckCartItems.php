@@ -35,7 +35,7 @@ class CheckCartItems implements ShouldQueue
      */
     public function handle()
     {
-        $cart = Cart::content();
+        $cart = Cart::instance('shopping')->content();
         $cart->each(function ($item, $rowId) use ($cart) {
             if ($item->options->type === 'product') {
                 if ($cart->isEmpty()) {
@@ -46,12 +46,12 @@ class CheckCartItems implements ShouldQueue
 //                    Cart::remove($rowId);
 //                }
                 if (!$product->getCanOrderAttribute($item->qty, $item->options->product_attribute_id)) {
-                    Cart::remove($rowId);
+                    Cart::instance('shopping')->remove($rowId);
                 }
             } elseif ($item->options->type === 'service') {
                 $service = Service::whereId($item->options->element_id)->first();
                 if (!$service->getCanBookAttribute($item->options->timing->id, $item->options->day_selected) || !$this->country->is_local) {
-                    Cart::remove($rowId);
+                    Cart::instance('shopping')->remove($rowId);
                 }
             }
         });

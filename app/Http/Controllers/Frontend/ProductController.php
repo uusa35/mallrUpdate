@@ -5,9 +5,12 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Jobs\IncreaseElementViews;
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Product;
+use App\Models\Size;
 use App\Models\User;
 use App\Services\Search\Filters;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,18 +57,21 @@ class ProductController extends Controller
         }
     }
 
-    public function show($productId)
+    public function show($id)
     {
-        $element = $this->product->whereId($productId)->with([
+        $element = $this->product->whereId($id)->with([
             'product_attributes.color', 'product_attributes.size',
-            'images', 'tags', 'categories', 'favorites', 'brand','color','size',
+            'images', 'tags', 'categories', 'favorites', 'brand', 'color', 'size',
             'shipment_package.countries'
         ])->first();
-        IncreaseElementViews::dispatch($element);
-        // return array of ['size_id', 'color', 'att_id','qty' ] for one product
-        $data = $element->product_attributes->toArray();
-        $relatedItems = $element->getRelatedItems($element);
-        return view('frontend.wokiee.four.modules.product.show', compact('element', 'relatedItems', 'data'));
+        if ($element) {
+            IncreaseElementViews::dispatch($element);
+            // return array of ['size_id', 'color', 'att_id','qty' ] for one product
+            $data = $element->product_attributes->toArray();
+            $relatedItems = $element->getRelatedItems($element);
+            return view('frontend.wokiee.four.modules.product.show', compact('element', 'relatedItems', 'data'));
+        }
+        abort('404', 'Product does not exist.');
     }
 
     /**
@@ -132,4 +138,34 @@ class ProductController extends Controller
         return redirect()->route('frontend.product.search')->with('warning', trans('message.search_parameters_clear'));
     }
 
+    public function compare()
+    {
+        $elements = Cart::instance('comparison');
+        return view('frontend.wokiee.four.modules.product.compare', compact('elements'));
+    }
+
+    public function addToComparison($id)
+    {
+        $element = $this->product->whereId($id)->with([
+            'product_attributes.color', 'product_attributes.size',
+            'images', 'tags', 'categories', 'favorites', 'brand', 'color', 'size',
+            'shipment_package.countries'
+        ])->first();
+        if ($element) {
+            Cart::instance('comparison')->add($element->id, $element->name, 1, (double)$element->finalPrice, 1,
+                [
+                    'type' => 'product',
+                    'element' => $element
+                ]
+            );
+            return redirect()->back()->with('success', trans('message.product_added_successfully_to_comparison'));
+        }
+        abort('404', trans('general.element_does_not_exist'));
+    }
+
+    public function removeFromComparison($id)
+    {
+        Cart::instance('comparison')->remove($id);
+        return redirect()->back()->with('success', trans('message.product_removed_successfully_from_comparision'));
+    }
 }
