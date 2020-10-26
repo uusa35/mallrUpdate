@@ -20,9 +20,9 @@ class CartController extends Controller
     public $cart;
     use CartTrait;
 
-    public function __construct()
+    public function __construct(Cart $cart)
     {
-        $this->cart = Cart::instance('shopping');
+        $this->cart = $cart->instance('shopping');
     }
 
     public function index()
