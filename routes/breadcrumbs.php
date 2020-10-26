@@ -24,6 +24,11 @@ Breadcrumbs::for('frontend.product.show', function ($trail, $element) {
     $trail->push($element->name, route('frontend.product.show', $element->id));
 });
 
+Breadcrumbs::for('frontend.product.compare', function ($trail) {
+    $trail->parent('frontend.product.index');
+    $trail->push(trans('general.compare'), route('frontend.product.compare'));
+});
+
 Breadcrumbs::for('frontend.collection.index', function ($trail) {
     $trail->parent('frontend.home');
     $trail->push(trans('general.collections'), route('frontend.collection.index'));

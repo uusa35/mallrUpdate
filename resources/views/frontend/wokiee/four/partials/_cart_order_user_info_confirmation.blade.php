@@ -79,10 +79,10 @@
                                             {{ trans('message.payment_will_be_in_kuwaiti_dinar_only') }}
                                         </div>
                                     </tr>
-                                    @if(Cart::content()->where('options.type', 'country')->first())
+                                    @if(Cart::instance('shopping')->content()->where('options.type', 'country')->first())
                                         <tr>
                                             <th>{{ trans('general.shipment_fees') }} {{ $currency->name }}</th>
-                                            <td>{{ getConvertedPrice(Cart::content()->where('options.type', 'country')->first()->total) }} {{ $currency->symbol }}</td>
+                                            <td>{{ getConvertedPrice(Cart::instance('shopping')->content()->where('options.type', 'country')->first()->total) }} {{ $currency->symbol }}</td>
                                         </tr>
                                     @endif
                                     @if(session()->get('coupon'))
@@ -94,14 +94,14 @@
                                     @if(!$currency->country->is_local)
                                         <tr>
                                             <th>{{ trans('general.total_price') }} {{ $currency->name }}</th>
-                                            <td>{{ getConvertedPrice(Cart::total()) }} {{ $currency->symbol }}</td>
+                                            <td>{{ getConvertedPrice(Cart::instance('shopping')->total()) }} {{ $currency->symbol }}</td>
                                         </tr>
                                     @endif
                                     </tbody>
                                     <tfoot>
                                     <tr>
                                         <th>{{ trans('general.total_price_in_kuwaiti_dinar') }}</th>
-                                        <td>{{ Cart::total() }} {{ trans('general.kd') }}</td>
+                                        <td>{{ Cart::instance('shopping')->total() }} {{ trans('general.kd') }}</td>
                                     </tr>
                                     </tfoot>
                                 </table>

@@ -129,7 +129,7 @@
     .btn.btn-small:hover,
     .tt-back-to-top,
     .btn.btn-border,
-    .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link,
+    .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link, .tt-btn-compare,
     .tt-image-box .tt-btn-wishlist,
     ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img),
     .btn > .fa .fa-fw,
@@ -246,6 +246,10 @@
 
     .tt-col-icon, .tt-services-block .tt-col-icon {
         color: {{ $settings->icon_theme_color }}             !important;
+    }
+
+    .tt-menu-categories .tt-dropdown-menu nav>ul>li.tt-submenu>a:after {
+        display: none!important;
     }
 
     @if(env('NASHKW') || env('BITS') || ENV('EMAKEUP'))

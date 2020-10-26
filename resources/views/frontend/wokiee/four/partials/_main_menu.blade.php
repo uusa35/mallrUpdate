@@ -10,7 +10,7 @@
 
     <div class="container small-header">
         <div class="tt-header-holder">
-            {{--            @include('frontend.wokiee.four.partials._main_menu_categories')--}}
+                        @include('frontend.wokiee.four.partials._main_menu_categories')
             <div class="tt-col-obj tt-obj-menu">
                 <!-- tt-menu -->
                 <div class="tt-desctop-parent-menu tt-parent-box">
@@ -68,10 +68,10 @@
                         <button class="tt-dropdown-toggle">
                             <i class="icon-f-39"></i>
                             <span class="tt-badge-cart">
-                                @if(Cart::content()->where('options.type', 'country')->first())
-                                    {{ Cart::count() - 1 }}
+                                @if(Cart::instance('shopping')->content()->where('options.type', 'country')->first())
+                                    {{ Cart::instance('shopping')->count() - 1 }}
                                 @else
-                                    {{ Cart::count() }}
+                                    {{ Cart::instance('shopping')->count() }}
                                 @endif
                             </span>
                         </button>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="tt-dropdown-inner">
                                 <div class="tt-cart-layout">
-                                @if(Cart::count() > 0)
+                                @if(Cart::instance('shopping')->count() > 0)
                                     @include('frontend.wokiee.four.partials._main_menu_cart_items')
                                 @else
                                     <!-- layout emty cart -->
@@ -96,6 +96,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- /tt-cart -->
                 <!-- tt-account -->
             @include('frontend.wokiee.four.partials._menu_user_account')
@@ -103,6 +104,17 @@
                 <!-- tt-langue and tt-currency -->
             @include('frontend.wokiee.four.partials._menu_currency_lang')
             <!-- /tt-langue and tt-currency -->
+                {{--                comparision --}}
+                <div class=" tt-parent-box">
+                    <div class="tt-dropdown-obj" data-tposition="bottom">
+                        <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}">
+                            <i class="icon-n-08"></i>
+                            <span class="tt-badge">
+                                {{ session()->has('comparison') ? session()->get('comparision')->count() : ''}}
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -7,9 +7,10 @@
                 <ul>
                     @foreach ($breadcrumbs as $breadcrumb)
                         @if ($breadcrumb->url && !$loop->last)
-                            <li style="display: inline"><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }} </a> / </li>
+                            <li style="display: inline"><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }} </a> /
+                            </li>
                         @else
-                            <li class="active" style="display: inline;">{{ $breadcrumb->title }}</li>
+                            <li  style="display: inline;">{{ $breadcrumb->title }}</li>
                         @endif
                     @endforeach
                 </ul>

@@ -10,7 +10,7 @@
             </tr>
             <tr>
                 <th>{{ trans('general.total_price') }} ({{ $currency->name }})</th>
-                <td>{{ getConvertedPrice(Cart::total()) }} {{ $currency->symbol }}</td>
+                <td>{{ getConvertedPrice(Cart::instance('shopping')->total()) }} {{ $currency->symbol }}</td>
             </tr>
         @endif
         </tbody>
@@ -21,7 +21,7 @@
                 <td>{{ session()->get('coupon')->value }} {{ trans('general.kd') }}</td>
             </tr>
         @endif
-        @if(in_array('country',Cart::content()->pluck('options.type')->toArray()))
+        @if(in_array('country',Cart::instance('shopping')->content()->pluck('options.type')->toArray()))
 {{--        <tr>--}}
 {{--            <th>{{ trans('general.total_shipment_fees') }}</th>--}}
 {{--            <td>{{ getClientCountry()->fixed_shipment_charge }} {{ trans('general.kd') }}</td>--}}
