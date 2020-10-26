@@ -19,7 +19,7 @@
                                     <div class="tt-row-custom">
                                         <div class="tt-col">
                                             <div class="tt-label-location">
-                                                <div class="tt-label-our-stock">{{ trans('general.available') }}</div>
+                                                <div class="tt-label-our-stock" style="background-color: #978d2f; padding: 10px;">{{ trans('general.available') }}</div>
                                             </div>
                                         </div>
                                         <div class="tt-col">
