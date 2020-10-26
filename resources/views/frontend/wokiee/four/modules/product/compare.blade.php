@@ -67,7 +67,7 @@
                                         @foreach($element->options->element->product_attributes->pluck('size')->unique('id')->take(2) as $size)
                                             <span class="options-color"
                                                   href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">
-                                                    <b>{{ $size->name }}</b>
+                                                    <b>{{ $size->name }},</b>
                                                 </span>
                                         @endforeach
                                     </div>
@@ -85,7 +85,7 @@
                                         <div class="tt-col">
                                             <span class="options-color"
                                                   href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">
-                                                    <b>{{ $element->options->element->size->name }}</b>
+                                                    <b>{{ $element->options->element->size->name }},</b>
                                                 </span>
                                         </div>
                                     @endif

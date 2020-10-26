@@ -126,8 +126,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="695">
-                  <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
+                <state relative-caret-position="209">
+                  <caret line="69" column="73" selection-start-line="69" selection-start-column="73" selection-end-line="69" selection-end-column="73" />
                   <folding>
                     <element signature="e#1815#1861#0#HTML" expanded="true" />
                     <element signature="e#4350#4449#0#HTML" expanded="true" />
@@ -979,12 +979,12 @@
       <workItem from="1603363183079" duration="607000" />
       <workItem from="1603365872612" duration="505000" />
       <workItem from="1603649557874" duration="2665000" />
-      <workItem from="1603691048955" duration="13175000" />
+      <workItem from="1603691048955" duration="13192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596250000" />
+    <option name="totallyTimeSpent" value="596267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1423,8 +1423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
+        <state relative-caret-position="209">
+          <caret line="69" column="73" selection-start-line="69" selection-start-column="73" selection-end-line="69" selection-end-column="73" />
           <folding>
             <element signature="e#1815#1861#0#HTML" expanded="true" />
             <element signature="e#4350#4449#0#HTML" expanded="true" />
