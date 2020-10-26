@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="tt-col tt-table-title">{{ trans('general.description') }}</div>
-                                <div class="tt-col js-description">
+                                <div class="tt-col js-description text-center">
                                     {{ $element->options->element->description }}
                                 </div>
                                 <div class="tt-col tt-table-title">{{ trans('general.company') }}</div>
