@@ -92,9 +92,10 @@
                                 @endif
                                 <div class="tt-col text-center">
                                     <a href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}"
-                                       class="tt-btn-addtocart" data-toggle="modal"
-                                       data-target="#modalAddToCartProduct"><i
-                                                class="icon-f-39"></i>{{ trans('general.view_details') }}</a>
+                                       class="btn btn-small mb-2">
+                                        <i class="fa  fa-fw fa-lg icon-g-89"></i>
+                                        {{ trans('general.view_details') }}
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

@@ -21,7 +21,7 @@
             {{--            @if(isset($view) && $view)--}}
             <a href="{{ route('frontend.product.show.name',['id' => $element->id , 'name' => $element->name]) }}"
                class="btn btn-small mb-2">
-                <i class="fa  fa-fw fa-lg icon-f-46"></i>
+                <i class="fa  fa-fw fa-lg icon-g-89"></i>
                 {{ trans('general.view_details') }}
             </a>
             {{--            @else--}}
