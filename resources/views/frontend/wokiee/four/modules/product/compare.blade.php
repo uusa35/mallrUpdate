@@ -23,22 +23,25 @@
                                             </div>
                                         </div>
                                         <div class="tt-col">
-                                            <a href="#" class="tt-remove-item js-remove-item"></a>
+                                            <a href="{{ route('frontend.product.compare.remove', $element->rowId) }}"
+                                               class="tt-remove-item js-remove-item"></a>
                                         </div>
                                     </div>
                                     <div class="tt-img">
-                                        <a href="{{ route('frontend.product.show.name',['id' => $element->id, 'name' => $element->name]) }}"><img
-                                                    src="$element->options->element->imageThumbLink" alt=""></a>
+                                        <a href="{{ route('frontend.product.show.name',['id' => $element->id, 'name' => $element->options->element->name]) }}"><img
+                                                    style="margin-left: auto; margin-right: auto;"
+                                                    src="{{ $element->options->element->imageThumbLink }}"
+                                                    alt="{{ $element->options->element->name }}"></a>
                                     </div>
-                                    <h2 class="tt-title"><a
-                                                href="{{ route('frontend.product.show.name',['id' => $element->id, 'name' => $element->name]) }}">{{ $element->name }}</a>
+                                    <h2 class="tt-title text-center"><a
+                                                href="{{ route('frontend.product.show.name',['id' => $element->id, 'name' => $element->options->element->name]) }}">{{ $element->options->element->name }}</a>
                                     </h2>
-                                    <div class="tt-price">
+                                    <div class="tt-price text-center">
                                         @if($element->isOnSale)
-                                            <span class="new-price">{{ $element->options->element->convertedSalePrice}}</span>
-                                            <span class="old-price">{{ $element->options->element->convertedPrice }}</span>
+                                            <span class="new-price ">{{ $element->options->element->convertedSalePrice}} {{ $currency->symbol }}</span>
+                                            <span class="old-price ">{{ $element->options->element->convertedPrice }} {{ $currency->symbol }}</span>
                                         @else
-                                            <span class="new-price">{{ $element->options->element->convertedPrice }}</span>
+                                            <span class="new-price col-12">{{ $element->options->element->convertedPrice }} {{ $currency->symbol }}</span>
                                         @endif
                                     </div>
                                 </div>
@@ -54,31 +57,25 @@
                                     <div class="tt-col tt-table-title">{{ trans('general.colors') }}</div>
                                     <div class="tt-col">
                                         @foreach($element->options->element->product_attributes->pluck('color')->unique('id') as $color)
-                                            <li><a class="options-color" style="background-color: {{ $color->code }};"
-                                                   href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}"></a>
-                                            </li>
+                                            <a class="options-color"
+                                               style="background-color: {{ $color->code }}; padding: 10px; margin-right: 10px; margin-left: 10px;"
+                                               href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">{{ $color->name }}</a>
                                         @endforeach
                                     </div>
                                     <div class="tt-col tt-table-title">{{ trans('general.sizes') }}</div>
                                     <div class="tt-col">
                                         @foreach($element->options->element->product_attributes->pluck('size')->unique('id')->take(2) as $size)
-                                            <li>
-                                                <a href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}"
-                                                   class="options-color-img"
-                                                   data-src="{{ $element->options->element->imageThumbLink }}"
-                                                   data-src-hover="images/product/product-03-05-hover.jpg"
-                                                   data-tooltip="{{ strlen($size->name) > 2 ? $size->name : trans('general.size')  }}"
-                                                   data-tposition="top">
-                                                    <h6 style="color : lightgrey; padding-top: 5px">{{ strtoupper(substr($size->name,0,2)) }}</h6>
-                                                </a>
-                                            </li>
+                                            <span class="options-color"
+                                                  href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">
+                                                    <b>{{ $size->name }}</b>
+                                                </span>
                                         @endforeach
                                     </div>
                                 @elseif($element->options->element->color || $element->options->element->size)
                                     <div class="tt-col tt-table-title">{{ trans('general.color') }}</div>
                                     <div class="tt-col">
                                         <span class="options-color"
-                                              style="background-color: {{ $element->options->element->color->code }}; padding: 10px;"
+                                              style="background-color: {{ $element->options->element->color->code }}; padding: 10px; margin-right: 10px; margin-left: 10px;"
                                               href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">
                                                 <b>{{ $element->options->element->color->name }}</b>
                                             </span>
@@ -92,21 +89,21 @@
                                                 </span>
                                         </div>
                                     @endif
-                                    <div class="tt-col text-center">
-                                        <a href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}" class="tt-btn-addtocart" data-toggle="modal"
-                                           data-target="#modalAddToCartProduct"><i class="icon-f-39"></i>{{ trans('general.view') }}</a>
-                                    </div>
+                                @endif
+                                <div class="tt-col text-center">
+                                    <a href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}"
+                                       class="tt-btn-addtocart" data-toggle="modal"
+                                       data-target="#modalAddToCartProduct"><i
+                                                class="icon-f-39"></i>{{ trans('general.view') }}</a>
+                                </div>
                             </div>
-                            @endif
+                        @endforeach
                     </div>
-                    @endforeach
+                @else
+                    <div class="alert alert-default text-light text-center mt-5">
+                        <h3 class="mt-3">No Products</h3>
+                    </div>
+                @endif
             </div>
-            @else
-                <div class="alert alert-info text-light text-center mt-5">
-                    <h3 class="mt-3">No Products</h3>
-                </div>
-            @endif
         </div>
-    </div>
-    </div>
 @endsection

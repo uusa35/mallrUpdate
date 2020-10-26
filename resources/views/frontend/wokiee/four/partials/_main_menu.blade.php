@@ -10,7 +10,7 @@
 
     <div class="container small-header">
         <div class="tt-header-holder">
-                        @include('frontend.wokiee.four.partials._main_menu_categories')
+            {{--                        @include('frontend.wokiee.four.partials._main_menu_categories')--}}
             <div class="tt-col-obj tt-obj-menu">
                 <!-- tt-menu -->
                 <div class="tt-desctop-parent-menu tt-parent-box">
@@ -105,16 +105,18 @@
             @include('frontend.wokiee.four.partials._menu_currency_lang')
             <!-- /tt-langue and tt-currency -->
                 {{--                comparision --}}
-                <div class=" tt-parent-box">
-                    <div class="tt-dropdown-obj" data-tposition="bottom">
-                        <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}">
-                            <i class="icon-n-08"></i>
-                            <span class="tt-badge">
+                @if(env('DAILY'))
+                    <div class=" tt-parent-box">
+                        <div class="tt-dropdown-obj" data-tposition="bottom">
+                            <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}">
+                                <i class="icon-n-08"></i>
+                                <span class="tt-badge">
                                 {{ session()->has('comparison') ? session()->get('comparision')->count() : ''}}
                             </span>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </div>

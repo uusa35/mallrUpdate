@@ -10,7 +10,7 @@
                         @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
-                                    <i class="icon-women"></i>
+{{--                                    <i class="icon-women"></i>--}}
                                     <span>{{ str_limit($cat->name,15,'') }}</span>
                                 </a>
                                 @if($cat->children->isNotEmpty())

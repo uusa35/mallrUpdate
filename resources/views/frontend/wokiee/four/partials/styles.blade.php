@@ -68,11 +68,6 @@
         @else
      font-family: 'Tajawal-Medium', 'sans-serif' !important;
     @endif
-
-
-
-
-
     }
 
     @elseif(env('ESCRAP') || env('HOMEKEY') || env('EXPO') || env('HUDA'))
@@ -100,7 +95,7 @@
         background-color: {{ $settings->main_theme_bg_color ? $settings->main_theme_bg_color : 'white' }};
     }
 
-    p, .tt-collapse-content p, .tt-shopcart-table01 td, .tt-shopcart-table01 th {
+    p, .tt-collapse-content p, .tt-shopcart-table01 td, .tt-shopcart-table01 th,  {
         color: {{ $settings->main_theme_color ? $settings->main_theme_color : 'white' }}               !important;
     }
 
@@ -128,7 +123,7 @@
     .btn-link, .btn-link:focus,
     .btn.btn-small:hover,
     .tt-back-to-top,
-    .btn.btn-border,
+    .btn.btn-border, .tt-menu-categories .tt-dropdown-toggle,
     .tt-product:not(.tt-view) .tt-image-box .tt-btn-wishlist.active, .page-item.active .page-link, .tt-btn-compare,
     .tt-image-box .tt-btn-wishlist,
     ul.tt-options-swatch li.active a:not(.options-color):not(.options-color-img), ul.tt-options-swatch li:hover a:not(.options-color):not(.options-color-img),
