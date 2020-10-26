@@ -94,14 +94,14 @@
                                     <a href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}"
                                        class="tt-btn-addtocart" data-toggle="modal"
                                        data-target="#modalAddToCartProduct"><i
-                                                class="icon-f-39"></i>{{ trans('general.view') }}</a>
+                                                class="icon-f-39"></i>{{ trans('general.view_details') }}</a>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 @else
                     <div class="alert alert-default text-light text-center mt-5">
-                        <h3 class="mt-3">No Products</h3>
+                        <h3 class="mt-3">{{ trans('general.no_products') }}</h3>
                     </div>
                 @endif
             </div>
