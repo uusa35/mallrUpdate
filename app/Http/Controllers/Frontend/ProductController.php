@@ -140,7 +140,6 @@ class ProductController extends Controller
 
     public function compare()
     {
-//        Cart::instance('comparison')->destroy();
         $elements = Cart::instance('comparison');
         return view('frontend.wokiee.four.modules.product.compare', compact('elements'));
     }
