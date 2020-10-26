@@ -17,7 +17,7 @@
                                                     <li>
                                                         <a href="{{ route('frontend.service.search',['service_category_id' => $sub->id]) }}">{{ $sub->name }}
                                                             @if($sub->on_new)
-                                                                <span class="tt-badge tt-fatured">{{ trans('genera.new') }}</span>
+                                                                <span class="tt-badge tt-fatured">{{ trans('general.new') }}</span>
                                                             @endif
                                                         </a>
                                                     </li>
