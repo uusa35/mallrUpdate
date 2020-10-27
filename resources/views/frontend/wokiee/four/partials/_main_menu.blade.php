@@ -105,7 +105,7 @@
             @include('frontend.wokiee.four.partials._menu_currency_lang')
             <!-- /tt-langue and tt-currency -->
                 {{--                comparision --}}
-                @if(env('DAILY') || env('NASHKW'))
+                @if(env('COMPARE_PRODUCT'))
                     <div class=" tt-parent-box">
                         <div class="tt-dropdown-obj" data-tposition="bottom">
                             <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}" data-tooltip="{{ trans('general.compare_products') }}" data-tposition="bottom">
