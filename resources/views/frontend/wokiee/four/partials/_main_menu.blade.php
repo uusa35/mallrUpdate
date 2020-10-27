@@ -86,7 +86,7 @@
                                     @include('frontend.wokiee.four.partials._main_menu_cart_items')
                                 @else
                                     <!-- layout emty cart -->
-                                        <a href="empty-cart.html" class="tt-cart-empty">
+                                        <a href="#" class="tt-cart-empty">
                                             <i class="icon-f-39"></i>
                                             <p>{{ trans('general.no_items_in_cart') }}</p>
                                         </a>
@@ -108,7 +108,7 @@
                 @if(env('DAILY') || env('NASHKW'))
                     <div class=" tt-parent-box">
                         <div class="tt-dropdown-obj" data-tposition="bottom">
-                            <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}">
+                            <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}" data-tooltip="{{ trans('general.compare_products') }}" data-tposition="bottom">
                                 <i class="icon-n-08"></i>
                                 <span class="tt-badge">
                                 {{ session()->has('comparison') ? session()->get('comparision')->count() : ''}}

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="306">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -64,11 +65,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
               <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="107" column="50" lean-forward="true" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -98,12 +117,10 @@
       <find>after</find>
       <find>on_sale</find>
       <find>.btn</find>
-      <find>&lt;ul class=&quot;tt-megamenu-submenu&quot;&gt;</find>
       <find>price</find>
       <find>curren</find>
       <find>cure</find>
       <find>currency</find>
-      <find>compare</find>
       <find>stock</find>
       <find>genera</find>
       <find>Cart::</find>
@@ -115,6 +132,7 @@
       <find>Cart</find>
       <find>Cart $cart</find>
       <find>cart</find>
+      <find>compare</find>
     </findStrings>
     <replaceStrings>
       <replace>myexpo</replace>
@@ -154,7 +172,6 @@
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/modules/product/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/breadcrumbs.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/breadcrumbs.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_product_widget.blade.php" />
@@ -178,10 +195,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/CartController.php" />
         <option value="$PROJECT_DIR$/packages/usama/myfatoorah/src/Controllers/MyFatoorahTrait.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/OrderController.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/modules/product/compare.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -859,12 +877,12 @@
       <workItem from="1603649557874" duration="2665000" />
       <workItem from="1603691048955" duration="16349000" />
       <workItem from="1603787319452" duration="420000" />
-      <workItem from="1603790568214" duration="121000" />
+      <workItem from="1603790568214" duration="460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="599965000" />
+    <option name="totallyTimeSpent" value="600304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -937,22 +955,8 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/breadcrumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_nav_countries_section.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_widget_tags_and_images.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1157,20 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="100" column="35" lean-forward="true" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
@@ -1277,13 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/403.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1305,6 +1288,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_menu_user_account.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu_cart_items.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="107" column="50" lean-forward="true" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
         </state>
       </provider>
     </entry>

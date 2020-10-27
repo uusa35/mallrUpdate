@@ -1,7 +1,7 @@
 @auth
     <div class="tt-desctop-parent-account tt-parent-box">
         <div class="tt-account tt-dropdown-obj">
-            <button class="tt-dropdown-toggle" data-tooltip="My Account" data-tposition="bottom"><i
+            <button class="tt-dropdown-toggle" data-tooltip="{{ trans('general.account') }}" data-tposition="bottom"><i
                         class="icon-f-94"></i></button>
             <div class="tt-dropdown-menu">
                 <div class="tt-mobile-add">
