@@ -217,18 +217,6 @@
         },
         {
             "name": "aws/aws-sdk-php",
-<<<<<<< HEAD
-            "version": "3.158.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "40bfb8c7bb2b105c32c7201b3c7fab681370d9ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/40bfb8c7bb2b105c32c7201b3c7fab681370d9ca",
-                "reference": "40bfb8c7bb2b105c32c7201b3c7fab681370d9ca",
-=======
             "version": "3.158.13",
             "source": {
                 "type": "git",
@@ -239,7 +227,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4d81b3f456435c30a4f9c71852164b6b46dc4d97",
                 "reference": "4d81b3f456435c30a4f9c71852164b6b46dc4d97",
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
                 "shasum": ""
             },
             "require": {
@@ -311,11 +298,7 @@
                 "s3",
                 "sdk"
             ],
-<<<<<<< HEAD
-            "time": "2020-10-19T18:14:24+00:00"
-=======
             "time": "2020-10-23T18:11:41+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -833,18 +816,6 @@
         },
         {
             "name": "doctrine/dbal",
-<<<<<<< HEAD
-            "version": "2.11.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/dbal.git",
-                "reference": "b88a45cbc395e850b2d958dcd7b9d49d09ff23e0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/b88a45cbc395e850b2d958dcd7b9d49d09ff23e0",
-                "reference": "b88a45cbc395e850b2d958dcd7b9d49d09ff23e0",
-=======
             "version": "2.12.0",
             "source": {
                 "type": "git",
@@ -855,7 +826,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/dbal/zipball/c6d37b4c42aaa3c3ee175f05eca68056f4185646",
                 "reference": "c6d37b4c42aaa3c3ee175f05eca68056f4185646",
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
                 "shasum": ""
             },
             "require": {
@@ -935,25 +905,7 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-<<<<<<< HEAD
-            "time": "2020-10-19T02:01:37+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-22T17:26:24+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "doctrine/event-manager",
@@ -2889,19 +2841,6 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
-<<<<<<< HEAD
-            "time": "2020-10-18T11:50:25+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/frankdejonge",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-18T11:50:25+00:00"
         },
         {
@@ -2962,17 +2901,7 @@
                 "qr code",
                 "qrcode"
             ],
-            "funding": [
-                {
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/milon",
-                    "type": "github"
-                }
-            ],
             "time": "2020-08-26T18:58:46+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -3241,21 +3170,7 @@
                 "datetime",
                 "time"
             ],
-<<<<<<< HEAD
-            "time": "2020-10-12T20:36:09+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://opencollective.com/Carbon",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T06:02:30+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "nikic/php-parser",
@@ -5445,25 +5360,7 @@
                 "polyfill",
                 "portable"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -5526,25 +5423,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -5608,25 +5487,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -5696,25 +5557,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-08-04T06:02:08+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -5781,25 +5624,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -5862,88 +5687,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php70",
-            "version": "v1.18.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "0dd93f2c578bdc9c72697eaa5f1dd25644e618d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/0dd93f2c578bdc9c72697eaa5f1dd25644e618d3",
-                "reference": "0dd93f2c578bdc9c72697eaa5f1dd25644e618d3",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0|~2.0|~9.99",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.18-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-php72",
@@ -6002,25 +5746,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-php73",
@@ -6082,25 +5808,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/polyfill-php80",
@@ -6166,25 +5874,7 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
-            "time": "2020-07-14T12:35:20+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "symfony/process",
@@ -7333,16 +7023,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "66f4e5d49ff52eecb603e7e5b5bb8645204d0658"
+                "reference": "74e8c71026edba786290047199619ac6b6490094"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/66f4e5d49ff52eecb603e7e5b5bb8645204d0658",
-                "reference": "66f4e5d49ff52eecb603e7e5b5bb8645204d0658",
+                "url": "https://api.github.com/repos/composer/composer/zipball/74e8c71026edba786290047199619ac6b6490094",
+                "reference": "74e8c71026edba786290047199619ac6b6490094",
                 "shasum": ""
             },
             "require": {
@@ -7407,25 +7097,7 @@
                 "dependency",
                 "package"
             ],
-<<<<<<< HEAD
-            "time": "2020-10-13T13:59:09+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-10-24T18:53:21+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
+            "time": "2020-10-25T22:03:59+00:00"
         },
         {
             "name": "composer/semver",
@@ -7487,25 +7159,7 @@
                 "validation",
                 "versioning"
             ],
-<<<<<<< HEAD
-            "time": "2020-09-27T13:13:07+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-14T08:51:15+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "composer/spdx-licenses",
@@ -7609,25 +7263,7 @@
                 "Xdebug",
                 "performance"
             ],
-<<<<<<< HEAD
-            "time": "2020-08-19T10:27:58+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-24T12:39:10+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "doctrine/instantiator",
@@ -7738,17 +7374,7 @@
                 "flare",
                 "reporting"
             ],
-<<<<<<< HEAD
-            "time": "2020-09-18T06:35:11+00:00"
-=======
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
             "time": "2020-10-21T16:02:39+00:00"
->>>>>>> 66cb19c1eb6bfb66bc6468eb740a161c97e10874
         },
         {
             "name": "facade/ignition",
