@@ -39,7 +39,7 @@
                 <!-- tt-search -->
                 <div class="tt-desctop-parent-search tt-parent-box tt-obj-desktop-hidden">
                     <div class="tt-search tt-dropdown-obj">
-                        <button class="tt-dropdown-toggle" data-tooltip="Search" data-tposition="bottom">
+                        <button class="tt-dropdown-toggle" data-tooltip="{{ trans('general.search') }}" data-tposition="bottom">
                             <i class="icon-f-85"></i>
                         </button>
                         <div class="tt-dropdown-menu">
@@ -64,7 +64,7 @@
                 <!-- /tt-search -->
                 <!-- tt-cart -->
                 <div class="tt-desctop-parent-cart tt-parent-box">
-                    <div class="tt-cart tt-dropdown-obj" data-tooltip="Cart" data-tposition="bottom">
+                    <div class="tt-cart tt-dropdown-obj" data-tooltip="{{ trans('general.cart') }}" data-tposition="bottom">
                         <button class="tt-dropdown-toggle">
                             <i class="icon-f-39"></i>
                             <span class="tt-badge-cart">
@@ -86,7 +86,7 @@
                                     @include('frontend.wokiee.four.partials._main_menu_cart_items')
                                 @else
                                     <!-- layout emty cart -->
-                                        <a href="empty-cart.html" class="tt-cart-empty">
+                                        <a href="#" class="tt-cart-empty">
                                             <i class="icon-f-39"></i>
                                             <p>{{ trans('general.no_items_in_cart') }}</p>
                                         </a>
@@ -105,10 +105,10 @@
             @include('frontend.wokiee.four.partials._menu_currency_lang')
             <!-- /tt-langue and tt-currency -->
                 {{--                comparision --}}
-                @if(env('DAILY') || env('NASHKW'))
+                @if(env('COMPARE_PRODUCT'))
                     <div class=" tt-parent-box">
                         <div class="tt-dropdown-obj" data-tposition="bottom">
-                            <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}">
+                            <a class="button tt-dropdown-toggle" href="{{ route('frontend.product.compare') }}" data-tooltip="{{ trans('general.compare_products') }}" data-tposition="bottom">
                                 <i class="icon-n-08"></i>
                                 <span class="tt-badge">
                                 {{ session()->has('comparison') ? session()->get('comparision')->count() : ''}}

@@ -19,7 +19,8 @@
                                     <div class="tt-row-custom">
                                         <div class="tt-col">
                                             <div class="tt-label-location">
-                                                <div class="tt-label-our-stock" style="background-color: #978d2f; padding: 10px;">{{ trans('general.available') }}</div>
+                                                <div class="tt-label-our-stock"
+                                                     style="background-color: #978d2f; padding: 10px;">{{ trans('general.available') }}</div>
                                             </div>
                                         </div>
                                         <div class="tt-col">
@@ -49,7 +50,7 @@
                                 <div class="tt-col js-description text-center">
                                     {{ $element->options->element->description }}
                                 </div>
-                                <div class="tt-col tt-table-title">{{ trans('general.company') }}</div>
+                                <div class="tt-col tt-table-title">{{ trans('general.company_name') }}</div>
                                 <div class="tt-col">
                                     {{ $element->options->element->user->slug }}
                                 </div>
@@ -58,7 +59,7 @@
                                     <div class="tt-col">
                                         @foreach($element->options->element->product_attributes->pluck('color')->unique('id') as $color)
                                             <a class="options-color"
-                                               style="background-color: {{ $color->code }}; padding: 10px; margin-right: 10px; margin-left: 10px;"
+                                               style="background-color: {{ $color->code }}; color : whitesmoke; padding: 10px; margin-right: 10px; margin-left: 10px;"
                                                href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">{{ $color->name }}</a>
                                         @endforeach
                                     </div>
@@ -75,7 +76,7 @@
                                     <div class="tt-col tt-table-title">{{ trans('general.color') }}</div>
                                     <div class="tt-col">
                                         <span class="options-color"
-                                              style="background-color: {{ $element->options->element->color->code }}; padding: 10px; margin-right: 10px; margin-left: 10px;"
+                                              style="background-color: {{ $element->options->element->color->code }}; color : whitesmoke;  padding: 10px; margin-right: 10px; margin-left: 10px;"
                                               href="{{ route('frontend.product.show.name', ['id' => $element->options->element->id, 'name' => $element->options->element->name]) }}">
                                                 <b>{{ $element->options->element->color->name }}</b>
                                             </span>
