@@ -19,7 +19,8 @@
                                     <div class="tt-row-custom">
                                         <div class="tt-col">
                                             <div class="tt-label-location">
-                                                <div class="tt-label-our-stock" style="background-color: #978d2f; padding: 10px;">{{ trans('general.available') }}</div>
+                                                <div class="tt-label-our-stock"
+                                                     style="background-color: #978d2f; padding: 10px;">{{ trans('general.available') }}</div>
                                             </div>
                                         </div>
                                         <div class="tt-col">
@@ -49,7 +50,7 @@
                                 <div class="tt-col js-description text-center">
                                     {{ $element->options->element->description }}
                                 </div>
-                                <div class="tt-col tt-table-title">{{ trans('general.company') }}</div>
+                                <div class="tt-col tt-table-title">{{ trans('general.company_name') }}</div>
                                 <div class="tt-col">
                                     {{ $element->options->element->user->slug }}
                                 </div>
