@@ -11,7 +11,7 @@
             {{--<div class="container container-fluid-custom-mobile-padding">--}}
             <div class="container">
                 @if(isset($elements) && $elements->content()->isNotEmpty())
-                    <h1 class="noborder">{{ trans('general.compare_products') }}</h1>
+                    <h1 class="tt-title-subpages noborder">{{ trans('general.compare_products') }}</h1>
                     <div class="tt-compare-table" id="tt-compare-table">
                         @foreach($elements->content() as $element)
                             <div class="tt-item">
