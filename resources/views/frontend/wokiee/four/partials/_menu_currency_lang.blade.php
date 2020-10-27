@@ -1,6 +1,6 @@
 <div class="tt-desctop-parent-multi tt-parent-box">
     <div class="tt-multi-obj tt-dropdown-obj">
-        <button class="tt-dropdown-toggle" data-tooltip="Settings" data-tposition="bottom"><i class="icon-f-79"></i>
+        <button class="tt-dropdown-toggle" data-tooltip="{{ trans("general.settings") }}" data-tposition="bottom"><i class="icon-f-79"></i>
         </button>
         <div class="tt-dropdown-menu">
             <div class="tt-mobile-add">

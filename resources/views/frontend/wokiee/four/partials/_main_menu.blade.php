@@ -39,7 +39,7 @@
                 <!-- tt-search -->
                 <div class="tt-desctop-parent-search tt-parent-box tt-obj-desktop-hidden">
                     <div class="tt-search tt-dropdown-obj">
-                        <button class="tt-dropdown-toggle" data-tooltip="Search" data-tposition="bottom">
+                        <button class="tt-dropdown-toggle" data-tooltip="{{ trans('general.search') }}" data-tposition="bottom">
                             <i class="icon-f-85"></i>
                         </button>
                         <div class="tt-dropdown-menu">
@@ -64,7 +64,7 @@
                 <!-- /tt-search -->
                 <!-- tt-cart -->
                 <div class="tt-desctop-parent-cart tt-parent-box">
-                    <div class="tt-cart tt-dropdown-obj" data-tooltip="Cart" data-tposition="bottom">
+                    <div class="tt-cart tt-dropdown-obj" data-tooltip="{{ trans('general.cart') }}" data-tposition="bottom">
                         <button class="tt-dropdown-toggle">
                             <i class="icon-f-39"></i>
                             <span class="tt-badge-cart">
