@@ -113,15 +113,17 @@
 <body>
 <div class="container">
     <div class="content">
-        <div class="header">
-            <a href="{{ url('/') }}">
-                <img src="{{ App\Models\Setting::first()->logoThumb }}" alt="{{ env('APP_NAME') }}" class="img-xs"/>
-            </a>
-        </div>
-        <div class="title">
-            {{ $exception->getMessage() }}
-        </div>
-        <div class="text-center"><a href="{{ url('/') }}">{{ trans('general.back') }}</a></div>
+        @if(!env('MALLR'))
+            <div class="header">
+                <a href="{{ url('/') }}">
+                    <img src="{{ App\Models\Setting::first()->logoThumb }}" alt="{{ env('APP_NAME') }}" class="img-xs"/>
+                </a>
+            </div>
+            <div class="title">
+                {{ $exception->getMessage() }}
+            </div>
+            <div class="text-center"><a href="{{ url('/') }}">{{ trans('general.back') }}</a></div>
+        @endif
     </div>
 </div>
 {{--<footer>--}}
