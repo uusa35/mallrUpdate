@@ -125,8 +125,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_categories_main_menu_element_with_images.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="54">
-                  <caret line="3" column="100" lean-forward="true" selection-start-line="3" selection-start-column="100" selection-end-line="3" selection-end-column="100" />
+                <state relative-caret-position="251">
+                  <caret line="143" column="126" lean-forward="true" selection-start-line="143" selection-start-column="126" selection-end-line="143" selection-end-column="126" />
                 </state>
               </provider>
             </entry>
@@ -1003,12 +1003,12 @@
       <workItem from="1603787319452" duration="420000" />
       <workItem from="1603790568214" duration="1519000" />
       <workItem from="1603798440257" duration="710000" />
-      <workItem from="1603862292169" duration="5887000" />
+      <workItem from="1603862292169" duration="5938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="607960000" />
+    <option name="totallyTimeSpent" value="608011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1477,8 +1477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_categories_main_menu_element_with_images.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="100" lean-forward="true" selection-start-line="3" selection-start-column="100" selection-end-line="3" selection-end-column="100" />
+        <state relative-caret-position="251">
+          <caret line="143" column="126" lean-forward="true" selection-start-line="143" selection-start-column="126" selection-end-line="143" selection-end-column="126" />
         </state>
       </provider>
     </entry>
