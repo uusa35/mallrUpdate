@@ -1,7 +1,7 @@
 @if(isset($categories) && $categories->isNotEmpty())
     @if($categories->isNotEmpty())
         @if(env('APP_CASE') === 'EVENTCOM')
-            @foreach($categories->where('is_parent', true)->where('on_home', true) as $cat)
+            @foreach($categories->where('is_parent', true)->where('on_home', true)->take(4) as $cat)
                 <li class="dropdown megamenu">
                     <a href="{{ route('frontend.service.search',['service_category_id' => $cat->id]) }}">{{ str_limit($cat->name,15,'') }}</a>
                     @if($cat->children->isNotEmpty())
