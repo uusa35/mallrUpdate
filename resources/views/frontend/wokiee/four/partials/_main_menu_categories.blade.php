@@ -14,7 +14,7 @@
                                         <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
                                              class="img-responsive img-xs"/>
                                     @else
-                                        <i class="icon-e-15"></i>
+                                        <i class="{{ app()->getLocale() === 'ar' ? "icon-e-15" : "icon-e-14" }}"></i>
                                     @endif
                                     <span>{{ str_limit($cat->name,15,'') }}</span>
                                 </a>
