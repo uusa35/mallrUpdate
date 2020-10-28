@@ -77,14 +77,14 @@
 @elseif(env('MALLR'))
     <meta name="google-site-verification" content="jr-GtLYg64G51nUppCuaH_p0C4NkAcofU5bPIkI9jG0"/>
 @endif
-@if(env('ONE_SIGNAL_APP_ID'))
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: `{!! env('ONE_SIGNAL_APP_ID') !!}`,
-            });
-        });
-    </script>
-@endif
+{{--@if(env('ONE_SIGNAL_APP_ID'))--}}
+{{--    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>--}}
+{{--    <script>--}}
+{{--        var OneSignal = window.OneSignal || [];--}}
+{{--        OneSignal.push(function() {--}}
+{{--            OneSignal.init({--}}
+{{--                appId: `{!! env('ONE_SIGNAL_APP_ID') !!}`,--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
+{{--@endif--}}
