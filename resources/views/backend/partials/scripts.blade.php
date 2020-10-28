@@ -11,7 +11,7 @@
     toastr.options = {
         "closeButton": true,
         "debug": false,
-        "positionClass": "{{ app()->getLocale() === 'ar' ? "toast-top-left" : "toast-top-left" }}",
+        "positionClass": "{{ app()->getLocale() === 'ar' ? "toast-top-left" : "toast-top-right" }}",
         "onclick": null,
         "showDuration": "1000",
         "hideDuration": "10000",
@@ -24,7 +24,6 @@
     }
     @if(session()->has('success'))
     toastr.success("{{ session()->get('success') }}");
-    console.log('success')
     @elseif(session()->has('error'))
     toastr.error("{{ session()->get('error') }}");
     @elseif(session()->has('warning'))
