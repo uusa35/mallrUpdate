@@ -141,7 +141,7 @@
                 </li>
             @endforeach
         @else
-            @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true)->take(4) as $cat)
+            @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true)->take(5) as $cat)
                 <li class="dropdown megamenu">
                     <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">{{ str_limit($cat->name,15,'') }}</a>
                     @if($cat->children->isNotEmpty())
