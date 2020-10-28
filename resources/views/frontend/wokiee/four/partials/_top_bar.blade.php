@@ -5,23 +5,27 @@
                 <div class="tt-box-info">
                     <ul>
                         @guest
-                            <li><i class="fa fa-fw fa-user"></i><a href="{{ route('register') }}"
-                                                                   class="">{{ trans('general.register') }}</a></li>
-                            <li><i class="fa fa-fw fa-lock"></i><a href="{{ route('login') }}"
-                                                                   class="">{{ trans('general.login') }}</a></li>
+                            <li><a href="{{ route('register') }}">
+                                    <i class="fa fa-fw fa-user"></i>
+                                    {{ trans('general.register') }}</a></li>
+                            <li><a href="{{ route('login') }}">
+                                    <i class="fa fa-fw fa-lock"></i>
+                                    {{ trans('general.login') }}</a></li>
                         @endguest
                         @if(app()->isLocale('ar'))
                             <li>
-{{--                                <i class="fa fa-fw fa-language"></i>--}}
-                                <a
-                                        href="{{ route('frontend.language.change',['locale' => 'en']) }}"
-                                        class="">{{ trans('general.english') }}</a></li>
+                                {{--                                <i class="fa fa-fw fa-language"></i>--}}
+                                <a href="{{ route('frontend.language.change',['locale' => 'en']) }}">
+                                    <img class="img-responsive img-xs" src="{{ asset('images/flags/us.png') }}"
+                                         style="opacity: 0.7"/>
+                                    {{ trans('general.english') }}</a></li>
                         @else
                             <li>
-{{--                                <i class="fa fa-fw fa-language"></i>--}}
-                                <a
-                                        href="{{ route('frontend.language.change',['locale' => 'ar']) }}"
-                                        class="">{{ trans('general.arabic') }}</a></li>
+                                {{--                                <i class="fa fa-fw fa-language"></i>--}}
+                                <a href="{{ route('frontend.language.change',['locale' => 'ar']) }}">
+                                    <img class="img-responsive img-xs" src="{{ asset('images/flags/kw.png') }}"
+                                         style="opacity: 0.7"/>
+                                    {{ trans('general.arabic') }}</a></li>
                         @endif
                     </ul>
                 </div>
