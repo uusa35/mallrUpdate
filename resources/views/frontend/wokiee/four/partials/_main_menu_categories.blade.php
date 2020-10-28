@@ -11,7 +11,10 @@
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
                                     <span>{{ str_limit($cat->name,15,'') }}</span>
-                                    <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}" class="img-responsive img-xs">
+                                    @if($cat->image)
+                                        <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
+                                             class="img-responsive img-xs">
+                                    @endif
                                 </a>
                                 @if($cat->children->isNotEmpty())
                                     <div class="dropdown-menu size-md">
@@ -46,9 +49,11 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}" class="tt-promo-02 pull-left">
+                                                    <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
+                                                       class="tt-promo-02 pull-left">
                                                         <img src="{{ $sub->getImageThumbLinkAttribute() }}"
-                                                             alt="{{ $cat->name }}" style="max-width: 200px; text-align: center">
+                                                             alt="{{ $cat->name }}"
+                                                             style="max-width: 200px; text-align: center">
                                                         <div class="tt-description tt-point-h-l">
                                                             <div class="tt-description-wrapper">
                                                                 @if($cat->caption)
