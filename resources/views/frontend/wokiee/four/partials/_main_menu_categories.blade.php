@@ -7,7 +7,7 @@
             <div class="tt-dropdown-menu">
                 <nav>
                     <ul>
-                        @foreach($categories->where('is_product',true)->where('is_parent', true)->where('on_home', true) as $cat)
+                        @foreach($categories->where('is_product',true)->where('is_parent', true) as $cat)
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
 {{--                                    <i class="icon-women"></i>--}}
