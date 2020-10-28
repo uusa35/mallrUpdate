@@ -83,6 +83,7 @@ mix.styles([
     '../metronic_v4.5.6/theme/assets/global/plugins/datatables/datatables.min.css',
     '../metronic_v4.5.6/theme/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css',
     '../metronic_v4.5.6/theme/assets/global/plugins/cubeportfolio/css/cubeportfolio.css',
+    '../metronic_v4.5.6/theme/assets/global/plugins/bootstrap-toastr/toastr.min.css',
 
     '../metronic_v4.5.6/theme/assets/global/css/components.min.css',
     '../metronic_v4.5.6/theme/assets/global/css/plugins.min.css',
@@ -129,6 +130,7 @@ mix.styles([
     '../metronic_v4.5.6/theme_rtl/assets/global/plugins/datatables/datatables.min.css',
     '../metronic_v4.5.6/theme_rtl/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap-rtl.css',
     '../metronic_v4.5.6/theme_rtl/assets/global/plugins/cubeportfolio/css/cubeportfolio.css',
+    '../metronic_v4.5.6/theme/assets/global/plugins/bootstrap-toastr/toastr.min.css',
 
     '../metronic_v4.5.6/theme_rtl/assets/global/css/components-rtl.min.css',
     '../metronic_v4.5.6/theme_rtl/assets/global/css/plugins-rtl.min.css',
@@ -186,7 +188,8 @@ mix.scripts([
         '../metronic_v4.5.6/theme/assets/global/scripts/app.min.js',
         '../metronic_v4.5.6/theme/assets/pages/scripts/table-datatables-responsive.min.js',
         '../metronic_v4.5.6/theme/assets/pages/scripts/components-date-time-pickers.min.js',
-
+        '../metronic_v4.5.6/theme/assets/global/plugins/bootstrap-toastr/toastr.min.js',
+        '../metronic_v4.5.6/theme/assets/pages/scripts/ui-toastr.min.js',
 
         '../metronic_v4.5.6/theme/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
         '../metronic_v4.5.6/theme/assets/global/plugins/jquery.sparkline.min.js',

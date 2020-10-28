@@ -150,9 +150,9 @@ class UserController extends Controller
             $element->productGroup()->sync($request->products);
             $element->surveys()->sync($request->surveys);
             $country ? $element->update(['country_name' => $country->slug]) : null;
-            return redirect()->route('backend.admin.user.index')->with('success', trans('general.user_added'));
+            return redirect()->route('backend.admin.user.index')->with('success', trans('general.user_updated'));
         }
-        return redirect()->route('backend.admin.user.create')->with('error', trans('general.user_not_added'));
+        return redirect()->route('backend.admin.user.create')->with('error', trans('general.user_is_not_updated'));
     }
 
     /**
@@ -177,11 +177,11 @@ class UserController extends Controller
             } elseif (auth()->user()->isSuper) {
                 $deleted = $element->products->isEmpty() && $element->services->isEmpty() && $element->orders->isEmpty() ? $element->delete() : null;
                 if ($deleted) {
-                    return redirect()->route('backend.admin.user.index', ['role_id' => $roleId])->with('success','user deleted');
+                    return redirect()->route('backend.admin.user.index', ['role_id' => $roleId])->with('success',trans('general.user_deleted'));
                 }
             }
         }
-        return redirect()->back()->with('error', trans('message.user_is_not_deleted'));
+        return redirect()->back()->with('error', trans('general.user_is_not_deleted'));
     }
 
     public function getResetPassword(Request $request)

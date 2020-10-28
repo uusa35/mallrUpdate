@@ -1,7 +1,6 @@
 <?php
 
 use App\Providers\ComposerServiceProvider;
-use Berkayk\OneSignal\OneSignalServiceProvider;
 use Brotzka\DotenvEditor\DotenvEditorServiceProvider;
 use GoogleMaps\ServiceProvider\GoogleMapsServiceProvider;
 use Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider;
@@ -194,8 +193,6 @@ return [
         // geoLocation
         Spatie\Geocoder\GeocoderServiceProvider::class,
 
-        //NotificationChannels\OneSignal\OneSignalServiceProvider::class,
-        Berkayk\OneSignal\OneSignalServiceProvider::class,
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         // TelescopeServiceProvider::class

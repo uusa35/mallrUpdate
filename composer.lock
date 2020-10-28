@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f3953541c89bbbc2613e3534f922f41",
+    "content-hash": "64ab17082e3af7d213d3ec90ed39e4ba",
     "packages": [
         {
             "name": "alexpechkarev/geometry-library",
@@ -410,70 +410,6 @@
                 "translator"
             ],
             "time": "2020-09-09T12:29:27+00:00"
-        },
-        {
-            "name": "berkayk/onesignal-laravel",
-            "version": "v1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/berkayk/laravel-onesignal.git",
-                "reference": "4d9fd6c3d3b7a544bf648596bf460abbf17b7202"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/berkayk/laravel-onesignal/zipball/4d9fd6c3d3b7a544bf648596bf460abbf17b7202",
-                "reference": "4d9fd6c3d3b7a544bf648596bf460abbf17b7202",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.2|^7.0.1",
-                "illuminate/support": "~5.5|~6.0|~7.0|~8.0",
-                "php": ">=5.4.0",
-                "symfony/psr-http-message-bridge": "1.*|2.*"
-            },
-            "require-dev": {
-                "vlucas/phpdotenv": "^2.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Berkayk\\OneSignal\\OneSignalServiceProvider"
-                    ],
-                    "aliases": {
-                        "OneSignal": "Berkayk\\OneSignal\\OneSignalFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Berkayk\\OneSignal\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Berkay Kaya",
-                    "email": "berkayk@gmail.com",
-                    "homepage": "http://berkaykaya.com"
-                },
-                {
-                    "name": "Maykonn Welington Candido",
-                    "email": "maykonn@outlook.com"
-                }
-            ],
-            "description": "OneSignal Push Wrapper Laravel",
-            "keywords": [
-                "WebPush",
-                "laravel",
-                "laravel 5",
-                "onesignal",
-                "push"
-            ],
-            "time": "2020-09-12T06:01:34+00:00"
         },
         {
             "name": "brick/math",
@@ -5078,16 +5014,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.1.7",
+            "version": "v5.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "353b42e7b4fd1c898aab09a059466c9cea74039b"
+                "reference": "a2860ec970404b0233ab1e59e0568d3277d32b6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/353b42e7b4fd1c898aab09a059466c9cea74039b",
-                "reference": "353b42e7b4fd1c898aab09a059466c9cea74039b",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a2860ec970404b0233ab1e59e0568d3277d32b6f",
+                "reference": "a2860ec970404b0233ab1e59e0568d3277d32b6f",
                 "shasum": ""
             },
             "require": {
@@ -5106,11 +5042,6 @@
                 "symfony/mime": "To use the file extension guesser"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\HttpFoundation\\": ""
@@ -5135,7 +5066,25 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2020-09-27T14:14:57+00:00"
+=======
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T12:01:57+00:00"
+>>>>>>> cccf4e91089f38e8c74f0aed6770f7803b24c21d
         },
         {
             "name": "symfony/http-kernel",
@@ -5927,6 +5876,7 @@
             "time": "2020-09-02T16:23:27+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/psr-http-message-bridge",
             "version": "v2.0.2",
             "source": {
@@ -5991,6 +5941,8 @@
             "time": "2020-09-29T08:17:46+00:00"
         },
         {
+=======
+>>>>>>> cccf4e91089f38e8c74f0aed6770f7803b24c21d
             "name": "symfony/routing",
             "version": "v5.1.7",
             "source": {
