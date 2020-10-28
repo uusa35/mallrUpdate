@@ -11,7 +11,7 @@
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
                                     <span>{{ str_limit($cat->name,15,'') }}</span>
-                                    <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}" class="img-responsive img-xxs">
+                                    <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}" class="img-responsive img-xs">
                                 </a>
                                 @if($cat->children->isNotEmpty())
                                     <div class="dropdown-menu size-md">
