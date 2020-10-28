@@ -30,7 +30,7 @@ class  ProductController extends Controller
         if (auth()->user()->isAdminOrABove) {
             $elements = request()->has('type')
                 ? Product::where([request('type') => true])->with('user', 'product_attributes.size', 'product_attributes.color', 'color', 'size', 'slides')->orderBy('id', 'desc')->paginate(self::TAKE_MID)
-                : Product::with('user', 'product_attributes.size', 'product_attributes.color', 'color', 'size', 'slides')->paginate(self::TAKE_MID);
+                : Product::with('user', 'product_attributes.size', 'product_attributes.color', 'color', 'size', 'slides')->orderBy('id','desc')->paginate(self::TAKE_MID);
         } else {
             $elements = request()->has('type')
                 ? Product::active()->myItems()->where([request('type') => true])->with('user', 'product_attributes.size', 'product_attributes.color', 'color', 'size', 'slides')->orderBy('id', 'desc')->paginate(self::TAKE_MID)

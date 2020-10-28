@@ -147,11 +147,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="32" column="146" selection-start-line="32" selection-start-column="146" selection-end-line="32" selection-end-column="146" />
-                  <caret line="35" column="224" selection-start-line="35" selection-start-column="224" selection-end-line="35" selection-end-column="224" />
-                  <caret line="36" column="190" selection-start-line="36" selection-start-column="190" selection-end-line="36" selection-end-column="190" />
-                  <caret line="31" column="203" selection-start-line="31" selection-start-column="203" selection-end-line="31" selection-end-column="203" />
+                <state relative-caret-position="450">
+                  <caret line="38" column="74" lean-forward="true" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -948,12 +945,12 @@
       <workItem from="1603787319452" duration="420000" />
       <workItem from="1603790568214" duration="1519000" />
       <workItem from="1603798440257" duration="710000" />
-      <workItem from="1603862292169" duration="8281000" />
+      <workItem from="1603862292169" duration="8377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="610354000" />
+    <option name="totallyTimeSpent" value="610450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1422,11 +1419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="32" column="146" selection-start-line="32" selection-start-column="146" selection-end-line="32" selection-end-column="146" />
-          <caret line="35" column="224" selection-start-line="35" selection-start-column="224" selection-end-line="35" selection-end-column="224" />
-          <caret line="36" column="190" selection-start-line="36" selection-start-column="190" selection-end-line="36" selection-end-column="190" />
-          <caret line="31" column="203" selection-start-line="31" selection-start-column="203" selection-end-line="31" selection-end-column="203" />
+        <state relative-caret-position="450">
+          <caret line="38" column="74" lean-forward="true" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
         </state>
       </provider>
     </entry>
