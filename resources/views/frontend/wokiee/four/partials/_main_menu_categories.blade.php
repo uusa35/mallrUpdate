@@ -12,8 +12,8 @@
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
                                     <span>{{ str_limit($cat->name,15,'') }}</span>
                                     @if($cat->image)
-                                        <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
-                                             class="img-responsive img-xs">
+                                        <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt=""
+                                             class="img-responsive img-xs"/>
                                     @else
                                     <i class="icon-e-15"></i>
                                 </a>
