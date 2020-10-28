@@ -1,7 +1,7 @@
 {
     "/js/app.js": "/js/app.js?id=6f20d958e96dd9d46731",
     "/css/app.css": "/css/app.css?id=f3dbdd93377b89bf9834",
-    "/js/frontend-ar.js": "/js/frontend-ar.js?id=1bf3ee273b50a1d2674b",
+    "/js/frontend-ar.js": "/js/frontend-ar.js?id=827bbd61ccaa5cbe20e3",
     "/js/frontend-custom.js": "/js/frontend-custom.js?id=646a61214b0fdab650ee",
     "/js/frontend-en.js": "/js/frontend-en.js?id=2943165b03754827e2c5",
     "/js/productAttribute.js": "/js/productAttribute.js?id=66a3cbade448dd90c606",
@@ -11,9 +11,9 @@
     "/css/frontend-custom-en.css": "/css/frontend-custom-en.css?id=e14225cea89b3188aaaa",
     "/css/plugins.css": "/css/plugins.css?id=25f4e0160ec1f5429132",
     "/js/wokiee.demo.js": "/js/wokiee.demo.js?id=3c0d3ea04b012ec74749",
-    "/css/backend.css": "/css/backend.css?id=e380f737d29fd69f0ad5",
-    "/css/backend-rtl.css": "/css/backend-rtl.css?id=0d098a3b8ac1d2b33c11",
-    "/js/backend.js": "/js/backend.js?id=70771c7b70ac087fe1a2",
+    "/css/backend.css": "/css/backend.css?id=fa5d0272bf92062f8739",
+    "/css/backend-rtl.css": "/css/backend-rtl.css?id=4a0e8869a621051b169e",
+    "/js/backend.js": "/js/backend.js?id=ab526cc594065531f329",
     "/js/datepicker.js": "/js/datepicker.js?id=d66c200584310a7f9f6b",
     "/js/tinymce.min.js": "/js/tinymce.min.js?id=1e99ecb15ec6e147349f",
     "/js/backend-custom.js": "/js/backend-custom.js?id=55d8793824e117606f90"
