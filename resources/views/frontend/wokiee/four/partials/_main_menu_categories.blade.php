@@ -10,13 +10,13 @@
                         @foreach($categories->where('is_product',true)->where('is_parent', true) as $cat)
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
-                                    <span>{{ str_limit($cat->name,15,'') }}</span>
                                     @if(str_contains($cat->image,'http'))
                                         <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
                                              class="img-responsive img-xs"/>
                                     @else
-                                        <i class="icon-e-15"></i>
+                                        <i class="{{ app()->getLocale() === 'ar' ? "icon-e-14" : "icon-e-15" }}"></i>
                                     @endif
+                                    <span>{{ str_limit($cat->name,15,'') }}</span>
                                 </a>
                                 @if($cat->children->isNotEmpty())
                                     <div class="dropdown-menu size-md">
@@ -49,25 +49,27 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
-                                                       class="tt-promo-02 pull-left">
-                                                        <img src="{{ $sub->getImageThumbLinkAttribute() }}"
-                                                             alt="{{ $cat->name }}"
-                                                             style="max-width: 200px; text-align: center">
-                                                        <div class="tt-description tt-point-h-l">
-                                                            <div class="tt-description-wrapper">
-                                                                @if($cat->caption)
-                                                                    <div class="tt-title-small">{{ $cat->caption }}
-                                                                        <span class="tt-base-color"></span></div>
-                                                                @endif
-                                                                <div class="tt-title-small">{{ $cat->name }}</div>
+                                            @if(str_contains($cat->image,'http'))
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
+                                                           class="tt-promo-02 pull-left">
+                                                            <img src="{{ $sub->getImageThumbLinkAttribute() }}"
+                                                                 alt="{{ $cat->name }}"
+                                                                 style="max-width: 200px; text-align: center">
+                                                            <div class="tt-description tt-point-h-l">
+                                                                <div class="tt-description-wrapper">
+                                                                    @if($cat->caption)
+                                                                        <div class="tt-title-small">{{ $cat->caption }}
+                                                                            <span class="tt-base-color"></span></div>
+                                                                    @endif
+                                                                    <div class="tt-title-small">{{ $cat->name }}</div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                 @endif

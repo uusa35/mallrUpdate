@@ -113,8 +113,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu_categories.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+                <state relative-caret-position="288">
+                  <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
+                  <folding>
+                    <element signature="e#3947#5545#0#HTML" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -876,12 +879,12 @@
       <workItem from="1603790568214" duration="1519000" />
       <workItem from="1603798440257" duration="710000" />
       <workItem from="1603862292169" duration="8502000" />
-      <workItem from="1603875600844" duration="3930000" />
+      <workItem from="1603875600844" duration="4121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="614505000" />
+    <option name="totallyTimeSpent" value="614696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
@@ -1333,8 +1336,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/wokiee/four/partials/_main_menu_categories.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
+          <folding>
+            <element signature="e#3947#5545#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
