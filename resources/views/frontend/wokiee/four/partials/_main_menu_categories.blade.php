@@ -14,7 +14,8 @@
                                     @if($cat->image)
                                         <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
                                              class="img-responsive img-xs">
-                                    @endif
+                                    @else
+                                    <i class="icon-e-15"></i>
                                 </a>
                                 @if($cat->children->isNotEmpty())
                                     <div class="dropdown-menu size-md">
