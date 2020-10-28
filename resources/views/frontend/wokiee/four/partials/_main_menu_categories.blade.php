@@ -1,4 +1,4 @@
-@if(isset($categories) && $categories->isNotEmpty())
+@if(isset($categories) && $categories->isNotEmpty() && env('ENABLE_NAV_CATEGORY'))
     <div class="tt-col-obj tt-obj-menu-categories tt-desctop-parent-menu-categories">
         <div class="tt-menu-categories">
             <button class="tt-dropdown-toggle">
