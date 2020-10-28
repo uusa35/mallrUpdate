@@ -10,9 +10,7 @@
 
     <div class="container small-header">
         <div class="tt-header-holder">
-            @if(env('DAILY'))
-                @include('frontend.wokiee.four.partials._main_menu_categories')
-            @endif
+            @include('frontend.wokiee.four.partials._main_menu_categories')
             <div class="tt-col-obj tt-obj-menu">
                 <!-- tt-menu -->
                 <div class="tt-desctop-parent-menu tt-parent-box">
