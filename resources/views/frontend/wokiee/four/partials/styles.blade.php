@@ -152,7 +152,7 @@
     .tt-menu-toggle.stylization-02,
     header .tt-dropdown-obj .tt-dropdown-toggle,
     header .tt-multi-obj ul li.active a [class^=icon-],
-    .datepicker-panel > ul > li,
+    .datepicker-panel > ul > li, .tt-submenu a,
     .tt-social-icon li a, .tt-social-icon li a:hover,
     .tt-desctop-menu:not(.tt-hover-02) li.dropdown > a, header .tt-dropdown-obj .tt-dropdown-toggle, .tt-dropdown-toggle {
         color: {{ $settings->menu_theme_color }}                !important;
