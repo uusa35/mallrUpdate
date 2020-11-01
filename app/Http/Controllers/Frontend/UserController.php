@@ -29,7 +29,7 @@ class UserController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate->errors())->with('errors', 'Please Specify a role');
         }
-        $elements = User::whereHas('role', function ($q) {
+        $elements = User::active()->whereHas('role', function ($q) {
             return $q->where(request()->type, true);
         })->paginate(self::TAKE_MIN);
         return view('frontend.wokiee.four.modules.user.index', compact('elements'));
