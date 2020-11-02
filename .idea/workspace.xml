@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb64c074-93f5-49bb-ae42-70edeb58ee75" name="Default Changelist" comment="258">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/backups/dotenv-editor/1587908474_env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/invoice.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/invoice.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +38,17 @@
     <favorites_list name="mallr" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="1103" column="39" selection-start-line="1103" selection-start-column="39" selection-end-line="1103" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -326,6 +343,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,7 +371,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -755,16 +772,18 @@
       <workItem from="1603875600844" duration="5070000" />
       <workItem from="1604225939301" duration="113000" />
       <workItem from="1604299613174" duration="1181000" />
+      <workItem from="1604300986217" duration="232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="616939000" />
+    <option name="totallyTimeSpent" value="617171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1914" height="1113" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.29269603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.29657388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5032189" side_tool="true" weight="0.48189563" />
@@ -831,14 +850,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="91" column="6" lean-forward="true" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/onesignal.php" />
     <entry file="file://$PROJECT_DIR$/config/one-signal.php" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1153,13 +1164,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/_sidebar_super.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="1091" column="26" lean-forward="true" selection-start-line="1091" selection-start-column="26" selection-end-line="1091" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/modules/user/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1188,6 +1192,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="109" column="62" lean-forward="true" selection-start-line="109" selection-start-column="62" selection-end-line="109" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="1103" column="39" selection-start-line="1103" selection-start-column="39" selection-end-line="1103" selection-end-column="39" />
         </state>
       </provider>
     </entry>
