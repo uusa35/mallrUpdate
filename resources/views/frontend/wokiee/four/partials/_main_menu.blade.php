@@ -22,6 +22,11 @@
                                 </li>
                                 @include('frontend.wokiee.four.partials._categories_main_menu_element_with_images')
                                 @include('frontend.wokiee.four.partials._pages_main_menu')
+                                @if(env('ENABLE_BLOG'))
+                                    <li class="dropdown tt-megamenu-col-02 selected">
+                                        <a href="{{ route('frontend.post.index') }}">{{ trans('general.blog') }}</a>
+                                    </li>
+                                @endif
                                 <li class="dropdown">
                                     @if(app()->getLocale() === 'ar')
                                         <a href="{{ route('frontend.language.change',['locale' => 'en']) }}">{{ trans('general.english') }}</a>
