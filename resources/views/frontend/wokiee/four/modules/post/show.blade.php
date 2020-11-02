@@ -64,7 +64,7 @@
                             <div class="tt-slick-row">
                                 <div class="item">
                                     <div class="tt-slick-quantity">
-                                        <span class="account-number">{{ $element->views }}</span>
+                                        <span class="account-number"> <i class="icon-g-89"></i> {{ $element->views }}</span>
                                     </div>
                                 </div>
                                 <div class="item d-none">
@@ -75,8 +75,8 @@
                                 </div>
                             </div>
                             <!-- /slider -->
-                            <h2 class="tt-title">{{ $element->title }}</h2>
-                            <p>
+                            <h2 class="tt-title text-left">{{ $element->title }}</h2>
+                            <p class="text-left">
                                 {!! $element->content !!}
                             </p>
                         </div>

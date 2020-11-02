@@ -10,7 +10,7 @@
         {{--<div class="container-fluid-custom container-fluid-custom-mobile-padding">--}}
         <div class="container-indent">
             <div class="container container-fluid-custom-mobile-padding">
-                <h1 class="tt-title-subpages noborder">THE BLOG</h1>
+                <h1 class="tt-title-subpages noborder">{{ trans("general.blog") }}</h1>
                 <div class="row">
                     <div class="col-12">
                         <div class="tt-listing-post tt-half">

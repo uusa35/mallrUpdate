@@ -51,7 +51,7 @@ class PostController extends Controller
     {
         $element = Post::with('images', 'user', 'comments')->find($id);
         if ($element) {
-            IncreaseElementViews::dispatch($element);
+            $this->dispatchNow(new IncreaseElementViews($element));
             return view('frontend.wokiee.four.modules.post.show', compact('element'));
         }
         return redirect()->back()->with('error', trans('message.post_does_not_exist'));
