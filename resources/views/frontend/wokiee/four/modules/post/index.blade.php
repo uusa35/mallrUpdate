@@ -29,7 +29,7 @@
                                                     href="{{ route('frontend.post.show.name', ['id' => $element->id, 'name' => $element->slug]) }}">
                                                 {{ $element->title }}</a></h2>
                                         <div class="tt-description">
-                                            {{ $element->caption ? $element->caption : str_limit($element->content, 500) }}
+                                            {!!  $element->caption ? $element->caption : str_limit($element->content, 500) !!}
                                         </div>
                                         <div class="tt-meta">
                                             <div class="tt-autor">
