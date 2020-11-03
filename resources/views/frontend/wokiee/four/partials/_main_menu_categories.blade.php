@@ -54,7 +54,7 @@
                                                     <div class="col-sm-12">
                                                         <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
                                                            class="tt-promo-02 pull-left">
-                                                            <img src="{{ $sub->getImageThumbLinkAttribute() }}"
+                                                            <img src="{{ $cat->getImageThumbLinkAttribute() }}"
                                                                  alt="{{ $cat->name }}"
                                                                  style="max-width: 200px; text-align: center">
                                                             <div class="tt-description tt-point-h-l">
