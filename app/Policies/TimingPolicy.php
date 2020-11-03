@@ -32,7 +32,7 @@ class TimingPolicy
     public function create(User $user)
     {
 
-        return $user->isAdminOrAbove ? $user->role->privileges->where('name', self::MODAL)->first()->pivot->{__FUNCTION__} : $user->role->is_company;
+        return $user->isAdminOrAbove ? $user->role->privileges->where('name', self::MODAL)->first()->pivot->{__FUNCTION__} : false;
     }
 
     /**
