@@ -10,7 +10,7 @@
                         @foreach($categories->where('is_product',true)->where('is_parent', true) as $cat)
                             <li>
                                 <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}">
-                                    @if(str_contains($cat->image,'http'))
+                                    @if(!str_contains($cat->image,'http'))
                                         <img src="{{ $cat->getImageThumbLinkAttribute() }}" alt="{{ $cat->name }}"
                                              class="img-responsive img-xs"/>
                                     @else
@@ -49,7 +49,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            @if(str_contains($cat->image,'http'))
+                                            @if(!str_contains($cat->image,'http'))
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <a href="{{ route('frontend.product.search',['product_category_id' => $cat->id]) }}"
