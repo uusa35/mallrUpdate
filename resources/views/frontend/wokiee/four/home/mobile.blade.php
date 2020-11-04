@@ -106,7 +106,7 @@
                             @if(env('ENABLE_BLOG'))
                                     <li>
                                         <a style="color : black;"
-                                           href="{{ route('frontend.blog.index') }}">{{ trans('general.blig') }}</a>
+                                           href="{{ route('frontend.post.index') }}">{{ trans('general.blog') }}</a>
                                     </li>
                                 @endif
                             @if(env('ENABLE_LANG_SWITCH'))
