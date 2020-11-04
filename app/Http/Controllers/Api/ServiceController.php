@@ -40,7 +40,7 @@ class ServiceController extends Controller
         if ($validator->fails()) {
             return redirect()->route('frontend.home')->withErrors($validator->messages());
         }
-        $elements = Service::active()->hasImage()->hasValidTimings()->filters($filters)->hasAtLeastOneCategory()->with(
+        $elements = Service::active()->hasImage()->hasValidTimings()->filters($filters)->hasAtLeastOneCategory()->activeUsers()->with(
             'user.country', 'images'
         )->with(['categories' => function ($q) {
             return $q->has('services', '>', 0);
