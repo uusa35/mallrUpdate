@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $query = Product::query()->active()->hasStock()->available()->hasImage()->hasAtLeastOneCategory()->serveCountries();
+        $query = Product::query()->active()->hasStock()->available()->hasImage()->hasAtLeastOneCategory()->activeUsers()->serveCountries();
         if (request()->has('on_home') && request()->on_home) {
             $query->onHome();
         }
@@ -35,7 +35,7 @@ class ProductController extends Controller
         if (request()->has('best_sale') && request()->best_sale) {
 //            $query->bestSalesProducts();
 //            $elements = Product::whereIn('id', Product::active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->orderBy('id', 'desc')->get();
-            $query->whereIn('id', Product::active()->available()->hasImage()->serveCountries()->hasStock()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->orderBy('id', 'desc');
+            $query->whereIn('id', Product::active()->available()->hasImage()->serveCountries()->hasStock()->activeUsers()->bestSalesProducts())->hasAtLeastOneCategory()->with('brand', 'product_attributes', 'colors', 'sizes', 'color', 'size', 'images', 'favorites', 'user.country')->limit(self::TAKE_LESS)->orderBy('id', 'desc');
         }
         if (request()->has('hot_deals') && request()->hot_deals) {
             $query->onSale()->hotDeals();

@@ -24,11 +24,11 @@ class ServiceController extends Controller
     public function index()
     {
         if (request()->has('on_home') && request()->on_home) {
-            $elements = Service::active()->onHome()->available()->hasImage()->hasValidTimings()->hasAtLeastOneCategory()->paginate(self::TAKE_LESS);
+            $elements = Service::active()->onHome()->available()->hasImage()->hasValidTimings()->hasAtLeastOneCategory()->activeUsers()->paginate(self::TAKE_LESS);
         } elseif (request()->has('ids')) {
 //            $elements = Service::active()->hasImage()->onHome()->available()->with('product_attributes.size', 'product_attributes.color')->paginate(self::self::TAKE_LESS);
         } else {
-            $elements = Service::active()->hasImage()->hasValidTimings()->hasAtLeastOneCategory()->paginate(self::TAKE_LESS);
+            $elements = Service::active()->hasImage()->hasValidTimings()->hasAtLeastOneCategory()->activeUsers()->paginate(self::TAKE_LESS);
         }
         return response()->json(ServiceExtraLightResource::collection($elements), 200);
     }
