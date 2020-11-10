@@ -27,6 +27,7 @@ class ProductExtraLightResource extends JsonResource
             'thumb' => $this->getCurrentImageAttribute(),
             'isReallyHot' => $this->isReallyHot,
             'hasStock' => $this->hasStock,
+            'country_id' => $this->user->country_id,
         ];
     }
 }
