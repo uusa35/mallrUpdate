@@ -13,7 +13,7 @@ class CreateDaysTable extends Migration
     public function up()
     {
         Schema::create('days', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('day');
             $table->string('day_name_en');
             $table->string('day_name_ar');

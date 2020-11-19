@@ -14,7 +14,7 @@ class CreateQuestionnairesTable extends Migration
     {
         Schema::create('questionnaires', function (Blueprint $table) {
             // the one that answered by clients which contains results
-            $table->increments('id');
+            $table->id('id');
             $table->string('name')->nullable();
             $table->string('mobile')->nullable();
             $table->string('email')->nullable();
@@ -24,16 +24,16 @@ class CreateQuestionnairesTable extends Migration
             $table->boolean('is_order')->nullable()->default(0);
 
 
-            $table->integer('survey_id')->unsigned()->index()->nullable();
-            $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade')->onUpdate('cascade');
+            //$table->integer('survey_id')->unsigned()->index()->nullable();
+            $table->foreignId('survey_id')->references('id')->on('surveys')->cascadeOnUpdate()->cascadeOnDelete();
 
             // person that quetionnaire was directed to
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            //$table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
 
             // person who is answering the questionnaire
-            $table->integer('client_id')->unsigned()->index()->nullable();
-            $table->foreign('client_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            //$table->integer('client_id')->unsigned()->index()->nullable();
+            $table->foreignId('client_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
 
             $table->timestamps();
         });

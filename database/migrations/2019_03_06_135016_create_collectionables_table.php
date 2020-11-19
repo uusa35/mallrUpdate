@@ -13,9 +13,9 @@ class CreateCollectionablesTable extends Migration
     public function up()
     {
         Schema::create('collectionables', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('collection_id')->index()->unsigned();
-            $table->foreign('collection_id')->references('id')->on('collections')->onDelete('cascade')->onUpdate('cascade');
+            $table->id('id');
+            //$table->integer('collection_id')->index()->unsigned();
+            $table->foreignId('collection_id')->references('id')->on('collections')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('collectionable_id')->index();
             $table->string('collectionable_type');

@@ -13,10 +13,10 @@ class CreateCategoryGroupPropertyPivotTable extends Migration
     public function up()
     {
         Schema::create('category_group_property', function (Blueprint $table) {
-            $table->integer('category_group_id')->unsigned()->index();
-            $table->foreign('category_group_id')->references('id')->on('category_groups')->onDelete('cascade');
-            $table->integer('property_id')->unsigned()->index();
-            $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
+            //$table->integer('category_group_id')->unsigned()->index();
+            $table->foreignId('category_group_id')->references('id')->on('category_groups')->onDelete('cascade');
+            //$table->integer('property_id')->unsigned()->index();
+            $table->foreignId('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->primary(['category_group_id', 'property_id']);
         });
     }

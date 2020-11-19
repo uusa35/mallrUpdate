@@ -13,7 +13,7 @@ class CreateServicesTable extends Migration
     public function up()
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('sku')->nullable();
             $table->string('name_ar');
             $table->string('name_en');
@@ -48,8 +48,8 @@ class CreateServicesTable extends Migration
             $table->boolean('multi_booking')->default(0);
             $table->integer('booking_limit')->default(0);
 
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            //$table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('views')->unsigned()->default(1);
             $table->softDeletes();

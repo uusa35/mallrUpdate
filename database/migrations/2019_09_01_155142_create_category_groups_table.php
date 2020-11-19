@@ -13,7 +13,7 @@ class CreateCategoryGroupsTable extends Migration
     public function up()
     {
         Schema::create('category_groups', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->boolean('active')->default(1);
@@ -21,7 +21,7 @@ class CreateCategoryGroupsTable extends Migration
             $table->integer('order')->unsigned()->nullable();
 
 //            $table->integer('category_id')->unsigned()->index();
-//            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
 
             $table->timestamps();
         });

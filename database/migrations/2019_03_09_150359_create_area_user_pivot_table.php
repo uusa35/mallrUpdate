@@ -13,10 +13,10 @@ class CreateAreaUserPivotTable extends Migration
     public function up()
     {
         Schema::create('area_user', function (Blueprint $table) {
-            $table->integer('area_id')->unsigned()->index();
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('area_id')->unsigned()->index();
+            $table->foreignId('area_id')->references('id')->on('areas')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->primary(['area_id', 'user_id']);
         });
     }

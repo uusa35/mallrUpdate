@@ -13,7 +13,7 @@ class CreateFaqsTable extends Migration
     public function up()
     {
         Schema::create('faqs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('title_ar')->nullable();
             $table->string('title_en')->nullable();
             $table->text('content_ar')->nullable();

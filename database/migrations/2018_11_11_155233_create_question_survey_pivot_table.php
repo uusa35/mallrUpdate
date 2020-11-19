@@ -13,10 +13,10 @@ class CreateQuestionSurveyPivotTable extends Migration
     public function up()
     {
         Schema::create('question_survey', function (Blueprint $table) {
-            $table->integer('question_id')->unsigned()->index();
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
-            $table->integer('survey_id')->unsigned()->index();
-            $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade');
+            //$table->integer('question_id')->unsigned()->index();
+            $table->foreignId('question_id')->references('id')->on('questions')->onDelete('cascade');
+            //$table->integer('survey_id')->unsigned()->index();
+            $table->foreignId('survey_id')->references('id')->on('surveys')->onDelete('cascade');
             $table->primary(['question_id', 'survey_id']);
         });
     }

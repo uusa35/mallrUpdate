@@ -13,7 +13,7 @@ class CreateCouponsTable extends Migration
     public function up()
     {
         Schema::create('coupons', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->integer('value')->unsigned()->default(0);
             $table->boolean('is_percentage')->default(0);
             $table->boolean('active')->default(0);
@@ -22,8 +22,9 @@ class CreateCouponsTable extends Migration
             // price after sale
             $table->integer('minimum_charge')->nullable();
             $table->boolean('is_permanent')->default(0);
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+
+            //$table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->cascadeOnUpdate()->cascadeOnDelete()->on('users');
 
             $table->timestamp('due_date')->nullable();
             $table->timestamps();

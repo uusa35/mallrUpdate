@@ -13,7 +13,7 @@ class CreateSizesTable extends Migration
     public function up()
     {
         Schema::create('sizes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar');
             $table->string('name_en');
             $table->boolean('active')->default(1);

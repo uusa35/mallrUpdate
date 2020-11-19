@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name');
             $table->mediumText('slug_ar')->nullable();
             $table->mediumText('slug_en')->nullable();
@@ -69,14 +69,14 @@ class CreateUsersTable extends Migration
             $table->boolean('on_home')->default(0);
             $table->boolean('active')->default(1);
 
-            $table->integer('country_id')->unsigned()->nullable();
-            $table->foreign('country_id')->references('id')->on('countries');
+            //$table->integer('country_id')->unsigned()->nullable();
+            $table->foreignId('country_id')->references('id')->on('countries');
 
-            $table->integer('governate_id')->unsigned()->nullable();
-            $table->foreign('governate_id')->references('id')->on('governates');
+            //$table->integer('governate_id')->unsigned()->nullable();
+            $table->foreignId('governate_id')->references('id')->on('governates');
 
-            $table->integer('role_id')->unsigned()->nullable();
-            $table->foreign('role_id')->references('id')->on('roles');
+            //$table->integer('role_id')->unsigned()->nullable();
+            $table->foreignId('role_id')->references('id')->on('roles');
 
             $table->string('merchant_id')->nullable();
             $table->string('api_token')->nullable();

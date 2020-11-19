@@ -13,7 +13,7 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('title')->nullable();
             $table->string('content')->nullable();
             $table->string('path')->nullable();
@@ -22,8 +22,8 @@ class CreateCommentsTable extends Migration
             $table->boolean('viewed')->nullable();
             $table->integer('likes')->nullable();
 
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); // company that own this product ? !!
+            //$table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); // company that own this product ? !!
             $table->timestamps();
         });
     }

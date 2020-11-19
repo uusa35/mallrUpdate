@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        if (!app()->environment('more')) {
+//        if (!app()->environment('more')) {
             $this->call(CountriesTableSeeder::class);
             $this->call(GovernatesTableSeeder::class);
             $this->call(AreasTableSeeder::class);
@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             $this->call(RolesTableSeeder::class);
             $this->call(CurrenciesTableSeeder::class);
             $this->call(SettingsTableSeeder::class);
-        }
+//        }
         $this->call(PoliciesTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(CategoryGroupsTableSeeder::class);
@@ -35,9 +35,9 @@ class DatabaseSeeder extends Seeder
         $this->call(CommercialsTableSeeder::class);
         $this->call(BrandsTableSeeder::class);
         $this->call(SurveysTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
         $this->call(QuestionnairesTableSeeder::class);
 
-        $this->call(UsersTableSeeder::class);
         $this->call(ShipmentPackagesTableSeeder::class);
         $this->call(TagsTableSeeder::class);
         $this->call(VideosTableSeeder::class);

@@ -14,7 +14,7 @@ class CreateCurrenciesTable extends Migration
     public function up()
     {
         Schema::create('currencies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar');
             $table->string('name_en');
             $table->string('currency_symbol_ar', 25);
@@ -22,8 +22,8 @@ class CreateCurrenciesTable extends Migration
             $table->float('exchange_rate', 6, 2)->unsigned();
             $table->boolean('active')->default(1);
 
-            $table->integer('country_id')->unsigned();
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('restrict');
+            // $table->integer('country_id')->unsigned();
+            $table->foreignId('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('restrict');
 
             $table->rememberToken();
             $table->timestamps();

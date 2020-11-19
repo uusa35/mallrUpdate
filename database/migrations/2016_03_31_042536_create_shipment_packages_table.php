@@ -13,7 +13,7 @@ class CreateShipmentPackagesTable extends Migration
     public function up()
     {
         Schema::create('shipment_packages', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->string('slug_ar')->nullable();

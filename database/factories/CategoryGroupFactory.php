@@ -13,5 +13,6 @@ $factory->define(CategoryGroup::class, function (Faker $faker) {
         'order' => $faker->numberBetween(1, 5),
         'image' => 'user-' . $faker->numberBetween(1, 5) . '.jpg',
         'icon' => $faker->randomElement(['users', 'comments', 'cogs', 'eye', 'heart', 'glass', 'flag', 'print', 'cog', 'asterisk','gears','magic']),
+        'category_id' => Category::all()->random()->id,
     ];
 });

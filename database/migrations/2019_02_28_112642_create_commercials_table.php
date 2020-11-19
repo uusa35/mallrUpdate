@@ -13,7 +13,7 @@ class CreateCommercialsTable extends Migration
     public function up()
     {
         Schema::create('commercials', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->string('caption_ar')->nullable();

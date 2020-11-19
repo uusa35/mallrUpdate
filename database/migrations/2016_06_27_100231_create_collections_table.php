@@ -13,7 +13,7 @@ class CreateCollectionsTable extends Migration
     public function up()
     {
         Schema::create('collections', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name')->nullable();
             $table->string('slug_ar')->nullable();
             $table->string('slug_en')->nullable();
@@ -24,8 +24,8 @@ class CreateCollectionsTable extends Migration
             $table->boolean('active')->default(1);
             $table->integer('views')->unsigned()->default(1);
 
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

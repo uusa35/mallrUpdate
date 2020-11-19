@@ -13,14 +13,15 @@ class CreateGovernatesTable extends Migration
     public function up()
     {
         Schema::create('governates', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name')->nullable();
             $table->string('slug_ar')->nullable();
             $table->string('slug_en')->nullable();
             $table->integer('order')->nullable();
             $table->boolean('active')->default(1);
-            $table->integer('country_id')->unsigned()->index()->nullable();
-            $table->foreign('country_id')->references('id')->on('countries');
+            //$table->integer('country_id')->unsigned()->index()->nullable();
+            $table->foreignId('country_id')->references('id')->on('countries');
+
             $table->timestamps();
         });
     }

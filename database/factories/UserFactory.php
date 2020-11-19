@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Country;
+use App\Models\Governate;
 use App\Models\Role;
 use Faker\Generator as Faker;
 use \Illuminate\Support\Str;
@@ -48,6 +49,7 @@ $factory->define(App\Models\User::class, function (Faker $faker)  {
         'apartment' => $faker->name,
         'country_name' => $faker->country,
         'country_id' => Country::where('is_local', true)->first()->id,
+        'governate_id' => Governate::all()->random()->id,
         'role_id' => Role::all()->random()->id,
         'api_token' => $faker->bankAccountNumber,
         'merchant_id' => $faker->bankAccountNumber,

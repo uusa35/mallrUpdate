@@ -13,7 +13,7 @@ class CreateClassifiedsTable extends Migration
     public function up()
     {
         Schema::create('classifieds', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->mediumText('description_ar')->nullable();
@@ -57,20 +57,20 @@ class CreateClassifiedsTable extends Migration
             $table->boolean('only_whatsapp')->default(0);
 
 
-            $table->integer('category_id')->unsigned()->index()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            //$table->integer('category_id')->unsigned()->index()->nullable();
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
 
-            $table->integer('country_id')->unsigned()->index()->nullable();
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+            //$table->integer('country_id')->unsigned()->index()->nullable();
+            $table->foreignId('country_id')->references('id')->on('countries')->onDelete('cascade');
 
-            $table->integer('governate_id')->unsigned()->index()->nullable();
-            $table->foreign('governate_id')->references('id')->on('governates')->onDelete('cascade');
+            //$table->integer('governate_id')->unsigned()->index()->nullable();
+            $table->foreignId('governate_id')->references('id')->on('governates')->onDelete('cascade');
 
-            $table->integer('area_id')->unsigned()->index()->nullable();
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+            //$table->integer('area_id')->unsigned()->index()->nullable();
+            $table->foreignId('area_id')->references('id')->on('areas')->onDelete('cascade');
 
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->integer('views')->unsigned()->default(1);
             $table->dateTime('expired_at')->nullable();

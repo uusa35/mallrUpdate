@@ -13,10 +13,10 @@ class CreateItemServicePivotTable extends Migration
     public function up()
     {
         Schema::create('item_service', function (Blueprint $table) {
-            $table->integer('item_id')->unsigned()->index();
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
-            $table->integer('service_id')->unsigned()->index();
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            //$table->integer('item_id')->unsigned()->index();
+            $table->foreignId('item_id')->references('id')->on('items')->onDelete('cascade');
+            //$table->integer('service_id')->unsigned()->index();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->primary(['item_id', 'service_id']);
         });
     }

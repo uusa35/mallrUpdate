@@ -39,6 +39,6 @@ $factory->define(Order::class, function (Faker $faker) {
         'notes' => $faker->paragraph,
         'paid' => $faker->boolean(true),
         'shipment_reference' => $faker->bankAccountNumber,
-        'cash_on_delivery' => $faker->boolean,
+        'cash_on_delivery' => $faker->boolean(),
     ];
 });

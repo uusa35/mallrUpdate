@@ -13,10 +13,10 @@ class CreateCategoryUserPivotTable extends Migration
     public function up()
     {
         Schema::create('category_user', function (Blueprint $table) {
-            $table->integer('category_id')->unsigned()->index();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('category_id')->unsigned()->index();
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->primary(['category_id', 'user_id']);
         });
     }

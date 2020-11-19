@@ -13,7 +13,7 @@ class CreateQuotesTable extends Migration
     public function up()
     {
         Schema::create('quotes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name')->nullalbe();
             $table->string('email')->nullalbe();
             $table->string('mobile')->nullalbe();
@@ -21,8 +21,8 @@ class CreateQuotesTable extends Migration
             $table->integer('total_individuals')->nullalbe();
             $table->integer('budget_individual')->nullalbe();
 
-            $table->integer('area_id')->unsigned()->index();
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade')->onUpdate('cascade');
+            //$table->integer('area_id')->unsigned()->index();
+            $table->foreignId('area_id')->references('id')->on('areas')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('type')->nullalbe();
             $table->string('status')->nullalbe();

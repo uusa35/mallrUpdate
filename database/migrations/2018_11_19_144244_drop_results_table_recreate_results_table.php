@@ -15,19 +15,19 @@ class DropResultsTableRecreateResultsTable extends Migration
     {
         Schema::dropIfExists('results');
         Schema::create('results', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
 //            ->onUpdate('cascade')->onDelete('cascade')
             // means that when deleting or updating a question .. the result will be deleted
 
-            $table->integer('question_id')->unsigned()->index()->nullable();
-            $table->foreign('question_id')->references('id')->on('questions');
+            //$table->integer('question_id')->unsigned()->index()->nullable();
+            $table->foreignId('question_id')->references('id')->on('questions');
 
 
-            $table->integer('answer_id')->unsigned()->index()->nullable();
-            $table->foreign('answer_id')->references('id')->on('answers');
+            //$table->integer('answer_id')->unsigned()->index()->nullable();
+            $table->foreignId('answer_id')->references('id')->on('answers');
 
-            $table->integer('questionnaire_id')->unsigned()->index()->nullable();
-            $table->foreign('questionnaire_id')->references('id')->on('questionnaires');
+            //$table->integer('questionnaire_id')->unsigned()->index()->nullable();
+            $table->foreignId('questionnaire_id')->references('id')->on('questionnaires');
 
             $table->mediumText('questioned')->nullable();
             $table->mediumText('answered')->nullable();

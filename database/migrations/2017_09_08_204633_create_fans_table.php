@@ -14,23 +14,23 @@ class CreateFansTable extends Migration
     public function up()
     {
         Schema::create('fans', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             // the company / user receiving the fan
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
 
             // the person who did the fan
-            $table->integer('fan_id')->unsigned()->index()->nullable();
-            $table->foreign('fan_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->integer('fan_id')->unsigned()->index()->nullable();
+            $table->foreignId('fan_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->integer('product_id')->unsigned()->index()->nullable();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            //$table->integer('product_id')->unsigned()->index()->nullable();
+            $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade');
 
-            $table->integer('service_id')->unsigned()->index()->nullable();
-            $table->foreign('service_id')->references('id')->on('products')->onDelete('cascade');
+            //$table->integer('service_id')->unsigned()->index()->nullable();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
 
-            $table->integer('collection_id')->unsigned()->index()->nullable();
-            $table->foreign('collection_id')->references('id')->on('collections')->onDelete('cascade');
+            //$table->integer('collection_id')->unsigned()->index()->nullable();
+            $table->foreignId('collection_id')->references('id')->on('collections')->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -13,7 +13,7 @@ class CreateTimingsTable extends Migration
     public function up()
     {
         Schema::create('timings', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('day')->nullable();
             $table->string('day_name_ar')->nullable();
             $table->string('day_name_en')->nullable();
@@ -31,14 +31,14 @@ class CreateTimingsTable extends Migration
             $table->smallInteger('week_start')->default(6)->nullable();
             $table->smallInteger('day_no')->nullable();
 
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            //$table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
-            $table->integer('service_id')->unsigned()->index()->nullable();
-            $table->foreign('service_id')->references('id')->on('services')->onUpdate('cascade')->onDelete('cascade');
+            //$table->integer('service_id')->unsigned()->index()->nullable();
+            $table->foreignId('service_id')->references('id')->on('services')->onUpdate('cascade')->onDelete('cascade');
 
-            $table->integer('day_id')->unsigned()->index()->nullable();
-            $table->foreign('day_id')->references('id')->on('days');
+            //$table->integer('day_id')->unsigned()->index()->nullable();
+            $table->foreignId('day_id')->references('id')->on('days');
 
             $table->timestamps();
         });

@@ -13,7 +13,7 @@ class CreateBranchesTable extends Migration
     public function up()
     {
         Schema::create('branches', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->string('address_ar')->nullable();
@@ -26,15 +26,15 @@ class CreateBranchesTable extends Migration
             $table->string('longitude')->nullable();
             $table->string('latitude')->nullable();
 
-            $table->integer('area_id')->unsigned()->index()->nullable();
-            $table->foreign('area_id')->references('id')->on('areas');
+            // $table->integer('area_id')->unsigned()->index()->nullable();
+            $table->foreignId('area_id')->references('id')->on('areas');
 
             // did not use , just made in case company may have branches related to other countries.
-            $table->integer('country_id')->unsigned()->index()->nullable();
-            $table->foreign('country_id')->references('id')->on('countries');
+            // $table->integer('country_id')->unsigned()->index()->nullable();
+            $table->foreignId('country_id')->references('id')->on('countries');
 
-            $table->integer('user_id')->unsigned()->index()->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            // $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

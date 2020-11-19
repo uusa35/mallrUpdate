@@ -13,9 +13,9 @@ class CreateVideoablesTable extends Migration
     public function up()
     {
         Schema::create('videoables', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('video_id')->index()->unsigned();
-            $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade')->onUpdate('cascade');
+            $table->id('id');
+            //$table->integer('video_id')->index()->unsigned();
+            $table->foreignId('video_id')->references('id')->on('videos')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('videoable_id')->index();
             $table->string('videoable_type');

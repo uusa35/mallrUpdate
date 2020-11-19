@@ -13,10 +13,10 @@ class CreateCategoryCommercialPivotTable extends Migration
     public function up()
     {
         Schema::create('category_commercial', function (Blueprint $table) {
-            $table->integer('category_id')->unsigned()->index();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->integer('commercial_id')->unsigned()->index();
-            $table->foreign('commercial_id')->references('id')->on('commercials')->onDelete('cascade');
+            //$table->integer('category_id')->unsigned()->index();
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
+            //$table->integer('commercial_id')->unsigned()->index();
+            $table->foreignId('commercial_id')->references('id')->on('commercials')->onDelete('cascade');
             $table->primary(['category_id', 'commercial_id']);
         });
     }

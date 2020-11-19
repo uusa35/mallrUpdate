@@ -13,10 +13,10 @@ class CreateAreaServicePivotTable extends Migration
     public function up()
     {
         Schema::create('area_service', function (Blueprint $table) {
-            $table->integer('area_id')->unsigned()->index();
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
-            $table->integer('service_id')->unsigned()->index();
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            //$table->integer('area_id')->unsigned()->index();
+            $table->foreignId('area_id')->references('id')->on('areas')->onDelete('cascade');
+            //$table->integer('service_id')->unsigned()->index();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->primary(['area_id', 'service_id']);
         });
     }

@@ -21,12 +21,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, app()->environment('production') ? 5 : 50)->create()->each(function ($u) {
+        factory(User::class, app()->environment('production') ? 5 : 20)->create()->each(function ($u) {
             if ($u->id === 1) {
                 $u->update(['role_id' => 1]);
             }
             if ($u->isDesigner) {
-                $u->collections()->saveMany(factory(Collection::class, 10)->create());
+                $u->collections()->saveMany(factory(Collection::class, 5)->create());
                 $u->surveys()->saveMany(Survey::all()->random(1));
             }
             if ($u->isCompany) {

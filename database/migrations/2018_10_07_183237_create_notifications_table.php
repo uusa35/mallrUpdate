@@ -13,7 +13,7 @@ class CreateNotificationsTable extends Migration
     public function up()
     {
         Schema::create('notifications', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('type')->nullable();

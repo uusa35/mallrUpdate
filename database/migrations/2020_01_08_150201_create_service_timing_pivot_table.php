@@ -13,10 +13,10 @@ class CreateServiceTimingPivotTable extends Migration
     public function up()
     {
         Schema::create('service_timing', function (Blueprint $table) {
-            $table->integer('service_id')->unsigned()->index();
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
-            $table->integer('timing_id')->unsigned()->index();
-            $table->foreign('timing_id')->references('id')->on('timings')->onDelete('cascade');
+//            $table->integer('service_id')->unsigned()->index();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
+//            $table->integer('timing_id')->unsigned()->index();
+            $table->foreignId('timing_id')->references('id')->on('timings')->onDelete('cascade');
             $table->primary(['service_id', 'timing_id']);
         });
     }

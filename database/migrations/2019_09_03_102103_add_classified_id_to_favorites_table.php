@@ -14,8 +14,8 @@ class AddClassifiedIdToFavoritesTable extends Migration
     public function up()
     {
         Schema::table('favorites', function (Blueprint $table) {
-            $table->integer('classified_id')->unsigned()->index()->nullable();
-            $table->foreign('classified_id')->references('id')->on('classifieds');
+            //$table->integer('classified_id')->unsigned()->index()->nullable();
+            $table->foreignId('classified_id')->references('id')->on('classifieds');
         });
     }
 

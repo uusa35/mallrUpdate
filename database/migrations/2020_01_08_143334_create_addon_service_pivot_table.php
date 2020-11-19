@@ -13,10 +13,10 @@ class CreateAddonServicePivotTable extends Migration
     public function up()
     {
         Schema::create('addon_service', function (Blueprint $table) {
-            $table->integer('addon_id')->unsigned()->index();
-            $table->foreign('addon_id')->references('id')->on('addons')->onDelete('cascade');
-            $table->integer('service_id')->unsigned()->index();
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            //$table->integer('addon_id')->unsigned()->index();
+            $table->foreignId('addon_id')->references('id')->on('addons')->onDelete('cascade');
+            //$table->integer('service_id')->unsigned()->index();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->primary(['addon_id', 'service_id']);
         });
     }

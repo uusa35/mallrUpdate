@@ -13,7 +13,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('sku')->nullable();
             $table->string('name_ar');
             $table->string('name_en');
@@ -50,20 +50,21 @@ class CreateProductsTable extends Migration
             $table->boolean('show_attribute')->default(0);
 
             $table->integer('qty')->unsigned()->nullable();
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); // company that own this product ? !!
 
-            $table->integer('brand_id')->unsigned()->index()->nullable();
-            $table->foreign('brand_id')->references('id')->on('brands');
+            // $table->integer('user_id')->unsigned()->index();
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate(); // company that own this product ? !!
 
-            $table->integer('color_id')->unsigned()->index()->nullable();
-            $table->foreign('color_id')->references('id')->on('colors');
+            // $table->integer('brand_id')->unsigned()->index()->nullable();
+            $table->foreignId('brand_id')->references('id')->on('brands');
 
-            $table->integer('size_id')->unsigned()->index()->nullable();
-            $table->foreign('size_id')->references('id')->on('sizes');
+            // $table->integer('color_id')->unsigned()->index()->nullable();
+            $table->foreignId('color_id')->references('id')->on('colors');
 
-            $table->integer('shipment_package_id')->unsigned()->index()->nullable();
-            $table->foreign('shipment_package_id')->references('id')->on('shipment_packages');
+            // $table->integer('size_id')->unsigned()->index()->nullable();
+            $table->foreignId('size_id')->references('id')->on('sizes');
+
+            // $table->integer('shipment_package_id')->unsigned()->index()->nullable();
+            $table->foreignId('shipment_package_id')->references('id')->on('shipment_packages');
 
             $table->integer('views')->unsigned()->default(1);
             $table->timestamps();

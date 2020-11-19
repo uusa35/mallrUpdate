@@ -13,7 +13,7 @@ class CreateTermsTable extends Migration
     public function up()
     {
         Schema::create('terms', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('title_ar');
             $table->string('title_en');
             $table->text('content_ar');

@@ -14,7 +14,7 @@ class CreateAddonsTableTable extends Migration
     public function up()
     {
         Schema::create('addons', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('name_ar');
             $table->string('name_en');
             $table->mediumText('caption_en')->nullable();

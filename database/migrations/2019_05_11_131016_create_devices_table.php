@@ -13,7 +13,7 @@ class CreateDevicesTable extends Migration
     public function up()
     {
         Schema::create('devices', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('player_id')->nullable();
             $table->boolean('active')->default(1);
             $table->timestamps();
